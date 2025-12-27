@@ -10,21 +10,13 @@ export default function ScrollProvider({
   const lenisRef = useRef<any>(null);
 
   useEffect(() => {
-    // DIAGNÓSTICO: Ver qué estructura tiene el ref realmente
-    console.log('[ScrollProvider] Ref content:', lenisRef.current);
-
     // ESTRATEGIA DE ASIGNACIÓN ROBUSTA
-    // Intento 1: Propiedad .lenis (versiones antiguas/wrappers)
-    // Intento 2: Instancia directa (versiones nuevas)
+    // Detectamos si la instancia está anidada (.lenis) o es directa
+    // Esto es crítico para que NarrativeScene pueda controlar el scroll
     const lenisInstance = lenisRef.current?.lenis || lenisRef.current;
 
     if (lenisInstance) {
-      console.log(
-        '[ScrollProvider] ✅ Lenis Instance Found & Exposed globally'
-      );
       (window as any).lenis = lenisInstance;
-    } else {
-      console.error('[ScrollProvider] ❌ Failed to find Lenis instance in ref');
     }
 
     // Limpieza al desmontar
