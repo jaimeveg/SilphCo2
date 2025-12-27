@@ -1,0 +1,239 @@
+{
+  "module_1_narrative": {
+    "module_id": "01_foundations",
+    "scenes": [
+      {
+        "id": "1.1_type_matchup",
+        "visual_signature": "Elemental_Type_Chart_Active",
+        "content": {
+          "headline": "TABLA DE TIPOS",
+          "kpi": "EFECTIVIDAD",
+          "body": "La piedra angular de la estrategia Pokémon. Cada movimiento interactúa con el tipo del objetivo generando multiplicadores críticos que definen el daño final. Dominar estas relaciones es la diferencia entre un golpe decisivo y un turno desperdiciado.",
+          "technical_notes": [
+            {
+              "label": "Super eficaz (x2)",
+              "tooltip": "El movimiento inflige el doble de daño contra Pokémon que tienen debilidad a ese tipo."
+            },
+            {
+              "label": "Poco eficaz (x0.5)",
+              "tooltip": "El daño se reduce a la mitad cuando el Pokémon defensor resiste el tipo del movimiento."
+            },
+            {
+              "label": "Inmune (x0)",
+              "tooltip": "Ciertos tipos de Pokémon no reciben daño alguno de movimientos de tipos específicos."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.2_dual_typing",
+        "visual_signature": "Dual_Type_Overlap",
+        "content": {
+          "headline": "TIPOS DUALES",
+          "kpi": "MATEMÁTICA EXTREMA",
+          "body": "Muchos Pokémon poseen dos tipos simultáneos, lo que crea una combinación única de sus tablas de efectividad. Esto permite que los multiplicadores se acumulen, amplificando drásticamente tanto las fortalezas defensivas como las debilidades.",
+          "technical_notes": [
+            {
+              "label": "Debilidad doble (x4)",
+              "tooltip": "Ocurre cuando ambos tipos del Pokémon son débiles ante el mismo tipo de movimiento, duplicando la vulnerabilidad crítica."
+            },
+            {
+              "label": "Resistencia doble (x0.25)",
+              "tooltip": "Se da cuando ambos tipos del Pokémon resisten el tipo del movimiento atacante, reduciendo el daño al mínimo operativo."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.3_stat_hp",
+        "visual_signature": "Stat_HP_Pulse",
+        "content": {
+          "headline": "PUNTOS DE SALUD",
+          "kpi": "PS (HP)",
+          "body": "Los Puntos de Salud (HP) definen la vitalidad operativa del Pokémon. Es la estadística que determina cuántos impactos puede resistir antes de quedar fuera de combate y ser forzado a abandonar el campo.",
+          "technical_notes": [
+            {
+              "label": "Resistencia Vital",
+              "tooltip": "A mayor cantidad de PS, el Pokémon tiene mayor capacidad de aguante ante cualquier categoría de ataque."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.4_stat_atk_def",
+        "visual_signature": "Physical_Combat_Axis",
+        "content": {
+          "headline": "ESTADÍSTICAS FÍSICAS",
+          "kpi": "ATAQUE Y DEFENSA",
+          "body": "Este eje rige los intercambios de categoría física. El Ataque determina la fuerza con la que el Pokémon ejecuta estos movimientos, mientras que la Defensa mitiga el impacto de los ataques físicos recibidos del rival.",
+          "technical_notes": [
+            {
+              "label": "Ataque (Atk)",
+              "tooltip": "Estadística que potencia el daño de los movimientos de categoría física."
+            },
+            {
+              "label": "Defensa (Def)",
+              "tooltip": "Estadística que mitiga el daño de los movimientos de categoría física del rival."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.5_stat_spa_spd",
+        "visual_signature": "Special_Energy_Axis",
+        "content": {
+          "headline": "ESTADÍSTICAS ESPECIALES",
+          "kpi": "ATQ. ESP Y DEF. ESP",
+          "body": "El rendimiento en ataques de categoría especial depende de este par de estadísticas. El Ataque Especial rige la potencia de salida, mientras que la Defensa Especial es la variable que mitiga el daño de los movimientos especiales del rival.",
+          "technical_notes": [
+            {
+              "label": "Atq. Especial (SpA)",
+              "tooltip": "Estadística que potencia el daño de los movimientos de categoría especial."
+            },
+            {
+              "label": "Def. Especial (SpD)",
+              "tooltip": "Estadística que mitiga el daño de los movimientos de categoría especial del rival."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.6_stat_speed",
+        "visual_signature": "Speed_Tier_Sequencing",
+        "content": {
+          "headline": "VELOCIDAD",
+          "kpi": "ORDEN DE TURNO",
+          "body": "La estadística de Velocidad es el factor decisivo para tomar la iniciativa. En condiciones normales, el Pokémon con el valor de Velocidad más alto ejecutará su movimiento antes que el oponente en cada turno.",
+          "technical_notes": [
+            {
+              "label": "Speed Tiers",
+              "tooltip": "Comparativa de velocidades donde superar al rival por un solo punto garantiza la prioridad de acción."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.7_bst_analysis",
+        "visual_signature": "BST_Totalizer_UI",
+        "content": {
+          "headline": "BASE STAT TOTAL (BST)",
+          "kpi": "CALIDAD DE ESPECIE",
+          "body": "El BST es la suma de las seis estadísticas base de un Pokémon. Este número permite identificar el potencial general y la calidad de una especie dentro del entorno competitivo frente a otras especies.",
+          "technical_notes": [
+            {
+              "label": "Mixed Attackers",
+              "tooltip": "Pokémon con stats ofensivos repartidos equitativamente. Pueden atacar por ambos espectros pero suelen ser menos eficientes que los especializados."
+            },
+            {
+              "label": "Min-Maxing",
+              "tooltip": "Un BST alto no siempre es mejor; una distribución que concentre el potencial en stats clave suele ser superior a una dispersión equitativa."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.8_hidden_accuracy",
+        "visual_signature": "RNG_Hit_Probability",
+        "content": {
+          "headline": "PRECISIÓN Y EVASIÓN",
+          "kpi": "ESTADÍSTICAS OCULTAS",
+          "body": "Variables que no aparecen en la ficha principal pero alteran el combate. La Precisión determina la probabilidad de acierto del movimiento, mientras que la Evasión reduce las posibilidades de ser golpeado.",
+          "technical_notes": [
+            {
+              "label": "Modificación en Combate",
+              "tooltip": "Valores alterables mediante buffs/debuffs (Stages de -6 a +6) que impactan directamente en la consistencia de los golpes."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.9_move_logic",
+        "visual_signature": "Move_Data_Overlay",
+        "content": {
+          "headline": "EL MOVIMIENTO",
+          "kpi": "POTENCIA Y PRECISIÓN",
+          "body": "Cada movimiento se define por su Tipo y dos valores clave: la Potencia, que establece el daño base, y la Precisión, que indica la probabilidad de éxito al ejecutarlo.",
+          "technical_notes": [
+            {
+              "label": "Tipo del Movimiento",
+              "tooltip": "Propiedad elemental intrínseca que determina la efectividad contra el rival y la activación del STAB."
+            },
+            {
+              "label": "Potencia Base",
+              "tooltip": "Valor numérico que determina el poder bruto del ataque antes de aplicar multiplicadores externos."
+            },
+            {
+              "label": "Precisión del Movimiento",
+              "tooltip": "Probabilidad intrínseca de que el movimiento no falle al ser seleccionado."
+            },
+            {
+              "label": "Efectos Adicionales",
+              "tooltip": "Propiedades secundarias de ciertos movimientos que pueden inducir problemas de estado, alterar estadísticas del objetivo/usuario o modificar el campo y terrenos."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.10_stab_mechanic",
+        "visual_signature": "STAB_Aura_Effect",
+        "content": {
+          "headline": "BONO DE STAB",
+          "kpi": "BONO x1.5",
+          "body": "El STAB (Same Type Attack Bonus) es una bonificación de daño automática. Si un Pokémon usa un movimiento que comparte uno de sus tipos elementales, la potencia de ese ataque aumenta en un 50%.",
+          "technical_notes": [
+            {
+              "label": "Coincidencia de Tipo",
+              "tooltip": "Alinear el tipo del Pokémon con sus movimientos es fundamental para maximizar el potencial de daño ofensivo."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.11_move_category",
+        "visual_signature": "Category_Identifier_Cards",
+        "content": {
+          "headline": "CATEGORÍA DE MOVIMIENTO",
+          "kpi": "FÍSICO VS ESPECIAL",
+          "body": "Los movimientos se dividen según cómo calculan el daño. Los Ataques Físicos enfrentan el Ataque del usuario contra la Defensa del rival, mientras que los Ataques Especiales enfrentan el Atq. Especial contra la Def. Especial.",
+          "technical_notes": [
+            {
+              "label": "Categoría Física",
+              "tooltip": "Cálculo basado en el Ataque del atacante contra la Defensa del defensor."
+            },
+            {
+              "label": "Categoría Especial",
+              "tooltip": "Cálculo basado en el Atq. Especial del atacante contra la Def. Especial del defensor."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.12_status_moves",
+        "visual_signature": "Status_Utility_Grid",
+        "content": {
+          "headline": "MOVIMIENTOS DE ESTADO",
+          "kpi": "UTILIDAD",
+          "body": "No todos los movimientos buscan infligir daño directo. Son herramientas esenciales para el control del combate y la gestión de recursos tácticos mediante efectos secundarios y disrupción.",
+          "technical_notes": [
+            {
+              "label": "Buff / Debuff",
+              "tooltip": "Alteración de los niveles de estadísticas (Stages) propios o del rival."
+            },
+            {
+              "label": "Status Condition",
+              "tooltip": "Inducción de problemas de estado como Parálisis, Quemadura o Sueño."
+            },
+            {
+              "label": "Field Control",
+              "tooltip": "Modificación del entorno mediante la activación de Climas, Campos o la instalación de Trampas."
+            },
+            {
+              "label": "Utility & Disruption",
+              "tooltip": "Control del flujo mediante disrupción de velocidad, redirección o gestión de estados volátiles."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
