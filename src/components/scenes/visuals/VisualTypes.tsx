@@ -1,7 +1,10 @@
 'use client';
+
+import { useState } from 'react';
 import { ExternalLink, Zap } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next/link'; // Se mantiene si se usa en otros lados, si no se puede quitar.
+import TypeChartModal from '@/components/ui/modals/TypeChartModal';
 
 export default function VisualTypes({
   pokeId,
@@ -10,6 +13,9 @@ export default function VisualTypes({
   pokeId: number;
   visualSignature: string;
 }) {
+  // 1. ESTADO PARA EL MODAL
+  const [showModal, setShowModal] = useState(false);
+
   const CHARIZARD_URL =
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png';
   const BLASTOISE_URL =
@@ -72,20 +78,16 @@ export default function VisualTypes({
               strokeOpacity="0.4"
               strokeDasharray="4 4"
             />
-            {/* Punteros Triangulares (Alineados al giro horario) */}
-            {/* Top (0 deg) -> Points Right */}
             <polygon
               points="-4,-4 4,0 -4,4"
               fill="#e2e8f0"
               transform="translate(140, 2)"
             />
-            {/* Right-Bottom (120 deg) */}
             <polygon
               points="-4,-4 4,0 -4,4"
               fill="#e2e8f0"
               transform="translate(260, 210) rotate(120)"
             />
-            {/* Left-Bottom (240 deg) */}
             <polygon
               points="-4,-4 4,0 -4,4"
               fill="#e2e8f0"
@@ -93,7 +95,7 @@ export default function VisualTypes({
             />
           </svg>
 
-          {/* ETIQUETA EXTERIOR (Entre Fuego y Agua - Top Left) */}
+          {/* ETIQUETA EXTERIOR */}
           <div className="absolute top-[15%] left-[10%] -translate-x-1/2 -translate-y-1/2">
             <span className="text-[9px] font-mono text-slate-300 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-500/30 whitespace-nowrap">
               EFICAZ (x2)
@@ -115,20 +117,16 @@ export default function VisualTypes({
               strokeOpacity="0.2"
               strokeDasharray="2 2"
             />
-            {/* Punteros Triangulares Inversos (Alineados al giro anti-horario) */}
-            {/* Top (0 deg) -> Points Left */}
             <polygon
               points="4,-4 -4,0 4,4"
               fill="#94a3b8"
               transform="translate(98, 2)"
             />
-            {/* Right-Bottom (120 deg) */}
             <polygon
               points="4,-4 -4,0 4,4"
               fill="#94a3b8"
               transform="translate(182, 145) rotate(120)"
             />
-            {/* Left-Bottom (240 deg) */}
             <polygon
               points="4,-4 -4,0 4,4"
               fill="#94a3b8"
@@ -136,7 +134,7 @@ export default function VisualTypes({
             />
           </svg>
 
-          {/* ETIQUETA INTERIOR (Más separada del círculo) */}
+          {/* ETIQUETA INTERIOR */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
             <span className="text-[9px] font-mono text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-500/30 whitespace-nowrap translate-y-2">
               RESISTENCIA (x0.5)
@@ -145,52 +143,52 @@ export default function VisualTypes({
         </div>
 
         {/* ICONOS DE TIPO */}
-        {/* FUEGO */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
           <div className="w-14 h-14 bg-slate-900/60 backdrop-blur-md rounded-full border border-orange-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.2)]">
             <img
               src={`${TYPE_ICON_BASE}fire.svg`}
               className="w-8 h-8 opacity-80"
+              alt="Fire"
             />
           </div>
         </div>
-        {/* PLANTA */}
         <div className="absolute bottom-[15%] right-0 translate-x-1/4 z-10">
           <div className="w-14 h-14 bg-slate-900/60 backdrop-blur-md rounded-full border border-green-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.2)]">
             <img
               src={`${TYPE_ICON_BASE}grass.svg`}
               className="w-8 h-8 opacity-80"
+              alt="Grass"
             />
           </div>
         </div>
-        {/* AGUA */}
         <div className="absolute bottom-[15%] left-0 -translate-x-1/4 z-10">
           <div className="w-14 h-14 bg-slate-900/60 backdrop-blur-md rounded-full border border-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.2)]">
             <img
               src={`${TYPE_ICON_BASE}water.svg`}
               className="w-8 h-8 opacity-80"
+              alt="Water"
             />
           </div>
         </div>
       </div>
 
-      {/* BOTÓN ACTION */}
+      {/* BOTÓN ACTION (MODIFICADO) */}
       <div className="absolute bottom-6 z-30 w-full flex justify-center px-6">
-        <Link
-          href="/tools/type-calculator"
-          className="w-full max-w-xs group relative flex items-center justify-between px-5 py-3 bg-slate-900/90 border border-slate-700 hover:border-brand-cyan/50 rounded-lg overflow-hidden transition-all shadow-lg"
+        <button
+          onClick={() => setShowModal(true)}
+          className="w-full max-w-xs group relative flex items-center justify-between px-5 py-3 bg-slate-900/90 border border-slate-700 hover:border-brand-cyan/50 rounded-lg overflow-hidden transition-all shadow-lg cursor-pointer text-left"
         >
           <div className="absolute inset-0 bg-brand-cyan/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           <div className="flex items-center gap-3">
             <div className="p-1.5 bg-slate-800 rounded text-brand-cyan">
               <Zap size={16} />
             </div>
-            <div className="flex flex-col text-left">
+            <div className="flex flex-col">
               <span className="text-[9px] font-mono text-slate-500 uppercase">
                 HERRAMIENTA
               </span>
               <span className="text-xs font-bold text-slate-200 group-hover:text-white">
-                CALCULADORA DE TIPOS
+                TABLA DE TIPOS
               </span>
             </div>
           </div>
@@ -198,8 +196,11 @@ export default function VisualTypes({
             size={14}
             className="text-slate-600 group-hover:text-brand-cyan transition-colors"
           />
-        </Link>
+        </button>
       </div>
+
+      {/* MODAL INJECTED */}
+      <TypeChartModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </div>
   );
 }

@@ -135,3 +135,36 @@ export function calculateDefense(type1: string, type2?: string | null) {
 
   return multipliers;
 }
+
+/**
+ * NEW FEATURE: Type Chart Modal Helper
+ * Devuelve la eficacia de un ataque simple (Atacante -> Defensor)
+ * Retorna: 2 (Super), 0.5 (No muy), 0 (Inmune) o 1 (Neutro)
+ */
+export function getEffectiveness(attacker: string, defender: string): number {
+  if (IMMUNITY_CHART[defender]?.includes(attacker)) return 0;
+  if (WEAKNESS_CHART[defender]?.includes(attacker)) return 2;
+  if (RESISTANCE_CHART[defender]?.includes(attacker)) return 0.5;
+  return 1;
+}
+
+/**
+ * Helper para generar el resumen de matchups (Debilidades y Resistencias)
+ * Utilizado en VisualTypes para mostrar los badges de resumen.
+ */
+export function calculateTypeMatchups(types: string[]) {
+  const [t1, t2] = types;
+  const defenseMap = calculateDefense(t1, t2 || null);
+  
+  const weaknesses: string[] = [];
+  const resistances: string[] = [];
+  const immunities: string[] = [];
+
+  Object.entries(defenseMap).forEach(([type, multiplier]) => {
+    if (multiplier > 1) weaknesses.push(type);
+    if (multiplier < 1 && multiplier > 0) resistances.push(type);
+    if (multiplier === 0) immunities.push(type);
+  });
+
+  return { weaknesses, resistances, immunities };
+}
