@@ -12,7 +12,6 @@ interface TypeChartModalProps {
   onClose: () => void;
 }
 
-// Mapa de colores de fondo por tipo (Tailwind classes)
 const TYPE_BG_COLORS: Record<string, string> = {
   normal: 'bg-neutral-500',
   fire: 'bg-orange-500',
@@ -71,13 +70,13 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
     }
   }, [isOpen, onClose]);
 
-  // Helpers
+  // Helpers para etiquetas dinámicas
   const activeAttacker = hoveredRow !== null ? TYPES[hoveredRow] : null;
   const activeDefender = hoveredCol !== null ? TYPES[hoveredCol] : null;
 
   if (!mounted) return null;
 
-  const modalContent = (
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
@@ -118,26 +117,37 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
               data-lenis-prevent="true"
               className="flex-1 min-h-0 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden overscroll-contain bg-slate-950"
             >
-              {/* WRAPPER INTERNO */}
-              <div className="inline-block min-w-max relative p-6">
+              <div className="inline-block min-w-max relative p-2">
                 
-                {/* ETIQUETAS FLOTANTES */}
-                <div className="absolute top-2 left-12 right-0 h-6 flex items-center justify-center pointer-events-none z-50">
-                  <div className="flex items-center gap-2 text-[9px] font-mono font-bold text-brand-cyan uppercase tracking-widest bg-slate-950/90 px-2 rounded backdrop-blur-sm border border-brand-cyan/20 shadow-lg">
-                    <span>Defensor (Recibe)</span>
-                    <ArrowRight size={10} />
+                {/* LETRERO EJE X (DEFENSOR) - DINÁMICO */}
+                <div className="absolute top-2 left-7 right-0 h-5 flex items-center justify-center pointer-events-none z-10 border-b border-slate-800/50">
+                  <div className={cn(
+                    "flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] px-3 py-0.5 rounded transition-all duration-300",
+                    activeDefender 
+                      ? cn(TYPE_BG_COLORS[activeDefender], "bg-opacity-20 text-slate-200 border border-white/10") 
+                      : "text-slate-500"
+                  )}>
+                    <span>{activeDefender ? `DEFENSOR - ${activeDefender}` : "Defensor (Recibe)"}</span>
+                    {!activeDefender && <ArrowRight size={10} />}
                   </div>
                 </div>
-                <div className="absolute top-14 bottom-0 left-2 w-6 flex items-center justify-center pointer-events-none z-50">
-                   <div className="flex items-center gap-2 text-[9px] font-mono font-bold text-brand-cyan uppercase tracking-widest bg-slate-950/90 px-2 rounded backdrop-blur-sm border border-brand-cyan/20 -rotate-90 whitespace-nowrap shadow-lg">
-                    <span>Atacante (Movimiento)</span>
-                    <ArrowRight size={10} />
+
+                {/* LETRERO EJE Y (ATACANTE) - DINÁMICO */}
+                <div className="absolute top-7 bottom-0 left-2 w-5 flex items-center justify-center pointer-events-none z-10 border-r border-slate-800/50">
+                   <div className={cn(
+                     "flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] -rotate-90 whitespace-nowrap px-3 py-0.5 rounded transition-all duration-300",
+                     activeAttacker 
+                      ? cn(TYPE_BG_COLORS[activeAttacker], "bg-opacity-20 text-slate-200 border border-white/10") 
+                      : "text-slate-500"
+                   )}>
+                    <span>{activeAttacker ? `ATACANTE - ${activeAttacker}` : "Atacante (Movimiento)"}</span>
+                    {!activeAttacker && <ArrowRight size={10} />}
                   </div>
                 </div>
 
                 {/* GRID TABLE */}
                 <div 
-                  className="grid ml-8 mt-8 border-t border-l border-slate-800"
+                  className="grid ml-5 mt-5 border-t border-l border-slate-800"
                   style={{ 
                     gridTemplateColumns: `auto repeat(${TYPES.length}, minmax(32px, 1fr))` 
                   }}
@@ -146,38 +156,32 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                     setHoveredCol(null);
                   }}
                 >
-                  {/* CORNER (La referencia de lógica perfecta) */}
+                  {/* CORNER */}
                   <div className="sticky top-0 left-0 z-50 bg-slate-950 p-1 border-b border-r border-slate-800 pointer-events-none" />
 
-                  {/* CABECERA DEFENSORES (Refactorizada con lógica Corner) */}
+                  {/* CABECERA DEFENSORES */}
                   {TYPES.map((type, i) => (
                     <div 
                       key={`header-col-${type}`}
-                      // SHELL: Posicionamiento Sticky + Estructura Sólida
                       className={cn(
-                        "sticky top-0 z-40 bg-slate-950 p-1 border-b border-r border-slate-800",
+                        "sticky top-0 z-40 bg-slate-950 p-0 border-b border-r border-slate-800",
                         hoveredCol === i ? "shadow-[0_4px_12px_rgba(0,0,0,0.5)] z-45" : ""
                       )}
                     >
-                      {/* CONTENT: Estética y Efectos */}
-                      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-sm group cursor-help transition-all">
-                          
-                          {/* Tintado */}
+                      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-none group cursor-help transition-all">
                           <div className={cn(
                             "absolute inset-0 opacity-20 transition-opacity pointer-events-none", 
                             TYPE_BG_COLORS[type] || "bg-slate-800",
                             hoveredCol === i ? "opacity-40" : "opacity-20"
                           )} />
                           
-                          {/* Icono */}
                           <div 
-                            className="relative z-10 w-full h-full flex items-center justify-center"
+                            className="relative z-10 w-full h-full flex items-center justify-center p-1"
                             onMouseEnter={() => { setHoveredCol(i); setHoveredRow(null); }}
                           >
                             <ModalTypeIcon type={type} active={hoveredCol === i} />
                           </div>
 
-                          {/* Indicador */}
                           {hoveredCol === i && (
                             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-cyan z-20" />
                           )}
@@ -188,18 +192,15 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                   {/* CUERPO MATRIZ */}
                   {TYPES.map((attacker, rIndex) => (
                     <>
-                      {/* CABECERA ATACANTES (Refactorizada con lógica Corner) */}
+                      {/* CABECERA ATACANTES */}
                       <div 
                         key={`header-row-${attacker}`}
-                        // SHELL
                         className={cn(
-                          "sticky left-0 z-40 bg-slate-950 p-1 border-b border-r border-slate-800",
+                          "sticky left-0 z-40 bg-slate-950 p-0 border-b border-r border-slate-800",
                           hoveredRow === rIndex ? "shadow-[4px_0_12px_rgba(0,0,0,0.5)] z-45" : ""
                         )}
                       >
-                         {/* CONTENT */}
-                         <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-sm group cursor-help transition-all">
-                            
+                         <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-none group cursor-help transition-all">
                             <div className={cn(
                               "absolute inset-0 opacity-20 transition-opacity pointer-events-none", 
                               TYPE_BG_COLORS[attacker] || "bg-slate-800",
@@ -207,7 +208,7 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                             )} />
 
                             <div 
-                              className="relative z-10 w-full h-full flex items-center justify-center"
+                              className="relative z-10 w-full h-full flex items-center justify-center p-1"
                               onMouseEnter={() => { setHoveredRow(rIndex); setHoveredCol(null); }}
                             >
                               <ModalTypeIcon type={attacker} active={hoveredRow === rIndex} />
@@ -222,7 +223,6 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                       {/* CELDAS DE DATOS */}
                       {TYPES.map((defender, cIndex) => {
                         const effectiveness = getEffectiveness(attacker, defender);
-                        
                         const isRowActive = hoveredRow === rIndex;
                         const isColActive = hoveredCol === cIndex;
                         const isCrosshair = isRowActive && isColActive;
@@ -232,14 +232,17 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                         let cellClass = "";
 
                         if (effectiveness === 2) {
-                          content = "2";
-                          cellClass = "text-green-400 font-bold bg-green-500/10";
+                          content = "x2";
+                          cellClass = "text-green-400 font-bold bg-green-500/10 text-[12px]";
                         } else if (effectiveness === 0.5) {
                           content = "½";
-                          cellClass = "text-red-400 bg-red-500/10";
+                          cellClass = "text-red-400 bg-red-500/10 text-[16px]";
                         } else if (effectiveness === 0) {
                           content = "0";
-                          cellClass = "text-slate-600 font-bold bg-slate-800/30";
+                          cellClass = "text-black-400 font-bold bg-slate-800 text-[12px]";
+                        } else {
+                          content = "·";
+                          cellClass = "text-slate-800 font-bold bg-slate-800/30 text-[12px]";
                         }
 
                         return (
@@ -250,7 +253,7 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                               setHoveredCol(cIndex);
                             }}
                             className={cn(
-                              "h-8 flex items-center justify-center text-[10px] font-mono cursor-default relative border-b border-r border-slate-800/50 transition-all duration-75",
+                              "h-8 flex items-center justify-center font-mono cursor-default relative border-b border-r border-slate-800/50 transition-all duration-75",
                               cellClass,
                               !cellClass && "text-slate-800",
                               (isRowActive || isColActive) && !isCrosshair && "bg-white/5",
@@ -270,10 +273,9 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
-
-  return createPortal(modalContent, document.body);
 }
 
 function ModalTypeIcon({ type, active }: { type: string; active: boolean }) {
