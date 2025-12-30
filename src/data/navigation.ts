@@ -1,11 +1,11 @@
 import { 
   Hash, Activity, Sword, 
   GraduationCap, Zap, Skull, 
-  LucideIcon, Calculator, Lock, 
-  Dna, Brain, Timer, RefreshCw 
+  LucideIcon, Calculator, Timer, 
+  Dna, Brain, RefreshCw 
 } from 'lucide-react';
 
-// --- TIPOS DE DATOS ---
+// Tipos para TypeScript
 export interface NavItem {
   label: string;
   id: string;
@@ -18,20 +18,36 @@ export interface NavSection {
   items: NavItem[];
 }
 
-// --- MÓDULO 1 (SECCIONES) ---
-export const MODULE_1_NAVIGATION: NavSection[] = [
+export interface ModuleDefinition {
+  id: string;
+  label: string;
+  icon?: LucideIcon;
+  sections: NavSection[];
+  locked: boolean;
+}
+
+export interface CoreMenuItem {
+  id: string;
+  label: string;
+  icon: LucideIcon;
+  type: 'module_root' | 'link_root';
+  children: any[];
+}
+
+// --- FACTORY: SECCIONES MÓDULO 1 ---
+export const getModule1Sections = (dict: any): NavSection[] => [
   {
     id: 'types',
-    label: 'TIPOS',
+    label: dict.navigation.sections.types,
     icon: Hash,
     items: [
-      { label: 'Tabla de Tipos', id: '1.1_type_matchup' },
+      { label: 'Tabla de Tipos', id: '1.1_type_matchup' }, // Podríamos traducir esto más a fondo en Fase C
       { label: 'Tipos Duales', id: '1.2_dual_typing' },
     ],
   },
   {
     id: 'stats',
-    label: 'STATS',
+    label: dict.navigation.sections.stats,
     icon: Activity,
     items: [
       { label: 'HP (Vida)', id: '1.3_stat_hp' },
@@ -44,7 +60,7 @@ export const MODULE_1_NAVIGATION: NavSection[] = [
   },
   {
     id: 'mechanics',
-    label: 'COMBATE',
+    label: dict.navigation.sections.mechanics,
     icon: Sword,
     items: [
       { label: 'Funcionamiento', id: '1.9_move_logic' },
@@ -55,79 +71,71 @@ export const MODULE_1_NAVIGATION: NavSection[] = [
   },
 ];
 
-// --- ESTRUCTURA ACADEMY ---
-export const ACADEMY_MODULES = [
+// --- FACTORY: ACADEMY MODULES ---
+export const getAcademyModules = (dict: any): ModuleDefinition[] => [
   {
     id: 'mod_1',
-    label: 'Módulo 01: Fundamentos',
-    sections: MODULE_1_NAVIGATION,
+    label: dict.navigation.modules.mod1,
+    sections: getModule1Sections(dict),
     locked: false,
   },
   {
     id: 'mod_2',
-    label: 'Módulo 02: Dinámicas de Turno',
+    label: dict.navigation.modules.mod2,
     icon: Timer,
     sections: [],
     locked: true,
   },
   {
     id: 'mod_3',
-    label: 'Módulo 03: Genética y Crianza',
+    label: dict.navigation.modules.mod3,
     icon: Dna,
     sections: [],
     locked: true,
   },
   {
     id: 'mod_4',
-    label: 'Módulo 04: Estrategia Pro',
+    label: dict.navigation.modules.mod4,
     icon: Brain,
     sections: [],
     locked: true,
   },
   {
     id: 'mod_5',
-    label: 'Módulo 05: Mecánicas Gen.',
+    label: dict.navigation.modules.mod5,
     icon: RefreshCw,
     sections: [],
     locked: true,
   },
 ];
 
-// --- MENÚ PRINCIPAL (CORE) ---
-export interface CoreMenuItem {
-  id: string;
-  label: string;
-  icon: LucideIcon;
-  type: 'module_root' | 'link_root';
-  children: any[];
-}
-
-export const CORE_MENU: CoreMenuItem[] = [
+// --- FACTORY: MENÚ PRINCIPAL (CORE) ---
+export const getCoreMenu = (lang: string, dict: any): CoreMenuItem[] => [
   { 
     id: 'academy', 
-    label: 'ACADEMY', 
+    label: dict.navigation.academy, 
     icon: GraduationCap, 
     type: 'module_root',
-    children: ACADEMY_MODULES 
+    children: getAcademyModules(dict) 
   },
   { 
     id: 'tools', 
-    label: 'HERRAMIENTAS', 
+    label: dict.navigation.tools, 
     icon: Zap, 
     type: 'link_root',
     children: [
       { 
-        label: 'Calculadora de Tipos', 
-        href: '/tools/type-calculator', 
+        label: dict.navigation.tools_items.type_calc, 
+        href: `/${lang}/tools/type-calculator`, // URL DINÁMICA
         icon: Calculator 
       }
     ] 
   },
   { 
     id: 'nuzlocke', 
-    label: 'NUZLOCKE', 
+    label: dict.navigation.nuzlocke, 
     icon: Skull, 
     type: 'link_root',
-    children: [] // WIP
+    children: [] 
   }
 ];
