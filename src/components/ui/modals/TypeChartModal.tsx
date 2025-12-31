@@ -6,10 +6,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
 import { TYPES, getEffectiveness } from '@/lib/typeLogic';
 import { cn } from '@/lib/utils';
+import TypeMatrixTooltip from '@/components/ui/tooltips/TypeMatrixTooltip'; // Asegúrate de importar esto si se usa
 
 interface TypeChartModalProps {
   isOpen: boolean;
   onClose: () => void;
+  dict: any; // Inyección de I18n
 }
 
 const TYPE_BG_COLORS: Record<string, string> = {
@@ -33,10 +35,13 @@ const TYPE_BG_COLORS: Record<string, string> = {
   fairy: 'bg-rose-400',
 };
 
-export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps) {
+export default function TypeChartModal({ isOpen, onClose, dict }: TypeChartModalProps) {
   const [mounted, setMounted] = useState(false);
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
   const [hoveredCol, setHoveredCol] = useState<number | null>(null);
+
+  const t = dict.modal;
+  const typesDict = dict.types;
 
   useEffect(() => {
     setMounted(true);
@@ -45,11 +50,7 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
       document.body.style.overflow = 'hidden';
       
       const globalLenis = (window as any).lenis;
-      if (globalLenis?.lenis) {
-         globalLenis.lenis.stop();
-      } else if (globalLenis && typeof globalLenis.stop === 'function') {
-         globalLenis.stop();
-      }
+      if (globalLenis?.lenis) globalLenis.lenis.stop();
 
       const handleEsc = (e: KeyboardEvent) => {
         if (e.key === 'Escape') onClose();
@@ -60,19 +61,16 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
         window.removeEventListener('keydown', handleEsc);
         document.documentElement.style.overflow = '';
         document.body.style.overflow = '';
-        
-        if (globalLenis?.lenis) {
-           globalLenis.lenis.start();
-        } else if (globalLenis && typeof globalLenis.start === 'function') {
-           globalLenis.start();
-        }
+        if (globalLenis?.lenis) globalLenis.lenis.start();
       };
     }
   }, [isOpen, onClose]);
 
-  // Helpers para etiquetas dinámicas
   const activeAttacker = hoveredRow !== null ? TYPES[hoveredRow] : null;
   const activeDefender = hoveredCol !== null ? TYPES[hoveredCol] : null;
+
+  // Helper para traducir tipos (e.g., "fire" -> "Fuego")
+  const translateType = (type: string) => typesDict[type] || type;
 
   if (!mounted) return null;
 
@@ -101,7 +99,7 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
               <div className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 bg-brand-cyan rounded-full animate-pulse" />
                 <h2 className="text-sm font-display font-bold text-white tracking-widest uppercase">
-                  Tabla de Tipos
+                  {t.title}
                 </h2>
               </div>
               <button
@@ -119,7 +117,7 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
             >
               <div className="inline-block min-w-max relative p-2">
                 
-                {/* LETRERO EJE X (DEFENSOR) - DINÁMICO */}
+                {/* LETRERO EJE X (DEFENSOR) */}
                 <div className="absolute top-2 left-7 right-0 h-5 flex items-center justify-center pointer-events-none z-10 border-b border-slate-800/50">
                   <div className={cn(
                     "flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] px-3 py-0.5 rounded transition-all duration-300",
@@ -127,12 +125,16 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                       ? cn(TYPE_BG_COLORS[activeDefender], "bg-opacity-20 text-slate-200 border border-white/10") 
                       : "text-slate-500"
                   )}>
-                    <span>{activeDefender ? `DEFENSOR - ${activeDefender}` : "Defensor (Recibe)"}</span>
+                    <span>
+                      {activeDefender 
+                        ? `${t.defender.split(' ')[0]} - ${translateType(activeDefender).toUpperCase()}` 
+                        : t.defender}
+                    </span>
                     {!activeDefender && <ArrowRight size={10} />}
                   </div>
                 </div>
 
-                {/* LETRERO EJE Y (ATACANTE) - DINÁMICO */}
+                {/* LETRERO EJE Y (ATACANTE) */}
                 <div className="absolute top-7 bottom-0 left-2 w-5 flex items-center justify-center pointer-events-none z-10 border-r border-slate-800/50">
                    <div className={cn(
                      "flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-[0.2em] -rotate-90 whitespace-nowrap px-3 py-0.5 rounded transition-all duration-300",
@@ -140,7 +142,11 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                       ? cn(TYPE_BG_COLORS[activeAttacker], "bg-opacity-20 text-slate-200 border border-white/10") 
                       : "text-slate-500"
                    )}>
-                    <span>{activeAttacker ? `ATACANTE - ${activeAttacker}` : "Atacante (Movimiento)"}</span>
+                    <span>
+                      {activeAttacker 
+                        ? `${t.attacker.split(' ')[0]} - ${translateType(activeAttacker).toUpperCase()}` 
+                        : t.attacker}
+                    </span>
                     {!activeAttacker && <ArrowRight size={10} />}
                   </div>
                 </div>
@@ -156,10 +162,9 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                     setHoveredCol(null);
                   }}
                 >
-                  {/* CORNER */}
                   <div className="sticky top-0 left-0 z-50 bg-slate-950 p-1 border-b border-r border-slate-800 pointer-events-none" />
 
-                  {/* CABECERA DEFENSORES */}
+                  {/* HEADER COLUMNS */}
                   {TYPES.map((type, i) => (
                     <div 
                       key={`header-col-${type}`}
@@ -174,14 +179,12 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                             TYPE_BG_COLORS[type] || "bg-slate-800",
                             hoveredCol === i ? "opacity-40" : "opacity-20"
                           )} />
-                          
                           <div 
                             className="relative z-10 w-full h-full flex items-center justify-center p-1"
                             onMouseEnter={() => { setHoveredCol(i); setHoveredRow(null); }}
                           >
                             <ModalTypeIcon type={type} active={hoveredCol === i} />
                           </div>
-
                           {hoveredCol === i && (
                             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-cyan z-20" />
                           )}
@@ -189,10 +192,9 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                     </div>
                   ))}
 
-                  {/* CUERPO MATRIZ */}
+                  {/* ROWS */}
                   {TYPES.map((attacker, rIndex) => (
                     <>
-                      {/* CABECERA ATACANTES */}
                       <div 
                         key={`header-row-${attacker}`}
                         className={cn(
@@ -206,21 +208,18 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                               TYPE_BG_COLORS[attacker] || "bg-slate-800",
                               hoveredRow === rIndex ? "opacity-40" : "opacity-20"
                             )} />
-
                             <div 
                               className="relative z-10 w-full h-full flex items-center justify-center p-1"
                               onMouseEnter={() => { setHoveredRow(rIndex); setHoveredCol(null); }}
                             >
                               <ModalTypeIcon type={attacker} active={hoveredRow === rIndex} />
                             </div>
-                            
                             {hoveredRow === rIndex && (
                               <div className="absolute top-0 bottom-0 right-0 w-0.5 bg-brand-cyan z-20" />
                             )}
                          </div>
                       </div>
 
-                      {/* CELDAS DE DATOS */}
                       {TYPES.map((defender, cIndex) => {
                         const effectiveness = getEffectiveness(attacker, defender);
                         const isRowActive = hoveredRow === rIndex;
@@ -232,17 +231,17 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                         let cellClass = "";
 
                         if (effectiveness === 2) {
-                          content = "x2";
-                          cellClass = "text-green-400 font-bold bg-green-500/10 text-[12px]";
+                          content = "2";
+                          cellClass = "text-green-400 font-bold bg-green-500/10";
                         } else if (effectiveness === 0.5) {
                           content = "½";
-                          cellClass = "text-red-400 bg-red-500/10 text-[16px]";
+                          cellClass = "text-red-400 bg-red-500/10";
                         } else if (effectiveness === 0) {
                           content = "0";
-                          cellClass = "text-black-400 font-bold bg-slate-800 text-[12px]";
-                        } else {
+                          cellClass = "text-slate-400 font-bold bg-slate-800/40";
+                        } else  {
                           content = "·";
-                          cellClass = "text-slate-800 font-bold bg-slate-800/30 text-[12px]";
+                          cellClass = "text-slate-600 font-bold bg-slate-800/20";
                         }
 
                         return (
@@ -253,7 +252,7 @@ export default function TypeChartModal({ isOpen, onClose }: TypeChartModalProps)
                               setHoveredCol(cIndex);
                             }}
                             className={cn(
-                              "h-8 flex items-center justify-center font-mono cursor-default relative border-b border-r border-slate-800/50 transition-all duration-75",
+                              "h-8 flex items-center justify-center text-xs font-mono cursor-default relative border-b border-r border-slate-800/50 transition-all duration-75",
                               cellClass,
                               !cellClass && "text-slate-800",
                               (isRowActive || isColActive) && !isCrosshair && "bg-white/5",

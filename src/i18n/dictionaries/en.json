@@ -1,6 +1,9 @@
 {
   "common": {
-    "welcome": "Welcome to Silph Co."
+    "welcome": "Welcome to Silph Co.",
+    "loading": "LOADING...",
+    "back": "Back",
+    "system_notes": "SYSTEM NOTES"
   },
   "navigation": {
     "home": "Home",
@@ -21,10 +24,125 @@
     "sections": {
       "types": "Types",
       "stats": "Stats",
-      "mechanics": "Combat"
+      "mechanics": "Combat",
+      "items": {
+        "type_chart": "Type Chart",
+        "dual_types": "Dual Types",
+        "hp": "HP (Health)",
+        "atk_def": "ATK & DEF",
+        "spa_spd": "SPA & SPD",
+        "speed": "Speed",
+        "accuracy": "Accuracy/Eva",
+        "bst": "Total BST",
+        "logic": "Logic",
+        "stab": "STAB",
+        "category": "Category",
+        "status": "Status"
+      }
     },
     "tools_items": {
       "type_calc": "Type Calculator"
+    },
+    "switcher": {
+      "select_module": "Select Module"
+    }
+  },
+  "hub": {
+    "subtitle": "Architecture Alpha v2.0",
+    "cards": {
+      "academy": {
+        "title": "PokeAcademy",
+        "description": "Access Module 1: Theoretical Fundamentals and Data Visualization.",
+        "action": "Start"
+      },
+      "tools": {
+        "title": "Silph Tools",
+        "description": "Calculation and simulation tools. (Under Construction)",
+        "action": "Explore"
+      }
+    }
+  },
+  "hero": {
+    "badge": "SILPH CO. INDUSTRIAL UNIT",
+    "title_prefix": "Silph C.O.",
+    "title_highlight": "PokeAcademy",
+    "description": "Initializing competitive learning protocol. Access data analysis modules and real-time combat simulations."
+  },
+  "module_cards": {
+    "label": "SILPH_OS // KNOWLEDGE_BASE_MODULES"
+  },
+  "scene": {
+    "return_origin": "RETURN TO ORIGIN",
+    "related_category": "RELATED: CATEGORY",
+    "db_wip": "GO TO MOVES DB (WIP)",
+    "data_point": "DATA POINT",
+    "end_sequence": "END OF SEQUENCE // MODULE_01 COMPLETED"
+  },
+  "modal": {
+    "title": "Type Chart",
+    "attacker": "Attacker (Move)",
+    "defender": "Defender (Receiver)",
+    "tooltip": {
+      "defensive_efficacy": "Defensive Efficacy",
+      "receive": "Takes",
+      "immune": "Immune",
+      "open_matrix": "View Full Matrix",
+      "attacker_label": "ATTACKER",
+      "defender_label": "DEFENDER"
+    }
+  },
+  "tools": {
+    "calculator": {
+      "title": "DEFENSIVE ANALYZER",
+      "back_module": "Back to Module",
+      "select_types": "Select Types",
+      "waiting_data": "WAITING FOR DATA...",
+      "select_prompt": "SELECT TYPES TO START SIMULATION",
+      "threat_x4": "CRITICAL THREAT (x4)",
+      "weak_x2": "WEAKNESSES (x2)",
+      "resist_x05": "RESISTANT (x0.5)",
+      "resist_x025": "ULTRA RESISTANT (x0.25)",
+      "immune_x0": "FULL IMMUNITY (x0)"
+    }
+  },
+  "types": {
+    "normal": "Normal", "fire": "Fire", "water": "Water", "grass": "Grass",
+    "electric": "Electric", "ice": "Ice", "fighting": "Fighting", "poison": "Poison",
+    "ground": "Ground", "flying": "Flying", "psychic": "Psychic", "bug": "Bug",
+    "rock": "Rock", "ghost": "Ghost", "dragon": "Dragon", "steel": "Steel",
+    "dark": "Dark", "fairy": "Fairy"
+  },
+  "visuals": {
+    "types": {
+      "effectiveness_cycle": "EFFECTIVENESS CYCLE",
+      "effective": "EFFECTIVE (x2)",
+      "resistance": "RESISTANCE (x0.5)",
+      "tool_label": "TOOL",
+      "tool_name": "TYPE CHART"
+    },
+    "concept": {
+      "accuracy": { "evasion": "EVA +2", "move_name": "Double Team" },
+      "move": { "name": "Scald", "type_cat": "Water / Special", "power": "Power", "accuracy": "Accuracy", "effect_desc": "30% chance to burn target. Thaws user.", "label_name": "NAME", "label_type": "TYPE", "label_power": "POWER", "label_accuracy": "ACCURACY", "label_effect": "EFFECT" },
+      "stab": { "type_water": "WATER TYPE", "move_name": "SCALD", "base": "BASE", "result": "RESULT", "multiplier": "STAB x1.5" },
+      "category": { "physical": "Physical", "physical_desc": "Attack vs Defense.\nUsually contact.", "special": "Special", "special_desc": "Sp. Atk vs Sp. Def.\nBeams, waves, energy." },
+      "status": { "burn": "BRN", "atk_drop": "ATK x0.5" }
+    },
+    "dual": {
+      "aggron": "AGGRON",
+      "steel": "STEEL",
+      "rock": "ROCK",
+      "weakness": "Weakness",
+      "resistance": "Resistance",
+      "fighting": "FIGHTING",
+      "ground": "GROUND",
+      "normal": "NORMAL",
+      "flying": "FLYING",
+      "tool_label": "TOOL",
+      "tool_name": "TYPE CALCULATOR"
+    },
+    "stats": {
+      "bst_overview": "BST OVERVIEW",
+      "focus": "Focus"
     }
   }
 }

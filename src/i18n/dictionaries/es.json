@@ -1,6 +1,9 @@
 {
   "common": {
-    "welcome": "Bienvenido a Silph S.A."
+    "welcome": "Bienvenido a Silph Co.",
+    "loading": "LOADING...",
+    "back": "Volver",
+    "system_notes": "SYSTEM NOTES"
   },
   "navigation": {
     "home": "Inicio",
@@ -21,10 +24,125 @@
     "sections": {
       "types": "Tipos",
       "stats": "Stats",
-      "mechanics": "Combate"
+      "mechanics": "Combate",
+      "items": {
+        "type_chart": "Tabla de Tipos",
+        "dual_types": "Tipos Duales",
+        "hp": "HP (Vida)",
+        "atk_def": "ATK & DEF",
+        "spa_spd": "SPA & SPD",
+        "speed": "Velocidad",
+        "accuracy": "Precisión/Eva",
+        "bst": "BST Total",
+        "logic": "Funcionamiento",
+        "stab": "STAB",
+        "category": "Categoría",
+        "status": "Estado"
+      }
     },
     "tools_items": {
       "type_calc": "Calculadora de Tipos"
+    },
+    "switcher": {
+      "select_module": "Seleccionar Módulo"
+    }
+  },
+  "hub": {
+    "subtitle": "Architecture Alpha v2.0",
+    "cards": {
+      "academy": {
+        "title": "PokeAcademy",
+        "description": "Acceder al Módulo 1: Fundamentos Teóricos y Visualización de Datos.",
+        "action": "Comenzar"
+      },
+      "tools": {
+        "title": "Silph Tools",
+        "description": "Herramientas de cálculo y simulación. (En construcción)",
+        "action": "Explorar"
+      }
+    }
+  },
+  "hero": {
+    "badge": "SILPH CO. INDUSTRIAL UNIT",
+    "title_prefix": "Silph C.O.",
+    "title_highlight": "PokeAcademy",
+    "description": "Inicializando protocolo de aprendizaje competitivo. Acceda a los módulos de análisis de datos y simulaciones de combate en tiempo real."
+  },
+  "module_cards": {
+    "label": "SILPH_OS // KNOWLEDGE_BASE_MODULES"
+  },
+  "scene": {
+    "return_origin": "VOLVER AL ORIGEN",
+    "related_category": "RELACIONADO: CATEGORÍA",
+    "db_wip": "IR A BBDD MOVIMIENTOS (WIP)",
+    "data_point": "DATA POINT",
+    "end_sequence": "FIN DE SECUENCIA // MÓDULO_01 COMPLETADO"
+  },
+  "modal": {
+    "title": "Tabla de Tipos",
+    "attacker": "Atacante (Movimiento)",
+    "defender": "Defensor (Recibe)",
+    "tooltip": {
+      "defensive_efficacy": "Eficacia Defensiva",
+      "receive": "Recibe",
+      "immune": "Inmune",
+      "open_matrix": "Ver Matriz Completa",
+      "attacker_label": "ATACANTE",
+      "defender_label": "DEFENSOR"
+    }
+  },
+  "types": {
+    "normal": "Normal", "fire": "Fuego", "water": "Agua", "grass": "Planta",
+    "electric": "Eléctrico", "ice": "Hielo", "fighting": "Lucha", "poison": "Veneno",
+    "ground": "Tierra", "flying": "Volador", "psychic": "Psíquico", "bug": "Bicho",
+    "rock": "Roca", "ghost": "Fantasma", "dragon": "Dragón", "steel": "Acero",
+    "dark": "Siniestro", "fairy": "Hada"
+  },
+  "visuals": {
+    "types": {
+      "effectiveness_cycle": "CICLO DE EFECTIVIDAD",
+      "effective": "EFICAZ (x2)",
+      "resistance": "RESISTENCIA (x0.5)",
+      "tool_label": "HERRAMIENTA",
+      "tool_name": "TABLA DE TIPOS"
+    },
+    "concept": {
+      "accuracy": { "evasion": "EVA +2", "move_name": "Doble Equipo" },
+      "move": { "name": "Escaldar", "type_cat": "Agua / Especial", "power": "Potencia", "accuracy": "Precisión", "effect_desc": "30% probabilidad de quemar al objetivo. Descongela al usuario.", "label_name": "NOMBRE", "label_type": "TIPO", "label_power": "POTENCIA", "label_accuracy": "PRECISIÓN", "label_effect": "EFECTO" },
+      "stab": { "type_water": "TIPO AGUA", "move_name": "ESCALDAR", "base": "BASE", "result": "RESULT", "multiplier": "STAB x1.5" },
+      "category": { "physical": "Físico", "physical_desc": "Ataque vs Defensa.\nGeneralmente contacto.", "special": "Especial", "special_desc": "Atk. Esp vs Def. Esp.\nPulsos, ondas, energía." },
+      "status": { "burn": "QUEM", "atk_drop": "ATQ x0.5" }
+    },
+    "dual": {
+      "aggron": "AGGRON",
+      "steel": "ACERO",
+      "rock": "ROCA",
+      "weakness": "Debilidad",
+      "resistance": "Resistencia",
+      "fighting": "LUCHA",
+      "ground": "TIERRA",
+      "normal": "NORMAL",
+      "flying": "VOLADOR",
+      "tool_label": "HERRAMIENTA",
+      "tool_name": "CALCULADORA DE TIPOS"
+    },
+    "stats": {
+      "bst_overview": "BST OVERVIEW",
+      "focus": "Foco"
+    }
+  },
+  "tools": {
+    "calculator": {
+      "title": "DEFENSIVE ANALYZER",
+      "back_module": "Volver al Módulo",
+      "select_types": "Selecciona Tipos",
+      "waiting_data": "ESPERANDO DATOS...",
+      "select_prompt": "SELECCIONA TIPOS PARA INICIAR SIMULACIÓN",
+      "threat_x4": "AMENAZA CRÍTICA (x4)",
+      "weak_x2": "DEBILIDADES (x2)",
+      "resist_x05": "RESISTENTE (x0.5)",
+      "resist_x025": "ULTRA RESISTENTE (x0.25)",
+      "immune_x0": "INMUNIDAD TOTAL (x0)"
     }
   }
 }

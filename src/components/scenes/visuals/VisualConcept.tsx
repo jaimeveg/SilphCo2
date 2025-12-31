@@ -15,21 +15,26 @@ type ConceptType = 'accuracy' | 'move' | 'stab' | 'category' | 'status';
 export default function VisualConcept({
   pokeId,
   concept,
+  dict, // 1. Inyección de I18n
 }: {
   pokeId: number;
   concept: ConceptType;
+  dict: any;
 }) {
+  // 2. Hook a textos
+  const t = dict.visuals.concept;
+
   switch (concept) {
     case 'accuracy':
-      return <AccuracyVisual />;
+      return <AccuracyVisual t={t.accuracy} />;
     case 'move':
-      return <MoveBreakdown />;
+      return <MoveBreakdown t={t.move} />;
     case 'stab':
-      return <StabMechanic />;
+      return <StabMechanic t={t.stab} />;
     case 'category':
-      return <CategorySplit />;
+      return <CategorySplit t={t.category} />;
     case 'status':
-      return <StatusMove />;
+      return <StatusMove t={t.status} />;
     default:
       return null;
   }
@@ -52,7 +57,7 @@ const TYPE_ICON_BASE =
   'https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/';
 
 /* --- 1. ACCURACY --- */
-function AccuracyVisual() {
+function AccuracyVisual({ t }: { t: any }) {
   return (
     <div className="relative w-full h-full flex items-center justify-center bg-slate-900/50">
       <div className="relative z-20 flex flex-col items-center">
@@ -68,11 +73,11 @@ function AccuracyVisual() {
           <div className="bg-slate-950/90 border border-cyan-500/50 px-3 py-1 rounded-full flex items-center gap-2 shadow-xl">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
             <span className="text-xs font-mono font-bold text-white tracking-widest">
-              EVA +2
+              {t.evasion} {/* I18N */}
             </span>
           </div>
           <span className="text-[10px] font-mono text-cyan-300 uppercase">
-            Doble Equipo
+            {t.move_name} {/* I18N */}
           </span>
         </div>
       </div>
@@ -114,7 +119,7 @@ function AccuracyVisual() {
 }
 
 /* --- 2. MOVE BREAKDOWN (TIGHT LAYOUT) --- */
-function MoveBreakdown() {
+function MoveBreakdown({ t }: { t: any }) {
   return (
     <div className="relative w-full h-full flex items-center justify-center mt-12">
       {/* TARJETA CENTRAL */}
@@ -123,16 +128,17 @@ function MoveBreakdown() {
         <div className="flex justify-between items-start border-b border-white/10 pb-2">
           <div>
             <h3 className="text-xl font-black text-white uppercase italic">
-              Escaldar
+              {t.name} {/* I18N */}
             </h3>
             <span className="text-[10px] text-blue-300 font-mono">
-              Agua / Especial
+              {t.type_cat} {/* I18N */}
             </span>
           </div>
           <div className="w-8 h-8 bg-blue-600 rounded p-1 shadow">
             <img
               src={`${TYPE_ICON_BASE}water.svg`}
               className="w-full h-full invert"
+              alt="Water Type"
             />
           </div>
         </div>
@@ -140,64 +146,64 @@ function MoveBreakdown() {
         <div className="space-y-2">
           <div className="flex justify-between items-center bg-slate-900 px-2 py-1.5 rounded border border-slate-800">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider">
-              Potencia
+              {t.power} {/* I18N */}
             </span>
             <span className="font-bold text-white">80</span>
           </div>
           <div className="flex justify-between items-center bg-slate-900 px-2 py-1.5 rounded border border-slate-800">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider">
-              Precisión
+              {t.accuracy} {/* I18N */}
             </span>
             <span className="font-bold text-white">100%</span>
           </div>
         </div>
         {/* FOOTER */}
         <div className="text-[10px] text-slate-300 leading-tight pt-2 border-t border-white/5 bg-blue-900/10 p-2 rounded">
-          30% probabilidad de quemar al objetivo. Descongela al usuario.
+          {t.effect_desc} {/* I18N */}
         </div>
       </div>
 
       {/* LABELS (AJUSTADAS Y CERCANAS) */}
 
-      {/* NOMBRE -> Bajado y Acercado */}
+      {/* NOMBRE */}
       <div className="absolute top-[24%] left-[12%] flex items-center group">
         <span className="bg-slate-800 text-[9px] font-mono text-white px-2 py-1 rounded border border-slate-600 shadow-lg">
-          NOMBRE
+          {t.label_name} {/* I18N */}
         </span>
         <div className="w-8 h-px bg-slate-500" />
         <div className="w-px h-8 bg-slate-500" />
       </div>
 
-      {/* TIPO -> Bajado y Acercado */}
+      {/* TIPO */}
       <div className="absolute top-[25%] right-[14%] flex items-center justify-end group">
         <div className="w-px h-8 bg-blue-500" />
         <div className="w-8 h-px bg-blue-500" />
         <span className="bg-blue-900/50 text-[9px] font-mono text-blue-300 px-2 py-1 rounded border border-blue-500/50 shadow-lg">
-          TIPO
+          {t.label_type} {/* I18N */}
         </span>
       </div>
 
-      {/* POTENCIA -> Subido y Acercado */}
+      {/* POTENCIA */}
       <div className="absolute top-[44%] left-[10%] flex items-center group">
         <span className="bg-red-900/40 text-[9px] font-mono text-red-300 px-2 py-1 rounded border border-red-500/40 shadow-lg">
-          POTENCIA
+          {t.label_power} {/* I18N */}
         </span>
         <div className="w-12 h-px bg-red-500/60" />
       </div>
 
-      {/* PRECISIÓN -> Subido y Acercado */}
+      {/* PRECISIÓN */}
       <div className="absolute top-[55%] right-[10%] flex items-center justify-end group">
         <div className="w-12 h-px bg-emerald-500/60" />
         <span className="bg-emerald-900/40 text-[9px] font-mono text-emerald-300 px-2 py-1 rounded border border-emerald-500/40 shadow-lg">
-          PRECISIÓN
+          {t.label_accuracy} {/* I18N */}
         </span>
       </div>
 
-      {/* EFECTO -> Bottom */}
+      {/* EFECTO */}
       <div className="absolute bottom-[10%] left-[45%] flex flex-col items-center group">
         <div className="h-6 w-px bg-slate-500 mb-1" />
         <span className="bg-slate-800 text-[9px] font-mono text-slate-300 px-2 py-1 rounded border border-slate-600 shadow-lg">
-          EFECTO
+          {t.label_effect} {/* I18N */}
         </span>
       </div>
     </div>
@@ -205,25 +211,16 @@ function MoveBreakdown() {
 }
 
 /* --- 3. STAB MECHANIC (CICLO DE REINICIO) --- */
-function StabMechanic() {
+function StabMechanic({ t }: { t: any }) {
   const count = useMotionValue(80);
   const rounded = useTransform(count, Math.round);
 
   useEffect(() => {
     const runAnimationCycle = async () => {
-      // 1. Reinicio instantáneo a 80
       count.set(80);
-
-      // 2. Pausa corta en 80 (1.5s) para que el usuario lo vea
       await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      // 3. Animación de subida suave (2.5s)
       await animate(count, 120, { duration: 2.5, ease: 'circOut' });
-
-      // 4. Pausa prolongada en 120 (4s) para que el usuario lea
       await new Promise((resolve) => setTimeout(resolve, 4000));
-
-      // 5. Repetir ciclo
       runAnimationCycle();
     };
 
@@ -244,9 +241,9 @@ function StabMechanic() {
         </div>
         <div className="mt-[-20px] bg-blue-900/50 border border-blue-500/50 px-3 py-0.5 rounded-full flex items-center gap-1 shadow-lg backdrop-blur-sm z-10">
           <div className="w-3 h-3">
-            <img src={`${TYPE_ICON_BASE}water.svg`} />
+            <img src={`${TYPE_ICON_BASE}water.svg`} alt="Type" />
           </div>
-          <span className="text-[10px] font-bold text-blue-200">TIPO AGUA</span>
+          <span className="text-[10px] font-bold text-blue-200">{t.type_water}</span>
         </div>
       </div>
 
@@ -254,13 +251,13 @@ function StabMechanic() {
       <div className="relative z-10 flex items-center gap-4 mt-8">
         <div className="w-28 bg-slate-950/80 border border-slate-700 rounded-lg p-3 backdrop-blur-sm">
           <div className="flex justify-between border-b border-slate-700 pb-1 mb-1">
-            <span className="text-[9px] font-bold text-white">ESCALDAR</span>
+            <span className="text-[9px] font-bold text-white">{t.move_name}</span>
             <div className="w-3 h-3 bg-blue-600 rounded-full p-0.5">
-              <img src={`${TYPE_ICON_BASE}water.svg`} className="invert" />
+              <img src={`${TYPE_ICON_BASE}water.svg`} className="invert" alt="Type" />
             </div>
           </div>
           <div className="text-center">
-            <span className="text-[10px] text-slate-400 block">BASE</span>
+            <span className="text-[10px] text-slate-400 block">{t.base}</span>
             <span className="text-2xl font-mono text-white">80</span>
           </div>
         </div>
@@ -270,7 +267,7 @@ function StabMechanic() {
         <div className="w-32 bg-slate-950/90 border border-brand-cyan/50 rounded-lg p-3 backdrop-blur-sm shadow-[0_0_20px_rgba(56,189,248,0.2)]">
           <div className="flex justify-between border-b border-brand-cyan/30 pb-1 mb-1">
             <span className="text-[9px] font-bold text-brand-cyan">
-              RESULTADO
+              {t.result}
             </span>
             <div className="w-3 h-3 bg-brand-cyan rounded-full p-0.5 flex items-center justify-center">
               <Droplets size={8} className="text-slate-900 fill-current" />
@@ -281,7 +278,7 @@ function StabMechanic() {
               {rounded}
             </motion.div>
             <span className="text-[9px] font-bold text-brand-cyan bg-brand-cyan/10 px-1 rounded block mt-1">
-              STAB x1.5
+              {t.multiplier}
             </span>
           </div>
         </div>
@@ -291,7 +288,7 @@ function StabMechanic() {
 }
 
 /* --- 4. CATEGORY SPLIT --- */
-function CategorySplit() {
+function CategorySplit({ t }: { t: any }) {
   return (
     <div className="relative w-full h-full overflow-hidden rounded-3xl flex border border-white/10">
       <div className="w-1/2 h-full relative overflow-hidden group border-r border-white/10">
@@ -307,13 +304,11 @@ function CategorySplit() {
             <span className="text-2xl">💥</span>
           </div>
           <h4 className="text-lg font-black text-white uppercase drop-shadow-md">
-            Físico
+            {t.physical} {/* I18N */}
           </h4>
           <div className="h-px w-12 bg-orange-300/50 my-2" />
-          <p className="text-[9px] text-orange-100 text-center font-mono leading-tight px-2">
-            Ataque vs Defensa.
-            <br />
-            Generalmente contacto.
+          <p className="text-[9px] text-orange-100 text-center font-mono leading-tight px-2 whitespace-pre-line">
+            {t.physical_desc} {/* I18N */}
           </p>
         </div>
       </div>
@@ -333,13 +328,11 @@ function CategorySplit() {
             <div className="w-2 h-2 bg-white rounded-full" />
           </div>
           <h4 className="text-lg font-black text-white uppercase drop-shadow-md">
-            Especial
+            {t.special} {/* I18N */}
           </h4>
           <div className="h-px w-12 bg-purple-300/50 my-2" />
-          <p className="text-[9px] text-purple-100 font-mono leading-tight px-2">
-            Atk. Esp vs Def. Esp.
-            <br />
-            Pulsos, ondas, energía.
+          <p className="text-[9px] text-purple-100 font-mono leading-tight px-2 whitespace-pre-line">
+            {t.special_desc} {/* I18N */}
           </p>
         </div>
       </div>
@@ -348,7 +341,7 @@ function CategorySplit() {
 }
 
 /* --- 5. STATUS MOVE --- */
-function StatusMove() {
+function StatusMove({ t }: { t: any }) {
   return (
     <div className="relative w-full h-full flex items-center justify-center gap-16 px-4 bg-slate-900/50">
       {/* USER: SABLEYE */}
@@ -390,7 +383,7 @@ function StatusMove() {
             }}
             className="absolute top-0 right-4 bg-red-500/90 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-lg z-20"
           >
-            BRN
+            {t.burn} {/* I18N */}
           </motion.div>
         </div>
 
@@ -405,7 +398,7 @@ function StatusMove() {
           }}
           className="px-2 py-0.5 bg-red-900/40 border border-red-500/30 rounded text-[9px] text-red-200 font-mono"
         >
-          ATK x0.5
+          {t.atk_drop} {/* I18N */}
         </motion.div>
       </div>
 

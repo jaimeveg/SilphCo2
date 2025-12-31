@@ -2,11 +2,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Lock } from 'lucide-react';
-import { NavSection } from '@/data/navigation'; // Importamos solo el TIPO
+import { NavSection } from '@/data/navigation';
 
 interface StickySubNavProps {
-  sections: NavSection[]; // Recibimos la estructura ya traducida
-  dict: any; // Recibimos el diccionario para textos fijos (opcional si ya viene todo en sections)
+  sections: NavSection[];
+  dict: any;
 }
 
 export default function StickySubNav({ sections, dict }: StickySubNavProps) {
@@ -53,10 +53,19 @@ export default function StickySubNav({ sections, dict }: StickySubNavProps) {
 function ModuleSwitcher({ dict }: { dict: any }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Usamos textos seguros por si dict falla o es parcial
-  const labelMod1 = dict?.navigation?.modules?.mod1 || "Módulo 01";
-  const labelMod2 = dict?.navigation?.modules?.mod2 || "Módulo 02";
-  const labelMod3 = dict?.navigation?.modules?.mod3 || "Módulo 03";
+  // Hook a textos del diccionario
+  const t_switcher = dict.navigation.switcher;
+  const t_mods = dict.navigation.modules;
+
+  // Lista de módulos basada en la arquitectura de 6 módulos
+  const modules = [
+    { label: t_mods.mod1, active: true, locked: false },
+    { label: t_mods.mod2, active: false, locked: true },
+    { label: t_mods.mod3, active: false, locked: true },
+    { label: t_mods.mod4, active: false, locked: true },
+    { label: t_mods.mod5, active: false, locked: true },
+    { label: t_mods.mod6, active: false, locked: true },
+  ];
 
   return (
     <div 
@@ -66,7 +75,9 @@ function ModuleSwitcher({ dict }: { dict: any }) {
     >
       <button className="flex items-center gap-2 text-xs font-mono text-cyan-500 hover:text-white transition-colors py-2 uppercase tracking-widest font-bold cursor-pointer">
         <span className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
-        <span className="truncate max-w-[150px] md:max-w-none">{labelMod1}</span>
+        <span className="truncate max-w-[150px] md:max-w-none">
+          {t_mods.mod1} {/* Muestra siempre el módulo activo actual */}
+        </span>
         <ChevronDown size={14} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
@@ -79,12 +90,17 @@ function ModuleSwitcher({ dict }: { dict: any }) {
             className="absolute top-full left-0 w-64 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl overflow-hidden py-2 z-50"
           >
             <div className="px-4 py-2 text-[10px] text-slate-500 font-mono uppercase border-b border-slate-800/50 mb-1">
-              Select Module
+              {t_switcher.select_module} {/* I18N */}
             </div>
             
-            <ModuleOption label={labelMod1} active />
-            <ModuleOption label={labelMod2} locked />
-            <ModuleOption label={labelMod3} locked />
+            {modules.map((mod, idx) => (
+              <ModuleOption 
+                key={idx} 
+                label={mod.label} 
+                active={mod.active} 
+                locked={mod.locked} 
+              />
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

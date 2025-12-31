@@ -2,10 +2,9 @@ import {
   Hash, Activity, Sword, 
   GraduationCap, Zap, Skull, 
   LucideIcon, Calculator, Timer, 
-  Dna, Brain, RefreshCw 
+  Dna, Brain, RefreshCw, Egg 
 } from 'lucide-react';
 
-// Tipos para TypeScript
 export interface NavItem {
   label: string;
   id: string;
@@ -35,41 +34,45 @@ export interface CoreMenuItem {
 }
 
 // --- FACTORY: SECCIONES MÓDULO 1 ---
-export const getModule1Sections = (dict: any): NavSection[] => [
-  {
-    id: 'types',
-    label: dict.navigation.sections.types,
-    icon: Hash,
-    items: [
-      { label: 'Tabla de Tipos', id: '1.1_type_matchup' }, // Podríamos traducir esto más a fondo en Fase C
-      { label: 'Tipos Duales', id: '1.2_dual_typing' },
-    ],
-  },
-  {
-    id: 'stats',
-    label: dict.navigation.sections.stats,
-    icon: Activity,
-    items: [
-      { label: 'HP (Vida)', id: '1.3_stat_hp' },
-      { label: 'ATK & DEF', id: 'section-physical-stats' },
-      { label: 'SPA & SPD', id: 'section-special-stats' },
-      { label: 'Velocidad', id: '1.6_stat_speed' },
-      { label: 'Precisión/Eva', id: '1.8_hidden_accuracy' },
-      { label: 'BST Total', id: '1.7_bst_analysis' },
-    ],
-  },
-  {
-    id: 'mechanics',
-    label: dict.navigation.sections.mechanics,
-    icon: Sword,
-    items: [
-      { label: 'Funcionamiento', id: '1.9_move_logic' },
-      { label: 'STAB', id: '1.10_stab_mechanic' },
-      { label: 'Categoría', id: 'section-mechanics-category' },
-      { label: 'Estado', id: '1.12_status_moves' },
-    ],
-  },
-];
+export const getModule1Sections = (dict: any): NavSection[] => {
+  const t_items = dict.navigation.sections.items;
+  
+  return [
+    {
+      id: 'types',
+      label: dict.navigation.sections.types,
+      icon: Hash,
+      items: [
+        { label: t_items.type_chart, id: '1.1_type_matchup' },
+        { label: t_items.dual_types, id: '1.2_dual_typing' },
+      ],
+    },
+    {
+      id: 'stats',
+      label: dict.navigation.sections.stats,
+      icon: Activity,
+      items: [
+        { label: t_items.hp, id: '1.3_stat_hp' },
+        { label: t_items.atk_def, id: 'section-physical-stats' }, // Alias para 1.4
+        { label: t_items.spa_spd, id: 'section-special-stats' },  // Alias para 1.5
+        { label: t_items.speed, id: '1.6_stat_speed' },
+        { label: t_items.accuracy, id: '1.8_hidden_accuracy' },
+        { label: t_items.bst, id: '1.7_bst_analysis' },
+      ],
+    },
+    {
+      id: 'mechanics',
+      label: dict.navigation.sections.mechanics,
+      icon: Sword,
+      items: [
+        { label: t_items.logic, id: '1.9_move_logic' },
+        { label: t_items.stab, id: '1.10_stab_mechanic' },
+        { label: t_items.category, id: 'section-mechanics-category' }, // Alias para 1.11
+        { label: t_items.status, id: '1.12_status_moves' },
+      ],
+    },
+  ];
+};
 
 // --- FACTORY: ACADEMY MODULES ---
 export const getAcademyModules = (dict: any): ModuleDefinition[] => [
@@ -107,6 +110,13 @@ export const getAcademyModules = (dict: any): ModuleDefinition[] => [
     sections: [],
     locked: true,
   },
+  {
+    id: 'mod_6',
+    label: dict.navigation.modules.mod6,
+    icon: Egg,
+    sections: [],
+    locked: true,
+  },
 ];
 
 // --- FACTORY: MENÚ PRINCIPAL (CORE) ---
@@ -126,7 +136,7 @@ export const getCoreMenu = (lang: string, dict: any): CoreMenuItem[] => [
     children: [
       { 
         label: dict.navigation.tools_items.type_calc, 
-        href: `/${lang}/tools/type-calculator`, // URL DINÁMICA
+        href: `/${lang}/tools/type-calculator`,
         icon: Calculator 
       }
     ] 

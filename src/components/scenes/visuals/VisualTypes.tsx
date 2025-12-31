@@ -3,18 +3,22 @@
 import { useState } from 'react';
 import { ExternalLink, Zap } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link'; // Se mantiene si se usa en otros lados, si no se puede quitar.
+import Link from 'next/link';
 import TypeChartModal from '@/components/ui/modals/TypeChartModal';
 
 export default function VisualTypes({
   pokeId,
   visualSignature,
+  dict, // 1. Recibimos dict
 }: {
   pokeId: number;
   visualSignature: string;
+  dict: any;
 }) {
-  // 1. ESTADO PARA EL MODAL
   const [showModal, setShowModal] = useState(false);
+
+  // 2. Hook a textos específicos
+  const t = dict.visuals.types;
 
   const CHARIZARD_URL =
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png';
@@ -58,9 +62,10 @@ export default function VisualTypes({
         {/* TEXTO CENTRAL */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-0">
           <h3 className="text-sm font-display font-bold text-white/50 uppercase tracking-widest text-center leading-tight">
-            CICLO DE
-            <br />
-            EFECTIVIDAD
+             {/* I18N: Usamos replace para mantener el salto de línea si el texto tiene espacio, o css wrapping */}
+             {t.effectiveness_cycle.split(' ').map((word: string, i: number) => (
+                <span key={i} className="block">{word}</span>
+             ))}
           </h3>
         </div>
 
@@ -98,7 +103,7 @@ export default function VisualTypes({
           {/* ETIQUETA EXTERIOR */}
           <div className="absolute top-[15%] left-[10%] -translate-x-1/2 -translate-y-1/2">
             <span className="text-[9px] font-mono text-slate-300 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-500/30 whitespace-nowrap">
-              EFICAZ (x2)
+              {t.effective} {/* I18N */}
             </span>
           </div>
         </div>
@@ -137,7 +142,7 @@ export default function VisualTypes({
           {/* ETIQUETA INTERIOR */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
             <span className="text-[9px] font-mono text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-500/30 whitespace-nowrap translate-y-2">
-              RESISTENCIA (x0.5)
+              {t.resistance} {/* I18N */}
             </span>
           </div>
         </div>
@@ -185,10 +190,10 @@ export default function VisualTypes({
             </div>
             <div className="flex flex-col">
               <span className="text-[9px] font-mono text-slate-500 uppercase">
-                HERRAMIENTA
+                {t.tool_label} {/* I18N */}
               </span>
               <span className="text-xs font-bold text-slate-200 group-hover:text-white">
-                TABLA DE TIPOS
+                {t.tool_name} {/* I18N */}
               </span>
             </div>
           </div>
@@ -199,8 +204,8 @@ export default function VisualTypes({
         </button>
       </div>
 
-      {/* MODAL INJECTED */}
-      <TypeChartModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      {/* MODAL INJECTED: Pasamos dict al modal */}
+      <TypeChartModal isOpen={showModal} onClose={() => setShowModal(false)} dict={dict} />
     </div>
   );
 }

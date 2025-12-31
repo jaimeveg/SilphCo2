@@ -8,14 +8,19 @@ interface VisualStatsProps {
   pokeId: number;
   highlightStat: string;
   scrollProgress: any;
+  dict: any; // 1. Inyección de I18n
 }
 
 export default function VisualStats({
   pokeId,
   highlightStat,
+  dict,
 }: VisualStatsProps) {
   const [stats, setStats] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+
+  // 2. Hook a textos
+  const t = dict.visuals.stats;
 
   // URLs de Assets
   const OFFICIAL_ARTWORK = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeId}.png`;
@@ -110,7 +115,7 @@ export default function VisualStats({
 
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
-      {/* 1. LAYER FONDO: ARTWORK GIGANTE (Recuperado) */}
+      {/* 1. LAYER FONDO: ARTWORK GIGANTE */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
         <div className="relative w-[120%] h-[120%] opacity-[0.07] grayscale mix-blend-overlay">
           <Image
@@ -234,8 +239,8 @@ export default function VisualStats({
           <Activity size={14} className="text-brand-cyan" />
           <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
             {highlightStat === 'all'
-              ? 'BST OVERVIEW'
-              : `Foco: ${highlightStat.toUpperCase().replace('-', ' & ')}`}
+              ? t.bst_overview // I18N
+              : `${t.focus}: ${highlightStat.toUpperCase().replace('-', ' & ')}`} {/* I18N */}
           </span>
         </div>
       </div>

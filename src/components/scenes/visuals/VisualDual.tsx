@@ -3,14 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ExternalLink, Zap } from 'lucide-react';
 
-export default function VisualDual({ pokeId }: { pokeId: number }) {
+export default function VisualDual({ pokeId, dict, lang }: { pokeId: number; dict: any; lang: string }) {
+  const t = dict.visuals.dual;
+
   const POKEMON_IMG =
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/306.png';
   const TYPE_ICON_BASE =
     'https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/';
 
   return (
-    // FIX: pt-24 para bajar el contenido y evitar solapamiento con DATA POINT
     <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden pt-24 pb-4">
       {/* BACKGROUND */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
@@ -28,7 +29,7 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
       {/* HEADER + LOGOS PILL STYLE */}
       <div className="relative z-10 text-center mb-6">
         <h3 className="text-lg font-display font-bold text-white uppercase tracking-widest mb-3">
-          AGGRON
+          {t.aggron}
         </h3>
         <div className="flex justify-center gap-3">
           <div className="flex items-center gap-2 pl-1 pr-3 py-1 bg-slate-800/80 border border-slate-600 rounded-full shadow-lg backdrop-blur-md">
@@ -36,10 +37,11 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
               <img
                 src={`${TYPE_ICON_BASE}steel.svg`}
                 className="invert opacity-90"
+                alt="Steel"
               />
             </div>
             <span className="text-[10px] font-bold text-slate-300 tracking-wide">
-              ACERO
+              {t.steel}
             </span>
           </div>
           <div className="flex items-center gap-2 pl-1 pr-3 py-1 bg-yellow-900/40 border border-yellow-700/50 rounded-full shadow-lg backdrop-blur-md">
@@ -47,10 +49,11 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
               <img
                 src={`${TYPE_ICON_BASE}rock.svg`}
                 className="invert opacity-90"
+                alt="Rock"
               />
             </div>
             <span className="text-[10px] font-bold text-yellow-500 tracking-wide">
-              ROCA
+              {t.rock}
             </span>
           </div>
         </div>
@@ -62,7 +65,7 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
         <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-4 flex flex-col backdrop-blur-sm hover:bg-red-900/30 transition-colors">
           <div className="flex justify-between items-start mb-2">
             <span className="text-[9px] font-mono text-red-400 uppercase">
-              Debilidad
+              {t.weakness}
             </span>
             <span className="text-xl font-black text-white italic">x4</span>
           </div>
@@ -72,10 +75,11 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
                 <img
                   src={`${TYPE_ICON_BASE}fighting.svg`}
                   className="opacity-70"
+                  alt="Fighting"
                 />
               </div>
               <span className="text-[10px] font-bold text-slate-300">
-                LUCHA
+                {t.fighting}
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -83,10 +87,11 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
                 <img
                   src={`${TYPE_ICON_BASE}ground.svg`}
                   className="opacity-70"
+                  alt="Ground"
                 />
               </div>
               <span className="text-[10px] font-bold text-slate-300">
-                TIERRA
+                {t.ground}
               </span>
             </div>
           </div>
@@ -95,7 +100,7 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
         <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-xl p-4 flex flex-col backdrop-blur-sm hover:bg-emerald-900/30 transition-colors">
           <div className="flex justify-between items-start mb-2">
             <span className="text-[9px] font-mono text-emerald-400 uppercase">
-              Resistencia
+              {t.resistance}
             </span>
             <span className="text-xl font-black text-white italic">x0.25</span>
           </div>
@@ -105,10 +110,11 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
                 <img
                   src={`${TYPE_ICON_BASE}normal.svg`}
                   className="opacity-70"
+                  alt="Normal"
                 />
               </div>
               <span className="text-[10px] font-bold text-slate-300">
-                NORMAL
+                {t.normal}
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -116,10 +122,11 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
                 <img
                   src={`${TYPE_ICON_BASE}flying.svg`}
                   className="opacity-70"
+                  alt="Flying"
                 />
               </div>
               <span className="text-[10px] font-bold text-slate-300">
-                VOLADOR
+                {t.flying}
               </span>
             </div>
           </div>
@@ -129,7 +136,7 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
       {/* BOTÓN ACTION */}
       <div className="relative z-30 w-full flex justify-center px-6">
         <Link
-          href="/tools/type-calculator"
+          href={`/${lang}/tools/type-calculator`} // URL DINÁMICA
           className="w-full max-w-xs group relative flex items-center justify-between px-5 py-3 bg-slate-900/90 border border-slate-700 hover:border-brand-cyan/50 rounded-lg overflow-hidden transition-all shadow-lg"
         >
           <div className="absolute inset-0 bg-brand-cyan/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -139,10 +146,10 @@ export default function VisualDual({ pokeId }: { pokeId: number }) {
             </div>
             <div className="flex flex-col text-left">
               <span className="text-[9px] font-mono text-slate-500 uppercase">
-                HERRAMIENTA
+                {t.tool_label}
               </span>
               <span className="text-xs font-bold text-slate-200 group-hover:text-white">
-                CALCULADORA DE TIPOS
+                {t.tool_name}
               </span>
             </div>
           </div>

@@ -7,19 +7,17 @@ import ModuleCards from '@/components/navigation/ModuleCards';
 import StickySubNav from '@/components/navigation/StickySubNav';
 import ReadingProgress from '@/components/ui/ReadingProgress';
 import { NarrativeSceneData } from '@/types/silph';
-// NUEVO IMPORT: Traemos la factoría aquí
 import { getModule1Sections } from '@/data/navigation';
 
 interface Module1ViewProps {
   scenes: NarrativeSceneData[];
-  // navigationSections: NavSection[]; <--- ELIMINADO DE PROPS
   dict: any;
+  lang: string; // NUEVA PROP
 }
 
-export default function Module1View({ scenes, dict }: Module1ViewProps) {
+export default function Module1View({ scenes, dict, lang }: Module1ViewProps) {
   const contentRef = useRef<HTMLDivElement>(null);
   
-  // GENERACIÓN DE NAVEGACIÓN EN CLIENTE (Seguro para iconos)
   const navigationSections = getModule1Sections(dict);
 
   const getSectionId = (index: number) => {
@@ -32,10 +30,10 @@ export default function Module1View({ scenes, dict }: Module1ViewProps) {
 
   return (
     <div className="flex flex-col relative min-h-screen">
-      <HeroHeader />
+      <HeroHeader dict={dict} />
 
       <div className="relative z-30">
-        <ModuleCards />
+        <ModuleCards dict={dict} />
       </div>
 
       <div className="sticky top-0 z-40 shadow-2xl">
@@ -53,14 +51,20 @@ export default function Module1View({ scenes, dict }: Module1ViewProps) {
                 id={getSectionId(index)}
                 className="relative scroll-mt-[140px]"
               >
-                <NarrativeScene data={scene} index={index} />
+                {/* PASAMOS lang A LA ESCENA */}
+                <NarrativeScene 
+                  data={scene} 
+                  index={index} 
+                  dict={dict} 
+                  lang={lang} 
+                />
               </div>
             ))}
           </div>
         </div>
 
         <section className="h-[30vh] flex items-center justify-center text-slate-600 font-mono text-xs border-t border-slate-800/50 mt-12">
-          END OF SEQUENCE // MODULE_01 COMPLETED
+          {dict.scene.end_sequence}
         </section>
       </div>
 

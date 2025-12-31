@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Wrench } from 'lucide-react'; // Iconos sugeridos para la UI (si tienes lucide-react instalado, que lo tienes por el SSoT)
+import { ArrowRight, BookOpen, Wrench } from 'lucide-react';
+import { getDictionary } from "@/i18n/get-dictionary";
 
 interface HubPageProps {
   params: {
@@ -7,8 +8,10 @@ interface HubPageProps {
   };
 }
 
-export default function HubPage({ params }: HubPageProps) {
+export default async function HubPage({ params }: HubPageProps) {
   const { lang } = params;
+  const dict = await getDictionary(lang as any);
+  const t = dict.hub;
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center p-8 bg-slate-950 text-slate-200">
@@ -20,7 +23,7 @@ export default function HubPage({ params }: HubPageProps) {
         </h1>
         <div className="inline-block px-3 py-1 bg-slate-900 border border-slate-800 rounded-full">
           <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">
-            Architecture Alpha v2.0 • Lang: {lang.toUpperCase()}
+            {t.subtitle} • Lang: {lang.toUpperCase()}
           </span>
         </div>
       </div>
@@ -43,23 +46,23 @@ export default function HubPage({ params }: HubPageProps) {
                 <BookOpen size={24} />
               </div>
               <h2 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                PokeAcademy
+                {t.cards.academy.title}
               </h2>
               <p className="mt-2 text-slate-400 group-hover:text-slate-300">
-                Acceder al Módulo 1: Fundamentos Teóricos y Visualización de Datos.
+                {t.cards.academy.description}
               </p>
             </div>
             
             <div className="flex items-center gap-2 text-sm font-bold text-cyan-500 uppercase tracking-widest">
-              Comenzar <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              {t.cards.academy.action} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </div>
           </div>
         </Link>
 
-        {/* CARD: TOOLS (Placeholder) */}
+        {/* CARD: TOOLS */}
         <Link 
-          href={`/${lang}/tools`} // Esta ruta fallará 404 hasta que creemos la carpeta, pero es el link correcto
-          className="group relative p-8 bg-slate-900/50 border border-slate-800 hover:border-purple-500/50 rounded-2xl transition-all duration-300 hover:bg-slate-900 overflow-hidden grayscale hover:grayscale-0 opacity-60 hover:opacity-100"
+          href={`/${lang}/tools/type-calculator`}
+          className="group relative p-8 bg-slate-900/50 border border-slate-800 hover:border-purple-500/50 rounded-2xl transition-all duration-300 hover:bg-slate-900 overflow-hidden"
         >
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-purple-500">
             <Wrench size={120} />
@@ -71,15 +74,15 @@ export default function HubPage({ params }: HubPageProps) {
                 <Wrench size={24} />
               </div>
               <h2 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
-                Silph Tools
+                {t.cards.tools.title}
               </h2>
               <p className="mt-2 text-slate-400">
-                Herramientas de cálculo y simulación. (En construcción)
+                {t.cards.tools.description}
               </p>
             </div>
             
             <div className="flex items-center gap-2 text-sm font-bold text-purple-500 uppercase tracking-widest">
-              Explorar <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              {t.cards.tools.action} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </div>
           </div>
         </Link>

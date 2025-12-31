@@ -1,0 +1,239 @@
+{
+  "module_1_narrative": {
+    "module_id": "01_foundations",
+    "scenes": [
+      {
+        "id": "1.1_type_matchup",
+        "visual_signature": "Elemental_Type_Chart_Active",
+        "content": {
+          "headline": "TYPE CHART",
+          "kpi": "EFFECTIVENESS",
+          "body": "The cornerstone of Pokémon strategy. Every move possesses an Intrinsic Type (the attacker) that mathematically interacts against the Type of the target Pokémon (the defender) defining the final damage. Mastering these relationships is the difference between a decisive hit and a wasted turn.",
+          "technical_notes": [
+            {
+              "label": "Super effective (x2)",
+              "tooltip": "The move deals double damage against Pokémon that are weak to that type."
+            },
+            {
+              "label": "Not very effective (x0.5)",
+              "tooltip": "Damage is reduced by half when the defending Pokémon resists the move's type."
+            },
+            {
+              "label": "Immune (x0)",
+              "tooltip": "Certain Pokémon types take no damage from moves of specific types."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.2_dual_typing",
+        "visual_signature": "Dual_Type_Overlap",
+        "content": {
+          "headline": "DUAL TYPES",
+          "kpi": "EXTREME MATHEMATICS",
+          "body": "Many Pokémon possess two types simultaneously, creating a unique combination for their effectiveness charts. This allows multipliers to stack, drastically amplifying both defensive strengths and weaknesses.",
+          "technical_notes": [
+            {
+              "label": "Double weakness (x4)",
+              "tooltip": "Occurs when both of the Pokémon's types are weak to the same move type, doubling critical vulnerability."
+            },
+            {
+              "label": "Double resistance (x0.25)",
+              "tooltip": "Occurs when both of the Pokémon's types resist the attacking move type, reducing damage to an operational minimum."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.3_stat_hp",
+        "visual_signature": "Stat_HP_Pulse",
+        "content": {
+          "headline": "HEALTH POINTS",
+          "kpi": "HP",
+          "body": "Health Points (HP) define the operational vitality of a Pokémon. This stat determines how many hits it can withstand before being knocked out and forced to leave the field.",
+          "technical_notes": [
+            {
+              "label": "Vital Endurance",
+              "tooltip": "With higher HP, a Pokémon has greater staying power against any category of attack."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.4_stat_atk_def",
+        "visual_signature": "Physical_Combat_Axis",
+        "content": {
+          "headline": "PHYSICAL STATS",
+          "kpi": "ATTACK AND DEFENSE",
+          "body": "This axis governs physical category exchanges. Attack determines the strength with which the Pokémon executes these moves, while Defense mitigates the impact of physical attacks received from the rival.",
+          "technical_notes": [
+            {
+              "label": "Attack (Atk)",
+              "tooltip": "Stat that boosts the damage of physical category moves."
+            },
+            {
+              "label": "Defense (Def)",
+              "tooltip": "Stat that mitigates damage from the rival's physical category moves."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.5_stat_spa_spd",
+        "visual_signature": "Special_Energy_Axis",
+        "content": {
+          "headline": "SPECIAL STATS",
+          "kpi": "SP. ATK AND SP. DEF",
+          "body": "Performance in special category attacks depends on this pair of stats. Special Attack governs the output power, while Special Defense is the variable that mitigates damage from the rival's special moves.",
+          "technical_notes": [
+            {
+              "label": "Sp. Attack (SpA)",
+              "tooltip": "Stat that boosts the damage of special category moves."
+            },
+            {
+              "label": "Sp. Defense (SpD)",
+              "tooltip": "Stat that mitigates damage from the rival's special category moves."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.6_stat_speed",
+        "visual_signature": "Speed_Tier_Sequencing",
+        "content": {
+          "headline": "SPEED",
+          "kpi": "TURN ORDER",
+          "body": "The Speed stat is the decisive factor for taking the initiative. Under normal conditions, the Pokémon with the highest Speed value will execute its move before the opponent in each turn.",
+          "technical_notes": [
+            {
+              "label": "Speed Tiers",
+              "tooltip": "Speed comparison where outspeeding the rival by a single point guarantees priority of action."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.7_bst_analysis",
+        "visual_signature": "BST_Totalizer_UI",
+        "content": {
+          "headline": "BASE STAT TOTAL (BST)",
+          "kpi": "SPECIES QUALITY",
+          "body": "BST is the sum of a Pokémon's six base stats. This number allows for identifying the general potential and quality of a species within the competitive environment compared to other species.",
+          "technical_notes": [
+            {
+              "label": "Mixed Attackers",
+              "tooltip": "Pokémon with offensive stats spread evenly. They can attack from both spectrums but are often less efficient than specialists."
+            },
+            {
+              "label": "Min-Maxing",
+              "tooltip": "A high BST is not always better; often a distribution that concentrates potential into key stats is superior to an inefficient even spread."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.8_hidden_accuracy",
+        "visual_signature": "RNG_Hit_Probability",
+        "content": {
+          "headline": "ACCURACY AND EVASION",
+          "kpi": "HIDDEN STATS",
+          "body": "Variables that do not appear on the main sheet but alter combat. Accuracy determines the probability of a move hitting, while Evasion reduces the chances of being hit.",
+          "technical_notes": [
+            {
+              "label": "In-Battle Modification",
+              "tooltip": "These are not fixed values; they are altered by buffs/debuffs (Stages from -6 to +6) which directly impact hit consistency."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.9_move_logic",
+        "visual_signature": "Move_Data_Overlay",
+        "content": {
+          "headline": "THE MOVE",
+          "kpi": "POWER AND ACCURACY",
+          "body": "Every move is defined by its Type and two key values: Power, which establishes base damage, and Accuracy, which indicates the probability of success when executing it.",
+          "technical_notes": [
+            {
+              "label": "Move Type",
+              "tooltip": "Intrinsic elemental property that determines effectiveness against the rival and STAB activation."
+            },
+            {
+              "label": "Base Power",
+              "tooltip": "Numerical value that determines the raw power of the attack before applying external multipliers."
+            },
+            {
+              "label": "Move Accuracy",
+              "tooltip": "Intrinsic probability that the move will not miss when selected."
+            },
+            {
+              "label": "Additional Effects",
+              "tooltip": "Secondary properties of certain moves that can induce status conditions, alter target/user stats, or modify the field and terrains."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.10_stab_mechanic",
+        "visual_signature": "STAB_Aura_Effect",
+        "content": {
+          "headline": "STAB BONUS",
+          "kpi": "x1.5 BONUS",
+          "body": "STAB (Same Type Attack Bonus) is an automatic damage bonus. If a Pokémon uses a move that shares one of its elemental types, the power of that attack increases by 50%.",
+          "technical_notes": [
+            {
+              "label": "Type Matching",
+              "tooltip": "Aligning the Pokémon's type with its moves is essential for maximizing offensive damage potential."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.11_move_category",
+        "visual_signature": "Category_Identifier_Cards",
+        "content": {
+          "headline": "MOVE CATEGORY",
+          "kpi": "PHYSICAL VS SPECIAL",
+          "body": "Moves are divided based on how they calculate damage. Physical Attacks pit the user's Attack against the rival's Defense, while Special Attacks pit Sp. Attack against Sp. Defense.",
+          "technical_notes": [
+            {
+              "label": "Physical Category",
+              "tooltip": "Calculates damage based on the attacker's Attack against the defender's Defense."
+            },
+            {
+              "label": "Special Category",
+              "tooltip": "Calculates damage based on the attacker's Sp. Attack against the defender's Sp. Defense."
+            }
+          ]
+        }
+      },
+      {
+        "id": "1.12_status_moves",
+        "visual_signature": "Status_Utility_Grid",
+        "content": {
+          "headline": "STATUS MOVES",
+          "kpi": "UTILITY",
+          "body": "Not all moves aim to deal direct damage. They are essential tools for combat control and tactical resource management through secondary effects and disruption.",
+          "technical_notes": [
+            {
+              "label": "Buff / Debuff",
+              "tooltip": "Alteration of stat levels (Stages) for the user or the rival."
+            },
+            {
+              "label": "Status Condition",
+              "tooltip": "Induction of status problems such as Paralysis, Burn, or Sleep."
+            },
+            {
+              "label": "Field Control",
+              "tooltip": "Environment modification through the activation of Weather, Terrains, or the setting of Traps."
+            },
+            {
+              "label": "Utility & Disruption",
+              "tooltip": "Flow control through speed disruption, redirection, or volatile state management."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
