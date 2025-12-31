@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Shield, Zap, Dna, Swords, Flame, Egg, Terminal } from 'lucide-react';
 
 export default function ModuleCards({ dict }: { dict: any }) {
-  const t_mods = dict.navigation.modules;
+  const t_mods = dict.module_cards.modules;
   const t_label = dict.module_cards.label;
 
   const MODULES = [

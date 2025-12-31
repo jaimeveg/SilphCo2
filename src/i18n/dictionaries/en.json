@@ -69,7 +69,15 @@
     "description": "Initializing competitive learning protocol. Access data analysis modules and real-time combat simulations."
   },
   "module_cards": {
-    "label": "SILPH_OS // KNOWLEDGE_BASE_MODULES"
+    "label": "SILPH_CO // KNOWLEDGE_BASE_MODULES",
+    "modules": {
+      "mod1": "Fundamentals",
+      "mod2": "Turn Dynamics",
+      "mod3": "Genetics",
+      "mod4": "Strategy",
+      "mod5": "Mechanics",
+      "mod6": "Breeding"
+    }
   },
   "scene": {
     "return_origin": "RETURN TO ORIGIN",
@@ -94,7 +102,7 @@
   "tools": {
     "calculator": {
       "title": "DEFENSIVE ANALYZER",
-      "back_module": "Back to Module",
+      "back_module": "Back",
       "select_types": "Select Types",
       "waiting_data": "WAITING FOR DATA...",
       "select_prompt": "SELECT TYPES TO START SIMULATION",

@@ -63,13 +63,21 @@
     }
   },
   "hero": {
-    "badge": "SILPH CO. INDUSTRIAL UNIT",
-    "title_prefix": "Silph C.O.",
+    "badge": "SILPH SA. INDUSTRIAL UNIT",
+    "title_prefix": "Silph S.A.",
     "title_highlight": "PokeAcademy",
     "description": "Inicializando protocolo de aprendizaje competitivo. Acceda a los módulos de análisis de datos y simulaciones de combate en tiempo real."
   },
   "module_cards": {
-    "label": "SILPH_OS // KNOWLEDGE_BASE_MODULES"
+    "label": "SILPH_SA // KNOWLEDGE_BASE_MODULES",
+    "modules": {
+      "mod1": "Fundamentos",
+      "mod2": "Dinámicas de Turno",
+      "mod3": "Genética",
+      "mod4": "Estrategia",
+      "mod5": "Mecánicas",
+      "mod6": "Crianza"
+    }
   },
   "scene": {
     "return_origin": "VOLVER AL ORIGEN",
