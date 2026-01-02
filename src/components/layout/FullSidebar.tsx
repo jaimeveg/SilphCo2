@@ -17,15 +17,10 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
 
-  // 1. Hook a textos de navegación
   const t = dict.navigation;
-
-  // 2. Generación del menú con textos ya traducidos (desde getCoreMenu)
   const CORE_MENU = getCoreMenu(lang, dict);
-
   const displayedCategory = isHovering ? openCategory : null;
 
-  // Lógica de etiqueta de idioma (Hardcoded intencionalmente para mostrar idioma destino)
   const languageSwitchLabel = lang === 'es' ? 'Switch to English' : 'Cambiar a español';
 
   const handleLanguageSwitch = () => {
@@ -61,8 +56,11 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
       onMouseLeave={() => setIsHovering(false)}
       className="fixed top-0 left-0 h-full z-[9999] bg-slate-950 border-r border-slate-800 transition-all duration-500 delay-200 ease-[cubic-bezier(0.25,1,0.5,1)] w-20 hover:w-80 group shadow-2xl flex flex-col"
     >
-      {/* HEADER LOGO */}
-      <div className="h-20 flex-shrink-0 flex items-center justify-start px-0 border-b border-slate-800 bg-slate-950 z-20 relative overflow-hidden">
+      {/* HEADER LOGO - AHORA ES UN LINK AL HUB */}
+      <Link 
+        href={`/${lang}`}
+        className="h-20 flex-shrink-0 flex items-center justify-start px-0 border-b border-slate-800 bg-slate-950 z-20 relative overflow-hidden cursor-pointer"
+      >
         <div className="absolute left-0 w-20 h-full flex items-center justify-center transition-opacity duration-300 delay-200 group-hover:opacity-0 pointer-events-none">
           <span className="font-display font-bold text-white text-xl text-cyan-500">S.</span>
         </div>
@@ -71,7 +69,7 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
             SILPH<span className="text-cyan-500">.CO</span>
           </span>
         </div>
-      </div>
+      </Link>
 
       {/* CORE NAVIGATION */}
       <div data-lenis-prevent="true" className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden no-scrollbar py-8 space-y-2 overscroll-contain">
@@ -82,7 +80,6 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
 
           return (
             <div key={category.id} className="relative">
-              {/* CATEGORY HEADER */}
               <button 
                 onClick={() => setOpenCategory(isActive ? null : category.id)}
                 className={`w-full h-14 flex items-center transition-all duration-300 delay-200 relative group/cat ${
@@ -99,10 +96,7 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
                 <div className={`absolute left-0 top-0 bottom-0 w-1 bg-cyan-500 shadow-[0_0_10px_rgba(56,189,248,0.5)] transition-opacity duration-300 delay-200 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
               </button>
 
-              {/* DROPDOWN CONTENT */}
               <div className={`overflow-hidden transition-all duration-500 delay-200 ease-in-out bg-slate-900/20 ${isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}>
-                
-                {/* BRANCH: ACADEMY (MODULES) */}
                 {category.type === 'module_root' && (
                   <div className="flex flex-col pb-4 pt-1 w-full">
                     {category.children.map((module: any) => (
@@ -128,8 +122,6 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
                     ))}
                   </div>
                 )}
-
-                {/* BRANCH: LINKS (TOOLS) */}
                 {category.type === 'link_root' && (
                   <div className="flex flex-col pb-4 pt-2 w-full">
                     {category.children.map((link: any) => (
@@ -152,15 +144,11 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
 
       {/* FOOTER ACTIONS */}
       <div className="p-4 border-t border-slate-800 bg-slate-950 z-20 flex-shrink-0">
-        
-        {/* SELECTOR DE IDIOMA */}
-        <SidebarAction 
+                <SidebarAction 
           icon={Globe} 
           label={languageSwitchLabel} 
           onClick={handleLanguageSwitch} 
         />
-
-        <div className="h-px bg-slate-800 my-2 opacity-50" />
       </div>
     </aside>
   );
