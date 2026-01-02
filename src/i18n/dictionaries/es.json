@@ -176,5 +176,56 @@
         "desc": "Tracker de rutas y gestión de vitalidad. (WIP)"
       }
     }
+  },
+  "academy_hub": {
+    "brand": "SILPH S.A. // POKEACADEMY",
+    "subtitle": "Selecciona un módulo para navegar al contenido.",
+    "access_btn": "ACCEDER AL MÓDULO",
+    "view_syllabus": "VER TEMARIO",
+    "view_desc": "VER DESCRIPCIÓN",
+    "modules": [
+      {
+        "id": "m1",
+        "title": "Módulo 01: Fundamentos",
+        "description": "La base matemática del daño. Aprende la Tabla de Tipos, la diferencia entre Stats Base y Reales, y la anatomía de un Pokémon.",
+        "syllabus": ["1.1 Tabla de Tipos", "1.2 Stats Base vs Real", "1.3 Categorías de Movimiento", "1.4 Naturalezas"],
+        "href": "/academy/module-1"
+      },
+      {
+        "id": "m2",
+        "title": "Módulo 02: Estructura del Turno",
+        "description": "Domina el flujo temporal. Prioridad (Speed Tiers), Fases del Turno y gestión de cambios (Switching) para mantener el momentum.",
+        "syllabus": ["2.1 Prioridad y Speed Tiers", "2.2 Fases del Turno", "2.3 Switching", "2.4 Efectos de Fin de Turno"],
+        "href": "/academy/module-2"
+      },
+      {
+        "id": "m3",
+        "title": "Módulo 03: Genética",
+        "description": "Ingeniería Pokémon. Comprende los Valores Individuales (IVs), Puntos de Esfuerzo (EVs) y cómo maximizar el potencial.",
+        "syllabus": ["3.1 Valores Individuales (IVs)", "3.2 Puntos de Esfuerzo (EVs)", "3.3 Cálculo de Daño", "3.4 Hidden Power"],
+        "href": "/academy/module-3"
+      },
+      {
+        "id": "m4",
+        "title": "Módulo 04: Estrategia Pro",
+        "description": "Construcción de equipos y sinergia. Definición de roles (Sweeper, Wall, Tank) y la importancia de los Cores defensivos.",
+        "syllabus": ["4.1 Roles Competitivos", "4.2 Cores Defensivos", "4.3 Win Conditions", "4.4 Hazard Control"],
+        "href": "/academy/module-4"
+      },
+      {
+        "id": "m5",
+        "title": "Módulo 05: Mecánicas Gen.",
+        "description": "Variables externas. Habilidades, Objetos equipados y Climas. Cómo el entorno afecta al resultado del combate.",
+        "syllabus": ["5.1 Habilidades Pasivas", "5.2 Objetos Competitivos", "5.3 Climas y Terrenos", "5.4 Estados Alterados"],
+        "href": "/academy/module-5"
+      },
+      {
+        "id": "m6",
+        "title": "Módulo 06: Crianza",
+        "description": "El ciclo de vida. Movimientos Huevo, Grupos Huevo y la obtención de Pokémon perfectos para el competitivo.",
+        "syllabus": ["6.1 Grupos Huevo", "6.2 Movimientos Huevo", "6.3 Método Masuda", "6.4 Herencia de Stats"],
+        "href": "/academy/module-6"
+      }
+    ]
   }
 }

@@ -20,7 +20,7 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
       title: t.academy.title,
       desc: t.academy.desc,
       icon: BookOpen,
-      href: `/${lang}/academy/module-1`,
+      href: `/${lang}/academy`,
       color: 'text-cyan-400',
       border: 'group-hover:border-cyan-500/50',
       glow: 'group-hover:shadow-[0_0_20px_rgba(34,211,238,0.1)]',
