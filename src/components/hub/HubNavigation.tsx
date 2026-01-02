@@ -24,18 +24,20 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
       color: 'text-cyan-400',
       border: 'group-hover:border-cyan-500/50',
       glow: 'group-hover:shadow-[0_0_20px_rgba(34,211,238,0.1)]',
-      bg: 'group-hover:bg-cyan-950/30'
+      bg: 'group-hover:bg-cyan-950/30',
+      baseBg: 'bg-slate-900/60'
     },
     {
       id: 'tools',
       title: t.tools.title,
       desc: t.tools.desc,
       icon: Wrench,
-      href: `/${lang}/tools/`,
+      href: `/${lang}/tools`,
       color: 'text-amber-400',
       border: 'group-hover:border-amber-500/50',
       glow: 'group-hover:shadow-[0_0_20px_rgba(245,158,11,0.1)]',
-      bg: 'group-hover:bg-amber-950/30'
+      bg: 'group-hover:bg-amber-950/30',
+      baseBg: 'bg-slate-900/60'
     },
     {
       id: 'nuzlocke',
@@ -43,11 +45,13 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
       desc: t.nuzlocke.desc,
       icon: Skull,
       href: `/${lang}/nuzlocke`,
-      color: 'text-red-400',
-      border: 'group-hover:border-red-500/50',
-      glow: 'group-hover:shadow-[0_0_20px_rgba(239,68,68,0.1)]',
-      bg: 'group-hover:bg-red-950/30',
-      locked: true
+      // CAMBIOS: Tarjeta activada, fondo negro, acentos rojo oscuro
+      color: 'text-red-700', // Rojo oscuro
+      border: 'group-hover:border-red-900/50 border-red-950/30',
+      glow: 'group-hover:shadow-[0_0_30px_rgba(120,0,0,0.3)]',
+      bg: 'group-hover:bg-red-950/20',
+      baseBg: 'bg-[#0a0a0c]', // Fondo negro
+      locked: false // <-- ACTIVADO
     }
   ];
 
@@ -67,7 +71,8 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
             <Link 
             href={card.locked ? '#' : card.href}
             className={cn(
-                "group relative flex flex-col justify-center px-6 py-4 rounded-xl border border-slate-800 bg-slate-900/60 backdrop-blur-md transition-all duration-300 h-full",
+                "group relative flex flex-col justify-center px-6 py-4 rounded-xl border border-slate-800 backdrop-blur-md transition-all duration-300 h-full",
+                card.baseBg, // Fondo base (slate o negro)
                 card.border, card.glow, card.bg,
                 card.locked && "opacity-60 grayscale cursor-not-allowed hover:border-slate-800 hover:shadow-none hover:bg-slate-900/60"
             )}

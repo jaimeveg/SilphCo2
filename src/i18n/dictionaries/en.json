@@ -295,5 +295,59 @@
         "href": "#"
       }
     ]
+  },
+  "nuzlocke_hub": {
+    "hero": {
+      "title": "SILPH CO. // NUZLOCKE",
+      "subtitle": "PERMADEATH PROTOCOL: Failure is not an option."
+    },
+    "tabs": {
+      "operations": "OPERATIONS CENTER",
+      "archives": "TACTICAL ARCHIVES"
+    },
+    "tools": [
+      {
+        "id": "damage_calc",
+        "title": "Damage Calculator",
+        "desc": "Combat simulation. Predict KO ranges.",
+        "status": "online",
+        "href": "#",
+        "icon": "Sword"
+      },
+      {
+        "id": "tracker",
+        "title": "Run Tracker",
+        "desc": "Route logging, encounters, and casualties.",
+        "status": "dev",
+        "href": "#",
+        "icon": "Radar"
+      }
+    ],
+    "archives": [
+      {
+        "id": "rules_core",
+        "title": "Core Rules",
+        "desc": "The 3 unbreakable laws of Nuzlocke.",
+        "format": "text"
+      },
+      {
+        "id": "rules_optional",
+        "title": "Optional Clauses",
+        "desc": "Shiny Clause, Dupes Clause, and common exceptions.",
+        "format": "text"
+      },
+      {
+        "id": "rules_hardcore",
+        "title": "Hardcore Ruleset",
+        "desc": "Level Caps, No Items, Set Mode. Veterans only.",
+        "format": "text"
+      },
+      {
+        "id": "db_romhacks",
+        "title": "Romhacks DB",
+        "desc": "References for Drayano, Emerald Kaizo, and other challenges.",
+        "format": "database"
+      }
+    ]
   }
 }

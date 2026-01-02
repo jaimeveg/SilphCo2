@@ -295,5 +295,59 @@
         "href": "#"
       }
     ]
+  },
+  "nuzlocke_hub": {
+    "hero": {
+      "title": "SILPH S.A. // NUZLOCKE",
+      "subtitle": "PROTOCOLO PERMADEATH: El fallo no es una opción."
+    },
+    "tabs": {
+      "operations": "CENTRO DE OPERACIONES",
+      "archives": "ARCHIVOS TÁCTICOS"
+    },
+    "tools": [
+      {
+        "id": "damage_calc",
+        "title": "Calculadora de Daño",
+        "desc": "Simulación de combate. Predice rangos de KO.",
+        "status": "online",
+        "href": "#",
+        "icon": "Sword"
+      },
+      {
+        "id": "tracker",
+        "title": "Tracker de Partida",
+        "desc": "Registro de rutas, encuentros y bajas.",
+        "status": "dev",
+        "href": "#",
+        "icon": "Radar"
+      }
+    ],
+    "archives": [
+      {
+        "id": "rules_core",
+        "title": "Reglas Fundamentales",
+        "desc": "Las 3 leyes inquebrantables del Nuzlocke.",
+        "format": "text"
+      },
+      {
+        "id": "rules_optional",
+        "title": "Cláusulas Opcionales",
+        "desc": "Shiny Clause, Dupes Clause y excepciones comunes.",
+        "format": "text"
+      },
+      {
+        "id": "rules_hardcore",
+        "title": "Reglamento Hardcore",
+        "desc": "Level Caps, Sin Objetos, Modo Set. Solo para veteranos.",
+        "format": "text"
+      },
+      {
+        "id": "db_romhacks",
+        "title": "BBDD Romhacks",
+        "desc": "Referencias de Drayano, Emerald Kaizo y otros retos.",
+        "format": "database"
+      }
+    ]
   }
 }
