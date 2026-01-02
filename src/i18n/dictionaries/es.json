@@ -142,7 +142,7 @@
   "tools": {
     "calculator": {
       "title": "DEFENSIVE ANALYZER",
-      "back_module": "Volver al Módulo",
+      "back_module": "Volver",
       "select_types": "Selecciona Tipos",
       "waiting_data": "ESPERANDO DATOS...",
       "select_prompt": "SELECCIONA TIPOS PARA INICIAR SIMULACIÓN",
@@ -225,6 +225,74 @@
         "description": "El ciclo de vida. Movimientos Huevo, Grupos Huevo y la obtención de Pokémon perfectos para el competitivo.",
         "syllabus": ["6.1 Grupos Huevo", "6.2 Movimientos Huevo", "6.3 Método Masuda", "6.4 Herencia de Stats"],
         "href": "/academy/module-6"
+      }
+    ]
+  },
+  "tools_dashboard": {
+    "title": "SILPH S.A. // TOOLS",
+    "subtitle": "Selecciona una herramienta operativa.",
+    "filters": {
+      "all": "TODAS",
+      "analytics": "CÁLCULO",
+      "databank": "BASE DE DATOS",
+      "management": "GESTIÓN"
+    },
+    "tools": [
+      {
+        "id": "type-calc",
+        "name": "Calculadora de Tipos",
+        "desc": "Matriz de debilidades y resistencias en tiempo real.",
+        "category": "analytics",
+        "status": "online",
+        "href": "/tools/type-calculator"
+      },
+      {
+        "id": "damage-calc",
+        "name": "Calculadora de Daño",
+        "desc": "Motor de simulación de rangos de daño (Min/Max).",
+        "category": "analytics",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "pokedex",
+        "name": "PokéDex Mainframe",
+        "desc": "Base de datos de especies. Stats, formas y evoluciones.",
+        "category": "databank",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "moves",
+        "name": "Move Reference",
+        "desc": "Biblioteca de potencia, precisión y efectos secundarios.",
+        "category": "databank",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "abilities",
+        "name": "Ability Archive",
+        "desc": "Registro de habilidades pasivas e interacciones.",
+        "category": "databank",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "teambuilder",
+        "name": "Team Builder",
+        "desc": "Arquitecto de equipos. Análisis de sinergias.",
+        "category": "management",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "nuzlocke",
+        "name": "Nuzlocke Tracker",
+        "desc": "Gestión de partidas, rutas y estado del equipo.",
+        "category": "management",
+        "status": "dev",
+        "href": "#"
       }
     ]
   }

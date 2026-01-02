@@ -31,7 +31,7 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
       title: t.tools.title,
       desc: t.tools.desc,
       icon: Wrench,
-      href: `/${lang}/tools/type-calculator`,
+      href: `/${lang}/tools/`,
       color: 'text-amber-400',
       border: 'group-hover:border-amber-500/50',
       glow: 'group-hover:shadow-[0_0_20px_rgba(245,158,11,0.1)]',

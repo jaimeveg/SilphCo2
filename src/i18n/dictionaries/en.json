@@ -227,5 +227,73 @@
         "href": "/academy/module-6"
       }
     ]
+  },
+  "tools_dashboard": {
+    "title": "SILPH CO. // TOOLS",
+    "subtitle": "Select an operational tool.",
+    "filters": {
+      "all": "ALL",
+      "analytics": "ANALYTICS",
+      "databank": "DATABANK",
+      "management": "MANAGEMENT"
+    },
+    "tools": [
+      {
+        "id": "type-calc",
+        "name": "Type Calculator",
+        "desc": "Real-time weakness and resistance matrix.",
+        "category": "analytics",
+        "status": "online",
+        "href": "/tools/type-calculator"
+      },
+      {
+        "id": "damage-calc",
+        "name": "Damage Calculator",
+        "desc": "Damage range simulation engine (Min/Max).",
+        "category": "analytics",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "pokedex",
+        "name": "PokéDex Mainframe",
+        "desc": "Species database. Stats, forms, and evolutions.",
+        "category": "databank",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "moves",
+        "name": "Move Reference",
+        "desc": "Library of power, accuracy, and secondary effects.",
+        "category": "databank",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "abilities",
+        "name": "Ability Archive",
+        "desc": "Registry of passive abilities and interactions.",
+        "category": "databank",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "teambuilder",
+        "name": "Team Builder",
+        "desc": "Team architect. Synergy analysis.",
+        "category": "management",
+        "status": "dev",
+        "href": "#"
+      },
+      {
+        "id": "nuzlocke",
+        "name": "Nuzlocke Tracker",
+        "desc": "Run management, routes, and team status.",
+        "category": "management",
+        "status": "dev",
+        "href": "#"
+      }
+    ]
   }
 }
