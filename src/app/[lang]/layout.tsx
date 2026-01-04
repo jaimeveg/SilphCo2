@@ -4,8 +4,9 @@ import "@/app/globals.css";
 import FullSidebar from "@/components/layout/FullSidebar";
 import ScrollProvider from "@/components/layout/ScrollProvider";
 import CustomScrollbar from '@/components/layout/CustomScrollbar';
+import QueryProvider from "@/components/providers/QueryProvider"; // <--- NUEVO IMPORT
 import { locales } from "@/i18n/settings";
-import { getDictionary } from "@/i18n/get-dictionary"; // IMPORTAR
+import { getDictionary } from "@/i18n/get-dictionary";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export default async function RootLayout({ // ASYNC AHORA
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
@@ -35,16 +36,22 @@ export default async function RootLayout({ // ASYNC AHORA
   return (
     <html lang={params.lang} className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="bg-slate-950 text-slate-50 antialiased selection:bg-cyan-500/30 overflow-hidden">
-        <div className="fixed top-0 left-0 h-full z-[9999]">
-          {/* PASAR DATOS AL CLIENT COMPONENT */}
-          <FullSidebar lang={params.lang} dict={dict} />
-        </div>
-        <ScrollProvider>
-          <main className="relative z-0 pl-[5.5rem] w-full min-h-screen">
-            {children}
-          </main>
-          <CustomScrollbar />
-        </ScrollProvider>
+        {/* QUERY PROVIDER WRAPPER: Envolvemos todo el contenido del body */}
+        <QueryProvider>
+          
+          <div className="fixed top-0 left-0 h-full z-[9999]">
+            {/* PASAR DATOS AL CLIENT COMPONENT */}
+            <FullSidebar lang={params.lang} dict={dict} />
+          </div>
+          
+          <ScrollProvider>
+            <main className="relative z-0 pl-[5.5rem] w-full min-h-screen">
+              {children}
+            </main>
+            <CustomScrollbar />
+          </ScrollProvider>
+
+        </QueryProvider>
       </body>
     </html>
   );
