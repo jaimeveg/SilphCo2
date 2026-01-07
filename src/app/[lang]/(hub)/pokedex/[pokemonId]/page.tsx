@@ -1,10 +1,11 @@
 'use client';
 
-import { Suspense } from 'react'; // Importar Suspense
+import { Suspense } from 'react';
 import { usePokemon } from '@/services/pokeapi';
 import PokemonDetailView from '@/components/pokedex/PokemonDetailView';
 import { Loader2, AlertTriangle } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
+import { Lang } from '@/lib/pokedexDictionary';
 
 interface PageProps {
   params: {
@@ -13,14 +14,13 @@ interface PageProps {
   };
 }
 
-// Componente interno que usa searchParams
-function PokemonContent({ pokemonId }: { pokemonId: string }) {
+function PokemonContent({ pokemonId, lang }: { pokemonId: string, lang: Lang }) {
   const searchParams = useSearchParams();
   const variantId = searchParams.get('variant');
   const fetchId = variantId || pokemonId;
 
-  // React Query se encarga de la caché
-  const { data: pokemonData, isLoading, isError } = usePokemon(fetchId);
+  // Pasamos 'lang' al servicio para recibir textos en español
+  const { data: pokemonData, isLoading, isError } = usePokemon(fetchId, lang);
 
   if (isLoading) {
     return (
@@ -42,15 +42,16 @@ function PokemonContent({ pokemonId }: { pokemonId: string }) {
     );
   }
 
-  return <PokemonDetailView pokemonId={fetchId} />;
+  return <PokemonDetailView pokemonId={fetchId} lang={lang} />;
 }
 
-// Componente principal exportado
 export default function PokemonPage({ params }: PageProps) {
+  // Aseguramos tipo Lang
+  const currentLang = (params.lang === 'en' ? 'en' : 'es') as Lang;
+
   return (
-    // Suspense evita errores de hidratación con useSearchParams
     <Suspense fallback={<div className="w-full h-screen bg-slate-950" />}>
-      <PokemonContent pokemonId={params.pokemonId} />
+      <PokemonContent pokemonId={params.pokemonId} lang={currentLang} />
     </Suspense>
   );
 }

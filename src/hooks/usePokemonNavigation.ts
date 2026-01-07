@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, useParams } from 'next/navigation'; // Importamos useParams
 import { usePokedexEntries } from '@/services/pokeapi';
 
 export type PokedexContext = 'NATIONAL' | 'KANTO' | 'JOHTO' | 'HOENN' | 'SINNOH' | 'UNOVA' | 'KALOS' | 'ALOLA' | 'GALAR' | 'HISUI' | 'PALDEA';
@@ -16,25 +16,28 @@ const CONTEXT_LIMITS: Record<PokedexContext, { min: number; max: number }> = {
   KALOS: { min: 1, max: 721 },
   ALOLA: { min: 1, max: 809 },
   GALAR: { min: 1, max: 905 },
-  HISUI: { min: 1, max: 905 }, // Aprox, Hisui no tiene límites de ID nacionales contiguos claros, depende de la lista
+  HISUI: { min: 1, max: 905 },
   PALDEA: { min: 1, max: 1025 }
 };
 
 export function usePokemonNavigation(currentId: number) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const params = useParams(); // Obtenemos los parámetros de la ruta
+  
+  // Extraemos el idioma actual (fallback a 'es' por seguridad)
+  const lang = params.lang as string || 'es';
 
   const urlDex = searchParams.get('dex') as PokedexContext | null;
   const [context, setContext] = useState<PokedexContext>(urlDex || 'NATIONAL');
   const { data: regionEntries } = usePokedexEntries(context);
 
   const getNextId = useCallback((direction: 'next' | 'prev') => {
-    // Si estamos en Regional (incluido Hisui), usamos la lista
+    // Lógica Regional
     if (context !== 'NATIONAL' && regionEntries && regionEntries.length > 0) {
         const currentIdString = currentId.toString();
         const currentIndex = regionEntries.findIndex((id) => id === currentIdString);
         
-        // Si no está en la lista (ej: un pokemon de otra gen), volver al primero de la región
         if (currentIndex === -1) return parseInt(regionEntries[0]);
 
         let nextIndex;
@@ -46,7 +49,7 @@ export function usePokemonNavigation(currentId: number) {
         return parseInt(regionEntries[nextIndex]);
     }
 
-    // Fallback National
+    // Lógica Nacional
     const limits = CONTEXT_LIMITS[context] || CONTEXT_LIMITS.NATIONAL;
     if (direction === 'next') {
       return currentId >= limits.max ? limits.min : currentId + 1;
@@ -58,14 +61,16 @@ export function usePokemonNavigation(currentId: number) {
   const goToNext = useCallback(() => {
     const next = getNextId('next');
     const query = context !== 'NATIONAL' ? `?dex=${context}` : '';
-    router.push(`/es/pokedex/${next}${query}`);
-  }, [getNextId, context, router]);
+    // FIX: Usamos la variable 'lang' dinámica en lugar de '/es/'
+    router.push(`/${lang}/pokedex/${next}${query}`);
+  }, [getNextId, context, router, lang]);
 
   const goToPrev = useCallback(() => {
     const prev = getNextId('prev');
     const query = context !== 'NATIONAL' ? `?dex=${context}` : '';
-    router.push(`/es/pokedex/${prev}${query}`);
-  }, [getNextId, context, router]);
+    // FIX: Usamos la variable 'lang' dinámica en lugar de '/es/'
+    router.push(`/${lang}/pokedex/${prev}${query}`);
+  }, [getNextId, context, router, lang]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
