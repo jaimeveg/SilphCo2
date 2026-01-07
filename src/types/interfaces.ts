@@ -12,16 +12,32 @@ export interface IStat {
   
   export interface IPokemon {
     id: number;
+    speciesId: number;
     name: string;
+    speciesName: string;
     types: string[];
     sprite: string;
     stats: IStat[];
     height: number;
     weight: number;
-    // Future-proofing:
-    abilities?: { name: string; isHidden: boolean }[]; 
+    abilities: IAbility[];
+    generation: string; // Ej: "I", "IX"
+    varieties: IVariety[]; // Ej: Rotom Wash, Meowth Alola
+    dexIds: Record<string, number>; 
+  }
+
+  export interface IAbility {
+    name: string;
+    isHidden: boolean;
+    description: string;
   }
   
+  export interface IVariety {
+    isDefault: boolean;
+    name: string;
+    pokemonId: string; // ID extraído de la URL para navegar
+  }
+
   // --- 2. COMPETITIVE INTELLIGENCE (Hybrid Smogon + VGC) ---
   export interface ICompetitiveData {
     // Contexto del análisis

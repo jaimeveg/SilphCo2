@@ -32,3 +32,23 @@ body {
     scrollbar-width: none;  /* Firefox */
   }
 }
+
+/* EFECTO DE CARGA DIGITAL (Glitch Entrance) */
+@keyframes holographic-glitch {
+  0% { opacity: 0; transform: scale(0.95) skewX(10deg); filter: blur(5px); }
+  20% { opacity: 1; transform: scale(1.02) skewX(-10deg); filter: blur(0px); }
+  40% { transform: scale(0.98) skewX(5deg); }
+  60% { transform: scale(1.01) skewX(-2deg); }
+  80% { transform: scale(0.99) skewX(1deg); }
+  100% { transform: scale(1) skewX(0); }
+}
+
+.animate-holo-glitch {
+  animation: holographic-glitch 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* BORDE NEÓN PULSANTE */
+.neon-border-box {
+  box-shadow: 0 0 5px theme('colors.cyan.500'), inset 0 0 10px theme('colors.cyan.900');
+  border: 1px solid theme('colors.cyan.400');
+}

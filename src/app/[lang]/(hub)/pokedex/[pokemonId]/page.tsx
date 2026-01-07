@@ -1,8 +1,10 @@
 'use client';
 
+import { Suspense } from 'react'; // Importar Suspense
 import { usePokemon } from '@/services/pokeapi';
 import PokemonDetailView from '@/components/pokedex/PokemonDetailView';
 import { Loader2, AlertTriangle } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 
 interface PageProps {
   params: {
@@ -11,14 +13,15 @@ interface PageProps {
   };
 }
 
-export default function PokemonPage({ params }: PageProps) {
-  // 1. OBTENCIÓN DE DATOS (Elevamos el estado de carga aquí)
-  // Al usar React Query, esta petición se comparte o cachea, por lo que 
-  // cuando el componente hijo (PokemonDetailView) la pida, será instantáneo.
-  const { data: pokemonData, isLoading, isError } = usePokemon(params.pokemonId);
+// Componente interno que usa searchParams
+function PokemonContent({ pokemonId }: { pokemonId: string }) {
+  const searchParams = useSearchParams();
+  const variantId = searchParams.get('variant');
+  const fetchId = variantId || pokemonId;
 
-  // 2. ESTADO DE CARGA (Full Screen)
-  // Evita renderizar el layout vacío mientras esperamos los datos.
+  // React Query se encarga de la caché
+  const { data: pokemonData, isLoading, isError } = usePokemon(fetchId);
+
   if (isLoading) {
     return (
       <div className="w-full h-screen flex items-center justify-center bg-slate-950">
@@ -27,23 +30,27 @@ export default function PokemonPage({ params }: PageProps) {
     );
   }
 
-  // 3. MANEJO DE ERRORES (Full Screen)
-  // Feedback claro si el ID no existe o la API falla.
   if (isError || !pokemonData) {
     return (
       <div className="w-full h-screen flex flex-col items-center justify-center bg-slate-950 text-red-400 gap-4">
         <AlertTriangle className="w-12 h-12" />
         <div className="text-center">
           <h2 className="text-xl font-bold font-display uppercase">Error de Sincronización</h2>
-          <p className="font-mono text-sm opacity-70">No se pudo recuperar la data del espécimen #{params.pokemonId}</p>
+          <p className="font-mono text-sm opacity-70">No se pudo recuperar la data del espécimen #{fetchId}</p>
         </div>
       </div>
     );
   }
 
-  // 4. RENDERIZADO SEGURO
-  // Solo llegamos aquí si tenemos datos válidos.
+  return <PokemonDetailView pokemonId={fetchId} />;
+}
+
+// Componente principal exportado
+export default function PokemonPage({ params }: PageProps) {
   return (
-    <PokemonDetailView pokemonId={params.pokemonId} />
+    // Suspense evita errores de hidratación con useSearchParams
+    <Suspense fallback={<div className="w-full h-screen bg-slate-950" />}>
+      <PokemonContent pokemonId={params.pokemonId} />
+    </Suspense>
   );
 }

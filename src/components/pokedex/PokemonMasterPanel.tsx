@@ -1,72 +1,132 @@
 'use client';
 
+import { useMemo } from 'react';
 import Image from 'next/image';
+import { ChevronLeft, ChevronRight, Ruler, Weight, Dna } from 'lucide-react';
 import TypeBadge from '@/components/ui/TypeBadge';
-import StatsDisplay from './StatsDisplay';
+import AbilityChip from './AbilityChip';
+import DexSelector from '@/components/ui/DexSelector';
 import { IPokemon } from '@/types/interfaces';
+import { usePokemonNavigation, PokedexContext } from '@/hooks/usePokemonNavigation';
+import { cn } from '@/lib/utils';
 
 interface Props {
   pokemon: IPokemon;
 }
 
 export default function PokemonMasterPanel({ pokemon }: Props) {
-  // NOTA: Hemos quitado 'h-full' para permitir que el scroll funcione naturalmente
+  // CLAVE: Usamos pokemon.speciesId para la navegación. 
+  // Ignoramos si estamos viendo una variante visual.
+  //const { context, setContext, goToNext, goToPrev } = usePokemonNavigation(pokemon.speciesId);
+  //const displayId = pokemon.dexIds?.[context] || pokemon.speciesId;
+
+  const anchorId = pokemon.speciesId || pokemon.id; 
+  const { context, setContext, goToNext, goToPrev } = usePokemonNavigation(anchorId);
+  const displayId = pokemon.dexIds?.[context] || anchorId;
+
+  const availableContexts = useMemo(() => {
+    const allContexts: PokedexContext[] = ['NATIONAL', 'KANTO', 'JOHTO', 'HOENN', 'SINNOH', 'UNOVA', 'KALOS', 'ALOLA', 'GALAR', 'HISUI', 'PALDEA'];
+    return allContexts.filter(ctx => !!pokemon.dexIds?.[ctx]);
+  }, [pokemon.dexIds]);
+
+  const speciesName = pokemon.speciesName || pokemon.name.split('-')[0];
+  const formName = pokemon.name.replace(speciesName, '').replace(/-/g, ' ').trim();
+  const showSubtitle = formName.length > 0;
+
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col h-full relative p-2 select-none">
       
-      {/* 1. IDENTITY HEADER */}
-      <div className="flex flex-col items-center lg:items-start gap-4">
-        <div className="w-full flex items-baseline justify-between border-b border-slate-800 pb-3">
-          <h1 className="text-4xl xl:text-5xl font-display font-bold text-white uppercase tracking-tighter">
-            {pokemon.name}
-          </h1>
-          <span className="font-mono text-2xl text-slate-600">
-            #{pokemon.id.toString().padStart(4, '0')}
-          </span>
+      {/* 1. HEADER FIXED */}
+      <div className="w-full flex justify-between items-start h-[5rem] shrink-0 relative z-40">
+        <div className="flex flex-col items-start gap-1">
+             <h1 className="text-3xl xl:text-4xl font-display font-black text-white uppercase tracking-tighter leading-none drop-shadow-lg truncate max-w-[240px]">
+                {speciesName}
+            </h1>
+            
+            {showSubtitle && (
+              <span className="text-xs font-mono font-bold text-amber-500 tracking-[0.2em] uppercase -mt-1 mb-1 block">
+                {formName} FORM
+              </span>
+            )}
+
+            <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-bold text-cyan-500 tracking-widest bg-cyan-950/20 px-2 py-0.5 rounded border border-cyan-500/20">
+                    #{displayId.toString().padStart(4, '0')}
+                </span>
+                {context !== 'NATIONAL' && <span className="text-[9px] font-mono text-slate-600 uppercase">LOCAL ID</span>}
+            </div>
         </div>
+        <DexSelector current={context} options={availableContexts} onChange={setContext} />
+      </div>
+
+      {/* 2. CORE CENTERED */}
+      <div className="flex-1 flex items-center justify-center gap-2 xl:gap-8 relative min-h-0 z-10">
         
-        <div className="flex gap-2 scale-110 origin-left">
-          {pokemon.types.map((t) => (
-            <TypeBadge key={t} type={t} />
-          ))}
+        <button onClick={goToPrev} className="group p-2 focus:outline-none" aria-label="Previous">
+          <ChevronLeft size={40} strokeWidth={1} className="text-slate-700 transition-all duration-300 group-hover:text-cyan-400 group-hover:scale-110 group-active:scale-95" />
+        </button>
+
+        <div className="relative flex items-center gap-4">
+            {/* Vertical Data */}
+            <div className="flex flex-col gap-3 py-2 w-[40px] items-center">
+                <VerticalDataPoint label="HGT" value={`${pokemon.height / 10}m`} icon={Ruler} />
+                <VerticalDataPoint label="WGT" value={`${pokemon.weight / 10}kg`} icon={Weight} />
+                <VerticalDataPoint label="GEN" value={pokemon.generation} icon={Dna} highlight />
+            </div>
+
+            {/* Holo Frame */}
+            <div className="relative w-[220px] aspect-square flex items-center justify-center group/art">
+                <div className="absolute inset-0 rounded-2xl border border-cyan-500/30 shadow-[0_0_20px_-5px_rgba(34,211,238,0.15)] opacity-80 transition-all duration-500" />
+                <div className="absolute inset-2 rounded-xl bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+
+                <div className="relative w-[85%] h-[85%] animate-holo-glitch">
+                    <Image
+                      src={pokemon.sprite}
+                      alt={pokemon.name}
+                      fill
+                      className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] z-10 group-hover/art:scale-105 transition-transform duration-500"
+                      priority
+                      unoptimized
+                    />
+                </div>
+            </div>
         </div>
+
+        <button onClick={goToNext} className="group p-2 focus:outline-none" aria-label="Next">
+          <ChevronRight size={40} strokeWidth={1} className="text-slate-700 transition-all duration-300 group-hover:text-cyan-400 group-hover:scale-110 group-active:scale-95" />
+        </button>
       </div>
 
-      {/* 2. HOLO ASSET (Reducido de 320px a 280px) */}
-      <div className="relative w-full aspect-square max-h-[280px] mx-auto group my-4">
-         {/* Platform Effect */}
-         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-4 bg-cyan-500/10 blur-xl rounded-full group-hover:bg-cyan-500/20 transition-all duration-500" />
-         
-         <Image
-           src={pokemon.sprite}
-           alt={pokemon.name}
-           fill
-           className="object-contain drop-shadow-[0_0_20px_rgba(34,211,238,0.15)] z-10 transition-transform duration-500 group-hover:scale-105"
-           priority
-           unoptimized
-         />
+      {/* 3. FOOTER FIXED */}
+      <div className="h-[11rem] shrink-0 flex flex-col justify-end items-center gap-4 pb-2 z-30">
+          <div className="flex justify-center gap-3">
+            {pokemon.types.map((t) => (
+              <TypeBadge key={t} type={t} showLabel={false} className="h-8 w-12 justify-center shadow-lg" />
+            ))}
+          </div>
+
+          <div className="bg-slate-900/30 border border-slate-800/50 rounded-xl p-3 flex flex-col items-center justify-center min-w-[220px] h-[5.5rem]">
+              <h3 className="text-[9px] font-mono uppercase tracking-widest text-slate-500 mb-2">Active Genes</h3>
+              <div className="flex flex-wrap justify-center gap-2 max-h-full overflow-hidden">
+                  {pokemon.abilities.map((ab, i) => (
+                      <AbilityChip key={i} name={ab.name} isHidden={ab.isHidden} description={ab.description} />
+                  ))}
+              </div>
+          </div>
       </div>
 
-      {/* 3. PHYSICAL DATA */}
-      <div className="grid grid-cols-2 gap-4 text-center">
-        <div className="bg-slate-900/40 py-3 rounded border border-slate-800/50">
-          <span className="block text-[10px] text-slate-500 uppercase tracking-widest mb-1">Height</span>
-          <span className="font-mono text-lg text-cyan-400">{pokemon.height / 10}m</span>
-        </div>
-        <div className="bg-slate-900/40 py-3 rounded border border-slate-800/50">
-          <span className="block text-[10px] text-slate-500 uppercase tracking-widest mb-1">Weight</span>
-          <span className="font-mono text-lg text-cyan-400">{pokemon.weight / 10}kg</span>
-        </div>
-      </div>
-
-      {/* 4. BASE STATS */}
-      <div className="bg-slate-900/20 rounded-xl border border-slate-800/30 p-5">
-        <StatsDisplay stats={pokemon.stats} />
-      </div>
-      
-      {/* 5. ESPACIO EXTRA (DEBUG - Mantenemos por si acaso) */}
-      <div className="opacity-0 h-4">.</div>
-      
     </div>
   );
+}
+
+function VerticalDataPoint({ label, value, icon: Icon, highlight }: any) {
+    return (
+        <div className="group flex flex-col items-center gap-0.5">
+            <div className={cn("p-1.5 rounded-full transition-colors mb-0.5", highlight ? "bg-cyan-500/10 text-cyan-500" : "bg-slate-800/50 text-slate-500 group-hover:text-slate-300")}>
+                <Icon size={12} />
+            </div>
+            <span className={cn("text-[10px] font-mono font-bold writing-mode-vertical", highlight ? "text-cyan-400" : "text-slate-300")}>{value}</span>
+            <span className="text-[8px] font-mono text-slate-600 uppercase tracking-wider scale-75 origin-top">{label}</span>
+        </div>
+    )
 }
