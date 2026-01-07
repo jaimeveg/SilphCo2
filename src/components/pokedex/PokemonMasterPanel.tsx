@@ -1,11 +1,13 @@
 'use client';
 
 import { useMemo } from 'react';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation'; // Hooks de navegación
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Ruler, Weight, Dna } from 'lucide-react';
 import TypeBadge from '@/components/ui/TypeBadge';
 import AbilityChip from './AbilityChip';
 import DexSelector from '@/components/ui/DexSelector';
+import FormSelector from '@/components/ui/FormSelector'; // <--- NUEVO
 import { IPokemon } from '@/types/interfaces';
 import { usePokemonNavigation, PokedexContext } from '@/hooks/usePokemonNavigation';
 import { cn } from '@/lib/utils';
@@ -15,38 +17,59 @@ interface Props {
 }
 
 export default function PokemonMasterPanel({ pokemon }: Props) {
-  // CLAVE: Usamos pokemon.speciesId para la navegación. 
-  // Ignoramos si estamos viendo una variante visual.
-  //const { context, setContext, goToNext, goToPrev } = usePokemonNavigation(pokemon.speciesId);
-  //const displayId = pokemon.dexIds?.[context] || pokemon.speciesId;
+  // Navegación
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const anchorId = pokemon.speciesId || pokemon.id; 
-  const { context, setContext, goToNext, goToPrev } = usePokemonNavigation(anchorId);
-  const displayId = pokemon.dexIds?.[context] || anchorId;
+  // Hooks de lógica interna (Navegación Dex)
+  const { context, setContext, goToNext, goToPrev } = usePokemonNavigation(pokemon.speciesId); // Anclado a especie
+
+  const displayId = pokemon.dexIds?.[context] || pokemon.speciesId;
 
   const availableContexts = useMemo(() => {
     const allContexts: PokedexContext[] = ['NATIONAL', 'KANTO', 'JOHTO', 'HOENN', 'SINNOH', 'UNOVA', 'KALOS', 'ALOLA', 'GALAR', 'HISUI', 'PALDEA'];
     return allContexts.filter(ctx => !!pokemon.dexIds?.[ctx]);
   }, [pokemon.dexIds]);
 
-  const speciesName = pokemon.speciesName || pokemon.name.split('-')[0];
-  const formName = pokemon.name.replace(speciesName, '').replace(/-/g, ' ').trim();
-  const showSubtitle = formName.length > 0;
+  // LOGICA: Manejo de Variantes (Formas)
+  const hasVarieties = pokemon.varieties && pokemon.varieties.length > 1;
+  const speciesName = pokemon.speciesName || pokemon.name.split('-')[0]; // Nombre Limpio (Venusaur)
+  
+  // Función para cambiar la URL (Query Param)
+  const handleVarietyChange = (newVariantId: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    
+    // Si seleccionamos la base, borramos 'variant', si no, lo seteamos.
+    if (newVariantId === pokemon.speciesId.toString()) {
+      params.delete('variant');
+    } else {
+      params.set('variant', newVariantId);
+    }
+    router.push(`${pathname}?${params.toString()}`);
+  };
 
   return (
     <div className="flex flex-col h-full relative p-2 select-none">
       
       {/* 1. HEADER FIXED */}
       <div className="w-full flex justify-between items-start h-[5rem] shrink-0 relative z-40">
+        
+        {/* BLOQUE IZQUIERDO: NOMBRE + SELECTOR FORMA + ID */}
         <div className="flex flex-col items-start gap-1">
              <h1 className="text-3xl xl:text-4xl font-display font-black text-white uppercase tracking-tighter leading-none drop-shadow-lg truncate max-w-[240px]">
                 {speciesName}
             </h1>
             
-            {showSubtitle && (
-              <span className="text-xs font-mono font-bold text-amber-500 tracking-[0.2em] uppercase -mt-1 mb-1 block">
-                {formName} FORM
-              </span>
+            {/* SELECTOR DE FORMA (Solo si tiene) */}
+            {hasVarieties && (
+              <div className="-ml-1 mb-1">
+                 <FormSelector 
+                    currentId={pokemon.id} 
+                    varieties={pokemon.varieties} 
+                    onChange={handleVarietyChange} 
+                 />
+              </div>
             )}
 
             <div className="flex items-center gap-2">
@@ -56,6 +79,8 @@ export default function PokemonMasterPanel({ pokemon }: Props) {
                 {context !== 'NATIONAL' && <span className="text-[9px] font-mono text-slate-600 uppercase">LOCAL ID</span>}
             </div>
         </div>
+
+        {/* BLOQUE DERECHO: SELECTOR DEX */}
         <DexSelector current={context} options={availableContexts} onChange={setContext} />
       </div>
 
