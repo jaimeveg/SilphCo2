@@ -24,6 +24,8 @@ export interface IStat {
     generation: string; // Ej: "I", "IX"
     varieties: IVariety[]; // Ej: Rotom Wash, Meowth Alola
     dexIds: Record<string, number>; 
+    evolutionChain?: IEvolutionNode;
+    locations?: ILocationEncounter[];
   }
 
   export interface IAbility {
@@ -97,4 +99,49 @@ export interface IStat {
     biology: IPokemon;
     competitive?: ICompetitiveData;
     nuzlocke?: INuzlockeData;
+  }
+
+  export interface IEvolutionDetail {
+    trigger: string;
+    minLevel?: number;
+    item?: string;
+    heldItem?: string;
+    minHappiness?: number;
+    minAffection?: number;
+    minBeauty?: number;
+    timeOfDay?: string;
+    knownMove?: string;
+    knownMoveType?: string;
+    location?: string;
+    condition?: string;
+    gender?: number;
+    relativePhysicalStats?: number;
+    needsOverworldRain?: boolean;
+    turnUpsideDown?: boolean;
+    partySpecies?: string;
+    partyType?: string;
+    tradeSpecies?: string;
+    // Campo para inyectar texto manual desde el diccionario
+  customReq?: string;
+  }
+  
+  export interface IEvolutionNode {
+    speciesId: number;
+    speciesName: string;
+    sprite: string;
+    icon?: string; // Icono para tabs
+    types: string[];
+    details: IEvolutionDetail[]; // Array de métodos (puede haber varios para llegar al mismo pkm)
+    evolvesTo: IEvolutionNode[];
+  }
+  
+  export interface ILocationEncounter {
+    region: string;        // 'Kanto', 'Johto' (Calculado o mapeado)
+    version: string;       // 'Red', 'Blue', 'Emerald'
+    locationName: string;
+    method: string;        // 'walk', 'surf', 'old-rod'
+    chance: number;        // % de aparición
+    minLevel: number;
+    maxLevel: number;
+    conditions: string[];  // 'time-morning', etc.
   }

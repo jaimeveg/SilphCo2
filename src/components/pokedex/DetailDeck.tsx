@@ -2,41 +2,44 @@
 
 import { useState } from 'react';
 import TabNavigator, { TabOption } from './navigation/TabNavigator';
-import { ViewportData, ViewportMoves, ViewportPVP, ViewportNuzlocke } from './viewports/Placeholders';
 import { IPokemon } from '@/types/interfaces';
+import { Lang } from '@/lib/pokedexDictionary';
+
+// IMPORTACIÓN CORREGIDA: Default import para el componente real
+import ViewportData from './viewports/ViewportData'; 
+
+// Placeholders para las pestañas futuras
+import { ViewportMoves, ViewportPVP, ViewportNuzlocke } from './viewports/Placeholders';
 
 interface Props {
   pokemon: IPokemon;
+  lang: Lang;
 }
 
-export default function DetailDeck({ pokemon }: Props) {
-  // Estado local para navegación de pestañas
+export default function DetailDeck({ pokemon, lang }: Props) {
   const [activeTab, setActiveTab] = useState<TabOption>('DATA');
 
-  // Renderizado condicional del contenido del Viewport B
   const renderContent = () => {
     switch (activeTab) {
-      case 'DATA': return <ViewportData />;
+      case 'DATA': 
+        // Renderizamos el componente REAL con los datos y el idioma
+        return <ViewportData pokemon={pokemon} lang={lang} />;
+      
       case 'MOVES': return <ViewportMoves />;
       case 'PVP': return <ViewportPVP />;
       case 'NUZLOCKE': return <ViewportNuzlocke />;
-      default: return <ViewportData />;
+      default: return <ViewportData pokemon={pokemon} lang={lang} />;
     }
   };
 
   return (
     <div className="w-full h-full flex flex-col min-h-[500px]">
-      
-      {/* HEADER BAR: Solo TabNavigator por ahora */}
       <div className="flex justify-between items-center pr-4">
         <TabNavigator activeTab={activeTab} onTabChange={setActiveTab} />
       </div>
-
-      {/* VIEWPORT CONTENT AREA */}
-      <div className="flex-1 animate-in fade-in slide-in-from-bottom-2 duration-300">
-        {renderContent()}
+      <div className="flex-1 relative">
+         {renderContent()}
       </div>
-
     </div>
   );
 }

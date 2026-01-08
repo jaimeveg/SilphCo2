@@ -23,7 +23,7 @@ body {
     text-wrap: balance;
   }
   
-  /* SCROLLBAR INVISIBLE ROBUSTO */
+  /* SCROLLBAR INVISIBLE */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -33,7 +33,7 @@ body {
   }
 }
 
-/* EFECTO DE CARGA DIGITAL (Glitch Entrance) */
+/* --- ANIMACIONES --- */
 @keyframes holographic-glitch {
   0% { opacity: 0; transform: scale(0.95) skewX(10deg); filter: blur(5px); }
   20% { opacity: 1; transform: scale(1.02) skewX(-10deg); filter: blur(0px); }
@@ -47,8 +47,62 @@ body {
   animation: holographic-glitch 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-/* BORDE NEÓN PULSANTE */
+/* --- UI ESTILOS --- */
 .neon-border-box {
   box-shadow: 0 0 5px theme('colors.cyan.500'), inset 0 0 10px theme('colors.cyan.900');
   border: 1px solid theme('colors.cyan.400');
+}
+
+/* Ocultar flechas nativas en inputs numéricos */
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-spinners {
+  -moz-appearance: textfield;
+}
+
+/* --- SCROLLBAR CYBERPUNK (FIX TOTAL) --- */
+
+/* Base para Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.3) rgba(15, 23, 42, 0.2);
+}
+
+/* Webkit (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Un poco más de cuerpo para que se vea, pero fino */
+  height: 4px;
+}
+
+/* Track (Fondo) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.2); 
+  border-radius: 4px;
+}
+
+/* Thumb (Barra) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 4px;
+  border: none; /* Sin borde para que se vea más fina */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+  cursor: grab;
+}
+
+/* ELIMINAR FLECHAS/BOTONES (Windows Fix) */
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Asegurar que las esquinas no se vean raras */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
 }
