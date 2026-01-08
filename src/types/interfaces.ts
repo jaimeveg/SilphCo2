@@ -133,6 +133,9 @@ export interface IStat {
     types: string[];
     details: IEvolutionDetail[]; // Array de métodos (puede haber varios para llegar al mismo pkm)
     evolvesTo: IEvolutionNode[];
+    // --- AÑADIDOS PARA SOPORTE DE VARIANTES ---
+  url?: string;        // Para guardar la URL original si existe
+  variantId?: number;  // Para forzar el ID de la forma
   }
   
   export interface ILocationEncounter {
