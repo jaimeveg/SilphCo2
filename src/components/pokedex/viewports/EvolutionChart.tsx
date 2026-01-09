@@ -26,6 +26,7 @@ const GEN_ROMAN: Record<number, string> = {
 };
 
 // --- ESTRATEGIA 1: AISLAMIENTO ESTRICTO ---
+// Define qué variantes pueden ver a quién.
 const STRICT_ISOLATION: Record<string, string[]> = {
   'rattata-alola': ['raticate-alola'],
   'sandshrew-alola': ['sandslash-alola'],
@@ -49,10 +50,10 @@ const STRICT_ISOLATION: Record<string, string[]> = {
   'sneasel-hisui': ['sneasler'],
   'zorua-hisui': ['zoroark-hisui'],
   'basculin-white-striped': ['basculegion'],
-  'sliggoo-hisui': ['goodra-hisui'],
+  'sliggoo-hisui': ['goodra-hisui'], // CLAVE: Aquí definimos la rama Hisui de Sliggoo
   'wooper-paldea': ['clodsire'],
   
-  // Clean Bases
+  // Clean Bases (Evitan contaminación cruzada)
   'meowth': ['persian'],
   'slowpoke': ['slowbro', 'slowking'],
   'wooper': ['quagsire'],
@@ -63,6 +64,7 @@ const STRICT_ISOLATION: Record<string, string[]> = {
 };
 
 // --- ESTRATEGIA 2: RAMIFICACIÓN ARTIFICIAL ---
+// Inyecta opciones de evolución donde no existen naturalmente en la API base
 const REGIONAL_BRANCHING: Record<string, string[]> = {
   'pikachu': ['raichu', 'raichu-alola'],
   'exeggcute': ['exeggutor', 'exeggutor-alola'],
@@ -74,15 +76,14 @@ const REGIONAL_BRANCHING: Record<string, string[]> = {
   'petilil': ['lilligant', 'lilligant-hisui'],
   'rufflet': ['braviary', 'braviary-hisui'],
   'goomy': ['sliggoo'], 
-  'sliggoo': ['goodra', 'goodra-hisui'],
+  'sliggoo': ['goodra', 'goodra-hisui'], // CLAVE: Sliggoo se divide en Goodra y Goodra Hisui
   'bergmite': ['avalugg', 'avalugg-hisui'],
   'dartrix': ['decidueye', 'decidueye-hisui'],
   'kubfu': ['urshifu-single-strike', 'urshifu-rapid-strike'],
   'rockruff': ['lycanroc-midday', 'lycanroc-midnight', 'lycanroc-dusk']
 };
 
-// --- FUENTE DE VERDAD DE IDs (SOLUCIÓN DEFINITIVA A LINKS ROTOS) ---
-// Estructura: { id: ID_VARIANTE_ESPECIFICA, base: ID_ESPECIE_BASE }
+// --- FUENTE DE VERDAD DE IDs ---
 interface RegionData { id: number; base?: number; }
 
 const REGIONAL_DATA: Record<string, RegionData> = {
@@ -97,7 +98,7 @@ const REGIONAL_DATA: Record<string, RegionData> = {
   'raichu-alola': { id: 10100, base: 26 }, 'marowak-alola': { id: 10115, base: 105 }, 'exeggutor-alola': { id: 10114, base: 103 },
   
   // GALAR
-  'meowth-galar': { id: 10161, base: 52 }, 'perrserker': { id: 863 }, // Nueva especie (Base ID implícito)
+  'meowth-galar': { id: 10161, base: 52 }, 'perrserker': { id: 863 }, 
   'ponyta-galar': { id: 10162, base: 77 }, 'rapidash-galar': { id: 10163, base: 78 },
   'slowpoke-galar': { id: 10164, base: 79 }, 'slowbro-galar': { id: 10165, base: 80 }, 'slowking-galar': { id: 10172, base: 199 },
   'farfetchd-galar': { id: 10166, base: 83 }, 'sirfetchd': { id: 865 },
@@ -132,7 +133,7 @@ const REGIONAL_DATA: Record<string, RegionData> = {
   'urshifu-single-strike': { id: 892 }, 'urshifu-rapid-strike': { id: 10191, base: 892 },
   'lycanroc-midday': { id: 745 }, 
   'lycanroc-midnight': { id: 10126, base: 745 }, 
-  'lycanroc-dusk': { id: 10152, base: 745 }, // ID CORREGIDO
+  'lycanroc-dusk': { id: 10152, base: 745 }, 
   'rockruff-own-tempo': { id: 10151, base: 744 }
 };
 
@@ -153,29 +154,20 @@ interface Props {
 
 // --- MOTOR LÓGICO DE URLS ---
 const getPokemonUrl = (node: IEvolutionNode, lang: Lang) => {
-    // 1. Prioridad: ¿Tenemos un ID de variante inyectado? (Ej: 10104)
-    // Esto lo inyectamos en preprocessRegionalChain usando el diccionario REGIONAL_DATA
     if (node.variantId) {
-        // Caso A: Es una variante regional (ID >= 10000). Necesitamos BaseID + QueryParam
         if (node.variantId >= 10000) {
-             // Si tenemos speciesId (que es el base), lo usamos.
              const base = node.speciesId; 
              return `/${lang}/pokedex/${base}?variant=${node.variantId}`;
         }
-        // Caso B: Es una especie nueva única (ID < 10000, ej: Sneasler 903).
         else {
             return `/${lang}/pokedex/${node.variantId}`;
         }
     }
 
-    // 2. Si no hay variantId, usamos el speciesId nativo de la interfaz
-    // Este ID suele venir de la cadena evolutiva original.
     if (node.speciesId) {
         return `/${lang}/pokedex/${node.speciesId}`;
     }
 
-    // 3. Fallback: Parsear URL (Solo si todo lo anterior falla)
-    // Esto es para compatibilidad con datos crudos de PokeAPI si no han pasado por el procesador
     if (node.url) {
         const urlParts = node.url.split('/').filter(Boolean);
         const id = urlParts[urlParts.length - 1];
@@ -190,69 +182,70 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
     if (!activeSpecies) return chain;
     let active = activeSpecies.toLowerCase();
     
-    // Normalizaciones previas
     if (active.includes('raticate-totem')) active = 'raticate-alola';
     if (active === 'phione') return { ...chain, speciesName: active, evolvesTo: [] };
 
-    // Deep Clone
     let processedChain = JSON.parse(JSON.stringify(chain));
 
     const traverseAndTransform = (node: IEvolutionNode, isRoot: boolean): IEvolutionNode => {
         let currentName = node.speciesName.toLowerCase();
 
-        // 1. INYECCIÓN DE DATOS DESDE DICCIONARIO (CORE FIX)
-        // Aquí "arreglamos" el nodo inyectándole los IDs correctos para que getPokemonUrl funcione
-        if (REGIONAL_DATA[currentName]) {
-            const data = REGIONAL_DATA[currentName];
-            node.variantId = data.id; // Inyectamos ID Variante
-            if (data.base) {
-                node.speciesId = data.base; // Corregimos ID Base si es necesario
-            }
-            
-            // Fix Sprite
-            node.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`;
-        }
+        // 1. RAMIFICACIÓN ARTIFICIAL (Antes de cualquier cambio)
+        // Crea las ramas Goodra / Goodra Hisui desde Sliggoo
+        if (REGIONAL_BRANCHING[currentName]) {
+            const targets = REGIONAL_BRANCHING[currentName];
+            const originalChildren = node.evolvesTo || [];
+            const newChildren: IEvolutionNode[] = [];
 
-        // 2. Mapeo específico para Hisui Sliggoo (nombre intermedio)
-        if (active.includes('-hisui') && currentName === 'sliggoo') {
-             currentName = 'sliggoo-hisui';
-             node.speciesName = 'sliggoo-hisui';
-             if (REGIONAL_DATA['sliggoo-hisui']) {
-                 const d = REGIONAL_DATA['sliggoo-hisui'];
-                 node.variantId = d.id;
-                 node.speciesId = d.base || node.speciesId;
-                 node.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${d.id}.png`;
-             }
-        }
-
-        // 3. Lógica de Aislamiento (No mezclar ramas Galar/Kanto/Alola)
-        let isolationKey: string | null = null;
-        if (STRICT_ISOLATION[currentName]) isolationKey = currentName;
-        
-        if (!isolationKey) {
-             for (const [key, targets] of Object.entries(STRICT_ISOLATION)) {
-                if (active === key || targets.includes(active)) {
-                    // Si somos root (ej Rattata) y la activa es regional (Rattata-Alola)
-                    if (isRoot && currentName !== key && key.includes(currentName)) {
-                         currentName = key;
-                         node.speciesName = key;
-                         // RE-INYECCIÓN tras cambio de nombre
-                         if (REGIONAL_DATA[key]) {
-                             const d = REGIONAL_DATA[key];
-                             node.variantId = d.id;
-                             node.speciesId = d.base || node.speciesId;
-                             node.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${d.id}.png`;
-                         }
-                         isolationKey = key;
-                    } else if (currentName === key) {
-                        isolationKey = key;
+            targets.forEach(target => {
+                let match = originalChildren.find(c => c.speciesName.toLowerCase() === target);
+                if (!match) {
+                    const baseMatch = originalChildren.find(c => target.includes(c.speciesName.toLowerCase()));
+                    if (baseMatch) {
+                        const cloned = JSON.parse(JSON.stringify(baseMatch));
+                        cloned.speciesName = target;
+                        match = cloned;
                     }
-                    break;
                 }
+                if (match) newChildren.push(match);
+            });
+
+            if (currentName === 'rockruff') {
+                 if (active === 'rockruff-own-tempo' || active === 'lycanroc-dusk') {
+                     node.evolvesTo = newChildren.filter(c => c.speciesName === 'lycanroc-dusk');
+                 } else {
+                     node.evolvesTo = newChildren.filter(c => c.speciesName !== 'lycanroc-dusk');
+                 }
+            } else if (newChildren.length > 0) {
+                node.evolvesTo = newChildren;
             }
         }
 
-        // Filtrado de hijos basado en aislamiento
+        // 2. LÓGICA DE AISLAMIENTO Y TRANSFORMACIÓN (SOLUCIÓN SLIGGOO)
+        // Eliminado "isRoot" para permitir que formas intermedias como Sliggoo
+        // se transformen a Sliggoo-Hisui si el objetivo final lo requiere.
+        let isolationKey: string | null = null;
+        
+        for (const [key, targets] of Object.entries(STRICT_ISOLATION)) {
+            if (active === key || targets.includes(active)) {
+                // Si la llave de aislamiento (ej. sliggoo-hisui) contiene el nombre actual (sliggoo)
+                // y no son iguales, aplicamos la transformación.
+                if (currentName !== key && key.includes(currentName)) {
+                        currentName = key;
+                        node.speciesName = key;
+                        isolationKey = key;
+                } else if (currentName === key) {
+                    isolationKey = key;
+                }
+                break;
+            }
+        }
+
+        // Fallback: Si no hay match específico, busca si la base tiene restricciones (para limpiar ramas cruzadas)
+        if (!isolationKey && STRICT_ISOLATION[currentName]) {
+            isolationKey = currentName;
+        }
+
         if (isolationKey) {
             const allowedChildren = STRICT_ISOLATION[isolationKey];
             if (node.evolvesTo) {
@@ -268,46 +261,22 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
             }
         }
 
-        // 4. Ramificación Artificial (Crear hermanos donde no existen)
-        if (REGIONAL_BRANCHING[currentName]) {
-            const targets = REGIONAL_BRANCHING[currentName];
-            const originalChildren = node.evolvesTo || [];
-            const newChildren: IEvolutionNode[] = [];
-
-            targets.forEach(target => {
-                let match = originalChildren.find(c => c.speciesName.toLowerCase() === target);
-                if (!match) {
-                    const baseMatch = originalChildren.find(c => target.includes(c.speciesName.toLowerCase()));
-                    if (baseMatch) {
-                        const cloned = JSON.parse(JSON.stringify(baseMatch));
-                        cloned.speciesName = target;
-                        // RE-INYECCIÓN en nodos clonados
-                        if (REGIONAL_DATA[target]) {
-                            const d = REGIONAL_DATA[target];
-                            cloned.variantId = d.id;
-                            cloned.speciesId = d.base || cloned.speciesId;
-                            cloned.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${d.id}.png`;
-                        }
-                        match = cloned;
-                    }
-                }
-                if (match) newChildren.push(match);
-            });
-
-            // Filtro específico para Rockruff (Own Tempo vs Dusk)
-            if (currentName === 'rockruff') {
-                 if (active === 'rockruff-own-tempo' || active === 'lycanroc-dusk') {
-                     node.evolvesTo = newChildren.filter(c => c.speciesName === 'lycanroc-dusk');
-                 } else {
-                     node.evolvesTo = newChildren.filter(c => c.speciesName !== 'lycanroc-dusk');
-                 }
-            } else if (newChildren.length > 0) {
-                node.evolvesTo = newChildren;
-            }
-        }
-
+        // 3. RECURSIÓN
         if (node.evolvesTo) {
             node.evolvesTo = node.evolvesTo.map((child: IEvolutionNode) => traverseAndTransform(child, false));
+        }
+
+        // 4. INYECCIÓN DE DATOS VISUALES (SPRITES + ICONOS)
+        // Se ejecuta al final para aplicar la imagen correcta al nombre definitivo.
+        if (REGIONAL_DATA[currentName]) {
+            const data = REGIONAL_DATA[currentName];
+            node.variantId = data.id; 
+            if (data.base) {
+                node.speciesId = data.base; 
+            }
+            node.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`;
+            // FIX: Actualizamos el icono para que las pestañas muestren la miniatura correcta
+            node.icon = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
         }
 
         return node;
@@ -316,17 +285,15 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
     return traverseAndTransform(processedChain, true);
 };
 
-// ... (helpers visuales getOptimizedEvolutionDetail, UI Components se mantienen igual que antes) ...
+// ... UI HELPERS ...
 
 const getOptimizedEvolutionDetail = (speciesName: string, allDetails: IEvolutionDetail[], gen: number): IEvolutionDetail[] => {
   if (!allDetails || allDetails.length === 0) return [];
   const species = speciesName.toLowerCase();
 
-  // KUBFU SPECIAL TEXTS
   if (species === 'urshifu-single-strike') return [{ trigger: 'item', item: 'scroll-of-darkness' } as IEvolutionDetail];
   if (species === 'urshifu-rapid-strike') return [{ trigger: 'item', item: 'scroll-of-waters' } as IEvolutionDetail];
 
-  // REGIONAL METHODS
   if (species === 'persian-alola') return filterBy(allDetails, d => d.minHappiness !== null) || allDetails;
   if (species === 'raticate-alola') return filterBy(allDetails, d => d.timeOfDay === 'night' && d.minLevel === 20) || allDetails;
   if (species === 'sandslash-alola' || species === 'ninetales-alola') return filterBy(allDetails, d => d.item?.includes('ice-stone') ?? false) || allDetails;
@@ -477,7 +444,6 @@ const EvolutionTriggerDisplay = ({ details, lang, gen, targetSpecies }: { detail
   
   if (!details || details.length === 0) return <ArrowRight size={16} className="text-slate-700" />;
 
-  // CRABOMINABLE
   if (targetSpecies.toLowerCase() === 'crabominable' && gen === 8) {
       const hisuiDetail = details.find(d => d.location);
       const galarDetail = details.find(d => d.item?.includes('ice-stone'));
@@ -490,7 +456,6 @@ const EvolutionTriggerDisplay = ({ details, lang, gen, targetSpecies }: { detail
       );
   }
 
-  // POLTEAGEIST / SINISTCHA
   if (['polteageist', 'sinistcha'].includes(targetSpecies.toLowerCase())) {
       const teaItems = ['cracked-pot', 'chipped-pot', 'unremarkable-teacup', 'masterpiece-teacup'];
       const validTeaDetails = details.filter(d => d.item && teaItems.includes(d.item));
@@ -678,6 +643,7 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                 {paths.map((path, idx) => {
                     const node = path[path.length - 1]; 
                     const isActive = selectedBranchIdx === idx;
+                    // FIX: Usar el icono que ahora está correctamente inyectado
                     const iconSrc = node.icon || node.sprite;
                     return <button key={idx} onClick={() => setSelectedBranchIdx(idx)} className={cn("relative group rounded border transition-all duration-300 w-8 h-8 flex items-center justify-center overflow-hidden bg-slate-900", isActive ? "border-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.2)]" : "border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100")} title={node.speciesName}><Image src={iconSrc} alt={node.speciesName} fill className="object-contain p-0.5 rendering-pixelated" unoptimized onError={() => setImgError(prev => ({...prev, [node.speciesName + '_icon']: true}))} /></button>;
                 })}
@@ -723,7 +689,7 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                                 </div>
                             </div>
                             {!isLast && nextNode && (
-                                <div className={cn("flex flex-col items-center px-1 md:px-2 relative z-10", isUnavailable && "opacity-20 grayscale")}>
+                                <div className={cn("flex flex-col items-center px-1 md:px-2 relative z-10 hover:z-[100]", isUnavailable && "opacity-20 grayscale")}>
                                     <div className="w-[calc(100%+2rem)] absolute top-1/2 -translate-y-1/2 -left-4 h-[1px] bg-slate-800 -z-10"><div className="w-full h-full bg-gradient-to-r from-slate-800 via-cyan-900/50 to-slate-800" /></div>
                                     <div className="bg-slate-950 border border-slate-800 rounded shadow-lg relative transition-transform hover:scale-105 hover:border-cyan-500/30 hover:z-[50]">
                                         <EvolutionTriggerDisplay details={relevantDetails} lang={lang} gen={currentGen} targetSpecies={nextNode.speciesName} />

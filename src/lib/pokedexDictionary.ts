@@ -5,7 +5,6 @@ export type Lang = 'es' | 'en';
 export const POKEDEX_DICTIONARY = {
   es: {
     labels: {
-      // ...
       // --- DATOS BÁSICOS ---
       abilities: "Habilidades",
       height: "ALT",
@@ -398,18 +397,8 @@ export const POKEDEX_DICTIONARY = {
         shed: "Level 20, with 1 empty party slot and 1 Poké Ball in bag.",
         spin: "Spin your character after battle (duration/time varies).",
         crit: "Land 3 critical hits in a single battle."
-      },
-      getDexLabel: (regionKey: string) => {
-        // @ts-ignore
-        const name = POKEDEX_DICTIONARY.en.regions[regionKey] || regionKey;
-        return `${name} DEX`;
-      },
-      getEvoTrigger: (trigger: string) => {
-          const map: Record<string, string> = { 'level-up': 'Level', 'trade': 'Trade', 'use-item': 'Use Item', 'shed': 'Shed' };
-          return map[trigger] || 'Special';
       }
     },
-    // ... (regions, types, natures IGUALES) ...
     regions: {
       NATIONAL: "NATIONAL", KANTO: "KANTO", JOHTO: "JOHTO", HOENN: "HOENN",
       SINNOH: "SINNOH", UNOVA: "UNOVA", KALOS: "KALOS", ALOLA: "ALOLA",
@@ -428,6 +417,15 @@ export const POKEDEX_DICTIONARY = {
       timid: "Timid", hasty: "Hasty", serious: "Serious", jolly: "Jolly", naive: "Naive",
       modest: "Modest", mild: "Mild", quiet: "Quiet", bashful: "Bashful", rash: "Rash",
       calm: "Calm", gentle: "Gentle", sassy: "Sassy", careful: "Careful", quirky: "Quirky"
+    },
+    getDexLabel: (regionKey: string) => {
+      // @ts-ignore
+      const name = POKEDEX_DICTIONARY.en.regions[regionKey] || regionKey;
+      return `${name} DEX`;
+    },
+    getEvoTrigger: (trigger: string) => {
+        const map: Record<string, string> = { 'level-up': 'Level', 'trade': 'Trade', 'use-item': 'Use Item', 'shed': 'Shed' };
+        return map[trigger] || 'Special';
     }
   }
 };

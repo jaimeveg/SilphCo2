@@ -1,3 +1,5 @@
+// src/services/pokeapi.ts
+
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { IPokemon, IStat } from '@/types/interfaces';
@@ -64,8 +66,10 @@ const MANUAL_OVERRIDE_KEYS: Record<number, keyof typeof POKEDEX_DICTIONARY['es']
   // GALAR (GEN 8)
   865: 'galar_crits',     // Sirfetch'd
   867: 'galar_damage',    // Runerigus
-  892: 'scroll_dark',     // Urshifu Single
-  893: 'scroll_water',    // Urshifu Rapid
+  
+  // FIX: CORRECCIÓN DE KEYS PARA URSHIFU (Deben coincidir con pokedexDictionary)
+  892: 'scroll-of-darkness', // Urshifu Single (Antes scroll_dark)
+  893: 'scroll-of-waters',   // Urshifu Rapid (Antes scroll_water)
 
   // HISUI (LEYENDAS)
   904: 'hisui_barrage',   // Overqwil
@@ -104,7 +108,6 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
   const speciesId = parseInt(speciesUrlParts[speciesUrlParts.length - 2]);
   
   // LECTURA SEGURA DEL DICCIONARIO
-  // Usamos '?.' para evitar crash si falta la clave en el archivo de idioma
   const dictOverrides = POKEDEX_DICTIONARY[lang]?.labels?.evo_overrides || {};
   
   let details: IEvolutionDetail[] = chainNode.evolution_details.map((det: any) => {
