@@ -7,7 +7,7 @@ import { IEvolutionNode, IEvolutionDetail, ILocationEncounter } from '@/types/in
 const POKEAPI_BASE = 'https://pokeapi.co/api/v2';
 const FALLBACK_SPRITE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png';
 
-// --- CONSTANTES DE MAPEO UX ---
+// --- CONFIGURACIÓN DE CONTEXTOS ---
 const DEX_MAP: Record<string, string> = {
   'national': 'NATIONAL', 'kanto': 'KANTO', 'original-johto': 'JOHTO', 'updated-johto': 'JOHTO',
   'hoenn': 'HOENN', 'updated-hoenn': 'HOENN', 'original-sinnoh': 'SINNOH', 'extended-sinnoh': 'SINNOH',
@@ -31,48 +31,19 @@ const CONTEXT_TO_DEX_IDS: Record<string, number[]> = {
 const STAT_LABELS: Record<string, string> = { 'hp': 'HP', 'attack': 'ATK', 'defense': 'DEF', 'special-attack': 'SPA', 'special-defense': 'SPD', 'speed': 'SPE' };
 const ROMAN_GEN_MAP: Record<string, string> = { 'generation-i': 'I', 'generation-ii': 'II', 'generation-iii': 'III', 'generation-iv': 'IV', 'generation-v': 'V', 'generation-vi': 'VI', 'generation-vii': 'VII', 'generation-viii': 'VIII', 'generation-ix': 'IX' };
 
-// --- DICCIONARIO DE FORMAS AMPLIADO ---
 const FORM_TRANSLATIONS: Record<string, { es: string, en: string }> = {
-  // Gimmicks & Regionales
   'mega': { es: 'Mega', en: 'Mega' }, 'mega-x': { es: 'Mega X', en: 'Mega X' }, 'mega-y': { es: 'Mega Y', en: 'Mega Y' },
   'gmax': { es: 'Gigamax', en: 'Gigamax' }, 'alola': { es: 'Alola', en: 'Alola' }, 'galar': { es: 'Galar', en: 'Galar' },
-  'hisui': { es: 'Hisui', en: 'Hisui' }, 'paldea': { es: 'Paldea', en: 'Paldea' },
-  
-  // Géneros (Indeedee, Meowstic, etc)
-  'male': { es: 'Macho', en: 'Male' }, 'female': { es: 'Hembra', en: 'Female' },
-
-  // Estilos de Combate (Urshifu)
-  'single-strike': { es: 'Estilo Brusco', en: 'Single Strike' }, 
-  'rapid-strike': { es: 'Estilo Fluido', en: 'Rapid Strike' },
-
-  // Rotom
-  'wash': { es: 'Lavadora', en: 'Wash' }, 'heat': { es: 'Horno', en: 'Heat' }, 
-  'mow': { es: 'Cortacésped', en: 'Mow' }, 'fan': { es: 'Ventilador', en: 'Fan' }, 'frost': { es: 'Frigorífico', en: 'Frost' },
-
-  // Legendarios
-  'origin': { es: 'Origen', en: 'Origin' }, 'therian': { es: 'Tótem', en: 'Therian' }, 'incarnate': { es: 'Avatar', en: 'Incarnate' },
+  'hisui': { es: 'Hisui', en: 'Hisui' }, 'paldea': { es: 'Paldea', en: 'Paldea' }, 'wash': { es: 'Lavadora', en: 'Wash' },
+  'heat': { es: 'Horno', en: 'Heat' }, 'mow': { es: 'Cortacésped', en: 'Mow' }, 'fan': { es: 'Ventilador', en: 'Fan' },
+  'frost': { es: 'Frigorífico', en: 'Frost' }, 'origin': { es: 'Origen', en: 'Origin' }, 'therian': { es: 'Tótem', en: 'Therian' },
   'sky': { es: 'Cielo', en: 'Sky' }, 'eternal': { es: 'Eterna', en: 'Eternal' }, 'crowned': { es: 'Suprema', en: 'Crowned' },
-  'hero': { es: 'Héroe', en: 'Hero' }, // Zacian/Zamazenta Hero of many battles
-
-  // Oriocorio
+  'rapid-strike': { es: 'Fluida', en: 'Rapid Strike' }, 'single-strike': { es: 'Brusca', en: 'Single Strike' },
+  'dusk': { es: 'Crepuscular', en: 'Dusk' }, 'dawn': { es: 'Alba', en: 'Dawn' }, 'midnight': { es: 'Noche', en: 'Midnight' },
+  'low-key': { es: 'Grave', en: 'Low Key' }, 'roaming': { es: 'Andante', en: 'Roaming' }, 'bloodmoon': { es: 'Luna Carmesí', en: 'Bloodmoon' },
+  'male': { es: 'Macho', en: 'Male' }, 'female': { es: 'Hembra', en: 'Female' },
   'baile': { es: 'Estilo Baile', en: 'Baile Style' }, 'pom-pom': { es: 'Estilo Animadora', en: 'Pom-Pom Style' },
-  'pau': { es: 'Estilo Plácido', en: 'Pa\'u Style' }, 'sensu': { es: 'Estilo Refinado', en: 'Sensu Style' },
-
-  // Lycanroc
-  'midday': { es: 'Diurna', en: 'Midday' }, 'dusk': { es: 'Crepuscular', en: 'Dusk' }, 'midnight': { es: 'Nocturna', en: 'Midnight' },
-
-  // Toxtricity
-  'amped': { es: 'Aguda', en: 'Amped' }, 'low-key': { es: 'Grave', en: 'Low Key' },
-
-  // Otros Específicos
-  'roaming': { es: 'Andante', en: 'Roaming' }, 'bloodmoon': { es: 'Luna Carmesí', en: 'Bloodmoon' },
-  'shield': { es: 'Escudo', en: 'Shield' }, 'blade': { es: 'Filo', en: 'Blade' },
-  'disguised': { es: 'Disfrazada', en: 'Disguised' }, 'busted': { es: 'Descubierta', en: 'Busted' },
-  'ice': { es: 'Cara Hielo', en: 'Ice' }, 'noice': { es: 'Cara Deshielo', en: 'Noice' },
-  'full-belly': { es: 'Saciada', en: 'Full Belly' }, 'hangry': { es: 'Voraz', en: 'Hangry' },
-  'plant': { es: 'Planta', en: 'Plant' }, 'sandy': { es: 'Arena', en: 'Sandy' }, 'trash': { es: 'Basura', en: 'Trash' },
-  'sunshine': { es: 'Soleada', en: 'Sunshine' }, 'overcast': { es: 'Nublada', en: 'Overcast' },
-  'west': { es: 'Oeste', en: 'West' }, 'east': { es: 'Este', en: 'East' }
+  'pau': { es: 'Estilo Plácido', en: 'Pa\'u Style' }, 'sensu': { es: 'Estilo Refinado', en: 'Sensu Style' }
 };
 
 const MANUAL_OVERRIDE_KEYS: Record<number, keyof typeof POKEDEX_DICTIONARY['es']['labels']['evo_overrides']> = {
@@ -81,6 +52,63 @@ const MANUAL_OVERRIDE_KEYS: Record<number, keyof typeof POKEDEX_DICTIONARY['es']
   1018: 'metal_alloy', 865: 'galar_crits', 867: 'galar_damage', 
   892: 'scroll-of-darkness', 893: 'scroll-of-waters',
   904: 'hisui_barrage', 899: 'hisui_psyshield', 902: 'hisui_recoil', 900: 'black_augurite'
+};
+
+// --- DICCIONARIO MAESTRO DE VERSIONES (ALL GENS + DLCs) ---
+const VERSION_METADATA: Record<string, { name: string; group: string; gen: number; region: string; type: 'Original' | 'Remake' | 'Enhanced' | 'Spin-off' }> = {
+    // GEN 1
+    'red': { name: 'Red', group: 'RB', gen: 1, region: 'Kanto', type: 'Original' },
+    'blue': { name: 'Blue', group: 'RB', gen: 1, region: 'Kanto', type: 'Original' },
+    'yellow': { name: 'Yellow', group: 'Yellow', gen: 1, region: 'Kanto', type: 'Enhanced' },
+    // GEN 2
+    'gold': { name: 'Gold', group: 'GS', gen: 2, region: 'Johto', type: 'Original' },
+    'silver': { name: 'Silver', group: 'GS', gen: 2, region: 'Johto', type: 'Original' },
+    'crystal': { name: 'Crystal', group: 'Crystal', gen: 2, region: 'Johto', type: 'Enhanced' },
+    // GEN 3
+    'ruby': { name: 'Ruby', group: 'RS', gen: 3, region: 'Hoenn', type: 'Original' },
+    'sapphire': { name: 'Sapphire', group: 'RS', gen: 3, region: 'Hoenn', type: 'Original' },
+    'emerald': { name: 'Emerald', group: 'Emerald', gen: 3, region: 'Hoenn', type: 'Enhanced' },
+    'firered': { name: 'FireRed', group: 'FRLG', gen: 3, region: 'Kanto', type: 'Remake' },
+    'leafgreen': { name: 'LeafGreen', group: 'FRLG', gen: 3, region: 'Kanto', type: 'Remake' },
+    // GEN 3 Spin-off
+    'colosseum': { name: 'Colosseum', group: 'Orre', gen: 3, region: 'Orre', type: 'Spin-off' },
+    'xd': { name: 'XD', group: 'Orre', gen: 3, region: 'Orre', type: 'Spin-off' },
+    // GEN 4
+    'diamond': { name: 'Diamond', group: 'DP', gen: 4, region: 'Sinnoh', type: 'Original' },
+    'pearl': { name: 'Pearl', group: 'DP', gen: 4, region: 'Sinnoh', type: 'Original' },
+    'platinum': { name: 'Platinum', group: 'Pt', gen: 4, region: 'Sinnoh', type: 'Enhanced' },
+    'heartgold': { name: 'HeartGold', group: 'HGSS', gen: 4, region: 'Johto', type: 'Remake' },
+    'soulsilver': { name: 'SoulSilver', group: 'HGSS', gen: 4, region: 'Johto', type: 'Remake' },
+    // GEN 5
+    'black': { name: 'Black', group: 'BW', gen: 5, region: 'Unova', type: 'Original' },
+    'white': { name: 'White', group: 'BW', gen: 5, region: 'Unova', type: 'Original' },
+    'black-2': { name: 'Black 2', group: 'B2W2', gen: 5, region: 'Unova', type: 'Enhanced' },
+    'white-2': { name: 'White 2', group: 'B2W2', gen: 5, region: 'Unova', type: 'Enhanced' },
+    // GEN 6
+    'x': { name: 'X', group: 'XY', gen: 6, region: 'Kalos', type: 'Original' },
+    'y': { name: 'Y', group: 'XY', gen: 6, region: 'Kalos', type: 'Original' },
+    'omega-ruby': { name: 'Omega Ruby', group: 'ORAS', gen: 6, region: 'Hoenn', type: 'Remake' },
+    'alpha-sapphire': { name: 'Alpha Sapphire', group: 'ORAS', gen: 6, region: 'Hoenn', type: 'Remake' },
+    // GEN 7
+    'sun': { name: 'Sun', group: 'SM', gen: 7, region: 'Alola', type: 'Original' },
+    'moon': { name: 'Moon', group: 'SM', gen: 7, region: 'Alola', type: 'Original' },
+    'ultra-sun': { name: 'Ultra Sun', group: 'USUM', gen: 7, region: 'Alola', type: 'Enhanced' },
+    'ultra-moon': { name: 'Ultra Moon', group: 'USUM', gen: 7, region: 'Alola', type: 'Enhanced' },
+    'lets-go-pikachu': { name: 'Let\'s Go Pikachu', group: 'LGPE', gen: 7, region: 'Kanto', type: 'Remake' },
+    'lets-go-eevee': { name: 'Let\'s Go Eevee', group: 'LGPE', gen: 7, region: 'Kanto', type: 'Remake' },
+    // GEN 8
+    'sword': { name: 'Sword', group: 'SwSh', gen: 8, region: 'Galar', type: 'Original' },
+    'shield': { name: 'Shield', group: 'SwSh', gen: 8, region: 'Galar', type: 'Original' },
+    'isle-of-armor': { name: 'Isle of Armor', group: 'SwSh', gen: 8, region: 'Galar', type: 'Enhanced' },
+    'crown-tundra': { name: 'Crown Tundra', group: 'SwSh', gen: 8, region: 'Galar', type: 'Enhanced' },
+    'brilliant-diamond': { name: 'Brilliant Diamond', group: 'BDSP', gen: 8, region: 'Sinnoh', type: 'Remake' },
+    'shining-pearl': { name: 'Shining Pearl', group: 'BDSP', gen: 8, region: 'Sinnoh', type: 'Remake' },
+    'legends-arceus': { name: 'Legends: Arceus', group: 'PLA', gen: 8, region: 'Hisui', type: 'Spin-off' },
+    // GEN 9
+    'scarlet': { name: 'Scarlet', group: 'SV', gen: 9, region: 'Paldea', type: 'Original' },
+    'violet': { name: 'Violet', group: 'SV', gen: 9, region: 'Paldea', type: 'Original' },
+    'teal-mask': { name: 'Teal Mask', group: 'SV', gen: 9, region: 'Kitakami', type: 'Enhanced' },
+    'indigo-disk': { name: 'Indigo Disk', group: 'SV', gen: 9, region: 'Blueberry', type: 'Enhanced' }
 };
 
 export const fetchPokedexEntries = async (context: string): Promise<string[]> => {
@@ -105,7 +133,6 @@ const formatVarietyName = (rawName: string, speciesName: string, lang: Lang): st
   let suffix = rawName.replace(speciesName, '').replace(/^-/, ''); 
   const translation = FORM_TRANSLATIONS[suffix];
   if (translation) return translation[lang];
-  // Fallback inteligente para casos no mapeados: Quitar guiones y Capitalizar
   return suffix.replace(/-/g, ' ').toUpperCase();
 };
 
@@ -137,7 +164,6 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
         tradeSpecies: det.trade_species?.name,
         customReq: undefined
     };
-    // @ts-ignore
     if (MANUAL_OVERRIDE_KEYS[speciesId]) {
         // @ts-ignore
         const key = MANUAL_OVERRIDE_KEYS[speciesId];
@@ -148,7 +174,6 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
     return baseDetail;
   });
 
-  // @ts-ignore
   if (details.length === 0 && MANUAL_OVERRIDE_KEYS[speciesId]) {
       // @ts-ignore
       const key = MANUAL_OVERRIDE_KEYS[speciesId];
@@ -173,6 +198,7 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
 };
 
 const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPokemon> => {
+  console.log(`[PokeAPI] Fetching FULL data for ID: ${id}`);
   const pokemonRes = await fetch(`${POKEAPI_BASE}/pokemon/${id}`);
   if (!pokemonRes.ok) throw new Error('Pokemon not found');
   const pokemonData = await pokemonRes.json();
@@ -225,42 +251,30 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     max: 255, 
   }));
 
-  // --- ASSETS LOGIC (STRICT 2D) ---
   const other = pokemonData.sprites.other;
   const official = other?.['official-artwork'];
   
   const main = official?.front_default || pokemonData.sprites.front_default || FALLBACK_SPRITE;
   const shiny = official?.front_shiny || pokemonData.sprites.front_shiny || main;
-  
   const female = official?.front_female || undefined; 
   const femaleShiny = official?.front_shiny_female || undefined;
 
   const assets: IPokemonAssets = { main, shiny, female, femaleShiny };
 
-  // --- LÓGICA DE NOMBRE DE VARIEDAD (FIX: Identificar bases con nombre específico) ---
   const varieties = speciesData.varieties.map((v: any) => {
     const urlParts = v.pokemon.url.split('/');
     let translatedFormName = '';
 
-    // Si el nombre del pokémon y la especie son idénticos, es la verdadera "Forma Base"
     if (v.pokemon.name === speciesData.name) {
          translatedFormName = lang === 'es' ? 'FORMA BASE' : 'BASE FORM';
     } else {
-         // Si difieren (ej: urshifu-single-strike vs urshifu), formateamos el sufijo
-         // incluso si is_default es true.
          translatedFormName = formatVarietyName(v.pokemon.name, speciesData.name, lang);
-         
-         // Fallback de seguridad: Si el formato devolvió vacío (raro), volvemos a Base Form
          if (!translatedFormName || translatedFormName.trim() === '') {
              translatedFormName = lang === 'es' ? 'FORMA BASE' : 'BASE FORM';
          }
     }
     
-    return { 
-        isDefault: v.is_default, 
-        name: translatedFormName, 
-        pokemonId: urlParts[urlParts.length - 2] 
-    };
+    return { isDefault: v.is_default, name: translatedFormName, pokemonId: urlParts[urlParts.length - 2] };
   });
 
   let evolutionChain: IEvolutionNode | undefined;
@@ -272,27 +286,73 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     } catch (e) { console.error("Evo error", e); }
   }
 
-  // --- LOCATION LOGIC ---
+  // --- LOCATION LOGIC WITH DEBUG ---
   let locations: ILocationEncounter[] = [];
   try {
     const locRes = await fetch(`${POKEAPI_BASE}/pokemon/${id}/encounters`);
     const locData = await locRes.json();
-    locData.forEach((area: any) => {
-        area.version_details.forEach((ver: any) => {
-            const conditions = ver.encounter_details[0].condition_values?.map((c: any) => c.name) || [];
-            locations.push({
-                region: "Unknown",
-                locationName: area.location_area.name,
-                version: ver.version.name,
-                method: ver.encounter_details[0].method.name,
-                chance: ver.encounter_details[0].chance,
-                minLevel: ver.encounter_details[0].min_level,
-                maxLevel: ver.encounter_details[0].max_level,
-                conditions: conditions
+    
+    console.log(`[DEBUG_LOC] ID: ${id} | Raw encounters count: ${locData?.length}`);
+
+    if (Array.isArray(locData)) {
+        locData.forEach((area: any) => {
+            area.version_details.forEach((ver: any) => {
+                const verNameRaw = ver.version.name;
+                const verName = verNameRaw.toLowerCase().trim();
+                
+                let meta = VERSION_METADATA[verName];
+                
+                if (!meta) {
+                    console.warn(`[DEBUG_LOC] MISSING METADATA for: ${verName}. Fallback applied.`);
+                    // Infer group based on name
+                    let guessedGen = 99;
+                    let guessedGroup = 'Others';
+                    
+                    if (verName.includes('scarlet') || verName.includes('violet')) { guessedGen = 9; guessedGroup = 'SV'; }
+                    else if (verName.includes('sword') || verName.includes('shield')) { guessedGen = 8; guessedGroup = 'SwSh'; }
+                    else if (verName.includes('alpha') || verName.includes('omega')) { guessedGen = 6; guessedGroup = 'ORAS'; }
+                    
+                    meta = {
+                        name: verNameRaw.toUpperCase().replace(/-/g, ' '),
+                        group: guessedGroup,
+                        gen: guessedGen, 
+                        region: 'Unknown',
+                        type: 'Spin-off'
+                    };
+                }
+
+                // DEBUG: Check details existence
+                const details = ver.encounter_details && ver.encounter_details.length > 0 ? ver.encounter_details[0] : null;
+                
+                if (!details) {
+                    console.error(`[DEBUG_LOC] EMPTY DETAILS for: ${verName} in ${area.location_area.name}`);
+                    return; 
+                }
+
+                const conditions = details.condition_values?.map((c: any) => c.name) || [];
+                let cleanLoc = area.location_area.name.replace(/-/g, ' ');
+                
+                locations.push({
+                    region: meta.region,
+                    version: meta.name,
+                    versionGroup: meta.group,
+                    generation: meta.gen,
+                    gameType: meta.type,
+                    locationName: cleanLoc,
+                    method: details.method?.name || 'unknown',
+                    chance: details.chance || 0,
+                    minLevel: details.min_level || 0,
+                    maxLevel: details.max_level || 0,
+                    conditions: conditions
+                });
             });
         });
-    });
-  } catch (e) { console.error("Loc error", e); }
+    }
+  } catch (e) { 
+      console.error("[DEBUG_LOC] CRITICAL ERROR:", e); 
+  }
+  
+  console.log(`[DEBUG_LOC] Final locations count: ${locations.length}`);
 
   return {
     id: pokemonData.id,
@@ -302,7 +362,7 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     types: pokemonData.types.map((t: any) => t.type.name),
     sprite: main,
     assets,
-    genderRate: speciesData.gender_rate, 
+    genderRate: speciesData.gender_rate,
     stats,
     height: pokemonData.height,
     weight: pokemonData.weight,

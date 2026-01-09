@@ -18,12 +18,11 @@ export interface IVariety {
   pokemonId: string;
 }
 
-// --- NUEVA ESTRUCTURA DE ASSETS ---
 export interface IPokemonAssets {
-  main: string;          // Official Artwork Normal (2D High-Res)
-  shiny: string;         // Official Artwork Shiny (2D High-Res)
-  female?: string;       // Official Artwork Hembra (Solo si existe en 2D)
-  femaleShiny?: string;  // Official Artwork Hembra Shiny (Solo si existe en 2D)
+  main: string;
+  shiny: string;
+  female?: string;
+  femaleShiny?: string;
 }
 
 export interface IPokemon {
@@ -32,9 +31,9 @@ export interface IPokemon {
   name: string;
   speciesName: string;
   types: string[];
-  sprite: string; // Legacy support
-  assets: IPokemonAssets; // <--- NUEVO
-  genderRate: number;     // <--- NUEVO: -1 (Genderless), 0 (Male only), 8 (Female only), 1-7 (Mixed)
+  sprite: string;
+  assets: IPokemonAssets;
+  genderRate: number;
   stats: IStat[];
   height: number;
   weight: number;
@@ -81,9 +80,13 @@ export interface IEvolutionNode {
   variantId?: number;
 }
 
+// --- ACTUALIZACIÓN ESTRUCTURAL DE LOCALIZACIÓN ---
 export interface ILocationEncounter {
-  region: string;
-  version: string;
+  region: string;       
+  version: string;      
+  versionGroup: string; // <--- NUEVO
+  generation: number;   // <--- NUEVO
+  gameType: 'Original' | 'Remake' | 'Enhanced' | 'Spin-off'; // <--- NUEVO
   locationName: string;
   method: string;
   chance: number;
@@ -92,7 +95,6 @@ export interface ILocationEncounter {
   conditions: string[];
 }
 
-// --- INTELLIGENCE INTERFACES ---
 export interface ICompetitiveData {
   format: 'Smogon' | 'VGC_Reg_G' | 'VGC_Reg_H';
   smogonTier?: 'OU' | 'UU' | 'RU' | 'NU' | 'PU' | 'Uber' | 'AG';
