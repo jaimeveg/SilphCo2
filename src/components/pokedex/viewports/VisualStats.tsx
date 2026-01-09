@@ -128,8 +128,35 @@ export default function VisualStats({ stats, lang }: Props) {
 
   const effectiveLevel = level === '' ? 0 : level;
 
+  // Cálculo del BST
+  const bst = useMemo(() => stats.reduce((acc, s) => acc + s.value, 0), [stats]);
+
   const handleIvChange = (key: string, val: number) => setIvs(prev => ({ ...prev, [key]: isNaN(val) ? 0 : Math.max(0, Math.min(31, val)) }));
-  const handleEvChange = (key: string, val: number) => setEvs(prev => ({ ...prev, [key]: isNaN(val) ? 0 : Math.max(0, Math.min(252, val)) }));
+  
+  // Lógica de EVs con límite de 510
+  const handleEvChange = (targetKey: string, val: number) => {
+    let numVal = isNaN(val) ? 0 : val;
+    // Límite individual 252
+    numVal = Math.max(0, Math.min(252, numVal));
+
+    setEvs(prev => {
+        // Calcular el total actual excluyendo el stat que estamos editando
+        const currentTotal = Object.entries(prev).reduce((acc, [key, value]) => {
+            return key === targetKey ? acc : acc + value;
+        }, 0);
+
+        // Calcular presupuesto restante hasta 510
+        const remaining = 510 - currentTotal;
+        
+        // Aplicar el menor valor entre lo que pide el usuario y lo que queda disponible
+        const finalVal = Math.min(numVal, remaining);
+
+        return { ...prev, [targetKey]: finalVal };
+    });
+  };
+
+  // Cálculo del total de EVs usados para mostrarlo en UI
+  const totalEvsUsed = Object.values(evs).reduce((a, b) => a + b, 0);
 
   const orderedStats = useMemo(() => {
     return STAT_KEYS.map(key => {
@@ -257,6 +284,26 @@ export default function VisualStats({ stats, lang }: Props) {
                 </div>
             );
         })}
+
+        {/* BST & TOTAL EVS FOOTER - ALINEADO */}
+        <div className="grid grid-cols-[30px_35px_1fr_30px_35px_35px] gap-2 items-center px-1 pt-2 mt-1 border-t border-slate-800/50">
+             
+             {/* Etiqueta BST */}
+             <span className="text-[9px] font-bold font-mono uppercase text-center text-slate-500">BST</span>
+             
+             {/* Valor BST (Caja Cyan) */}
+             <div className="flex items-center justify-center bg-slate-950/80 border border-slate-800 rounded px-1.5 py-0.5 min-w-[24px] shadow-[0_0_10px_rgba(34,211,238,0.1)]">
+                <span className="text-[9px] font-mono text-cyan-400 font-bold">{bst}</span>
+             </div>
+
+             {/* Espacio y Contador de EVs */}
+             <div className="col-span-4 flex justify-end">
+                 <span className={cn("text-[8px] font-mono", totalEvsUsed === 510 ? "text-red-400 font-bold" : "text-slate-500")}>
+                    TOTAL EVS: {totalEvsUsed}/510
+                 </span>
+             </div>
+        </div>
+
       </div>
     </div>
   );

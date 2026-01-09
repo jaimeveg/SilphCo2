@@ -1,8 +1,6 @@
-// src/services/pokeapi.ts
-
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import { IPokemon, IStat } from '@/types/interfaces';
+import { IPokemon, IStat, IPokemonAssets } from '@/types/interfaces';
 import { Lang, POKEDEX_DICTIONARY } from '@/lib/pokedexDictionary';
 import { IEvolutionNode, IEvolutionDetail, ILocationEncounter } from '@/types/interfaces';
 
@@ -33,49 +31,56 @@ const CONTEXT_TO_DEX_IDS: Record<string, number[]> = {
 const STAT_LABELS: Record<string, string> = { 'hp': 'HP', 'attack': 'ATK', 'defense': 'DEF', 'special-attack': 'SPA', 'special-defense': 'SPD', 'speed': 'SPE' };
 const ROMAN_GEN_MAP: Record<string, string> = { 'generation-i': 'I', 'generation-ii': 'II', 'generation-iii': 'III', 'generation-iv': 'IV', 'generation-v': 'V', 'generation-vi': 'VI', 'generation-vii': 'VII', 'generation-viii': 'VIII', 'generation-ix': 'IX' };
 
+// --- DICCIONARIO DE FORMAS AMPLIADO ---
 const FORM_TRANSLATIONS: Record<string, { es: string, en: string }> = {
+  // Gimmicks & Regionales
   'mega': { es: 'Mega', en: 'Mega' }, 'mega-x': { es: 'Mega X', en: 'Mega X' }, 'mega-y': { es: 'Mega Y', en: 'Mega Y' },
   'gmax': { es: 'Gigamax', en: 'Gigamax' }, 'alola': { es: 'Alola', en: 'Alola' }, 'galar': { es: 'Galar', en: 'Galar' },
-  'hisui': { es: 'Hisui', en: 'Hisui' }, 'paldea': { es: 'Paldea', en: 'Paldea' }, 'wash': { es: 'Lavadora', en: 'Wash' },
-  'heat': { es: 'Horno', en: 'Heat' }, 'mow': { es: 'Cortacésped', en: 'Mow' }, 'fan': { es: 'Ventilador', en: 'Fan' },
-  'frost': { es: 'Frigorífico', en: 'Frost' }, 'origin': { es: 'Origen', en: 'Origin' }, 'therian': { es: 'Tótem', en: 'Therian' },
+  'hisui': { es: 'Hisui', en: 'Hisui' }, 'paldea': { es: 'Paldea', en: 'Paldea' },
+  
+  // Géneros (Indeedee, Meowstic, etc)
+  'male': { es: 'Macho', en: 'Male' }, 'female': { es: 'Hembra', en: 'Female' },
+
+  // Estilos de Combate (Urshifu)
+  'single-strike': { es: 'Estilo Brusco', en: 'Single Strike' }, 
+  'rapid-strike': { es: 'Estilo Fluido', en: 'Rapid Strike' },
+
+  // Rotom
+  'wash': { es: 'Lavadora', en: 'Wash' }, 'heat': { es: 'Horno', en: 'Heat' }, 
+  'mow': { es: 'Cortacésped', en: 'Mow' }, 'fan': { es: 'Ventilador', en: 'Fan' }, 'frost': { es: 'Frigorífico', en: 'Frost' },
+
+  // Legendarios
+  'origin': { es: 'Origen', en: 'Origin' }, 'therian': { es: 'Tótem', en: 'Therian' }, 'incarnate': { es: 'Avatar', en: 'Incarnate' },
   'sky': { es: 'Cielo', en: 'Sky' }, 'eternal': { es: 'Eterna', en: 'Eternal' }, 'crowned': { es: 'Suprema', en: 'Crowned' },
-  'rapid-strike': { es: 'Fluida', en: 'Rapid Strike' }, 'single-strike': { es: 'Brusca', en: 'Single Strike' },
-  'dusk': { es: 'Crepuscular', en: 'Dusk' }, 'dawn': { es: 'Alba', en: 'Dawn' }, 'midnight': { es: 'Noche', en: 'Midnight' },
-  'low-key': { es: 'Grave', en: 'Low Key' }, 'roaming': { es: 'Andante', en: 'Roaming' }, 'bloodmoon': { es: 'Luna Carmesí', en: 'Bloodmoon' }
+  'hero': { es: 'Héroe', en: 'Hero' }, // Zacian/Zamazenta Hero of many battles
+
+  // Oriocorio
+  'baile': { es: 'Estilo Baile', en: 'Baile Style' }, 'pom-pom': { es: 'Estilo Animadora', en: 'Pom-Pom Style' },
+  'pau': { es: 'Estilo Plácido', en: 'Pa\'u Style' }, 'sensu': { es: 'Estilo Refinado', en: 'Sensu Style' },
+
+  // Lycanroc
+  'midday': { es: 'Diurna', en: 'Midday' }, 'dusk': { es: 'Crepuscular', en: 'Dusk' }, 'midnight': { es: 'Nocturna', en: 'Midnight' },
+
+  // Toxtricity
+  'amped': { es: 'Aguda', en: 'Amped' }, 'low-key': { es: 'Grave', en: 'Low Key' },
+
+  // Otros Específicos
+  'roaming': { es: 'Andante', en: 'Roaming' }, 'bloodmoon': { es: 'Luna Carmesí', en: 'Bloodmoon' },
+  'shield': { es: 'Escudo', en: 'Shield' }, 'blade': { es: 'Filo', en: 'Blade' },
+  'disguised': { es: 'Disfrazada', en: 'Disguised' }, 'busted': { es: 'Descubierta', en: 'Busted' },
+  'ice': { es: 'Cara Hielo', en: 'Ice' }, 'noice': { es: 'Cara Deshielo', en: 'Noice' },
+  'full-belly': { es: 'Saciada', en: 'Full Belly' }, 'hangry': { es: 'Voraz', en: 'Hangry' },
+  'plant': { es: 'Planta', en: 'Plant' }, 'sandy': { es: 'Arena', en: 'Sandy' }, 'trash': { es: 'Basura', en: 'Trash' },
+  'sunshine': { es: 'Soleada', en: 'Sunshine' }, 'overcast': { es: 'Nublada', en: 'Overcast' },
+  'west': { es: 'Oeste', en: 'West' }, 'east': { es: 'Este', en: 'East' }
 };
 
-// --- MANUAL OVERRIDES (ID POKEMON -> CLAVE DICCIONARIO) ---
 const MANUAL_OVERRIDE_KEYS: Record<number, keyof typeof POKEDEX_DICTIONARY['es']['labels']['evo_overrides']> = {
-  // GEN 9
-  979: 'rage_fist',       // Annihilape
-  983: 'bisharp_leaders', // Kingambit
-  1000: 'coins',          // Gholdengo
-  923: 'steps',           // Pawmot
-  947: 'steps',           // Brambleghast
-  954: 'steps',           // Rabsca
-  964: 'union_circle',    // Palafin
-  925: 'combat',          // Maushold
-  931: 'stone_fire',      // Scovillain
-  939: 'stone_thunder',   // Bellibolt
-  1011: 'syrupy_apple',   // Dipplin
-  1019: 'dragon_cheer',   // Hydrapple
-  1013: 'teacup',         // Sinistcha
-  1018: 'metal_alloy',    // Archaludon
-
-  // GALAR (GEN 8)
-  865: 'galar_crits',     // Sirfetch'd
-  867: 'galar_damage',    // Runerigus
-  
-  // FIX: CORRECCIÓN DE KEYS PARA URSHIFU (Deben coincidir con pokedexDictionary)
-  892: 'scroll-of-darkness', // Urshifu Single (Antes scroll_dark)
-  893: 'scroll-of-waters',   // Urshifu Rapid (Antes scroll_water)
-
-  // HISUI (LEYENDAS)
-  904: 'hisui_barrage',   // Overqwil
-  899: 'hisui_psyshield', // Wyrdeer
-  902: 'hisui_recoil',    // Basculegion
-  900: 'black_augurite'   // Kleavor
+  979: 'rage_fist', 983: 'bisharp_leaders', 1000: 'coins', 923: 'steps', 947: 'steps', 954: 'steps', 964: 'union_circle',
+  925: 'combat', 931: 'stone_fire', 939: 'stone_thunder', 1011: 'syrupy_apple', 1019: 'dragon_cheer', 1013: 'teacup',
+  1018: 'metal_alloy', 865: 'galar_crits', 867: 'galar_damage', 
+  892: 'scroll-of-darkness', 893: 'scroll-of-waters',
+  904: 'hisui_barrage', 899: 'hisui_psyshield', 902: 'hisui_recoil', 900: 'black_augurite'
 };
 
 export const fetchPokedexEntries = async (context: string): Promise<string[]> => {
@@ -100,18 +105,16 @@ const formatVarietyName = (rawName: string, speciesName: string, lang: Lang): st
   let suffix = rawName.replace(speciesName, '').replace(/^-/, ''); 
   const translation = FORM_TRANSLATIONS[suffix];
   if (translation) return translation[lang];
+  // Fallback inteligente para casos no mapeados: Quitar guiones y Capitalizar
   return suffix.replace(/-/g, ' ').toUpperCase();
 };
 
 const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
   const speciesUrlParts = chainNode.species.url.split('/');
   const speciesId = parseInt(speciesUrlParts[speciesUrlParts.length - 2]);
-  
-  // LECTURA SEGURA DEL DICCIONARIO
   const dictOverrides = POKEDEX_DICTIONARY[lang]?.labels?.evo_overrides || {};
   
   let details: IEvolutionDetail[] = chainNode.evolution_details.map((det: any) => {
-    
     const baseDetail: IEvolutionDetail = {
         trigger: det.trigger.name,
         minLevel: det.min_level,
@@ -134,8 +137,6 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
         tradeSpecies: det.trade_species?.name,
         customReq: undefined
     };
-
-    // INYECCIÓN DE OVERRIDE
     // @ts-ignore
     if (MANUAL_OVERRIDE_KEYS[speciesId]) {
         // @ts-ignore
@@ -144,30 +145,18 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
         const overrideText = dictOverrides[key];
         if (overrideText) baseDetail.customReq = overrideText;
     }
-
     return baseDetail;
   });
 
-  // CASO ESPECIAL: SI ARRAY VACÍO PERO TENEMOS OVERRIDE (Ej: Sirfetch'd o DLCs nuevos)
   // @ts-ignore
   if (details.length === 0 && MANUAL_OVERRIDE_KEYS[speciesId]) {
       // @ts-ignore
       const key = MANUAL_OVERRIDE_KEYS[speciesId];
       // @ts-ignore
       const overrideText = dictOverrides[key];
-      
-      if (overrideText) {
-        details.push({
-            trigger: 'manual_override',
-            customReq: overrideText
-        });
-      }
+      if (overrideText) details.push({ trigger: 'manual_override', customReq: overrideText });
   }
-
-  // CASO ESPECIAL: SHEDINJA
-  if (speciesId === 292 && details.length === 0) {
-      details.push({ trigger: 'shed' });
-  }
+  if (speciesId === 292 && details.length === 0) details.push({ trigger: 'shed' });
 
   const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${speciesId}.png`;
   const icon = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${speciesId}.png`;
@@ -207,7 +196,7 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
   });
   if (!dexIds['NATIONAL']) dexIds['NATIONAL'] = speciesData.id;
 
-  const abilitiesPromises = pokemonData.abilities.map(async (item: any) => {
+  const abilities = await Promise.all(pokemonData.abilities.map(async (item: any) => {
     const abRes = await fetch(item.ability.url);
     const abData = await abRes.json();
     const nameEntry = abData.names.find((n: any) => n.language.name === lang) || abData.names.find((n: any) => n.language.name === 'en');
@@ -227,28 +216,50 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     }
     description = description ? description.replace(/[\n\f]/g, ' ') : (lang === 'es' ? "Sin descripción." : "No description.");
 
-    return {
-      name: translatedName,
-      isHidden: item.is_hidden,
-      description
-    };
-  });
-  const abilities = await Promise.all(abilitiesPromises);
+    return { name: translatedName, isHidden: item.is_hidden, description };
+  }));
 
   const stats = pokemonData.stats.map((s: any) => ({
     label: STAT_LABELS[s.stat.name] || s.stat.name,
     value: s.base_stat,
     max: 255, 
   }));
-  const sprite = pokemonData.sprites.other?.['official-artwork']?.front_default || pokemonData.sprites.other?.home?.front_default || pokemonData.sprites.front_default || FALLBACK_SPRITE;
 
+  // --- ASSETS LOGIC (STRICT 2D) ---
+  const other = pokemonData.sprites.other;
+  const official = other?.['official-artwork'];
+  
+  const main = official?.front_default || pokemonData.sprites.front_default || FALLBACK_SPRITE;
+  const shiny = official?.front_shiny || pokemonData.sprites.front_shiny || main;
+  
+  const female = official?.front_female || undefined; 
+  const femaleShiny = official?.front_shiny_female || undefined;
+
+  const assets: IPokemonAssets = { main, shiny, female, femaleShiny };
+
+  // --- LÓGICA DE NOMBRE DE VARIEDAD (FIX: Identificar bases con nombre específico) ---
   const varieties = speciesData.varieties.map((v: any) => {
     const urlParts = v.pokemon.url.split('/');
-    const translatedFormName = v.is_default ? (lang === 'es' ? 'FORMA BASE' : 'BASE FORM') : formatVarietyName(v.pokemon.name, speciesData.name, lang);
-    return {
-      isDefault: v.is_default,
-      name: translatedFormName,
-      pokemonId: urlParts[urlParts.length - 2]
+    let translatedFormName = '';
+
+    // Si el nombre del pokémon y la especie son idénticos, es la verdadera "Forma Base"
+    if (v.pokemon.name === speciesData.name) {
+         translatedFormName = lang === 'es' ? 'FORMA BASE' : 'BASE FORM';
+    } else {
+         // Si difieren (ej: urshifu-single-strike vs urshifu), formateamos el sufijo
+         // incluso si is_default es true.
+         translatedFormName = formatVarietyName(v.pokemon.name, speciesData.name, lang);
+         
+         // Fallback de seguridad: Si el formato devolvió vacío (raro), volvemos a Base Form
+         if (!translatedFormName || translatedFormName.trim() === '') {
+             translatedFormName = lang === 'es' ? 'FORMA BASE' : 'BASE FORM';
+         }
+    }
+    
+    return { 
+        isDefault: v.is_default, 
+        name: translatedFormName, 
+        pokemonId: urlParts[urlParts.length - 2] 
     };
   });
 
@@ -261,6 +272,7 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     } catch (e) { console.error("Evo error", e); }
   }
 
+  // --- LOCATION LOGIC ---
   let locations: ILocationEncounter[] = [];
   try {
     const locRes = await fetch(`${POKEAPI_BASE}/pokemon/${id}/encounters`);
@@ -288,7 +300,9 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     name: pokemonData.name,
     speciesName: speciesData.name,
     types: pokemonData.types.map((t: any) => t.type.name),
-    sprite,
+    sprite: main,
+    assets,
+    genderRate: speciesData.gender_rate, 
     stats,
     height: pokemonData.height,
     weight: pokemonData.weight,
@@ -307,7 +321,7 @@ export const usePokemon = (id: string | number, lang: Lang = 'es') => {
     queryKey: ['pokemon', id, lang],
     queryFn: () => fetchPokemon(id, lang),
     enabled: !!id,
-    staleTime: 0, // Forzamos recarga para ver los cambios inmediatos
+    staleTime: 0, 
   });
 
   useEffect(() => {

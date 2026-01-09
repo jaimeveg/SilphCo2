@@ -1,150 +1,140 @@
 // src/types/interfaces.ts
 
-// --- 1. BASE BIOLOGY (Importamos o redefinimos para evitar duplicidad) ---
-// Opción A: Si borramos pokemon.ts, definimos aquí.
-// Opción B (Recomendada ahora): Definimos la estructura V2 completa aquí.
-
 export interface IStat {
-    label: string; // HP, ATK, DEF...
-    value: number;
-    max: number;   // Base 255 visual reference
-  }
-  
-  export interface IPokemon {
-    id: number;
-    speciesId: number;
-    name: string;
-    speciesName: string;
-    types: string[];
-    sprite: string;
-    stats: IStat[];
-    height: number;
-    weight: number;
-    abilities: IAbility[];
-    generation: string; // Ej: "I", "IX"
-    varieties: IVariety[]; // Ej: Rotom Wash, Meowth Alola
-    dexIds: Record<string, number>; 
-    evolutionChain?: IEvolutionNode;
-    locations?: ILocationEncounter[];
-  }
+  label: string;
+  value: number;
+  max: number;
+}
 
-  export interface IAbility {
-    name: string;
-    isHidden: boolean;
-    description: string;
-  }
-  
-  export interface IVariety {
-    isDefault: boolean;
-    name: string;
-    pokemonId: string; // ID extraído de la URL para navegar
-  }
+export interface IAbility {
+  name: string;
+  isHidden: boolean;
+  description: string;
+}
 
-  // --- 2. COMPETITIVE INTELLIGENCE (Hybrid Smogon + VGC) ---
-  export interface ICompetitiveData {
-    // Contexto del análisis
-    format: 'Smogon' | 'VGC_Reg_G' | 'VGC_Reg_H'; 
-    
-    // Smogon Legacy Data
-    smogonTier?: 'OU' | 'UU' | 'RU' | 'NU' | 'PU' | 'Uber' | 'AG';
-    smogonRole?: string; // "Wallbreaker", "Cleric"
-  
-    // Modern Meta Analysis (Tu petición)
-    customTier: 'S' | 'A' | 'B' | 'C' | 'D' | 'F'; // Basado en Win-rate/Usage actual
-    usageRate?: number; // Porcentaje de uso (ej: 45.2)
-    
-    // Builds Tácticas
-    builds: {
-      name: string; // Ej: "Assault Vest Tank"
+export interface IVariety {
+  isDefault: boolean;
+  name: string;
+  pokemonId: string;
+}
+
+// --- NUEVA ESTRUCTURA DE ASSETS ---
+export interface IPokemonAssets {
+  main: string;          // Official Artwork Normal (2D High-Res)
+  shiny: string;         // Official Artwork Shiny (2D High-Res)
+  female?: string;       // Official Artwork Hembra (Solo si existe en 2D)
+  femaleShiny?: string;  // Official Artwork Hembra Shiny (Solo si existe en 2D)
+}
+
+export interface IPokemon {
+  id: number;
+  speciesId: number;
+  name: string;
+  speciesName: string;
+  types: string[];
+  sprite: string; // Legacy support
+  assets: IPokemonAssets; // <--- NUEVO
+  genderRate: number;     // <--- NUEVO: -1 (Genderless), 0 (Male only), 8 (Female only), 1-7 (Mixed)
+  stats: IStat[];
+  height: number;
+  weight: number;
+  abilities: IAbility[];
+  generation: string;
+  varieties: IVariety[];
+  dexIds: Record<string, number>;
+  evolutionChain?: IEvolutionNode;
+  locations?: ILocationEncounter[];
+}
+
+export interface IEvolutionDetail {
+  trigger: string;
+  minLevel?: number;
+  item?: string;
+  heldItem?: string;
+  minHappiness?: number;
+  minAffection?: number;
+  minBeauty?: number;
+  timeOfDay?: string;
+  knownMove?: string;
+  knownMoveType?: string;
+  location?: string;
+  condition?: string;
+  gender?: number;
+  relativePhysicalStats?: number;
+  needsOverworldRain?: boolean;
+  turnUpsideDown?: boolean;
+  partySpecies?: string;
+  partyType?: string;
+  tradeSpecies?: string;
+  customReq?: string;
+}
+
+export interface IEvolutionNode {
+  speciesId: number;
+  speciesName: string;
+  sprite: string;
+  icon?: string;
+  types: string[];
+  details: IEvolutionDetail[];
+  evolvesTo: IEvolutionNode[];
+  url?: string;
+  variantId?: number;
+}
+
+export interface ILocationEncounter {
+  region: string;
+  version: string;
+  locationName: string;
+  method: string;
+  chance: number;
+  minLevel: number;
+  maxLevel: number;
+  conditions: string[];
+}
+
+// --- INTELLIGENCE INTERFACES ---
+export interface ICompetitiveData {
+  format: 'Smogon' | 'VGC_Reg_G' | 'VGC_Reg_H';
+  smogonTier?: 'OU' | 'UU' | 'RU' | 'NU' | 'PU' | 'Uber' | 'AG';
+  smogonRole?: string;
+  customTier: 'S' | 'A' | 'B' | 'C' | 'D' | 'F';
+  usageRate?: number;
+  builds: {
+      name: string;
       heldItem: string;
       ability: string;
       nature: string;
-      teraType?: string; // Crucial para Gen 9
+      teraType?: string;
       evs: {
-        hp?: number;
-        atk?: number;
-        def?: number;
-        spa?: number;
-        spd?: number;
-        spe?: number;
+          hp?: number;
+          atk?: number;
+          def?: number;
+          spa?: number;
+          spd?: number;
+          spe?: number;
       };
-      moves: string[]; // IDs o Nombres
-    }[];
-  }
-  
-  // --- 3. NUZLOCKE ANALYTICS (Strategic Value) ---
-  export interface INuzlockeData {
-    // Evaluación Táctica
-    viabilityRanking: 'S' | 'A' | 'B' | 'C' | 'F'; // ¿Vale la pena entrenarlo?
-    bestRole: string; // Ej: "Mid-game Sweeper", "E4 Pivot", "HM Slave"
-    powerSpike: 'Early' | 'Mid' | 'Late' | 'Consistent'; // ¿Cuándo brilla?
-  
-    // Datos de Encuentro
-    catchData: {
-      gameVersion: string; // Ej: "Emerald", "FireRed"
-      locations: {
-        mapName: string;
-        method: 'Grass' | 'Surf' | 'Fishing' | 'Static' | 'Gift';
-        encounterRate: number; // % de aparición
-        isManipulable: boolean; // ¿Podemos usar Repel Trick / Dupes Clause para forzarlo?
-      }[];
-    }[];
-  
-    // Notas Adicionales
-    warnings?: string[]; // Ej: "Evoluciona muy tarde", "Aprende movimientos por nivel pobres"
-  }
-  
-  // --- 4. DATA AGGREGATE (El objeto completo que usará la página) ---
-  export interface IPokemonFullProfile {
-    biology: IPokemon;
-    competitive?: ICompetitiveData;
-    nuzlocke?: INuzlockeData;
-  }
+      moves: string[];
+  }[];
+}
 
-  export interface IEvolutionDetail {
-    trigger: string;
-    minLevel?: number;
-    item?: string;
-    heldItem?: string;
-    minHappiness?: number;
-    minAffection?: number;
-    minBeauty?: number;
-    timeOfDay?: string;
-    knownMove?: string;
-    knownMoveType?: string;
-    location?: string;
-    condition?: string;
-    gender?: number;
-    relativePhysicalStats?: number;
-    needsOverworldRain?: boolean;
-    turnUpsideDown?: boolean;
-    partySpecies?: string;
-    partyType?: string;
-    tradeSpecies?: string;
-    // Campo para inyectar texto manual desde el diccionario
-  customReq?: string;
-  }
-  
-  export interface IEvolutionNode {
-    speciesId: number;
-    speciesName: string;
-    sprite: string;
-    icon?: string; // Icono para tabs
-    types: string[];
-    details: IEvolutionDetail[]; // Array de métodos (puede haber varios para llegar al mismo pkm)
-    evolvesTo: IEvolutionNode[];
-    // --- AÑADIDOS PARA SOPORTE DE VARIANTES ---
-  url?: string;        // Para guardar la URL original si existe
-  variantId?: number;  // Para forzar el ID de la forma
-  }
-  
-  export interface ILocationEncounter {
-    region: string;        // 'Kanto', 'Johto' (Calculado o mapeado)
-    version: string;       // 'Red', 'Blue', 'Emerald'
-    locationName: string;
-    method: string;        // 'walk', 'surf', 'old-rod'
-    chance: number;        // % de aparición
-    minLevel: number;
-    maxLevel: number;
-    conditions: string[];  // 'time-morning', etc.
-  }
+export interface INuzlockeData {
+  viabilityRanking: 'S' | 'A' | 'B' | 'C' | 'F';
+  bestRole: string;
+  powerSpike: 'Early' | 'Mid' | 'Late' | 'Consistent';
+  catchData: {
+      gameVersion: string;
+      locations: {
+          mapName: string;
+          method: 'Grass' | 'Surf' | 'Fishing' | 'Static' | 'Gift';
+          encounterRate: number;
+          isManipulable: boolean;
+      }[];
+  }[];
+  warnings?: string[];
+}
+
+export interface IPokemonFullProfile {
+  biology: IPokemon;
+  competitive?: ICompetitiveData;
+  nuzlocke?: INuzlockeData;
+}

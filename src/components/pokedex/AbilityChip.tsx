@@ -1,78 +1,72 @@
 'use client';
-import { useState, useRef } from 'react';
-import { Sparkles } from 'lucide-react';
+
+import { useState } from 'react';
+import { EyeOff, Info } from 'lucide-react';
+import { IAbility } from '@/types/interfaces';
 import { cn } from '@/lib/utils';
-import { createPortal } from 'react-dom';
 
 interface Props {
-  name: string;
-  isHidden: boolean;
-  description: string;
+  ability: IAbility;
 }
 
-export default function AbilityChip({ name, isHidden, description }: Props) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [coords, setCoords] = useState({ top: 0, left: 0 });
-  const chipRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseEnter = () => {
-    if (chipRef.current) {
-      const rect = chipRef.current.getBoundingClientRect();
-      // Posicionamos el tooltip encima del chip, centrado
-      setCoords({
-        top: rect.top - 10, // 10px arriba
-        left: rect.left + rect.width / 2
-      });
-    }
-    setIsHovered(true);
-  };
+export default function AbilityChip({ ability }: Props) {
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <>
-      <div 
-        ref={chipRef}
-        className="relative group/ability"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className={cn(
-          "cursor-help flex items-center gap-2 px-4 py-2 rounded border transition-all duration-300",
-          isHidden 
-            ? "border-purple-500/40 bg-purple-500/10 text-purple-200 hover:bg-purple-500/20" 
-            : "border-slate-700 bg-slate-800/60 text-slate-200 hover:border-cyan-500/50 hover:bg-slate-800"
-        )}>
-          {isHidden && <Sparkles size={10} className="text-purple-400" />}
-          <span className="text-xs font-mono font-bold uppercase tracking-wide">
-            {name}
+    <div 
+      // FIX CRÍTICO: 'hover:z-[100]' eleva este chip por encima de todo el layout
+      // cuando se interactúa con él, evitando que el tooltip quede tapado por paneles vecinos.
+      className="relative group hover:z-[100]"
+      onMouseEnter={() => setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
+      onClick={() => setShowTooltip(!showTooltip)}
+    >
+      <div className={cn(
+        "flex items-center justify-between p-2 rounded border transition-all duration-300 cursor-help select-none",
+        ability.isHidden 
+          ? "bg-purple-950/20 border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-900/30" 
+          : "bg-slate-900/40 border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800/60"
+      )}>
+        <div className="flex items-center gap-2">
+          {ability.isHidden && (
+            <div className="bg-purple-500/20 p-0.5 rounded text-purple-400" title="Habilidad Oculta">
+                <EyeOff size={12} />
+            </div>
+          )}
+          
+          <span className={cn(
+            "text-xs font-bold uppercase tracking-wide whitespace-nowrap", // Evitar saltos de línea raros
+            ability.isHidden ? "text-purple-300" : "text-slate-200"
+          )}>
+            {ability.name}
           </span>
         </div>
+        
+        <Info size={12} className={cn(
+            "transition-colors ml-2",
+            ability.isHidden ? "text-purple-500 group-hover:text-purple-300" : "text-slate-600 group-hover:text-cyan-400"
+        )} />
       </div>
 
-      {/* PORTAL TOOLTIP: Renderizado fuera del flujo normal para evitar overflow */}
-      {isHovered && typeof document !== 'undefined' && createPortal(
-        <div 
-            className="fixed z-[9999] pointer-events-none w-64 transition-all duration-200 animate-in fade-in zoom-in-95"
-            style={{ 
-                top: coords.top, 
-                left: coords.left, 
-                transform: 'translate(-50%, -100%)' // Centrado horizontal, encima vertical
-            }}
-        >
-          <div className="bg-[#0f172a] border border-slate-600 shadow-[0_0_30px_rgba(0,0,0,0.8)] rounded-lg p-4 text-left mb-2">
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-              
-              <div className="flex items-center justify-between mb-2 pb-2 border-b border-slate-800">
-                  <span className="text-[9px] font-mono text-cyan-500 uppercase tracking-widest">ABILITY_DATA</span>
-                  {isHidden && <span className="text-[9px] font-mono text-purple-400 uppercase">HIDDEN_GENE</span>}
-              </div>
-              
-              <p className="text-xs text-slate-300 leading-relaxed font-sans opacity-90">
-                  {description}
-              </p>
+      {/* Tooltip con Descripción */}
+      {showTooltip && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[240px] z-[200] px-1">
+          <div className={cn(
+              "p-2 rounded shadow-[0_10px_40px_rgba(0,0,0,0.8)] text-[10px] leading-relaxed relative backdrop-blur-md border",
+              ability.isHidden 
+                ? "bg-purple-950/95 border-purple-500/50 text-purple-100" 
+                : "bg-slate-900/95 border-slate-700 text-slate-300"
+          )}>
+            {ability.description}
+            
+            {/* Flecha del tooltip */}
+            <div className={cn(
+                "absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent",
+                ability.isHidden ? "border-t-purple-500/50" : "border-t-slate-700"
+            )} />
           </div>
-        </div>,
-        document.body
+        </div>
       )}
-    </>
+    </div>
   );
 }
