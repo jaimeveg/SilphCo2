@@ -1,8 +1,9 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import { IPokemon, IStat, IPokemonAssets } from '@/types/interfaces';
+import { IPokemon, IStat, IPokemonAssets, IPokemonMove} from '@/types/interfaces';
 import { Lang, POKEDEX_DICTIONARY } from '@/lib/pokedexDictionary';
 import { IEvolutionNode, IEvolutionDetail, ILocationEncounter } from '@/types/interfaces';
+import { IMoveDetail, IMachineDetail } from '@/types/interfaces';
 
 const POKEAPI_BASE = 'https://pokeapi.co/api/v2';
 const FALLBACK_SPRITE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png';
@@ -54,8 +55,8 @@ const MANUAL_OVERRIDE_KEYS: Record<number, keyof typeof POKEDEX_DICTIONARY['es']
   904: 'hisui_barrage', 899: 'hisui_psyshield', 902: 'hisui_recoil', 900: 'black_augurite'
 };
 
-// --- DICCIONARIO MAESTRO DE VERSIONES (ALL GENS + DLCs) ---
-const VERSION_METADATA: Record<string, { name: string; group: string; gen: number; region: string; type: 'Original' | 'Remake' | 'Enhanced' | 'Spin-off' }> = {
+// --- DICCIONARIO MAESTRO DE VERSIONES (ALL GENS + DLCs FIX) ---
+export const VERSION_METADATA: Record<string, { name: string; group: string; gen: number; region: string; type: 'Original' | 'Remake' | 'Enhanced' | 'Spin-off' }> = {
     // GEN 1
     'red': { name: 'Red', group: 'RB', gen: 1, region: 'Kanto', type: 'Original' },
     'blue': { name: 'Blue', group: 'RB', gen: 1, region: 'Kanto', type: 'Original' },
@@ -96,7 +97,7 @@ const VERSION_METADATA: Record<string, { name: string; group: string; gen: numbe
     'ultra-moon': { name: 'Ultra Moon', group: 'USUM', gen: 7, region: 'Alola', type: 'Enhanced' },
     'lets-go-pikachu': { name: 'Let\'s Go Pikachu', group: 'LGPE', gen: 7, region: 'Kanto', type: 'Remake' },
     'lets-go-eevee': { name: 'Let\'s Go Eevee', group: 'LGPE', gen: 7, region: 'Kanto', type: 'Remake' },
-    // GEN 8
+    // GEN 8 (DLCs corregidos sin 'the-')
     'sword': { name: 'Sword', group: 'SwSh', gen: 8, region: 'Galar', type: 'Original' },
     'shield': { name: 'Shield', group: 'SwSh', gen: 8, region: 'Galar', type: 'Original' },
     'isle-of-armor': { name: 'Isle of Armor', group: 'SwSh', gen: 8, region: 'Galar', type: 'Enhanced' },
@@ -104,7 +105,7 @@ const VERSION_METADATA: Record<string, { name: string; group: string; gen: numbe
     'brilliant-diamond': { name: 'Brilliant Diamond', group: 'BDSP', gen: 8, region: 'Sinnoh', type: 'Remake' },
     'shining-pearl': { name: 'Shining Pearl', group: 'BDSP', gen: 8, region: 'Sinnoh', type: 'Remake' },
     'legends-arceus': { name: 'Legends: Arceus', group: 'PLA', gen: 8, region: 'Hisui', type: 'Spin-off' },
-    // GEN 9
+    // GEN 9 (DLCs corregidos sin 'the-')
     'scarlet': { name: 'Scarlet', group: 'SV', gen: 9, region: 'Paldea', type: 'Original' },
     'violet': { name: 'Violet', group: 'SV', gen: 9, region: 'Paldea', type: 'Original' },
     'teal-mask': { name: 'Teal Mask', group: 'SV', gen: 9, region: 'Kitakami', type: 'Enhanced' },
@@ -197,8 +198,28 @@ const processEvolutionChain = (chainNode: any, lang: Lang): IEvolutionNode => {
   };
 };
 
+// --- NUEVO: FETCHER INDIVIDUAL PARA MOVIMIENTOS ---
+export const fetchMoveDetail = async (url: string): Promise<IMoveDetail> => {
+  const res = await fetch(url);
+  const data = await res.json();
+  
+  return {
+      id: data.id,
+      name: data.name,
+      names: data.names, // <--- PASAMOS LOS NOMBRES LOCALIZADOS
+      accuracy: data.accuracy,
+      power: data.power,
+      pp: data.pp,
+      priority: data.priority,
+      type: data.type.name,
+      damage_class: data.damage_class.name,
+      flavor_text_entries: data.flavor_text_entries,
+      target: data.target.name,
+      machines: data.machines
+  };
+};
+
 const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPokemon> => {
-  console.log(`[PokeAPI] Fetching FULL data for ID: ${id}`);
   const pokemonRes = await fetch(`${POKEAPI_BASE}/pokemon/${id}`);
   if (!pokemonRes.ok) throw new Error('Pokemon not found');
   const pokemonData = await pokemonRes.json();
@@ -251,6 +272,7 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     max: 255, 
   }));
 
+  // ASSETS
   const other = pokemonData.sprites.other;
   const official = other?.['official-artwork'];
   
@@ -286,25 +308,23 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     } catch (e) { console.error("Evo error", e); }
   }
 
-  // --- LOCATION LOGIC WITH DEBUG ---
+  // --- LOCATION LOGIC BLINDADA (GEN 8/9/ORAS FIX) ---
   let locations: ILocationEncounter[] = [];
   try {
     const locRes = await fetch(`${POKEAPI_BASE}/pokemon/${id}/encounters`);
     const locData = await locRes.json();
     
-    console.log(`[DEBUG_LOC] ID: ${id} | Raw encounters count: ${locData?.length}`);
-
     if (Array.isArray(locData)) {
         locData.forEach((area: any) => {
             area.version_details.forEach((ver: any) => {
                 const verNameRaw = ver.version.name;
                 const verName = verNameRaw.toLowerCase().trim();
                 
+                // 1. Intentamos obtener metadatos del mapa conocido
                 let meta = VERSION_METADATA[verName];
                 
+                // 2. FALLBACK CRÍTICO: Si la versión no está en nuestro mapa, la capturamos dinámicamente
                 if (!meta) {
-                    console.warn(`[DEBUG_LOC] MISSING METADATA for: ${verName}. Fallback applied.`);
-                    // Infer group based on name
                     let guessedGen = 99;
                     let guessedGroup = 'Others';
                     
@@ -321,13 +341,10 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
                     };
                 }
 
-                // DEBUG: Check details existence
+                // 3. PROTECCIÓN: Verificar que encounter_details existe y no está vacío
                 const details = ver.encounter_details && ver.encounter_details.length > 0 ? ver.encounter_details[0] : null;
                 
-                if (!details) {
-                    console.error(`[DEBUG_LOC] EMPTY DETAILS for: ${verName} in ${area.location_area.name}`);
-                    return; 
-                }
+                if (!details) return; // Saltamos este registro si está corrupto, sin romper el loop
 
                 const conditions = details.condition_values?.map((c: any) => c.name) || [];
                 let cleanLoc = area.location_area.name.replace(/-/g, ' ');
@@ -348,11 +365,7 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
             });
         });
     }
-  } catch (e) { 
-      console.error("[DEBUG_LOC] CRITICAL ERROR:", e); 
-  }
-  
-  console.log(`[DEBUG_LOC] Final locations count: ${locations.length}`);
+  } catch (e) { console.error("Loc error", e); }
 
   return {
     id: pokemonData.id,
@@ -371,7 +384,19 @@ const fetchPokemon = async (id: string | number, lang: Lang = 'es'): Promise<IPo
     varieties,
     dexIds,
     evolutionChain,
-    locations
+    locations,
+    moves: pokemonData.moves // <--- ARRAY CRUDO PARA MOVE REGISTRY
+  };
+};
+
+// --- NUEVO: FETCHER PARA MÁQUINAS (TMs) ---
+export const fetchMachineDetail = async (url: string): Promise<IMachineDetail> => {
+  const res = await fetch(url);
+  const data = await res.json();
+  return {
+      id: data.id,
+      item: data.item,
+      version_group: data.version_group
   };
 };
 
@@ -400,6 +425,25 @@ export const usePokemon = (id: string | number, lang: Lang = 'es') => {
   }, [query.data, queryClient, id, lang]);
 
   return query;
+};
+
+// --- NUEVO HOOK PARA DETALLE DE MOVIMIENTOS ---
+export const useMoveDetail = (url: string) => {
+    return useQuery({
+        queryKey: ['move', url],
+        queryFn: () => fetchMoveDetail(url),
+        staleTime: 1000 * 60 * 60 * 24, 
+        enabled: !!url
+    });
+};
+
+export const useMachine = (url?: string) => {
+  return useQuery({
+      queryKey: ['machine', url],
+      queryFn: () => fetchMachineDetail(url!),
+      staleTime: 1000 * 60 * 60 * 24,
+      enabled: !!url
+  });
 };
 
 export const usePokedexEntries = (context: string) => {

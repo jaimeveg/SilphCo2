@@ -1,15 +1,13 @@
+// src/components/pokedex/DetailDeck.tsx
 'use client';
 
 import { useState } from 'react';
 import TabNavigator, { TabOption } from './navigation/TabNavigator';
 import { IPokemon } from '@/types/interfaces';
 import { Lang } from '@/lib/pokedexDictionary';
-
-// IMPORTACIÓN CORREGIDA: Default import para el componente real
-import ViewportData from './viewports/ViewportData'; 
-
-// Placeholders para las pestañas futuras
-import { ViewportMoves, ViewportPVP, ViewportNuzlocke } from './viewports/Placeholders';
+import ViewportData from './viewports/ViewportData';
+import MoveRegistry from './viewports/MoveRegistry'; // <--- IMPORTAR
+import { ViewportPVP, ViewportNuzlocke } from './viewports/Placeholders';
 
 interface Props {
   pokemon: IPokemon;
@@ -21,11 +19,8 @@ export default function DetailDeck({ pokemon, lang }: Props) {
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'DATA': 
-        // Renderizamos el componente REAL con los datos y el idioma
-        return <ViewportData pokemon={pokemon} lang={lang} />;
-      
-      case 'MOVES': return <ViewportMoves />;
+      case 'DATA': return <ViewportData pokemon={pokemon} lang={lang} />;
+      case 'MOVES': return <MoveRegistry moves={pokemon.moves} lang={lang} />; // <--- CONECTAR
       case 'PVP': return <ViewportPVP />;
       case 'NUZLOCKE': return <ViewportNuzlocke />;
       default: return <ViewportData pokemon={pokemon} lang={lang} />;

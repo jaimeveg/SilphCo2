@@ -25,24 +25,78 @@ export interface IPokemonAssets {
   femaleShiny?: string;
 }
 
-export interface IPokemon {
-  id: number;
-  speciesId: number;
+// --- NUEVAS INTERFACES PARA MOVE REGISTRY (VIEWPORT C) ---
+export interface IMoveLearnMethod {
   name: string;
-  speciesName: string;
-  types: string[];
-  sprite: string;
-  assets: IPokemonAssets;
-  genderRate: number;
-  stats: IStat[];
-  height: number;
-  weight: number;
-  abilities: IAbility[];
-  generation: string;
-  varieties: IVariety[];
-  dexIds: Record<string, number>;
-  evolutionChain?: IEvolutionNode;
-  locations?: ILocationEncounter[];
+  url: string;
+}
+
+export interface IMoveVersionGroupDetail {
+  level_learned_at: number;
+  move_learn_method: IMoveLearnMethod;
+  version_group: {
+      name: string;
+      url: string;
+  };
+}
+
+export interface IPokemonMove {
+  move: {
+      name: string;
+      url: string;
+  };
+  version_group_details: IMoveVersionGroupDetail[];
+}
+
+export interface IMachineDetail {
+  id: number;
+  item: {
+      name: string;
+      url: string;
+  };
+  version_group: {
+      name: string;
+  };
+}
+
+export interface IMoveDetail {
+  id: number;
+  name: string; // Internal name (kebab-case)
+  names: {      // <--- NUEVO: Nombres localizados
+      name: string;
+      language: { name: string };
+  }[];
+  accuracy: number | null;
+  power: number | null;
+  pp: number;
+  priority: number;
+  type: string;
+  damage_class: string;
+  flavor_text_entries: { 
+      flavor_text: string; 
+      language: { name: string }; 
+      version_group: { name: string };
+  }[];
+  target: string;
+  machines?: {
+      machine: { url: string };
+      version_group: { name: string };
+  }[];
+}
+
+// --- INTERFACES PARA LOCALIZACIÓN (VIEWPORT B) ---
+export interface ILocationEncounter {
+  region: string;       
+  version: string;      
+  versionGroup: string;
+  generation: number;
+  gameType: 'Original' | 'Remake' | 'Enhanced' | 'Spin-off';
+  locationName: string;
+  method: string;
+  chance: number;
+  minLevel: number;
+  maxLevel: number;
+  conditions: string[];
 }
 
 export interface IEvolutionDetail {
@@ -80,21 +134,28 @@ export interface IEvolutionNode {
   variantId?: number;
 }
 
-// --- ACTUALIZACIÓN ESTRUCTURAL DE LOCALIZACIÓN ---
-export interface ILocationEncounter {
-  region: string;       
-  version: string;      
-  versionGroup: string; // <--- NUEVO
-  generation: number;   // <--- NUEVO
-  gameType: 'Original' | 'Remake' | 'Enhanced' | 'Spin-off'; // <--- NUEVO
-  locationName: string;
-  method: string;
-  chance: number;
-  minLevel: number;
-  maxLevel: number;
-  conditions: string[];
+export interface IPokemon {
+  id: number;
+  speciesId: number;
+  name: string;
+  speciesName: string;
+  types: string[];
+  sprite: string;
+  assets: IPokemonAssets;
+  genderRate: number;
+  stats: IStat[];
+  height: number;
+  weight: number;
+  abilities: IAbility[];
+  generation: string;
+  varieties: IVariety[];
+  dexIds: Record<string, number>;
+  evolutionChain?: IEvolutionNode;
+  locations?: ILocationEncounter[];
+  moves: IPokemonMove[]; // Array crudo de movimientos
 }
 
+// Interfaces adicionales (Competitivo/Nuzlocke) se mantienen igual
 export interface ICompetitiveData {
   format: 'Smogon' | 'VGC_Reg_G' | 'VGC_Reg_H';
   smogonTier?: 'OU' | 'UU' | 'RU' | 'NU' | 'PU' | 'Uber' | 'AG';

@@ -44,6 +44,19 @@ export const POKEDEX_DICTIONARY = {
       variant_select: "MÉTODO:",
       unavailable: "NO DISPONIBLE",
 
+      moves_title: "REGISTRO DE MOVIMIENTOS",
+      filter_type: "Filtrar Tipo",
+      show_all: "MOSTRAR TODOS",
+      no_data_selection: "SIN DATOS PARA ESTA SELECCIÓN",
+      syncing_db: "SINCRONIZANDO BBDD...",
+      
+      // Métodos
+      method_level: "NIVEL",
+      method_tm: "MT/MO",
+      method_egg: "HUEVO",
+      method_tutor: "TUTOR",
+      method_all: "TODO",
+
       evo_methods: {
         level: "Nivel",
         trade: "Intercambio",
@@ -253,6 +266,19 @@ export const POKEDEX_DICTIONARY = {
       prev_evo: "PREV",
       variant_select: "METHOD:",
       unavailable: "NOT AVAILABLE",
+      // --- MOVE REGISTRY ---
+      moves_title: "MOVE REGISTRY",
+      filter_type: "Filter Type",
+      show_all: "SHOW ALL",
+      no_data_selection: "NO DATA FOR SELECTION",
+      syncing_db: "SYNCING DATABASE...",
+
+      // Methods
+      method_level: "LEVEL",
+      method_tm: "TM/HM",
+      method_egg: "EGG",
+      method_tutor: "TUTOR",
+      method_all: "ALL",
 
       evo_methods: {
         level: "Level",
