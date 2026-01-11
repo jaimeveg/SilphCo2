@@ -1,4 +1,4 @@
-// src/lib/pokedexDictionary.ts
+// src/lib/pokedexDictionary.ts 
 
 export type Lang = 'es' | 'en';
 

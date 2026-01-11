@@ -1,4 +1,4 @@
-// src/types/interfaces.ts
+// src/types/interfaces.ts 
 
 export interface IStat {
   label: string;

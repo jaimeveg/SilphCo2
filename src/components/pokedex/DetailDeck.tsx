@@ -1,4 +1,4 @@
-// src/components/pokedex/DetailDeck.tsx
+// src/components/pokedex/DetailDeck.tsx 
 'use client';
 
 import { useState } from 'react';

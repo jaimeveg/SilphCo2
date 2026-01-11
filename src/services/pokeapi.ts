@@ -8,7 +8,7 @@ import { IMoveDetail, IMachineDetail } from '@/types/interfaces';
 const POKEAPI_BASE = 'https://pokeapi.co/api/v2';
 const FALLBACK_SPRITE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png';
 
-// --- CONFIGURACIÓN DE CONTEXTOS ---
+// --- CONFIGURACIÓN DE CONTEXTOS --- 
 const DEX_MAP: Record<string, string> = {
   'national': 'NATIONAL', 'kanto': 'KANTO', 'original-johto': 'JOHTO', 'updated-johto': 'JOHTO',
   'hoenn': 'HOENN', 'updated-hoenn': 'HOENN', 'original-sinnoh': 'SINNOH', 'extended-sinnoh': 'SINNOH',

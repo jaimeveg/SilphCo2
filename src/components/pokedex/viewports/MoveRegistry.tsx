@@ -10,7 +10,7 @@ import TypeBadge from '@/components/ui/TypeBadge';
 import { cn } from '@/lib/utils';
 
 // --- DICCIONARIO DE GRUPOS DE JUEGO (VERSION GROUPS) ---
-// Mapea los identificadores de grupo de PokeAPI a nombres comerciales
+// Mapea los identificadores de grupo de PokeAPI a nombres comerciales 
 const GAME_NAMES: Record<string, { es: string, en: string }> = {
     // GEN 1
     'red-blue': { es: 'Rojo / Azul', en: 'Red / Blue' },
