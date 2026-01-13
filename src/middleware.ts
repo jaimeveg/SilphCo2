@@ -23,6 +23,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   // Matcher optimizado para ignorar estáticos
   matcher: [
-    '/((?!_next/static|_next/image|images|img|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!api|_next/static|_next/image|images|img|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };

@@ -30,7 +30,9 @@ const CONTEXT_TO_DEX_IDS: Record<string, number[]> = {
 };
 
 const STAT_LABELS: Record<string, string> = { 'hp': 'HP', 'attack': 'ATK', 'defense': 'DEF', 'special-attack': 'SPA', 'special-defense': 'SPD', 'speed': 'SPE' };
-const ROMAN_GEN_MAP: Record<string, string> = { 'generation-i': 'I', 'generation-ii': 'II', 'generation-iii': 'III', 'generation-iv': 'IV', 'generation-v': 'V', 'generation-vi': 'VI', 'generation-vii': 'VII', 'generation-viii': 'VIII', 'generation-ix': 'IX' };
+const ROMAN_GEN_MAP: Record<string, string> = { 'generation-i': 'I', 'generation-ii': 'II', 'generation-iii': 'III', 'generation-iv': 'IV', 'generation-v': 'V', 'generation-vi': 'VI', 'generation-vii': 'VII', 'generation-viii': 'VIII', 'generation-ix': 'IX',
+'generation-x': 'X','generation-xi': 'XI','generation-xii': 'XII','generation-xiii': 'XIII','generation-xiv': 'XIV','generation-xv': 'XV','generation-xvi': 'XVI','generation-xvii': 'XVII','generation-xviii': 'XVIII','generation-xix': 'XIX','generation-xx': 'XX',
+'generation-xxi': 'XXI','generation-xxii': 'XXII', 'generation-xxiii': 'XXIII', 'generation-xxiv': 'XXIV', 'generation-xxv': 'XXV' };
 
 const FORM_TRANSLATIONS: Record<string, { es: string, en: string }> = {
   'mega': { es: 'Mega', en: 'Mega' }, 'mega-x': { es: 'Mega X', en: 'Mega X' }, 'mega-y': { es: 'Mega Y', en: 'Mega Y' },
