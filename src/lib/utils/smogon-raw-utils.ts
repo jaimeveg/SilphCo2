@@ -133,6 +133,7 @@ export const parseChaosFilename = (filename: string): SmogonFormatParser | null 
     let formatName = baseName.replace(gen, '');
     let regulation = '-';
 
+    // 1. Detección VGC (Prioridad alta)
     if (formatName.includes('vgc')) {
         mode = 'doubles';
         const vgcMatch = formatName.match(/vgc(\d{4})(?:reg([a-z0-9]+))?/i);
@@ -145,13 +146,21 @@ export const parseChaosFilename = (filename: string): SmogonFormatParser | null 
             formatName = 'VGC (Legacy)';
         }
     } 
-    else if (formatName.startsWith('doubles')) {
+    // 2. Detección Doubles Genérica (Mejorada para National Dex Doubles)
+    else if (formatName.toLowerCase().includes('doubles')) {
         mode = 'doubles';
-        formatName = formatName.replace('doubles', '').toUpperCase() || 'Doubles OU';
-        if (formatName === 'OU') formatName = 'Doubles OU';
+        // Quitamos la palabra doubles para limpiar el nombre
+        formatName = formatName.replace('doubles', '').toUpperCase();
+        if (formatName === '' || formatName === 'OU') formatName = 'Doubles OU';
+        // Casos como "NATIONALDEX" -> "NATIONAL DEX"
+        if (formatName === 'NATIONALDEX') formatName = 'National Dex';
     }
+    // 3. Singles Standard
     else {
         formatName = formatName.toUpperCase();
+        // Mapeos estéticos comunes
+        if (formatName === 'NATIONALDEX') formatName = 'National Dex';
+        if (formatName === 'MONOTYPE') formatName = 'Monotype';
     }
 
     return { id: cleanName, gen, mode, formatName, regulation, elo };

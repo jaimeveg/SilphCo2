@@ -456,3 +456,32 @@ export const usePokedexEntries = (context: string) => {
     staleTime: 1000 * 60 * 60 * 24,
   });
 };
+
+export const fetchNationalDexLookup = async (): Promise<Record<string, number>> => {
+    try {
+        const res = await fetch(`${POKEAPI_BASE}/pokedex/1`); // 1 = National Dex
+        const data = await res.json();
+        
+        const lookup: Record<string, number> = {};
+        
+        data.pokemon_entries.forEach((entry: any) => {
+            const speciesName = entry.pokemon_species.name;
+            const urlParts = entry.pokemon_species.url.split('/');
+            const id = parseInt(urlParts[urlParts.length - 2]);
+            lookup[speciesName] = id;
+        });
+
+        return lookup;
+    } catch (e) {
+        console.error("Error fetching national dex lookup:", e);
+        return {};
+    }
+};
+
+export const useNationalDexLookup = () => {
+    return useQuery({
+        queryKey: ['nationalDexLookup'],
+        queryFn: fetchNationalDexLookup,
+        staleTime: 1000 * 60 * 60 * 24, // Cachear 24h
+    });
+};
