@@ -34,17 +34,41 @@ export async function GET(request: Request) {
 
         const rawMon = chaosData.data[realKey];
         
-        // --- USAGE RATE ---
+        // --- CÁLCULOS ESTADÍSTICOS REFINADOS ---
+        
+        // 1. BASE DE CÁLCULO (DENOMINADOR)
+        // Usamos la suma de habilidades como "Presencia Ponderada Total" del Pokémon.
+        // Esto es mucho más preciso que 'Raw count' cuando estamos en High ELO (1500+).
+        const abilities = rawMon.Abilities || {};
+        const totalPresence = Object.values(abilities).reduce((a: any, b: any) => a + b, 0) as number;
+
+        // 2. USAGE RATE GLOBAL (Con Fallbacks Inteligentes)
         const totalBattles = chaosData.info?.['number of battles'] || 0;
-        const pkmCount = rawMon['Raw count'] || 0;
+        const totalTeams = totalBattles * 2; 
+        
         let usageRate = 0;
-        if (rawMon['Usage %']) {
+
+        // A. Intento Directo (Key oficial)
+        if (rawMon['Usage %'] !== undefined) {
             usageRate = rawMon['Usage %'] * 100;
-        } else if (totalBattles > 0) {
-            usageRate = (pkmCount / totalBattles) * 100;
+        } 
+        // B. Intento Key alternativa (A veces pasa en dumps antiguos)
+        else if (rawMon['usage'] !== undefined) {
+            usageRate = rawMon['usage'] * 100;
+        }
+        // C. Cálculo Ponderado (Mejor que Raw)
+        // Usamos totalPresence en lugar de RawCount para acercarnos al % oficial de Pikalytics
+        else if (totalTeams > 0) {
+            usageRate = (totalPresence / totalTeams) * 100;
         }
 
-        const toPercent = (val: number) => ((val / pkmCount) * 100).toFixed(2);
+        // --- HELPERS DE MAPEO ---
+        
+        // El porcentaje de moves/items es relativo a la presencia del propio Pokémon
+        const toPercent = (val: number) => {
+            if (totalPresence <= 0) return "0.00";
+            return ((val / totalPresence) * 100).toFixed(2);
+        };
         
         const processMap = (map: any, limit = 10) => Object.entries(map || {})
             .sort(([, a], [, b]) => (b as number) - (a as number))
@@ -56,42 +80,30 @@ export async function GET(request: Request) {
                 slug: toSlug(k) 
             }));
 
-        // --- FIX COUNTERS (NaN) ---
-        // Smogon Chaos returns [n, p, d] arrays usually. p is the "score" (0-1).
         const processCounters = (countersMap: any) => {
             return Object.entries(countersMap || {})
                 .map(([name, data]: [string, any]) => {
                     let numericScore = 0;
-                    
-                    if (Array.isArray(data)) {
-                        // Formato Array: [count, probability, deviation]
-                        // probability (index 1) es el score (0.85 = 85%)
-                        numericScore = data[1] || 0;
-                    } else if (typeof data === 'object' && data !== null) {
-                        // Formato Objeto Legacy: { score: 0.85 } o { p: 0.85 }
-                        numericScore = data.score || data.p || 0;
-                    }
-
+                    if (Array.isArray(data)) numericScore = data[1] || 0;
+                    else if (typeof data === 'object' && data !== null) numericScore = data.score || data.p || 0;
                     return { name, rawScore: numericScore };
                 })
-                .sort((a, b) => b.rawScore - a.rawScore) // Ordenar por score real
-                .slice(0, 10) // Top 10 counters
+                .sort((a, b) => b.rawScore - a.rawScore)
+                .slice(0, 10)
                 .map(c => ({
                     name: c.name,
-                    score: (c.rawScore * 100).toFixed(2), // Convertir 0.85 -> "85.00"
+                    score: (c.rawScore * 100).toFixed(2),
                     slug: toSlug(c.name)
                 }));
         };
 
-        // --- FIX TERAS (Missing) ---
-        // A veces es "Tera Types", a veces "TeraTypes"
         const teraData = rawMon['Tera Types'] || rawMon.TeraTypes || {};
 
         const response = {
-            meta: { pokemon: realKey, format: fileId, gen: 9 }, // Simplified gen
+            meta: { pokemon: realKey, format: fileId, gen: 9 },
             general: {
-                usage: usageRate.toFixed(2),
-                rawCount: pkmCount
+                usage: usageRate.toFixed(2), // Formateo final
+                rawCount: rawMon['Raw count']
             },
             stats: {
                 moves: processMap(rawMon.Moves),

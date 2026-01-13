@@ -1,93 +1,102 @@
 // src/lib/utils/pokemon-normalizer.ts
 
 /**
- * UTILS: Pokemon Name Normalizer & Sprite Resolver
- * Centraliza la lógica para convertir nombres de Smogon/Showdown a:
- * 1. Slugs compatibles con URLs.
- * 2. URLs de imágenes estilo "HOME".
+ * DICCIONARIO DE TRADUCCIÓN: POKEAPI -> SMOGON
+ * Mapea los slugs técnicos de PokeAPI a los keys usados en los JSON de Smogon.
  */
+const SMOGON_OVERRIDES: Record<string, string> = {
+    // --- GÉNEROS ---
+    'indeedee-male': 'indeedee',
+    'indeedee-female': 'indeedee-f',
+    'basculegion-male': 'basculegion',
+    'basculegion-female': 'basculegion-f',
+    'meowstic-male': 'meowstic',
+    'meowstic-female': 'meowstic-f',
+    'oinkologne-male': 'oinkologne',
+    'oinkologne-female': 'oinkologne-f',
+    'jellicent-male': 'jellicent',
+    'jellicent-female': 'jellicent-f',
+    'frillish-male': 'frillish',
+    'frillish-female': 'frillish-f',
+    'pyroar-male': 'pyroar',
+    'pyroar-female': 'pyroar-f',
 
-// Diccionario de Excepciones (Smogon Human-Readable -> API Slug)
-const EXCEPTION_MAP: Record<string, string> = {
-    // Formas Regionales y Variantes
-    'nidoranm': 'nidoran-m',
-    'nidoranf': 'nidoran-f',
-    'mr. mime': 'mr-mime',
-    'mr. rime': 'mr-rime',
-    'farfetch’d': 'farfetchd',
-    'sirfetch’d': 'sirfetchd',
-    'type: null': 'type-null',
+    // --- FORMAS BASE Y VARIANTES ---
+    // Urshifu
+    'urshifu-single-strike': 'urshifu', 
     
-    // Tapus
-    'tapu koko': 'tapu-koko',
-    'tapu lele': 'tapu-lele',
-    'tapu bulu': 'tapu-bulu',
-    'tapu fini': 'tapu-fini',
+    // OGERPON (Corrección -mask)
+    'ogerpon-teal-mask': 'ogerpon',
+    'ogerpon-wellspring-mask': 'ogerpon-wellspring',
+    'ogerpon-hearthflame-mask': 'ogerpon-hearthflame',
+    'ogerpon-cornerstone-mask': 'ogerpon-cornerstone',
+    // Por si acaso viene sin mask pero con teal
+    'ogerpon-teal': 'ogerpon',
+
+    // Toxtricity
+    'toxtricity-amped': 'toxtricity',
+
+    // Lycanroc
+    'lycanroc-midday': 'lycanroc',
+
+    // Oriocorio
+    'oriocorio-baile': 'oriocorio',
+
+    // Otros
+    'mimikyu-disguised': 'mimikyu',
+    'eiscue-ice': 'eiscue',
+    'morpeko-full-belly': 'morpeko',
+    'wishiwashi-solo': 'wishiwashi',
+    'aegislash-shield': 'aegislash',
+    'minior-red-meteor': 'minior',
+    'palafin-zero': 'palafin',
+    'darmanitan-standard': 'darmanitan',
+    'darmanitan-galar-standard': 'darmanitan-galar',
+    'gourgeist-average': 'gourgeist',
+    'pumpkaboo-average': 'pumpkaboo',
+    'keldeo-ordinary': 'keldeo',
+    'meloetta-aria': 'meloetta',
+    'shaymin-land': 'shaymin',
+    'tornadus-incarnate': 'tornadus',
+    'thundurus-incarnate': 'thundurus',
+    'landorus-incarnate': 'landorus',
+    'enamorus-incarnate': 'enamorus',
+    'giratina-altered': 'giratina',
+    'dialga-pressure': 'dialga',
+    'palkia-pressure': 'palkia',
+    'basculin-red-striped': 'basculin',
+    'basculin-blue-striped': 'basculin', // Smogon agrupa, PokeAPI separa
+    'basculin-white-striped': 'basculin-white-striped', // Hisui sí tiene stats propios a veces
+};
+
+export const toSlug = (name: string): string => {
+    if (!name) return '';
+
+    // 1. Limpieza estándar
+    let slug = name.toLowerCase().trim()
+        .replace(/['’\.]/g, '') 
+        .replace(/[:]/g, '')    
+        .replace(/[^a-z0-9\s-]/g, '') 
+        .replace(/\s+/g, '-');
+
+    // 2. Diccionario Explícito (Prioridad Máxima)
+    if (SMOGON_OVERRIDES[slug]) {
+        return SMOGON_OVERRIDES[slug];
+    }
+
+    // 3. Reglas Generales de Sufijos
+    if (slug.endsWith('-male')) return slug.replace('-male', '');
+    if (slug.endsWith('-female')) return slug.replace('-female', '-f');
+    if (slug.endsWith('-incarnate')) return slug.replace('-incarnate', '');
+    if (slug.endsWith('-normal')) return slug.replace('-normal', '');
+    if (slug.endsWith('-standard')) return slug.replace('-standard', '');
+    if (slug.endsWith('-original')) return slug.replace('-original', '');
     
-    // Paradox (Gen 9)
-    'great tusk': 'great-tusk',
-    'scream tail': 'scream-tail',
-    'brute bonnet': 'brute-bonnet',
-    'flutter mane': 'flutter-mane',
-    'slither wing': 'slither-wing',
-    'sandy shocks': 'sandy-shocks',
-    'roaring moon': 'roaring-moon',
-    'iron treads': 'iron-treads',
-    'iron bundle': 'iron-bundle',
-    'iron hands': 'iron-hands',
-    'iron jugulis': 'iron-jugulis',
-    'iron moth': 'iron-moth',
-    'iron thorns': 'iron-thorns',
-    'iron valiant': 'iron-valiant',
-    'walking wake': 'walking-wake',
-    'iron leaves': 'iron-leaves',
-    'gouging fire': 'gouging-fire',
-    'raging bolt': 'raging-bolt',
-    'iron boulder': 'iron-boulder',
-    'iron crown': 'iron-crown',
-    
-    // Legendarios Gen 9
-    'wo-chien': 'wo-chien',
-    'chien-pao': 'chien-pao',
-    'ting-lu': 'ting-lu',
-    'chi-yu': 'chi-yu',
-    
-    // Otras formas
-    'urshifu-rapid-strike': 'urshifu-rapid-strike',
-    'necrozma-dusk-mane': 'necrozma-dusk',
-    'necrozma-dawn-wings': 'necrozma-dawn',
-    'calyrex-ice': 'calyrex-ice',
-    'calyrex-shadow': 'calyrex-shadow',
-    'basculegion-f': 'basculegion-female'
-  };
-  
-  export const toSlug = (name: string): string => {
-    if (!name) return 'substitute';
-    const lower = name.toLowerCase().trim();
-  
-    // 1. Chequeo directo en excepciones
-    if (EXCEPTION_MAP[lower]) return EXCEPTION_MAP[lower];
-  
-    // 2. Limpieza estándar
-    return lower
-      .replace(/['’\.]/g, '') // Quita apóstrofes y puntos
-      .replace(/[:]/g, '')    // Quita dos puntos
-      .replace(/%/g, '')      // Quita porcentajes (raro pero posible)
-      .replace(/\s+/g, '-');  // Espacios a guiones
-  };
-  
-  /**
-   * Obtiene la URL del Sprite estilo HOME.
-   * - Si recibe NUMBER: Usa el repo oficial de PokeAPI (SSOT).
-   * - Si recibe STRING: Usa PokemonDB como fallback visual (mismo estilo 3D) para teammates sin ID.
-   */
-  export const getSpriteUrl = (identifier: string | number) => {
-      // ESTRATEGIA A: Tenemos el ID (Prioridad Absoluta - PokeAPI)
-      if (typeof identifier === 'number') {
-          return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${identifier}.png`;
-      }
-  
-      // ESTRATEGIA B: Solo tenemos nombre (Teammates de Smogon) -> Fallback Visual
-      const slug = toSlug(identifier);
-      return `https://img.pokemondb.net/sprites/home/normal/${slug}.png`;
-  };
+    // Regla extra de seguridad para máscaras si no entraron en el diccionario
+    if (slug.startsWith('ogerpon') && slug.endsWith('-mask')) {
+        const withoutMask = slug.replace('-mask', '');
+        return withoutMask === 'ogerpon-teal' ? 'ogerpon' : withoutMask;
+    }
+
+    return slug;
+};
