@@ -220,9 +220,9 @@ export const determineRoles = (
     if (clericUsage > 15) addScore(ROLE_KEYS.SUPPORTIVE.CLERIC, 25);
 
     // Weather/Terrain
-    const weatherAbil = getAbilityUsage(['drizzle', 'drought', 'snowwarning', 'sandstream']);
+    const weatherAbil = getAbilityUsage(['drizzle', 'drought', 'snowwarning', 'sandstream', 'orichalcumpulse']);
     if (weatherAbil > 40) addScore(ROLE_KEYS.SUPPORTIVE.WEATHER, 30);
-    const terrainAbil = getAbilityUsage(['electricsurge', 'grassysurge', 'mistysurge', 'psychicsurge']);
+    const terrainAbil = getAbilityUsage(['electricsurge', 'grassysurge', 'mistysurge', 'psychicsurge', 'hadronengine']);
     if (terrainAbil > 40) addScore(ROLE_KEYS.SUPPORTIVE.TERRAIN, 30);
 
     // PIVOT (Movimiento + Intención)
