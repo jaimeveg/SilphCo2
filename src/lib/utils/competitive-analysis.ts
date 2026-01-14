@@ -217,7 +217,7 @@ export const determineRoles = (
 
     // CLERIC
     const clericUsage = getGroupUsage(['healpulse', 'aromatherapy', 'wish', 'lunardance', 'pollenpuff', 'lifedew', 'junglehealing']);
-    if (clericUsage > 15) addScore(ROLE_KEYS.SUPPORTIVE.CLERIC, 25);
+    if (clericUsage > 20) addScore(ROLE_KEYS.SUPPORTIVE.CLERIC, 25);
 
     // Weather/Terrain
     const weatherAbil = getAbilityUsage(['drizzle', 'drought', 'snowwarning', 'sandstream', 'orichalcumpulse']);
