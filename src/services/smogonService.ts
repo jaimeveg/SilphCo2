@@ -1,5 +1,5 @@
 // src/services/smogonService.ts
-import { CompetitiveResponse } from '@/components/pokedex/viewports/CompetitiveDashboard';
+import { CompetitiveResponse } from '@/components/pokedex/viewports/competitive/CompetitiveDashboard';
 
 // --- TIPOS DEL ÁRBOL SMOGON (CHAOS) ---
 export interface EloOption {

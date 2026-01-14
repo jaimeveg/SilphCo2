@@ -50,15 +50,18 @@ export async function GET(request: Request) {
 
         // A. Intento Directo (Key oficial)
         if (rawMon['Usage %'] !== undefined) {
+            console.log("Usa Usage%");
             usageRate = rawMon['Usage %'] * 100;
         } 
         // B. Intento Key alternativa (A veces pasa en dumps antiguos)
         else if (rawMon['usage'] !== undefined) {
+            console.log("Usa usage");
             usageRate = rawMon['usage'] * 100;
         }
         // C. Cálculo Ponderado (Mejor que Raw)
         // Usamos totalPresence en lugar de RawCount para acercarnos al % oficial de Pikalytics
         else if (totalTeams > 0) {
+            console.log("Usa cálculo");
             usageRate = (totalPresence / totalTeams) * 100;
         }
 

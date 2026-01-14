@@ -6,7 +6,7 @@ import { IPokemon } from '@/types/interfaces';
 import { Lang } from '@/lib/pokedexDictionary';
 import ViewportData from './viewports/ViewportData';
 import MoveRegistry from './viewports/MoveRegistry'; 
-import CompetitiveDashboard from './viewports/CompetitiveDashboard'; // <--- IMPORTAR
+import CompetitiveDashboard from './viewports/competitive/CompetitiveDashboard'; // <--- IMPORTAR
 import { ViewportNuzlocke } from './viewports/Placeholders';
 
 interface Props {
