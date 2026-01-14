@@ -32,6 +32,9 @@ const SMOGON_OVERRIDES: Record<string, string> = {
     'ogerpon-cornerstone-mask': 'ogerpon-cornerstone',
     // Por si acaso viene sin mask pero con teal
     'ogerpon-teal': 'ogerpon',
+    'tatsugiri-curly': 'tatsugiri',
+    'tatsugiri-droopy': 'tatsugiri',
+    'tatsugiri-stretchy': 'tatsugiri',
 
     // Toxtricity
     'toxtricity-amped': 'toxtricity',
@@ -50,6 +53,7 @@ const SMOGON_OVERRIDES: Record<string, string> = {
     'aegislash-shield': 'aegislash',
     'minior-red-meteor': 'minior',
     'palafin-zero': 'palafin',
+    'palafin-hero': 'palafin',
     'darmanitan-standard': 'darmanitan',
     'darmanitan-galar-standard': 'darmanitan-galar',
     'gourgeist-average': 'gourgeist',

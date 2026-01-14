@@ -32,6 +32,12 @@ export interface CompetitiveResponse {
   matchups: {
     counters: Array<{ name: string; score: string; slug: string }>;
   };
+  speed?: {
+      tier: string;
+      percentile: number;
+      baseSpeed: number;
+      context: { en: string; es: string };
+  };
 }
 
 // --- HELPERS (SIN CAMBIOS) ---
@@ -177,8 +183,10 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         usageRate={data.general.usage} 
         topMoves={data.stats.moves} 
         topAbilities={data.stats.abilities}
-        // CAMBIO AQUÍ: Pasamos todos los spreads, no solo el primero
+        topItems={data.stats.items}
         spreads={data.stats.natureSpread} 
+        // NUEVA PROP: Pasamos los datos del servidor
+        speedData={data.speed} 
         lang={lang} 
     />
 )}

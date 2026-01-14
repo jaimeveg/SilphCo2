@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { IPokemon } from '@/types/interfaces';
 import { Lang } from '@/lib/pokedexDictionary';
-import { calculateSilphRank, calculateSpeedTier, determineRoles, ROLE_KEYS } from '@/lib/utils/competitive-analysis';
+import { calculateSilphRank, determineRoles, ROLE_KEYS } from '@/lib/utils/competitive-analysis';
 import { Timer, Zap, Shield, Swords, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+// --- DICCIONARIO ---
 const COMPETITIVE_TRANSLATIONS = {
     en: {
         rankTooltip: 'Based on usage for the selected format',
@@ -30,7 +31,6 @@ const COMPETITIVE_TRANSLATIONS = {
             [ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL]: { label: 'Phys. Wall', desc: 'Tanks physical hits extremely well.' },
             [ROLE_KEYS.DEFENSIVE.WALL_SPECIAL]: { label: 'Spec. Wall', desc: 'Tanks special hits extremely well.' },
             [ROLE_KEYS.DEFENSIVE.PIVOT]: { label: 'Pivot', desc: 'Switches frequently to maintain momentum and position.' },
-            // NUEVO ROL
             [ROLE_KEYS.DEFENSIVE.STALLER]: { label: 'Staller', desc: 'Wins by attrition using passive damage and high durability.' },
         }
     },
@@ -56,38 +56,50 @@ const COMPETITIVE_TRANSLATIONS = {
             [ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL]: { label: 'Muralla Física', desc: 'Tanquea golpes físicos extremadamente bien.' },
             [ROLE_KEYS.DEFENSIVE.WALL_SPECIAL]: { label: 'Muralla Esp.', desc: 'Tanquea golpes especiales extremadamente bien.' },
             [ROLE_KEYS.DEFENSIVE.PIVOT]: { label: 'Pivote', desc: 'Entra y sale del campo para mantener la posición.' },
-            // NUEVO ROL
             [ROLE_KEYS.DEFENSIVE.STALLER]: { label: 'Staller', desc: 'Gana por desgaste usando daño pasivo y alta durabilidad.' },
         }
     }
 };
+
+interface SpeedData {
+    tier: string;
+    percentile: number;
+    baseSpeed: number;
+    context: { en: string; es: string };
+}
 
 interface Props {
     pokemon: IPokemon;
     usageRate: string;
     topMoves: { name: string; value: number }[];
     topAbilities: { name: string; value: number }[];
-    spreads: { evs: Record<string, number>; nature: string }[]; // Array completo
+    topItems: {name: string, value: number}[];
+    spreads: { evs: Record<string, number>; nature: string }[];
+    speedData?: SpeedData; // NUEVA PROP OPCIONAL (Mientras migra todo)
     lang: Lang;
 }
 
-export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbilities, spreads, lang }: Props) {
+export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbilities, topItems, spreads, speedData, lang }: Props) {
     const t = COMPETITIVE_TRANSLATIONS[lang] || COMPETITIVE_TRANSLATIONS.en;
     const [tooltipData, setTooltipData] = useState<{ x: number, y: number, text: string } | null>(null);
 
     const usageNum = parseFloat(usageRate);
     const silphRank = calculateSilphRank(usageNum);
-    const baseSpeed = pokemon.stats[5].value; 
-    const speedAnalysis = calculateSpeedTier(baseSpeed);
     
-    // Pasamos el array de spreads
-    const roles = determineRoles(pokemon, topMoves, topAbilities, spreads);
+    // Roles Calculation (Local Logic preserved)
+    const roles = determineRoles(pokemon, topMoves, topAbilities, topItems, spreads);
+
+    // Speed Tier Display (Data-Driven from API)
+    // Si no viene speedData (ej: fallback), usamos valores por defecto
+    const tierDisplay = speedData?.tier || 'N/A';
+    const isTrickRoom = tierDisplay === 'TR';
+    const tierTooltip = speedData?.context?.[lang] || (lang === 'es' ? 'Datos de velocidad no disponibles' : 'No speed data available');
 
     const handleMouseEnter = (e: React.MouseEvent, text: string) => {
         const rect = e.currentTarget.getBoundingClientRect();
         setTooltipData({
             x: rect.left + (rect.width / 2),
-            y: rect.bottom + 8, // Un poco de margen
+            y: rect.bottom + 8, 
             text
         });
     };
@@ -144,23 +156,27 @@ export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbi
                     </div>
                 </div>
 
-                {/* 3. SPEED TIER */}
+                {/* 3. SPEED TIER (DINÁMICO CON TOOLTIP) */}
                 <div className="flex flex-col items-end gap-0.5">
-                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
+                    <span 
+                        className="text-[9px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5 cursor-help hover:text-cyan-400 transition-colors"
+                        onMouseEnter={(e) => handleMouseEnter(e, tierTooltip)}
+                        onMouseLeave={handleMouseLeave}
+                    >
                         Speed Tier <Timer size={10} />
                     </span>
                     <div className="flex items-center gap-2">
-                        {speedAnalysis.isTrickRoom && (
+                        {isTrickRoom && (
                             <span className="text-[8px] font-bold text-slate-500 bg-slate-900 border border-slate-800 px-1.5 py-0.5 rounded uppercase tracking-wider">
                                 TR
                             </span>
                         )}
-                        <span className="text-xl font-black text-cyan-100 font-display">{speedAnalysis.tier}</span>
+                        <span className="text-xl font-black text-cyan-100 font-display">{tierDisplay}</span>
                     </div>
                 </div>
             </div>
 
-            {/* FIXED TOOLTIP PORTAL (Superposes everything) */}
+            {/* FIXED TOOLTIP PORTAL */}
             {tooltipData && (
                 <div 
                     className="fixed z-[9999] bg-slate-800 text-slate-200 text-[10px] px-3 py-2 rounded shadow-2xl border border-slate-600 max-w-[220px] text-center pointer-events-none animate-in fade-in zoom-in-95 duration-150"
@@ -171,7 +187,6 @@ export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbi
                     }}
                 >
                     {tooltipData.text}
-                    {/* Flecha decorativa superior */}
                     <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-800 border-t border-l border-slate-600 rotate-45" />
                 </div>
             )}

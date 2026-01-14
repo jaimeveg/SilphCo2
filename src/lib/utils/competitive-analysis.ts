@@ -92,6 +92,7 @@ export const determineRoles = (
     pokemon: IPokemon, 
     movesUsage: UsageItem[], 
     abilitiesUsage: UsageItem[],
+    itemsUsage: UsageItem[],
     spreads: SpreadAnalysis[] = [] 
 ): string[] => {
     
@@ -103,6 +104,8 @@ export const determineRoles = (
     movesUsage.forEach(m => moveMap.set(m.name.toLowerCase().replace(/[\s-]/g, ''), m.value));
     const abilityMap = new Map<string, number>();
     abilitiesUsage.forEach(a => abilityMap.set(a.name.toLowerCase().replace(/[\s-]/g, ''), a.value));
+    const itemMap = new Map<string, number>();
+    itemsUsage.forEach(i => itemMap.set(i.name.toLowerCase().replace(/[\s-]/g, ''), i.value));
 
     const getGroupUsage = (keywords: string[]) => {
         let total = 0;
@@ -114,6 +117,11 @@ export const determineRoles = (
         keywords.forEach(k => total += abilityMap.get(k) || 0);
         return total;
     };
+    const getItemUsage = (keywords: string[]) => {
+        let total = 0;
+        keywords.forEach(k => total += itemMap.get(k) || 0);
+        return total;
+    };
 
     const hp = pokemon.stats[0].value;
     const atk = pokemon.stats[1].value;
@@ -121,6 +129,9 @@ export const determineRoles = (
     const spa = pokemon.stats[3].value;
     const spd = pokemon.stats[4].value;
     const spe = pokemon.stats[5].value;
+    //const name = pokemon.name;
+
+    const choiceItemUsage = getItemUsage(['choicescarf', 'choiceband', 'choicespecs'])
 
     // --- 2. EV SPREAD ANALYSIS (ALTA PRIORIDAD) ---
     const spreadsToAnalyze = spreads.slice(0, 3);
@@ -148,12 +159,13 @@ export const determineRoles = (
             addScore(ROLE_KEYS.SUPPORTIVE.TR_SETTER, -20 * weight);
         } 
         // B. TRICK ROOM ATTACKER (Corrección Amoonguss: Exige inversión ofensiva)
-        else if (evSpe < 20 && spe < 60) {
+        else if (evSpe < 20 && spe < 50) {
             if (evAtk > 100 || evSpa > 100) { // <--- FILTRO NUEVO
                 hasOffensiveInvestment = true;
                 addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, 15 * weight);
             }
         }
+
 
         // C. HARD DEFENSIVE SIGNALS
         if (evHp > 200) {
@@ -172,9 +184,15 @@ export const determineRoles = (
         // D. BULKY PIVOT (Incineroar Case)
         // Mucha vida, algo de defensa, poca velocidad, ataque medio
         if (evHp > 200 && (evDef > 50 || evSpd > 50) && evSpe < 100) {
-            addScore(ROLE_KEYS.DEFENSIVE.PIVOT, 10 * weight);
+            addScore(ROLE_KEYS.DEFENSIVE.PIVOT, 5 * weight);
         }
     });
+
+    // CHOICE ITEMS = + SWEEPER
+    if (choiceItemUsage > 30){
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 20);
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 20);
+    }
 
     // --- 3. MOVES ANALYSIS ---
     
@@ -233,6 +251,9 @@ export const determineRoles = (
         if (pivotAbility > 50) score += 10; // Intimidate + Parting Shot = Dios Pivot
         addScore(ROLE_KEYS.DEFENSIVE.PIVOT, score);
     }
+    if (choiceItemUsage > 30){
+        addScore(ROLE_KEYS.DEFENSIVE.PIVOT, -999);
+    }
 
     // --- LOGICA STALLER (REVISADA) ---
     // 1. Daño Pasivo "Hard" (Tóxico, Salt Cure, Trapping) - Will-o-wisp eliminado de aquí
@@ -252,8 +273,15 @@ export const determineRoles = (
         }
     }
 
-    // --- 4. SELECCIÓN ---
+    // --- 4. SELECCIÓN // ELIMINACIÓN TR---
     if (spe > 100) scores[ROLE_KEYS.OFFENSIVE.TR_ATTACKER] = -999;
+    const orderUpUsage = getGroupUsage(['orderup']);
+    if (orderUpUsage > 25) addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, -999);
+    //if (name == "dondozo") scores[ROLE_KEYS.OFFENSIVE.TR_ATTACKER] = -999;
+    const scarf = getItemUsage(['choicescarf'])
+    if (scarf > 20){
+        addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, -999);
+    }
 
     const candidates = Object.entries(scores)
         .filter(([, val]) => val > 10)
