@@ -53,12 +53,22 @@ export default function PokemonMasterPanel({ pokemon, lang }: Props) {
   
   const handleVarietyChange = (newVariantId: string) => {
     const params = new URLSearchParams(searchParams.toString());
+    
     if (newVariantId === pokemon.speciesId.toString()) {
+      // CASO: Volver a Forma Base
       params.delete('variant');
+      
+      // FIX: Forzamos la navegación al ID de la especie base (anchorId).
+      // Esto corrige el bug donde, si estábamos en una URL directa de variante (ej: /pokedex/10126),
+      // al quitar el param 'variant' nos quedábamos atrapados en la variante.
+      // Reemplazamos el último segmento del path (el ID/Slug actual) por el ID base.
+      const basePath = pathname.replace(/\/[^\/]+$/, `/${anchorId}`);
+      router.push(`${basePath}?${params.toString()}`);
     } else {
+      // CASO: Ir a Variante
       params.set('variant', newVariantId);
+      router.push(`${pathname}?${params.toString()}`);
     }
-    router.push(`${pathname}?${params.toString()}`);
   };
 
   return (

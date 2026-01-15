@@ -101,7 +101,8 @@ export const toSlug = (name: string): string => {
     // 4. Reglas Heurísticas (Sufijos comunes)
     const suffixesToRemove = [
         '-standard', '-incarnate', '-ordinary', '-altered', '-aria', 
-        '-midday', '-solo', '-disguised', '-shield', '-average', '-plant', '-land'
+        '-midday', '-solo', '-disguised', '-shield', '-average', '-plant', '-land', '-amped',
+        '-ice', '-noice', '-low-key', '-hangry'
     ];
 
     for (const suffix of suffixesToRemove) {
