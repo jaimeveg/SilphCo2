@@ -45,7 +45,7 @@ export async function GET(request: Request) {
         const fileContent = await fs.readFile(filePath, 'utf-8');
         const chaosData = JSON.parse(fileContent);
 
-        // 2. Resolver Pokémon objetivo
+        // 2. Resolver Pokémon objetivo (Slug Smogon)
         const targetSlug = toSlug(pokemon);
         const availableMons = Object.keys(chaosData.data);
         const realKey = availableMons.find(k => toSlug(k) === targetSlug);
@@ -106,9 +106,24 @@ export async function GET(request: Request) {
         const speedMap = speedMapCache || {};
         const idsMap = idsMapCache || {};
 
+        // === RESOLUCIÓN DE ID (ESTRATEGIA REFACTORIZADA) ===
         const resolveId = (slug: string): number | null => {
+            // 1. Mapeo Manual (Prioridad Máxima - Arregla Minior, Oricorio, Galar, Ogerpon)
             if (COMPETITIVE_FORM_IDS[slug]) return COMPETITIVE_FORM_IDS[slug];
+            
+            // 2. Mapeo Directo (Coincidencia exacta en pokedex_ids.json - ej: bulbasaur)
             if (idsMap[slug]) return idsMap[slug];
+
+            // 3. Fallback: Quitar apóstrofes (Smogon: farfetch'd -> PokeAPI: farfetchd)
+            const strippedSlug = slug.replace(/'/g, '');
+            if (idsMap[strippedSlug]) return idsMap[strippedSlug];
+
+            // 4. Fallback: Sufijos Comunes de PokeAPI (si no estaba en manual)
+            if (idsMap[`${slug}-standard`]) return idsMap[`${slug}-standard`];
+            if (idsMap[`${slug}-average`]) return idsMap[`${slug}-average`];
+            if (idsMap[`${slug}-normal`]) return idsMap[`${slug}-normal`]; 
+            if (idsMap[`${slug}-incarnate`]) return idsMap[`${slug}-incarnate`]; 
+
             return null;
         };
 
@@ -122,6 +137,7 @@ export async function GET(request: Request) {
 
         const targetId = resolveId(targetSlug);
 
+        // Validaciones
         if (Object.keys(speedMap).length === 0) {
             debugMsg = "Speed Map Missing";
             speedAnalysis.context = { en: "Server Error: Missing Speed Dex", es: "Error: Falta mapa de velocidades" };
@@ -135,9 +151,9 @@ export async function GET(request: Request) {
             debugMsg = `Speed not found for ID ${targetId}`;
             speedAnalysis.context = { en: `Speed missing for ID ${targetId}`, es: `Sin velocidad para ID ${targetId}` };
         } else {
+            // ÉXITO: Tenemos datos
             const targetSpeed = speedMap[targetId];
             
-            // Arrays para cálculos
             const metaSpeeds: number[] = []; 
             let globalMaxSpeed = 0;          
             let globalMinSpeed = 999;        
@@ -172,29 +188,30 @@ export async function GET(request: Request) {
                 const isFastest = targetSpeed >= globalMaxSpeed;
                 const isSlowest = targetSpeed <= globalMinSpeed;
 
-                // Asignar Tier
+                // === LÓGICA SPEED TIER ===
+                // Regla base: Menos de 55 -> Tier F (Trick Room)
                 let tier = 'C';
-                if (percentile >= 95) tier = 'S+';
-                else if (percentile >= 85) tier = 'S';
-                else if (percentile >= 70) tier = 'A';
-                else if (percentile >= 50) tier = 'B';
-                else if (targetSpeed < 50) tier = 'TR'; 
-                else tier = 'C';
+                
+                if (targetSpeed < 55) {
+                    tier = 'F';
+                } else {
+                    if (percentile >= 95) tier = 'S+';
+                    else if (percentile >= 85) tier = 'S';
+                    else if (percentile >= 70) tier = 'A';
+                    else if (percentile >= 50) tier = 'B';
+                    else tier = 'C';
+                }
 
+                // Extremos absolutos
                 if (isFastest) tier = 'S+';
-                if (isSlowest) tier = 'TR';
+                if (isSlowest) tier = 'F';
 
                 // Cálculo de textos
                 const rawTopPercent = 100 - percentile;
-                
-                // Formateo del Top %
                 let topPercentStr = rawTopPercent.toFixed(0);
                 if (rawTopPercent < 1) {
-                    if (rawTopPercent <= 0.01) {
-                        topPercentStr = "< 0.01";
-                    } else {
-                        topPercentStr = rawTopPercent.toFixed(2);
-                    }
+                    if (rawTopPercent <= 0.01) topPercentStr = "< 0.01";
+                    else topPercentStr = rawTopPercent.toFixed(2);
                 }
 
                 const slowerPercentStr = percentile.toFixed(0);
@@ -208,19 +225,8 @@ export async function GET(request: Request) {
                 } else if (isSlowest) {
                     contextEn = "The slowest Pokémon in the format";
                     contextEs = "El Pokémon más lento del formato";
-                } else if (tier === 'TR') {
-                    // Para TR mostramos el Top % de lentitud (rawTopPercent)
-                    // Ej: "Slower than 90% (Top 10% slow)" 
-                    // No, "Slower than 99%" means Top 1% speed.
-                    // TR is bottom. So we use the Top % logic inverted or simply reuse topPercentStr which is (100 - percentile).
-                    // If percentile is 0 (slowest), rawTop is 100.
-                    // We want "Slower than X%". 
-                    // If percentile is 5 (slower than 5%). Then it is slower than 95% of mons? No.
-                    // Slower than 5 mons out of 100 -> Faster than 5%.
-                    // If tier TR, it is slow.
-                    // Let's stick to standard percentile for consistency or "Slower than X%".
-                    // If I am percentile 10. I am faster than 10%. Slower than 90%.
-                    const fasterThanMeStr = rawTopPercent.toFixed(0); // aprox
+                } else if (tier === 'F') { // TIER F = TRICK ROOM
+                    const fasterThanMeStr = rawTopPercent.toFixed(0);
                     contextEn = `Slower than ${fasterThanMeStr}% (Trick Room viable)`;
                     contextEs = `Más lento que el ${fasterThanMeStr}% (Viable en Espacio Raro)`;
                 } else if (percentile > 90) {
@@ -244,7 +250,7 @@ export async function GET(request: Request) {
         }
 
         if (debugMsg !== "OK") {
-            console.log(`[API Speed Calc] ${debugMsg} | Pokemon: ${pokemon}`);
+            console.log(`[API Speed Calc] ${debugMsg} | Pokemon: ${pokemon} -> Slug: ${targetSlug} -> ID: ${targetId || 'NULL'}`);
         }
 
         const teraData = rawMon['Tera Types'] || rawMon.TeraTypes || {};

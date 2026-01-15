@@ -92,7 +92,7 @@ export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbi
     // Speed Tier Display (Data-Driven from API)
     // Si no viene speedData (ej: fallback), usamos valores por defecto
     const tierDisplay = speedData?.tier || 'N/A';
-    const isTrickRoom = tierDisplay === 'TR';
+    const isTrickRoom = tierDisplay === 'F';
     const tierTooltip = speedData?.context?.[lang] || (lang === 'es' ? 'Datos de velocidad no disponibles' : 'No speed data available');
 
     const handleMouseEnter = (e: React.MouseEvent, text: string) => {

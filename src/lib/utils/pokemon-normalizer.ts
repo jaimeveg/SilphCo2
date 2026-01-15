@@ -1,10 +1,17 @@
 // src/lib/utils/pokemon-normalizer.ts
 
 /**
- * DICCIONARIO DE TRADUCCIÓN: POKEAPI -> SMOGON
- * Mapea los slugs técnicos de PokeAPI a los keys usados en los JSON de Smogon.
+ * MAPA DE TRADUCCIÓN: POKEAPI (Input URL) -> SMOGON (Data Keys)
+ * Convierte los slugs técnicos de PokeAPI a los nombres simplificados que usa Smogon.
+ * Incluye la re-inserción de apóstrofes para Smogon.
  */
-const SMOGON_OVERRIDES: Record<string, string> = {
+const POKEAPI_TO_SMOGON: Record<string, string> = {
+    // --- CASOS CON APÓSTROFES (PokeAPI no tiene, Smogon sí) ---
+    'farfetchd': "farfetch'd",
+    'farfetchd-galar': "farfetch'd-galar",
+    'sirfetchd': "sirfetch'd",
+    'oricorio-pau': "oricorio-pa'u",
+    
     // --- GÉNEROS ---
     'indeedee-male': 'indeedee',
     'indeedee-female': 'indeedee-f',
@@ -22,85 +29,91 @@ const SMOGON_OVERRIDES: Record<string, string> = {
     'pyroar-female': 'pyroar-f',
 
     // --- FORMAS BASE Y VARIANTES ---
-    // Urshifu
     'urshifu-single-strike': 'urshifu', 
-    
-    // OGERPON (Corrección -mask)
-    'ogerpon-teal-mask': 'ogerpon',
+    'darmanitan-standard': 'darmanitan',
+    'darmanitan-galar-standard': 'darmanitan-galar',
+
+    // OGERPON (Reglas explícitas de máscaras)
+    'ogerpon-teal-mask': 'ogerpon',            // Base en Smogon
     'ogerpon-wellspring-mask': 'ogerpon-wellspring',
     'ogerpon-hearthflame-mask': 'ogerpon-hearthflame',
     'ogerpon-cornerstone-mask': 'ogerpon-cornerstone',
-    // Por si acaso viene sin mask pero con teal
-    'ogerpon-teal': 'ogerpon',
-    'tatsugiri-curly': 'tatsugiri',
-    'tatsugiri-droopy': 'tatsugiri',
-    'tatsugiri-stretchy': 'tatsugiri',
 
-    // Toxtricity
-    'toxtricity-amped': 'toxtricity',
-
-    // Lycanroc
-    'lycanroc-midday': 'lycanroc',
-
-    // Oriocorio
-    'oriocorio-baile': 'oriocorio',
+    // Genios
+    'landorus-incarnate': 'landorus',
+    'tornadus-incarnate': 'tornadus',
+    'thundurus-incarnate': 'thundurus',
+    'enamorus-incarnate': 'enamorus',
 
     // Otros
-    'mimikyu-disguised': 'mimikyu',
+    'basculin-red-striped': 'basculin',
+    'basculin-blue-striped': 'basculin', 
+    'basculin-white-striped': 'basculin-white-striped',
+    'lycanroc-midday': 'lycanroc',
+    'toxtricity-amped': 'toxtricity',
     'eiscue-ice': 'eiscue',
     'morpeko-full-belly': 'morpeko',
     'wishiwashi-solo': 'wishiwashi',
+    'mimikyu-disguised': 'mimikyu',
     'aegislash-shield': 'aegislash',
-    'minior-red-meteor': 'minior',
-    'palafin-zero': 'palafin',
-    'palafin-hero': 'palafin',
-    'darmanitan-standard': 'darmanitan',
-    'darmanitan-galar-standard': 'darmanitan-galar',
-    'gourgeist-average': 'gourgeist',
-    'pumpkaboo-average': 'pumpkaboo',
     'keldeo-ordinary': 'keldeo',
     'meloetta-aria': 'meloetta',
-    'shaymin-land': 'shaymin',
-    'tornadus-incarnate': 'tornadus',
-    'thundurus-incarnate': 'thundurus',
-    'landorus-incarnate': 'landorus',
-    'enamorus-incarnate': 'enamorus',
+    'gourgeist-average': 'gourgeist',
+    'pumpkaboo-average': 'pumpkaboo',
+    'oricorio-baile': 'oricorio',
+    'wormadam-plant': 'wormadam',
     'giratina-altered': 'giratina',
-    'dialga-pressure': 'dialga',
-    'palkia-pressure': 'palkia',
-    'basculin-red-striped': 'basculin',
-    'basculin-blue-striped': 'basculin', // Smogon agrupa, PokeAPI separa
-    'basculin-white-striped': 'basculin-white-striped', // Hisui sí tiene stats propios a veces
+    'shaymin-land': 'shaymin',
+    
+    // Gen 9
+    'tatsugiri-curly': 'tatsugiri',
+    'dudunsparce-two-segment': 'dudunsparce',
+    'maushold-family-of-four': 'maushold',
+    'squawkabilly-green-plumage': 'squawkabilly',
+    'palafin-zero': 'palafin',
+    'gimmighoul-chest': 'gimmighoul',
 };
 
+/**
+ * Normaliza un nombre de Pokémon al formato Slug estándar usado por Smogon.
+ */
 export const toSlug = (name: string): string => {
     if (!name) return '';
 
-    // 1. Limpieza estándar
-    let slug = name.toLowerCase().trim()
-        .replace(/['’\.]/g, '') 
-        .replace(/[:]/g, '')    
-        .replace(/[^a-z0-9\s-]/g, '') 
+    // 0. Pre-limpieza básica
+    let rawSlug = name.toLowerCase().trim();
+
+    // 1. TRADUCCIÓN DIRECTA (Prioridad Máxima: Restaurar apóstrofes y simplificar)
+    if (POKEAPI_TO_SMOGON[rawSlug]) {
+        return POKEAPI_TO_SMOGON[rawSlug];
+    }
+
+    // 2. REGLAS ESPECIALES (Patrones)
+    if (rawSlug.startsWith('minior-')) return 'minior';
+
+    // 3. Limpieza estándar (Permite apóstrofes si ya venían)
+    let slug = rawSlug
+        .replace(/[\.]/g, '')     
+        .replace(/[:]/g, '')
+        .replace(/[^a-z0-9\s-']/g, '') // Mantenemos apóstrofe
         .replace(/\s+/g, '-');
 
-    // 2. Diccionario Explícito (Prioridad Máxima)
-    if (SMOGON_OVERRIDES[slug]) {
-        return SMOGON_OVERRIDES[slug];
+    // 4. Reglas Heurísticas (Sufijos comunes)
+    const suffixesToRemove = [
+        '-standard', '-incarnate', '-ordinary', '-altered', '-aria', 
+        '-midday', '-solo', '-disguised', '-shield', '-average', '-plant', '-land'
+    ];
+
+    for (const suffix of suffixesToRemove) {
+        if (slug.endsWith(suffix)) {
+            return slug.slice(0, -suffix.length);
+        }
     }
 
-    // 3. Reglas Generales de Sufijos
-    if (slug.endsWith('-male')) return slug.replace('-male', '');
-    if (slug.endsWith('-female')) return slug.replace('-female', '-f');
-    if (slug.endsWith('-incarnate')) return slug.replace('-incarnate', '');
-    if (slug.endsWith('-normal')) return slug.replace('-normal', '');
-    if (slug.endsWith('-standard')) return slug.replace('-standard', '');
-    if (slug.endsWith('-original')) return slug.replace('-original', '');
-    
-    // Regla extra de seguridad para máscaras si no entraron en el diccionario
-    if (slug.startsWith('ogerpon') && slug.endsWith('-mask')) {
-        const withoutMask = slug.replace('-mask', '');
-        return withoutMask === 'ogerpon-teal' ? 'ogerpon' : withoutMask;
-    }
+    // Reglas cosméticas
+    if (slug === 'nidoran♂') return 'nidoran-m';
+    if (slug === 'nidoran♀') return 'nidoran-f';
+    if (slug === 'flabébé') return 'flabebe';
 
     return slug;
 };

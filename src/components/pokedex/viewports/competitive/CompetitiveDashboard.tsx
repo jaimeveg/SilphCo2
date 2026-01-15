@@ -15,6 +15,7 @@ import EvSpreadList from './EvSpreadList';
 // ---------------------
 import { Users, Shield, Sword, AlertTriangle, RefreshCw, Zap, Trophy, ChevronDown, Activity, Skull, Diamond } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { toSlug } from '@/lib/utils/pokemon-normalizer';
 
 // --- INTERFACES (SIN CAMBIOS) ---
 export interface CompetitiveResponse {
@@ -146,7 +147,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         if (cleanSlug.includes('♀')) cleanSlug = cleanSlug.replace('♀', '-f');
 
         let id: number | null = null;
-        if (dexMap) id = resolvePokemonId(cleanSlug, dexMap);
+        if (dexMap) id = resolvePokemonId(cleanSlug);
 
         if (id) {
             return {

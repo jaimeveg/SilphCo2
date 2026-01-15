@@ -6,84 +6,106 @@
  * Incluye formas de género, regionales, megas y variantes de combate.
  */
 export const COMPETITIVE_FORM_IDS: Record<string, number> = {
+    // --- CASOS CON APÓSTROFES (Smogon Keys) ---
+    "farfetch'd": 83,
+    "farfetch'd-galar": 10166,
+    "sirfetch'd": 865,
+    "oricorio-pa'u": 743,
+
+    // --- SMOGON SIMPLIFICATIONS (Formas base implícitas) ---
+    'minior': 774,              // Meteor
+    'minior-meteor': 774,
+    'minior-core': 10136,
+    'oricorio': 741,            // Baile
+    'oricorio-baile': 741,
+    'oricorio-pom-pom': 742,
+    'oricorio-sensu': 744,
+    'darmanitan': 555,          // Standard
+    'darmanitan-galar': 10177,
+    'darmanitan-zen': 10017,
+    'darmanitan-galar-zen': 10178,
+    'eiscue': 875,              // Ice
+    'eiscue-ice': 875,
+    'eiscue-noice': 10185,
+    'mimikyu': 778,             // Disguised
+    'mimikyu-disguised': 778,
+    'mimikyu-busted': 10143,
+    'wishiwashi': 746,          // Solo
+    'wishiwashi-solo': 746,
+    'wishiwashi-school': 10127,
+    'basculin': 550,            // Red
+    'basculin-red-striped': 550,
+    'basculin-blue-striped': 10016,
+    'basculin-white-striped': 10247,
+    'lycanroc': 745,            // Midday
+    'lycanroc-midday': 745,
+    'lycanroc-midnight': 10126,
+    'lycanroc-dusk': 10152,
+    'toxtricity': 849,          // Amped
+    'toxtricity-amped': 849,
+    'toxtricity-low-key': 10184,
+    'morpeko': 877,             // Full Belly
+    'morpeko-hangry': 10187,
+    'pumpkaboo': 710,           // Average
+    'gourgeist': 711,           // Average
+    'aegislash': 681,           // Shield
+    'aegislash-blade': 10026,
+    'keldeo': 647,              // Ordinary
+    'keldeo-resolute': 10024,
+    'zygarde': 718,             // 50%
+    'urshifu': 892,             // Single
+    'landorus': 645,            // Incarnate
+    'tornadus': 641,
+    'thundurus': 642,
+    'enamorus': 905,
+
     // --- GEN 9: GÉNERO & FORMAS ---
-    // Oinkologne
-    'oinkologne': 916,          // Male (Base)
+    'oinkologne': 916,
     'oinkologne-m': 916,
-    'oinkologne-f': 10254,      // Female
-    'oinkologne-female': 10254,
-    
-    // Maushold
-    'maushold': 925,            // Family of Four (Base)
+    'oinkologne-f': 10254,
+    'maushold': 925,
     'maushold-four': 925,
-    'maushold-three': 10256,    // Family of Three
-
-    // Dudunsparce
-    'dudunsparce': 982,         // Two-Segment (Base)
+    'maushold-three': 10256,
+    'dudunsparce': 982,
     'dudunsparce-three-segment': 10255,
-
-    // Squawkabilly
-    'squawkabilly': 931,        // Green (Base)
+    'squawkabilly': 931,
     'squawkabilly-blue': 10260,
     'squawkabilly-yellow': 10261,
     'squawkabilly-white': 10262,
-
-    // Tatsugiri
-    'tatsugiri': 978,           // Curly (Base)
+    'tatsugiri': 978,
     'tatsugiri-droopy': 10264,
     'tatsugiri-stretchy': 10265,
+    'gimmighoul': 999,
+    'gimmighoul-roaming': 10263,
+    'palafin': 964,
+    'palafin-hero': 10257,
 
     // --- GEN 8: GÉNERO & FORMAS ---
-    // Indeedee
-    'indeedee': 876,            // Male (Base)
+    'indeedee': 876,
     'indeedee-m': 876,
-    'indeedee-f': 10186,        // Female
-    'indeedee-female': 10186,
-
-    // Basculegion
-    'basculegion': 902,         // Male (Base)
+    'indeedee-f': 10186,
+    'basculegion': 902,
     'basculegion-m': 902,
-    'basculegion-f': 10248,     // Female
-    'basculegion-female': 10248,
+    'basculegion-f': 10248,
 
     // --- GEN 6/7: GÉNERO & FORMAS ---
-    // Meowstic
-    'meowstic': 678,            // Male (Base)
+    'meowstic': 678,
     'meowstic-m': 678,
-    'meowstic-f': 10025,        // Female
-    'meowstic-female': 10025,
-
-    // Oriocorio
-    'oriocorio': 741,           // Baile (Base)
-    'oriocorio-baile': 741,
-    'oriocorio-pom-pom': 10123,
-    'oriocorio-pau': 10124,
-    'oriocorio-sensu': 10125,
-
-    // Lycanroc
-    'lycanroc': 745,            // Midday (Base)
-    'lycanroc-midday': 745,
-    'lycanroc-midnight': 10126,
-    'lycanroc-dusk': 10127,
+    'meowstic-f': 10025,
 
     // --- GEN 9: DISCO & MÁSCARAS ---
-    // Ogerpon
-    'ogerpon': 1017,            // Teal (Base)
+    'ogerpon': 1017,            // Teal
     'ogerpon-teal': 1017,
-    'ogerpon-wellspring': 10274,
-    'ogerpon-hearthflame': 10273,
+    'ogerpon-wellspring': 10273,
+    'ogerpon-hearthflame': 10274,
     'ogerpon-cornerstone': 10275,
-    // Ursaluna
     'ursaluna': 901,
     'ursaluna-bloodmoon': 10272,
-    // Paldean Tauros
     'tauros-paldea-combat': 10250,
     'tauros-paldea-blaze': 10251,
     'tauros-paldea-aqua': 10252,
     'tauros-paldea': 10250,
-    // Wooper Paldea
     'wooper-paldea': 10253,
-    // Terapagos
     'terapagos': 1024,
     'terapagos-terastal': 10276,
     'terapagos-stellar': 10277,
@@ -107,7 +129,6 @@ export const COMPETITIVE_FORM_IDS: Record<string, number> = {
     'decidueye-hisui': 10244,
     'dialga-origin': 10245,
     'palkia-origin': 10246,
-    'basculin-white-striped': 10247,
 
     // --- GALAR ---
     'meowth-galar': 10161,
@@ -126,25 +147,18 @@ export const COMPETITIVE_FORM_IDS: Record<string, number> = {
     'zigzagoon-galar': 10177,
     'linoone-galar': 10178,
     'darumaka-galar': 10179,
-    'darmanitan-galar': 10180,
-    'darmanitan-galar-zen': 10181,
     'yamask-galar': 10182,
     'stunfisk-galar': 10183,
-    // Urshifu
-    'urshifu': 892,
     'urshifu-single-strike': 892,
-    'urshifu-rapid-strike': 10191,
-    // Calyrex
-    'calyrex-ice': 10193,
-    'calyrex-shadow': 10194,
-    // Zacian/Zama
+    'urshifu-rapid-strike': 10191, // ID Galar file
+    'calyrex-ice': 10193,          // ID Galar file
+    'calyrex-shadow': 10194,       // ID Galar file
+    'zacian': 888,
+    'zamazenta': 889,
     'zacian-crowned': 10188,
     'zamazenta-crowned': 10189,
     'eternatus-eternamax': 10190,
     'enamorus-therian': 10249,
-    'toxtricity-low-key': 10184,
-    'eiscue-noice': 10185,
-    'morpeko-hangry': 10187,
     'zarude-dada': 10192,
 
     // --- ALOLA ---
@@ -239,9 +253,7 @@ export const COMPETITIVE_FORM_IDS: Record<string, number> = {
     'landorus-therian': 10021,
     'kyurem-black': 10022,
     'kyurem-white': 10023,
-    'keldeo-resolute': 10024,
     'meloetta-pirouette': 10018,
-    'aegislash-blade': 10026,
     'pumpkaboo-small': 10027,
     'pumpkaboo-large': 10028,
     'pumpkaboo-super': 10029,
@@ -250,29 +262,15 @@ export const COMPETITIVE_FORM_IDS: Record<string, number> = {
     'gourgeist-super': 10032,
     'zygarde-10': 10118,
     'zygarde-complete': 10120,
-    'mimikyu-busted': 10143,
     'necrozma-dusk': 10155,
     'necrozma-dawn': 10156,
     'necrozma-ultra': 10157,
     'gastrodon-east': 10031,
 };
 
-/**
- * Intenta resolver un nombre de Smogon a un ID oficial de PokeAPI.
- * @param slug Nombre normalizado (ej: "iron-valiant")
- * @param dexMap Mapa de nombres a IDs { "bulbasaur": 1 ... }
- */
-export const resolvePokemonId = (slug: string, dexMap: Record<string, number>): number | null => {
-    // 1. Chequeo directo de formas especiales (Prioridad Alta)
-    if (COMPETITIVE_FORM_IDS[slug]) {
-        return COMPETITIVE_FORM_IDS[slug];
-    }
-
-    // 2. Búsqueda directa en el mapa de la Dex Nacional
-    if (dexMap[slug]) {
-        return dexMap[slug];
-    }
-
-    // 3. Fallback: Si no está en el mapa, devolvemos null y la UI usará el fallback visual
-    return null; 
+// Helper
+export const resolvePokemonId = (slug: string, dexMap?: Record<string, number>): number | null => {
+    if (COMPETITIVE_FORM_IDS[slug]) return COMPETITIVE_FORM_IDS[slug];
+    if (dexMap && dexMap[slug]) return dexMap[slug];
+    return null;
 };
