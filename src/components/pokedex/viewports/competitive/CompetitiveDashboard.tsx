@@ -16,6 +16,7 @@ import EvSpreadList from './EvSpreadList';
 import { Users, Shield, Sword, AlertTriangle, RefreshCw, Zap, Trophy, ChevronDown, Activity, Skull, Diamond } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { toSlug } from '@/lib/utils/pokemon-normalizer';
+import { useSearchParams } from 'next/navigation'; // <--- AÑADIR ESTO
 
 // --- INTERFACES (SIN CAMBIOS) ---
 export interface CompetitiveResponse {
@@ -69,7 +70,11 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         staleTime: 1000 * 60 * 60 * 12 
     });
 
+    
+
     const { data: dexMap } = useNationalDexLookup(); 
+
+    const searchParams = useSearchParams();
 
     const [gen, setGen] = useState<string>('');
     const [mode, setMode] = useState<string>('');
@@ -141,7 +146,58 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         retry: false
     });
 
-    const resolveMate = (slug: string) => {
+    // 2. NUEVO EFFECT: AUTO-SELECCIÓN BASADA EN URL
+    // Este efecto escucha cuando carga el índice y si hay un param ?format=...
+    useEffect(() => {
+        const target = searchParams.get('format');
+        if (!target || !indexData) return;
+
+        // Si ya estamos viendo lo que pide la URL, no hacemos nada
+        if (fileId === target || format === target) return;
+
+        // Algoritmo de Búsqueda Inversa en el Árbol de Smogon
+        // Objetivo: Encontrar [Gen, Mode, Format, Reg] dado un 'target' (fileId o formatKey)
+        const gens = Object.keys(indexData.structure);
+        
+        for (const g of gens) {
+            const modes = Object.keys(indexData.structure[g]);
+            for (const m of modes) {
+                const formats = indexData.structure[g][m];
+                
+                // Caso A: La URL pide un formato genérico (ej: ?format=gen9ou)
+                if (formats[target]) {
+                    setGen(g);
+                    setMode(m);
+                    setFormat(target);
+                    // Dejamos que los efectos en cascada seleccionen la Reg/Elo por defecto
+                    return;
+                }
+
+                // Caso B: La URL pide un fichero específico (ej: ?format=gen9vgc2023regulatione-1760)
+                // Buscamos dentro de cada formato si contiene ese fileId
+                for (const f of Object.keys(formats)) {
+                    const regs = formats[f].regs;
+                    if (!regs) continue;
+
+                    for (const r of Object.keys(regs)) {
+                        const eloOptions = regs[r];
+                        // ¿Está nuestro target en la lista de ficheros de esta regulación?
+                        if (eloOptions.some(opt => opt.fileId === target)) {
+                            // ¡Encontrado! Restauramos el estado completo
+                            setGen(g);
+                            setMode(m);
+                            setFormat(f);
+                            setReg(r);
+                            setFileId(target);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    }, [indexData, searchParams]);
+
+    const resolveMate = (slug: string, format: string) => {
         let cleanSlug = slug.toLowerCase().replace(/['’\.]/g, '').replace(/[:]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
         if (cleanSlug.includes('♂')) cleanSlug = cleanSlug.replace('♂', '-m');
         if (cleanSlug.includes('♀')) cleanSlug = cleanSlug.replace('♀', '-f');
@@ -152,13 +208,13 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         if (id) {
             return {
                 id,
-                href: `/${lang}/pokedex/${id}`,
+                href: `/${lang}/pokedex/${id}?tab=PVP&format=${format}`,
                 img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
             };
         } else {
             return {
                 id: null,
-                href: `/${lang}/pokedex/${cleanSlug}`,
+                href: `/${lang}/pokedex/${cleanSlug}?tab=PVP&format=${format}`,
                 img: `https://img.pokemondb.net/sprites/home/normal/${cleanSlug}.png`
             };
         }
@@ -309,7 +365,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                 <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Users size={11} /> Teammates</h4>
                                 <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-2 pt-1">
                                     {data.stats.teammates.slice(0, 12).map((mate) => {
-                                        const resolved = resolveMate(mate.slug);
+                                        const resolved = resolveMate(mate.slug, data.meta.format);
                                         return (
                                             <Link key={mate.name} href={resolved.href} className="block relative group" title={`${mate.name} (${fmtPct(mate.value)}%)`}>
                                                 <div className="relative aspect-square bg-slate-900 border border-slate-800 rounded hover:border-cyan-500/50 transition-all overflow-hidden cursor-pointer">
@@ -328,7 +384,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                     <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Skull size={11} /> Checks & Counters</h4>
                                     <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-2 pt-1">
                                         {data.matchups.counters.slice(0, 8).map((counter) => {
-                                            const resolved = resolveMate(counter.slug);
+                                            const resolved = resolveMate(counter.slug, data.meta.format);
                                             return (
                                                 <Link key={counter.name} href={resolved.href} className="block relative group" title={`${counter.name} (Score: ${counter.score}%)`}>
                                                     <div className="relative aspect-square bg-slate-900 border border-slate-800 rounded hover:border-red-500/50 transition-all overflow-hidden cursor-pointer">

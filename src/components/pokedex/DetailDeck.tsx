@@ -8,6 +8,7 @@ import ViewportData from './viewports/ViewportData';
 import MoveRegistry from './viewports/MoveRegistry'; 
 import CompetitiveDashboard from './viewports/competitive/CompetitiveDashboard'; // <--- IMPORTAR
 import { ViewportNuzlocke } from './viewports/Placeholders';
+import { useSearchParams } from 'next/navigation';
 
 interface Props {
   pokemon: IPokemon;
@@ -16,7 +17,14 @@ interface Props {
 
 export default function DetailDeck({ pokemon, lang }: Props) {
   // Estado local para la navegación interna del Deck
-  const [activeTab, setActiveTab] = useState<TabOption>('DATA');
+  const searchParams = useSearchParams();
+    
+    // Inicializar estado basado en URL param '?tab='
+    const [activeTab, setActiveTab] = useState<TabOption>(() => {
+        const tabParam = searchParams.get('tab');
+        const validTabs = ['DATA', 'MOVES', 'PVP', 'NUZLOCKE'];
+        return validTabs.includes(tabParam || '') ? (tabParam as TabOption) : 'DATA';
+    });
 
   const renderContent = () => {
     switch (activeTab) {
