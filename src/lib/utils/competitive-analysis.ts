@@ -18,6 +18,7 @@ export const ROLE_KEYS = {
         TR_ATTACKER: 'role_tr_attacker',
         PRIORITY: 'role_priority',
         SETUP: 'role_setup',
+        WALLBREAKER: 'role_wallbreaker'
     },
     SUPPORTIVE: {
         REDIRECTION: 'role_redirection',
@@ -46,12 +47,13 @@ Object.values(ROLE_KEYS.DEFENSIVE).forEach(k => ROLE_CATEGORY_MAP[k] = 'DEF');
 const CORE_OFFENSIVE_ROLES = [
     ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 
     ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 
-    ROLE_KEYS.OFFENSIVE.TR_ATTACKER
+    ROLE_KEYS.OFFENSIVE.TR_ATTACKER,
+    ROLE_KEYS.OFFENSIVE.WALLBREAKER
 ];
 const CORE_DEFENSIVE_ROLES = [
     ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL, 
     ROLE_KEYS.DEFENSIVE.WALL_SPECIAL,
-    ROLE_KEYS.DEFENSIVE.STALLER 
+    ROLE_KEYS.DEFENSIVE.STALLER
 ];
 
 const NON_ATTACKING_MOVES = new Set([
@@ -149,20 +151,21 @@ export const determineRoles = (
         const evHp = evs.hp || 0;
         const evDef = evs.def || 0;
         const evSpd = evs.spd || 0;
+        const spNature = spread.nature;
 
         // A. HARD OFFENSIVE SIGNALS
-        if (evSpe > 200) {
+        if (evSpe > 150) {
             hasOffensiveInvestment = true;
-            if (evAtk > 150 || atk > spa) addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 25 * weight);
-            if (evSpa > 150 || spa > atk) addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 25 * weight);
+            if (evAtk > 150 || spNature == 'adamant' || spNature == 'jolly') addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 25 * weight);
+            if (evSpa > 150 || spNature == 'modest' || spNature == 'timid') addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 25 * weight);
             addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, -50 * weight);
             addScore(ROLE_KEYS.SUPPORTIVE.TR_SETTER, -20 * weight);
-        } 
+        }
         // B. TRICK ROOM ATTACKER (Corrección Amoonguss: Exige inversión ofensiva)
-        else if (evSpe < 20 && spe < 50) {
-            if (evAtk > 100 || evSpa > 100) { // <--- FILTRO NUEVO
+        else if (evSpe == 0 && spe < 50) {
+            if (evAtk > 120 || evSpa > 120) { // <--- FILTRO NUEVO
                 hasOffensiveInvestment = true;
-                addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, 15 * weight);
+                addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, 25 * weight);
             }
         }
 
@@ -172,6 +175,12 @@ export const determineRoles = (
             hasBulkyInvestment = true;
             if (evDef > 100) addScore(ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL, 15 * weight);
             if (evSpd > 100) addScore(ROLE_KEYS.DEFENSIVE.WALL_SPECIAL, 15 * weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, -5*weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, -5*weight);
+            if (evAtk > 150 && evSpa > 150) {
+                hasOffensiveInvestment = true;
+                addScore(ROLE_KEYS.OFFENSIVE.WALLBREAKER, 20 * weight);
+            }
             
             // Si tiene mucho bulk pero NADA de ataque, subimos potencial Support genérico
             if (evAtk < 50 && evSpa < 50) {
@@ -182,10 +191,13 @@ export const determineRoles = (
         }
 
         // D. BULKY PIVOT (Incineroar Case)
-        // Mucha vida, algo de defensa, poca velocidad, ataque medio
+        // Mucha vida, algo de defensa, poca velocidad, ataque medio. Una composición así no es sweeper
         if (evHp > 200 && (evDef > 50 || evSpd > 50) && evSpe < 100) {
             addScore(ROLE_KEYS.DEFENSIVE.PIVOT, 5 * weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, -5*weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, -5*weight);
         }
+
     });
 
     // CHOICE ITEMS = + SWEEPER
@@ -211,11 +223,17 @@ export const determineRoles = (
                 }
                 if (scores[ROLE_KEYS.OFFENSIVE.TR_ATTACKER] > 0) {
                     addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, m.value * 0.15);
+                }if (scores[ROLE_KEYS.OFFENSIVE.WALLBREAKER] > 0) {
+                    addScore(ROLE_KEYS.OFFENSIVE.WALLBREAKER, m.value * 0.15);
                 }
             }
         }
     });
 
+    // SETUP
+    const setupUsage = getGroupUsage(['dragondance', 'swordsdance', 'nastyplot', 'calmmind', 'bulkup', 'quiverdance', 'shellsmash', 'agility', 'bellydrum', 'filletaway', 'tailglow', 'geomancy']);
+    if (setupUsage > 20) addScore(ROLE_KEYS.OFFENSIVE.SETUP, 35);
+    
     // SUPPORT
     const trUsage = getGroupUsage(['trickroom']);
     if (trUsage > 15) addScore(ROLE_KEYS.SUPPORTIVE.TR_SETTER, 40);
