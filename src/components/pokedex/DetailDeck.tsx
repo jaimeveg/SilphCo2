@@ -6,7 +6,8 @@ import { IPokemon } from '@/types/interfaces';
 import { Lang } from '@/lib/pokedexDictionary';
 import ViewportData from './viewports/ViewportData';
 import MoveRegistry from './viewports/MoveRegistry'; 
-import CompetitiveDashboard from './viewports/competitive/CompetitiveDashboard'; // <--- IMPORTAR
+import CompetitiveDashboard from './viewports/competitive/CompetitiveDashboard';
+import NuzlockeView from './viewports/nuzlocke/NuzlockeView';
 import { ViewportNuzlocke } from './viewports/Placeholders';
 import { useSearchParams } from 'next/navigation';
 
@@ -31,7 +32,7 @@ export default function DetailDeck({ pokemon, lang }: Props) {
       case 'DATA': return <ViewportData pokemon={pokemon} lang={lang} />;
       case 'MOVES': return <MoveRegistry moves={pokemon.moves} lang={lang} />;
       case 'PVP': return <CompetitiveDashboard pokemon={pokemon} lang={lang} />; // <--- CONECTAR AQUÍ
-      case 'NUZLOCKE': return <ViewportNuzlocke />; // Nuzlocke sigue siendo placeholder por ahora
+      case 'NUZLOCKE': return <NuzlockeView pokemon={pokemon} lang={lang} />;
       default: return <ViewportData pokemon={pokemon} lang={lang} />;
     }
   };
