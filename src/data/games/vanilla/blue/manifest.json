@@ -1,0 +1,4957 @@
+{
+  "game_id": "blue",
+  "name": "Blue",
+  "region": "kanto",
+  "base_generation": 1,
+  "segments": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "order": 1,
+      "encounters": [
+        {
+          "pokemon_id": "bulbasaur",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "charmander",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "squirtle",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "order": 2,
+      "encounters": [
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "rival",
+      "name": "Rival",
+      "order": 3,
+      "encounters": []
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "order": 4,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 23,
+              "max_level": 27,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 2,
+              "max_level": 4,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "order": 5,
+      "encounters": [
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-22",
+      "name": "Route 22",
+      "order": 6,
+      "encounters": [
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 2,
+              "max_level": 4,
+              "rate": 45,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 5,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "nidoranf",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 0,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "nidoranm",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 0,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "order": 7,
+      "encounters": [
+        {
+          "pokemon_id": "caterpie",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 5,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 5,
+              "rate": 45,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 2,
+              "max_level": 5,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "mrmime",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 0,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "order": 8,
+      "encounters": [
+        {
+          "pokemon_id": "caterpie",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 5,
+              "rate": 45,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "metapod",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 4,
+              "max_level": 6,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weedle",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 3,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "kakuna",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 4,
+              "max_level": 4,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pikachu",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 5,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "pewter-city-gym",
+      "name": "Pewter City Gym",
+      "order": 9,
+      "encounters": []
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "order": 10,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 6,
+              "max_level": 8,
+              "rate": 45,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 5,
+              "max_level": 8,
+              "rate": 45,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "jigglypuff",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 3,
+              "max_level": 7,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 170,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "order": 11,
+      "encounters": [
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 12,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 12,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandshrew",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 6,
+              "max_level": 12,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "gift",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "mt-moon",
+      "name": "Mt. Moon",
+      "order": 12,
+      "encounters": [
+        {
+          "pokemon_id": "clefairy",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 8,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 150,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "zubat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 6,
+              "max_level": 11,
+              "rate": 79,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "paras",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 8,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "geodude",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 10,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "cerulean-city",
+      "name": "Cerulean City",
+      "order": 13,
+      "encounters": [
+        {
+          "pokemon_id": "jynx",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "cerulean-city-gym",
+      "name": "Cerulean City Gym",
+      "order": 14,
+      "encounters": []
+    },
+    {
+      "id": "route-24",
+      "name": "Route 24",
+      "order": 15,
+      "encounters": [
+        {
+          "pokemon_id": "caterpie",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 7,
+              "max_level": 7,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "metapod",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 8,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 12,
+              "max_level": 13,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "psyduck",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 33,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "abra",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 12,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 200,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 12,
+              "max_level": 14,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 33,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 34,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "rival-optional",
+      "name": "Rival (optional)",
+      "order": 16,
+      "encounters": []
+    },
+    {
+      "id": "route-25",
+      "name": "Route 25",
+      "order": 17,
+      "encounters": [
+        {
+          "pokemon_id": "caterpie",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 8,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "metapod",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 9,
+              "max_level": 9,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weedle",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 8,
+              "max_level": 8,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "kakuna",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 7,
+              "max_level": 7,
+              "rate": 4,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 13,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "psyduck",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 33,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "abra",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 10,
+              "max_level": 12,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 200,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 12,
+              "max_level": 14,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 33,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 34,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "order": 18,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 16,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "nidoranf",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 0,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "meowth",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 10,
+              "max_level": 16,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 16,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "order": 19,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 16,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "meowth",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 10,
+              "max_level": 16,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 16,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "vermillion-city",
+      "name": "Vermillion City",
+      "order": 20,
+      "encounters": [
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "ss-anne",
+      "name": "S.S. Anne",
+      "order": 21,
+      "encounters": []
+    },
+    {
+      "id": "vermillion-city-gym",
+      "name": "Vermillion City Gym",
+      "order": 22,
+      "encounters": []
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "order": 23,
+      "encounters": [
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 17,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandshrew",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 12,
+              "max_level": 15,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "nidorina",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "drowzee",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 9,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "digletts-cave",
+      "name": "Diglett's Cave",
+      "order": 24,
+      "encounters": [
+        {
+          "pokemon_id": "diglett",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 15,
+              "max_level": 22,
+              "rate": 95,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "dugtrio",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 29,
+              "max_level": 31,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 50,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "order": 25,
+      "encounters": [
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 14,
+              "max_level": 17,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 17,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandshrew",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 11,
+              "max_level": 17,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "order": 26,
+      "encounters": [
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 17,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandshrew",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 11,
+              "max_level": 17,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwhirl",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "slowpoke",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "voltorb",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 14,
+              "max_level": 17,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "rock-tunnel",
+      "name": "Rock Tunnel",
+      "order": 27,
+      "encounters": [
+        {
+          "pokemon_id": "zubat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 15,
+              "max_level": 18,
+              "rate": 55,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "machop",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 15,
+              "max_level": 17,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 180,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "geodude",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 16,
+              "max_level": 17,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "onix",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 13,
+              "max_level": 15,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "pokemon-tower",
+      "name": "Pokémon Tower",
+      "order": 28,
+      "encounters": [
+        {
+          "pokemon_id": "gastly",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 18,
+              "max_level": 24,
+              "rate": 90,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "haunter",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 25,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "cubone",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 20,
+              "max_level": 22,
+              "rate": 9,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "order": 29,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 23,
+              "max_level": 27,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venonat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 22,
+              "max_level": 26,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weepinbell",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "snorlax",
+          "method": [
+            {
+              "encounter_method": "pokeflute",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 25,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "order": 30,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 18,
+              "max_level": 20,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandshrew",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 17,
+              "max_level": 19,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "vulpix",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 15,
+              "max_level": 18,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "meowth",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 18,
+              "max_level": 20,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "order": 31,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 19,
+              "max_level": 22,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "vulpix",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 18,
+              "max_level": 20,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "meowth",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 17,
+              "max_level": 20,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 19,
+              "max_level": 22,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "celadon-city",
+      "name": "Celadon City",
+      "order": 32,
+      "encounters": [
+        {
+          "pokemon_id": "nidorino",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "clefairy",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 150,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "abra",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 200,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pinsir",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "porygon",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "dratini",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "celadon-city-gym",
+      "name": "Celadon City Gym",
+      "order": 33,
+      "encounters": []
+    },
+    {
+      "id": "rocket-hideout",
+      "name": "Rocket Hideout",
+      "order": 34,
+      "encounters": []
+    },
+    {
+      "id": "pokemon-tower-rival",
+      "name": "Pokemon Tower Rival",
+      "order": 35,
+      "encounters": []
+    },
+    {
+      "id": "saffron-city",
+      "name": "Saffron City",
+      "order": 36,
+      "encounters": [
+        {
+          "pokemon_id": "hitmonlee",
+          "method": [
+            {
+              "encounter_method": "gift",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "hitmonchan",
+          "method": [
+            {
+              "encounter_method": "gift",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "silph-co-rival",
+      "name": "Silph Co. Rival",
+      "order": 37,
+      "encounters": []
+    },
+    {
+      "id": "silph-co",
+      "name": "Silph Co.",
+      "order": 38,
+      "encounters": []
+    },
+    {
+      "id": "saffron-city-gym",
+      "name": "Saffron City Gym",
+      "order": 39,
+      "encounters": []
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "order": 40,
+      "encounters": [
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 18,
+              "max_level": 22,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "raticate",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 23,
+              "max_level": 25,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 127,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 20,
+              "max_level": 22,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "doduo",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 18,
+              "max_level": 22,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "snorlax",
+          "method": [
+            {
+              "encounter_method": "pokeflute",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 25,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17",
+      "order": 41,
+      "encounters": [
+        {
+          "pokemon_id": "raticate",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 29,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 127,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 20,
+              "max_level": 22,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "fearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 27,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "doduo",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 28,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "order": 42,
+      "encounters": [
+        {
+          "pokemon_id": "raticate",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 29,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 127,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 20,
+              "max_level": 22,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "fearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 29,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "doduo",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 28,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "lickitung",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "fuschia-city",
+      "name": "Fuschia City",
+      "order": 43,
+      "encounters": [
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "seaking",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "fuschia-city-gym",
+      "name": "Fuschia City Gym",
+      "order": 44,
+      "encounters": []
+    },
+    {
+      "id": "safari-zone",
+      "name": "Safari Zone",
+      "order": 45,
+      "encounters": [
+        {
+          "pokemon_id": "nidoranf",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 0,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "nidorina",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 31,
+              "max_level": 31,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "nidoranm",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 0,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venonat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 22,
+              "max_level": 22,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venomoth",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 32,
+              "max_level": 32,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "psyduck",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "slowpoke",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "doduo",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "exeggcute",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 25,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "kangaskhan",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 25,
+              "rate": 4,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tauros",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 28,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "dratini",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "order": 46,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pidgeotto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venonat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 28,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 22,
+              "max_level": 26,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weepinbell",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "ditto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 35,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "order": 47,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pidgeotto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venonat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 22,
+              "max_level": 26,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weepinbell",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "ditto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 35,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "order": 48,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 27,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venonat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "bellsprout",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 22,
+              "max_level": 26,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weepinbell",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "ditto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 25,
+              "max_level": 25,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 35,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "power-plant",
+      "name": "Power Plant",
+      "order": 49,
+      "encounters": [
+        {
+          "pokemon_id": "pikachu",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 20,
+              "max_level": 24,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "raichu",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 33,
+              "max_level": 36,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magnemite",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 21,
+              "max_level": 23,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magneton",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 32,
+              "max_level": 35,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "voltorb",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 21,
+              "max_level": 23,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "only-one",
+              "min_level": 40,
+              "max_level": 40,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "zapdos",
+          "method": [
+            {
+              "encounter_method": "only-one",
+              "min_level": 50,
+              "max_level": 50,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 3,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-19",
+      "name": "Route 19",
+      "order": 50,
+      "encounters": [
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "surf",
+              "min_level": 5,
+              "max_level": 40,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "horsea",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "staryu",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "route-20",
+      "name": "Route 20",
+      "order": 51,
+      "encounters": [
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "surf",
+              "min_level": 5,
+              "max_level": 40,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "horsea",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "staryu",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "seafoam-islands",
+      "name": "Seafoam Islands",
+      "order": 52,
+      "encounters": [
+        {
+          "pokemon_id": "golbat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 29,
+              "max_level": 29,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "psyduck",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "golduck",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 37,
+              "max_level": 37,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "seel",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "krabby",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 30,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "horsea",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "staryu",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 30,
+              "rate": 19,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "articuno",
+          "method": [
+            {
+              "encounter_method": "only-one",
+              "min_level": 50,
+              "max_level": 50,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 3,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "cinnabar-island",
+      "name": "Cinnabar Island",
+      "order": 53,
+      "encounters": [
+        {
+          "pokemon_id": "seel",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "electrode",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tangela",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 0,
+              "max_level": 0,
+              "rate": 0,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "pokemon-mansion",
+      "name": "Pokémon Mansion",
+      "order": 54,
+      "encounters": [
+        {
+          "pokemon_id": "vulpix",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 34,
+              "max_level": 34,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "ponyta",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 34,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "grimer",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 32,
+              "rate": 40,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "muk",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 37,
+              "max_level": 37,
+              "rate": 4,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "koffing",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "weezing",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 39,
+              "max_level": 39,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magmar",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 34,
+              "max_level": 34,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "cinnabar-island-gym",
+      "name": "Cinnabar Island Gym",
+      "order": 55,
+      "encounters": []
+    },
+    {
+      "id": "route-21",
+      "name": "Route 21",
+      "order": 56,
+      "encounters": [
+        {
+          "pokemon_id": "pidgey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 21,
+              "max_level": 23,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "pidgeotto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 32,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "rattata",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 21,
+              "max_level": 23,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "raticate",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 30,
+              "max_level": 30,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 127,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tentacool",
+          "method": [
+            {
+              "encounter_method": "surf",
+              "min_level": 5,
+              "max_level": 40,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "shellder",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 190,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "tangela",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 28,
+              "max_level": 32,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "horsea",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            },
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "staryu",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 15,
+              "max_level": 15,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "viridian-city-gym",
+      "name": "Viridian City Gym",
+      "order": 57,
+      "encounters": []
+    },
+    {
+      "id": "route-23",
+      "name": "Route 23",
+      "order": 58,
+      "encounters": [
+        {
+          "pokemon_id": "spearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 26,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "fearow",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 38,
+              "max_level": 43,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandshrew",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandslash",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 41,
+              "max_level": 41,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "slowbro",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "kingler",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "seadra",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "seaking",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "ditto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 33,
+              "max_level": 43,
+              "rate": 35,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 35,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "order": 59,
+      "encounters": [
+        {
+          "pokemon_id": "zubat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 22,
+              "max_level": 22,
+              "rate": 15,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "golbat",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 41,
+              "max_level": 41,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "venomoth",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 40,
+              "max_level": 40,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "machop",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 24,
+              "max_level": 24,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 180,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "machoke",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 42,
+              "max_level": 42,
+              "rate": 4,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "geodude",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 26,
+              "max_level": 26,
+              "rate": 20,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "graveler",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 41,
+              "max_level": 41,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 120,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "onix",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 36,
+              "max_level": 42,
+              "rate": 30,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 45,
+          "held_items": []
+        }
+      ]
+    },
+    {
+      "id": "indigo-plateau",
+      "name": "Indigo Plateau",
+      "order": 60,
+      "encounters": []
+    },
+    {
+      "id": "champion",
+      "name": "Champion",
+      "order": 61,
+      "encounters": []
+    },
+    {
+      "id": "cerulean-cave",
+      "name": "Cerulean Cave",
+      "order": 62,
+      "encounters": [
+        {
+          "pokemon_id": "raichu",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 53,
+              "max_level": 53,
+              "rate": 4,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "sandslash",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 52,
+              "max_level": 52,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 90,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "parasect",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 52,
+              "max_level": 52,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "poliwag",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "slowbro",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "kingler",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "electrode",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 52,
+              "max_level": 52,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "marowak",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 52,
+              "max_level": 52,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "rhydon",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 52,
+              "max_level": 52,
+              "rate": 10,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "chansey",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 56,
+              "max_level": 56,
+              "rate": 5,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 30,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "seadra",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 75,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "goldeen",
+          "method": [
+            {
+              "encounter_method": "good-rod",
+              "min_level": 10,
+              "max_level": 10,
+              "rate": 50,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 225,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "seaking",
+          "method": [
+            {
+              "encounter_method": "super-rod",
+              "min_level": 23,
+              "max_level": 23,
+              "rate": 25,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 60,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "magikarp",
+          "method": [
+            {
+              "encounter_method": "old-rod",
+              "min_level": 5,
+              "max_level": 5,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 255,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "ditto",
+          "method": [
+            {
+              "encounter_method": "walk",
+              "min_level": 53,
+              "max_level": 53,
+              "rate": 1,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 35,
+          "held_items": []
+        },
+        {
+          "pokemon_id": "mewtwo",
+          "method": [
+            {
+              "encounter_method": "only-one",
+              "min_level": 70,
+              "max_level": 70,
+              "rate": 100,
+              "time": "",
+              "condition": ""
+            }
+          ],
+          "capture_rate": 3,
+          "held_items": []
+        }
+      ]
+    }
+  ]
+}
