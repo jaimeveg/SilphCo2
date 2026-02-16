@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Info, MapPin, FlaskConical, Crown, Swords, Shield, Skull, Zap } from 'lucide-react';
+import { Info, MapPin, FlaskConical, Crown, Swords, Shield, Skull, Zap, HelpCircle, Activity, Anchor, Feather, Repeat } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { TYPES } from '@/lib/typeLogic';
 
@@ -26,13 +26,13 @@ const PhaseCard = ({ label, data, isActive, onClick }: { label: string, data: Ph
         <div 
             onClick={onClick}
             className={cn(
-                "flex flex-col p-3 rounded-lg border h-full transition-all cursor-pointer relative select-none",
+                "flex flex-col p-3 rounded-lg border h-full transition-all cursor-pointer relative select-none flex-1 min-w-0 group",
                 isActive ? "ring-1 ring-cyan-500/50 bg-slate-900" : "bg-slate-950",
                 isNA ? "border-slate-800 opacity-50 grayscale" : "border-slate-800 hover:border-slate-600 hover:bg-slate-900/80"
             )}
         >
             <div className="flex justify-between items-center mb-2 border-b border-slate-800/50 pb-2">
-                <span className={cn("text-[9px] font-bold uppercase tracking-widest", isActive ? "text-cyan-400" : "text-slate-500")}>{label}</span>
+                <span className={cn("text-[9px] font-bold uppercase tracking-widest", isActive ? "text-cyan-400" : "text-slate-500 group-hover:text-slate-400")}>{label}</span>
                 {!isNA && <span className="text-[9px] font-mono text-slate-500">{data.score}</span>}
             </div>
             
@@ -40,36 +40,59 @@ const PhaseCard = ({ label, data, isActive, onClick }: { label: string, data: Ph
                 {isNA ? (
                     <span className="text-2xl font-bold text-slate-700">Ø</span>
                 ) : (
-                    <span className={cn("text-5xl font-black font-display italic", TIER_COLORS[data.tier] || TIER_COLORS['C'])}>
+                    <span className={cn("text-5xl font-black font-display italic transition-transform", TIER_COLORS[data.tier] || TIER_COLORS['C'], isActive ? "scale-110" : "scale-100 group-hover:scale-105")}>
                         {data.tier}
                     </span>
                 )}
             </div>
             
-            <p className="text-[9px] text-center text-slate-400 font-medium leading-tight mt-auto pt-2 border-t border-slate-800/50 min-h-[2.5em] flex items-center justify-center">
+            <p className={cn("text-[9px] text-center font-medium leading-tight mt-auto pt-2 border-t border-slate-800/50 min-h-[2.5em] flex items-center justify-center transition-colors",
+                isActive ? "text-slate-300" : "text-slate-500 group-hover:text-slate-400"
+            )}>
                 {data.reason}
             </p>
         </div>
     );
 };
 
+// Componente visual para los separadores de límite de gimnasio
+const GymLimitSeparator = ({ label }: { label: string }) => (
+    <div className="flex flex-col items-center justify-center w-6 shrink-0 relative z-10 opacity-30 select-none">
+        <div className="h-1/4 w-px bg-gradient-to-b from-transparent via-slate-500 to-transparent"></div>
+        <span className="text-[9px] font-mono text-slate-400 rotate-90 whitespace-nowrap origin-center my-3 tracking-tighter uppercase font-bold">
+            {label}
+        </span>
+        <div className="h-1/4 w-px bg-gradient-to-t from-transparent via-slate-500 to-transparent"></div>
+    </div>
+);
+
 export default function TacticalAssessment({ analysis }: Props) {
     const [selectedPhase, setSelectedPhase] = useState<'early' | 'mid' | 'late'>('late');
 
-    // Auto-select first available phase
     useEffect(() => {
         if (!analysis) return;
-        // Prioridad: Early -> Mid -> Late si están disponibles
-        if (analysis.phases.early.rating !== 'unavailable') setSelectedPhase('early');
-        else if (analysis.phases.mid.rating !== 'unavailable') setSelectedPhase('mid');
-        else setSelectedPhase('late');
-    }, [analysis?.meta.origin]); // Reset when pokemon changes
+        if (analysis.phases.late.rating === 'unavailable') {
+            if (analysis.phases.mid.rating !== 'unavailable') setSelectedPhase('mid');
+            else if (analysis.phases.early.rating !== 'unavailable') setSelectedPhase('early');
+        } else {
+            setSelectedPhase('late');
+        }
+    }, [analysis?.meta.origin]);
 
     if (!analysis) return null;
 
-    const { phases, meta, role, debugLog } = analysis;
+    const { phases, meta, role, debugLog, phaseLabels } = analysis;
     const activeData = phases[selectedPhase];
     const isTheoretical = meta.availabilityStatus === 'unavailable';
+
+    const downloadLog = () => {
+        const blob = new Blob([debugLog.join('\n')], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `nuzlocke_debug.log`;
+        a.click();
+    };
 
     const renderStats = () => {
         if (activeData.rating === 'unavailable') {
@@ -84,22 +107,7 @@ export default function TacticalAssessment({ analysis }: Props) {
         const s = activeData.stats;
         const items = [];
 
-        //aceKillRate: Ratio de Aces derrotados
-        //oneToOneRate: Ratio de barridos 1v1
-        //speedControlRate: Tiene Speed Control (Tailwind, Trick Room, etc)
-        //OHKoRate: Ratio de OHKO a bosses
-        //outspeedRate: Ratio de outspeeds a bosses
-        //safePivotRate: ratio de pivotes seguros (>25% HP después de recibir max damage)
-        //safeBuffRate: ratio de buff seguros (>30% HP después de recibir max damage)
-        //afeHazardsRate: ratio de colocación segura de hazards (>30% HP después de recibir max damage)
-        //safeStatusRate: ratio de colocación segura de status (>30% HP después de recibir max damage)
-        //stallRate: ratio de poder hacer estrategia de stall (toxic, leech seed, etc) de forma segura
-        //wallRate: ratio de ser un muro efectivo (>30% HP después de recibir max damage)
-        //riskRate: ratio de perder el 1 vs 1
-        //riskyPivotRate: ratio de perder el 1 vs 1 por pivotar
-        //enemyOHKORate: ratio de ser OHKO por bosses (métrica de fragilidad)
-        //coverage: numero de tipos a los que cubre de los que es débil
-        //weaknesses: numero de debilidades del poke
+        // LÓGICA DE RENDERIZADO SSOT (Intacta)
         switch (activeData.rating) {
             case 'good':
                 if (s.aceKillRate > 85) items.push({ icon: Crown, color: "text-amber-400", text: `Top-tier counter to Gym Leaders Aces with a **${s.aceKillRate}%** kill rate.` });
@@ -147,51 +155,84 @@ export default function TacticalAssessment({ analysis }: Props) {
         if (items.length === 0) items.push({ icon: Info, color: "text-slate-400", text: "Average performance across the board." });
 
         return items.map((item, i) => (
-            <div key={i} className="flex gap-3 items-center group">
-                <item.icon size={12} className={item.color} />
-                <p className="text-xs text-slate-300 font-medium" 
-                   dangerouslySetInnerHTML={{ __html: item.text.replace(/\*\*(.*?)\*\*/g, `<span class="${item.color}">$1</span>`) }} 
+            <div key={i} className="flex gap-3 items-center group animate-in fade-in slide-in-from-left-1 duration-300" style={{ animationDelay: `${i * 50}ms` }}>
+                <item.icon size={13} className={cn(item.color, "mt-0.5 shrink-0 transition-transform group-hover:scale-110")} />
+                <p className="text-[11px] text-slate-300 leading-tight font-medium" 
+                   dangerouslySetInnerHTML={{ __html: item.text.replace(/\*\*(.*?)\*\*/g, `<span class="${item.color} font-bold">$1</span>`) }} 
                 />
             </div>
         ));
     };
 
     return (
-        <div className="relative bg-[#0B101B] border border-slate-800 rounded-xl overflow-hidden shadow-2xl flex flex-col h-full">
+        <div className="relative bg-[#0B101B] border border-slate-800 rounded-xl shadow-2xl flex flex-col h-full">
             
-            {/* Header */}
-            <div className="bg-slate-900/90 border-b border-slate-800 py-3 px-5 flex justify-between items-center backdrop-blur-sm">
+            {/* Header: Z-Index 30 para apilamiento superior */}
+            <div className="bg-slate-900/90 border-b border-slate-800 py-3 px-5 flex justify-between items-center backdrop-blur-sm rounded-t-xl relative z-30">
                 <div className="flex items-center gap-3">
-                    {isTheoretical ? (
-                        <div className="flex items-center gap-2 text-blue-400">
-                            <FlaskConical size={14} />
-                            <span className="text-[11px] font-bold tracking-widest">THEORETICAL</span>
+                    <div className="flex items-center gap-2 text-emerald-400">
+                        <Activity size={14} />
+                        
+                        {/* FIX 1: Named Group 'group/tooltip' para aislar el hover */}
+                        {/* FIX 2: Hitbox ajustado con 'inline-flex', 'max-w-max', 'h-fit', 'leading-none' */}
+                        <div className="group/tooltip relative inline-flex items-center gap-2 cursor-help max-w-max h-fit leading-none">
+                            <span className="text-[11px] font-bold tracking-widest uppercase">TACTICAL VIABILITY ANALYSIS</span>
+                            <HelpCircle size={12} className="text-slate-500 group-hover/tooltip:text-emerald-400 transition-colors" />
+                            
+                            {/* FIX 3: Trigger específico 'group-hover/tooltip' */}
+                            {/* FIX 4: Posición Dropdown 'top-full left-0 mt-3' y Z-50 */}
+                            <div className="absolute top-full left-0 mt-3 w-64 p-3 bg-slate-950 border border-slate-700/80 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.5)] opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-50">
+                                <p className="text-[9px] text-slate-300 leading-relaxed font-mono text-left">
+                                    <span className="text-emerald-400 font-bold block mb-1">SIMULATION DISCLAIMER</span>
+                                    Results based on automated engine logic. Actual in-game performance may vary due to AI behavior, specific movesets, abilities, and RNG factors.
+                                </p>
+                            </div>
                         </div>
-                    ) : (
-                        <div className="flex items-center gap-2 text-emerald-400">
-                            <MapPin size={14} />
-                            <span className="text-[11px] font-bold tracking-widest uppercase">
-                                {meta.origin ? `FOUND: ${meta.origin}` : 'AVAILABLE'}
-                            </span>
-                        </div>
-                    )}
+                    </div>
                 </div>
                 <div className="flex items-center gap-3">
                     <div className="px-2 py-0.5 bg-slate-800 rounded border border-slate-700 flex items-center gap-1.5">
                         <Zap size={10} className="text-yellow-400" />
                         <span className="text-[10px] font-bold text-slate-200 uppercase">{role}</span>
                     </div>
+                    <button onClick={downloadLog} className="text-[9px] text-slate-600 hover:text-slate-400 underline decoration-slate-700 transition-colors ml-2">
+                        LOGS
+                    </button>
                 </div>
             </div>
 
-            <div className="p-5 flex flex-col gap-5">
-                <div className="grid grid-cols-3 gap-3">
-                    <PhaseCard label="EARLY" data={phases.early} isActive={selectedPhase === 'early'} onClick={() => setSelectedPhase('early')} />
-                    <PhaseCard label="MID" data={phases.mid} isActive={selectedPhase === 'mid'} onClick={() => setSelectedPhase('mid')} />
-                    <PhaseCard label="LATE" data={phases.late} isActive={selectedPhase === 'late'} onClick={() => setSelectedPhase('late')} />
+            {/* Content: Z-10 para quedar bajo el header */}
+            <div className="p-5 flex flex-col gap-5 flex-1 rounded-b-xl relative z-10">
+                {/* 3 Split Phases Grid con Separadores (FLEX) */}
+                <div className="flex items-stretch justify-between gap-1 h-32">
+                    <PhaseCard 
+                        label="EARLY" 
+                        data={phases.early} 
+                        isActive={selectedPhase === 'early'} 
+                        onClick={() => setSelectedPhase('early')} 
+                    />
+                    
+                    <GymLimitSeparator label={phaseLabels?.earlySplit || 'GYM 3'} />
+
+                    <PhaseCard 
+                        label="MID" 
+                        data={phases.mid} 
+                        isActive={selectedPhase === 'mid'} 
+                        onClick={() => setSelectedPhase('mid')} 
+                    />
+
+                    <GymLimitSeparator label={phaseLabels?.midSplit || 'GYM 6'} />
+
+                    <PhaseCard 
+                        label="LATE" 
+                        data={phases.late} 
+                        isActive={selectedPhase === 'late'} 
+                        onClick={() => setSelectedPhase('late')} 
+                    />
                 </div>
 
-                <div className="space-y-3 bg-slate-900/40 p-4 rounded border border-slate-800/50 min-h-[80px] flex flex-col justify-center">
+                {/* Dynamic Stats Section */}
+                <div className="space-y-3 bg-slate-900/40 p-4 rounded border border-slate-800/50 min-h-[100px] flex flex-col justify-center">
                     {renderStats()}
                 </div>
             </div>
