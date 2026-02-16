@@ -39,7 +39,7 @@ import {
 
 // --- CONFIGURACIÓN ---
 const INPUT_ROOT = path.join(process.cwd(), 'nuzlocke.data-main');
-const OUTPUT_ROOT = path.join(process.cwd(), 'src/data/games');
+const OUTPUT_ROOT = path.join(process.cwd(), 'public/data/games');
 const P = new Pokedex();
 
 // --- UTILS ---

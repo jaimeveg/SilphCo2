@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-// CORRECCIÓN: Usamos el alias '@' para apuntar a la raíz de 'src' de forma segura
 import { locales, defaultLocale } from '@/i18n/settings'; 
 
 export function middleware(request: NextRequest) {
@@ -21,8 +20,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher optimizado para ignorar estáticos
+  // AJUSTE CLAVE: Añadido '|data' a la lista de exclusiones (negative lookahead)
+  // Esto evita que Next.js intente traducir las rutas de tus JSONs
   matcher: [
-    '/((?!api|_next/static|_next/image|images|img|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!api|_next/static|_next/image|images|img|favicon.ico|data).*)',
   ],
 };

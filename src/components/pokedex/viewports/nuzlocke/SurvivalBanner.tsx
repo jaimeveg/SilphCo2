@@ -1,16 +1,16 @@
 import { Lang } from "@/lib/pokedexDictionary";
 
-// Aceptamos `t` (diccionario) como prop para no importarlo de nuevo
 export default function SurvivalBanner({ analysis, t }: { analysis: any, t: any, lang: Lang }) {
-    const tierColors = {
-        S: 'bg-purple-600 border-purple-400',
-        A: 'bg-emerald-600 border-emerald-400',
-        B: 'bg-blue-600 border-blue-400',
-        C: 'bg-yellow-600 border-yellow-400',
-        D: 'bg-red-600 border-red-400',
+    const tierConfig = {
+        S: { color: 'text-purple-400', border: 'border-purple-500/50', bg: 'bg-purple-500/10' },
+        A: { color: 'text-emerald-400', border: 'border-emerald-500/50', bg: 'bg-emerald-500/10' },
+        B: { color: 'text-blue-400', border: 'border-blue-500/50', bg: 'bg-blue-500/10' },
+        C: { color: 'text-yellow-400', border: 'border-yellow-500/50', bg: 'bg-yellow-500/10' },
+        D: { color: 'text-red-400', border: 'border-red-500/50', bg: 'bg-red-500/10' },
     };
 
-    // Función simple para traducir los tags que vienen del hook en inglés
+    const style = tierConfig[analysis.tier as keyof typeof tierConfig] || tierConfig.C;
+
     const translateTag = (tag: string) => {
         if (tag === "Early Carry") return t.tags.earlyCarry;
         if (tag === "Late Scaler") return t.tags.lateScaler;
@@ -20,45 +20,48 @@ export default function SurvivalBanner({ analysis, t }: { analysis: any, t: any,
     };
 
     return (
-        <div className="relative bg-slate-900/50 rounded-lg p-4 border border-slate-700 overflow-hidden">
-            <div className="flex items-start gap-4">
+        <div className="bg-[#0F1629] rounded border border-slate-800 p-5 shadow-lg relative overflow-hidden">
+            {/* Background Accent */}
+            <div className={`absolute top-0 right-0 w-32 h-32 blur-3xl opacity-10 ${style.bg.replace('/10', '')}`} />
+
+            <div className="flex gap-5 relative z-10">
+                {/* Big Tier Badge */}
                 <div className={`
-                    w-16 h-16 flex items-center justify-center rounded-lg border-2 text-3xl font-bold shadow-lg
-                    ${tierColors[analysis.tier as keyof typeof tierColors] || 'bg-slate-700'}
+                    w-20 h-20 flex flex-col items-center justify-center rounded border-2 backdrop-blur-sm
+                    ${style.border} ${style.bg} ${style.color}
                 `}>
-                    {analysis.tier}
+                    <span className="text-4xl font-black italic leading-none">{analysis.tier}</span>
+                    <span className="text-[10px] font-bold uppercase opacity-80 mt-1">TIER</span>
                 </div>
 
-                <div className="flex-1">
-                    <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
+                <div className="flex-1 min-w-0">
+                    <h3 className="text-slate-100 font-bold uppercase tracking-wider text-sm flex items-center gap-2 mb-2">
                         {t.tierTitle}
+                    </h3>
+                    
+                    <div className="flex flex-wrap gap-2 mb-3">
                         {analysis.tags.map((tag: string) => (
-                            <span key={tag} className="text-xs bg-slate-700 px-2 py-0.5 rounded-full text-cyan-300 border border-slate-600">
+                            <span key={tag} className="text-[10px] font-mono bg-slate-800 text-cyan-300 px-2 py-1 rounded border border-slate-700 uppercase">
                                 {translateTag(tag)}
                             </span>
                         ))}
-                    </h3>
-                    <p className="text-sm text-slate-400 mt-1">{t.tierDesc(analysis.tier)}</p>
-                    
-                    <div className="mt-3 grid grid-cols-3 gap-2">
-                        <div className="flex flex-col gap-1">
-                            <span className="text-[10px] uppercase text-slate-500 font-bold">{t.phases.early}</span>
-                            <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-                                <div className="h-full bg-cyan-500" style={{ width: `${analysis.phaseUtility.early}%` }} />
+                    </div>
+
+                    {/* Progress Bars */}
+                    <div className="space-y-2">
+                        {['early', 'mid', 'late'].map((phase) => (
+                            <div key={phase} className="flex items-center gap-3">
+                                <span className="text-[9px] uppercase text-slate-500 font-bold w-12 text-right">
+                                    {t.phases[phase as keyof typeof t.phases]}
+                                </span>
+                                <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                                    <div 
+                                        className={`h-full ${style.bg.replace('/10', '')} transition-all duration-500`}
+                                        style={{ width: `${analysis.phaseUtility[phase]}%` }} 
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <span className="text-[10px] uppercase text-slate-500 font-bold">{t.phases.mid}</span>
-                            <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-                                <div className="h-full bg-cyan-500" style={{ width: `${analysis.phaseUtility.mid}%` }} />
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <span className="text-[10px] uppercase text-slate-500 font-bold">{t.phases.late}</span>
-                            <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-                                <div className="h-full bg-cyan-500" style={{ width: `${analysis.phaseUtility.late}%` }} />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

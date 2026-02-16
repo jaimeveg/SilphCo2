@@ -1,162 +1,85 @@
 import { useState, useEffect, useMemo } from 'react';
-import { IPokemon, IStat } from '@/types/interfaces';
-import { 
-  GameManifest, 
-  BossDatabase, 
-  BalancePatch, 
-  NuzlockeStats
-} from '@/types/nuzlocke'; // Asegúrate de que NuzlockeStats esté exportado en nuzlocke.ts
+import { IPokemon } from '@/types/interfaces';
+import { analyzeNuzlockeViability, SimulationResult } from '@/lib/utils/nuzlockeEngine';
 
-interface NuzlockeContext {
-  manifest: GameManifest | null;
-  bosses: BossDatabase | null;
-  patch: BalancePatch | null;
+import staticBaseDex from '@/data/pokedex_base_stats.json';
+import staticMoveDex from '@/data/move_dex.json';
+import staticMovepoolDex from '@/data/movepool_dex.json';
+import staticPokedexIds from '@/data/pokedex_ids.json';
+
+interface NuzlockeState {
+  manifest: any | null;
+  bosses: any | null;
+  patch: any | null;
   loading: boolean;
+  error: boolean;
 }
 
-interface AnalysisResult {
-  tier: 'S' | 'A' | 'B' | 'C' | 'D';
-  tags: string[];
-  description: string;
-  phaseUtility: { early: number; mid: number; late: number }; 
-  patchChanges: { statDiff: Partial<NuzlockeStats> | null; typeChanged: boolean };
-}
-
-// Helper para convertir el array visual de stats a objeto de cálculo
-const mapStatsToNuzlocke = (statsArray: IStat[]): NuzlockeStats => {
-    const findValue = (labels: string[]) => {
-        const stat = statsArray.find(s => labels.includes(s.label.toLowerCase()));
-        return stat ? stat.value : 0;
-    };
-
-    return {
-        hp: findValue(['hp']),
-        atk: findValue(['attack', 'atk']),
-        def: findValue(['defense', 'def']),
-        spa: findValue(['special-attack', 'sp. atk', 'special attack', 'spa']),
-        spd: findValue(['special-defense', 'sp. def', 'special defense', 'spd']),
-        spe: findValue(['speed', 'spe'])
-    };
+type AnalysisResult = SimulationResult & { 
+    patchChanges: any | null;
+    isUnavailable?: boolean; 
 };
 
-export const useNuzlockeAnalysis = (pokemon: IPokemon, gameId: string | null) => {
-  const [data, setData] = useState<NuzlockeContext>({
+export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) => {
+  const [data, setData] = useState<NuzlockeState>({
     manifest: null,
     bosses: null,
     patch: null,
-    loading: false
+    loading: false,
+    error: false
   });
 
-  // Generamos el slug aquí si no existe en la interfaz
-  const pokemonSlug = pokemon.name.toLowerCase();
-
-  // 1. Carga dinámica de datos del juego
   useEffect(() => {
-    if (!gameId) return;
-
-    const loadGameData = async () => {
+    if (!gamePath) return;
+    const loadData = async () => {
       setData(prev => ({ ...prev, loading: true }));
       try {
-        const basePath = `/data/games/${gameId}`; 
-        
-        const [manifestRes, bossesRes] = await Promise.all([
-          fetch(`${basePath}/manifest.json`),
-          fetch(`${basePath}/bosses.json`)
+        const basePath = `/data/games/${gamePath}`;
+        const [manifestRes, bossesRes, patchRes] = await Promise.all([
+            fetch(`${basePath}/manifest.json`),
+            fetch(`${basePath}/bosses.json`),
+            fetch(`${basePath}/patch.json`)
         ]);
 
-        if (!manifestRes.ok || !bossesRes.ok) throw new Error("Data missing");
+        const manifest = manifestRes.ok ? await manifestRes.json() : null;
+        const bosses = bossesRes.ok ? await bossesRes.json() : null;
+        const patch = patchRes.ok ? await patchRes.json() : null;
 
-        const manifest = await manifestRes.json();
-        const bosses = await bossesRes.json();
-        
-        let patch = null;
-        try {
-            const patchRes = await fetch(`${basePath}/patch.json`);
-            if(patchRes.ok) patch = await patchRes.json();
-        } catch (e) { /* No patch exists */ }
-
-        setData({ manifest, bosses, patch, loading: false });
+        setData({ manifest, bosses, patch, loading: false, error: false });
       } catch (e) {
-        console.error("Failed to load game data", e);
-        setData(prev => ({ ...prev, loading: false }));
+        setData(prev => ({ ...prev, loading: false, error: true }));
       }
     };
+    loadData();
+  }, [gamePath]);
 
-    loadGameData();
-  }, [gameId]);
-
-  // 2. Algoritmo de Tiering Memoizado
   const analysis = useMemo((): AnalysisResult | null => {
     if (!data.bosses || !pokemon) return null;
 
-    // Convertir stats array a objeto
-    const baseStats = mapStatsToNuzlocke(pokemon.stats);
+    try {
+        const result = analyzeNuzlockeViability(
+            pokemon, 
+            data.bosses, 
+            data.manifest,
+            staticBaseDex, 
+            staticMoveDex,
+            staticMovepoolDex, 
+            staticPokedexIds
+        );
 
-    let totalScore = 0;
-    const tags: string[] = [];
-    const phases = { early: 0, mid: 0, late: 0 };
-    
-    // --- LÓGICA DE PARCHE ---
-    let activeStats = { ...baseStats };
-    let activeTypes = pokemon.types;
-    let statDiff: Partial<NuzlockeStats> | null = null;
-    let typeChanged = false;
+        const isPostGame = result.meta.availabilityStatus === 'postgame' || result.meta.availabilityStatus === 'unavailable';
 
-    if (data.patch && data.patch.pokemon && data.patch.pokemon[pokemonSlug]) {
-        const changes = data.patch.pokemon[pokemonSlug];
-        if (changes.base_stats) {
-            statDiff = {};
-            (Object.keys(changes.base_stats) as Array<keyof NuzlockeStats>).forEach(k => {
-                // TypeScript ahora sabe que k es una key válida de NuzlockeStats
-                if (changes.base_stats && changes.base_stats[k] !== undefined) {
-                    const newVal = changes.base_stats[k]!;
-                    statDiff![k] = newVal;
-                    activeStats[k] = newVal;
-                }
-            });
-        }
-        if (changes.types) {
-            activeTypes = changes.types;
-            typeChanged = true;
-        }
+        return {
+            ...result,
+            patchChanges: null,
+            isUnavailable: isPostGame
+        };
+    } catch (e) {
+        console.error("Analysis Engine Error:", e);
+        return null;
     }
 
-    const bst = Object.values(activeStats).reduce((a, b) => a + b, 0);
-
-    // --- LÓGICA SIMPLIFICADA DE FASES ---
-    data.bosses.forEach((boss, index) => {
-        if (activeStats.spe > 80) totalScore += 1; 
-
-        // Asignar puntos a fases
-        if (index < 3) phases.early += (bst > 300 ? 20 : 10);
-        else if (index < 6) phases.mid += (bst > 450 ? 20 : 10);
-        else phases.late += (bst > 520 ? 20 : 10);
-    });
-
-    phases.early = Math.min(100, phases.early);
-    phases.mid = Math.min(100, phases.mid);
-    phases.late = Math.min(100, phases.late);
-
-    if (phases.early > 80) tags.push("Early Carry");
-    if (phases.late > 90) tags.push("Late Scaler");
-    if (typeChanged) tags.push("Re-Typed");
-    if (statDiff) tags.push("Buffed Stats");
-
-    const avgScore = (phases.early + phases.mid + phases.late) / 3;
-    let tier: AnalysisResult['tier'] = 'C';
-    if (avgScore > 90) tier = 'S';
-    else if (avgScore > 75) tier = 'A';
-    else if (avgScore > 50) tier = 'B';
-
-    return {
-        tier,
-        tags,
-        description: `Solid ${tier}-Tier pick. ${tags.join(', ')}.`,
-        phaseUtility: phases,
-        patchChanges: { statDiff, typeChanged }
-    };
-
-  }, [pokemon, data.bosses, data.patch, pokemonSlug]);
+  }, [pokemon, data.bosses, data.manifest]);
 
   return { ...data, analysis };
 };
