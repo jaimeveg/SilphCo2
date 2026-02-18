@@ -195,9 +195,7 @@ export default function TacticalAssessment({ analysis }: Props) {
                         <Zap size={10} className="text-yellow-400" />
                         <span className="text-[10px] font-bold text-slate-200 uppercase">{role}</span>
                     </div>
-                    <button onClick={downloadLog} className="text-[9px] text-slate-600 hover:text-slate-400 underline decoration-slate-700 transition-colors ml-2">
-                        LOGS
-                    </button>
+                    
                 </div>
             </div>
 

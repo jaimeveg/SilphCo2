@@ -154,7 +154,6 @@ const generatePhaseReason = (stats: PhaseStats, rating: PhaseRating, pokeBst: nu
             if (stats.oneToOneRate < 20 && stats.riskRate > 35) reason = "Struggles to secure kills and can be a liability.";
             if (reason === "") reason = "Below average pick with significant weaknesses.";
             if (stats.riskRate < 30 && stats.enemyOHKORate < 20) reason += " However, it can still find niche uses in the right matchups.";
-            if (stats.enemyOHKORate > 20) reason += " Additionally, it has a high risk of being OHKO'd by bosses.";
             if (phase === 'late' && pokeBst+130 < bstAvg) reason = " Stats falling hard behind the curve.";
             if (phase === 'mid' && pokeBst+120 < bstAvg) reason = " Stats falling hard behind the curve.";
     }

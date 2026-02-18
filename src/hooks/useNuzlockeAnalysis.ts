@@ -69,9 +69,22 @@ export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) 
 
         const isPostGame = result.meta.availabilityStatus === 'postgame' || result.meta.availabilityStatus === 'unavailable';
 
+        // Lógica de Parches (Debugging Fix)
+        let patchChanges = null;
+        if (data.patch) {
+            // Intentar buscar por ID numérico
+            if (data.patch[pokemon.id]) {
+                patchChanges = data.patch[pokemon.id];
+            } 
+            // Intentar buscar por Slug (nombre minúsculas)
+            else if (data.patch[pokemon.name.toLowerCase()]) {
+                patchChanges = data.patch[pokemon.name.toLowerCase()];
+            }
+        }
+
         return {
             ...result,
-            patchChanges: null,
+            patchChanges: patchChanges, // Aseguramos que se pasa al componente
             isUnavailable: isPostGame
         };
     } catch (e) {
@@ -79,7 +92,7 @@ export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) 
         return null;
     }
 
-  }, [pokemon, data.bosses, data.manifest]);
+  }, [pokemon, data.bosses, data.manifest, data.patch]);
 
   return { ...data, analysis };
 };
