@@ -15,8 +15,14 @@ interface NuzlockeState {
   error: boolean;
 }
 
+// Interfaz adaptada a lo que espera PatchDiff.tsx
+interface PatchDataFormatted {
+    statDiff: any | null;
+    typeChanged: boolean;
+}
+
 type AnalysisResult = SimulationResult & { 
-    patchChanges: any | null;
+    patchChanges: PatchDataFormatted | null;
     isUnavailable?: boolean; 
 };
 
@@ -35,17 +41,24 @@ export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) 
       setData(prev => ({ ...prev, loading: true }));
       try {
         const basePath = `/data/games/${gamePath}`;
-        const [manifestRes, bossesRes, patchRes] = await Promise.all([
+        
+        const [manifestRes, bossesRes] = await Promise.all([
             fetch(`${basePath}/manifest.json`),
-            fetch(`${basePath}/bosses.json`),
-            fetch(`${basePath}/patch.json`)
+            fetch(`${basePath}/bosses.json`)
         ]);
+
+        let patchData = null;
+        try {
+            const patchRes = await fetch(`${basePath}/patch.json`);
+            if (patchRes.ok) patchData = await patchRes.json();
+        } catch (e) {
+            // Patch file is optional
+        }
 
         const manifest = manifestRes.ok ? await manifestRes.json() : null;
         const bosses = bossesRes.ok ? await bossesRes.json() : null;
-        const patch = patchRes.ok ? await patchRes.json() : null;
 
-        setData({ manifest, bosses, patch, loading: false, error: false });
+        setData({ manifest, bosses, patch: patchData, loading: false, error: false });
       } catch (e) {
         setData(prev => ({ ...prev, loading: false, error: true }));
       }
@@ -69,22 +82,39 @@ export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) 
 
         const isPostGame = result.meta.availabilityStatus === 'postgame' || result.meta.availabilityStatus === 'unavailable';
 
-        // Lógica de Parches (Debugging Fix)
-        let patchChanges = null;
+        // --- LÓGICA DE PARCHES (FIXED) ---
+        let formattedPatch: PatchDataFormatted | null = null;
+        
         if (data.patch) {
-            // Intentar buscar por ID numérico
-            if (data.patch[pokemon.id]) {
-                patchChanges = data.patch[pokemon.id];
-            } 
-            // Intentar buscar por Slug (nombre minúsculas)
-            else if (data.patch[pokemon.name.toLowerCase()]) {
-                patchChanges = data.patch[pokemon.name.toLowerCase()];
+            // 1. Acceder al mapa correcto (patch.json suele tener estructura { pokemon: {...} })
+            const patchMap = data.patch.pokemon || data.patch;
+            
+            // 2. Normalizar claves
+            const pId = pokemon.id;
+            const pName = pokemon.name.toLowerCase();
+            const pSlug = pName.replace(/ /g, '-');
+            const pSlugClean = pSlug.replace(/[^a-z0-9-]/g, '');
+
+            // 3. Encontrar el nodo "crudo"
+            const rawNode = 
+                patchMap[pSlug] || 
+                patchMap[pName] || 
+                patchMap[pSlugClean] ||
+                patchMap[pId] || 
+                patchMap[String(pId)];
+
+            // 4. TRANSFORMAR al formato que espera PatchDiff ({ statDiff, typeChanged })
+            if (rawNode) {
+                formattedPatch = {
+                    statDiff: rawNode.base_stats || null, // Mapear 'base_stats' del JSON a 'statDiff' del componente
+                    typeChanged: !!rawNode.types // Si hay array de tipos, es que cambiaron
+                };
             }
         }
 
         return {
             ...result,
-            patchChanges: patchChanges, // Aseguramos que se pasa al componente
+            patchChanges: formattedPatch, // Pasamos el objeto formateado
             isUnavailable: isPostGame
         };
     } catch (e) {

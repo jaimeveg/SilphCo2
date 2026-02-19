@@ -132,7 +132,6 @@ const generatePhaseReason = (stats: PhaseStats, rating: PhaseRating, pokeBst: nu
             if (stats.OHKoRate > 45 && stats.outspeedRate > 40) reason = "Powerful offensive threat with strong matchups.";
             if (stats.safePivotRate > 50 && stats.wallRate > 50) reason = "Reliable defensive pivot and wall.";
             if (reason === "") reason = "Strong pick with solid performance and good matchups.";
-            if (stats.riskRate > 30 && stats.enemyOHKORate < 10) reason += " However, be cautious of its fragility.";
             if (stats.enemyOHKORate > 30) reason += " However, it has a high risk of being OHKO'd by bosses.";
             break
         case 'avg':
@@ -141,8 +140,6 @@ const generatePhaseReason = (stats: PhaseStats, rating: PhaseRating, pokeBst: nu
             if (stats.OHKoRate > 25 && stats.outspeedRate > 25) reason = "Threatening offensive presence in the right matchups.";
             if (stats.safePivotRate > 30 && stats.wallRate > 30) reason = "Decent defensive option with some utility.";
             if (reason === "") reason = "Average pick with a mix of strengths and weaknesses.";
-            if (stats.riskRate > 40 && stats.enemyOHKORate < 25) reason += " However, it can be quite risky to use in critical moments.";
-            if (stats.enemyOHKORate > 25) reason += " However, it has a noticeable risk of being OHKO'd by bosses.";
             if (phase === 'late' && pokeBst+100 < bstAvg) reason = "Stats falling behind the curve.";
             if (phase === 'mid' && pokeBst+90 < bstAvg) reason = "Stats falling behind the curve.";
             break;
@@ -153,7 +150,6 @@ const generatePhaseReason = (stats: PhaseStats, rating: PhaseRating, pokeBst: nu
             if (stats.riskRate > 50) reason = "High risk of death makes it a liability.";
             if (stats.oneToOneRate < 20 && stats.riskRate > 35) reason = "Struggles to secure kills and can be a liability.";
             if (reason === "") reason = "Below average pick with significant weaknesses.";
-            if (stats.riskRate < 30 && stats.enemyOHKORate < 20) reason += " However, it can still find niche uses in the right matchups.";
             if (phase === 'late' && pokeBst+130 < bstAvg) reason = " Stats falling hard behind the curve.";
             if (phase === 'mid' && pokeBst+120 < bstAvg) reason = " Stats falling hard behind the curve.";
     }

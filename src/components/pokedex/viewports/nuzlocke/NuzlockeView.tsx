@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { IPokemon } from '@/types/interfaces';
 import { Lang } from '@/lib/pokedexDictionary';
 import { getNuzlockeDict } from '@/lib/dictionaries/nuzlockeDict';
 import { useNuzlockeAnalysis } from '@/hooks/useNuzlockeAnalysis';
-import { NuzlockeStats, GameSegment, BossBattle, BossPokemon } from '@/types/nuzlocke';
+import { NuzlockeStats, BossBattle } from '@/types/nuzlocke';
 import { IStat } from '@/types/interfaces';
 
 import staticGamesIndex from '@/data/games_index.json';
@@ -54,14 +54,6 @@ export default function NuzlockeView({ pokemon, lang }: Props) {
   const statsObject = getStatsObject(pokemon.stats);
   const filteredGames = staticGamesIndex.filter(g => g.type.toLowerCase() === selectedType.toLowerCase());
 
-  const isCatchable = manifest?.segments.some((seg: GameSegment) => 
-      seg.encounters.some((e: any) => e.pokemon_id === pokemonSlug)
-  );
-  
-  const hasBossBattles = bosses?.some((b: BossBattle) => 
-      b.team.some((p: BossPokemon) => p.pokemon_id === pokemonSlug)
-  );
-
   useEffect(() => {
     const isValid = filteredGames.find(g => g.path === selectedGamePath);
     if (!isValid && filteredGames.length > 0) {
@@ -69,8 +61,20 @@ export default function NuzlockeView({ pokemon, lang }: Props) {
     }
   }, [selectedType, filteredGames, selectedGamePath]);
 
-  // Pantalla de error si no disponible
   const showUnavailableScreen = analysis?.isUnavailable;
+
+  // LÓGICA DE FILTRADO CORREGIDA: Bosses que TIENEN al Pokémon en su equipo
+  const relevantBosses = useMemo(() => {
+      if (!bosses) return [];
+      
+      return bosses.filter((b: BossBattle) => {
+          // Buscamos si el slug del pokemon está en el equipo del boss
+          // Normalizamos slugs por si acaso (ej: "nidoran-m" vs "nidoran-male")
+          return b.team.some(p => p.pokemon_id === pokemonSlug);
+      });
+  }, [bosses, pokemonSlug]);
+
+  const hasBossBattles = relevantBosses && relevantBosses.length > 0;
 
   return (
     <div className="h-full flex flex-col bg-[#0B1221] font-sans text-slate-300 relative">
@@ -106,7 +110,7 @@ export default function NuzlockeView({ pokemon, lang }: Props) {
         </div>
 
         {/* CONTENT */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-6 space-y-6">
+        <div className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-6">
             
             {loading && (
                 <div className="h-full flex items-center justify-center">
@@ -124,31 +128,17 @@ export default function NuzlockeView({ pokemon, lang }: Props) {
                 </div>
             )}
             
-            {!loading && manifest && !error && !showUnavailableScreen && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-in fade-in duration-500">
+            {!loading && manifest && !error && !showUnavailableScreen && analysis && (
+                <div className="flex flex-col gap-6 animate-in fade-in duration-500 max-w-5xl mx-auto pb-10">
                     
-                    <div className="lg:col-span-2 relative group">
-                        {analysis && <TacticalAssessment analysis={analysis} />}
+                    {/* 1. Tactical Assessment */}
+                    <div className="flex flex-col gap-4">
+                        <TacticalAssessment analysis={analysis} />
                     </div>
 
-                    <div className={!hasBossBattles ? "lg:col-span-2" : "lg:col-span-1"}>
-                        {isCatchable ? (
-                            <EncounterTable pokemonSlug={pokemonSlug} segments={manifest.segments} t={t} />
-                        ) : (
-                            <div className="h-full flex items-center justify-center bg-slate-900/30 border border-slate-800 rounded-lg p-6 text-center">
-                                <p className="text-xs text-slate-500 font-mono">ENCOUNTER DATA NOT FOUND</p>
-                            </div>
-                        )}
-                    </div>
-
-                    {hasBossBattles && (
-                         <div className="lg:col-span-1">
-                            <BossThreats pokemonSlug={pokemonSlug} bosses={bosses} t={t} />
-                         </div>
-                    )}
-                    
-                    {patch && analysis?.patchChanges && (
-                        <div className="lg:col-span-2">
+                    {/* 2. Patch Notes (Conditional) */}
+                    {patch && analysis.patchChanges && (
+                        <div className="w-full">
                              <PatchDiff 
                                 originalStats={statsObject} 
                                 changes={analysis.patchChanges} 
@@ -157,6 +147,24 @@ export default function NuzlockeView({ pokemon, lang }: Props) {
                             />
                         </div>
                     )}
+
+                    {/* 3. Encounter Intelligence */}
+                    <div className="w-full">
+                        <EncounterTable 
+                            pokemonSlug={pokemonSlug} 
+                            pokemonId={pokemon.id}
+                            segments={manifest.segments} 
+                            t={t} 
+                        />
+                    </div>
+
+                    {/* 4. Boss Appearances (Appearances as Enemy) */}
+                    {hasBossBattles && (
+                         <div className="w-full">
+                            <BossThreats pokemonSlug={pokemonSlug} bosses={relevantBosses} t={t} />
+                         </div>
+                    )}
+                    
                 </div>
             )}
         </div>
