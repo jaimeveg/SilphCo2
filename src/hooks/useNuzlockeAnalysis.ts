@@ -15,7 +15,6 @@ interface NuzlockeState {
   error: boolean;
 }
 
-// Interfaz adaptada a lo que espera PatchDiff.tsx
 interface PatchDataFormatted {
     statDiff: any | null;
     typeChanged: boolean;
@@ -51,11 +50,15 @@ export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) 
         try {
             const patchRes = await fetch(`${basePath}/patch.json`);
             if (patchRes.ok) patchData = await patchRes.json();
-        } catch (e) {
-            // Patch file is optional
-        }
+        } catch (e) {}
 
         const manifest = manifestRes.ok ? await manifestRes.json() : null;
+        
+        // NUEVO: Flaggar si es Vanilla para controlar cruces generacionales
+        if (manifest) {
+            manifest.isVanilla = gamePath.includes('vanilla');
+        }
+
         const bosses = bossesRes.ok ? await bossesRes.json() : null;
 
         setData({ manifest, bosses, patch: patchData, loading: false, error: false });
@@ -70,51 +73,72 @@ export const useNuzlockeAnalysis = (pokemon: IPokemon, gamePath: string | null) 
     if (!data.bosses || !pokemon) return null;
 
     try {
+        let formattedPatch: PatchDataFormatted | null = null;
+        let patchedBaseDex = staticBaseDex;
+        let patchedMoveDex = staticMoveDex;
+
+        if (data.patch) {
+            const patchMap = data.patch.pokemon || data.patch;
+            const patchMoves = data.patch.moves || {};
+            
+            const pId = pokemon.id;
+            const pName = pokemon.name.toLowerCase();
+            const pSlug = pName.replace(/ /g, '-');
+            const pSlugClean = pSlug.replace(/[^a-z0-9-]/g, ''); 
+
+            const rawNode = 
+                patchMap[pSlug] || patchMap[pName] || patchMap[pSlugClean] || patchMap[pId] || patchMap[String(pId)];
+
+            if (rawNode) {
+                formattedPatch = {
+                    statDiff: rawNode.base_stats || null, 
+                    typeChanged: !!rawNode.types 
+                };
+            }
+
+            patchedBaseDex = JSON.parse(JSON.stringify(staticBaseDex));
+            patchedMoveDex = JSON.parse(JSON.stringify(staticMoveDex));
+
+            for (const [key, changes] of Object.entries<any>(patchMap)) {
+                let id: any = key;
+                if (isNaN(Number(key))) {
+                    // @ts-ignore
+                    id = staticPokedexIds[key] || staticPokedexIds[key.replace(/[^a-z0-9-]/g, '')];
+                }
+                
+                if (id && patchedBaseDex[id as keyof typeof patchedBaseDex]) {
+                    const dexEntry = patchedBaseDex[id as keyof typeof patchedBaseDex] as any;
+                    if (changes.base_stats) dexEntry.stats = { ...dexEntry.stats, ...changes.base_stats };
+                    if (changes.types) dexEntry.types = changes.types;
+                    if (changes.abilities) dexEntry.abilities = changes.abilities;
+                }
+            }
+
+            for (const [mKey, mChanges] of Object.entries<any>(patchMoves)) {
+                const moveEntry = patchedMoveDex[mKey as keyof typeof patchedMoveDex] as any;
+                if (moveEntry) {
+                    patchedMoveDex[mKey as keyof typeof patchedMoveDex] = { ...moveEntry, ...mChanges };
+                } else {
+                    // @ts-ignore
+                    patchedMoveDex[mKey] = {
+                        name: mKey, type: mChanges.type || 'normal', category: mChanges.category || 'physical',
+                        power: mChanges.power || 0, accuracy: mChanges.accuracy || 100, pp: mChanges.pp || 10,
+                        tactics: mChanges.tactics || {}, ...mChanges
+                    };
+                }
+            }
+        }
+
         const result = analyzeNuzlockeViability(
-            pokemon, 
-            data.bosses, 
-            data.manifest,
-            staticBaseDex, 
-            staticMoveDex,
-            staticMovepoolDex, 
-            staticPokedexIds
+            pokemon, data.bosses, data.manifest,
+            patchedBaseDex, patchedMoveDex, staticMovepoolDex, staticPokedexIds
         );
 
         const isPostGame = result.meta.availabilityStatus === 'postgame' || result.meta.availabilityStatus === 'unavailable';
 
-        // --- LÓGICA DE PARCHES (FIXED) ---
-        let formattedPatch: PatchDataFormatted | null = null;
-        
-        if (data.patch) {
-            // 1. Acceder al mapa correcto (patch.json suele tener estructura { pokemon: {...} })
-            const patchMap = data.patch.pokemon || data.patch;
-            
-            // 2. Normalizar claves
-            const pId = pokemon.id;
-            const pName = pokemon.name.toLowerCase();
-            const pSlug = pName.replace(/ /g, '-');
-            const pSlugClean = pSlug.replace(/[^a-z0-9-]/g, '');
-
-            // 3. Encontrar el nodo "crudo"
-            const rawNode = 
-                patchMap[pSlug] || 
-                patchMap[pName] || 
-                patchMap[pSlugClean] ||
-                patchMap[pId] || 
-                patchMap[String(pId)];
-
-            // 4. TRANSFORMAR al formato que espera PatchDiff ({ statDiff, typeChanged })
-            if (rawNode) {
-                formattedPatch = {
-                    statDiff: rawNode.base_stats || null, // Mapear 'base_stats' del JSON a 'statDiff' del componente
-                    typeChanged: !!rawNode.types // Si hay array de tipos, es que cambiaron
-                };
-            }
-        }
-
         return {
             ...result,
-            patchChanges: formattedPatch, // Pasamos el objeto formateado
+            patchChanges: formattedPatch,
             isUnavailable: isPostGame
         };
     } catch (e) {

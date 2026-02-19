@@ -215,3 +215,39 @@ export interface BalancePatch {
   abilities?: Record<string, AbilityChange>;
   type_chart?: TypeChartChange[];
 }
+
+export interface PhaseStats {
+    totalBattles: number;
+    participatedBattles: number;
+    aceKillRate: number;
+    oneToOneRate: number;
+    speedControlRate: number;
+    OHKoRate: number;
+    outspeedRate: number;
+    safePivotRate: number;
+    safeBuffRate: number;
+    safeHazardsRate: number;
+    safeStatusRate: number;
+    stallRate: number;
+    wallRate: number;
+    riskRate: number;
+    riskyPivotRate: number;
+    enemyOHKORate: number;
+    coverage: number;
+    weaknessCoverage: number;
+    weaknesses: number;    
+}
+
+export interface PokemonTierData {
+    tier: string;
+    score: number;
+    isAvailable: boolean; // Calculado tras revisar lineage y level caps
+    origin: string | null;
+    phaseLabels: { earlySplit: string; midSplit: string };
+    phases: {
+        early: { tier: string, score: number, stats: PhaseStats, available: boolean, rating: string, reason: string };
+        mid: { tier: string, score: number, stats: PhaseStats, available: boolean, rating: string, reason: string };
+        late: { tier: string, score: number, stats: PhaseStats, available: boolean, rating: string, reason: string };
+    };
+    roles: string[];
+}
