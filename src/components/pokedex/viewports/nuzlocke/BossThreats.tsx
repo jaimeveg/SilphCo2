@@ -4,6 +4,7 @@ import { BossBattle, BossPokemon } from '@/types/nuzlocke';
 import { cn } from '@/lib/utils';
 import staticMoveDex from '@/data/move_dex.json';
 import staticPokedexIds from '@/data/pokedex_ids.json';
+import staticItemDex from '@/data/item_dex.json'; // <--- NUEVO IMPORT
 
 interface Props {
     pokemonSlug: string;
@@ -54,6 +55,9 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
     // @ts-ignore
     const pokeId = staticPokedexIds[poke.pokemon_id] || 0;
     
+    // @ts-ignore - Extraemos la info del objeto si lo tiene equipado
+    const itemData = poke.item ? staticItemDex[poke.item.toLowerCase()] : null;
+    
     return (
         <div className={cn(
             "relative flex flex-col p-2.5 rounded-lg border transition-all animate-in fade-in zoom-in-95 duration-300",
@@ -62,7 +66,6 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
                 : "bg-slate-950/50 border-slate-800 hover:bg-slate-900",
             !isTarget && isAce ? "border-purple-500/30 shadow-[0_0_10px_rgba(168,85,247,0.1)]" : ""
         )}>
-            {/* Header: Sprite + Info */}
             <div className={cn("flex items-center gap-3 mb-2.5 pb-2 border-b", isTarget ? "border-amber-500/30" : "border-slate-800/50")}>
                 <div className="relative shrink-0">
                     <img 
@@ -81,19 +84,35 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
                     </span>
                     <div className="flex items-center gap-2 text-[9px] text-slate-500 font-mono mt-0.5">
                         <span className="bg-slate-900/80 px-1 rounded text-slate-400">Lv.{poke.level}</span>
-                        {poke.item && <span className="truncate max-w-[80px]">@{poke.item.replace(/-/g, ' ')}</span>}
+                        
+                        {/* NUEVA RENDERIZACIÓN DEL OBJETO EQUIPADO */}
+                        {poke.item && (
+                            <div className="flex items-center gap-1 bg-slate-900/50 px-1.5 py-0.5 rounded border border-slate-800/50 max-w-[85px]" title={poke.item.replace(/-/g, ' ')}>
+                                {itemData?.sprites?.low_res ? (
+                                    <img 
+                                        src={itemData.sprites.low_res} 
+                                        alt={poke.item}
+                                        className="w-3.5 h-3.5 object-contain"
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    <span className="text-[8px] text-amber-500/70">@</span>
+                                )}
+                                <span className="truncate capitalize text-slate-400 text-[8px] font-sans tracking-wide">
+                                    {poke.item.replace(/-/g, ' ')}
+                                </span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
 
-            {/* Moveset Grid */}
             <div className="grid grid-cols-2 gap-1.5">
                 {poke.moves.map((m, i) => (
                     <MoveBadge key={i} moveName={m} />
                 ))}
             </div>
             
-            {/* Ability Footer */}
             {poke.ability && (
                 <div className={cn("mt-2 pt-1.5 border-t text-[8px] text-center uppercase tracking-wider font-medium", 
                     isTarget ? "border-amber-500/30 text-amber-500/70" : "border-slate-800/50 text-slate-500"
@@ -105,12 +124,10 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
     );
 };
 
-// Componente de Grupo con Selector de Variantes
 const BossGroupItem = ({ group, pokemonSlug }: { group: GroupedBoss, pokemonSlug: string }) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const activeVariant = group.variants[selectedIndex];
     
-    // Configuración visual basada en categoría
     const isGym = activeVariant.category?.includes('leader');
     const isRival = activeVariant.category?.includes('rival');
     const isElite = activeVariant.category?.includes('elite') || activeVariant.category?.includes('champion');
@@ -122,7 +139,6 @@ const BossGroupItem = ({ group, pokemonSlug }: { group: GroupedBoss, pokemonSlug
     if (isRival) { badgeColor = "bg-orange-900/30 text-orange-400 border-orange-800/50"; Icon = Swords; }
     if (isElite) { badgeColor = "bg-purple-900/30 text-purple-400 border-purple-800/50"; Icon = Crown; }
 
-    // Determinar etiqueta del selector
     const variantType = activeVariant.variant?.type || 'variant';
     const selectorLabel = variantType === 'starter' ? 'Starter selected:' : 'Variation:';
 
@@ -152,7 +168,6 @@ const BossGroupItem = ({ group, pokemonSlug }: { group: GroupedBoss, pokemonSlug
             </summary>
             
             <div className="px-4 pb-6 pt-2 border-t border-slate-800/30">
-                {/* Variant Selector Tabs */}
                 {group.variants.length > 1 && (
                     <div className="flex items-center gap-3 mb-5 pb-1 border-b border-slate-800/30 overflow-x-auto custom-scrollbar">
                         <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider shrink-0">
@@ -162,7 +177,6 @@ const BossGroupItem = ({ group, pokemonSlug }: { group: GroupedBoss, pokemonSlug
                             {group.variants.map((v, i) => {
                                 let label = `Var ${i + 1}`;
                                 if (v.variant?.type === 'starter') {
-                                    // Extraer tipo del slug (ej: "starter-fire" -> "Fire")
                                     const type = v.variant.slug.split('-')[1] || v.variant.slug;
                                     label = type.charAt(0).toUpperCase() + type.slice(1);
                                 } else if (v.variant?.description) {
@@ -191,7 +205,6 @@ const BossGroupItem = ({ group, pokemonSlug }: { group: GroupedBoss, pokemonSlug
                     </div>
                 )}
 
-                {/* Active Team Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 animate-in fade-in slide-in-from-top-2 duration-300">
                     {activeVariant.team.map((poke, pIdx) => (
                         <BossPokemonCard 
@@ -215,19 +228,16 @@ export default function BossThreats({ pokemonSlug, bosses, t }: Props) {
         const groupsOrder: string[] = [];
 
         bosses.forEach(boss => {
-            // LÓGICA DE AGRUPACIÓN POR ID (Root ID)
-            // Si tiene variante, asumimos formato "root_variant" (ej: r1_water -> r1)
             let groupKey = boss.id;
             
             if (boss.variant && boss.id.includes('_')) {
-                // Eliminar el último segmento del ID (el sufijo de la variante)
                 groupKey = boss.id.substring(0, boss.id.lastIndexOf('_'));
             }
 
             if (!map.has(groupKey)) {
                 map.set(groupKey, {
                     id: groupKey,
-                    baseName: boss.name, // Usamos el nombre tal cual viene en el JSON
+                    baseName: boss.name,
                     segmentId: boss.segment_id,
                     variants: []
                 });
