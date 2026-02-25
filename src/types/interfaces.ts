@@ -134,6 +134,17 @@ export interface IEvolutionNode {
   variantId?: number;
 }
 
+// --- NUEVAS INTERFACES PARA DROPS Y YIELDS ---
+export interface IEvYield {
+  stat: string;
+  effort: number;
+}
+
+export interface IPokemonDrop {
+  item: string;
+  chance: number;
+}
+
 export interface IPokemon {
   id: number;
   speciesId: number;
@@ -153,6 +164,8 @@ export interface IPokemon {
   evolutionChain?: IEvolutionNode;
   locations?: ILocationEncounter[];
   moves: IPokemonMove[]; // Array crudo de movimientos
+  evYields?: IEvYield[]; // <--- NUEVO
+  drops?: IPokemonDrop[]; // <--- NUEVO
 }
 
 // Interfaces adicionales (Competitivo/Nuzlocke) se mantienen igual

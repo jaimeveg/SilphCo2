@@ -5,6 +5,7 @@ import { Lang, POKEDEX_DICTIONARY } from '@/lib/pokedexDictionary';
 import VisualStats from './VisualStats';
 import EvolutionChart from './EvolutionChart';
 import LocationMatrix from './LocationMatrix';
+import YieldData from './YieldData';
 import { Network, Map } from 'lucide-react';
 
 interface Props {
@@ -27,6 +28,11 @@ export default function ViewportData({ pokemon, lang }: Props) {
           <VisualStats stats={pokemon.stats} lang={lang} />
         </section>
 
+        {/* 1.5. YIELD DATA (EVs & DROPS) */}
+        <section className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <YieldData pokemon={pokemon} lang={lang} />
+        </section>
+
         {/* 2. EVOLUTION VECTOR */}
         <section className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
           <div className="flex items-center gap-2 mb-2 border-b border-slate-800 pb-1 mx-1">
@@ -36,23 +42,13 @@ export default function ViewportData({ pokemon, lang }: Props) {
               </h3>
           </div>
           <EvolutionChart 
-  chain={pokemon.evolutionChain} 
-  lang={lang} 
-  activeSpecies={pokemon.name} // IMPORTANTE
-/>
+            chain={pokemon.evolutionChain} 
+            lang={lang} 
+            activeSpecies={pokemon.name} // IMPORTANTE
+          />
         </section>
 
-        {/* 3. GEO MATRIX */}
-        <section className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-200">
-          <div className="flex items-center gap-2 mb-2 border-b border-slate-800 pb-1 mx-1">
-              <Map className="text-cyan-500" size={14} />
-              <h3 className="text-xs font-display font-bold text-slate-300 uppercase tracking-widest">
-                {dict.loc_title}
-              </h3>
-          </div>
-          <LocationMatrix locations={pokemon.locations} lang={lang} />
-        </section>
-        
+               
       </div>
     </div>
   );

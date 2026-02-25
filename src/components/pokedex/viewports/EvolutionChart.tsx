@@ -11,6 +11,9 @@ import {
 import { IEvolutionNode, IEvolutionDetail } from '@/types/interfaces';
 import { Lang, POKEDEX_DICTIONARY } from '@/lib/pokedexDictionary';
 import { cn } from '@/lib/utils';
+import itemDexData from '@/data/item_dex.json';
+
+const itemDex = itemDexData as Record<string, any>;
 
 // --- CONFIGURACIÓN: DATA GENERACIONAL ---
 const GEN_CONSTRAINTS: Record<string, number> = {
@@ -26,7 +29,6 @@ const GEN_ROMAN: Record<number, string> = {
 };
 
 // --- ESTRATEGIA 1: AISLAMIENTO ESTRICTO ---
-// Define qué variantes pueden ver a quién.
 const STRICT_ISOLATION: Record<string, string[]> = {
   'rattata-alola': ['raticate-alola'],
   'sandshrew-alola': ['sandslash-alola'],
@@ -50,10 +52,10 @@ const STRICT_ISOLATION: Record<string, string[]> = {
   'sneasel-hisui': ['sneasler'],
   'zorua-hisui': ['zoroark-hisui'],
   'basculin-white-striped': ['basculegion'],
-  'sliggoo-hisui': ['goodra-hisui'], // CLAVE: Aquí definimos la rama Hisui de Sliggoo
+  'sliggoo-hisui': ['goodra-hisui'], 
   'wooper-paldea': ['clodsire'],
   
-  // Clean Bases (Evitan contaminación cruzada)
+  // Clean Bases
   'meowth': ['persian'],
   'slowpoke': ['slowbro', 'slowking'],
   'wooper': ['quagsire'],
@@ -64,7 +66,6 @@ const STRICT_ISOLATION: Record<string, string[]> = {
 };
 
 // --- ESTRATEGIA 2: RAMIFICACIÓN ARTIFICIAL ---
-// Inyecta opciones de evolución donde no existen naturalmente en la API base
 const REGIONAL_BRANCHING: Record<string, string[]> = {
   'pikachu': ['raichu', 'raichu-alola'],
   'exeggcute': ['exeggutor', 'exeggutor-alola'],
@@ -76,14 +77,13 @@ const REGIONAL_BRANCHING: Record<string, string[]> = {
   'petilil': ['lilligant', 'lilligant-hisui'],
   'rufflet': ['braviary', 'braviary-hisui'],
   'goomy': ['sliggoo'], 
-  'sliggoo': ['goodra', 'goodra-hisui'], // CLAVE: Sliggoo se divide en Goodra y Goodra Hisui
+  'sliggoo': ['goodra', 'goodra-hisui'], 
   'bergmite': ['avalugg', 'avalugg-hisui'],
   'dartrix': ['decidueye', 'decidueye-hisui'],
   'kubfu': ['urshifu-single-strike', 'urshifu-rapid-strike'],
   'rockruff': ['lycanroc-midday', 'lycanroc-midnight', 'lycanroc-dusk']
 };
 
-// --- FUENTE DE VERDAD DE IDs ---
 interface RegionData { id: number; base?: number; }
 
 const REGIONAL_DATA: Record<string, RegionData> = {
@@ -163,17 +163,12 @@ const getPokemonUrl = (node: IEvolutionNode, lang: Lang) => {
             return `/${lang}/pokedex/${node.variantId}`;
         }
     }
-
-    if (node.speciesId) {
-        return `/${lang}/pokedex/${node.speciesId}`;
-    }
-
+    if (node.speciesId) return `/${lang}/pokedex/${node.speciesId}`;
     if (node.url) {
         const urlParts = node.url.split('/').filter(Boolean);
         const id = urlParts[urlParts.length - 1];
         return `/${lang}/pokedex/${id}`;
     }
-
     return '#';
 };
 
@@ -190,8 +185,6 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
     const traverseAndTransform = (node: IEvolutionNode, isRoot: boolean): IEvolutionNode => {
         let currentName = node.speciesName.toLowerCase();
 
-        // 1. RAMIFICACIÓN ARTIFICIAL (Antes de cualquier cambio)
-        // Crea las ramas Goodra / Goodra Hisui desde Sliggoo
         if (REGIONAL_BRANCHING[currentName]) {
             const targets = REGIONAL_BRANCHING[currentName];
             const originalChildren = node.evolvesTo || [];
@@ -221,15 +214,9 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
             }
         }
 
-        // 2. LÓGICA DE AISLAMIENTO Y TRANSFORMACIÓN (SOLUCIÓN SLIGGOO)
-        // Eliminado "isRoot" para permitir que formas intermedias como Sliggoo
-        // se transformen a Sliggoo-Hisui si el objetivo final lo requiere.
         let isolationKey: string | null = null;
-        
         for (const [key, targets] of Object.entries(STRICT_ISOLATION)) {
             if (active === key || targets.includes(active)) {
-                // Si la llave de aislamiento (ej. sliggoo-hisui) contiene el nombre actual (sliggoo)
-                // y no son iguales, aplicamos la transformación.
                 if (currentName !== key && key.includes(currentName)) {
                         currentName = key;
                         node.speciesName = key;
@@ -241,7 +228,6 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
             }
         }
 
-        // Fallback: Si no hay match específico, busca si la base tiene restricciones (para limpiar ramas cruzadas)
         if (!isolationKey && STRICT_ISOLATION[currentName]) {
             isolationKey = currentName;
         }
@@ -261,13 +247,10 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
             }
         }
 
-        // 3. RECURSIÓN
         if (node.evolvesTo) {
             node.evolvesTo = node.evolvesTo.map((child: IEvolutionNode) => traverseAndTransform(child, false));
         }
 
-        // 4. INYECCIÓN DE DATOS VISUALES (SPRITES + ICONOS)
-        // Se ejecuta al final para aplicar la imagen correcta al nombre definitivo.
         if (REGIONAL_DATA[currentName]) {
             const data = REGIONAL_DATA[currentName];
             node.variantId = data.id; 
@@ -275,7 +258,6 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
                 node.speciesId = data.base; 
             }
             node.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`;
-            // FIX: Actualizamos el icono para que las pestañas muestren la miniatura correcta
             node.icon = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
         }
 
@@ -393,11 +375,18 @@ const SimpleTooltip = ({ children, text }: { children: React.ReactNode; text: st
   </div>
 );
 
+// --- REFACTORIZACIÓN: NORMALIZACIÓN DE LLAVES Y FALLBACKS ---
 const ItemDisplay = ({ itemName }: { itemName: string }) => {
   const [error, setError] = useState(false);
-  const itemUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${itemName}.png`;
+  // Normalizamos el nombre a kebab-case para manejar casos como "Leader's Crest" -> "leaders-crest"
+  const itemKey = itemName.toLowerCase().replace(/['\s_]/g, '-');
+  
+  // 1. Busca en nuestro item_dex estático. 2. Fallback a la carpeta local por nombre
+  const localSprite = itemDex[itemKey]?.sprites?.low_res;
+  const itemUrl = localSprite || `/images/items/sprites/${itemKey}.png`;
+  
   if (error) return <div className="w-6 h-6 flex items-center justify-center bg-slate-800 rounded-full border border-slate-700"><Package size={12} className="text-slate-400" /></div>;
-  return <div className="w-6 h-6 relative"><Image src={itemUrl} alt={itemName} fill className="object-contain drop-shadow-lg" unoptimized onError={() => setError(true)}/></div>;
+  return <div className="w-6 h-6 relative"><Image src={itemUrl} alt={itemName} fill className="object-contain drop-shadow-lg rendering-pixelated" unoptimized onError={() => setError(true)}/></div>;
 };
 
 const SpecialIcon = ({ icon: Icon, color, tooltip }: { icon: any, color: string, tooltip: string }) => (
@@ -442,6 +431,19 @@ const EvolutionTriggerDisplay = ({ details, lang, gen, targetSpecies }: { detail
   const tooltips = POKEDEX_DICTIONARY[safeLang].labels.evo_tooltips;
   const overrides = POKEDEX_DICTIONARY[safeLang].labels.evo_overrides;
   
+  // --- OVERRIDES ESTRICTOS PARA MECÁNICAS DE GEN 9 / ITEMS COMPLEJOS ---
+  // Dado que PokeAPI usa `customReq` u omite los items "nuevos", los forzamos visualmente aquí.
+  const tSpecies = targetSpecies.toLowerCase();
+  if (tSpecies === 'kingambit') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><span className="text-[6px] font-bold text-slate-500 mb-0.5">DEFEAT 3x</span><SimpleTooltip text={lang === 'es' ? "Derrotar 3 Bisharp con Distintivo de Líder" : "Defeat 3 Bisharp holding Leader's Crest"}><ItemDisplay itemName="leaders-crest" /></SimpleTooltip></div>;
+  if (tSpecies === 'archaludon') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><SimpleTooltip text="Metal Alloy"><ItemDisplay itemName="metal-alloy" /></SimpleTooltip></div>;
+  if (tSpecies === 'gholdengo') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><span className="text-[6px] font-bold text-amber-500 mb-0.5">999x COINS</span><SimpleTooltip text="Gimmighoul Coin"><ItemDisplay itemName="gimmighoul-coin" /></SimpleTooltip></div>;
+  if (tSpecies === 'armarouge') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><SimpleTooltip text="Auspicious Armor"><ItemDisplay itemName="auspicious-armor" /></SimpleTooltip></div>;
+  if (tSpecies === 'ceruledge') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><SimpleTooltip text="Malicious Armor"><ItemDisplay itemName="malicious-armor" /></SimpleTooltip></div>;
+  if (tSpecies === 'hydrapple') return <div className="flex flex-col items-center max-w-[60px] bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded"><span className="text-[7px] text-slate-400 uppercase text-center leading-none mb-0.5">{dict.evo_methods.move}</span><span className="text-[8px] text-cyan-200 text-center leading-tight font-bold truncate w-full">Dragon Cheer</span></div>;
+  if (tSpecies === 'annihilape') return <div className="flex flex-col items-center max-w-[60px] bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded"><span className="text-[7px] text-slate-400 uppercase text-center leading-none mb-0.5">USE 20x</span><span className="text-[8px] text-cyan-200 text-center leading-tight font-bold truncate w-full">Rage Fist</span></div>;
+  if (tSpecies === 'farigiraf') return <div className="flex flex-col items-center max-w-[60px] bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded"><span className="text-[7px] text-slate-400 uppercase text-center leading-none mb-0.5">{dict.evo_methods.move}</span><span className="text-[8px] text-cyan-200 text-center leading-tight font-bold truncate w-full">Twin Beam</span></div>;
+  if (tSpecies === 'dudunsparce' || tSpecies === 'dudunsparce-three-segment') return <div className="flex flex-col items-center max-w-[60px] bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded"><span className="text-[7px] text-slate-400 uppercase text-center leading-none mb-0.5">{dict.evo_methods.move}</span><span className="text-[8px] text-cyan-200 text-center leading-tight font-bold truncate w-full">Hyper Drill</span></div>;
+
   if (!details || details.length === 0) return <ArrowRight size={16} className="text-slate-700" />;
 
   if (targetSpecies.toLowerCase() === 'crabominable' && gen === 8) {
@@ -643,7 +645,6 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                 {paths.map((path, idx) => {
                     const node = path[path.length - 1]; 
                     const isActive = selectedBranchIdx === idx;
-                    // FIX: Usar el icono que ahora está correctamente inyectado
                     const iconSrc = node.icon || node.sprite;
                     return <button key={idx} onClick={() => setSelectedBranchIdx(idx)} className={cn("relative group rounded border transition-all duration-300 w-8 h-8 flex items-center justify-center overflow-hidden bg-slate-900", isActive ? "border-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.2)]" : "border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100")} title={node.speciesName}><Image src={iconSrc} alt={node.speciesName} fill className="object-contain p-0.5 rendering-pixelated" unoptimized onError={() => setImgError(prev => ({...prev, [node.speciesName + '_icon']: true}))} /></button>;
                 })}
@@ -660,8 +661,6 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                     const requiredGen = GEN_CONSTRAINTS[speciesLower];
                     const isUnavailable = requiredGen && currentGen < requiredGen;
                     const relevantDetails = nextNode ? getOptimizedEvolutionDetail(nextNode.speciesName, nextNode.details, currentGen) : [];
-
-                    // URL SEGURA
                     const destUrl = getPokemonUrl(node, lang);
 
                     return (
