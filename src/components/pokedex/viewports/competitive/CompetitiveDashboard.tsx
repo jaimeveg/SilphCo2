@@ -13,10 +13,10 @@ import UsageBar from '@/components/ui/UsageBar';
 import CompetitiveHeader from './CompetitiveHeader';
 import EvSpreadList from './EvSpreadList';
 // ---------------------
-import { Users, Shield, Sword, AlertTriangle, RefreshCw, Zap, Trophy, ChevronDown, Activity, Skull, Diamond } from 'lucide-react';
+import { Users, Shield, Sword, AlertTriangle, RefreshCw, Zap, Trophy, ChevronDown, Activity, Skull, Diamond, Server } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { toSlug } from '@/lib/utils/pokemon-normalizer';
-import { useSearchParams } from 'next/navigation'; // <--- AÑADIR ESTO
+import { useSearchParams } from 'next/navigation'; 
 
 // --- INTERFACES (SIN CAMBIOS) ---
 export interface CompetitiveResponse {
@@ -27,7 +27,6 @@ export interface CompetitiveResponse {
     items: Array<{ name: string; value: number; displayValue?: string; slug: string }>;
     abilities: Array<{ name: string; value: number; displayValue?: string; slug: string }>;
     teammates: Array<{ name: string; value: number; displayValue?: string; slug: string }>;
-    // CAMBIO AQUÍ: usage debe ser 'string' para coincidir con EvSpreadList
     natureSpread: Array<{ nature: string; usage: string; evs: Record<string, number> }>;
     teras?: Array<{ name: string; value: number; displayValue?: string }>; 
   };
@@ -64,16 +63,30 @@ interface Props {
 }
 
 export default function CompetitiveDashboard({ pokemon, lang }: Props) {
+    // --- ESTADO DE ORIGEN DE DATOS (NUEVO) ---
+    const [dataSource, setDataSource] = useState<'showdown' | 'tournament'>('showdown');
+    const [tournaments, setTournaments] = useState<{id: string, name: string, date: string}[]>([]);
+    const [selectedTournament, setSelectedTournament] = useState<string>('');
+
+    // --- CARGA DE ÍNDICE DE TORNEOS LOCALES ---
+    useEffect(() => {
+        fetch('/data/tournaments/rk9_index.json')
+            .then(res => res.ok ? res.json() : [])
+            .then(data => {
+                setTournaments(data);
+                if (data.length > 0) setSelectedTournament(data[0].id);
+            })
+            .catch(() => console.log('Sin torneos locales encontrados.'));
+    }, []);
+
+    // --- CORE ORIGINAL ---
     const { data: indexData, isLoading: isLoadingTree } = useQuery<SmogonIndexResponse | null>({
         queryKey: ['smogonChaosIndex'],
         queryFn: fetchFormatsIndex,
         staleTime: 1000 * 60 * 60 * 12 
     });
 
-    
-
     const { data: dexMap } = useNationalDexLookup(); 
-
     const searchParams = useSearchParams();
 
     const [gen, setGen] = useState<string>('');
@@ -82,7 +95,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
     const [reg, setReg] = useState<string>('');
     const [fileId, setFileId] = useState<string>(''); 
 
-    // --- CASCADAS DE SELECCIÓN (SIN CAMBIOS) ---
+    // --- CASCADAS DE SELECCIÓN DE SMOGON (SIN CAMBIOS) ---
     const validGens = useMemo(() => {
         if (!indexData?.structure) return [];
         const pkmGen = normalizeGen(pokemon.generation);
@@ -138,25 +151,72 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         }
     }, [reg, format, mode, gen, indexData, fileId]);
 
-    const { data, isLoading } = useQuery<CompetitiveResponse | null>({
+    // --- MUX: QUERY SMOGON (Original) ---
+    const smogonQuery = useQuery<CompetitiveResponse | null>({
         queryKey: ['competitiveChaos', pokemon.name, indexData?.date, fileId],
         queryFn: () => fetchSmogonData(pokemon.name, indexData!.date, fileId),
-        enabled: !!fileId && !!indexData?.date,
+        enabled: !!fileId && !!indexData?.date && dataSource === 'showdown',
         staleTime: 1000 * 60 * 5,
         retry: false
     });
 
-    // 2. NUEVO EFFECT: AUTO-SELECCIÓN BASADA EN URL
-    // Este efecto escucha cuando carga el índice y si hay un param ?format=...
+    // --- MUX: QUERY TORNEOS (Nuevo Motor O(1) Local) ---
+    const tournamentQuery = useQuery<CompetitiveResponse | null>({
+        queryKey: ['tournamentChaos', pokemon.name, selectedTournament],
+        queryFn: async () => {
+            const pokemonSlug = toSlug(pokemon.name);
+            const res = await fetch(`/data/tournaments/rk9_${selectedTournament}.json`);
+            if (!res.ok) throw new Error('Torneo no encontrado');
+            
+            const rawData = await res.json();
+            const pkmData = rawData.pokemon[pokemonSlug];
+            
+            if (!pkmData) return null; // Retorna null limpio para disparar el estado vacío original
+
+            const totalTeams = rawData.battles;
+            const pkmUsageRaw = pkmData.usage.raw;
+            const usagePercent = ((pkmUsageRaw / totalTeams) * 100).toFixed(2);
+
+            const mapStats = (record: Record<string, number>) => {
+                if (!record) return [];
+                return Object.entries(record)
+                    .map(([name, count]) => ({
+                        name,
+                        slug: toSlug(name),
+                        value: (count / pkmUsageRaw) * 100,
+                        displayValue: ((count / pkmUsageRaw) * 100).toFixed(2)
+                    }))
+                    .sort((a, b) => b.value - a.value);
+            };
+
+            return {
+                meta: { pokemon: pokemonSlug, format: rawData.info.tournament_name, gen: 9 },
+                general: { usage: usagePercent, rawCount: pkmUsageRaw },
+                stats: {
+                    moves: mapStats(pkmData.moves).slice(0, 15),
+                    items: mapStats(pkmData.items).slice(0, 10),
+                    abilities: mapStats(pkmData.abilities).slice(0, 10),
+                    teammates: mapStats(pkmData.teammates).slice(0, 15),
+                    teras: mapStats(pkmData.teras).slice(0, 10),
+                    natureSpread: [] 
+                },
+                matchups: { counters: [] }
+            } as CompetitiveResponse;
+        },
+        enabled: dataSource === 'tournament' && !!selectedTournament,
+        staleTime: Infinity,
+        retry: false
+    });
+
+    // --- RESOLUCIÓN MULTIPLEXADA ---
+    const isLoading = dataSource === 'showdown' ? smogonQuery.isLoading : tournamentQuery.isLoading;
+    const data = dataSource === 'showdown' ? smogonQuery.data : tournamentQuery.data;
+
     useEffect(() => {
         const target = searchParams.get('format');
         if (!target || !indexData) return;
-
-        // Si ya estamos viendo lo que pide la URL, no hacemos nada
         if (fileId === target || format === target) return;
 
-        // Algoritmo de Búsqueda Inversa en el Árbol de Smogon
-        // Objetivo: Encontrar [Gen, Mode, Format, Reg] dado un 'target' (fileId o formatKey)
         const gens = Object.keys(indexData.structure);
         
         for (const g of gens) {
@@ -164,26 +224,20 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
             for (const m of modes) {
                 const formats = indexData.structure[g][m];
                 
-                // Caso A: La URL pide un formato genérico (ej: ?format=gen9ou)
                 if (formats[target]) {
                     setGen(g);
                     setMode(m);
                     setFormat(target);
-                    // Dejamos que los efectos en cascada seleccionen la Reg/Elo por defecto
                     return;
                 }
 
-                // Caso B: La URL pide un fichero específico (ej: ?format=gen9vgc2023regulatione-1760)
-                // Buscamos dentro de cada formato si contiene ese fileId
                 for (const f of Object.keys(formats)) {
                     const regs = formats[f].regs;
                     if (!regs) continue;
 
                     for (const r of Object.keys(regs)) {
                         const eloOptions = regs[r];
-                        // ¿Está nuestro target en la lista de ficheros de esta regulación?
                         if (eloOptions.some(opt => opt.fileId === target)) {
-                            // ¡Encontrado! Restauramos el estado completo
                             setGen(g);
                             setMode(m);
                             setFormat(f);
@@ -197,6 +251,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         }
     }, [indexData, searchParams]);
 
+    // --- REFACTOR LÓGICA DE RESOLUCIÓN DE IMÁGENES ---
     const resolveMate = (slug: string, format: string) => {
         let cleanSlug = slug.toLowerCase().replace(/['’\.]/g, '').replace(/[:]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
         if (cleanSlug.includes('♂')) cleanSlug = cleanSlug.replace('♂', '-m');
@@ -209,13 +264,15 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
             return {
                 id,
                 href: `/${lang}/pokedex/${id}?tab=PVP&format=${format}`,
-                img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
+                imgLocal: `/images/pokemon/high-res/${id}.png`,
+                imgFallback: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
             };
         } else {
             return {
                 id: null,
                 href: `/${lang}/pokedex/${cleanSlug}?tab=PVP&format=${format}`,
-                img: `https://img.pokemondb.net/sprites/home/normal/${cleanSlug}.png`
+                imgLocal: `https://img.pokemondb.net/sprites/home/normal/${cleanSlug}.png`,
+                imgFallback: `https://img.pokemondb.net/sprites/home/normal/${cleanSlug}.png`
             };
         }
     };
@@ -226,36 +283,49 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
     const availableElos = indexData?.structure[gen]?.[mode]?.[format]?.regs?.[reg] || [];
     const formatEloLabel = (elo: string) => elo === '0' ? 'All (0+)' : `${elo}+`;
 
-    const showTeras = gen.includes('9') && data?.stats.teras && data.stats.teras.length > 0;
+    const showTeras = (dataSource === 'tournament' || gen.includes('9')) && data?.stats.teras && data.stats.teras.length > 0;
 
     if (isLoadingTree || !indexData) return <div className="h-64 flex flex-col items-center justify-center text-slate-500"><Activity className="animate-spin text-cyan-500 mb-2" /><span className="text-xs font-mono">LOADING DATA...</span></div>;
 
     return (
         <div className="h-full flex flex-col bg-slate-950/30 rounded-xl border border-slate-800 overflow-hidden shadow-2xl">
             
-            {/* 1. INTELLIGENCE BANNER (Solo si hay datos) */}
+            {/* 1. INTELLIGENCE BANNER */}
             {data && (
-    <CompetitiveHeader 
-        pokemon={pokemon} 
-        usageRate={data.general.usage} 
-        topMoves={data.stats.moves} 
-        topAbilities={data.stats.abilities}
-        topItems={data.stats.items}
-        spreads={data.stats.natureSpread} 
-        // NUEVA PROP: Pasamos los datos del servidor
-        speedData={data.speed} 
-        lang={lang} 
-    />
-)}
+                <CompetitiveHeader 
+                    pokemon={pokemon} 
+                    usageRate={data.general.usage} 
+                    topMoves={data.stats.moves} 
+                    topAbilities={data.stats.abilities}
+                    topItems={data.stats.items}
+                    spreads={data.stats.natureSpread} 
+                    speedData={data.speed} 
+                    lang={lang} 
+                />
+            )}
 
-            {/* 2. CHAOS CONTROL BAR (Dropdowns) */}
-            {/* Nota visual: Si no hay data, los dropdowns se ven igual para poder buscar */}
+            {/* 2. CHAOS CONTROL BAR (MODIFICADA CON TOGGLE RK9) */}
             <div className="flex flex-col gap-2 p-3 border-b border-slate-800 bg-slate-900/90 z-20">
                 <div className="flex justify-between items-center mb-1">
-                    <h3 className="text-[10px] font-display font-black text-cyan-500 uppercase tracking-widest flex items-center gap-2">
-                        <Trophy size={12} className="text-yellow-500" />
-                        CHAOS ANALYTICS <span className="text-slate-600 text-[8px]">v{indexData.date}</span>
-                    </h3>
+                    <div className="flex items-center gap-3">
+                        <h3 className="text-[10px] font-display font-black text-cyan-500 uppercase tracking-widest hidden sm:flex items-center gap-2">
+                            <Trophy size={12} className="text-yellow-500" />
+                            CHAOS ANALYTICS <span className="text-slate-600 text-[8px] font-mono">v{indexData.date}</span>
+                        </h3>
+                        
+                        {/* TOGGLE FUENTE DE DATOS */}
+                        <div className="flex items-center bg-slate-950 border border-slate-700 rounded overflow-hidden shadow-inner">
+                            <button 
+                                onClick={() => setDataSource('showdown')}
+                                className={cn("px-2.5 py-1 text-[9px] font-bold uppercase transition-colors flex items-center gap-1.5", dataSource === 'showdown' ? "bg-cyan-500/20 text-cyan-400" : "text-slate-500 hover:text-slate-300 hover:bg-slate-900")}
+                            ><Server size={10}/> Showdown</button>
+                            <button 
+                                onClick={() => setDataSource('tournament')}
+                                className={cn("px-2.5 py-1 text-[9px] font-bold uppercase transition-colors flex items-center gap-1.5 border-l border-slate-700", dataSource === 'tournament' ? "bg-amber-500/20 text-amber-400" : "text-slate-500 hover:text-slate-300 hover:bg-slate-900")}
+                            ><Trophy size={10}/> Torneos VGC</button>
+                        </div>
+                    </div>
+
                     {data && (
                         <div className="text-right bg-slate-950/50 px-2 py-0.5 rounded border border-slate-800">
                             <span className="text-[8px] font-mono text-slate-400 mr-2">USAGE</span>
@@ -264,42 +334,60 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                     )}
                 </div>
                 
-                {/* DROPDOWNS ROW */}
+                {/* DROPDOWNS ROW (MULTIPLEXADOS) */}
                 <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-                    {/* ... (TUS DROPDOWNS DE SIEMPRE AQUÍ, NO LOS TOCO) ... */}
-                    {/* COPIA Y PEGA EL BLOQUE DE DROPDOWNS QUE YA FUNCIONABA PERFECTO */}
-                    <div className="relative group min-w-[70px]">
-                        <select value={gen} onChange={(e) => setGen(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">
-                            {validGens.map(g => <option key={g} value={g}>{g.toUpperCase()}</option>)}
-                        </select>
-                        <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
-                    </div>
-                    <div className="relative group min-w-[65px]">
-                         <select value={mode} onChange={(e) => setMode(e.target.value)} disabled={availableModes.length <= 1} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors disabled:opacity-50">
-                            {availableModes.map(m => <option key={m} value={m}>{m === 'doubles' ? 'DOU' : 'SING'}</option>)}
-                        </select>
-                        <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
-                    </div>
-                    <div className="relative group min-w-[100px] flex-1">
-                        <select value={format} onChange={(e) => setFormat(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-cyan-100 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500 focus:border-cyan-500 transition-colors text-ellipsis">
-                            {availableFormats.map(f => <option key={f} value={f}>{f}</option>)}
-                        </select>
-                        <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-cyan-500 pointer-events-none" />
-                    </div>
-                    {reg !== '-' && (
-                        <div className="relative group min-w-[70px]">
-                            <select value={reg} onChange={(e) => setReg(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-slate-400 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">
-                                {availableRegs.map(r => <option key={r} value={r}>{r}</option>)}
+                    {dataSource === 'showdown' ? (
+                        <>
+                            <div className="relative group min-w-[70px]">
+                                <select value={gen} onChange={(e) => setGen(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">
+                                    {validGens.map(g => <option key={g} value={g}>{g.toUpperCase()}</option>)}
+                                </select>
+                                <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                            </div>
+                            <div className="relative group min-w-[65px]">
+                                 <select value={mode} onChange={(e) => setMode(e.target.value)} disabled={availableModes.length <= 1} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors disabled:opacity-50">
+                                    {availableModes.map(m => <option key={m} value={m}>{m === 'doubles' ? 'DOU' : 'SING'}</option>)}
+                                </select>
+                                <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                            </div>
+                            <div className="relative group min-w-[100px] flex-1">
+                                <select value={format} onChange={(e) => setFormat(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-cyan-100 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500 focus:border-cyan-500 transition-colors text-ellipsis">
+                                    {availableFormats.map(f => <option key={f} value={f}>{f}</option>)}
+                                </select>
+                                <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-cyan-500 pointer-events-none" />
+                            </div>
+                            {reg !== '-' && (
+                                <div className="relative group min-w-[70px]">
+                                    <select value={reg} onChange={(e) => setReg(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-slate-400 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">
+                                        {availableRegs.map(r => <option key={r} value={r}>{r}</option>)}
+                                    </select>
+                                    <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                                </div>
+                            )}
+                            <div className="relative group min-w-[80px]">
+                                <select value={fileId} onChange={(e) => setFileId(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-yellow-500/80 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-yellow-500/50 focus:border-yellow-500 transition-colors">
+                                    {availableElos.map(opt => <option key={opt.fileId} value={opt.fileId}>{formatEloLabel(opt.elo)}</option>)}
+                                </select>
+                                <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-yellow-600 pointer-events-none" />
+                            </div>
+                        </>
+                    ) : (
+                        <div className="relative group min-w-[200px] flex-1 sm:flex-none">
+                            <select 
+                                value={selectedTournament} 
+                                onChange={(e) => setSelectedTournament(e.target.value)} 
+                                disabled={tournaments.length === 0}
+                                className="w-full appearance-none bg-slate-950 border border-slate-700 text-amber-400 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-6 rounded hover:border-amber-500 focus:border-amber-500 transition-colors text-ellipsis disabled:opacity-50"
+                            >
+                                {tournaments.length === 0 ? (
+                                    <option value="">Ningún torneo local descargado...</option>
+                                ) : (
+                                    tournaments.map(t => <option key={t.id} value={t.id}>{t.name}</option>)
+                                )}
                             </select>
-                            <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                            <ChevronDown size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-amber-600 pointer-events-none" />
                         </div>
                     )}
-                    <div className="relative group min-w-[80px]">
-                        <select value={fileId} onChange={(e) => setFileId(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-yellow-500/80 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-yellow-500/50 focus:border-yellow-500 transition-colors">
-                            {availableElos.map(opt => <option key={opt.fileId} value={opt.fileId}>{formatEloLabel(opt.elo)}</option>)}
-                        </select>
-                        <ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-yellow-600 pointer-events-none" />
-                    </div>
                 </div>
             </div>
 
@@ -313,7 +401,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                         <div>
                             <h3 className="text-xs font-bold text-slate-300 uppercase mb-1">No Usage Data</h3>
                             <p className="text-[9px] font-mono text-slate-500 max-w-[240px] mx-auto">
-                                {pokemon.name} hasn't been used in <span className="text-cyan-500">{format}</span> enough to appear in statistics.
+                                {pokemon.name} hasn't been used in <span className={dataSource === 'showdown' ? "text-cyan-500" : "text-amber-500"}>{dataSource === 'showdown' ? format : 'this tournament'}</span> enough to appear in statistics.
                             </p>
                         </div>
                     </div>
@@ -367,9 +455,23 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                     {data.stats.teammates.slice(0, 12).map((mate) => {
                                         const resolved = resolveMate(mate.slug, data.meta.format);
                                         return (
-                                            <Link key={mate.name} href={resolved.href} className="block relative group" title={`${mate.name} (${fmtPct(mate.value)}%)`}>
+                                            <Link key={mate.name} href={resolved.href} className="block relative group" title={`${mate.name} (${fmtPct(mate.displayValue || mate.value)}%)`}>
                                                 <div className="relative aspect-square bg-slate-900 border border-slate-800 rounded hover:border-cyan-500/50 transition-all overflow-hidden cursor-pointer">
-                                                    <img src={resolved.img} alt={mate.name} className="w-full h-full object-contain p-1 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-md" loading="lazy" onError={(e) => { const target = e.target as HTMLImageElement; if (target.src.includes('raw.githubusercontent')) { target.src = `https://img.pokemondb.net/sprites/home/normal/${mate.slug}.png`; } else { target.style.display = 'none'; } }} />
+                                                    <img 
+                                                        src={resolved.imgLocal} 
+                                                        alt={mate.name} 
+                                                        className="w-full h-full object-contain p-1 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-md" 
+                                                        loading="lazy" 
+                                                        onError={(e) => { 
+                                                            const target = e.target as HTMLImageElement; 
+                                                            // Si falla el local, probamos el remoto. Si falla el remoto, lo ocultamos.
+                                                            if (target.src !== resolved.imgFallback) { 
+                                                                target.src = resolved.imgFallback; 
+                                                            } else { 
+                                                                target.style.display = 'none'; 
+                                                            } 
+                                                        }} 
+                                                    />
                                                     <div className="absolute bottom-0 right-0 bg-slate-950/90 text-[8px] px-1.5 py-0.5 text-cyan-400 font-mono border-tl rounded-tl font-bold">{fmtPct(mate.displayValue || mate.value)}%</div>
                                                 </div>
                                             </Link>
@@ -388,7 +490,21 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                             return (
                                                 <Link key={counter.name} href={resolved.href} className="block relative group" title={`${counter.name} (Score: ${counter.score}%)`}>
                                                     <div className="relative aspect-square bg-slate-900 border border-slate-800 rounded hover:border-red-500/50 transition-all overflow-hidden cursor-pointer">
-                                                        <img src={resolved.img} alt={counter.name} className="w-full h-full object-contain p-1 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-md" loading="lazy" onError={(e) => { const target = e.target as HTMLImageElement; if (target.src.includes('raw.githubusercontent')) { target.src = `https://img.pokemondb.net/sprites/home/normal/${counter.slug}.png`; } else { target.style.display = 'none'; } }} />
+                                                        <img 
+                                                            src={resolved.imgLocal} 
+                                                            alt={counter.name} 
+                                                            className="w-full h-full object-contain p-1 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-md" 
+                                                            loading="lazy" 
+                                                            onError={(e) => { 
+                                                                const target = e.target as HTMLImageElement; 
+                                                                // Lógica O(1) de rescate visual
+                                                                if (target.src !== resolved.imgFallback) { 
+                                                                    target.src = resolved.imgFallback; 
+                                                                } else { 
+                                                                    target.style.display = 'none'; 
+                                                                } 
+                                                            }} 
+                                                        />
                                                         <div className="absolute bottom-0 right-0 bg-slate-950/90 text-[8px] px-1.5 py-0.5 text-red-400 font-mono border-tl rounded-tl font-bold">{counter.score}%</div>
                                                     </div>
                                                 </Link>

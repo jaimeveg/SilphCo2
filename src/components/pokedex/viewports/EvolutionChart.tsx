@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { 
   ArrowRight, Zap, Heart, Sun, Moon, RefreshCw, 
-  Smartphone, CloudRain, BoxSelect,
+  Smartphone, CloudRain, BoxSelect, Sparkles,
   CircleHelp, History, MapPin, ChevronDown, ChevronRight, Users, Scale, Lock, Dna, Package
 } from 'lucide-react';
 import { IEvolutionNode, IEvolutionDetail } from '@/types/interfaces';
@@ -152,6 +152,17 @@ interface Props {
   activeSpecies?: string; 
 }
 
+// --- HELPER O(1) PARA EXTRACCIÓN DE ID LOCAL ---
+const getAssetId = (node: IEvolutionNode): number => {
+    if (node.variantId) return node.variantId;
+    if (node.speciesId) return node.speciesId;
+    if (node.url) {
+        const parts = node.url.split('/').filter(Boolean);
+        return parseInt(parts[parts.length - 1], 10);
+    }
+    return 1; // Fallback seguro
+};
+
 // --- MOTOR LÓGICO DE URLS ---
 const getPokemonUrl = (node: IEvolutionNode, lang: Lang) => {
     if (node.variantId) {
@@ -257,8 +268,6 @@ const preprocessRegionalChain = (chain: IEvolutionNode, activeSpecies?: string):
             if (data.base) {
                 node.speciesId = data.base; 
             }
-            node.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`;
-            node.icon = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
         }
 
         return node;
@@ -375,13 +384,9 @@ const SimpleTooltip = ({ children, text }: { children: React.ReactNode; text: st
   </div>
 );
 
-// --- REFACTORIZACIÓN: NORMALIZACIÓN DE LLAVES Y FALLBACKS ---
 const ItemDisplay = ({ itemName }: { itemName: string }) => {
   const [error, setError] = useState(false);
-  // Normalizamos el nombre a kebab-case para manejar casos como "Leader's Crest" -> "leaders-crest"
   const itemKey = itemName.toLowerCase().replace(/['\s_]/g, '-');
-  
-  // 1. Busca en nuestro item_dex estático. 2. Fallback a la carpeta local por nombre
   const localSprite = itemDex[itemKey]?.sprites?.low_res;
   const itemUrl = localSprite || `/images/items/sprites/${itemKey}.png`;
   
@@ -431,8 +436,6 @@ const EvolutionTriggerDisplay = ({ details, lang, gen, targetSpecies }: { detail
   const tooltips = POKEDEX_DICTIONARY[safeLang].labels.evo_tooltips;
   const overrides = POKEDEX_DICTIONARY[safeLang].labels.evo_overrides;
   
-  // --- OVERRIDES ESTRICTOS PARA MECÁNICAS DE GEN 9 / ITEMS COMPLEJOS ---
-  // Dado que PokeAPI usa `customReq` u omite los items "nuevos", los forzamos visualmente aquí.
   const tSpecies = targetSpecies.toLowerCase();
   if (tSpecies === 'kingambit') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><span className="text-[6px] font-bold text-slate-500 mb-0.5">DEFEAT 3x</span><SimpleTooltip text={lang === 'es' ? "Derrotar 3 Bisharp con Distintivo de Líder" : "Defeat 3 Bisharp holding Leader's Crest"}><ItemDisplay itemName="leaders-crest" /></SimpleTooltip></div>;
   if (tSpecies === 'archaludon') return <div className="flex flex-col items-center group relative z-10 hover:z-50"><SimpleTooltip text="Metal Alloy"><ItemDisplay itemName="metal-alloy" /></SimpleTooltip></div>;
@@ -533,12 +536,14 @@ const EvolutionTriggerDisplay = ({ details, lang, gen, targetSpecies }: { detail
 
 // --- MAIN COMPONENT ---
 export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
-  // FIX TS: Force typing
   const safeLang = lang as keyof typeof POKEDEX_DICTIONARY;
   const dict = POKEDEX_DICTIONARY[safeLang].labels;
   const [selectedBranchIdx, setSelectedBranchIdx] = useState(0);
   const [currentGen, setCurrentGen] = useState(9);
   const [imgError, setImgError] = useState<Record<string, boolean>>({});
+  
+  // Estado para gestionar el Easter Egg Shiny (Evita Hydration Error)
+  const [shinyNodes, setShinyNodes] = useState<Record<string, boolean>>({});
 
   const processedChain = useMemo(() => {
       if (!chain) return null;
@@ -551,6 +556,18 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
   };
 
   const paths = useMemo(() => processedChain ? flatten(processedChain) : [], [processedChain]);
+
+  // Cálculo de la probabilidad Shiny tras montar el componente
+  useEffect(() => {
+      const shinies: Record<string, boolean> = {};
+      paths.flat().forEach(node => {
+          // Lotería Clásica: 1 entre 4096
+          if (Math.random() < (1/ 4096)) {
+              shinies[node.speciesName] = true;
+          }
+      });
+      setShinyNodes(shinies);
+  }, [paths]);
 
   useEffect(() => {
     if (activeSpecies && paths.length > 0) {
@@ -645,8 +662,21 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                 {paths.map((path, idx) => {
                     const node = path[path.length - 1]; 
                     const isActive = selectedBranchIdx === idx;
-                    const iconSrc = node.icon || node.sprite;
-                    return <button key={idx} onClick={() => setSelectedBranchIdx(idx)} className={cn("relative group rounded border transition-all duration-300 w-8 h-8 flex items-center justify-center overflow-hidden bg-slate-900", isActive ? "border-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.2)]" : "border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100")} title={node.speciesName}><Image src={iconSrc} alt={node.speciesName} fill className="object-contain p-0.5 rendering-pixelated" unoptimized onError={() => setImgError(prev => ({...prev, [node.speciesName + '_icon']: true}))} /></button>;
+                    const assetId = getAssetId(node);
+                    
+                    // Fallback para el icono (Toma el de PokeAPI si falla la versión local)
+                    const remoteIconFallback = node.icon || `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${assetId}.png`;
+                    const iconSrc = imgError[node.speciesName + '_icon'] ? remoteIconFallback : `/images/pokemon/icon/${assetId}.png`;
+                    
+                    return (
+                        <button key={idx} onClick={() => setSelectedBranchIdx(idx)} className={cn("relative group rounded border transition-all duration-300 w-8 h-8 flex items-center justify-center overflow-hidden bg-slate-900", isActive ? "border-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.2)]" : "border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100")} title={node.speciesName}>
+                            <Image src={iconSrc} alt={node.speciesName} fill className="object-contain p-0.5 rendering-pixelated" unoptimized onError={() => {
+                                if (!imgError[node.speciesName + '_icon']) {
+                                    setImgError(prev => ({...prev, [node.speciesName + '_icon']: true}))
+                                }
+                            }} />
+                        </button>
+                    );
                 })}
             </div>
           )}
@@ -656,12 +686,23 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                 {currentPath.map((node, i) => {
                     const isLast = i === currentPath.length - 1;
                     const nextNode = currentPath[i+1];
-                    const imgSrc = imgError[node.speciesName] ? '/fallback.png' : node.sprite;
                     const speciesLower = node.speciesName.toLowerCase();
                     const requiredGen = GEN_CONSTRAINTS[speciesLower];
                     const isUnavailable = requiredGen && currentGen < requiredGen;
                     const relevantDetails = nextNode ? getOptimizedEvolutionDetail(nextNode.speciesName, nextNode.details, currentGen) : [];
                     const destUrl = getPokemonUrl(node, lang);
+
+                    const assetId = getAssetId(node);
+                    const isNodeShiny = shinyNodes[node.speciesName];
+                    
+                    // Fallback robusto para la imagen principal (Toma de GitHub Raw oficial de PokeAPI)
+                    const remoteMainFallback = isNodeShiny 
+                        ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${assetId}.png`
+                        : (node.sprite || `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${assetId}.png`);
+
+                    const imgSrc = imgError[node.speciesName] 
+                        ? remoteMainFallback 
+                        : `/images/pokemon/${isNodeShiny ? 'high-res-shiny' : 'high-res'}/${assetId}.png`;
 
                     return (
                         <div key={i} className="flex items-center">
@@ -674,14 +715,25 @@ export default function EvolutionChart({ chain, lang, activeSpecies }: Props) {
                                     {isUnavailable ? (
                                         <div className="flex flex-col items-center justify-center text-slate-600 gap-1 p-2 text-center"><Lock size={16} /><span className="text-[8px] font-mono leading-tight uppercase font-bold text-red-900/70">{dict.unavailable}</span><span className="text-[7px] font-mono">GEN {GEN_ROMAN[requiredGen]}</span></div>
                                     ) : (
-                                        <Image src={imgSrc} alt={node.speciesName} width={96} height={96} className="object-contain z-10 drop-shadow-xl transition-transform duration-300 group-hover/node:scale-110 p-2" unoptimized onError={() => setImgError(prev => ({...prev, [node.speciesName]: true}))} />
+                                        <div className="relative w-full h-full">
+                                            {isNodeShiny && (
+                                                <div className="absolute -top-1 -left-1 z-30 pointer-events-none">
+                                                    <Sparkles size={12} className="text-yellow-400 animate-pulse fill-current" />
+                                                </div>
+                                            )}
+                                            <Image src={imgSrc} alt={node.speciesName} fill className="object-contain z-10 drop-shadow-xl transition-transform duration-300 group-hover/node:scale-110 p-2" unoptimized onError={() => {
+                                                if (!imgError[node.speciesName]) {
+                                                    setImgError(prev => ({...prev, [node.speciesName]: true}))
+                                                }
+                                            }} />
+                                        </div>
                                     )}
                                     {!isUnavailable && isSensitive && GEN_CONSTRAINTS[node.speciesName.toLowerCase()] && <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-950 border border-cyan-500 rounded-full flex items-center justify-center z-20" title="Evolution mechanics change"><History size={6} className="text-cyan-400" /></div>}
                                 </Link>
 
                                 <div className="text-center">
                                     <Link href={isUnavailable ? '#' : destUrl}>
-                                        <h4 className={cn("text-[10px] md:text-xs font-display font-bold uppercase tracking-wider transition-colors", isUnavailable ? "text-slate-700" : "text-slate-300 group-hover/node:text-cyan-400 cursor-pointer")}>
+                                        <h4 className={cn("text-[10px] md:text-xs font-display font-bold uppercase tracking-wider transition-colors", isUnavailable ? "text-slate-700" : (isNodeShiny ? "text-yellow-400 group-hover/node:text-yellow-300" : "text-slate-300 group-hover/node:text-cyan-400 cursor-pointer"))}>
                                             {node.speciesName.replace(/-/g, ' ')}
                                         </h4>
                                     </Link>

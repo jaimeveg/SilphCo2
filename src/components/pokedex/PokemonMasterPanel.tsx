@@ -25,18 +25,28 @@ export default function PokemonMasterPanel({ pokemon, lang }: Props) {
   const searchParams = useSearchParams();
   const dict = POKEDEX_DICTIONARY[lang];
 
-  // --- TOGGLE STATE ---
-  // Simplificado: Solo gestionamos Shiny. El género y formas se gestionan vía FormSelector.
+  // --- TOGGLE STATES ---
   const [isShiny, setIsShiny] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
-  // Reiniciar estado shiny al cambiar de pokémon
+  // Reiniciar estado shiny y posibles errores al cambiar de pokémon
   useEffect(() => {
     setIsShiny(false);
+    setImgError(false);
   }, [pokemon.id]);
 
-  // Selección de Imagen Activa
-  // Al navegar a una variedad específica (ej. Indeedee Female), assets.main ya trae la imagen correcta de esa forma.
-  const activeSprite = isShiny ? pokemon.assets.shiny : pokemon.assets.main;
+  // Reiniciar el error si el usuario cambia manualmente el toggle shiny
+  useEffect(() => {
+    setImgError(false);
+  }, [isShiny]);
+
+  // --- SELECCIÓN DE IMAGEN ACTIVA (LOCAL FIRST -> REMOTE FALLBACK) ---
+  const localSprite = isShiny 
+    ? `/images/pokemon/high-res-shiny/${pokemon.id}.png`
+    : `/images/pokemon/high-res/${pokemon.id}.png`;
+    
+  const remoteFallback = isShiny ? pokemon.assets.shiny : pokemon.assets.main;
+  const activeSprite = imgError ? remoteFallback : localSprite;
 
   // --- NAVIGATION & LOGIC ---
   const anchorId = pokemon.speciesId || pokemon.id;
@@ -57,11 +67,6 @@ export default function PokemonMasterPanel({ pokemon, lang }: Props) {
     if (newVariantId === pokemon.speciesId.toString()) {
       // CASO: Volver a Forma Base
       params.delete('variant');
-      
-      // FIX: Forzamos la navegación al ID de la especie base (anchorId).
-      // Esto corrige el bug donde, si estábamos en una URL directa de variante (ej: /pokedex/10126),
-      // al quitar el param 'variant' nos quedábamos atrapados en la variante.
-      // Reemplazamos el último segmento del path (el ID/Slug actual) por el ID base.
       const basePath = pathname.replace(/\/[^\/]+$/, `/${anchorId}`);
       router.push(`${basePath}?${params.toString()}`);
     } else {
@@ -143,6 +148,7 @@ export default function PokemonMasterPanel({ pokemon, lang }: Props) {
                                 className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] z-10 group-hover/art:scale-105 transition-transform duration-500"
                                 priority
                                 unoptimized
+                                onError={() => setImgError(true)}
                             />
                         </motion.div>
                     </AnimatePresence>
