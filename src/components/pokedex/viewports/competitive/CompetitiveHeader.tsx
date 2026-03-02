@@ -77,7 +77,7 @@ interface Props {
     topAbilities: { name: string; value: number }[];
     topItems: {name: string, value: number}[];
     spreads: { evs: Record<string, number>; nature: string }[];
-    speedData?: SpeedData; // NUEVA PROP OPCIONAL (Mientras migra todo)
+    speedData?: SpeedData; 
     lang: Lang;
 }
 
@@ -85,14 +85,34 @@ export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbi
     const t = COMPETITIVE_TRANSLATIONS[lang] || COMPETITIVE_TRANSLATIONS.en;
     const [tooltipData, setTooltipData] = useState<{ x: number, y: number, text: string } | null>(null);
 
-    const usageNum = parseFloat(usageRate);
-    const silphRank = calculateSilphRank(usageNum);
-    
+    // =========================================================================
+    // 🧠 LÓGICA DE SILPH RANK (Semáforo Híbrido)
+    // =========================================================================
+    const usageStr = String(usageRate);
+    let silphRank;
+
+    if (usageStr.includes('#')) {
+        // MODO LADDER (Pikalytics): Extrae el número del string "Top #1"
+        const rankNum = parseInt(usageStr.replace(/[^0-9]/g, ''), 10) || 50;
+        
+        if (rankNum <= 10) {
+            silphRank = { rank: 'S+', color: 'text-amber-400' };
+        } else if (rankNum <= 30) {
+            silphRank = { rank: 'S', color: 'text-purple-400' };
+        } else {
+            silphRank = { rank: 'A', color: 'text-emerald-400' };
+        }
+    } else {
+        // MODO NORMAL (Smogon / RK9): Usa tu fórmula matemática original por porcentaje
+        const usageNum = parseFloat(usageStr);
+        silphRank = calculateSilphRank(usageNum);
+    }
+    // =========================================================================
+
     // Roles Calculation (Local Logic preserved)
     const roles = determineRoles(pokemon, topMoves, topAbilities, topItems, spreads);
 
     // Speed Tier Display (Data-Driven from API)
-    // Si no viene speedData (ej: fallback), usamos valores por defecto
     const tierDisplay = speedData?.tier || 'N/A';
     const isTrickRoom = tierDisplay === 'F';
     const tierTooltip = speedData?.context?.[lang] || (lang === 'es' ? 'Datos de velocidad no disponibles' : 'No speed data available');

@@ -6,10 +6,11 @@ import path from 'path';
 // --- CONFIGURACIÓN BASE ---
 const args = process.argv.slice(2);
 const TOURNAMENT_URL = args[0];
-const TOURNAMENTS_DIR = path.join(process.cwd(), 'public', 'data', 'tournaments');
+const DATA_DIR = path.join(process.cwd(), 'public', 'data');
+const TOURNAMENTS_DIR = path.join(DATA_DIR, 'tournaments');
 const INDEX_PATH = path.join(TOURNAMENTS_DIR, 'rk9_index.json');
-const ALIAS_PATH = path.join(process.cwd(), 'public', 'data', 'alias_map.json'); // NUEVO
-const unmappedAliases = new Set<string>();
+const ALIAS_PATH = path.join(DATA_DIR, 'alias_map.json'); 
+const TRAITS_PATH = path.join(DATA_DIR, 'traits_map.json');
 
 if (!TOURNAMENT_URL) {
     console.error('[ERROR] Debes proporcionar una URL. Uso: npx tsx scripts/rk9-scraper.ts <URL>');
@@ -38,15 +39,28 @@ interface AggregatedPokemon {
 const runScraper = async () => {
     await fs.mkdir(TOURNAMENTS_DIR, { recursive: true });
 
-    // CARGA DE LA PIEDRA ROSETTA (ALIAS MAP)
+    // CARGA DE DICCIONARIOS
     let aliasMap: Record<string, number> = {};
-    try {
-        const aliasRaw = await fs.readFile(ALIAS_PATH, 'utf8');
-        aliasMap = JSON.parse(aliasRaw);
-    } catch (e) {
-        console.error('[CRÍTICO] No se encontró alias_map.json. Ejecuta primero generate-alias-map.ts');
-        process.exit(1);
-    }
+    try { aliasMap = JSON.parse(await fs.readFile(ALIAS_PATH, 'utf8')); } 
+    catch (e) { console.error('🔥 ERROR: No se encontró alias_map.json'); process.exit(1); }
+
+    let traitsMap: Record<string, string> = {};
+    try { traitsMap = JSON.parse(await fs.readFile(TRAITS_PATH, 'utf8')); } 
+    catch (e) { console.error('🔥 ERROR: No se encontró traits_map.json'); process.exit(1); }
+
+    // RADARES
+    const unmappedAliases = new Set<string>();
+    const unmappedTraits = new Set<string>();
+
+    const normalizeTrait = (name: string) => {
+        const squashed = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (traitsMap[squashed]) {
+            return traitsMap[squashed];
+        } else {
+            unmappedTraits.add(name);
+            return toSlug(name); // fallback
+        }
+    };
 
     const urlParts = TOURNAMENT_URL.split('/').filter(Boolean);
     const tournamentId = urlParts[urlParts.length - 1];
@@ -99,9 +113,9 @@ const runScraper = async () => {
         return;
     }
 
-    console.log('\n[3/5] Parseando equipos e inyectando IDs (Rosetta Stone)...');
+    console.log('\n[3/5] Parseando equipos e inyectando IDs y Rasgos estándar...');
     
-    const aggregatedData: Record<string, AggregatedPokemon> = {}; // Ahora la key será el ID numérico
+    const aggregatedData: Record<string, AggregatedPokemon> = {};
     let successfulTeams = 0;
 
     for (let i = 0; i < teamUrls.length; i++) {
@@ -158,7 +172,6 @@ const runScraper = async () => {
             if (currentTeamData.length > 0) {
                 successfulTeams++;
                 
-                // Mapeamos los IDs de todo el equipo por adelantado
                 const teamIds = currentTeamData.map(p => {
                     const slug = toSlug(p.name);
                     let mappedId = aliasMap[slug] || aliasMap[slug.replace(/-/g, '')];
@@ -171,7 +184,7 @@ const runScraper = async () => {
 
                 for (let j = 0; j < currentTeamData.length; j++) {
                     const pkm = currentTeamData[j];
-                    const pkmId = teamIds[j].toString(); // Forzamos string para usarlo como key en el JSON
+                    const pkmId = teamIds[j].toString(); 
                     
                     if (!aggregatedData[pkmId]) {
                         aggregatedData[pkmId] = { name: pkm.name, count: 0, moves: {}, abilities: {}, items: {}, teras: {}, teammates: {} };
@@ -180,11 +193,23 @@ const runScraper = async () => {
                     const ref = aggregatedData[pkmId];
                     ref.count++; 
 
-                    if (pkm.item !== 'No Item') ref.items[pkm.item] = (ref.items[pkm.item] || 0) + 1;
-                    if (pkm.ability !== 'Unknown') ref.abilities[pkm.ability] = (ref.abilities[pkm.ability] || 0) + 1;
-                    if (pkm.tera !== 'Unknown') ref.teras[pkm.tera] = (ref.teras[pkm.tera] || 0) + 1;
+                    // NORMALIZACIÓN DE RASGOS
+                    if (pkm.item !== 'No Item') {
+                        const i = normalizeTrait(pkm.item);
+                        ref.items[i] = (ref.items[i] || 0) + 1;
+                    }
+                    if (pkm.ability !== 'Unknown') {
+                        const a = normalizeTrait(pkm.ability);
+                        ref.abilities[a] = (ref.abilities[a] || 0) + 1;
+                    }
+                    
+                    if (pkm.tera !== 'Unknown') ref.teras[pkm.tera.toLowerCase()] = (ref.teras[pkm.tera.toLowerCase()] || 0) + 1;
+                    
                     for (const m of pkm.moves) {
-                        if (m) ref.moves[m] = (ref.moves[m] || 0) + 1;
+                        if (m) {
+                            const mv = normalizeTrait(m);
+                            ref.moves[mv] = (ref.moves[mv] || 0) + 1;
+                        }
                     }
 
                     // Teammates usando IDs
@@ -252,17 +277,25 @@ const runScraper = async () => {
     await fs.writeFile(INDEX_PATH, JSON.stringify(indexData, null, 2), 'utf8');
 
     // --- REPORTE DE HUÉRFANOS ---
+    console.log('\n--- REPORTE DE CALIDAD DE DATOS ---');
     if (unmappedAliases.size > 0) {
-        console.warn('\n⚠️ ATENCIÓN: Se han encontrado Pokémon sin mapear a un ID oficial:');
+        console.warn(`\n⚠️ ATENCIÓN: Se han encontrado ${unmappedAliases.size} Pokémon sin mapear a un ID oficial:`);
         const unmappedArray = Array.from(unmappedAliases).sort();
-        console.warn(unmappedArray);
-        
-        fs.writeFile(
-            path.join(process.cwd(), 'public/data/unmapped_aliases.json'), 
-            JSON.stringify(unmappedArray, null, 2)
-        );
-        console.log('-> Revisa "public/data/unmapped_aliases.json" y añade estos nombres al MANUAL_OVERRIDES de tu script generate-alias-map.ts');
+        await fs.writeFile(path.join(DATA_DIR, 'unmapped_aliases.json'), JSON.stringify(unmappedArray, null, 2), 'utf8');
+        console.log('-> Lista guardada en "public/data/unmapped_aliases.json"');
+    } else {
+        console.log(`✅ [POKEMON] 100% mapeados a IDs oficiales.`);
     }
+
+    if (unmappedTraits.size > 0) {
+        console.warn(`\n⚠️ ATENCIÓN: Se encontraron ${unmappedTraits.size} Ataques/Objetos sin estandarizar.`);
+        const unmappedTraitsArray = Array.from(unmappedTraits).sort();
+        await fs.writeFile(path.join(DATA_DIR, 'unmapped_traits.json'), JSON.stringify(unmappedTraitsArray, null, 2), 'utf8');
+        console.log('-> Lista guardada en "public/data/unmapped_traits.json"');
+    } else {
+        console.log(`✅ [RASGOS] 100% estandarizados a Kebab-Case.`);
+    }
+
     console.log(`\n[ÉXITO] ETL Finalizado.`);
 };
 

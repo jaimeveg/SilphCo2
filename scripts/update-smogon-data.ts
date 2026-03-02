@@ -7,7 +7,10 @@ import path from 'path';
 const SMOGON_BASE = 'https://www.smogon.com/stats';
 const OUTPUT_DIR = path.join(process.cwd(), 'public/data/smogon');
 const ALIAS_PATH = path.join(process.cwd(), 'public/data', 'alias_map.json');
+const TRAITS_PATH = path.join(process.cwd(), 'public/data', 'traits_map.json'); // NUEVO
+
 const unmappedAliases = new Set<string>();
+const unmappedTraits = new Set<string>(); // NUEVO: Radar de ataques/objetos/habilidades
 
 // --- CARGA DE LA PIEDRA ROSETTA (ALIAS MAP) ---
 let aliasMap: Record<string, number> = {};
@@ -16,6 +19,16 @@ try {
     aliasMap = JSON.parse(aliasRaw);
 } catch (e) {
     console.error('🔥 ERROR FATAL: No se encontró alias_map.json. Ejecuta npx tsx scripts/generate-alias-map.ts primero.');
+    process.exit(1);
+}
+
+// --- CARGA DEL DICCIONARIO DE RASGOS (TRAITS MAP) ---
+let traitsMap: Record<string, string> = {};
+try {
+    const traitsRaw = fs.readFileSync(TRAITS_PATH, 'utf8');
+    traitsMap = JSON.parse(traitsRaw);
+} catch (e) {
+    console.error('🔥 ERROR FATAL: No se encontró traits_map.json. Ejecuta npx tsx scripts/generate-traits-map.ts primero.');
     process.exit(1);
 }
 
@@ -38,6 +51,18 @@ const IGNORED_FORMATS = [
 
 // --- UTILIDADES LÉXICAS ---
 const toSlug = (name: string) => name.toLowerCase().replace(/['’\.]/g, '').replace(/[\s:]+/g, '-').replace(/[^a-z0-9-]/g, '');
+
+// --- NORMALIZADOR DE RASGOS ---
+const normalizeTrait = (name: string) => {
+    const squashed = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (traitsMap[squashed]) {
+        return traitsMap[squashed];
+    } else {
+        // Si no existe, lo mandamos a la lista negra y devolvemos un fallback razonable
+        unmappedTraits.add(name);
+        return toSlug(name);
+    }
+};
 
 // --- INTERCEPTOR DE DATOS (EL ESCUDO) ---
 const transformSmogonData = (rawData: any) => {
@@ -71,7 +96,7 @@ const transformSmogonData = (rawData: any) => {
             (pkmStats as any).Teammates = newTeammates;
         }
 
-        // 2. Traducir Checks and Counters (¡LA PIEZA QUE FALTABA!)
+        // 2. Traducir Checks and Counters
         const newCounters: Record<string, any> = {};
         if ((pkmStats as any)['Checks and Counters']) {
             for (const [counterName, scores] of Object.entries((pkmStats as any)['Checks and Counters'])) {
@@ -87,6 +112,20 @@ const transformSmogonData = (rawData: any) => {
             }
             (pkmStats as any)['Checks and Counters'] = newCounters;
         }
+
+        // 3. Traducir Rasgos (Ataques, Habilidades, Objetos)
+        const processBlock = (block: any) => {
+            if (!block) return {};
+            const newBlock: Record<string, number> = {};
+            for (const [key, value] of Object.entries(block)) {
+                newBlock[normalizeTrait(key)] = value as number;
+            }
+            return newBlock;
+        };
+
+        if ((pkmStats as any).Moves) (pkmStats as any).Moves = processBlock((pkmStats as any).Moves);
+        if ((pkmStats as any).Items) (pkmStats as any).Items = processBlock((pkmStats as any).Items);
+        if ((pkmStats as any).Abilities) (pkmStats as any).Abilities = processBlock((pkmStats as any).Abilities);
         
         // Guardar Pokémon principal
         if (newData[pkmId.toString()]) {
@@ -143,7 +182,7 @@ const fetchFileList = async (date: string): Promise<string[] | null> => {
 };
 
 const run = async () => {
-    console.log('=== INICIANDO ETL DE SMOGON CHAOS (CON RESOLUCIÓN DE IDs) ===\n');
+    console.log('=== INICIANDO ETL DE SMOGON CHAOS (CON ESTANDARIZACIÓN UNIVERSAL) ===\n');
 
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
@@ -185,7 +224,7 @@ const run = async () => {
     console.log('💾 Metadatos guardados.');
 
     // 4. Descargar y Transformar Archivos
-    console.log(`⬇️ Descargando e inyectando IDs en ${targetFiles.length} archivos...`);
+    console.log(`⬇️ Descargando e inyectando estándares en ${targetFiles.length} archivos...`);
     
     const chunkSize = 10;
     for (let i = 0; i < targetFiles.length; i += chunkSize) {
@@ -199,11 +238,10 @@ const run = async () => {
                 const res = await fetch(url, { headers: HEADERS });
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 
-                // Parseo, Traducción O(1) de Strings a IDs, y Guardado Minificado
                 const rawJson = await res.json();
                 const cleanJson = transformSmogonData(rawJson);
                 
-                fs.writeFileSync(destPath, JSON.stringify(cleanJson)); // Sin tabulaciones para ahorrar espacio
+                fs.writeFileSync(destPath, JSON.stringify(cleanJson));
             } catch (err: any) {
                 console.error(`  [!] Error en ${filename}: ${err.message}`);
             }
@@ -212,20 +250,28 @@ const run = async () => {
         process.stdout.write(`\r  -> Progreso: ${Math.min(i + chunkSize, targetFiles.length)} / ${targetFiles.length}`);
     }
 
-    // --- REPORTE DE HUÉRFANOS ---
+    // --- REPORTES DE HUÉRFANOS ---
+    console.log('\n\n--- REPORTE DE CALIDAD DE DATOS ---');
+
     if (unmappedAliases.size > 0) {
-        console.warn('\n⚠️ ATENCIÓN: Se han encontrado Pokémon sin mapear a un ID oficial:');
+        console.warn(`\n⚠️ ATENCIÓN: Se encontraron ${unmappedAliases.size} Pokémon sin mapear a un ID oficial.`);
         const unmappedArray = Array.from(unmappedAliases).sort();
-        console.warn(unmappedArray);
-        
-        fs.writeFileSync(
-            path.join(process.cwd(), 'public/data/unmapped_aliases.json'), 
-            JSON.stringify(unmappedArray, null, 2)
-        );
-        console.log('-> Revisa "public/data/unmapped_aliases.json" y añade estos nombres al MANUAL_OVERRIDES de tu script generate-alias-map.ts');
+        fs.writeFileSync(path.join(process.cwd(), 'public/data/unmapped_aliases.json'), JSON.stringify(unmappedArray, null, 2));
+        console.log('-> Revisa "public/data/unmapped_aliases.json"');
+    } else {
+        console.log(`✅ [POKEMON] 100% mapeados a IDs oficiales.`);
     }
 
-    console.log('\n\n[OK] Sincronización completada con éxito. Datos traducidos a IDs.');
+    if (unmappedTraits.size > 0) {
+        console.warn(`\n⚠️ ATENCIÓN: Se encontraron ${unmappedTraits.size} Ataques/Objetos/Habilidades sin estandarizar.`);
+        const unmappedTraitsArray = Array.from(unmappedTraits).sort();
+        fs.writeFileSync(path.join(process.cwd(), 'public/data/unmapped_traits.json'), JSON.stringify(unmappedTraitsArray, null, 2));
+        console.log('-> Revisa "public/data/unmapped_traits.json"');
+    } else {
+        console.log(`✅ [RASGOS] 100% estandarizados a Kebab-Case.`);
+    }
+
+    console.log('\n[OK] Sincronización completada con éxito.');
 };
 
 run();

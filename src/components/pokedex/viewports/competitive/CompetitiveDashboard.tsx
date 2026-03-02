@@ -24,7 +24,7 @@ export interface CompetitiveResponse {
     abilities: Array<{ name: string; value: number; displayValue?: string; slug?: string }>;
     teammates: Array<{ id: number; value: number; displayValue?: string }>; 
     natureSpread: Array<{ nature: string; usage: string; evs: Record<string, number> }>;
-    teras?: Array<{ name: string; value: number; displayValue?: string }>; 
+    teras?: Array<{ name: string; value: number; displayValue?: string; slug?: string }>; 
   };
   matchups: {
     counters: Array<{ id: number; score: string }>; 
@@ -45,10 +45,26 @@ const normalizeGen = (gen: string | number | undefined): number => {
     return romans[roman] || 9; 
 };
 
-const fmtPct = (val: number | string | undefined): string => {
-    if (val === undefined) return "0.00";
-    if (typeof val === 'string') return val.includes('.') ? val : `${val}.00`;
-    return typeof val === 'number' ? val.toFixed(2) : val;
+// NUEVO FORMATEADOR INTELIGENTE (Soporta % y Ordinales como #1)
+const formatDisplayValue = (val: number | string | undefined): string => {
+    if (val === undefined) return "0.00%";
+    const strVal = String(val);
+    
+    // Si contiene un # (ej. "#1" o "Top #1"), devolvemos el texto puro
+    if (strVal.includes('#')) return strVal; 
+    
+    // Si es un número o string numérico, lo forzamos a 2 decimales y añadimos %
+    const numVal = typeof val === 'string' ? parseFloat(val) : val;
+    if (!isNaN(numVal)) {
+        return `${numVal.toFixed(2)}%`;
+    }
+    
+    return `${strVal}%`; // Fallback de emergencia
+};
+
+const formatDisplayName = (slug: string) => {
+    if (!slug) return '';
+    return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 };
 
 interface Props {
@@ -57,12 +73,14 @@ interface Props {
 }
 
 export default function CompetitiveDashboard({ pokemon, lang }: Props) {
-    const [dataSource, setDataSource] = useState<'showdown' | 'tournament'>('showdown');
+    // AÑADIDO ESTADO 'ladder'
+    const [dataSource, setDataSource] = useState<'showdown' | 'tournament' | 'ladder'>('showdown');
     const [tournaments, setTournaments] = useState<{id: string, name: string, date: string}[]>([]);
     const [selectedTournament, setSelectedTournament] = useState<string>('');
-    
-    // CARGA DE DICCIONARIOS (ROSETTA STONE)
     const [aliasMap, setAliasMap] = useState<Record<string, number> | null>(null);
+    
+    // ESTADO PARA PIKALYTICS LADDER
+    const [ladderData, setLadderData] = useState<any>(null);
 
     useEffect(() => {
         fetch('/data/alias_map.json')
@@ -77,6 +95,12 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                 if (data.length > 0) setSelectedTournament(data[0].id);
             })
             .catch(() => console.log('Sin torneos locales encontrados.'));
+
+        // Carga silenciosa del Ladder
+        fetch('/data/pikalytics_ladder.json')
+            .then(res => res.ok ? res.json() : null)
+            .then(data => setLadderData(data))
+            .catch(() => console.log('Sin datos de ladder local.'));
     }, []);
 
     const { data: indexData, isLoading: isLoadingTree } = useQuery<SmogonIndexResponse | null>({
@@ -94,7 +118,6 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
     const [reg, setReg] = useState<string>('');
     const [fileId, setFileId] = useState<string>(''); 
 
-    // --- EL CEREBRO DE LA RESOLUCIÓN DE IDs ---
     const activePokemonId = useMemo(() => {
         const variantParam = searchParams.get('variant');
         if (variantParam && !isNaN(Number(variantParam))) return variantParam;
@@ -111,6 +134,19 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
     }, [searchParams, pokemon, dexMap, aliasMap]);
 
     const isNumericId = !isNaN(Number(activePokemonId));
+
+    // CONDICIÓN CRÍTICA: ¿Está en el Top 50?
+    const isPokemonInLadder = useMemo(() => {
+        if (!ladderData || !ladderData.data) return false;
+        return ladderData.data.some((p: any) => String(p.id) === String(activePokemonId));
+    }, [ladderData, activePokemonId]);
+
+    // Fallback de seguridad si el usuario cambia de Pokemon estando en la tab de Ladder
+    useEffect(() => {
+        if (dataSource === 'ladder' && ladderData && !isPokemonInLadder) {
+            setDataSource('showdown');
+        }
+    }, [dataSource, isPokemonInLadder, ladderData]);
 
     // --- QUERIES ---
 
@@ -137,9 +173,6 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
             const pkmUsageRaw = pkmData.usage.raw;
             const usagePercent = ((pkmUsageRaw / totalTeams) * 100).toFixed(2);
 
-            // ========================================================
-            // 🚀 MOTOR DE PERCENTILES FRONTAL (ESPECÍFICO PARA TORNEOS)
-            // ========================================================
             let speedAnalysis = null;
             try {
                 const statsRes = await fetch('/data/pokedex_base_stats.json');
@@ -150,23 +183,16 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                         const targetSpeed = speedMapCache[activePokemonId].stats?.spe || speedMapCache[activePokemonId].base_stats?.spe || 0;
                         
                         const metaSpeeds: number[] = [];
-                        let globalMaxSpeed = 0;
-                        let globalMinSpeed = 999;
+                        let globalMaxSpeed = 0; let globalMinSpeed = 999;
 
-                        // Evaluamos sólo a los Pokémon que participaron en este Torneo
                         Object.keys(rawData.pokemon).forEach(mId => {
                             const monData = rawData.pokemon[mId];
                             const u = (monData.usage.raw / totalTeams) * 100;
-
                             if (speedMapCache[mId]) {
                                 const s = speedMapCache[mId].stats?.spe || speedMapCache[mId].base_stats?.spe || 0;
                                 if (s > globalMaxSpeed) globalMaxSpeed = s;
                                 if (s < globalMinSpeed) globalMinSpeed = s;
-
-                                // Cortamos ruido: Sólo Pokémon con más de 0.01% de uso en el torneo
-                                if (u > 0.01) {
-                                    metaSpeeds.push(s);
-                                }
+                                if (u > 0.01) metaSpeeds.push(s);
                             }
                         });
 
@@ -175,21 +201,18 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                         if (metaSpeeds.length > 0) {
                             const slowerMons = metaSpeeds.filter(s => s < targetSpeed).length;
                             const percentile = (slowerMons / metaSpeeds.length) * 100;
-
                             const isFastest = targetSpeed >= globalMaxSpeed;
                             const isSlowest = targetSpeed <= globalMinSpeed;
 
                             let tier = 'C';
-                            if (targetSpeed < 55) {
-                                tier = 'F';
-                            } else {
+                            if (targetSpeed < 55) { tier = 'F'; } 
+                            else {
                                 if (percentile >= 95) tier = 'S+';
                                 else if (percentile >= 85) tier = 'S';
                                 else if (percentile >= 70) tier = 'A';
                                 else if (percentile >= 50) tier = 'B';
                                 else tier = 'C';
                             }
-
                             if (isFastest) tier = 'S+';
                             if (isSlowest) tier = 'F';
 
@@ -199,47 +222,31 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                 if (rawTopPercent <= 0.01) topPercentStr = "< 0.01";
                                 else topPercentStr = rawTopPercent.toFixed(2);
                             }
-
                             const slowerPercentStr = percentile.toFixed(0);
 
-                            // TEXTOS ESPECÍFICOS DE TORNEO
                             let contextEn = `Faster than ${slowerPercentStr}% of the tournament`;
                             let contextEs = `Más rápido que el ${slowerPercentStr}% del torneo`;
-
-                            if (isFastest) {
-                                contextEn = "The fastest Pokémon in the tournament";
-                                contextEs = "El Pokémon más rápido del torneo";
-                            } else if (isSlowest) {
-                                contextEn = "The slowest Pokémon in the tournament";
-                                contextEs = "El Pokémon más lento del torneo";
-                            } else if (tier === 'F') { 
+                            if (isFastest) { contextEn = "The fastest Pokémon in the tournament"; contextEs = "El Pokémon más rápido del torneo"; } 
+                            else if (isSlowest) { contextEn = "The slowest Pokémon in the tournament"; contextEs = "El Pokémon más lento del torneo"; } 
+                            else if (tier === 'F') { 
                                 const fasterThanMeStr = rawTopPercent.toFixed(0);
                                 contextEn = `Slower than ${fasterThanMeStr}% (Trick Room viable)`;
                                 contextEs = `Más lento que el ${fasterThanMeStr}% (Viable en Espacio Raro)`;
-                            } else if (percentile > 90) {
-                                contextEn = `Top ${topPercentStr}% fastest in the tournament`;
-                                contextEs = `Top ${topPercentStr}% más rápidos del torneo`;
-                            }
+                            } 
+                            else if (percentile > 90) { contextEn = `Top ${topPercentStr}% fastest in the tournament`; contextEs = `Top ${topPercentStr}% más rápidos del torneo`; }
 
-                            speedAnalysis = {
-                                tier,
-                                percentile,
-                                baseSpeed: targetSpeed,
-                                context: { en: contextEn, es: contextEs }
-                            };
+                            speedAnalysis = { tier, percentile, baseSpeed: targetSpeed, context: { en: contextEn, es: contextEs } };
                         }
                     }
                 }
-            } catch (e) {
-                console.error("Error calculando Speed Tier para el torneo", e);
-            }
-            // ========================================================
+            } catch (e) { }
 
             const mapStats = (record: Record<string, number>) => {
                 if (!record) return [];
                 return Object.entries(record)
-                    .map(([name, count]) => ({
-                        name,
+                    .map(([slug, count]) => ({
+                        name: formatDisplayName(slug), 
+                        slug: slug,                    
                         value: (count / pkmUsageRaw) * 100,
                         displayValue: ((count / pkmUsageRaw) * 100).toFixed(2)
                     }))
@@ -269,7 +276,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                     natureSpread: [] 
                 },
                 matchups: { counters: [] },
-                speed: speedAnalysis // ¡Se Inyecta la velocidad aquí!
+                speed: speedAnalysis 
             } as CompetitiveResponse;
         },
         enabled: dataSource === 'tournament' && !!selectedTournament && isNumericId,
@@ -277,8 +284,94 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         retry: false
     });
 
-    const isLoading = dataSource === 'showdown' ? smogonQuery.isLoading : tournamentQuery.isLoading;
-    const data = dataSource === 'showdown' ? smogonQuery.data : tournamentQuery.data;
+    // QUERY NUEVA: PIKALYTICS LADDER
+    const ladderQuery = useQuery<CompetitiveResponse | null>({
+        queryKey: ['ladderChaos', activePokemonId],
+        queryFn: async () => {
+            if (!ladderData) return null;
+            const pkmData = ladderData.data.find((p: any) => String(p.id) === String(activePokemonId));
+            if (!pkmData) return null;
+
+            let speedAnalysis = null;
+            try {
+                const statsRes = await fetch('/data/pokedex_base_stats.json');
+                if (statsRes.ok) {
+                    const speedMapCache = await statsRes.json();
+                    if (speedMapCache[activePokemonId]) {
+                        const targetSpeed = speedMapCache[activePokemonId].stats?.spe || speedMapCache[activePokemonId].base_stats?.spe || 0;
+                        const metaSpeeds: number[] = [];
+                        let globalMaxSpeed = 0; let globalMinSpeed = 999;
+
+                        // Solo evaluamos velocidades dentro del TOP 50
+                        ladderData.data.forEach((p: any) => {
+                            const mId = String(p.id);
+                            if (speedMapCache[mId]) {
+                                const s = speedMapCache[mId].stats?.spe || speedMapCache[mId].base_stats?.spe || 0;
+                                if (s > globalMaxSpeed) globalMaxSpeed = s;
+                                if (s < globalMinSpeed) globalMinSpeed = s;
+                                metaSpeeds.push(s);
+                            }
+                        });
+
+                        metaSpeeds.sort((a, b) => a - b);
+                        if (metaSpeeds.length > 0) {
+                            const slowerMons = metaSpeeds.filter((s: number) => s < targetSpeed).length;
+                            const percentile = (slowerMons / metaSpeeds.length) * 100;
+                            const isFastest = targetSpeed >= globalMaxSpeed;
+                            const isSlowest = targetSpeed <= globalMinSpeed;
+
+                            let tier = 'C';
+                            if (targetSpeed < 55) { tier = 'F'; }
+                            else {
+                                if (percentile >= 95) tier = 'S+';
+                                else if (percentile >= 85) tier = 'S';
+                                else if (percentile >= 70) tier = 'A';
+                                else if (percentile >= 50) tier = 'B';
+                                else tier = 'C';
+                            }
+                            if (isFastest) tier = 'S+';
+                            if (isSlowest) tier = 'F';
+
+                            const rawTopPercent = 100 - percentile;
+                            let topPercentStr = rawTopPercent.toFixed(0);
+                            if (rawTopPercent < 1) {
+                                if (rawTopPercent <= 0.01) topPercentStr = "< 0.01";
+                                else topPercentStr = rawTopPercent.toFixed(2);
+                            }
+                            const slowerPercentStr = percentile.toFixed(0);
+
+                            let contextEn = `Faster than ${slowerPercentStr}% of the ladder`;
+                            let contextEs = `Más rápido que el ${slowerPercentStr}% del ladder`;
+                            if (isFastest) { contextEn = "The fastest Pokémon in the ladder"; contextEs = "El Pokémon más rápido del ladder"; }
+                            else if (isSlowest) { contextEn = "The slowest Pokémon in the ladder"; contextEs = "El Pokémon más lento del ladder"; }
+                            else if (tier === 'F') {
+                                const fasterThanMeStr = rawTopPercent.toFixed(0);
+                                contextEn = `Slower than ${fasterThanMeStr}% (Trick Room viable)`;
+                                contextEs = `Más lento que el ${fasterThanMeStr}% (Viable en Espacio Raro)`;
+                            }
+                            else if (percentile > 90) { contextEn = `Top ${topPercentStr}% fastest in the ladder`; contextEs = `Top ${topPercentStr}% más rápidos del ladder`; }
+
+                            speedAnalysis = { tier, percentile, baseSpeed: targetSpeed, context: { en: contextEn, es: contextEs } };
+                        }
+                    }
+                }
+            } catch (e) { }
+
+            return {
+                meta: { pokemon: activePokemonId, format: ladderData.metadata.format, gen: 9 },
+                general: { usage: pkmData.usage, rawCount: 0 },
+                stats: pkmData.stats,
+                matchups: { counters: [] },
+                speed: speedAnalysis
+            } as CompetitiveResponse;
+        },
+        enabled: dataSource === 'ladder' && isNumericId && isPokemonInLadder,
+        staleTime: Infinity,
+        retry: false
+    });
+
+    const isLoading = dataSource === 'showdown' ? smogonQuery.isLoading : dataSource === 'tournament' ? tournamentQuery.isLoading : ladderQuery.isLoading;
+    const data = dataSource === 'showdown' ? smogonQuery.data : dataSource === 'tournament' ? tournamentQuery.data : ladderQuery.data;
 
     const validGens = useMemo(() => {
         if (!indexData?.structure) return [];
@@ -395,13 +488,20 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                         
                         <div className="flex items-center bg-slate-950 border border-slate-700 rounded overflow-hidden shadow-inner">
                             <button onClick={() => setDataSource('showdown')} className={cn("px-2.5 py-1 text-[9px] font-bold uppercase transition-colors flex items-center gap-1.5", dataSource === 'showdown' ? "bg-cyan-500/20 text-cyan-400" : "text-slate-500 hover:text-slate-300 hover:bg-slate-900")}><Server size={10}/> Showdown</button>
-                            <button onClick={() => setDataSource('tournament')} className={cn("px-2.5 py-1 text-[9px] font-bold uppercase transition-colors flex items-center gap-1.5 border-l border-slate-700", dataSource === 'tournament' ? "bg-amber-500/20 text-amber-400" : "text-slate-500 hover:text-slate-300 hover:bg-slate-900")}><Trophy size={10}/> Torneos VGC</button>
+                            <button onClick={() => setDataSource('tournament')} className={cn("px-2.5 py-1 text-[9px] font-bold uppercase transition-colors flex items-center gap-1.5 border-l border-slate-700", dataSource === 'tournament' ? "bg-amber-500/20 text-amber-400" : "text-slate-500 hover:text-slate-300 hover:bg-slate-900")}><Trophy size={10}/>VGC Tournaments</button>
+                            {/* BOTÓN LADDER: Renderizado Condicional Oculto */}
+                            {isPokemonInLadder && (
+                                <button onClick={() => setDataSource('ladder')} className={cn("px-2.5 py-1 text-[9px] font-bold uppercase transition-colors flex items-center gap-1.5 border-l border-slate-700", dataSource === 'ladder' ? "bg-purple-500/20 text-purple-400" : "text-slate-500 hover:text-slate-300 hover:bg-slate-900")}><Activity size={10}/> Ladder (Top 50)</button>
+                            )}
                         </div>
                     </div>
                     {data && (
                         <div className="text-right bg-slate-950/50 px-2 py-0.5 rounded border border-slate-800">
                             <span className="text-[8px] font-mono text-slate-400 mr-2">USAGE</span>
-                            <span className="text-xs font-bold text-white">{data.general.usage}%</span>
+                            {/* Formato Inteligente de Top #1 */}
+                            <span className="text-xs font-bold text-white">
+                                {String(data.general.usage).includes('#') ? data.general.usage : `${data.general.usage}%`}
+                            </span>
                         </div>
                     )}
                 </div>
@@ -415,12 +515,16 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                             {reg !== '-' && ( <div className="relative group min-w-[70px]"><select value={reg} onChange={(e) => setReg(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-slate-400 text-[9px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">{availableRegs.map(r => <option key={r} value={r}>{r}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" /></div> )}
                             <div className="relative group min-w-[80px]"><select value={fileId} onChange={(e) => setFileId(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-yellow-500/80 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-yellow-500/50 focus:border-yellow-500 transition-colors">{availableElos.map(opt => <option key={opt.fileId} value={opt.fileId}>{formatEloLabel(opt.elo)}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-yellow-600 pointer-events-none" /></div>
                         </>
-                    ) : (
+                    ) : dataSource === 'tournament' ? (
                         <div className="relative group min-w-[200px] flex-1 sm:flex-none">
                             <select value={selectedTournament} onChange={(e) => setSelectedTournament(e.target.value)} disabled={tournaments.length === 0} className="w-full appearance-none bg-slate-950 border border-slate-700 text-amber-400 text-[9px] font-mono font-bold uppercase py-1.5 pl-2 pr-6 rounded hover:border-amber-500 focus:border-amber-500 transition-colors text-ellipsis disabled:opacity-50">
                                 {tournaments.length === 0 ? <option value="">Ningún torneo local descargado...</option> : tournaments.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
                             </select>
                             <ChevronDown size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-amber-600 pointer-events-none" />
+                        </div>
+                    ) : (
+                        <div className="px-2 py-1.5 text-[9px] font-mono text-purple-400 bg-slate-950/50 border border-slate-700 rounded w-full flex items-center">
+                            <span>FORMATO: LADDER OFICIAL</span>
                         </div>
                     )}
                 </div>
@@ -435,7 +539,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                         <div>
                             <h3 className="text-xs font-bold text-slate-300 uppercase mb-1">No Usage Data</h3>
                             <p className="text-[9px] font-mono text-slate-500 max-w-[240px] mx-auto">
-                                ID #{activePokemonId} hasn't been used in <span className={dataSource === 'showdown' ? "text-cyan-500" : "text-amber-500"}>{dataSource === 'showdown' ? format : 'this tournament'}</span> enough to appear in statistics.
+                                ID #{activePokemonId} hasn't been used in <span className={dataSource === 'showdown' ? "text-cyan-500" : dataSource === 'ladder' ? "text-purple-500" : "text-amber-500"}>{dataSource === 'showdown' ? format : dataSource === 'ladder' ? 'Ladder Top 50' : 'this tournament'}</span> enough to appear in statistics.
                             </p>
                         </div>
                     </div>
@@ -448,20 +552,20 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                 <div className="space-y-1.5">
                                     <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Sword size={11} /> Key Moves</h4>
                                     <div className="pt-1">{data.stats.moves.slice(0, 8).map((m) => (
-                                        <UsageBar key={m.name} label={m.name} value={m.value} subLabel={`${fmtPct(m.displayValue || m.value)}%`} color="bg-cyan-600" />
+                                        <UsageBar key={m.name} label={m.name} value={m.value} subLabel={formatDisplayValue(m.displayValue || m.value)} color="bg-cyan-600" />
                                     ))}</div>
                                 </div>
                                 <div className="space-y-6">
                                     <div className="space-y-1.5">
                                         <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Shield size={11} /> Key Items</h4>
                                         <div className="pt-1">{data.stats.items.slice(0, 5).map((i) => (
-                                            <UsageBar key={i.name} label={i.name} value={i.value} subLabel={`${fmtPct(i.displayValue || i.value)}%`} color="bg-indigo-500" />
+                                            <UsageBar key={i.name} label={i.name} value={i.value} subLabel={formatDisplayValue(i.displayValue || i.value)} color="bg-indigo-500" />
                                         ))}</div>
                                     </div>
                                     <div className="space-y-1.5">
                                         <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Zap size={11} /> Abilities</h4>
                                         <div className="pt-1">{data.stats.abilities.slice(0, 2).map((a) => (
-                                            <UsageBar key={a.name} label={a.name} value={a.value} subLabel={`${fmtPct(a.displayValue || a.value)}%`} color="bg-emerald-600" />
+                                            <UsageBar key={a.name} label={a.name} value={a.value} subLabel={formatDisplayValue(a.displayValue || a.value)} color="bg-emerald-600" />
                                         ))}</div>
                                     </div>
                                 </div>
@@ -472,7 +576,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                     <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Diamond size={11} /> Tera Types</h4>
                                     <div className="grid grid-cols-2 gap-x-4 gap-y-1 pt-1">
                                         {data.stats.teras?.slice(0, 6).map((t) => (
-                                            <UsageBar key={t.name} label={t.name} value={t.value} subLabel={`${fmtPct(t.displayValue || t.value)}%`} color="bg-pink-600" />
+                                            <UsageBar key={t.name} label={t.name} value={t.value} subLabel={formatDisplayValue(t.displayValue || t.value)} color="bg-pink-600" />
                                         ))}
                                     </div>
                                 </div>
@@ -484,7 +588,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                     {data.stats.teammates.slice(0, 12).map((mate) => {
                                         const visuals = getMateVisuals(mate.id, data.meta.format);
                                         return (
-                                            <Link key={mate.id} href={visuals.href} className="block relative group" title={`${visuals.name} (${fmtPct(mate.displayValue || mate.value)}%)`}>
+                                            <Link key={mate.id} href={visuals.href} className="block relative group" title={`${visuals.name} (${formatDisplayValue(mate.displayValue || mate.value)})`}>
                                                 <div className="relative aspect-square bg-slate-900 border border-slate-800 rounded hover:border-cyan-500/50 transition-all overflow-hidden cursor-pointer">
                                                     <img 
                                                         src={visuals.imgLocal} 
@@ -496,7 +600,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                                             if (target.src !== visuals.imgFallback) { target.src = visuals.imgFallback; } else { target.style.display = 'none'; } 
                                                         }} 
                                                     />
-                                                    <div className="absolute bottom-0 right-0 bg-slate-950/90 text-[8px] px-1.5 py-0.5 text-cyan-400 font-mono border-tl rounded-tl font-bold">{fmtPct(mate.displayValue || mate.value)}%</div>
+                                                    <div className="absolute bottom-0 right-0 bg-slate-950/90 text-[8px] px-1.5 py-0.5 text-cyan-400 font-mono border-tl rounded-tl font-bold">{formatDisplayValue(mate.displayValue || mate.value)}</div>
                                                 </div>
                                             </Link>
                                         );
@@ -511,7 +615,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                         {data.matchups.counters.slice(0, 8).map((counter) => {
                                             const visuals = getMateVisuals(counter.id, data.meta.format);
                                             return (
-                                                <Link key={counter.id} href={visuals.href} className="block relative group" title={`${visuals.name} (Score: ${counter.score}%)`}>
+                                                <Link key={counter.id} href={visuals.href} className="block relative group" title={`${visuals.name} (Score: ${formatDisplayValue(counter.score)})`}>
                                                     <div className="relative aspect-square bg-slate-900 border border-slate-800 rounded hover:border-red-500/50 transition-all overflow-hidden cursor-pointer">
                                                         <img 
                                                             src={visuals.imgLocal} 
@@ -523,7 +627,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                                                 if (target.src !== visuals.imgFallback) { target.src = visuals.imgFallback; } else { target.style.display = 'none'; } 
                                                             }} 
                                                         />
-                                                        <div className="absolute bottom-0 right-0 bg-slate-950/90 text-[8px] px-1.5 py-0.5 text-red-400 font-mono border-tl rounded-tl font-bold">{counter.score}%</div>
+                                                        <div className="absolute bottom-0 right-0 bg-slate-950/90 text-[8px] px-1.5 py-0.5 text-red-400 font-mono border-tl rounded-tl font-bold">{formatDisplayValue(counter.score)}</div>
                                                     </div>
                                                 </Link>
                                             );

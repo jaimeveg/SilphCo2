@@ -20,6 +20,12 @@ async function loadJsonMap(filename: string, cacheVar: any) {
     }
 }
 
+// NUEVO: Formateador Visual ('close-combat' -> 'Close Combat')
+const formatDisplayName = (slug: string) => {
+    if (!slug) return '';
+    return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+};
+
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const pokemonId = searchParams.get('pokemon');
@@ -48,12 +54,13 @@ export async function GET(request: Request) {
 
         const toPercent = (val: number) => ((val / rawCount) * 100).toFixed(2);
 
+        // APLICAMOS EL FORMATEADOR Y RETENEMOS EL SLUG
         const processMap = (obj: any, limit = 15) => {
             if (!obj) return [];
             return Object.entries(obj)
                 .map(([k, v]) => ({
-                    name: k,
-                    slug: toSlug(k),
+                    name: formatDisplayName(k), // Visual bonito
+                    slug: k,                    // Retenemos el ID original
                     value: ((v as number) / rawCount) * 100,
                     displayValue: toPercent(v as number)
                 }))
@@ -89,11 +96,14 @@ export async function GET(request: Request) {
                 .slice(0, 10);
         };
 
-        let teraData = {};
-        if (rawMon.Items) {
-            const teraKeys = Object.keys(rawMon.Items).filter(k => k.toLowerCase().includes('tera shard'));
+        // CORRECCIÓN TERA TYPES: Priorizamos la llave oficial de Smogon
+        let teraData = rawMon['Tera Types'] || rawMon.TeraTypes || {};
+        
+        if (Object.keys(teraData).length === 0 && rawMon.Items) {
+            const teraKeys = Object.keys(rawMon.Items).filter(k => k.toLowerCase().includes('tera shard') || k.toLowerCase().includes('terashard'));
             teraKeys.forEach(k => {
-                const typeName = k.replace(/Tera Shard/i, '').trim();
+                let typeName = k.replace(/Tera Shard/ig, '').replace(/terashard/ig, '').replace(/-/g, '').trim();
+                typeName = typeName.charAt(0).toUpperCase() + typeName.slice(1);
                 (teraData as any)[typeName] = rawMon.Items[k];
             });
         }
