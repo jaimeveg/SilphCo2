@@ -3,11 +3,21 @@
 
 import fs from 'fs';
 import path from 'path';
-import { Readable } from 'stream';
-import { finished } from 'stream/promises';
 
 const SMOGON_BASE = 'https://www.smogon.com/stats';
 const OUTPUT_DIR = path.join(process.cwd(), 'public/data/smogon');
+const ALIAS_PATH = path.join(process.cwd(), 'public/data', 'alias_map.json');
+const unmappedAliases = new Set<string>();
+
+// --- CARGA DE LA PIEDRA ROSETTA (ALIAS MAP) ---
+let aliasMap: Record<string, number> = {};
+try {
+    const aliasRaw = fs.readFileSync(ALIAS_PATH, 'utf8');
+    aliasMap = JSON.parse(aliasRaw);
+} catch (e) {
+    console.error('🔥 ERROR FATAL: No se encontró alias_map.json. Ejecuta npx tsx scripts/generate-alias-map.ts primero.');
+    process.exit(1);
+}
 
 // Headers para evitar bloqueo por User-Agent
 const HEADERS = {
@@ -18,102 +28,134 @@ const HEADERS = {
 // Filtro de seguridad para no descargar 1GB de formatos irrelevantes
 const IGNORED_FORMATS = [
     'custom', '1v1', '2v2', 'purehackmons', 'almostanyability', 
-    'pokebilities', 'mixandmega', 'godlygift', 'stabmons', 'nfe', 'zu', 
+    'pokebilities', 'mixandmega', 'godlygift', 'stabmons', 'nfe', 'zu',
     'tiershift', 'camomons', 'sketchmons', '3v3', 'balancedhackmons', 'cap',
     'chatbats', 'convergence', 'fortemons', 'legendszaou', 'metronomebattle', 
-    'bssregj', 'sharedpower', 'voltturnmayhem', 'orrecolosseum',
-
+    'bssregj', 'sharedpower', 'anythinggoes', 'partnersincrime', 'crossevolution',
+    'monotype', 'bh', 'hc', 'lc', 'ag', 'volt', 'biomech',
+    'losers', 'solgaleo', 'flipped', 'nc' // Quitamos los pasados sin gen
 ];
 
-// --- 1. LÓGICA DE FECHAS ---
-const calculateCandidateDates = (): string[] => {
-    const now = new Date();
-    const day = now.getDate();
-    // Si estamos a día 1, 2 o 3, es probable que el mes anterior aún no esté.
-    // Empezamos probando con mes -1 o mes -2.
-    const startOffset = day >= 4 ? 1 : 2; 
-    
-    const dates = [];
-    for (let i = 0; i < 3; i++) { // Probamos hasta 3 meses atrás
-        const d = new Date();
-        d.setMonth(d.getMonth() - (startOffset + i));
-        const y = d.getFullYear();
-        const m = String(d.getMonth() + 1).padStart(2, '0');
-        dates.push(`${y}-${m}`);
+// --- UTILIDADES LÉXICAS ---
+const toSlug = (name: string) => name.toLowerCase().replace(/['’\.]/g, '').replace(/[\s:]+/g, '-').replace(/[^a-z0-9-]/g, '');
+
+// --- INTERCEPTOR DE DATOS (EL ESCUDO) ---
+const transformSmogonData = (rawData: any) => {
+    if (!rawData.data) return rawData; 
+
+    const newData: Record<string, any> = {};
+
+    for (const [pkmName, pkmStats] of Object.entries(rawData.data)) {
+        const slug = toSlug(pkmName);
+        
+        let pkmId = aliasMap[slug] || aliasMap[slug.replace(/-/g, '')];
+        if (!pkmId) {
+            unmappedAliases.add(slug);
+            pkmId = slug as any; 
+        }
+        
+        // 1. Traducir Teammates
+        const newTeammates: Record<string, number> = {};
+        if ((pkmStats as any).Teammates) {
+            for (const [mateName, mateCount] of Object.entries((pkmStats as any).Teammates)) {
+                const mateSlug = toSlug(mateName);
+                
+                let mateId = aliasMap[mateSlug] || aliasMap[mateSlug.replace(/-/g, '')];
+                if (!mateId) {
+                    unmappedAliases.add(mateSlug);
+                    mateId = mateSlug as any;
+                }
+                
+                newTeammates[mateId.toString()] = (newTeammates[mateId.toString()] || 0) + (mateCount as number);
+            }
+            (pkmStats as any).Teammates = newTeammates;
+        }
+
+        // 2. Traducir Checks and Counters (¡LA PIEZA QUE FALTABA!)
+        const newCounters: Record<string, any> = {};
+        if ((pkmStats as any)['Checks and Counters']) {
+            for (const [counterName, scores] of Object.entries((pkmStats as any)['Checks and Counters'])) {
+                const counterSlug = toSlug(counterName);
+                
+                let counterId = aliasMap[counterSlug] || aliasMap[counterSlug.replace(/-/g, '')];
+                if (!counterId) {
+                    unmappedAliases.add(counterSlug);
+                    counterId = counterSlug as any;
+                }
+                
+                newCounters[counterId.toString()] = scores;
+            }
+            (pkmStats as any)['Checks and Counters'] = newCounters;
+        }
+        
+        // Guardar Pokémon principal
+        if (newData[pkmId.toString()]) {
+            newData[pkmId.toString()]["Raw count"] += (pkmStats as any)["Raw count"];
+        } else {
+            newData[pkmId.toString()] = pkmStats;
+        }
     }
-    return dates;
+    
+    rawData.data = newData;
+    return rawData;
 };
 
-// --- 2. SCRAPER DE DIRECTORIO ---
-const fetchFileList = async (date: string): Promise<string[] | null> => {
-    const url = `${SMOGON_BASE}/${date}/chaos/`;
-    console.log(`🔍 Inspeccionando directorio: ${url}`);
+// ==========================================
+// MOTOR SCRAPER
+// ==========================================
 
+const fetchHtml = async (url: string): Promise<string | null> => {
     try {
         const res = await fetch(url, { headers: HEADERS });
-        if (res.status === 404) return null;
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-        const html = await res.text();
-        
-        // Regex para extraer todos los .json del HTML de Apache
-        const fileRegex = /href="([^"]+\.json)"/g;
-        const matches = [...html.matchAll(fileRegex)];
-        
-        // Extraer nombres y filtrar basura
-        const files = matches
-            .map(m => m[1])
-            .filter(f => !IGNORED_FORMATS.some(ig => f.toLowerCase().includes(ig)));
-
-        return files.length > 0 ? files : null;
+        if (!res.ok) return null;
+        return await res.text();
     } catch (e) {
-        console.warn(`⚠️ Error leyendo ${date}: ${(e as Error).message}`);
         return null;
     }
 };
 
-// --- 3. DOWNLOADER ---
-const downloadFile = async (date: string, filename: string) => {
-    const url = `${SMOGON_BASE}/${date}/chaos/${filename}`;
-    const destPath = path.join(OUTPUT_DIR, filename);
+const getRecentMonths = async (): Promise<string[]> => {
+    console.log('🔍 Buscando meses disponibles en Smogon...');
+    const html = await fetchHtml(SMOGON_BASE);
+    if (!html) return [];
 
-    // Si ya existe, saltar (Opcional: forzar si quieres actualizar)
-    if (fs.existsSync(destPath)) {
-        // console.log(`⏩ Saltando existente: ${filename}`);
-        return;
-    }
-
-    try {
-        const res = await fetch(url, { headers: HEADERS });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        if (!res.body) throw new Error('No body');
-
-        // Escritura eficiente con Streams
-        const fileStream = fs.createWriteStream(destPath, { flags: 'wx' });
-        // @ts-ignore - ReadableStream web to Node stream
-        await finished(Readable.fromWeb(res.body).pipe(fileStream));
-        
-        process.stdout.write('.'); // Barra de progreso simple
-    } catch (e) {
-        console.error(`❌ Fallo en ${filename}: ${(e as Error).message}`);
-    }
+    const regex = /<a href="(\d{4}-\d{2})\/">/g;
+    const matches = [...html.matchAll(regex)];
+    
+    return matches
+        .map(m => m[1])
+        .sort((a, b) => b.localeCompare(a)); 
 };
 
-// --- MAIN ---
-const main = async () => {
-    console.log('🚀 INICIANDO INGESTA DE DATOS COMPETITIVOS SMOGON');
+const fetchFileList = async (date: string): Promise<string[] | null> => {
+    const url = `${SMOGON_BASE}/${date}/chaos/`;
+    const html = await fetchHtml(url);
+    if (!html) return null;
+
+    const regex = /<a href="([^"]+\.json)">/g;
+    const matches = [...html.matchAll(regex)];
     
-    // 1. Preparar Directorio
-    if (!fs.existsSync(OUTPUT_DIR)) {
-        console.log(`📁 Creando directorio: ${OUTPUT_DIR}`);
-        fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-    } else {
-        console.log(`📁 Directorio de destino: ${OUTPUT_DIR}`);
+    const validFiles = matches
+        .map(m => m[1])
+        .filter(f => !IGNORED_FORMATS.some(ignored => f.toLowerCase().includes(ignored)));
+
+    return validFiles;
+};
+
+const run = async () => {
+    console.log('=== INICIANDO ETL DE SMOGON CHAOS (CON RESOLUCIÓN DE IDs) ===\n');
+
+    if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+    // 1. Obtener lista de meses
+    const candidates = await getRecentMonths();
+    if (candidates.length === 0) {
+        console.error('❌ No se pudo conectar a Smogon.');
+        process.exit(1);
     }
 
-    // 2. Encontrar la fecha válida
-    const candidates = calculateCandidateDates();
-    let targetDate = null;
+    // 2. Buscar el mes más reciente que tenga datos chaos
+    let targetDate = '';
     let targetFiles: string[] = [];
 
     for (const date of candidates) {
@@ -133,7 +175,7 @@ const main = async () => {
         process.exit(1);
     }
 
-    // 3. Guardar Metadatos (Para que la API sepa la fecha sin preguntar)
+    // 3. Guardar Metadatos
     const metaPath = path.join(process.cwd(), 'public/data/smogon/meta.json');
     fs.writeFileSync(metaPath, JSON.stringify({ 
         date: targetDate, 
@@ -142,17 +184,48 @@ const main = async () => {
     }, null, 2));
     console.log('💾 Metadatos guardados.');
 
-    // 4. Descargar Archivos (En paralelo limitado para no saturar)
-    console.log(`⬇️ Descargando ${targetFiles.length} archivos... (Esto puede tardar unos minutos)`);
+    // 4. Descargar y Transformar Archivos
+    console.log(`⬇️ Descargando e inyectando IDs en ${targetFiles.length} archivos...`);
     
-    // Chunking para no matar la red (bloques de 10 descargas simultáneas)
     const chunkSize = 10;
     for (let i = 0; i < targetFiles.length; i += chunkSize) {
         const chunk = targetFiles.slice(i, i + chunkSize);
-        await Promise.all(chunk.map(f => downloadFile(targetDate!, f)));
+        
+        await Promise.all(chunk.map(async (filename) => {
+            const url = `${SMOGON_BASE}/${targetDate}/chaos/${filename}`;
+            const destPath = path.join(OUTPUT_DIR, filename);
+
+            try {
+                const res = await fetch(url, { headers: HEADERS });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                
+                // Parseo, Traducción O(1) de Strings a IDs, y Guardado Minificado
+                const rawJson = await res.json();
+                const cleanJson = transformSmogonData(rawJson);
+                
+                fs.writeFileSync(destPath, JSON.stringify(cleanJson)); // Sin tabulaciones para ahorrar espacio
+            } catch (err: any) {
+                console.error(`  [!] Error en ${filename}: ${err.message}`);
+            }
+        }));
+
+        process.stdout.write(`\r  -> Progreso: ${Math.min(i + chunkSize, targetFiles.length)} / ${targetFiles.length}`);
     }
 
-    console.log('\n✨ INGESTA COMPLETADA CORRECTAMENTE');
+    // --- REPORTE DE HUÉRFANOS ---
+    if (unmappedAliases.size > 0) {
+        console.warn('\n⚠️ ATENCIÓN: Se han encontrado Pokémon sin mapear a un ID oficial:');
+        const unmappedArray = Array.from(unmappedAliases).sort();
+        console.warn(unmappedArray);
+        
+        fs.writeFileSync(
+            path.join(process.cwd(), 'public/data/unmapped_aliases.json'), 
+            JSON.stringify(unmappedArray, null, 2)
+        );
+        console.log('-> Revisa "public/data/unmapped_aliases.json" y añade estos nombres al MANUAL_OVERRIDES de tu script generate-alias-map.ts');
+    }
+
+    console.log('\n\n[OK] Sincronización completada con éxito. Datos traducidos a IDs.');
 };
 
-main();
+run();

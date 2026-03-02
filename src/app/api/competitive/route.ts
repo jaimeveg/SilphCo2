@@ -1,14 +1,12 @@
+// src/app/api/competitive/route.ts
+
 import { promises as fs } from 'fs';
 import path from 'path';
 import { NextResponse } from 'next/server';
 import { toSlug } from '@/lib/utils/pokemon-normalizer';
-import { COMPETITIVE_FORM_IDS } from '@/lib/utils/competitive-mapping';
 
-// Cache simple en memoria
 let speedMapCache: Record<string, number> | null = null;
-let idsMapCache: Record<string, number> | null = null;
 
-// Helper para cargar JSONs con reintento
 async function loadJsonMap(filename: string, cacheVar: any) {
     if (cacheVar && Object.keys(cacheVar).length > 0) return cacheVar;
     
@@ -16,158 +14,120 @@ async function loadJsonMap(filename: string, cacheVar: any) {
     try {
         await fs.access(filePath);
         const fileContent = await fs.readFile(filePath, 'utf-8');
-        const data = JSON.parse(fileContent);
-        console.log(`✅ [API] Loaded ${filename} (${Object.keys(data).length} entries)`);
-        return data;
+        return JSON.parse(fileContent);
     } catch (e) {
-        console.warn(`⚠️ [API] Failed to load ${filename}. Check if file exists in /public/data/`);
         return null; 
     }
 }
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
-    const pokemon = searchParams.get('pokemon');
+    const pokemonId = searchParams.get('pokemon');
     const fileId = searchParams.get('fileId'); 
 
-    if (!pokemon || !fileId) {
-        return NextResponse.json({ error: 'Missing params' }, { status: 400 });
+    if (!pokemonId || !fileId) {
+        return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
     }
 
     try {
-        // 1. Cargar datos de Smogon
-        const filePath = path.join(process.cwd(), 'public/data/smogon', `${fileId}.json`);
-        try {
-            await fs.access(filePath);
-        } catch {
-            return NextResponse.json({ error: 'Data not ingested' }, { status: 404 });
-        }
+        const filePath = path.join(process.cwd(), 'public/data/smogon', fileId);
         const fileContent = await fs.readFile(filePath, 'utf-8');
         const chaosData = JSON.parse(fileContent);
 
-        // 2. Resolver Pokémon objetivo (Slug Smogon)
-        const targetSlug = toSlug(pokemon);
-        const availableMons = Object.keys(chaosData.data);
-        const realKey = availableMons.find(k => toSlug(k) === targetSlug);
+        // Búsqueda O(1) directa
+        const rawMon = chaosData.data[pokemonId];
 
-        if (!realKey) {
+        if (!rawMon) {
             return NextResponse.json({ error: 'Pokemon not found in format' }, { status: 404 });
         }
 
-        const rawMon = chaosData.data[realKey];
-
-        // --- CÁLCULOS ESTADÍSTICOS ---
-        const abilities = rawMon.Abilities || {};
-        const totalPresence = Object.values(abilities).reduce((a: any, b: any) => a + b, 0) as number;
+        const rawCount = rawMon['Raw count'];
         const totalBattles = chaosData.info?.['number of battles'] || 0;
-        const totalTeams = totalBattles * 2; 
-        
-        let usageRate = 0;
-        if (rawMon['Usage %'] !== undefined) usageRate = rawMon['Usage %'] * 100;
-        else if (rawMon['usage'] !== undefined) usageRate = rawMon['usage'] * 100;
-        else if (totalTeams > 0) usageRate = (totalPresence / totalTeams) * 100;
+        const totalTeams = totalBattles * 2;
+        let usageRate = totalTeams > 0 ? (rawCount / totalBattles) * 100 : 0;
 
-        const toPercent = (val: number) => {
-            if (totalPresence <= 0) return "0.00";
-            return ((val / totalPresence) * 100).toFixed(2);
+        const toPercent = (val: number) => ((val / rawCount) * 100).toFixed(2);
+
+        const processMap = (obj: any, limit = 15) => {
+            if (!obj) return [];
+            return Object.entries(obj)
+                .map(([k, v]) => ({
+                    name: k,
+                    slug: toSlug(k),
+                    value: ((v as number) / rawCount) * 100,
+                    displayValue: toPercent(v as number)
+                }))
+                .sort((a, b) => b.value - a.value)
+                .slice(0, limit);
         };
-        
-        const processMap = (map: any, limit = 10) => Object.entries(map || {})
-            .sort(([, a], [, b]) => (b as number) - (a as number))
-            .slice(0, limit)
-            .map(([k, v]) => ({ 
-                name: k, 
-                value: parseFloat(toPercent(v as number)), 
-                displayValue: toPercent(v as number),
-                slug: toSlug(k) 
-            }));
 
-        const processCounters = (countersMap: any) => {
-            return Object.entries(countersMap || {})
-                .map(([name, data]: [string, any]) => {
-                    let numericScore = 0;
-                    if (Array.isArray(data)) numericScore = data[1] || 0;
-                    else if (typeof data === 'object' && data !== null) numericScore = data.score || data.p || 0;
-                    return { name, rawScore: numericScore };
+        const processTeammates = (obj: any, limit = 15) => {
+            if (!obj) return [];
+            return Object.entries(obj)
+                .map(([idStr, count]) => ({
+                    id: parseInt(idStr, 10), 
+                    value: ((count as number) / rawCount) * 100,
+                    displayValue: toPercent(count as number)
+                }))
+                .sort((a, b) => b.value - a.value)
+                .slice(0, limit);
+        };
+
+        const processCounters = (obj: any) => {
+            if (!obj) return [];
+            return Object.entries(obj)
+                .map(([idStr, scores]) => {
+                    const s = scores as number[];
+                    const rawScore = s[0] - 4 * s[1];
+                    return {
+                        id: parseInt(idStr, 10),
+                        score: toPercent(rawScore)
+                    };
                 })
-                .sort((a, b) => b.rawScore - a.rawScore)
-                .slice(0, 10)
-                .map(c => ({
-                    name: c.name,
-                    score: (c.rawScore * 100).toFixed(2),
-                    slug: toSlug(c.name)
-                }));
+                .filter(c => parseFloat(c.score) > 0)
+                .sort((a, b) => parseFloat(b.score) - parseFloat(a.score))
+                .slice(0, 10);
         };
 
-        // --- CÁLCULO DINÁMICO DE SPEED TIER ---
+        let teraData = {};
+        if (rawMon.Items) {
+            const teraKeys = Object.keys(rawMon.Items).filter(k => k.toLowerCase().includes('tera shard'));
+            teraKeys.forEach(k => {
+                const typeName = k.replace(/Tera Shard/i, '').trim();
+                (teraData as any)[typeName] = rawMon.Items[k];
+            });
+        }
+
+        // =========================================================
+        // 🚀 CÁLCULO DINÁMICO DE SPEED TIER (RESTAURADO)
+        // =========================================================
         if (!speedMapCache) speedMapCache = await loadJsonMap('pokedex_speed_map.json', speedMapCache);
-        if (!idsMapCache) idsMapCache = await loadJsonMap('pokedex_ids.json', idsMapCache);
-
         const speedMap = speedMapCache || {};
-        const idsMap = idsMapCache || {};
 
-        // === RESOLUCIÓN DE ID (ESTRATEGIA REFACTORIZADA) ===
-        const resolveId = (slug: string): number | null => {
-            // 1. Mapeo Manual (Prioridad Máxima - Arregla Minior, Oricorio, Galar, Ogerpon)
-            if (COMPETITIVE_FORM_IDS[slug]) return COMPETITIVE_FORM_IDS[slug];
-            
-            // 2. Mapeo Directo (Coincidencia exacta en pokedex_ids.json - ej: bulbasaur)
-            if (idsMap[slug]) return idsMap[slug];
-
-            // 3. Fallback: Quitar apóstrofes (Smogon: farfetch'd -> PokeAPI: farfetchd)
-            const strippedSlug = slug.replace(/'/g, '');
-            if (idsMap[strippedSlug]) return idsMap[strippedSlug];
-
-            // 4. Fallback: Sufijos Comunes de PokeAPI (si no estaba en manual)
-            if (idsMap[`${slug}-standard`]) return idsMap[`${slug}-standard`];
-            if (idsMap[`${slug}-average`]) return idsMap[`${slug}-average`];
-            if (idsMap[`${slug}-normal`]) return idsMap[`${slug}-normal`]; 
-            if (idsMap[`${slug}-incarnate`]) return idsMap[`${slug}-incarnate`]; 
-
-            return null;
-        };
-
-        let debugMsg = "OK";
         let speedAnalysis = {
             tier: 'F',
             percentile: 0,
             baseSpeed: 0,
-            context: { en: 'Loading...', es: 'Cargando...' }
+            context: { en: 'Insufficient data', es: 'Datos insuficientes' }
         };
 
-        const targetId = resolveId(targetSlug);
-
-        // Validaciones
-        if (Object.keys(speedMap).length === 0) {
-            debugMsg = "Speed Map Missing";
-            speedAnalysis.context = { en: "Server Error: Missing Speed Dex", es: "Error: Falta mapa de velocidades" };
-        } else if (Object.keys(idsMap).length === 0 && !COMPETITIVE_FORM_IDS[targetSlug]) {
-            debugMsg = "IDs Map Missing";
-            speedAnalysis.context = { en: "Server Error: Missing IDs Dex", es: "Error: Falta mapa de IDs" };
-        } else if (!targetId) {
-            debugMsg = `ID not found for ${targetSlug}`;
-            speedAnalysis.context = { en: `ID not found: ${targetSlug}`, es: `ID no encontrado: ${targetSlug}` };
-        } else if (!speedMap[targetId]) {
-            debugMsg = `Speed not found for ID ${targetId}`;
-            speedAnalysis.context = { en: `Speed missing for ID ${targetId}`, es: `Sin velocidad para ID ${targetId}` };
-        } else {
-            // ÉXITO: Tenemos datos
-            const targetSpeed = speedMap[targetId];
+        if (speedMap[pokemonId]) {
+            const targetSpeed = speedMap[pokemonId];
             
             const metaSpeeds: number[] = []; 
             let globalMaxSpeed = 0;          
             let globalMinSpeed = 999;        
             
-            Object.keys(chaosData.data).forEach(monName => {
-                const monData = chaosData.data[monName];
+            // Ya no hay que resolver los IDs, las llaves de chaosData.data YA SON los IDs
+            Object.keys(chaosData.data).forEach(mId => {
+                const monData = chaosData.data[mId];
+                
                 let u = 0;
                 if (monData['Usage %'] !== undefined) u = monData['Usage %'];
                 else if (monData['usage'] !== undefined) u = monData['usage'];
+                else u = (monData['Raw count'] / totalBattles) * 100;
                 
-                const mSlug = toSlug(monName);
-                const mId = resolveId(mSlug);
-                
-                if (mId && speedMap[mId]) {
+                if (speedMap[mId]) {
                     const s = speedMap[mId];
                     if (s > globalMaxSpeed) globalMaxSpeed = s;
                     if (s < globalMinSpeed) globalMinSpeed = s;
@@ -188,8 +148,7 @@ export async function GET(request: Request) {
                 const isFastest = targetSpeed >= globalMaxSpeed;
                 const isSlowest = targetSpeed <= globalMinSpeed;
 
-                // === LÓGICA SPEED TIER ===
-                // Regla base: Menos de 55 -> Tier F (Trick Room)
+                // === LÓGICA SPEED TIER EXACTA ===
                 let tier = 'C';
                 
                 if (targetSpeed < 55) {
@@ -240,39 +199,28 @@ export async function GET(request: Request) {
                     baseSpeed: targetSpeed,
                     context: { en: contextEn, es: contextEs }
                 };
-            } else {
-                debugMsg = "Empty Meta Speeds";
-                speedAnalysis.context = { 
-                    en: "Insufficient data to calculate Speed Tier", 
-                    es: "Datos insuficientes para calcular Speed Tier" 
-                };
             }
         }
-
-        if (debugMsg !== "OK") {
-            console.log(`[API Speed Calc] ${debugMsg} | Pokemon: ${pokemon} -> Slug: ${targetSlug} -> ID: ${targetId || 'NULL'}`);
-        }
-
-        const teraData = rawMon['Tera Types'] || rawMon.TeraTypes || {};
+        // =========================================================
 
         const response = {
-            meta: { pokemon: realKey, format: fileId, gen: 9 },
+            meta: { pokemon: pokemonId, format: fileId, gen: 9 },
             general: {
                 usage: usageRate.toFixed(2),
                 rawCount: rawMon['Raw count']
             },
             stats: {
                 moves: processMap(rawMon.Moves),
-                items: processMap(rawMon.Items),
-                abilities: processMap(rawMon.Abilities),
-                teammates: processMap(rawMon.Teammates, 12),
-                teras: processMap(teraData), 
+                items: processMap(rawMon.Items, 10),
+                abilities: processMap(rawMon.Abilities, 10),
+                teammates: processTeammates(rawMon.Teammates, 12),
+                teras: processMap(teraData, 10), 
                 natureSpread: Object.entries(rawMon.Spreads || {})
                     .sort(([, a], [, b]) => (b as number) - (a as number))
                     .slice(0, 6)
                     .map(([k, v]) => {
                         const [nature, evsStr] = k.split(':');
-                        const evs = evsStr.split('/').map(Number);
+                        const evs = evsStr ? evsStr.split('/').map(Number) : [0,0,0,0,0,0];
                         return {
                             nature,
                             usage: toPercent(v as number),
@@ -289,7 +237,6 @@ export async function GET(request: Request) {
         return NextResponse.json(response);
 
     } catch (error) {
-        console.error(`Error procesando ${fileId}:`, error);
         return NextResponse.json({ error: 'Processing error' }, { status: 500 });
     }
 }

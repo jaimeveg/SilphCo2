@@ -1,14 +1,14 @@
 // src/services/smogonService.ts
-import { CompetitiveResponse } from '@/components/pokedex/viewports/competitive/CompetitiveDashboard';
+import { CompetitiveResponse } from '@/types/smogon';
 
 // --- TIPOS DEL ÁRBOL SMOGON (CHAOS) ---
 export interface EloOption {
     elo: string;
-    fileId: string; // El ID mágico: "gen9vgc2024regg-1760"
+    fileId: string; // El ID mágico: "gen9vgc2024regg-1760.json"
 }
 
 export interface FormatData {
-    regs: Record<string, EloOption[]>; // "Reg G": [ {elo: "0", ...}, {elo: "1500", ...} ]
+    regs: Record<string, EloOption[]>; 
 }
 
 export interface SmogonTree {
@@ -20,7 +20,7 @@ export interface SmogonTree {
 }
 
 export interface SmogonIndexResponse {
-    date: string; // "2024-11"
+    date: string;
     structure: SmogonTree;
 }
 
@@ -28,8 +28,8 @@ export interface SmogonIndexResponse {
 
 export const fetchFormatsIndex = async (): Promise<SmogonIndexResponse | null> => {
     try {
-        // Llama a tu nueva API /api/formats que hace el scraping
-        const res = await fetch('/api/formats', { next: { revalidate: 3600 } });
+        // Cache-buster para asegurar que leemos el árbol más reciente
+        const res = await fetch(`/api/formats?v=${Date.now()}`, { next: { revalidate: 0 } });
         if (!res.ok) return null;
         return await res.json();
     } catch (e) {
@@ -39,24 +39,25 @@ export const fetchFormatsIndex = async (): Promise<SmogonIndexResponse | null> =
 };
 
 export const fetchSmogonData = async (
-    pokemon: string, 
+    pokemonId: string, // AHORA RECIBE EL ID
     date: string,
     fileId: string
 ): Promise<CompetitiveResponse | null> => {
     try {
         const params = new URLSearchParams({
-            pokemon: pokemon,
+            pokemon: pokemonId, // Se manda el ID a la API
             date: date,
-            fileId: fileId
+            fileId: fileId,
+            v: Date.now().toString() // ROMPEMOS LA CACHÉ AGRESIVA DE NEXT.JS
         });
-
-        // Llama a tu nueva API /api/competitive con lógica Raw
-        const res = await fetch(`/api/competitive?${params.toString()}`);
-        if (!res.ok) return null;
-
-        return await res.json();
+        
+        // Llamada a la API interna, que leerá el JSON gigante en el servidor y nos devolverá solo 1KB
+        const response = await fetch(`/api/competitive?${params.toString()}`);
+        if (!response.ok) return null;
+        
+        return await response.json();
     } catch (error) {
-        console.error("[SmogonService] Network error:", error);
+        console.error("Error fetching Smogon data:", error);
         return null;
     }
 };

@@ -1,44 +1,68 @@
-// src/types/smogon.ts
+// Archivo: src/types/smogon.ts
 
-// --- RAW DATA FROM GITHUB (Server Side Only) ---
-export interface IRawStatData {
-    battles: number;
-    pokemon: Record<string, {
-        usage: { raw: number; real: number; weighted: number };
-        moves: Record<string, number>;
-        abilities: Record<string, number>;
-        items: Record<string, number>;
-        teammates: Record<string, number>;
-        spreads: Record<string, number>;
-        viability?: number;
-    }>;
-}
+// Tipo semántico para clarificar que las llaves ahora son IDs oficiales
+export type DexId = string; 
 
-// --- CLIENT SIDE DATA (Normalized) ---
 export interface IUsageItem {
-    name: string;
-    usage: number; // Porcentaje 0-100
+  name: string;
+  value: number;
+  displayValue?: string;
+  slug?: string;
 }
 
-export interface ISpreadItem {
-    nature: string;
-    evs: { hp: number; atk: number; def: number; spa: number; spd: number; spe: number };
-    usage: number;
+// NUEVO: Item específico basado en ID para compañeros
+export interface ITeammateItem {
+  id: number;
+  value: number;
+  displayValue?: string;
 }
 
-export interface ICompetitiveData {
-    format: string;
-    timestamp: string;
-    usageRate: number; // 0-1
-    rank: number | null; // Posición en el ranking
+// NUEVO: Item específico basado en ID para counters
+export interface ICounterItem {
+  id: number;
+  score: string;
+}
+
+export interface IRawPokemonData {
+  "Raw count": number;
+  usage?: number;
+  Moves: Record<string, number>;
+  Items: Record<string, number>;
+  Abilities: Record<string, number>;
+  Teammates: Record<DexId, number>; // Las llaves son IDs numéricos en formato string
+  Spreads: Record<string, number>;
+  Counters?: Record<DexId, [number, number, number]>; // Las llaves son IDs
+}
+
+export interface IRawStatData {
+  info: {
+    metagame: string;
+    cutoff: number;
+    "cutoff deviation": 0;
+    "team type": 1;
+    "number of battles": number;
+  };
+  data: Record<DexId, IRawPokemonData>; // Diccionario principal basado en IDs
+}
+
+export interface CompetitiveResponse {
+  meta: { pokemon: DexId; format: string; gen: number };
+  general: { usage: string; rawCount: number };
+  stats: {
     moves: IUsageItem[];
-    abilities: IUsageItem[];
     items: IUsageItem[];
-    teammates: IUsageItem[];
-    spreads: ISpreadItem[];
-    // Datos de análisis táctico (opcional si existe)
-    analysis?: {
-        overview: string;
-        sets: any[]; // Estructura simplificada de sets
-    };
+    abilities: IUsageItem[];
+    teammates: ITeammateItem[]; // Actualizado a ITeammateItem
+    natureSpread: Array<{ nature: string; usage: string; evs: Record<string, number> }>;
+    teras?: IUsageItem[];
+  };
+  matchups: {
+    counters: ICounterItem[]; // Actualizado a ICounterItem
+  };
+  speed?: {
+    tier: string;
+    percentile: number;
+    baseSpeed: number;
+    context: { en: string; es: string };
+  };
 }
