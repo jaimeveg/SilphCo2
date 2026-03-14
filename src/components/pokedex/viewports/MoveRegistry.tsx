@@ -6,6 +6,7 @@ import { ChevronDown, Filter, AlertCircle, Check, Gamepad2 } from 'lucide-react'
 import { IPokemonMove, IMoveVersionGroupDetail, IMoveDetail } from '@/types/interfaces';
 import { fetchMoveDetail, useMachine, VERSION_METADATA } from '@/services/pokeapi'; 
 import { Lang, POKEDEX_DICTIONARY } from '@/lib/pokedexDictionary';
+import Link from 'next/link';
 import TypeBadge from '@/components/ui/TypeBadge';
 import { cn } from '@/lib/utils';
 
@@ -302,7 +303,10 @@ const MoveRow = ({ moveData, detail, learnDetails, lang, selectedVersion }: Move
     };
 
     return (
-        <div className="group flex items-center gap-2 p-1 rounded-md border border-slate-800/60 bg-slate-950 hover:bg-slate-900 hover:border-cyan-500/30 transition-all cursor-default mb-1 h-[40px]">
+        <Link 
+            href={`/${lang}/moves/${detail.name}`} 
+            className="group flex items-center gap-2 p-1 rounded-md border border-slate-800/60 bg-slate-950 hover:bg-slate-900 hover:border-cyan-500/30 hover:shadow-[0_0_10px_rgba(34,211,238,0.1)] transition-all cursor-pointer mb-1 h-[40px]"
+        >
             {/* 1. Método */}
             <div className="w-10 flex-shrink-0 border-r border-slate-800/50 pr-1 h-full">
                 {renderMethod()}
@@ -339,7 +343,7 @@ const MoveRow = ({ moveData, detail, learnDetails, lang, selectedVersion }: Move
                     <TextWithTooltip text={getFlavorText()} className="group-hover:text-slate-400 transition-colors" />
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 import staticMoveDex from '@/data/move_dex.json';
 import staticPokedexIds from '@/data/pokedex_ids.json';
 import staticItemDex from '@/data/item_dex.json'; // <--- NUEVO IMPORT
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 interface Props {
     pokemonSlug: string;
@@ -31,6 +33,9 @@ const TYPE_COLORS: Record<string, string> = {
 const getTypeColor = (type: string) => TYPE_COLORS[type.toLowerCase()] || 'bg-slate-700';
 
 const MoveBadge = ({ moveName }: { moveName: string }) => {
+    const params = useParams();
+    const lang = params?.lang || 'en';
+
     // @ts-ignore
     const moveData = staticMoveDex[moveName];
     if (!moveData) return <span className="text-[9px] text-slate-600 capitalize">{moveName.replace(/-/g, ' ')}</span>;
@@ -38,8 +43,11 @@ const MoveBadge = ({ moveName }: { moveName: string }) => {
     const typeColor = getTypeColor(moveData.type);
     
     return (
-        <div className="flex items-center justify-between w-full px-1.5 py-0.5 bg-slate-900/50 rounded border border-slate-800/50">
-            <span className="text-[9px] text-slate-300 capitalize truncate max-w-[65px]">{moveData.name.replace(/-/g, ' ')}</span>
+        <Link 
+            href={`/${lang}/moves/${moveName}`}
+            className="flex items-center justify-between w-full px-1.5 py-0.5 bg-slate-900/50 rounded border border-slate-800/50 hover:bg-slate-800 hover:border-cyan-500/50 transition-colors group/move"
+        >
+            <span className="text-[9px] text-slate-300 capitalize truncate max-w-[65px] group-hover/move:text-cyan-400 transition-colors">{moveData.name.replace(/-/g, ' ')}</span>
             <div className="flex items-center gap-1.5">
                 {moveData.category === 'physical' && <div className="w-1.5 h-1.5 bg-orange-400 rotate-45" title="Physical" />}
                 {moveData.category === 'special' && <div className="w-1.5 h-1.5 bg-blue-400 rounded-full" title="Special" />}
@@ -47,7 +55,7 @@ const MoveBadge = ({ moveName }: { moveName: string }) => {
                 {moveData.power > 0 && <span className="text-[8px] font-mono text-slate-500">{moveData.power}</span>}
                 <div className={cn("w-2 h-2 rounded shadow-sm", typeColor)} />
             </div>
-        </div>
+        </Link>
     );
 };
 
