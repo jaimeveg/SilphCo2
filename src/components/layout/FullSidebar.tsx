@@ -15,7 +15,7 @@ interface FullSidebarProps {
 export default function FullSidebar({ lang, dict }: FullSidebarProps) {
   const [isHovering, setIsHovering] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [openCategory, setOpenCategory] = useState<string | null>('academy');
+  const [openCategory, setOpenCategory] = useState<string | null>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   const pathname = usePathname();
