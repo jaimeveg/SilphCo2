@@ -577,7 +577,13 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                     <div className="space-y-1.5">
                                         <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Zap size={11} /> Abilities</h4>
                                         <div className="pt-1">{data.stats.abilities.slice(0, 2).map((a) => (
-                                            <UsageBar key={a.name} label={a.name} value={a.value} subLabel={formatDisplayValue(a.displayValue || a.value)} color="bg-emerald-600" />
+                                            <Link 
+                                                key={a.name}
+                                                href={`/${lang}/abilities/${a.slug || a.name.toLowerCase().replace(/[\s_]+/g, '-')}`}
+                                                className="block hover:brightness-125 hover:drop-shadow-[0_0_5px_rgba(16,185,129,0.5)] transition-all"
+                                            >
+                                                <UsageBar label={a.name} value={a.value} subLabel={formatDisplayValue(a.displayValue || a.value)} color="bg-emerald-600" />
+                                            </Link>
                                         ))}</div>
                                     </div>
                                 </div>

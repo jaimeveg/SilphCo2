@@ -125,11 +125,13 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
             </div>
             
             {poke.ability && (
-                <div className={cn("mt-2 pt-1.5 border-t text-[8px] text-center uppercase tracking-wider font-medium", 
-                    isTarget ? "border-amber-500/30 text-amber-500/70" : "border-slate-800/50 text-slate-500"
+                <Link 
+                    href={`/${lang}/abilities/${poke.ability.toLowerCase().replace(/[\s\.]/g, '-')}`}
+                    className={cn("mt-2 pt-1.5 border-t text-[8px] text-center uppercase tracking-wider font-medium block hover:text-cyan-400 transition-colors cursor-pointer", 
+                    isTarget ? "border-amber-500/30 text-amber-500/70 hover:text-amber-300" : "border-slate-800/50 text-slate-500"
                 )}>
                     {poke.ability.replace(/-/g, ' ')}
-                </div>
+                </Link>
             )}
         </div>
     );

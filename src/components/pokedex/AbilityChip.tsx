@@ -5,6 +5,9 @@ import { createPortal } from 'react-dom'; // CLAVE: Importamos Portal
 import { EyeOff, Info } from 'lucide-react';
 import { IAbility } from '@/types/interfaces';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import { toSlug } from '@/lib/utils/pokemon-normalizer';
 
 interface Props {
   ability: IAbility;
@@ -15,6 +18,8 @@ export default function AbilityChip({ ability }: Props) {
   const [coords, setCoords] = useState<{ top: number; left: number } | null>(null);
   const [mounted, setMounted] = useState(false);
   const triggerRef = useRef<HTMLDivElement>(null);
+  const params = useParams();
+  const lang = params?.lang || 'en';
 
   // Necesario para evitar errores de hidratación con Portals en Next.js
   useEffect(() => {
@@ -82,17 +87,18 @@ export default function AbilityChip({ ability }: Props) {
 
   return (
     <>
-      <div 
-        ref={triggerRef}
+      <Link 
+        href={`/${lang}/abilities/${toSlug(ability.name)}`}
+        ref={triggerRef as any}
         className={cn(
-          "flex items-center justify-between p-2 rounded border transition-all duration-300 cursor-help select-none min-w-[120px]",
+          "flex items-center justify-between p-2 rounded border transition-all duration-300 cursor-pointer select-none min-w-[120px] group",
           ability.isHidden 
             ? "bg-purple-950/20 border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-900/30" 
             : "bg-slate-900/40 border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800/60"
         )}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setShowTooltip(false)}
-        onClick={() => { updateCoords(); setShowTooltip(!showTooltip); }}
+        onClick={() => setShowTooltip(false)}
       >
         <div className="flex items-center gap-2">
           {ability.isHidden && (
@@ -113,7 +119,7 @@ export default function AbilityChip({ ability }: Props) {
             "transition-colors ml-2",
             ability.isHidden ? "text-purple-500 group-hover:text-purple-300" : "text-slate-600 group-hover:text-cyan-400"
         )} />
-      </div>
+      </Link>
 
       {/* Renderizado en el BODY para escapar de cualquier contexto de apilamiento o transformación padre */}
       {mounted && showTooltip && createPortal(tooltipContent, document.body)}
