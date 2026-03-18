@@ -1,10 +1,11 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { getCoreMenu } from '@/data/navigation';
-import { Settings, HelpCircle, LogOut, Lock, ChevronRight, Globe } from 'lucide-react';
+import { Lock, ChevronRight, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import GlobalSearchBar from '@/components/layout/GlobalSearchBar';
 
 interface FullSidebarProps {
   lang: string;
@@ -13,10 +14,34 @@ interface FullSidebarProps {
 
 export default function FullSidebar({ lang, dict }: FullSidebarProps) {
   const [isHovering, setIsHovering] = useState(false);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [openCategory, setOpenCategory] = useState<string | null>('academy');
-  
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   const pathname = usePathname();
   const router = useRouter();
+
+  const isExpanded = isHovering || isSearchFocused;
+
+  // Collapse everything (mouse out + search blur)
+  const collapseAll = () => {
+    setIsHovering(false);
+    setIsSearchFocused(false);
+  };
+
+  // Ctrl+K / Cmd+K global shortcut
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsHovering(true);
+        setIsSearchFocused(true);
+        setTimeout(() => searchInputRef.current?.focus(), 50);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // 1. DETECCIÓN DE MODO
   const isNuzlockeMode = pathname.includes('/nuzlocke');
@@ -49,7 +74,7 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
 
   const t = dict.navigation;
   const CORE_MENU = getCoreMenu(lang, dict);
-  const displayedCategory = isHovering ? openCategory : null;
+  const displayedCategory = isExpanded ? openCategory : null;
 
   const languageSwitchLabel = lang === 'es' ? 'Switch to English' : 'Cambiar a español';
 
@@ -83,11 +108,12 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
   return (
     <aside 
       onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      onMouseLeave={() => { if (!isSearchFocused) setIsHovering(false); }}
       className={cn(
-        "fixed top-0 left-0 h-full z-[9999] transition-all duration-500 delay-200 ease-[cubic-bezier(0.25,1,0.5,1)] w-20 hover:w-80 group flex flex-col",
+        "fixed top-0 left-0 h-full z-[9999] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col",
+        isExpanded ? 'w-80' : 'w-20',
         theme.bg, 
-        theme.borderRight // Aplicamos el borde y sombra manual aquí
+        theme.borderRight
       )}
     >
       {/* HEADER LOGO */}
@@ -99,15 +125,31 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
           isNuzlockeMode ? 'border-red-950/30' : 'border-slate-800'
         )}
       >
-        <div className="absolute left-0 w-20 h-full flex items-center justify-center transition-opacity duration-300 delay-200 group-hover:opacity-0 pointer-events-none">
+        <div className={cn(
+          "absolute left-0 w-20 h-full flex items-center justify-center transition-opacity duration-300 pointer-events-none",
+          isExpanded ? 'opacity-0' : 'opacity-100'
+        )}>
           <span className={cn("font-display font-bold text-xl", theme.text)}>S.</span>
         </div>
-        <div className="w-full h-full flex items-center px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-           <span className="font-display font-bold text-white text-xl whitespace-nowrap">
+        <div className={cn(
+          "w-full h-full flex items-center px-8 transition-opacity duration-300",
+          isExpanded ? 'opacity-100' : 'opacity-0'
+        )}>
+          <span className="font-display font-bold text-white text-xl whitespace-nowrap">
             SILPH<span className={theme.text}>.CO</span>
           </span>
         </div>
       </Link>
+
+      {/* GLOBAL SEARCH */}
+      <GlobalSearchBar
+        lang={lang}
+        isExpanded={isExpanded}
+        onFocus={() => setIsSearchFocused(true)}
+        onBlur={() => setIsSearchFocused(false)}
+        onClickOutside={collapseAll}
+        inputRef={searchInputRef}
+      />
 
       {/* CORE NAVIGATION */}
       <div data-lenis-prevent="true" className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden no-scrollbar py-8 space-y-2 overscroll-contain">
@@ -121,14 +163,17 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
               <button 
                 onClick={() => setOpenCategory(isActive ? null : category.id)}
                 className={cn(
-                  "w-full h-14 flex items-center transition-all duration-300 delay-200 relative group/cat",
+                  "w-full h-14 flex items-center transition-all duration-300 relative group/cat",
                   isActive ? theme.text : "text-slate-500 hover:text-white hover:bg-slate-900/50"
                 )}
               >
                 <div className="w-20 min-w-[5rem] flex items-center justify-center relative z-10 flex-shrink-0">
-                  <Icon size={24} strokeWidth={1.5} className={`transition-transform duration-500 delay-200 ${isActive && isHovering ? 'scale-110' : ''}`} />
+                  <Icon size={24} strokeWidth={1.5} className={`transition-transform duration-300 ${isActive && isExpanded ? 'scale-110' : ''}`} />
                 </div>
-                <div className="flex-1 flex items-center justify-between pr-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200 overflow-hidden whitespace-nowrap">
+                <div className={cn(
+                  "flex-1 flex items-center justify-between pr-6 transition-opacity duration-300 overflow-hidden whitespace-nowrap",
+                  isExpanded ? 'opacity-100' : 'opacity-0'
+                )}>
                   <span className="font-display font-bold text-sm tracking-widest uppercase">{category.label}</span>
                   <ChevronRight size={16} className={cn("transition-transform duration-300 delay-200", isOpen ? `rotate-90 ${theme.text}` : "text-slate-700")} />
                 </div>
@@ -203,7 +248,8 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
         <SidebarAction 
           icon={Globe} 
           label={languageSwitchLabel} 
-          onClick={handleLanguageSwitch} 
+          onClick={handleLanguageSwitch}
+          isExpanded={isExpanded}
         />
         <div className="h-px bg-slate-800 my-2 opacity-50" />
       </div>
@@ -211,16 +257,19 @@ export default function FullSidebar({ lang, dict }: FullSidebarProps) {
   );
 }
 
-function SidebarAction({ icon: Icon, label, onClick }: { icon: any; label: string; onClick?: () => void }) {
+function SidebarAction({ icon: Icon, label, onClick, isExpanded }: { icon: any; label: string; onClick?: () => void; isExpanded: boolean }) {
   return (
     <button 
       onClick={onClick}
-      className="w-full flex items-center h-10 text-slate-600 hover:text-white transition-colors group/btn rounded-md hover:bg-slate-900/50"
+      className="w-full flex items-center h-10 text-slate-600 hover:text-white transition-colors rounded-md hover:bg-slate-900/50 overflow-hidden"
     >
        <div className="w-12 flex items-center justify-center flex-shrink-0">
          <Icon size={18} />
        </div>
-       <span className="font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200 hidden group-hover:block whitespace-nowrap overflow-hidden">
+       <span className={cn(
+         "font-mono text-xs transition-opacity duration-300 whitespace-nowrap",
+         isExpanded ? "opacity-100" : "opacity-0"
+       )}>
          {label}
        </span>
     </button>

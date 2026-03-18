@@ -2,7 +2,8 @@ import {
   Hash, Activity, Sword, 
   GraduationCap, Zap, Skull, 
   LucideIcon, Calculator, Timer, 
-  Dna, Brain, RefreshCw, Egg 
+  Dna, Brain, RefreshCw, Egg,
+  LibraryBig, PawPrint, Disc, Apple, SendToBack
 } from 'lucide-react';
 
 export interface NavItem {
@@ -140,6 +141,18 @@ export const getCoreMenu = (lang: string, dict: any): CoreMenuItem[] => [
         icon: Calculator 
       }
     ] 
+  },
+  {
+    id: 'dex',
+    label: dict.navigation.dex,
+    icon: LibraryBig,
+    type: 'link_root',
+    children: [
+      { label: dict.navigation.dex_items.pokedex, href: `/${lang}/pokedex`, icon: PawPrint },
+      { label: dict.navigation.dex_items.movedex, href: `/${lang}/moves`, icon: Disc },
+      { label: dict.navigation.dex_items.itemdex, href: `/${lang}/items`, icon: Apple },
+      { label: dict.navigation.dex_items.abilitydex, href: `/${lang}/abilities`, icon: SendToBack },
+    ]
   },
   { 
     id: 'nuzlocke', 

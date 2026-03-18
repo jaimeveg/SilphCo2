@@ -9,6 +9,7 @@
     "home": "Inicio",
     "academy": "Academia",
     "tools": "Herramientas",
+    "dex": "Módulo Dex",
     "nuzlocke": "Zona Nuzlocke",
     "settings": "Configuración",
     "help": "Ayuda",
@@ -42,6 +43,12 @@
     },
     "tools_items": {
       "type_calc": "Calculadora de Tipos"
+    },
+    "dex_items": {
+      "pokedex": "PokéDex",
+      "movedex": "MoveDex",
+      "itemdex": "ItemDex",
+      "abilitydex": "AbilityDex"
     },
     "switcher": {
       "select_module": "Seleccionar Módulo"
@@ -174,6 +181,10 @@
       "nuzlocke": {
         "title": "ZONA NUZLOCKE",
         "desc": "Tracker de rutas y gestión de vitalidad. (WIP)"
+      },
+      "dex": {
+        "title": "MÓDULO DEX",
+        "desc": "Bases de datos de Pokémon, Movimientos, Objetos y Habilidades."
       }
     }
   },
@@ -384,5 +395,31 @@
         "format": "database"
       }
     ]
+  },
+  "dex_landing": {
+    "badge": "SILPH S.A. // MÓDULO DEX",
+    "title_prefix": "Silph",
+    "title_highlight": "Módulo Dex",
+    "subtitle": "Accede a todas las bases de datos. Especies, movimientos, objetos y habilidades en un hub centralizado.",
+    "pokedex": {
+      "title": "PokéDex Nacional",
+      "desc": "Base de datos completa de especies. Stats base, formas, evoluciones y analítica competitiva.",
+      "stat": "1.025 ESPECIES"
+    },
+    "movedex": {
+      "title": "MoveDex",
+      "desc": "Biblioteca completa de movimientos. Potencia, precisión, efectos secundarios y uso competitivo.",
+      "stat": "950+ MOVIMIENTOS"
+    },
+    "itemdex": {
+      "title": "ItemDex",
+      "desc": "Base de datos táctica y competitiva de objetos. Modificadores de stat, bayas y objetos equipables.",
+      "stat": "370+ OBJETOS"
+    },
+    "abilitydex": {
+      "title": "AbilityDex",
+      "desc": "Registro de habilidades pasivas. Tiers competitivos, interacciones y análisis de portadores.",
+      "stat": "300+ HABILIDADES"
+    }
   }
 }

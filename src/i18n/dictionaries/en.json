@@ -9,6 +9,7 @@
     "home": "Home",
     "academy": "Academy",
     "tools": "Tools",
+    "dex": "Dex Module",
     "nuzlocke": "Nuzlocke Zone",
     "settings": "Settings",
     "help": "Help",
@@ -42,6 +43,12 @@
     },
     "tools_items": {
       "type_calc": "Type Calculator"
+    },
+    "dex_items": {
+      "pokedex": "PokéDex",
+      "movedex": "MoveDex",
+      "itemdex": "ItemDex",
+      "abilitydex": "AbilityDex"
     },
     "switcher": {
       "select_module": "Select Module"
@@ -174,6 +181,10 @@
       "nuzlocke": {
         "title": "NUZLOCKE ZONE",
         "desc": "Route tracker and vitality management. (WIP)"
+      },
+      "dex": {
+        "title": "DEX MODULE",
+        "desc": "Pokémon, Moves, Items & Abilities databases."
       }
     }
   },
@@ -384,5 +395,31 @@
         "format": "database"
       }
     ]
+  },
+  "dex_landing": {
+    "badge": "SILPH CO. // DEX MODULE",
+    "title_prefix": "Silph",
+    "title_highlight": "Dex Module",
+    "subtitle": "Access all databases. Species, moves, items, and abilities in one centralized hub.",
+    "pokedex": {
+      "title": "National PokéDex",
+      "desc": "Complete species database. Base stats, forms, evolutions, and competitive analytics.",
+      "stat": "1,025 SPECIES"
+    },
+    "movedex": {
+      "title": "MoveDex",
+      "desc": "Full move library. Power, accuracy, secondary effects, and competitive usage.",
+      "stat": "950+ MOVES"
+    },
+    "itemdex": {
+      "title": "ItemDex",
+      "desc": "Tactical and competitive item database. Stat modifiers, berries, and held items.",
+      "stat": "370+ ITEMS"
+    },
+    "abilitydex": {
+      "title": "AbilityDex",
+      "desc": "Passive ability registry. Competitive tiers, interactions, and carrier analysis.",
+      "stat": "300+ ABILITIES"
+    }
   }
 }

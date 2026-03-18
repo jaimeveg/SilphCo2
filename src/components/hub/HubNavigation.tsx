@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { BookOpen, Wrench, Skull, ArrowRight } from 'lucide-react';
+import { BookOpen, Wrench, Skull, ArrowRight, LibraryBig } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface HubNavigationProps {
@@ -40,6 +40,18 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
       baseBg: 'bg-slate-900/60'
     },
     {
+      id: 'dex',
+      title: t.dex.title,
+      desc: t.dex.desc,
+      icon: LibraryBig,
+      href: `/${lang}/dex`,
+      color: 'text-emerald-400',
+      border: 'group-hover:border-emerald-500/50',
+      glow: 'group-hover:shadow-[0_0_20px_rgba(52,211,153,0.1)]',
+      bg: 'group-hover:bg-emerald-950/30',
+      baseBg: 'bg-slate-900/60'
+    },
+    {
       id: 'nuzlocke',
       title: t.nuzlocke.title,
       desc: t.nuzlocke.desc,
@@ -58,43 +70,43 @@ export default function HubNavigation({ lang, dict, layout = 'horizontal' }: Hub
   return (
     <div className={cn(
       "w-full h-full grid gap-4",
-      layout === 'horizontal' ? "grid-cols-1 md:grid-cols-3" : "grid-rows-3"
+      layout === 'horizontal' ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" : "grid-rows-4"
     )}>
       {CARDS.map((card, i) => (
         <motion.div
-            key={card.id}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="h-full"
+          key={card.id}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: i * 0.1 }}
+          className="h-full"
         >
-            <Link 
+          <Link
             href={card.locked ? '#' : card.href}
             className={cn(
-                "group relative flex flex-col justify-center px-6 py-4 rounded-xl border border-slate-800 backdrop-blur-md transition-all duration-300 h-full",
-                card.baseBg, // Fondo base (slate o negro)
-                card.border, card.glow, card.bg,
-                card.locked && "opacity-60 grayscale cursor-not-allowed hover:border-slate-800 hover:shadow-none hover:bg-slate-900/60"
+              "group relative flex flex-col justify-center px-6 py-4 rounded-xl border border-slate-800 backdrop-blur-md transition-all duration-300 h-full",
+              card.baseBg, // Fondo base (slate o negro)
+              card.border, card.glow, card.bg,
+              card.locked && "opacity-60 grayscale cursor-not-allowed hover:border-slate-800 hover:shadow-none hover:bg-slate-900/60"
             )}
-            >
+          >
             <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-3">
-                    <div className={cn("p-2 rounded bg-slate-950 border border-slate-800", card.color)}>
-                        <card.icon size={20} />
-                    </div>
-                    <h3 className="font-display font-bold text-base text-white tracking-wide">
-                        {card.title}
-                    </h3>
+              <div className="flex items-center gap-3">
+                <div className={cn("p-2 rounded bg-slate-950 border border-slate-800", card.color)}>
+                  <card.icon size={20} />
                 </div>
-                {!card.locked && (
-                    <ArrowRight size={16} className={cn("transition-transform group-hover:translate-x-1", card.color)} />
-                )}
+                <h3 className="font-display font-bold text-base text-white tracking-wide">
+                  {card.title}
+                </h3>
+              </div>
+              {!card.locked && (
+                <ArrowRight size={16} className={cn("transition-transform group-hover:translate-x-1", card.color)} />
+              )}
             </div>
 
             <p className="text-xs text-slate-400 font-mono leading-relaxed pl-[3.25rem]">
-                {card.desc}
+              {card.desc}
             </p>
-            </Link>
+          </Link>
         </motion.div>
       ))}
     </div>
