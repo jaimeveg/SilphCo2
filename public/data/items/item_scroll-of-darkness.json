@@ -1,0 +1,32 @@
+{
+  "id": "scroll-of-darkness",
+  "name": "Scroll of Darkness",
+  "effect": "A peculiar scroll that can make a certain species of Pokemon evolve. Written upon it are the true secrets of the path of darkness.",
+  "sprites": {
+    "low_res": "/images/items/sprites/scroll-of-darkness.png",
+    "high_res": "/images/items/high-res/scroll-of-darkness.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "kubfu"
+      ],
+      "evo_pokemon": [
+        "892"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "misty-seed",
+  "name": "Misty Seed",
+  "effect": "An item to be held by a Pokemon. If the terrain becomes Misty Terrain, the holder will use this seed to boost its own Sp. Def stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/misty-seed.png",
+    "high_res": "/images/items/high-res/misty-seed.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spd": 1,
+      "boost": "stage",
+      "affects": "self",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "362",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 28.13,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.0007771089153753331
+}

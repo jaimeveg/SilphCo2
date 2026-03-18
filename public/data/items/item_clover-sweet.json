@@ -1,0 +1,33 @@
+{
+  "id": "clover-sweet",
+  "name": "Clover Sweet",
+  "effect": "A clover-shaped sweet. When a Milcery holds this, it spins around happily.",
+  "sprites": {
+    "low_res": "/images/items/sprites/clover-sweet.png",
+    "high_res": "/images/items/high-res/clover-sweet.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "milcery"
+      ],
+      "evo_pokemon": [
+        "alcremie"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000024633041847474216
+}

@@ -72,9 +72,9 @@ export default function MoveDexIndex({ params }: { params: { lang: string } }) {
     const allTypes = useMemo(() => Array.from(new Set(moves.map(m => m.type))).sort(), [moves]);
 
     return (
-        <div className="max-w-[1400px] mx-auto p-4 md:p-6 space-y-6 animate-in fade-in zoom-in-95 duration-500">
+        <div className="max-w-[1400px] mx-auto p-4 md:p-6 pt-0 md:pt-0 space-y-6 animate-in fade-in zoom-in-95 duration-500">
             
-            <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700/50 rounded-2xl p-4 shadow-2xl flex flex-col xl:flex-row justify-between gap-4 items-center relative overflow-hidden">
+            <div className="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-3xl border-b border-slate-800/80 -mx-4 md:-mx-6 px-4 md:px-6 pt-16 pb-4 shadow-2xl flex flex-col xl:flex-row justify-between gap-4 items-center">
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
                 
                 <div className="flex items-center gap-4 z-10 w-full xl:w-auto">

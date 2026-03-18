@@ -1,0 +1,81 @@
+{
+  "id": "power-herb",
+  "name": "Power Herb",
+  "effect": "An item to be held by a Pokemon. It allows the holder to immediately use a move that normally requires a turn to charge�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/power-herb.png",
+    "high_res": "/images/items/high-res/power-herb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "792",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 49.93,
+      "pokemon_usage": 16.05
+    },
+    {
+      "pokemon_id": "1018",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.53,
+      "pokemon_usage": 7.52
+    },
+    {
+      "pokemon_id": "970",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 77.67,
+      "pokemon_usage": 5.48
+    },
+    {
+      "pokemon_id": "936",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.21,
+      "pokemon_usage": 1.2
+    },
+    {
+      "pokemon_id": "10156",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 40.31,
+      "pokemon_usage": 0.93
+    },
+    {
+      "pokemon_id": "994",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.24,
+      "pokemon_usage": 0.49
+    },
+    {
+      "pokemon_id": "181",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 42.7,
+      "pokemon_usage": 0.09
+    },
+    {
+      "pokemon_id": "839",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.09,
+      "pokemon_usage": 0.06
+    },
+    {
+      "pokemon_id": "800",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 28.32,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.09360631361238268
+}

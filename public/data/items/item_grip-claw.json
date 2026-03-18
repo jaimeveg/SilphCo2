@@ -1,0 +1,26 @@
+{
+  "id": "grip-claw",
+  "name": "Grip Claw",
+  "effect": "An item to be held by a Pokemon. When the holder uses moves that deal damage over several turns, such as Bind or Wrap, their effects will last longer than usual.",
+  "sprites": {
+    "low_res": "/images/items/sprites/grip-claw.png",
+    "high_res": "/images/items/high-res/grip-claw.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "enemy",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00008247494190324008
+}

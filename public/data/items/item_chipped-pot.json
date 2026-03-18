@@ -1,0 +1,32 @@
+{
+  "id": "chipped-pot",
+  "name": "Chipped Pot",
+  "effect": "A peculiar teapot that can make a certain species of Pokemon evolve. It may be chipped, but tea poured from it is delicious.",
+  "sprites": {
+    "low_res": "/images/items/sprites/chipped-pot.png",
+    "high_res": "/images/items/high-res/chipped-pot.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "sinistea"
+      ],
+      "evo_pokemon": [
+        "polteageist"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

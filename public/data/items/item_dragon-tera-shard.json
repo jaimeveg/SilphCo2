@@ -1,0 +1,27 @@
+{
+  "id": "dragon-tera-shard",
+  "name": "Dragon Tera Shard",
+  "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+  "sprites": {
+    "low_res": "/images/items/sprites/dragon-tera-shard.png",
+    "high_res": "/images/items/high-res/dragon-tera-shard.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "set tera type to dragon"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

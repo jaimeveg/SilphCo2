@@ -1,0 +1,83 @@
+{
+  "id": "expert-belt",
+  "name": "Expert Belt",
+  "effect": "An item to be held by a Pokemon. It's a well-worn belt that slightly boosts the power of the holder's supereffective moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/expert-belt.png",
+    "high_res": "/images/items/high-res/expert-belt.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses supereffective move",
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "473",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 21.47,
+      "pokemon_usage": 0.21
+    },
+    {
+      "pokemon_id": "243",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 37.13,
+      "pokemon_usage": 0.2
+    },
+    {
+      "pokemon_id": "184",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.03,
+      "pokemon_usage": 0.17
+    },
+    {
+      "pokemon_id": "466",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.1,
+      "pokemon_usage": 0.12
+    },
+    {
+      "pokemon_id": "870",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.41,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "107",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20.27,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "640",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 31.44,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "905",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 46.63,
+      "pokemon_usage": 0.01
+    },
+    {
+      "pokemon_id": "381",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 21.22,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.008848361966616392
+}

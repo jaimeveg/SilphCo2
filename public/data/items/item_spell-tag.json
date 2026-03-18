@@ -1,0 +1,43 @@
+{
+  "id": "spell-tag",
+  "name": "Spell Tag",
+  "effect": "An item to be held by a Pokemon. It's a sinister, eerie tag that boosts the power of the holder's Ghost-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/spell-tag.png",
+    "high_res": "/images/items/high-res/spell-tag.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "ghost"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "972",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 48.61,
+      "pokemon_usage": 0.09
+    },
+    {
+      "pokemon_id": "897",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.98,
+      "pokemon_usage": 0.03
+    }
+  ],
+  "global_usage": 0.02180727529211436
+}

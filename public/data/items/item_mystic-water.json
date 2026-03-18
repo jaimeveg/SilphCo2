@@ -1,0 +1,91 @@
+{
+  "id": "mystic-water",
+  "name": "Mystic Water",
+  "effect": "An item to be held by a Pokemon. This teardrop-shaped gem boosts the power of the holder's Water-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/mystic-water.png",
+    "high_res": "/images/items/high-res/mystic-water.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "water"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10191",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 46.49,
+      "pokemon_usage": 56.23
+    },
+    {
+      "pokemon_id": "382",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 26.23,
+      "pokemon_usage": 20.3
+    },
+    {
+      "pokemon_id": "752",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.34,
+      "pokemon_usage": 0.83
+    },
+    {
+      "pokemon_id": "964",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 23.38,
+      "pokemon_usage": 0.57
+    },
+    {
+      "pokemon_id": "419",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.81,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "272",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.71,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "9",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 22.26,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "845",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 22.88,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "342",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 20.21,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "503",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.67,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.2615615795698908
+}

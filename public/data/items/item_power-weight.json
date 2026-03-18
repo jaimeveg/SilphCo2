@@ -1,0 +1,35 @@
+{
+  "id": "power-weight",
+  "name": "Power Weight",
+  "effect": "An item to be held by a Pokemon. This weight reduces a Pokemon's Speed in battle but allows its HP stat to grow more quickly.",
+  "sprites": {
+    "low_res": "/images/items/sprites/power-weight.png",
+    "high_res": "/images/items/high-res/power-weight.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "8 extra evs on hp"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "687",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.77,
+      "pokemon_usage": 0.08
+    }
+  ],
+  "global_usage": 0.0014201865258479426
+}

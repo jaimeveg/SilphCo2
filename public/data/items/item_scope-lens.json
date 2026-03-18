@@ -1,0 +1,70 @@
+{
+  "id": "scope-lens",
+  "name": "Scope Lens",
+  "effect": "An item to be held by a Pokemon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio.",
+  "sprites": {
+    "low_res": "/images/items/sprites/scope-lens.png",
+    "high_res": "/images/items/high-res/scope-lens.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "crit": 1,
+      "boost": "stage",
+      "affects": "self",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "230",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.59,
+      "pokemon_usage": 0.62
+    },
+    {
+      "pokemon_id": "10244",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.37,
+      "pokemon_usage": 0.23
+    },
+    {
+      "pokemon_id": "818",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 59.96,
+      "pokemon_usage": 0.11
+    },
+    {
+      "pokemon_id": "691",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.39,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "430",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.82,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "706",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 49.04,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "168",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 35.71,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.004954604382902914
+}

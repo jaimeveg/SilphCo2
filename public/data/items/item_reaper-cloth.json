@@ -1,0 +1,32 @@
+{
+  "id": "reaper-cloth",
+  "name": "Reaper Cloth",
+  "effect": "A cloth imbued with horrifyingly strong spiritual energy. It's loved by a certain Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/reaper-cloth.png",
+    "high_res": "/images/items/high-res/reaper-cloth.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "dusclops"
+      ],
+      "evo_pokemon": [
+        "dusknoir"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

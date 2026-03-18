@@ -1,0 +1,30 @@
+{
+  "id": "hard-stone",
+  "name": "Hard Stone",
+  "effect": "An item to be held by a Pokemon. It's a durable stone that boosts the power of the holder's Rock-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/hard-stone.png",
+    "high_res": "/images/items/high-res/hard-stone.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "rock"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00027867937090943933
+}

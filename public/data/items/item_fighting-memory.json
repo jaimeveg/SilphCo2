@@ -1,0 +1,31 @@
+{
+  "id": "fighting-memory",
+  "name": "Fighting Memory",
+  "effect": "A memory disc that contains Fighting-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/fighting-memory.png",
+    "high_res": "/images/items/high-res/fighting-memory.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "silvally"
+      ],
+      "type_related": [
+        "fight"
+      ],
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

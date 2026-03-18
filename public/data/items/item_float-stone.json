@@ -1,0 +1,26 @@
+{
+  "id": "float-stone",
+  "name": "Float Stone",
+  "effect": "An item to be held by a Pokemon. This very light stone reduces the weight of the holder.",
+  "sprites": {
+    "low_res": "/images/items/sprites/float-stone.png",
+    "high_res": "/images/items/high-res/float-stone.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00007955364086687307
+}

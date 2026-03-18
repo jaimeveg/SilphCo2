@@ -1,0 +1,27 @@
+{
+  "id": "qualot-berry",
+  "name": "Qualot Berry",
+  "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Defense stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/qualot-berry.png",
+    "high_res": "/images/items/high-res/qualot-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "reduces def evs"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

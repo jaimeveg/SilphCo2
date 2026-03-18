@@ -1,0 +1,101 @@
+{
+  "id": "throat-spray",
+  "name": "Throat Spray",
+  "effect": "An item to be held by a Pokemon. If the holder uses a sound-based move, this throat spray will boost its Sp. Atk stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/throat-spray.png",
+    "high_res": "/images/items/high-res/throat-spray.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spa": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "use sound move",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "981",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 55.3,
+      "pokemon_usage": 15.58
+    },
+    {
+      "pokemon_id": "730",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 36.75,
+      "pokemon_usage": 2.25
+    },
+    {
+      "pokemon_id": "784",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 32.64,
+      "pokemon_usage": 0.94
+    },
+    {
+      "pokemon_id": "700",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 35.2,
+      "pokemon_usage": 0.73
+    },
+    {
+      "pokemon_id": "911",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 31.42,
+      "pokemon_usage": 0.34
+    },
+    {
+      "pokemon_id": "849",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 40.26,
+      "pokemon_usage": 0.26
+    },
+    {
+      "pokemon_id": "930",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 15.25,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "715",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.73,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "668",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 26.11,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "243",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 20.73,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "203",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 31.33,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "40",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 20,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.10023513914433471
+}

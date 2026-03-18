@@ -1,0 +1,62 @@
+{
+  "id": "normal-gem",
+  "name": "Normal Gem",
+  "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of normalcy and will boost the power of a Normal-type move�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/normal-gem.png",
+    "high_res": "/images/items/high-res/normal-gem.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses normal type move",
+      "type_related": [
+        "normal"
+      ],
+      "effect_type": "boost",
+      "power": 30,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "424",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.91,
+      "pokemon_usage": 0.19
+    },
+    {
+      "pokemon_id": "474",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.49,
+      "pokemon_usage": 0.06
+    },
+    {
+      "pokemon_id": "482",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.59,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "205",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 31.58,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "106",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 15.96,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.003188138642824168
+}

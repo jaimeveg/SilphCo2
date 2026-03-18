@@ -5,7 +5,7 @@ import { PokemonIndexCard, FilterState } from '@/types/pokedex';
 import TacticalDexCard from './TacticalDexCard';
 import DexFilterPanel from './DexFilterPanel';
 import { Lang } from '@/lib/pokedexDictionary';
-import { Loader2, Database, ImageOff } from 'lucide-react';
+import { Loader2, Database, ImageOff, ArrowUp } from 'lucide-react';
 
 interface Props {
   initialData: PokemonIndexCard[]; 
@@ -39,11 +39,24 @@ export default function DexLandingView({ initialData, availableGames, lang }: Pr
   });
 
   const [visibleCount, setVisibleCount] = useState(CHUNK_SIZE);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const observerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setVisibleCount(CHUNK_SIZE);
   }, [filters]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Motor O(N) Profundo (Evalúa Padre e Hijos)
   const filteredData = useMemo(() => {
@@ -126,14 +139,14 @@ export default function DexLandingView({ initialData, availableGames, lang }: Pr
     <div className="w-full min-h-screen flex flex-col p-4 md:p-8 pt-24 max-w-[1920px] mx-auto">
       
       <div className="mb-6 flex items-center gap-3">
-          <div className="p-3 bg-cyan-500/10 rounded-lg border border-cyan-500/30 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-              <Database size={24} />
-          </div>
-          <div>
-              <h1 className="text-3xl font-display font-black text-white uppercase tracking-tighter shadow-black drop-shadow-md">National <span className="text-cyan-400">Database</span></h1>
-              <p className="text-xs font-mono text-slate-400">Silph Co. Central Server • Indexing {filteredData.length} species</p>
-          </div>
-      </div>
+            <div className="p-3 bg-cyan-500/10 rounded-lg border border-cyan-500/30 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+                <Database size={24} />
+            </div>
+            <div>
+                <h1 className="text-3xl font-display font-black text-white uppercase tracking-tighter shadow-black drop-shadow-md">National <span className="text-cyan-400">Database</span></h1>
+                <p className="text-xs font-mono text-slate-400">Silph Co. Central Server • Indexing {filteredData.length} species</p>
+            </div>
+        </div>
 
       <DexFilterPanel 
         filters={filters} 
@@ -166,6 +179,16 @@ export default function DexLandingView({ initialData, availableGames, lang }: Pr
          </div>
       )}
       
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 md:bottom-12 md:right-12 z-50 p-3 bg-slate-900/90 backdrop-blur border border-cyan-500/50 rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:bg-slate-800 hover:scale-110 hover:border-cyan-400 transition-all text-cyan-400 group"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={24} className="group-hover:-translate-y-1 transition-transform" />
+        </button>
+      )}
+
     </div>
   );
 }

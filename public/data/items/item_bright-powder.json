@@ -1,0 +1,82 @@
+{
+  "id": "bright-powder",
+  "name": "Bright Powder",
+  "effect": "An item to be held by a Pokemon. This glittery powder casts a tricky glare that lowers the accuracy of opposing Pokemon's moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/bright-powder.png",
+    "high_res": "/images/items/high-res/bright-powder.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "enemy",
+      "effect_type": "reduces",
+      "move_acc": 10,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "144",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 39.03,
+      "pokemon_usage": 0.26
+    },
+    {
+      "pokemon_id": "131",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 46.04,
+      "pokemon_usage": 0.23
+    },
+    {
+      "pokemon_id": "471",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.24,
+      "pokemon_usage": 0.16
+    },
+    {
+      "pokemon_id": "571",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.92,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "844",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.89,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "445",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 35.68,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "85",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 27.14,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "586",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20.34,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "162",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 38.71,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.007018620452734918
+}

@@ -1,0 +1,31 @@
+{
+  "id": "burn-drive",
+  "name": "Burn Drive",
+  "effect": "A cassette to be held by Genesect. It changes Genesect's Techno Blast move so it becomes Fire type.",
+  "sprites": {
+    "low_res": "/images/items/sprites/burn-drive.png",
+    "high_res": "/images/items/high-res/burn-drive.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "genesect"
+      ],
+      "type_related": [
+        "fire"
+      ],
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

@@ -1,0 +1,50 @@
+{
+  "id": "roseli-berry",
+  "name": "Roseli Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a supereffective Fairy-type move, the power of that move will be weakened.",
+  "sprites": {
+    "low_res": "/images/items/sprites/roseli-berry.png",
+    "high_res": "/images/items/high-res/roseli-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "enemy",
+      "condition_holder": "hit by supereffective fairy move",
+      "type_related": [
+        "fairy"
+      ],
+      "effect_type": "reduces",
+      "power": 50,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "302",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 26.11,
+      "pokemon_usage": 0.42
+    },
+    {
+      "pokemon_id": "442",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.42,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "967",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 73.46,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0016800892271107359
+}

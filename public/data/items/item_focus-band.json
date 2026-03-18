@@ -1,0 +1,33 @@
+{
+  "id": "focus-band",
+  "name": "Focus Band",
+  "effect": "An item to be held by a Pokemon. When the holder is hit with a move that should knock it out, it may be able to endure with 1 HP.",
+  "sprites": {
+    "low_res": "/images/items/sprites/focus-band.png",
+    "high_res": "/images/items/high-res/focus-band.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "106",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.29,
+      "pokemon_usage": 0.12
+    }
+  ],
+  "global_usage": 0.0012537606976308787
+}

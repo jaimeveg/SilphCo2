@@ -1,0 +1,38 @@
+{
+  "id": "light-ball",
+  "name": "Light Ball",
+  "effect": "An item to be held by Pikachu. It's a mysterious orb that boosts Pikachu's Attack and Sp. Atk stats.",
+  "sprites": {
+    "low_res": "/images/items/sprites/light-ball.png",
+    "high_res": "/images/items/high-res/light-ball.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "atk": 100,
+      "spa": 100,
+      "boost": "raw",
+      "affects": "self",
+      "pokemon": [
+        "pikachu"
+      ],
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "25",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 36.59,
+      "pokemon_usage": 0.34
+    }
+  ],
+  "global_usage": 0.00155057766223152
+}

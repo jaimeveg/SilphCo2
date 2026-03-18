@@ -1,0 +1,33 @@
+{
+  "id": "auspicious-armor",
+  "name": "Auspicious Armor",
+  "effect": "A peculiar set of armor that can make a certain species of Pokémon evolve. Auspicious wishes live within it.",
+  "sprites": {
+    "low_res": "/images/items/sprites/auspicious-armor.png",
+    "high_res": "/images/items/high-res/auspicious-armor.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "charcadet"
+      ],
+      "evo_pokemon": [
+        "armarouge"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00005271248876714906
+}

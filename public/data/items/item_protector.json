@@ -1,0 +1,32 @@
+{
+  "id": "protector",
+  "name": "Protector",
+  "effect": "A protective item of some sort. It is extremely stiff and heavy. It's loved by a certain Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/protector.png",
+    "high_res": "/images/items/high-res/protector.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "rhydon"
+      ],
+      "evo_pokemon": [
+        "rhyperior"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

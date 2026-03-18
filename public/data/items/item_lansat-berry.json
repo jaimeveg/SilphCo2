@@ -1,0 +1,35 @@
+{
+  "id": "lansat-berry",
+  "name": "Lansat Berry",
+  "effect": "If a Pokemon holds one of these Berries, its critical-hit ratio will be boosted should it find itself in a pinch.",
+  "sprites": {
+    "low_res": "/images/items/sprites/lansat-berry.png",
+    "high_res": "/images/items/high-res/lansat-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "crit": 2,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 25%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "945",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 92.13,
+      "pokemon_usage": 0.03
+    }
+  ],
+  "global_usage": 0.00043104058977026853
+}

@@ -1,0 +1,67 @@
+{
+  "id": "black-glasses",
+  "name": "Black Glasses",
+  "effect": "An item to be held by a Pokemon. It's a pair of shady- looking glasses that boost the power of the holder's Dark-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/black-glasses.png",
+    "high_res": "/images/items/high-res/black-glasses.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "dark"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "983",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 27.63,
+      "pokemon_usage": 4.66
+    },
+    {
+      "pokemon_id": "430",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.36,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "571",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.37,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "197",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 25.24,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "986",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 17.06,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "10126",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 32,
+      "pokemon_usage": 0.03
+    }
+  ],
+  "global_usage": 0.020546363373387888
+}

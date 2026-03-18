@@ -1,0 +1,101 @@
+{
+  "id": "black-sludge",
+  "name": "Black Sludge",
+  "effect": "An item to be held by a Pokemon. If the holder is a Poison type, this sludge will gradually restore its HP. It damages any other type.",
+  "sprites": {
+    "low_res": "/images/items/sprites/black-sludge.png",
+    "high_res": "/images/items/high-res/black-sludge.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "hp": 6.25,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "poison type (losses hp if not poison)",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "890",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.91,
+      "pokemon_usage": 1.28
+    },
+    {
+      "pokemon_id": "10113",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.26,
+      "pokemon_usage": 0.72
+    },
+    {
+      "pokemon_id": "748",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.8,
+      "pokemon_usage": 0.57
+    },
+    {
+      "pokemon_id": "110",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.78,
+      "pokemon_usage": 0.55
+    },
+    {
+      "pokemon_id": "980",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 23.41,
+      "pokemon_usage": 0.28
+    },
+    {
+      "pokemon_id": "904",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 28.16,
+      "pokemon_usage": 0.26
+    },
+    {
+      "pokemon_id": "10172",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 18.22,
+      "pokemon_usage": 0.23
+    },
+    {
+      "pokemon_id": "1016",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.5,
+      "pokemon_usage": 0.11
+    },
+    {
+      "pokemon_id": "3",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 15.19,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "73",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 28.92,
+      "pokemon_usage": 0.06
+    },
+    {
+      "pokemon_id": "45",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.56,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "89",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 24.15,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.011822072382395502
+}

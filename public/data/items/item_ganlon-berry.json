@@ -1,0 +1,41 @@
+{
+  "id": "ganlon-berry",
+  "name": "Ganlon Berry",
+  "effect": "If a Pokemon holds one of these Berries, its Defense stat will be boosted should it find itself in a pinch.",
+  "sprites": {
+    "low_res": "/images/items/sprites/ganlon-berry.png",
+    "high_res": "/images/items/high-res/ganlon-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "def": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 33%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "820",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 68.35,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "297",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.96,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.00020714258501440454
+}

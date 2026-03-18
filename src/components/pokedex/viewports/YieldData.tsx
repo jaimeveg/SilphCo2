@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Package, TrendingUp, Loader2 } from 'lucide-react';
 import { IPokemon, IEvYield, IPokemonDrop } from '@/types/interfaces';
 import { Lang } from '@/lib/pokedexDictionary';
@@ -160,19 +161,22 @@ export default function YieldData({ pokemon, lang }: Props) {
             </div>
             {drops.length > 0 ? (
               <div className="flex flex-wrap gap-2">
-                {drops.map((drop, idx) => (
-                  <div key={idx} className="flex items-center gap-2 px-2 py-1 bg-slate-950 border border-emerald-900/30 rounded shadow-sm group hover:border-emerald-500/50 transition-colors">
+                {drops.map((drop, idx) => {
+                  const itemKey = normalizeItemName(drop.item);
+                  return (
+                  <Link href={`/${lang}/items/${itemKey}`} key={idx} className="flex items-center gap-2 px-2 py-1 bg-slate-950 border border-emerald-900/30 rounded shadow-sm group hover:border-emerald-500/50 transition-colors">
                     <ItemSprite itemName={drop.item} />
                     <div className="flex flex-col justify-center">
-                      <span className="text-[9px] font-bold text-slate-200 uppercase leading-none mb-0.5">
+                      <span className="text-[9px] font-bold text-slate-200 uppercase leading-none mb-0.5 group-hover:text-cyan-400 transition-colors">
                         {drop.item.replace(/-/g, ' ')}
                       </span>
                       <span className="text-[8px] font-mono text-emerald-400 leading-none">
                         {drop.chance}% Drop
                       </span>
                     </div>
-                  </div>
-                ))}
+                  </Link>
+                  );
+                })}
               </div>
             ) : (
               <span className="text-[10px] text-slate-600 font-mono italic">

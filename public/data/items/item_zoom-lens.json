@@ -1,0 +1,53 @@
+{
+  "id": "zoom-lens",
+  "name": "Zoom Lens",
+  "effect": "An item to be held by a Pokemon. When the holder acts after its target, its move will be more accurate than usual.",
+  "sprites": {
+    "low_res": "/images/items/sprites/zoom-lens.png",
+    "high_res": "/images/items/high-res/zoom-lens.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "objetive already moved",
+      "effect_type": "boost",
+      "move_acc": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "485",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.98,
+      "pokemon_usage": 3.84
+    },
+    {
+      "pokemon_id": "899",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 18.42,
+      "pokemon_usage": 0.09
+    },
+    {
+      "pokemon_id": "10249",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 21.18,
+      "pokemon_usage": 0.01
+    },
+    {
+      "pokemon_id": "45",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 21.84,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.009478691259901004
+}

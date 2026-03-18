@@ -1,0 +1,29 @@
+{
+  "id": "pink-bow",
+  "name": "Pink Bow",
+  "effect": "Powers up normal-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/pink-bow.png",
+    "high_res": null
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "normal"
+      ],
+      "effect_type": "boost",
+      "power": 10,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

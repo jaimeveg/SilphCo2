@@ -1,0 +1,43 @@
+{
+  "id": "king's-rock",
+  "name": "King's Rock",
+  "effect": "An item to be held by a Pokemon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
+  "sprites": {
+    "low_res": "/images/items/sprites/king's-rock.png",
+    "high_res": "/images/items/high-res/king's-rock.png"
+  },
+  "categories": [
+    "evolution",
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "poliwhirl",
+        "slowpoke"
+      ],
+      "evo_pokemon": [
+        "politoed",
+        "slowking"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    },
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "enemy",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

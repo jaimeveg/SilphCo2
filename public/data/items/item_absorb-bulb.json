@@ -1,0 +1,28 @@
+{
+  "id": "absorb-bulb",
+  "name": "Absorb Bulb",
+  "effect": "An item to be held by a Pokemon. This single-use bulb boosts the Sp. Atk stat if the holder is damaged by a Water-type attack.",
+  "sprites": {
+    "low_res": "/images/items/sprites/absorb-bulb.png",
+    "high_res": "/images/items/high-res/absorb-bulb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spa": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "hit by water move",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0008020404085127017
+}

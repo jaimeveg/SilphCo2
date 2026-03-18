@@ -1,0 +1,31 @@
+{
+  "id": "babiri-berry",
+  "name": "Babiri Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a supereffective Steel-type move, the power of that move will be weakened.",
+  "sprites": {
+    "low_res": "/images/items/sprites/babiri-berry.png",
+    "high_res": "/images/items/high-res/babiri-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "enemy",
+      "condition_holder": "hit by supereffective steel move",
+      "type_related": [
+        "steel"
+      ],
+      "effect_type": "reduces",
+      "power": 50,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00041371464663323104
+}

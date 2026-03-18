@@ -1,0 +1,150 @@
+{
+  "id": "eviolite",
+  "name": "Eviolite",
+  "effect": "An item to be held by a Pokemon. This mysterious evolutionary lump boosts the Defense and Sp. Def stats when held by a Pokemon that can still evolve.",
+  "sprites": {
+    "low_res": "/images/items/sprites/eviolite.png",
+    "high_res": "/images/items/high-res/eviolite.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "atk": 50,
+      "spd": 50,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "no full evolved",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "233",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 99.96,
+      "pokemon_usage": 8.5
+    },
+    {
+      "pokemon_id": "112",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 100,
+      "pokemon_usage": 6.66
+    },
+    {
+      "pokemon_id": "35",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 96.32,
+      "pokemon_usage": 5.43
+    },
+    {
+      "pokemon_id": "198",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 68.62,
+      "pokemon_usage": 0.85
+    },
+    {
+      "pokemon_id": "559",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 81.11,
+      "pokemon_usage": 0.53
+    },
+    {
+      "pokemon_id": "125",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 100,
+      "pokemon_usage": 0.45
+    },
+    {
+      "pokemon_id": "356",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 94.26,
+      "pokemon_usage": 0.39
+    },
+    {
+      "pokemon_id": "126",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 99.24,
+      "pokemon_usage": 0.35
+    },
+    {
+      "pokemon_id": "25",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 61.11,
+      "pokemon_usage": 0.34
+    },
+    {
+      "pokemon_id": "447",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 35.49,
+      "pokemon_usage": 0.26
+    },
+    {
+      "pokemon_id": "737",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 98.43,
+      "pokemon_usage": 0.22
+    },
+    {
+      "pokemon_id": "625",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 93.75,
+      "pokemon_usage": 0.21
+    },
+    {
+      "pokemon_id": "123",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 92.07,
+      "pokemon_usage": 0.15
+    },
+    {
+      "pokemon_id": "86",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 100,
+      "pokemon_usage": 0.11
+    },
+    {
+      "pokemon_id": "194",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 92.41,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "48",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 98.33,
+      "pokemon_usage": 0.09
+    },
+    {
+      "pokemon_id": "884",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 81.97,
+      "pokemon_usage": 0.08
+    },
+    {
+      "pokemon_id": "10234",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 99.32,
+      "pokemon_usage": 0.08
+    },
+    {
+      "pokemon_id": "726",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 95.91,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "661",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 70.67,
+      "pokemon_usage": 0.07
+    }
+  ],
+  "global_usage": 0.11838344522337736
+}

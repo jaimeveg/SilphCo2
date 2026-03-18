@@ -1,0 +1,53 @@
+{
+  "id": "custap-berry",
+  "name": "Custap Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to act faster should it find itself in a pinch�but only for the next move it uses.",
+  "sprites": {
+    "low_res": "/images/items/sprites/custap-berry.png",
+    "high_res": "/images/items/high-res/custap-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "priority": 1,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "health below 25%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "143",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 28.39,
+      "pokemon_usage": 0.27
+    },
+    {
+      "pokemon_id": "109",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 99.99,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "76",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 18.05,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "713",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 33.94,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0023729430488111697
+}

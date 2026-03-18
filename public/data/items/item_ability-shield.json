@@ -1,0 +1,51 @@
+{
+  "id": "ability-shield",
+  "name": "Ability Shield",
+  "effect": "An item to be held by a Pokemon. This cute and rather unique-looking shield protects the holder from having its Ability changed by others.",
+  "sprites": {
+    "low_res": "/images/items/sprites/ability-shield.png",
+    "high_res": "/images/items/high-res/ability-shield.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "279",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.51,
+      "pokemon_usage": 2.11
+    },
+    {
+      "pokemon_id": "198",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.6,
+      "pokemon_usage": 0.8
+    },
+    {
+      "pokemon_id": "182",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.24,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "229",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 54.85,
+      "pokemon_usage": 0.05
+    }
+  ],
+  "global_usage": 0.020133549590966582
+}

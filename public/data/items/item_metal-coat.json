@@ -1,0 +1,67 @@
+{
+  "id": "metal-coat",
+  "name": "Metal Coat",
+  "effect": "An item to be held by a Pokemon. It's a special metallic coating that boosts the power of the holder's Steel-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/metal-coat.png",
+    "high_res": "/images/items/high-res/metal-coat.png"
+  },
+  "categories": [
+    "evolution",
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "onix",
+        "scyther"
+      ],
+      "evo_pokemon": [
+        "steelix",
+        "scizor"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    },
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "steel"
+      ],
+      "effect_type": "",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "1000",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 48.46,
+      "pokemon_usage": 19.15
+    },
+    {
+      "pokemon_id": "376",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22,
+      "pokemon_usage": 1.25
+    },
+    {
+      "pokemon_id": "863",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.9,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.09356157037986851
+}

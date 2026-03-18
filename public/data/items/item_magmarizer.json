@@ -1,0 +1,32 @@
+{
+  "id": "magmarizer",
+  "name": "Magmarizer",
+  "effect": "A box packed with a tremendous amount of magma energy. It's loved by a certain Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/magmarizer.png",
+    "high_res": "/images/items/high-res/magmarizer.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "magmar"
+      ],
+      "evo_pokemon": [
+        "magmortar"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

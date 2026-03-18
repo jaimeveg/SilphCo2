@@ -1,0 +1,30 @@
+{
+  "id": "psychic-gem",
+  "name": "Psychic Gem",
+  "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of psychic energy and will boost the power of a Psychic-type move�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/psychic-gem.png",
+    "high_res": "/images/items/high-res/psychic-gem.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses psychic type move",
+      "type_related": [
+        "psychic"
+      ],
+      "effect_type": "boost",
+      "power": 30,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

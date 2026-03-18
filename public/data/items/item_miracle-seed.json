@@ -1,0 +1,55 @@
+{
+  "id": "miracle-seed",
+  "name": "Miracle Seed",
+  "effect": "An item to be held by a Pokemon. It's a seed imbued with life force that boosts the power of the holder's Grass-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/miracle-seed.png",
+    "high_res": "/images/items/high-res/miracle-seed.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "grass"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "1017",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.13,
+      "pokemon_usage": 1.21
+    },
+    {
+      "pokemon_id": "10244",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 63.33,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "470",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 18.13,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "497",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 32.1,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.016944423670215546
+}

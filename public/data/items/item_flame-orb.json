@@ -1,0 +1,88 @@
+{
+  "id": "flame-orb",
+  "name": "Flame Orb",
+  "effect": "An item to be held by a Pokemon. It's a bizarre orb that gives off heat when touched and will afflict the holder with a burn during battle.",
+  "sprites": {
+    "low_res": "/images/items/sprites/flame-orb.png",
+    "high_res": "/images/items/high-res/flame-orb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "status": "burn",
+      "mode": "inflicts"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "901",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 99.95,
+      "pokemon_usage": 17.68
+    },
+    {
+      "pokemon_id": "350",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.55,
+      "pokemon_usage": 0.37
+    },
+    {
+      "pokemon_id": "534",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 65.99,
+      "pokemon_usage": 0.24
+    },
+    {
+      "pokemon_id": "297",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 63.35,
+      "pokemon_usage": 0.14
+    },
+    {
+      "pokemon_id": "214",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 59.52,
+      "pokemon_usage": 0.13
+    },
+    {
+      "pokemon_id": "135",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 38.11,
+      "pokemon_usage": 0.08
+    },
+    {
+      "pokemon_id": "405",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 23.42,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "136",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "217",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 22.39,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "200",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 33.33,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.17669722729645543
+}

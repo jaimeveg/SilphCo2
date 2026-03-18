@@ -60,11 +60,14 @@ const MoveBadge = ({ moveName }: { moveName: string }) => {
 };
 
 const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: boolean, isTarget: boolean }) => {
+    const params = useParams();
+    const lang = params?.lang || 'en';
+    
     // @ts-ignore
     const pokeId = staticPokedexIds[poke.pokemon_id] || 0;
     
     // @ts-ignore - Extraemos la info del objeto si lo tiene equipado
-    const itemData = poke.item ? staticItemDex[poke.item.toLowerCase()] : null;
+    const itemData = poke.item ? staticItemDex[poke.item.toLowerCase().replace(/[\s\.]/g, '-')] : null;
     
     return (
         <div className={cn(
@@ -95,7 +98,7 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
                         
                         {/* NUEVA RENDERIZACIÓN DEL OBJETO EQUIPADO */}
                         {poke.item && (
-                            <div className="flex items-center gap-1 bg-slate-900/50 px-1.5 py-0.5 rounded border border-slate-800/50 max-w-[85px]" title={poke.item.replace(/-/g, ' ')}>
+                            <Link href={`/${lang}/items/${poke.item.toLowerCase().replace(/[\s\.]/g, '-')}`} className="flex items-center gap-1 bg-slate-900/50 px-1.5 py-0.5 rounded border border-slate-800/50 max-w-[85px] hover:bg-slate-800 hover:border-cyan-500/50 transition-colors group/item" title={poke.item.replace(/-/g, ' ')}>
                                 {itemData?.sprites?.low_res ? (
                                     <img 
                                         src={itemData.sprites.low_res} 
@@ -106,10 +109,10 @@ const BossPokemonCard = ({ poke, isAce, isTarget }: { poke: BossPokemon, isAce: 
                                 ) : (
                                     <span className="text-[8px] text-amber-500/70">@</span>
                                 )}
-                                <span className="truncate capitalize text-slate-400 text-[8px] font-sans tracking-wide">
+                                <span className="truncate capitalize text-slate-400 text-[8px] font-sans tracking-wide group-hover/item:text-cyan-400 transition-colors">
                                     {poke.item.replace(/-/g, ' ')}
                                 </span>
-                            </div>
+                            </Link>
                         )}
                     </div>
                 </div>
@@ -229,9 +232,9 @@ const BossGroupItem = ({ group, pokemonSlug }: { group: GroupedBoss, pokemonSlug
 };
 
 export default function BossThreats({ pokemonSlug, bosses, t }: Props) {
-    if (!bosses || bosses.length === 0) return null;
-
     const groupedBosses = useMemo(() => {
+        if (!bosses || bosses.length === 0) return [];
+
         const map = new Map<string, GroupedBoss>();
         const groupsOrder: string[] = [];
 
@@ -256,6 +259,8 @@ export default function BossThreats({ pokemonSlug, bosses, t }: Props) {
 
         return groupsOrder.map(key => map.get(key)!);
     }, [bosses]);
+
+    if (!bosses || bosses.length === 0) return null;
 
     return (
         <div className="bg-[#0B101B] border border-slate-800 rounded-xl overflow-hidden shadow-lg w-full">

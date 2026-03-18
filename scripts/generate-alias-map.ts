@@ -137,86 +137,87 @@ const MANUAL_OVERRIDES: Record<string, number> = {
     'terapagos-normal': 1024,
     'terapagos-terastal': 10276,
     'terapagos-stellar': 10277,
-    
+
     "arceus-bug": 493,
-  "arceus-dark": 493,
-  "arceus-dragon": 493,
-  "arceus-electric": 493,
-  "arceus-fairy": 493,
-  "arceus-fighting": 493,
-  "arceus-fire": 493,
-  "arceus-flying": 493,
-  "arceus-ghost": 493,
-  "arceus-grass": 493,
-  "arceus-ground": 493,
-  "arceus-ice": 493,
-  "arceus-poison": 493,
-  "arceus-psychic": 493,
-  "arceus-rock": 493,
-  "arceus-steel": 493,
-  "arceus-water": 493,
-  "deoxys": 386,
-  "dudunsparce": 982,
-  "eiscue": 875,
-  "empty": 132,
-  "maushold": 925,
-  "mimikyu": 778,
-  "morpeko": 877,
-  "necrozma-dawn-wings": 10156,
-  "necrozma-dusk-mane": 10155,
-  "rockruff-dusk": 744,
-  "shaymin": 492,
-  "silvally-bug": 773,
-  "silvally-dark": 773,
-  "silvally-dragon": 773,
-  "silvally-electric": 773,
-  "silvally-fairy": 773,
-  "silvally-fighting": 773,
-  "silvally-fire": 773,
-  "silvally-flying": 773,
-  "silvally-ghost": 773,
-  "silvally-grass": 773,
-  "silvally-ground": 773,
-  "silvally-ice": 773,
-  "silvally-poison": 773,
-  "silvally-psychic": 773,
-  "silvally-rock": 773,
-  "silvally-steel": 773,
-  "silvally-water": 773,
-  "squawkabilly": 931,
-  "tatsugiri": 978,
-  "toxtricity": 849,
-  "wormadam": 413,
-  "zygarde": 718,
+    "arceus-dark": 493,
+    "arceus-dragon": 493,
+    "arceus-electric": 493,
+    "arceus-fairy": 493,
+    "arceus-fighting": 493,
+    "arceus-fire": 493,
+    "arceus-flying": 493,
+    "arceus-ghost": 493,
+    "arceus-grass": 493,
+    "arceus-ground": 493,
+    "arceus-ice": 493,
+    "arceus-poison": 493,
+    "arceus-psychic": 493,
+    "arceus-rock": 493,
+    "arceus-steel": 493,
+    "arceus-water": 493,
+    "deoxys": 386,
+    "dudunsparce": 982,
+    "eiscue": 875,
+    "empty": 132,
+    "maushold": 925,
+    "mimikyu": 778,
+    "morpeko": 877,
+    "necrozma-dawn-wings": 10156,
+    "necrozma-dusk-mane": 10155,
+    "rockruff-dusk": 744,
+    "shaymin": 492,
+    "silvally-bug": 773,
+    "silvally-dark": 773,
+    "silvally-dragon": 773,
+    "silvally-electric": 773,
+    "silvally-fairy": 773,
+    "silvally-fighting": 773,
+    "silvally-fire": 773,
+    "silvally-flying": 773,
+    "silvally-ghost": 773,
+    "silvally-grass": 773,
+    "silvally-ground": 773,
+    "silvally-ice": 773,
+    "silvally-poison": 773,
+    "silvally-psychic": 773,
+    "silvally-rock": 773,
+    "silvally-steel": 773,
+    "silvally-water": 773,
+    "squawkabilly": 931,
+    "tatsugiri": 978,
+    "toxtricity": 849,
+    "wormadam": 413,
+    "zygarde": 718,
 
-  //REVISAR FORMA TOTEM
-  "marowak-alola-totem": 10149,
-  "mimikyu-totem": 10144,
+    //REVISAR FORMA TOTEM
+    "marowak-alola-totem": 10149,
+    "mimikyu-totem": 10144,
 
-  "arcanine-hisuian": 10230,
-  "articuno-galarian": 10169,
-  "goodra-hisuian": 10242,
-  "lilligant-hisuian": 10237,
-  "moltres-galarian": 10171,
-  "muk-alolan": 10113,
-  "ninetales-alolan": 10104,
-  "sinistcha-masterpiece": 1013,
-  "sinistcha-unremarkable": 1013,
-  "slowking-galarian": 10172,
-  "weezing-galarian": 10167,
-  "zapdos-galarian": 10170,
-  "zoroark-hisuian": 10239,
+    "arcanine-hisuian": 10230,
+    "articuno-galarian": 10169,
+    "goodra-hisuian": 10242,
+    "lilligant-hisuian": 10237,
+    "moltres-galarian": 10171,
+    "muk-alolan": 10113,
+    "ninetales-alolan": 10104,
+    "sinistcha-masterpiece": 1013,
+    "sinistcha-unremarkable": 1013,
+    "slowking-galarian": 10172,
+    "weezing-galarian": 10167,
+    "zapdos-galarian": 10170,
+    "zoroark-hisuian": 10239,
 
-  "dugtrio-alolan": 10106,
-  "rotom-heat-rotom": 10008,
-  "rotom-wash-rotom": 10009,
-  "rotom-frost-rotom": 10010,
-  "rotom-fan-rotom": 10011,
-  "rotom-mow-rotom": 10012,
-  "typhlosion-hisuian": 10233,
+    "dugtrio-alolan": 10106,
+    "rotom-heat-rotom": 10008,
+    "rotom-wash-rotom": 10009,
+    "rotom-frost-rotom": 10010,
+    "rotom-fan-rotom": 10011,
+    "rotom-mow-rotom": 10012,
+    "typhlosion-hisuian": 10233,
 
-"exeggutor-alolan": 10114,
-  "samurott-hisuian":10236
+    "exeggutor-alolan": 10114,
+    "samurott-hisuian": 10236,
+    "golem-alolan": 10111
 };
 
 const generateAliasMap = () => {
@@ -225,13 +226,13 @@ const generateAliasMap = () => {
     try {
         const idsRaw = fs.readFileSync(IDS_PATH, 'utf8');
         const idsMap: Record<string, number> = JSON.parse(idsRaw);
-        
+
         const aliasMap: Record<string, number> = {};
 
         // 1. Ingestar la base de datos oficial (pokedex_ids.json)
         for (const [slug, id] of Object.entries(idsMap)) {
             aliasMap[slug] = id;
-            
+
             // Variaciones automáticas para atrapar problemas comunes de strings
             aliasMap[slug.replace(/-/g, '')] = id; // ej. fluttermane
             aliasMap[slug.replace(/-/g, ' ')] = id; // ej. flutter mane
@@ -245,10 +246,10 @@ const generateAliasMap = () => {
         }
 
         fs.writeFileSync(OUTPUT_PATH, JSON.stringify(aliasMap, null, 2), 'utf8');
-        
+
         console.log(`[ÉXITO] Generados ${Object.keys(aliasMap).length} alias únicos.`);
         console.log(`Guardado en: ${OUTPUT_PATH}`);
-        
+
     } catch (error) {
         console.error('[ERROR] No se pudo generar el diccionario de alias:', error);
     }

@@ -1,0 +1,28 @@
+{
+  "id": "cell-battery",
+  "name": "Cell Battery",
+  "effect": "An item to be held by a Pokemon. This single-use battery boosts the Attack stat if the holder is damaged by an Electric-type attack.",
+  "sprites": {
+    "low_res": "/images/items/sprites/cell-battery.png",
+    "high_res": "/images/items/high-res/cell-battery.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "atk": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "hit by electric move",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00038512713025919674
+}

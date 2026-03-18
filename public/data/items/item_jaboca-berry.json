@@ -1,0 +1,28 @@
+{
+  "id": "jaboca-berry",
+  "name": "Jaboca Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a physical move, the attacker will also take damage.",
+  "sprites": {
+    "low_res": "/images/items/sprites/jaboca-berry.png",
+    "high_res": "/images/items/high-res/jaboca-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "hp": 12.5,
+      "boost": "stage",
+      "affects": "enemy",
+      "condition_holder": "hit by physical move",
+      "effect_type": "reduces",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0006895961245215856
+}

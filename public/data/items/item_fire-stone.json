@@ -1,0 +1,43 @@
+{
+  "id": "fire-stone",
+  "name": "Fire Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has a fiery orange heart.",
+  "sprites": {
+    "low_res": "/images/items/sprites/fire-stone.png",
+    "high_res": "/images/items/high-res/fire-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "vulpix",
+        "growlithe",
+        "10229",
+        "eevee",
+        "pansear",
+        "capsakid"
+      ],
+      "evo_pokemon": [
+        "ninetales",
+        "arcanine",
+        "10230",
+        "flareon",
+        "simisear",
+        "scovillain"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000019428697106000066
+}

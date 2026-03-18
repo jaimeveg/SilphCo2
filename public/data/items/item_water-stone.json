@@ -1,0 +1,43 @@
+{
+  "id": "water-stone",
+  "name": "Water Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It is the clear blue of a deep pool.",
+  "sprites": {
+    "low_res": "/images/items/sprites/water-stone.png",
+    "high_res": "/images/items/high-res/water-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "poliwhirl",
+        "shellder",
+        "staryu",
+        "eevee",
+        "lombre",
+        "panpour"
+      ],
+      "evo_pokemon": [
+        "poliwrath",
+        "cloyster",
+        "starmie",
+        "vaporeon",
+        "ludicolo",
+        "simipour"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000016227603417153496
+}

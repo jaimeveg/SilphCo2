@@ -1,0 +1,49 @@
+{
+  "id": "fairy-feather",
+  "name": "Fairy Feather",
+  "effect": "An item to be held by a Pokemon. This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/fairy-feather.png",
+    "high_res": "/images/items/high-res/fairy-feather.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "fairy"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "905",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 40.07,
+      "pokemon_usage": 0.35
+    },
+    {
+      "pokemon_id": "700",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 25.14,
+      "pokemon_usage": 0.28
+    },
+    {
+      "pokemon_id": "354",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.35,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.006564857226216645
+}

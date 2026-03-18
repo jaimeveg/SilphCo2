@@ -1,0 +1,43 @@
+{
+  "id": "twisted-spoon",
+  "name": "Twisted Spoon",
+  "effect": "An item to be held by a Pokemon. This spoon is imbued with telekinetic energy and boosts the power of the holder's Psychic-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/twisted-spoon.png",
+    "high_res": "/images/items/high-res/twisted-spoon.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "psychic"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "282",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 75.69,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "579",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 30.39,
+      "pokemon_usage": 0.09
+    }
+  ],
+  "global_usage": 0.001728793152137472
+}

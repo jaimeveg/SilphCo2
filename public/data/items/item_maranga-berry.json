@@ -1,0 +1,53 @@
+{
+  "id": "maranga-berry",
+  "name": "Maranga Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a special move, the holder's Sp. Def stat will be boosted.",
+  "sprites": {
+    "low_res": "/images/items/sprites/maranga-berry.png",
+    "high_res": "/images/items/high-res/maranga-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "spd": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "hit by physical move",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10242",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 26.64,
+      "pokemon_usage": 0.29
+    },
+    {
+      "pokemon_id": "934",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 15.01,
+      "pokemon_usage": 0.18
+    },
+    {
+      "pokemon_id": "377",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.9,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "457",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 16.18,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0017980263681328075
+}

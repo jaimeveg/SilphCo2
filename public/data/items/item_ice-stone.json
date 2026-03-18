@@ -1,0 +1,43 @@
+{
+  "id": "ice-stone",
+  "name": "Ice Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has a snowflake pattern in it.",
+  "sprites": {
+    "low_res": "/images/items/sprites/ice-stone.png",
+    "high_res": "/images/items/high-res/ice-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "10101",
+        "10103",
+        "eevee",
+        "10176",
+        "crabrawler",
+        "cetoddle"
+      ],
+      "evo_pokemon": [
+        "10102",
+        "10104",
+        "glaceon",
+        "10177",
+        "crabominable",
+        "cetitan"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0000011644992236024842
+}

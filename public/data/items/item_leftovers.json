@@ -1,0 +1,148 @@
+{
+  "id": "leftovers",
+  "name": "Leftovers",
+  "effect": "An item to be held by a Pokemon. It slowly but steadily restores the holder's HP.",
+  "sprites": {
+    "low_res": "/images/items/sprites/leftovers.png",
+    "high_res": "/images/items/high-res/leftovers.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "hp": 6.25,
+      "boost": "stage",
+      "affects": "self",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10193",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 27.59,
+      "pokemon_usage": 35.75
+    },
+    {
+      "pokemon_id": "1021",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 19.32,
+      "pokemon_usage": 34.7
+    },
+    {
+      "pokemon_id": "977",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 46.26,
+      "pokemon_usage": 12.91
+    },
+    {
+      "pokemon_id": "1024",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 46.34,
+      "pokemon_usage": 8.37
+    },
+    {
+      "pokemon_id": "637",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.15,
+      "pokemon_usage": 4.36
+    },
+    {
+      "pokemon_id": "485",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 36.52,
+      "pokemon_usage": 3.84
+    },
+    {
+      "pokemon_id": "979",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 25.26,
+      "pokemon_usage": 3.55
+    },
+    {
+      "pokemon_id": "250",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.45,
+      "pokemon_usage": 3.41
+    },
+    {
+      "pokemon_id": "1003",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.18,
+      "pokemon_usage": 2.46
+    },
+    {
+      "pokemon_id": "423",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 39.8,
+      "pokemon_usage": 1.98
+    },
+    {
+      "pokemon_id": "730",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.08,
+      "pokemon_usage": 1.82
+    },
+    {
+      "pokemon_id": "10113",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 91.76,
+      "pokemon_usage": 1.65
+    },
+    {
+      "pokemon_id": "10167",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.83,
+      "pokemon_usage": 1.63
+    },
+    {
+      "pokemon_id": "823",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 24.23,
+      "pokemon_usage": 1.53
+    },
+    {
+      "pokemon_id": "488",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.93,
+      "pokemon_usage": 1.5
+    },
+    {
+      "pokemon_id": "186",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 24.59,
+      "pokemon_usage": 1.44
+    },
+    {
+      "pokemon_id": "302",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.28,
+      "pokemon_usage": 1.4
+    },
+    {
+      "pokemon_id": "1001",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 62.21,
+      "pokemon_usage": 1.34
+    },
+    {
+      "pokemon_id": "890",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 23.34,
+      "pokemon_usage": 1.28
+    },
+    {
+      "pokemon_id": "576",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 40.54,
+      "pokemon_usage": 1.24
+    }
+  ],
+  "global_usage": 0.29108898526899785
+}

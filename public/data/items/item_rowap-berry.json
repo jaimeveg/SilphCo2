@@ -1,0 +1,41 @@
+{
+  "id": "rowap-berry",
+  "name": "Rowap Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a special move, the attacker will also take damage.",
+  "sprites": {
+    "low_res": "/images/items/sprites/rowap-berry.png",
+    "high_res": "/images/items/high-res/rowap-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "hp": 12.5,
+      "boost": "stage",
+      "affects": "enemy",
+      "condition_holder": "hit by special move",
+      "effect_type": "reduces",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "973",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.49,
+      "pokemon_usage": 0.76
+    },
+    {
+      "pokemon_id": "136",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.27,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0012533541840751854
+}

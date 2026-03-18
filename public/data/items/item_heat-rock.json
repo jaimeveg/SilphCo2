@@ -1,0 +1,34 @@
+{
+  "id": "heat-rock",
+  "name": "Heat Rock",
+  "effect": "An item to be held by a Pokemon. When the holder changes the weather to harsh sunlight, the sunlight will persist for longer than usual.",
+  "sprites": {
+    "low_res": "/images/items/sprites/heat-rock.png",
+    "high_res": "/images/items/high-res/heat-rock.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "drought",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "38",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.07,
+      "pokemon_usage": 0.89
+    }
+  ],
+  "global_usage": 0.0149625539782966
+}

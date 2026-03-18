@@ -1,0 +1,39 @@
+{
+  "id": "metronome",
+  "name": "Metronome",
+  "effect": "An item to be held by a Pokemon. It boosts the power of a move that's used repeatedly. Once the chain is broken, the move's power returns to normal.",
+  "sprites": {
+    "low_res": "/images/items/sprites/metronome.png",
+    "high_res": "/images/items/high-res/metronome.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "76",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.68,
+      "pokemon_usage": 0.06
+    },
+    {
+      "pokemon_id": "191",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 37.36,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0013327355307550205
+}

@@ -1,0 +1,27 @@
+{
+  "id": "psychic-tera-shard",
+  "name": "Psychic Tera Shard",
+  "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+  "sprites": {
+    "low_res": "/images/items/sprites/psychic-tera-shard.png",
+    "high_res": "/images/items/high-res/psychic-tera-shard.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "set tera type to psychic"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

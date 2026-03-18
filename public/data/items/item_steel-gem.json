@@ -1,0 +1,30 @@
+{
+  "id": "steel-gem",
+  "name": "Steel Gem",
+  "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of steel and will boost the power of a Steel-type move�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/steel-gem.png",
+    "high_res": "/images/items/high-res/steel-gem.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses steel type move",
+      "type_related": [
+        "steel"
+      ],
+      "effect_type": "boost",
+      "power": 30,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

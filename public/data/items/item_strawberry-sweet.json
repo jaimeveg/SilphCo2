@@ -1,0 +1,32 @@
+{
+  "id": "strawberry-sweet",
+  "name": "Strawberry Sweet",
+  "effect": "A strawberry-shaped sweet. When a Milcery holds this, it spins around happily.",
+  "sprites": {
+    "low_res": "/images/items/sprites/strawberry-sweet.png",
+    "high_res": "/images/items/high-res/strawberry-sweet.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+spin",
+      "pokemon": [
+        "milcery"
+      ],
+      "evo_pokemon": [
+        "alcremie"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

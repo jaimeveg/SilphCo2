@@ -1,0 +1,149 @@
+{
+  "id": "rocky-helmet",
+  "name": "Rocky Helmet",
+  "effect": "An item to be held by a Pokemon. This helmet damages any attacker that makes direct contact with the holder.",
+  "sprites": {
+    "low_res": "/images/items/sprites/rocky-helmet.png",
+    "high_res": "/images/items/high-res/rocky-helmet.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "hp": 16.66,
+      "boost": "stage",
+      "affects": "enemy",
+      "condition_holder": "physical contact attack",
+      "effect_type": "reduces",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "727",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 21.94,
+      "pokemon_usage": 50.78
+    },
+    {
+      "pokemon_id": "641",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.56,
+      "pokemon_usage": 32.21
+    },
+    {
+      "pokemon_id": "591",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 45.79,
+      "pokemon_usage": 24.71
+    },
+    {
+      "pokemon_id": "10186",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 72.87,
+      "pokemon_usage": 15.39
+    },
+    {
+      "pokemon_id": "977",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 30.12,
+      "pokemon_usage": 12.91
+    },
+    {
+      "pokemon_id": "637",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 32.57,
+      "pokemon_usage": 6.6
+    },
+    {
+      "pokemon_id": "986",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.83,
+      "pokemon_usage": 5.97
+    },
+    {
+      "pokemon_id": "1003",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 36.69,
+      "pokemon_usage": 5.27
+    },
+    {
+      "pokemon_id": "279",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 16.5,
+      "pokemon_usage": 4.44
+    },
+    {
+      "pokemon_id": "1013",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 49.45,
+      "pokemon_usage": 4.28
+    },
+    {
+      "pokemon_id": "488",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 20.13,
+      "pokemon_usage": 4.01
+    },
+    {
+      "pokemon_id": "642",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.95,
+      "pokemon_usage": 2.82
+    },
+    {
+      "pokemon_id": "823",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 28.25,
+      "pokemon_usage": 1.53
+    },
+    {
+      "pokemon_id": "748",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.67,
+      "pokemon_usage": 0.82
+    },
+    {
+      "pokemon_id": "445",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.76,
+      "pokemon_usage": 0.78
+    },
+    {
+      "pokemon_id": "925",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 21,
+      "pokemon_usage": 0.75
+    },
+    {
+      "pokemon_id": "373",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20.56,
+      "pokemon_usage": 0.7
+    },
+    {
+      "pokemon_id": "10104",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 24.9,
+      "pokemon_usage": 0.62
+    },
+    {
+      "pokemon_id": "380",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 33.44,
+      "pokemon_usage": 0.56
+    },
+    {
+      "pokemon_id": "302",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.71,
+      "pokemon_usage": 0.53
+    }
+  ],
+  "global_usage": 0.3955416401308396
+}

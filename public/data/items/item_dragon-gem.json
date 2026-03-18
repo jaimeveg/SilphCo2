@@ -1,0 +1,30 @@
+{
+  "id": "dragon-gem",
+  "name": "Dragon Gem",
+  "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of dragons and will boost the power of a Dragon-type move�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/dragon-gem.png",
+    "high_res": "/images/items/high-res/dragon-gem.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses dragon type move",
+      "type_related": [
+        "dragon"
+      ],
+      "effect_type": "boost",
+      "power": 30,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

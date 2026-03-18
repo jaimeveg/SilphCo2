@@ -1,0 +1,65 @@
+{
+  "id": "lum-berry",
+  "name": "Lum Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to cure itself of any status condition it may have.",
+  "sprites": {
+    "low_res": "/images/items/sprites/lum-berry.png",
+    "high_res": "/images/items/high-res/lum-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "gets any status",
+      "effect_type": "",
+      "use": "single",
+      "status": "any",
+      "mode": "cure"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "903",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 39.54,
+      "pokemon_usage": 0.93
+    },
+    {
+      "pokemon_id": "484",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.72,
+      "pokemon_usage": 0.4
+    },
+    {
+      "pokemon_id": "146",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 35.78,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "10244",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.18,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "419",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.92,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "182",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.17,
+      "pokemon_usage": 0.04
+    }
+  ],
+  "global_usage": 0.006008457397755105
+}

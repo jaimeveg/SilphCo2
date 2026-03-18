@@ -1,0 +1,32 @@
+{
+  "id": "malicious-armor",
+  "name": "Malicious Armor",
+  "effect": "A peculiar set of armor that can make a certain species of Pokemon evolve. Malicious will lurks within it.",
+  "sprites": {
+    "low_res": "/images/items/sprites/malicious-armor.png",
+    "high_res": "/images/items/high-res/malicious-armor.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "charcadet"
+      ],
+      "evo_pokemon": [
+        "ceruledge"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

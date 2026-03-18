@@ -22,19 +22,15 @@ export default async function NuzlockePage({ params }: NuzlockePageProps) {
     <div className="min-h-screen bg-[#050000] text-slate-200 overflow-hidden relative">
       
       {/* 1. BACKGROUND ASSET: GARCHOMP (AJUSTADO) */}
-      {/* Posición: Anclado abajo y a la derecha con offsets negativos en % del viewport para empujarlo hacia fuera.
-          Tamaño: Reducido en desktop para que no domine la pantalla.
-          Rotación: Ligera inclinación para dinamismo.
-      */}
+      {/* Posición: Anclado abajo y a la derecha con offsets negativos en % del viewport para empujarlo hacia fuera. */}
+      {/* Tamaño: Reducido en desktop para que no domine la pantalla. */}
+      {/* Rotación: Ligera inclinación para dinamismo.  */}
       <div className="fixed -bottom-[20vh] -right-[10vw] w-[500px] h-[500px] md:w-[800px] md:h-[800px] z-0 pointer-events-none select-none transform rotate-[10deg]">
          <Image
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png"
             alt="Garchomp Asset"
             fill
-            // Estilo:
-            // - opacity-[0.07]: Muy sutil.
-            // - grayscale/saturate: Apaga los colores vibrantes.
-            // - mix-blend-screen: Funde las luces sobre el fondo negro, haciendo transparente lo oscuro.
+            /* Estilo: opacity-[0.07]: Muy sutil. grayscale/saturate: Apaga los colores vibrantes. mix-blend-screen: Funde las luces sobre el fondo negro, haciendo transparente lo oscuro. */
             className="object-contain opacity-[0.10] grayscale-[0.5] saturate-[0.3] mix-blend-screen"
             unoptimized={true}
             priority
@@ -60,7 +56,8 @@ export default async function NuzlockePage({ params }: NuzlockePageProps) {
            <div>
              <h1 className="text-4xl md:text-6xl font-display font-black text-white tracking-tighter uppercase leading-none">
                {titleBrand} 
-               <span className="text-red-900/30 mx-2">//</span>
+               {/* // */}
+               <span className="text-red-900/30 mx-2">{`//`}</span>
                <span className="text-transparent bg-clip-text bg-gradient-to-b from-red-800 to-red-950 drop-shadow-[0_0_20px_rgba(100,0,0,0.5)]">
                  {titleSection}
                </span>

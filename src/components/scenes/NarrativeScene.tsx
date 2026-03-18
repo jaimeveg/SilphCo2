@@ -284,7 +284,7 @@ export default function NarrativeScene({
           <div id={cleanId} className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/5 border border-cyan-500/20">
               <span className="text-cyan-500 text-xs font-mono tracking-widest">
-                SEQ_{String(index + 1).padStart(2, '0')} //{' '}
+                SEQ_{String(index + 1).padStart(2, '0')} {"// "}
                 {data.id.split('_').slice(1).join('_').toUpperCase()}
               </span>
             </div>

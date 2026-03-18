@@ -1,0 +1,28 @@
+{
+  "id": "persim-berry",
+  "name": "Persim Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to cure itself of confusion.",
+  "sprites": {
+    "low_res": "/images/items/sprites/persim-berry.png",
+    "high_res": "/images/items/high-res/persim-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "gets confused",
+      "effect_type": "",
+      "use": "single",
+      "status": "conf",
+      "mode": "cure"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.00031180282768722927
+}

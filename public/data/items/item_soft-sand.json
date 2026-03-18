@@ -1,0 +1,43 @@
+{
+  "id": "soft-sand",
+  "name": "Soft Sand",
+  "effect": "An item to be held by a Pokemon. This loose, silky sand boosts the power of the holder's Ground-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/soft-sand.png",
+    "high_res": "/images/items/high-res/soft-sand.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "ground"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "76",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 40.6,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "750",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 39.29,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.0011302625200277268
+}

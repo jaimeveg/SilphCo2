@@ -1,0 +1,30 @@
+{
+  "id": "fire-gem",
+  "name": "Fire Gem",
+  "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of fire and will boost the power of a Fire-type move�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/fire-gem.png",
+    "high_res": "/images/items/high-res/fire-gem.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses fire type move",
+      "type_related": [
+        "fire"
+      ],
+      "effect_type": "boost",
+      "power": 30,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

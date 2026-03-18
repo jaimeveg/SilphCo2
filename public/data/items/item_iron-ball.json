@@ -1,0 +1,88 @@
+{
+  "id": "iron-ball",
+  "name": "Iron Ball",
+  "effect": "An item to be held by a Pokemon. It lowers the holder's Speed stat and makes the holder vulnerable to Ground- type moves even if it is a Flying type or is levitating.",
+  "sprites": {
+    "low_res": "/images/items/sprites/iron-ball.png",
+    "high_res": "/images/items/high-res/iron-ball.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spe": 50,
+      "boost": "raw",
+      "affects": "self",
+      "effect_type": "reduces",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "869",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 53.09,
+      "pokemon_usage": 0.54
+    },
+    {
+      "pokemon_id": "765",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.64,
+      "pokemon_usage": 0.46
+    },
+    {
+      "pokemon_id": "10169",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.16,
+      "pokemon_usage": 0.42
+    },
+    {
+      "pokemon_id": "423",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20.48,
+      "pokemon_usage": 0.4
+    },
+    {
+      "pokemon_id": "779",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 32.28,
+      "pokemon_usage": 0.25
+    },
+    {
+      "pokemon_id": "954",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 36.9,
+      "pokemon_usage": 0.09
+    },
+    {
+      "pokemon_id": "687",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 58.92,
+      "pokemon_usage": 0.08
+    },
+    {
+      "pokemon_id": "181",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 24.6,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "97",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 34.52,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "10240",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 21.06,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.021414821037943278
+}

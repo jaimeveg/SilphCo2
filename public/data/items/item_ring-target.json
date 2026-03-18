@@ -1,0 +1,26 @@
+{
+  "id": "ring-target",
+  "name": "Ring Target",
+  "effect": "An item to be held by a Pokemon. Moves that would normally have no effect due to type matchups will still hit the holder.",
+  "sprites": {
+    "low_res": "/images/items/sprites/ring-target.png",
+    "high_res": "/images/items/high-res/ring-target.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0009603981549025743
+}

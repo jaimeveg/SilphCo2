@@ -1,0 +1,42 @@
+{
+  "id": "moon-stone",
+  "name": "Moon Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It is dark like the night sky.",
+  "sprites": {
+    "low_res": "/images/items/sprites/moon-stone.png",
+    "high_res": "/images/items/high-res/moon-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "nidorina",
+        "nidorino",
+        "clefairy",
+        "jigglypuff",
+        "skitty",
+        "munna"
+      ],
+      "evo_pokemon": [
+        "nidoqueen",
+        "nidoking",
+        "clefable",
+        "wigglytuff",
+        "delcatty",
+        "musharna"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "snowball",
+  "name": "Snowball",
+  "effect": "An item to be held by a Pokemon. This single-use ball of snow boosts the Attack stat if the holder is damaged by an Ice-type move.",
+  "sprites": {
+    "low_res": "/images/items/sprites/snowball.png",
+    "high_res": "/images/items/high-res/snowball.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "atk": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "hit by ice move",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0003249024517139373
+}

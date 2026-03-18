@@ -1,0 +1,41 @@
+{
+  "id": "lustrous-orb",
+  "name": "Lustrous Orb",
+  "effect": "A beautifully shining gem to be held by Palkia. It boosts the power of Palkia's Dragon- and Water-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/lustrous-orb.png",
+    "high_res": "/images/items/high-res/lustrous-orb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "palkia"
+      ],
+      "type_related": [
+        "water",
+        "dragon"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "484",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 36.78,
+      "pokemon_usage": 0.48
+    }
+  ],
+  "global_usage": 0.0017524724807953002
+}

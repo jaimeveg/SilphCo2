@@ -1,0 +1,51 @@
+{
+  "id": "red-card",
+  "name": "Red Card",
+  "effect": "An item to be held by a Pokemon. If the holder is damaged by an attack, the mysterious power of this card can remove the attacker from the battle.",
+  "sprites": {
+    "low_res": "/images/items/sprites/red-card.png",
+    "high_res": "/images/items/high-res/red-card.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "enemy",
+      "effect_type": "",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "655",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 30.41,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "778",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.65,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "980",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.18,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "702",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.24,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.005463170929766872
+}

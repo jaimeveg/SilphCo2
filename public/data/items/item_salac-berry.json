@@ -1,0 +1,47 @@
+{
+  "id": "salac-berry",
+  "name": "Salac Berry",
+  "effect": "If a Pokemon holds one of these Berries, its Speed stat will be boosted should it find itself in a pinch.",
+  "sprites": {
+    "low_res": "/images/items/sprites/salac-berry.png",
+    "high_res": "/images/items/high-res/salac-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "spe": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 25%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "232",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 67.89,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "916",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.72,
+      "pokemon_usage": 0.01
+    },
+    {
+      "pokemon_id": "214",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 43.94,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.0009244622870639371
+}

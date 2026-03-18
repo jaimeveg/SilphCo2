@@ -1,0 +1,34 @@
+{
+  "id": "dawn-stone",
+  "name": "Dawn Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It sparkles like a glittering eye.",
+  "sprites": {
+    "low_res": "/images/items/sprites/dawn-stone.png",
+    "high_res": "/images/items/high-res/dawn-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "[use+male;use+female]",
+      "pokemon": [
+        "kirlia",
+        "snorunt"
+      ],
+      "evo_pokemon": [
+        "gallade",
+        "froslass"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

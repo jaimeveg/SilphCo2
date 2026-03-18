@@ -1,0 +1,119 @@
+{
+  "id": "psychic-seed",
+  "name": "Psychic Seed",
+  "effect": "An item to be held by a Pokemon. If the terrain becomes Psychic Terrain, the holder will use this seed to boost its own Sp. Def stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/psychic-seed.png",
+    "high_res": "/images/items/high-res/psychic-seed.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spd": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "psychic terrain",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10186",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 17.21,
+      "pokemon_usage": 14.92
+    },
+    {
+      "pokemon_id": "981",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 16.93,
+      "pokemon_usage": 11.12
+    },
+    {
+      "pokemon_id": "903",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.35,
+      "pokemon_usage": 2.44
+    },
+    {
+      "pokemon_id": "876",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.18,
+      "pokemon_usage": 0.78
+    },
+    {
+      "pokemon_id": "426",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 83.44,
+      "pokemon_usage": 0.64
+    },
+    {
+      "pokemon_id": "475",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 27.74,
+      "pokemon_usage": 0.63
+    },
+    {
+      "pokemon_id": "10169",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 34.59,
+      "pokemon_usage": 0.41
+    },
+    {
+      "pokemon_id": "791",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.85,
+      "pokemon_usage": 0.25
+    },
+    {
+      "pokemon_id": "1019",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 32.13,
+      "pokemon_usage": 0.11
+    },
+    {
+      "pokemon_id": "701",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.16,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "586",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.22,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "282",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.08,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "254",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.48,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "62",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 34.09,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "655",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.06,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.04970372957983389
+}

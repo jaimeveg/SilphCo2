@@ -1,0 +1,36 @@
+{
+  "id": "mago-berry",
+  "name": "Mago Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+  "sprites": {
+    "low_res": "/images/items/sprites/mago-berry.png",
+    "high_res": "/images/items/high-res/mago-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "hp": 33,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 50%",
+      "effect_type": "boost",
+      "use": "single",
+      "status": "conf",
+      "mode": "inflicts"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "450",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.16,
+      "pokemon_usage": 0.06
+    }
+  ],
+  "global_usage": 0.0007088847308830276
+}

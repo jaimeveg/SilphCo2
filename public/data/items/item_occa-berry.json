@@ -1,0 +1,31 @@
+{
+  "id": "occa-berry",
+  "name": "Occa Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a supereffective Fire-type move, the power of that move will be weakened.",
+  "sprites": {
+    "low_res": "/images/items/sprites/occa-berry.png",
+    "high_res": "/images/items/high-res/occa-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "enemy",
+      "condition_holder": "hit by supereffective fire move",
+      "type_related": [
+        "fire"
+      ],
+      "effect_type": "reduces",
+      "power": 50,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0015357441437433182
+}

@@ -1,0 +1,30 @@
+{
+  "id": "sky-plate",
+  "name": "Sky Plate",
+  "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of flight and boosts the power of the holder's Flying-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/sky-plate.png",
+    "high_res": "/images/items/high-res/sky-plate.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "flying"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.020061997529875808
+}

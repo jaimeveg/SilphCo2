@@ -1,0 +1,30 @@
+{
+  "id": "rock-gem",
+  "name": "Rock Gem",
+  "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of rock and will boost the power of a Rock-type move�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/rock-gem.png",
+    "high_res": "/images/items/high-res/rock-gem.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "uses rock type move",
+      "type_related": [
+        "rock"
+      ],
+      "effect_type": "boost",
+      "power": 30,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

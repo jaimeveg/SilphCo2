@@ -1,0 +1,32 @@
+{
+  "id": "sachet",
+  "name": "Sachet",
+  "effect": "A sachet filled with fragrant perfumes that are just slightly overwhelming. Yet it's loved by a certain Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/sachet.png",
+    "high_res": "/images/items/high-res/sachet.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "spritzee"
+      ],
+      "evo_pokemon": [
+        "aromatisse"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

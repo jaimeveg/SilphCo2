@@ -311,10 +311,10 @@
     "mechanics": [
       {
         "category": "competitive",
-        "hp": null,
+        "hp": 6.25,
         "boost": "stage",
         "affects": "self",
-        "condition_holder": "poison type",
+        "condition_holder": "poison type (losses hp if not poison)",
         "effect_type": "boost",
         "use": "permanent",
         "mode": ""
@@ -2913,7 +2913,7 @@
     "mechanics": [
       {
         "category": "competitive",
-        "hp": null,
+        "hp": 6.25,
         "boost": "stage",
         "affects": "self",
         "effect_type": "boost",
@@ -2938,7 +2938,7 @@
     "mechanics": [
       {
         "category": "competitive",
-        "hp": -10,
+        "hp": 10,
         "atk": 30,
         "boost": "raw",
         "affects": "self",
@@ -4715,7 +4715,7 @@
     "mechanics": [
       {
         "category": "competitive",
-        "hp": null,
+        "hp": 16.66,
         "boost": "stage",
         "affects": "enemy",
         "condition_holder": "physical contact attack",
@@ -5467,7 +5467,7 @@
     "mechanics": [
       {
         "category": "competitive",
-        "atk": null,
+        "atk": 12.5,
         "boost": "stage",
         "affects": "self",
         "effect_type": "reduces",
@@ -8018,7 +8018,7 @@
     "mechanics": [
       {
         "category": "berry",
-        "hp": null,
+        "hp": 12.5,
         "boost": "stage",
         "affects": "enemy",
         "condition_holder": "hit by physical move",
@@ -8664,7 +8664,7 @@
     "mechanics": [
       {
         "category": "berry",
-        "hp": null,
+        "hp": 12.5,
         "boost": "stage",
         "affects": "enemy",
         "condition_holder": "hit by special move",

@@ -1,0 +1,149 @@
+{
+  "id": "sitrus-berry",
+  "name": "Sitrus Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to restore a small amount of HP to itself.",
+  "sprites": {
+    "low_res": "/images/items/sprites/sitrus-berry.png",
+    "high_res": "/images/items/high-res/sitrus-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "hp": 25,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 50%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "727",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 15.59,
+      "pokemon_usage": 51.24
+    },
+    {
+      "pokemon_id": "591",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 38.81,
+      "pokemon_usage": 24.71
+    },
+    {
+      "pokemon_id": "981",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.63,
+      "pokemon_usage": 15.58
+    },
+    {
+      "pokemon_id": "986",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 29.88,
+      "pokemon_usage": 5.97
+    },
+    {
+      "pokemon_id": "10167",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 74.54,
+      "pokemon_usage": 4.56
+    },
+    {
+      "pokemon_id": "1013",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 21.86,
+      "pokemon_usage": 4.28
+    },
+    {
+      "pokemon_id": "485",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.75,
+      "pokemon_usage": 3.72
+    },
+    {
+      "pokemon_id": "10171",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 23.38,
+      "pokemon_usage": 2.96
+    },
+    {
+      "pokemon_id": "244",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 21.58,
+      "pokemon_usage": 2.49
+    },
+    {
+      "pokemon_id": "423",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.56,
+      "pokemon_usage": 1.98
+    },
+    {
+      "pokemon_id": "637",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.54,
+      "pokemon_usage": 1.97
+    },
+    {
+      "pokemon_id": "823",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 21.55,
+      "pokemon_usage": 1.53
+    },
+    {
+      "pokemon_id": "576",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 57.9,
+      "pokemon_usage": 1.51
+    },
+    {
+      "pokemon_id": "186",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.14,
+      "pokemon_usage": 1.44
+    },
+    {
+      "pokemon_id": "968",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 98.45,
+      "pokemon_usage": 1.42
+    },
+    {
+      "pokemon_id": "488",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.54,
+      "pokemon_usage": 1.09
+    },
+    {
+      "pokemon_id": "110",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 30.75,
+      "pokemon_usage": 1.05
+    },
+    {
+      "pokemon_id": "764",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20.83,
+      "pokemon_usage": 0.74
+    },
+    {
+      "pokemon_id": "130",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.53,
+      "pokemon_usage": 0.7
+    },
+    {
+      "pokemon_id": "145",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.29,
+      "pokemon_usage": 0.68
+    }
+  ],
+  "global_usage": 0.35482758804730674
+}

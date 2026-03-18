@@ -1,0 +1,27 @@
+{
+  "id": "everstone",
+  "name": "Everstone",
+  "effect": "An item to be held by a Pokemon. A Pokemon holding this peculiar stone is prevented from evolving.",
+  "sprites": {
+    "low_res": "/images/items/sprites/everstone.png",
+    "high_res": "/images/items/high-res/everstone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "keeps nature and regional form"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

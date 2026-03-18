@@ -1,0 +1,149 @@
+{
+  "id": "assault-vest",
+  "name": "Assault Vest",
+  "effect": "An item to be held by a Pokemon. This offensive vest boosts the holder's Sp. Def stat but prevents the use of status moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/assault-vest.png",
+    "high_res": "/images/items/high-res/assault-vest.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spd": 50,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "can't use status moves",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "727",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 44.17,
+      "pokemon_usage": 59.23
+    },
+    {
+      "pokemon_id": "1021",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 35.13,
+      "pokemon_usage": 34.7
+    },
+    {
+      "pokemon_id": "812",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 86.96,
+      "pokemon_usage": 30.08
+    },
+    {
+      "pokemon_id": "382",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.95,
+      "pokemon_usage": 20.3
+    },
+    {
+      "pokemon_id": "1002",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 37.41,
+      "pokemon_usage": 15.14
+    },
+    {
+      "pokemon_id": "992",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 86.76,
+      "pokemon_usage": 9.31
+    },
+    {
+      "pokemon_id": "1018",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 67.51,
+      "pokemon_usage": 7.52
+    },
+    {
+      "pokemon_id": "383",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 22.44,
+      "pokemon_usage": 7.05
+    },
+    {
+      "pokemon_id": "970",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.55,
+      "pokemon_usage": 5.08
+    },
+    {
+      "pokemon_id": "10272",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 20,
+      "pokemon_usage": 4.91
+    },
+    {
+      "pokemon_id": "983",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 51.07,
+      "pokemon_usage": 4.66
+    },
+    {
+      "pokemon_id": "1003",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.02,
+      "pokemon_usage": 4.39
+    },
+    {
+      "pokemon_id": "244",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 23.77,
+      "pokemon_usage": 3.43
+    },
+    {
+      "pokemon_id": "248",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 48.75,
+      "pokemon_usage": 2.98
+    },
+    {
+      "pokemon_id": "1009",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.23,
+      "pokemon_usage": 2.7
+    },
+    {
+      "pokemon_id": "1014",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 85.14,
+      "pokemon_usage": 2.19
+    },
+    {
+      "pokemon_id": "902",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.92,
+      "pokemon_usage": 1.75
+    },
+    {
+      "pokemon_id": "10021",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.93,
+      "pokemon_usage": 1.52
+    },
+    {
+      "pokemon_id": "376",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 34.44,
+      "pokemon_usage": 1.5
+    },
+    {
+      "pokemon_id": "10023",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 30.07,
+      "pokemon_usage": 1.42
+    }
+  ],
+  "global_usage": 0.7778845474696361
+}

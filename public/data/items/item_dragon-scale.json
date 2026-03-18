@@ -1,0 +1,33 @@
+{
+  "id": "dragon-scale",
+  "name": "Dragon Scale",
+  "effect": "A very tough and inflexible scale. Dragon-type Pokemon may be holding this item when caught.",
+  "sprites": {
+    "low_res": "/images/items/sprites/dragon-scale.png",
+    "high_res": "/images/items/high-res/dragon-scale.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "seadra"
+      ],
+      "evo_pokemon": [
+        "kingdra"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000007192017691230346
+}

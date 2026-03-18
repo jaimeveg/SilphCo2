@@ -1,0 +1,27 @@
+{
+  "id": "tamato-berry",
+  "name": "Tamato Berry",
+  "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Speed stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/tamato-berry.png",
+    "high_res": "/images/items/high-res/tamato-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "reduces spe evs"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

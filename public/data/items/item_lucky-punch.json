@@ -1,0 +1,29 @@
+{
+  "id": "lucky-punch",
+  "name": "Lucky Punch",
+  "effect": "An item to be held by Chansey. This lucky boxing glove boosts the critical-hit ratio of Chansey's moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/lucky-punch.png",
+    "high_res": "/images/items/high-res/lucky-punch.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "crit": 2,
+      "boost": "stage",
+      "affects": "self",
+      "pokemon": [
+        "chansey"
+      ],
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

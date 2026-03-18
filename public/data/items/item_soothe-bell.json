@@ -1,0 +1,27 @@
+{
+  "id": "soothe-bell",
+  "name": "Soothe Bell",
+  "effect": "An item to be held by a Pokemon. The comforting chime of this bell calms the holder, making it friendly.",
+  "sprites": {
+    "low_res": "/images/items/sprites/soothe-bell.png",
+    "high_res": "/images/items/high-res/soothe-bell.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "increase happiness"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

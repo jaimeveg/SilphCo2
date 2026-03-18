@@ -1,0 +1,149 @@
+{
+  "id": "choice-specs",
+  "name": "Choice Specs",
+  "effect": "An item to be held by a Pokemon. These curious glasses boost the holder's Sp. Atk stat but only allow the use of a single move.",
+  "sprites": {
+    "low_res": "/images/items/sprites/choice-specs.png",
+    "high_res": "/images/items/high-res/choice-specs.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spa": 50,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "can only use one move",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "987",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 36.43,
+      "pokemon_usage": 44.71
+    },
+    {
+      "pokemon_id": "1008",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 40.55,
+      "pokemon_usage": 32.65
+    },
+    {
+      "pokemon_id": "1000",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 17.69,
+      "pokemon_usage": 19.15
+    },
+    {
+      "pokemon_id": "1004",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 38.15,
+      "pokemon_usage": 10.35
+    },
+    {
+      "pokemon_id": "324",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.48,
+      "pokemon_usage": 9.7
+    },
+    {
+      "pokemon_id": "1024",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17,
+      "pokemon_usage": 8.37
+    },
+    {
+      "pokemon_id": "10171",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 64.05,
+      "pokemon_usage": 2.96
+    },
+    {
+      "pokemon_id": "144",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 81.99,
+      "pokemon_usage": 2.77
+    },
+    {
+      "pokemon_id": "1009",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.35,
+      "pokemon_usage": 2.7
+    },
+    {
+      "pokemon_id": "10233",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 32.82,
+      "pokemon_usage": 1.42
+    },
+    {
+      "pokemon_id": "10023",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 20.32,
+      "pokemon_usage": 1.42
+    },
+    {
+      "pokemon_id": "890",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.35,
+      "pokemon_usage": 1.28
+    },
+    {
+      "pokemon_id": "378",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 85,
+      "pokemon_usage": 1.01
+    },
+    {
+      "pokemon_id": "991",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 30.45,
+      "pokemon_usage": 1.01
+    },
+    {
+      "pokemon_id": "894",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 26.41,
+      "pokemon_usage": 0.93
+    },
+    {
+      "pokemon_id": "941",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 32.17,
+      "pokemon_usage": 0.85
+    },
+    {
+      "pokemon_id": "6",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 24.3,
+      "pokemon_usage": 0.81
+    },
+    {
+      "pokemon_id": "700",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.27,
+      "pokemon_usage": 0.73
+    },
+    {
+      "pokemon_id": "10020",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 25.41,
+      "pokemon_usage": 0.52
+    },
+    {
+      "pokemon_id": "635",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.54,
+      "pokemon_usage": 0.51
+    }
+  ],
+  "global_usage": 0.3394108433029186
+}

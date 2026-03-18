@@ -1,0 +1,28 @@
+{
+  "id": "petaya-berry",
+  "name": "Petaya Berry",
+  "effect": "If a Pokemon holds one of these Berries, its Sp. Atk stat will be boosted should it find itself in a pinch.",
+  "sprites": {
+    "low_res": "/images/items/sprites/petaya-berry.png",
+    "high_res": "/images/items/high-res/petaya-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "spa": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 33%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0002354664766536688
+}

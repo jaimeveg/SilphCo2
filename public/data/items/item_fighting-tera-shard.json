@@ -1,0 +1,27 @@
+{
+  "id": "fighting-tera-shard",
+  "name": "Fighting Tera Shard",
+  "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+  "sprites": {
+    "low_res": "/images/items/sprites/fighting-tera-shard.png",
+    "high_res": "/images/items/high-res/fighting-tera-shard.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "set tera type to fighting"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

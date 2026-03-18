@@ -1,0 +1,48 @@
+{
+  "id": "soul-dew",
+  "name": "Soul Dew",
+  "effect": "A wondrous orb to be held by Latios or Latias. It boosts the power of their Psychic- and Dragon-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/soul-dew.png",
+    "high_res": "/images/items/high-res/soul-dew.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "latios",
+        "latias"
+      ],
+      "type_related": [
+        "dragon",
+        "psychic"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "381",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 52.51,
+      "pokemon_usage": 1.19
+    },
+    {
+      "pokemon_id": "380",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.16,
+      "pokemon_usage": 0.56
+    }
+  ],
+  "global_usage": 0.00892626823740718
+}

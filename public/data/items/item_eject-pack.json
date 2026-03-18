@@ -1,0 +1,76 @@
+{
+  "id": "eject-pack",
+  "name": "Eject Pack",
+  "effect": "An item to be held by a Pokemon. If the holder's stats are lowered, it will be switched out of battle.",
+  "sprites": {
+    "low_res": "/images/items/sprites/eject-pack.png",
+    "high_res": "/images/items/high-res/eject-pack.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "stats are lowered",
+      "effect_type": "",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "235",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.38,
+      "pokemon_usage": 3.62
+    },
+    {
+      "pokemon_id": "38",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.84,
+      "pokemon_usage": 0.89
+    },
+    {
+      "pokemon_id": "373",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.43,
+      "pokemon_usage": 0.28
+    },
+    {
+      "pokemon_id": "871",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.76,
+      "pokemon_usage": 0.25
+    },
+    {
+      "pokemon_id": "899",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.04,
+      "pokemon_usage": 0.13
+    },
+    {
+      "pokemon_id": "623",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.15,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "758",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 24.4,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "362",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.05,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.019838690497100867
+}

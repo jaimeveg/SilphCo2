@@ -1,0 +1,48 @@
+{
+  "id": "figy-berry",
+  "name": "Figy Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+  "sprites": {
+    "low_res": "/images/items/sprites/figy-berry.png",
+    "high_res": "/images/items/high-res/figy-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "hp": 33,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "health below 50%",
+      "effect_type": "boost",
+      "use": "single",
+      "status": "conf",
+      "mode": "inflicts"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "934",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.1,
+      "pokemon_usage": 0.2
+    },
+    {
+      "pokemon_id": "143",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 17.78,
+      "pokemon_usage": 0.17
+    },
+    {
+      "pokemon_id": "724",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 17.32,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.004829286609224286
+}

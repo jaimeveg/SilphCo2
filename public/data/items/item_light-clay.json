@@ -1,0 +1,105 @@
+{
+  "id": "light-clay",
+  "name": "Light Clay",
+  "effect": "An item to be held by a Pokemon. When the holder uses protective moves like Light Screen or Reflect, their effects will last longer than usual.",
+  "sprites": {
+    "low_res": "/images/items/sprites/light-clay.png",
+    "high_res": "/images/items/high-res/light-clay.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "861",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 85.56,
+      "pokemon_usage": 12.13
+    },
+    {
+      "pokemon_id": "10104",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 82.19,
+      "pokemon_usage": 4.98
+    },
+    {
+      "pokemon_id": "302",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.65,
+      "pokemon_usage": 2.06
+    },
+    {
+      "pokemon_id": "460",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 21.02,
+      "pokemon_usage": 0.31
+    },
+    {
+      "pokemon_id": "678",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.19,
+      "pokemon_usage": 0.29
+    },
+    {
+      "pokemon_id": "707",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 46.3,
+      "pokemon_usage": 0.27
+    },
+    {
+      "pokemon_id": "623",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.5,
+      "pokemon_usage": 0.16
+    },
+    {
+      "pokemon_id": "10243",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 23.09,
+      "pokemon_usage": 0.14
+    },
+    {
+      "pokemon_id": "243",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 26.91,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "466",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 21.15,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "154",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 22.12,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "703",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 18.13,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "312",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 74.75,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.11219222094390728
+}

@@ -1,0 +1,35 @@
+{
+  "id": "leppa-berry",
+  "name": "Leppa Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to restore 10 PP to a move.",
+  "sprites": {
+    "low_res": "/images/items/sprites/leppa-berry.png",
+    "high_res": "/images/items/high-res/leppa-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "pp": 10,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "pp of move to 0",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "954",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.74,
+      "pokemon_usage": 0.13
+    }
+  ],
+  "global_usage": 0.00043164135841975543
+}

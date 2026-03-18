@@ -1,0 +1,53 @@
+{
+  "id": "wise-glasses",
+  "name": "Wise Glasses",
+  "effect": "An item to be held by a Pokemon. This thick pair of glasses slightly boosts the power of the holder's special moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/wise-glasses.png",
+    "high_res": "/images/items/high-res/wise-glasses.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "special attacks",
+      "effect_type": "",
+      "power": 10,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "571",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.92,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "10125",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 23.67,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "192",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 16.54,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "693",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 23.58,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0030598838013288507
+}

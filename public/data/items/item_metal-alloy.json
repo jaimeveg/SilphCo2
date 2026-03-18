@@ -1,0 +1,32 @@
+{
+  "id": "metal-alloy",
+  "name": "Metal Alloy",
+  "effect": "A peculiar metal that can make certain species of Pokemon evolve. It is composed of many layers.",
+  "sprites": {
+    "low_res": "/images/items/sprites/metal-alloy.png",
+    "high_res": "/images/items/high-res/metal-alloy.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "duraludon"
+      ],
+      "evo_pokemon": [
+        "archaludon"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

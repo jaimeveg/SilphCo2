@@ -1,0 +1,43 @@
+{
+  "id": "charcoal",
+  "name": "Charcoal",
+  "effect": "An item to be held by a Pokemon. It's a combustible fuel that boosts the power of the holder's Fire-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/charcoal.png",
+    "high_res": "/images/items/high-res/charcoal.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "fire"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "324",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 40.63,
+      "pokemon_usage": 9.7
+    },
+    {
+      "pokemon_id": "323",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.24,
+      "pokemon_usage": 0.05
+    }
+  ],
+  "global_usage": 0.044208404173922994
+}

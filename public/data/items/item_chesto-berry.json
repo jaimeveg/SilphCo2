@@ -1,0 +1,28 @@
+{
+  "id": "chesto-berry",
+  "name": "Chesto Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to shake off its drowsiness.",
+  "sprites": {
+    "low_res": "/images/items/sprites/chesto-berry.png",
+    "high_res": "/images/items/high-res/chesto-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "gets sleep",
+      "effect_type": "",
+      "use": "single",
+      "status": "sleep",
+      "mode": "cure"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0028735227482276863
+}

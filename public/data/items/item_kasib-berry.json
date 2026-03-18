@@ -1,0 +1,38 @@
+{
+  "id": "kasib-berry",
+  "name": "Kasib Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a supereffective Ghost-type move, the power of that move will be weakened.",
+  "sprites": {
+    "low_res": "/images/items/sprites/kasib-berry.png",
+    "high_res": "/images/items/high-res/kasib-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "enemy",
+      "condition_holder": "hit by supereffective ghost move",
+      "type_related": [
+        "ghost"
+      ],
+      "effect_type": "reduces",
+      "power": 50,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "724",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 29.06,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.0005658632586579429
+}

@@ -539,7 +539,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                         <div>
                             <h3 className="text-xs font-bold text-slate-300 uppercase mb-1">No Usage Data</h3>
                             <p className="text-[9px] font-mono text-slate-500 max-w-[240px] mx-auto">
-                                ID #{activePokemonId} hasn't been used in <span className={dataSource === 'showdown' ? "text-cyan-500" : dataSource === 'ladder' ? "text-purple-500" : "text-amber-500"}>{dataSource === 'showdown' ? format : dataSource === 'ladder' ? 'Ladder Top 50' : 'this tournament'}</span> enough to appear in statistics.
+                                ID #{activePokemonId} hasn&apos;t been used in <span className={dataSource === 'showdown' ? "text-cyan-500" : dataSource === 'ladder' ? "text-purple-500" : "text-amber-500"}>{dataSource === 'showdown' ? format : dataSource === 'ladder' ? 'Ladder Top 50' : 'this tournament'}</span> enough to appear in statistics.
                             </p>
                         </div>
                     </div>
@@ -565,7 +565,13 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                     <div className="space-y-1.5">
                                         <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Shield size={11} /> Key Items</h4>
                                         <div className="pt-1">{data.stats.items.slice(0, 5).map((i) => (
-                                            <UsageBar key={i.name} label={i.name} value={i.value} subLabel={formatDisplayValue(i.displayValue || i.value)} color="bg-indigo-500" />
+                                            <Link 
+                                                key={i.name}
+                                                href={`/${lang}/items/${i.slug || i.name.toLowerCase().replace(/[\s_]+/g, '-')}`}
+                                                className="block hover:brightness-125 hover:drop-shadow-[0_0_5px_rgba(99,102,241,0.5)] transition-all"
+                                            >
+                                                <UsageBar label={i.name} value={i.value} subLabel={formatDisplayValue(i.displayValue || i.value)} color="bg-indigo-500" />
+                                            </Link>
                                         ))}</div>
                                     </div>
                                     <div className="space-y-1.5">

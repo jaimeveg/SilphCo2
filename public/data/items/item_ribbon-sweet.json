@@ -1,0 +1,32 @@
+{
+  "id": "ribbon-sweet",
+  "name": "Ribbon Sweet",
+  "effect": "A ribbon-shaped sweet. When a Milcery holds this, it spins around happily.",
+  "sprites": {
+    "low_res": "/images/items/sprites/ribbon-sweet.png",
+    "high_res": "/images/items/high-res/ribbon-sweet.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+spin",
+      "pokemon": [
+        "milcery"
+      ],
+      "evo_pokemon": [
+        "alcremie"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

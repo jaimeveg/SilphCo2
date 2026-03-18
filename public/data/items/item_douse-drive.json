@@ -1,0 +1,31 @@
+{
+  "id": "douse-drive",
+  "name": "Douse Drive",
+  "effect": "A cassette to be held by Genesect. It changes Genesect's Techno Blast move so it becomes Water type.",
+  "sprites": {
+    "low_res": "/images/items/sprites/douse-drive.png",
+    "high_res": "/images/items/high-res/douse-drive.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "genesect"
+      ],
+      "type_related": [
+        "water"
+      ],
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

@@ -1,0 +1,39 @@
+{
+  "id": "lagging-tail",
+  "name": "Lagging Tail",
+  "effect": "An item to be held by a Pokemon. A tail of something, this item is tremendously heavy and makes the holder move slower than usual.",
+  "sprites": {
+    "low_res": "/images/items/sprites/lagging-tail.png",
+    "high_res": "/images/items/high-res/lagging-tail.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10172",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.19,
+      "pokemon_usage": 0.23
+    },
+    {
+      "pokemon_id": "466",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.25,
+      "pokemon_usage": 0.05
+    }
+  ],
+  "global_usage": 0.00225919941294862
+}

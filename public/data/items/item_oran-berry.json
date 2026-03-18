@@ -1,0 +1,28 @@
+{
+  "id": "oran-berry",
+  "name": "Oran Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to restore 10 HP to itself.",
+  "sprites": {
+    "low_res": "/images/items/sprites/oran-berry.png",
+    "high_res": "/images/items/high-res/oran-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "hp": 10,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "health below 50%",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000034099704487389025
+}

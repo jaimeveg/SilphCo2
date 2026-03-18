@@ -1,0 +1,38 @@
+{
+  "id": "chilan-berry",
+  "name": "Chilan Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a Normal-type move, the power of that move will be weakened.",
+  "sprites": {
+    "low_res": "/images/items/sprites/chilan-berry.png",
+    "high_res": "/images/items/high-res/chilan-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "enemy",
+      "condition_holder": "hit by a normal move",
+      "type_related": [
+        "normal"
+      ],
+      "effect_type": "reduces",
+      "power": 50,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "988",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 62.46,
+      "pokemon_usage": 0.08
+    }
+  ],
+  "global_usage": 0.0006402807963316309
+}

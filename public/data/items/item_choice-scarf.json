@@ -1,0 +1,149 @@
+{
+  "id": "choice-scarf",
+  "name": "Choice Scarf",
+  "effect": "An item to be held by a Pokemon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move.",
+  "sprites": {
+    "low_res": "/images/items/sprites/choice-scarf.png",
+    "high_res": "/images/items/high-res/choice-scarf.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "spe": 50,
+      "boost": "raw",
+      "affects": "self",
+      "condition_holder": "can only use one move",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10191",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 20.28,
+      "pokemon_usage": 50.56
+    },
+    {
+      "pokemon_id": "1008",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 24.89,
+      "pokemon_usage": 32.65
+    },
+    {
+      "pokemon_id": "382",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.17,
+      "pokemon_usage": 20.3
+    },
+    {
+      "pokemon_id": "1004",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 25.75,
+      "pokemon_usage": 10.35
+    },
+    {
+      "pokemon_id": "978",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 36.4,
+      "pokemon_usage": 10.34
+    },
+    {
+      "pokemon_id": "10021",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.24,
+      "pokemon_usage": 6.14
+    },
+    {
+      "pokemon_id": "979",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 27.27,
+      "pokemon_usage": 3.55
+    },
+    {
+      "pokemon_id": "10170",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 44.77,
+      "pokemon_usage": 2.43
+    },
+    {
+      "pokemon_id": "132",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 24.29,
+      "pokemon_usage": 1.78
+    },
+    {
+      "pokemon_id": "10233",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 51.88,
+      "pokemon_usage": 1.42
+    },
+    {
+      "pokemon_id": "876",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 23.05,
+      "pokemon_usage": 1.03
+    },
+    {
+      "pokemon_id": "6",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 21.32,
+      "pokemon_usage": 0.81
+    },
+    {
+      "pokemon_id": "10020",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.94,
+      "pokemon_usage": 0.52
+    },
+    {
+      "pokemon_id": "984",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.86,
+      "pokemon_usage": 0.49
+    },
+    {
+      "pokemon_id": "302",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.93,
+      "pokemon_usage": 0.42
+    },
+    {
+      "pokemon_id": "908",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 22.17,
+      "pokemon_usage": 0.41
+    },
+    {
+      "pokemon_id": "186",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.6,
+      "pokemon_usage": 0.37
+    },
+    {
+      "pokemon_id": "900",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 19.17,
+      "pokemon_usage": 0.36
+    },
+    {
+      "pokemon_id": "895",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.84,
+      "pokemon_usage": 0.31
+    },
+    {
+      "pokemon_id": "779",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 68.36,
+      "pokemon_usage": 0.27
+    }
+  ],
+  "global_usage": 0.3603099856780702
+}

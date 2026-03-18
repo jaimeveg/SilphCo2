@@ -1,0 +1,36 @@
+{
+  "id": "rusted-shield",
+  "name": "Rusted Shield",
+  "effect": "It is said that a hero used this shield to halt a terrible disaster in ancient times. But it's grown rusty and worn.",
+  "sprites": {
+    "low_res": "/images/items/sprites/rusted-shield.png",
+    "high_res": "/images/items/high-res/rusted-shield.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "zamazenta"
+      ],
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10189",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 100,
+      "pokemon_usage": 25.39
+    }
+  ],
+  "global_usage": 0.25404174330168267
+}

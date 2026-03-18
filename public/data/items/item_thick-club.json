@@ -1,0 +1,31 @@
+{
+  "id": "thick-club",
+  "name": "Thick Club",
+  "effect": "An item to be held by Cubone or Marowak. This hard bone of unknown origin boosts their Attack stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/thick-club.png",
+    "high_res": "/images/items/high-res/thick-club.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "atk": 100,
+      "boost": "raw",
+      "affects": "self",
+      "pokemon": [
+        "cubone",
+        "marowak",
+        "10115"
+      ],
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "unremarkable-teacup",
+  "name": "Unremarkable Teacup",
+  "effect": "A peculiar teacup that can make a certain species of Pokemon evolve. It may be cracked, but tea drunk from it is delicious.",
+  "sprites": {
+    "low_res": "/images/items/sprites/unremarkable-teacup.png",
+    "high_res": "/images/items/high-res/unremarkable-teacup.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "poltchageist"
+      ],
+      "evo_pokemon": [
+        "sinistcha"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000007802462322051113
+}

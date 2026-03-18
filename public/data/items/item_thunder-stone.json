@@ -1,0 +1,45 @@
+{
+  "id": "thunder-stone",
+  "name": "Thunder Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has a distinct thunderbolt pattern.",
+  "sprites": {
+    "low_res": "/images/items/sprites/thunder-stone.png",
+    "high_res": "/images/items/high-res/thunder-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "pikachu",
+        "magneton",
+        "eevee",
+        "nosepass",
+        "eelektrik",
+        "charjabug",
+        "tadbulb"
+      ],
+      "evo_pokemon": [
+        "raichu",
+        "magnezone",
+        "jolteon",
+        "probopass",
+        "eelektross",
+        "vikavolt",
+        "bellibolt"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0000011513654682602094
+}

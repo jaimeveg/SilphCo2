@@ -30,7 +30,7 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
            <div className="space-y-2">
              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white tracking-tighter">
                {t.title.split('//')[0]}
-               <span className="text-brand-cyan opacity-80"> // {t.title.split('//')[1]}</span>
+               <span className="text-brand-cyan opacity-80"> {`//`} {t.title.split('//')[1]}</span>
              </h1>
              <p className="text-lg text-slate-400 font-light max-w-xl leading-relaxed border-l-2 border-brand-cyan/30 pl-4">
                {t.subtitle}

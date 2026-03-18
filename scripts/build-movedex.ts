@@ -8,7 +8,7 @@ import { IMoveIndexItem, IMoveDetail, ILearnerRecord, IMoveTactics } from '../sr
 const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
 const DATA_DIR = path.join(process.cwd(), 'public', 'data');
 const MOVES_DIR = path.join(DATA_DIR, 'moves');
-const CHUNK_SIZE = 200; 
+const CHUNK_SIZE = 200;
 const MAX_RETRIES = 3;
 
 const MOVES_QUERY = `
@@ -62,7 +62,7 @@ async function fetchWithRetry(query: string, variables: any, retries = 0): Promi
     } catch (error: any) {
         if (retries < MAX_RETRIES) {
             const delay = 2000 * (retries + 1);
-            console.warn(`⚠️ Error en petición. Reintentando en ${delay/1000}s...`);
+            console.warn(`⚠️ Error en petición. Reintentando en ${delay / 1000}s...`);
             await wait(delay);
             return fetchWithRetry(query, variables, retries + 1);
         } else throw error;
@@ -138,8 +138,7 @@ const runETL = async () => {
             };
 
             const isSheerForce = (m.power > 0) && (tactics.flinch_chance > 0 || tactics.stat_chance > 0 || tactics.ailment_chance > 0);
-            
-            // Flags y Arrays de estadísticas para los filtros rápidos
+
             const statsAffected = statChanges.map((sc: any) => sc.stat);
             const priorityVal = m.priority || 0;
 
@@ -151,9 +150,10 @@ const runETL = async () => {
                 power: m.power,
                 accuracy: m.accuracy,
                 pp: m.pp,
+                max_pp: m.pp ? Math.floor(m.pp * 1.6) : 0, // <-- NUEVO CÁLCULO DE PP MÁXIMOS (8/5)
                 priority: priorityVal,
                 flags: {
-                    is_priority: priorityVal > 0, // Solo detecta prioridad positiva como "Prioritario"
+                    is_priority: priorityVal > 0,
                     has_status: tactics.ailment !== 'none',
                     has_buff: statChanges.some((sc: any) => sc.change > 0),
                     has_debuff: statChanges.some((sc: any) => sc.change < 0)

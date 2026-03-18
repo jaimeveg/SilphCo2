@@ -1,0 +1,29 @@
+{
+  "id": "rose-incense",
+  "name": "Rose Incense",
+  "effect": "An item to be held by a Pokemon. This incense has a curious aroma that boosts the power of the holder's Grass-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/rose-incense.png",
+    "high_res": "/images/items/high-res/rose-incense.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "grass"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

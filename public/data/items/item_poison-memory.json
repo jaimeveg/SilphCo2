@@ -1,0 +1,31 @@
+{
+  "id": "poison-memory",
+  "name": "Poison Memory",
+  "effect": "A memory disc that contains Poison-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/poison-memory.png",
+    "high_res": "/images/items/high-res/poison-memory.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "silvally"
+      ],
+      "type_related": [
+        "poison"
+      ],
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

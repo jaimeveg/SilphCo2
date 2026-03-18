@@ -1,0 +1,30 @@
+{
+  "id": "iron-plate",
+  "name": "Iron Plate",
+  "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of steel and boosts the power of the holder's Steel-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/iron-plate.png",
+    "high_res": "/images/items/high-res/iron-plate.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "steel"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.013429156478363085
+}

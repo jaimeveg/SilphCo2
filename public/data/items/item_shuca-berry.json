@@ -1,0 +1,38 @@
+{
+  "id": "shuca-berry",
+  "name": "Shuca Berry",
+  "effect": "If a Pokemon holding this Berry is hit with a supereffective Ground-type move, the power of that move will be weakened.",
+  "sprites": {
+    "low_res": "/images/items/sprites/shuca-berry.png",
+    "high_res": "/images/items/high-res/shuca-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "enemy",
+      "condition_holder": "hit by supereffective ground move",
+      "type_related": [
+        "ground"
+      ],
+      "effect_type": "reduces",
+      "power": 50,
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "911",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 16.96,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.032686861723705794
+}

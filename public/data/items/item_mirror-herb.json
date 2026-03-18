@@ -1,0 +1,39 @@
+{
+  "id": "mirror-herb",
+  "name": "Mirror Herb",
+  "effect": "An item to be held by a Pokemon. This herb will allow the holder to mirror an opponent's stat increases to boost its own stats�but only once.",
+  "sprites": {
+    "low_res": "/images/items/sprites/mirror-herb.png",
+    "high_res": "/images/items/high-res/mirror-herb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "237",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 21.19,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "10251",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.36,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.005700940152867478
+}

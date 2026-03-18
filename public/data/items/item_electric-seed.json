@@ -1,0 +1,131 @@
+{
+  "id": "electric-seed",
+  "name": "Electric Seed",
+  "effect": "An item to be held by a Pokemon. If the terrain becomes Electric Terrain, the holder will use this seed to boost its own Defense stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/electric-seed.png",
+    "high_res": "/images/items/high-res/electric-seed.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "def": 1,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "electric terrain",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "792",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 27.56,
+      "pokemon_usage": 16.05
+    },
+    {
+      "pokemon_id": "981",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 47.47,
+      "pokemon_usage": 13.41
+    },
+    {
+      "pokemon_id": "637",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 49.75,
+      "pokemon_usage": 6.6
+    },
+    {
+      "pokemon_id": "903",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 47.43,
+      "pokemon_usage": 1.93
+    },
+    {
+      "pokemon_id": "663",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 34.04,
+      "pokemon_usage": 0.25
+    },
+    {
+      "pokemon_id": "426",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 43.36,
+      "pokemon_usage": 0.22
+    },
+    {
+      "pokemon_id": "10171",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 35.48,
+      "pokemon_usage": 0.22
+    },
+    {
+      "pokemon_id": "652",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 62.34,
+      "pokemon_usage": 0.2
+    },
+    {
+      "pokemon_id": "254",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 29.36,
+      "pokemon_usage": 0.19
+    },
+    {
+      "pokemon_id": "442",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 97.54,
+      "pokemon_usage": 0.13
+    },
+    {
+      "pokemon_id": "655",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 18.42,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "10009",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 21.04,
+      "pokemon_usage": 0.1
+    },
+    {
+      "pokemon_id": "873",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 79.59,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "703",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.08,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "939",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.78,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "181",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 38.67,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "638",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 26.79,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.1753509609836136
+}

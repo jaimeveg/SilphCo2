@@ -1,0 +1,32 @@
+{
+  "id": "whipped-dream",
+  "name": "Whipped Dream",
+  "effect": "A soft and sweet treat made of fluffy, puffy, whipped, and whirled cream. It's loved by a certain Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/whipped-dream.png",
+    "high_res": "/images/items/high-res/whipped-dream.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "swirlix"
+      ],
+      "evo_pokemon": [
+        "slurpuff"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

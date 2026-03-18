@@ -1,0 +1,41 @@
+{
+  "id": "sun-stone",
+  "name": "Sun Stone",
+  "effect": "A peculiar stone that can make certain species of Pokemon evolve. It burns as red as the evening sun.",
+  "sprites": {
+    "low_res": "/images/items/sprites/sun-stone.png",
+    "high_res": "/images/items/high-res/sun-stone.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "gloom",
+        "sunkern",
+        "cottonee",
+        "petilil",
+        "helioptile"
+      ],
+      "evo_pokemon": [
+        "bellossom",
+        "sunflora",
+        "whimsicott",
+        "lilligant",
+        "heliolisk"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0000032948863865681884
+}

@@ -1,0 +1,33 @@
+{
+  "id": "shell-bell",
+  "name": "Shell Bell",
+  "effect": "An item to be held by a Pokemon. The holder restores a little HP to itself every time it inflicts damage with an attack.",
+  "sprites": {
+    "low_res": "/images/items/sprites/shell-bell.png",
+    "high_res": "/images/items/high-res/shell-bell.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10123",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.79,
+      "pokemon_usage": 0.05
+    }
+  ],
+  "global_usage": 0.0028766873840800253
+}

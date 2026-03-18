@@ -1,0 +1,149 @@
+{
+  "id": "life-orb",
+  "name": "Life Orb",
+  "effect": "An item to be held by a Pokemon. It boosts the power of the holder's moves, but the holder also loses a small amount of HP upon landing an attack.",
+  "sprites": {
+    "low_res": "/images/items/sprites/life-orb.png",
+    "high_res": "/images/items/high-res/life-orb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "hp": 10,
+      "atk": 30,
+      "boost": "raw",
+      "affects": "self",
+      "effect_type": "boost",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10194",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 30.36,
+      "pokemon_usage": 34.56
+    },
+    {
+      "pokemon_id": "645",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 99.9,
+      "pokemon_usage": 32.38
+    },
+    {
+      "pokemon_id": "1000",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 15.45,
+      "pokemon_usage": 19.15
+    },
+    {
+      "pokemon_id": "1007",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 47.66,
+      "pokemon_usage": 17.34
+    },
+    {
+      "pokemon_id": "895",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 56.56,
+      "pokemon_usage": 9.57
+    },
+    {
+      "pokemon_id": "10272",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 58.48,
+      "pokemon_usage": 6.26
+    },
+    {
+      "pokemon_id": "485",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 17.15,
+      "pokemon_usage": 3.84
+    },
+    {
+      "pokemon_id": "10230",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.31,
+      "pokemon_usage": 3.83
+    },
+    {
+      "pokemon_id": "279",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 21.45,
+      "pokemon_usage": 3.61
+    },
+    {
+      "pokemon_id": "858",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 92.48,
+      "pokemon_usage": 3.57
+    },
+    {
+      "pokemon_id": "244",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.78,
+      "pokemon_usage": 3.43
+    },
+    {
+      "pokemon_id": "1009",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 45.77,
+      "pokemon_usage": 3.33
+    },
+    {
+      "pokemon_id": "486",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 80.29,
+      "pokemon_usage": 2.27
+    },
+    {
+      "pokemon_id": "978",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.23,
+      "pokemon_usage": 2.23
+    },
+    {
+      "pokemon_id": "902",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.6,
+      "pokemon_usage": 1.9
+    },
+    {
+      "pokemon_id": "445",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 21.02,
+      "pokemon_usage": 1.71
+    },
+    {
+      "pokemon_id": "990",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 73.31,
+      "pokemon_usage": 1.68
+    },
+    {
+      "pokemon_id": "10239",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 33.61,
+      "pokemon_usage": 1.63
+    },
+    {
+      "pokemon_id": "936",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 27.76,
+      "pokemon_usage": 1.6
+    },
+    {
+      "pokemon_id": "887",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.4,
+      "pokemon_usage": 1.56
+    }
+  ],
+  "global_usage": 0.5598006670171015
+}

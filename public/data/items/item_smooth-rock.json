@@ -1,0 +1,34 @@
+{
+  "id": "smooth-rock",
+  "name": "Smooth Rock",
+  "effect": "An item to be held by a Pokemon. When the holder changes the weather to a sandstorm, the storm will persist for longer than usual.",
+  "sprites": {
+    "low_res": "/images/items/sprites/smooth-rock.png",
+    "high_res": "/images/items/high-res/smooth-rock.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "sand",
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "450",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 38.26,
+      "pokemon_usage": 0.06
+    }
+  ],
+  "global_usage": 0.0015975546021457915
+}

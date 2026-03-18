@@ -1,0 +1,30 @@
+{
+  "id": "spooky-plate",
+  "name": "Spooky Plate",
+  "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of ghosts and boosts the power of the holder's Ghost-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/spooky-plate.png",
+    "high_res": "/images/items/high-res/spooky-plate.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "ghost"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.007695815750015912
+}

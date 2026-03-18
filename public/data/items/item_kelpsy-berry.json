@@ -1,0 +1,28 @@
+{
+  "id": "kelpsy-berry",
+  "name": "Kelpsy Berry",
+  "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Attack stat.",
+  "sprites": {
+    "low_res": "/images/items/sprites/kelpsy-berry.png",
+    "high_res": "/images/items/high-res/kelpsy-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "reduces atk evs"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000007271081725198745
+}

@@ -1,0 +1,87 @@
+{
+  "id": "air-balloon",
+  "name": "Air Balloon",
+  "effect": "An item to be held by a Pokemon. This balloon makes the holder float in the air. If the holder is hit with an attack, the balloon will burst.",
+  "sprites": {
+    "low_res": "/images/items/sprites/air-balloon.png",
+    "high_res": "/images/items/high-res/air-balloon.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "immunity": [
+        "TRUE"
+      ],
+      "type_related": [
+        "ground"
+      ],
+      "effect_type": "",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "485",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.2,
+      "pokemon_usage": 0.61
+    },
+    {
+      "pokemon_id": "970",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.16,
+      "pokemon_usage": 0.46
+    },
+    {
+      "pokemon_id": "135",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 26.6,
+      "pokemon_usage": 0.19
+    },
+    {
+      "pokemon_id": "89",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 87.87,
+      "pokemon_usage": 0.06
+    },
+    {
+      "pokemon_id": "466",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.79,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "462",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 52.1,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "523",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 24.44,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "312",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 25.26,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "219",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 18.68,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.010073932961789666
+}

@@ -1,0 +1,39 @@
+{
+  "id": "starf-berry",
+  "name": "Starf Berry",
+  "effect": "If a Pokemon holds one of these Berries, one of its stats will be sharply boosted should it find itself in a pinch.",
+  "sprites": {
+    "low_res": "/images/items/sprites/starf-berry.png",
+    "high_res": "/images/items/high-res/starf-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "atk": 2,
+      "def": 2,
+      "spa": 2,
+      "spd": 2,
+      "spe": 2,
+      "boost": "stage",
+      "affects": "self",
+      "condition_holder": "helth below 25% - only one stat boosted",
+      "effect_type": "boost",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "103",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 31.78,
+      "pokemon_usage": 0.04
+    }
+  ],
+  "global_usage": 0.00021043400555124825
+}

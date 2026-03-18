@@ -38,7 +38,7 @@ export default function ToolsDashboard({ data, lang }: ToolsDashboardProps) {
         <h3 className="font-bold text-lg flex items-center gap-2 mb-2">
           <AlertTriangle /> DEBUG: NO DATA RECEIVED
         </h3>
-        <p>El componente ha recibido 'undefined'. Revisa <code>page.tsx</code>.</p>
+        <p>El componente ha recibido &apos;undefined&apos;. Revisa <code>page.tsx</code>.</p>
         <p>Asegúrate de pasar: <code>data={'{dict.tools_dashboard}'}</code></p>
       </div>
     );
@@ -122,7 +122,7 @@ export default function ToolsDashboard({ data, lang }: ToolsDashboardProps) {
           
           {/* Debug Data Dump */}
           <div className="mt-4 p-4 bg-black/50 rounded text-[10px] font-mono text-left max-w-md w-full overflow-auto max-h-40">
-            <p className="text-brand-cyan mb-1">// DEBUG DATA DUMP:</p>
+            <p className="text-brand-cyan mb-1">{`// DEBUG DATA DUMP:`}</p>
             <pre>{JSON.stringify({ 
               filterActive: filter, 
               totalToolsRaw: toolsList.length,

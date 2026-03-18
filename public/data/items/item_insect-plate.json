@@ -1,0 +1,30 @@
+{
+  "id": "insect-plate",
+  "name": "Insect Plate",
+  "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of bugs and boosts the power of the holder's Bug-type moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/insect-plate.png",
+    "high_res": "/images/items/high-res/insect-plate.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "type_related": [
+        "bug"
+      ],
+      "effect_type": "boost",
+      "power": 20,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.0001146684205299815
+}

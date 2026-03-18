@@ -43,5 +43,25 @@ export interface ItemData {
   available_in_gens: string[]; // Obtenido de PokeAPI
   fling_power: number | null; // Obtenido de PokeAPI
 }
-
 export type ItemDatabase = Record<string, ItemData>; // Indexado por id
+
+export interface IItemUser {
+  pokemon_id: string; // ej. "corviknight"
+  format: string; // ej. "gen9ou" o "vgc_reg_h"
+  usage_rate: number; // Porcentaje de uso del objeto en este Pokémon (ej. 85.5)
+  pokemon_usage?: number; // Porcentaje de uso en el formato del Pokémon (ej. 23.4)
+}
+
+export interface IItemDetail extends ItemData {
+  best_users: IItemUser[];
+  global_usage?: number;
+}
+
+export interface IItemIndex {
+  id: string;
+  name: string;
+  category: string;
+  effect: string;
+  local_image_path: string;
+  max_usage?: number;
+}

@@ -1,0 +1,28 @@
+{
+  "id": "red-orb",
+  "name": "Red Orb",
+  "effect": "A shiny red orb that is said to have a deep connection to a legend of the Hoenn region.",
+  "sprites": {
+    "low_res": "/images/items/sprites/red-orb.png",
+    "high_res": "/images/items/high-res/red-orb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "pokemon": [
+        "groudon"
+      ],
+      "effect_type": "",
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

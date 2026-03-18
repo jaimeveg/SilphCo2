@@ -1,0 +1,124 @@
+{
+  "id": "wide-lens",
+  "name": "Wide Lens",
+  "effect": "An item to be held by a Pokemon. It's a magnifying lens that slightly boosts the accuracy of the holder's moves.",
+  "sprites": {
+    "low_res": "/images/items/sprites/wide-lens.png",
+    "high_res": "/images/items/high-res/wide-lens.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "boost",
+      "move_acc": 10,
+      "use": "permanent",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "925",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 30.82,
+      "pokemon_usage": 2.04
+    },
+    {
+      "pokemon_id": "3",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.1,
+      "pokemon_usage": 0.99
+    },
+    {
+      "pokemon_id": "639",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 21.44,
+      "pokemon_usage": 0.88
+    },
+    {
+      "pokemon_id": "763",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 85.64,
+      "pokemon_usage": 0.6
+    },
+    {
+      "pokemon_id": "373",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.82,
+      "pokemon_usage": 0.6
+    },
+    {
+      "pokemon_id": "38",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 26.06,
+      "pokemon_usage": 0.55
+    },
+    {
+      "pokemon_id": "6",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 20.11,
+      "pokemon_usage": 0.48
+    },
+    {
+      "pokemon_id": "497",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 15.32,
+      "pokemon_usage": 0.31
+    },
+    {
+      "pokemon_id": "484",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.85,
+      "pokemon_usage": 0.23
+    },
+    {
+      "pokemon_id": "549",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 25.89,
+      "pokemon_usage": 0.15
+    },
+    {
+      "pokemon_id": "467",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 33.85,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "982",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 33.03,
+      "pokemon_usage": 0.07
+    },
+    {
+      "pokemon_id": "542",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 20.18,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "185",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.31,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "609",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.71,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "707",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 17.6,
+      "pokemon_usage": 0.01
+    }
+  ],
+  "global_usage": 0.022446064132979806
+}

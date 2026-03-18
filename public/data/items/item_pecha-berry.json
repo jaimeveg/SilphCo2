@@ -1,0 +1,28 @@
+{
+  "id": "pecha-berry",
+  "name": "Pecha Berry",
+  "effect": "If a Pokemon holds one of these Berries, it will be able to lift the effects of being poisoned from itself.",
+  "sprites": {
+    "low_res": "/images/items/sprites/pecha-berry.png",
+    "high_res": "/images/items/high-res/pecha-berry.png"
+  },
+  "categories": [
+    "berry"
+  ],
+  "mechanics": [
+    {
+      "category": "berry",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "gets poisoned",
+      "effect_type": "",
+      "use": "single",
+      "status": "poi",
+      "mode": "cure"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 0.000004032213657788346
+}

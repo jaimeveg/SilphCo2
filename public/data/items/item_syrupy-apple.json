@@ -1,0 +1,33 @@
+{
+  "id": "syrupy-apple",
+  "name": "Syrupy Apple",
+  "effect": "A peculiar apple that can make a certain species of Pokemon evolve. It's exceptionally syrupy.",
+  "sprites": {
+    "low_res": "/images/items/sprites/syrupy-apple.png",
+    "high_res": "/images/items/high-res/syrupy-apple.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "use",
+      "pokemon": [
+        "applin"
+      ],
+      "evo_pokemon": [
+        "dipplin"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [],
+  "global_usage": 5.782840461987563e-7
+}

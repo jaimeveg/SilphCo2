@@ -1,0 +1,58 @@
+{
+  "id": "toxic-orb",
+  "name": "Toxic Orb",
+  "effect": "An item to be held by a Pokemon. It's a bizarre orb that exudes toxins when touched and will badly poison the holder during battle.",
+  "sprites": {
+    "low_res": "/images/items/sprites/toxic-orb.png",
+    "high_res": "/images/items/high-res/toxic-orb.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "effect_type": "",
+      "use": "permanent",
+      "status": "poi",
+      "mode": "inflicts"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "978",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.96,
+      "pokemon_usage": 1.21
+    },
+    {
+      "pokemon_id": "472",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 71.09,
+      "pokemon_usage": 0.32
+    },
+    {
+      "pokemon_id": "286",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 20.01,
+      "pokemon_usage": 0.24
+    },
+    {
+      "pokemon_id": "136",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 54.59,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "335",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 94.2,
+      "pokemon_usage": 0.03
+    }
+  ],
+  "global_usage": 0.007685867523478656
+}

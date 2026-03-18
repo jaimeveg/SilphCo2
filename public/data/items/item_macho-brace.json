@@ -1,0 +1,27 @@
+{
+  "id": "macho-brace",
+  "name": "Macho Brace",
+  "effect": "An item to be held by a Pokemon. Holding this stiff, heavy brace reduces a Pokemon's Speed in battle but allows its stats to grow more quickly.",
+  "sprites": {
+    "low_res": "/images/items/sprites/macho-brace.png",
+    "high_res": "/images/items/high-res/macho-brace.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "doubles ev gain"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

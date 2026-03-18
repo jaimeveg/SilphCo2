@@ -1,0 +1,32 @@
+{
+  "id": "electirizer",
+  "name": "Electirizer",
+  "effect": "A box packed with a tremendous amount of electric energy. It's loved by a certain Pokemon.",
+  "sprites": {
+    "low_res": "/images/items/sprites/electirizer.png",
+    "high_res": "/images/items/high-res/electirizer.png"
+  },
+  "categories": [
+    "evolution"
+  ],
+  "mechanics": [
+    {
+      "category": "evolution",
+      "boost": "",
+      "affects": "",
+      "condition_holder": "hold+trade",
+      "pokemon": [
+        "electabuzz"
+      ],
+      "evo_pokemon": [
+        "electivire"
+      ],
+      "effect_type": "",
+      "use": "",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": []
+}

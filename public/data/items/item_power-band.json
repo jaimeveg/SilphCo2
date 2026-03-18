@@ -1,0 +1,35 @@
+{
+  "id": "power-band",
+  "name": "Power Band",
+  "effect": "An item to be held by a Pokemon. This band reduces a Pokemon's Speed in battle but allows its Sp. Def stat to grow more quickly.",
+  "sprites": {
+    "low_res": "/images/items/sprites/power-band.png",
+    "high_res": "/images/items/high-res/power-band.png"
+  },
+  "categories": [
+    "miscellaneous"
+  ],
+  "mechanics": [
+    {
+      "category": "miscellaneous",
+      "boost": "",
+      "affects": "",
+      "effect_type": "",
+      "use": "",
+      "mode": "",
+      "breeding": true,
+      "breeding_effect": "8 extra evs on spd"
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "962",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 34.76,
+      "pokemon_usage": 0.03
+    }
+  ],
+  "global_usage": 0.0011470846107337637
+}

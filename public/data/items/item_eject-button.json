@@ -1,0 +1,88 @@
+{
+  "id": "eject-button",
+  "name": "Eject Button",
+  "effect": "An item to be held by a Pokemon. If the holder is damaged by an attack, it will be switched out of battle to be replaced by another Pokemon on your team.",
+  "sprites": {
+    "low_res": "/images/items/sprites/eject-button.png",
+    "high_res": "/images/items/high-res/eject-button.png"
+  },
+  "categories": [
+    "competitive"
+  ],
+  "mechanics": [
+    {
+      "category": "competitive",
+      "boost": "",
+      "affects": "self",
+      "condition_holder": "receive an attack",
+      "effect_type": "",
+      "use": "single",
+      "mode": ""
+    }
+  ],
+  "available_in_gens": [],
+  "fling_power": null,
+  "best_users": [
+    {
+      "pokemon_id": "10186",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 15.53,
+      "pokemon_usage": 13.62
+    },
+    {
+      "pokemon_id": "302",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 23.18,
+      "pokemon_usage": 2.06
+    },
+    {
+      "pokemon_id": "764",
+      "format": "gen9vgc2026regf",
+      "usage_rate": 16.77,
+      "pokemon_usage": 0.63
+    },
+    {
+      "pokemon_id": "237",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 32.58,
+      "pokemon_usage": 0.62
+    },
+    {
+      "pokemon_id": "678",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 19.38,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "10252",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 39.56,
+      "pokemon_usage": 0.05
+    },
+    {
+      "pokemon_id": "10019",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 16.38,
+      "pokemon_usage": 0.04
+    },
+    {
+      "pokemon_id": "966",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 28.78,
+      "pokemon_usage": 0.03
+    },
+    {
+      "pokemon_id": "9",
+      "format": "gen9vgc2026regfbo3",
+      "usage_rate": 23.52,
+      "pokemon_usage": 0.02
+    },
+    {
+      "pokemon_id": "162",
+      "format": "gen9vgc2026regi",
+      "usage_rate": 19.35,
+      "pokemon_usage": 0.02
+    }
+  ],
+  "global_usage": 0.03308027581794073
+}
