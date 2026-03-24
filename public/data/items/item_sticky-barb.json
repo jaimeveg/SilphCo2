@@ -1,7 +1,7 @@
 {
   "id": "sticky-barb",
   "name": "Sticky Barb",
-  "effect": "An item to be held by a Pokemon. It damages the holder every turn and may latch on to Pokemon that make direct contact with the holder.",
+  "effect": "An item to be held by a Pok�mon. It damages the holder every turn and may latch on to Pok�mon that make direct contact with the holder.",
   "sprites": {
     "low_res": "/images/items/sprites/sticky-barb.png",
     "high_res": "/images/items/high-res/sticky-barb.png"
@@ -12,7 +12,7 @@
   "mechanics": [
     {
       "category": "competitive",
-      "atk": 12.5,
+      "hp": 12.5,
       "boost": "stage",
       "affects": "self",
       "effect_type": "reduces",

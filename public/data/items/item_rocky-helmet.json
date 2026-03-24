@@ -1,7 +1,7 @@
 {
   "id": "rocky-helmet",
   "name": "Rocky Helmet",
-  "effect": "An item to be held by a Pokemon. This helmet damages any attacker that makes direct contact with the holder.",
+  "effect": "An item to be held by a Pok�mon. This helmet damages any attacker that makes direct contact with the holder.",
   "sprites": {
     "low_res": "/images/items/sprites/rocky-helmet.png",
     "high_res": "/images/items/high-res/rocky-helmet.png"
@@ -12,7 +12,7 @@
   "mechanics": [
     {
       "category": "competitive",
-      "hp": 16.66,
+      "hp": 16.6,
       "boost": "stage",
       "affects": "enemy",
       "condition_holder": "physical contact attack",

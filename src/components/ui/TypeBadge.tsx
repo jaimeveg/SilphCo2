@@ -1,5 +1,5 @@
-'use client';
 import Image from 'next/image';
+import { Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { POKEDEX_DICTIONARY, Lang } from '@/lib/pokedexDictionary'; // Importar diccionario
 
@@ -42,8 +42,12 @@ export default function TypeBadge({ type, className, showLabel = true, lang = 'e
       }}
       title={`${labelPrefix}: ${translatedName.toUpperCase()}`} // <--- Tooltip Traducido
     >
-      <div className="relative w-4 h-4 shrink-0">
-        <Image src={iconUrl} alt={type} fill className="object-contain" />
+      <div className="relative w-4 h-4 shrink-0 flex items-center justify-center">
+        {normalizedType === 'stellar' ? (
+            <Star className="w-3.5 h-3.5 text-teal-300 fill-teal-600 drop-shadow-[0_0_8px_rgba(45,212,191,0.8)]" />
+        ) : (
+            <Image src={iconUrl} alt={type} fill className="object-contain" />
+        )}
       </div>
 
       {showLabel && (

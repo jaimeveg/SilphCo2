@@ -48,11 +48,20 @@ export async function GET(request: Request) {
         }
 
         const rawCount = rawMon['Raw count'];
+        const baseWeight = Object.values(rawMon.Abilities || {}).reduce((acc: number, curr: any) => acc + (curr as number), 0) || rawCount;
+
         const totalBattles = chaosData.info?.['number of battles'] || 0;
         const totalTeams = totalBattles * 2;
-        let usageRate = totalTeams > 0 ? (rawCount / totalBattles) * 100 : 0;
+        let usageRate = 0;
+        if (rawMon['usage'] !== undefined) {
+            usageRate = rawMon['usage'] * 100;
+        } else if (rawMon['Usage %'] !== undefined) {
+            usageRate = rawMon['Usage %'];
+        } else if (totalTeams > 0) {
+            usageRate = (rawCount / totalTeams) * 100;
+        }
 
-        const toPercent = (val: number) => ((val / rawCount) * 100).toFixed(2);
+        const toPercent = (val: number) => ((val / (baseWeight as number)) * 100).toFixed(2);
 
         // APLICAMOS EL FORMATEADOR Y RETENEMOS EL SLUG
         const processMap = (obj: any, limit = 15) => {
@@ -61,7 +70,7 @@ export async function GET(request: Request) {
                 .map(([k, v]) => ({
                     name: formatDisplayName(k), // Visual bonito
                     slug: k,                    // Retenemos el ID original
-                    value: ((v as number) / rawCount) * 100,
+                    value: ((v as number) / (baseWeight as number)) * 100,
                     displayValue: toPercent(v as number)
                 }))
                 .sort((a, b) => b.value - a.value)
@@ -73,7 +82,7 @@ export async function GET(request: Request) {
             return Object.entries(obj)
                 .map(([idStr, count]) => ({
                     id: parseInt(idStr, 10), 
-                    value: ((count as number) / rawCount) * 100,
+                    value: ((count as number) / (baseWeight as number)) * 100,
                     displayValue: toPercent(count as number)
                 }))
                 .sort((a, b) => b.value - a.value)

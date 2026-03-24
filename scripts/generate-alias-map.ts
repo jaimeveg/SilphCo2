@@ -44,7 +44,7 @@ const MANUAL_OVERRIDES: Record<string, number> = {
     'indeedee-m': 876,
     'indeedee-male': 876,
     'indeedee-f': 10186,
-    'indeedee-female': 10185,
+    'indeedee-female': 10186,
     'meowstic': 678,
     'meowstic-m': 678,
     'meowstic-male': 678,

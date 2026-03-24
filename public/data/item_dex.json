@@ -2,7 +2,7 @@
   "ability-shield": {
     "id": "ability-shield",
     "name": "Ability Shield",
-    "effect": "An item to be held by a Pokemon. This cute and rather unique-looking shield protects the holder from having its Ability changed by others.",
+    "effect": "An item to be held by a Pok�mon. This cute and rather unique-looking shield protects the holder from having its Ability changed by others.",
     "sprites": {
       "low_res": "/images/items/sprites/ability-shield.png",
       "high_res": "/images/items/high-res/ability-shield.png"
@@ -26,7 +26,7 @@
   "absorb-bulb": {
     "id": "absorb-bulb",
     "name": "Absorb Bulb",
-    "effect": "An item to be held by a Pokemon. This single-use bulb boosts the Sp. Atk stat if the holder is damaged by a Water-type attack.",
+    "effect": "An item to be held by a Pok�mon. This single-use bulb boosts the Sp. Atk stat if the holder is damaged by a Water-type attack.",
     "sprites": {
       "low_res": "/images/items/sprites/absorb-bulb.png",
       "high_res": "/images/items/high-res/absorb-bulb.png"
@@ -52,7 +52,7 @@
   "adamant-crystal": {
     "id": "adamant-crystal",
     "name": "Adamant Crystal",
-    "effect": "An item to be held by Dialga. This large, glowing gem wells with power and allows the Pokemon to change form.",
+    "effect": "An item to be held by Dialga. This large, glowing gem wells with power and allows the Pok�mon to change form.",
     "sprites": {
       "low_res": "/images/items/sprites/adamant-crystal.png",
       "high_res": "/images/items/high-res/adamant-crystal.png"
@@ -116,7 +116,7 @@
   "air-balloon": {
     "id": "air-balloon",
     "name": "Air Balloon",
-    "effect": "An item to be held by a Pokemon. This balloon makes the holder float in the air. If the holder is hit with an attack, the balloon will burst.",
+    "effect": "An item to be held by a Pok�mon. This balloon makes the holder float in the air. If the holder is hit with an attack, the balloon will burst.",
     "sprites": {
       "low_res": "/images/items/sprites/air-balloon.png",
       "high_res": "/images/items/high-res/air-balloon.png"
@@ -170,7 +170,7 @@
   "assault-vest": {
     "id": "assault-vest",
     "name": "Assault Vest",
-    "effect": "An item to be held by a Pokemon. This offensive vest boosts the holder's Sp. Def stat but prevents the use of status moves.",
+    "effect": "An item to be held by a Pok�mon. This offensive vest boosts the holder's Sp. Def stat but prevents the use of status moves.",
     "sprites": {
       "low_res": "/images/items/sprites/assault-vest.png",
       "high_res": "/images/items/high-res/assault-vest.png"
@@ -196,7 +196,7 @@
   "big-root": {
     "id": "big-root",
     "name": "Big Root",
-    "effect": "An item to be held by a Pokemon. This root boosts the amount of HP the holder restores to itself when it uses HP-stealing moves.",
+    "effect": "An item to be held by a Pok�mon. This root boosts the amount of HP the holder restores to itself when it uses HP-stealing moves.",
     "sprites": {
       "low_res": "/images/items/sprites/big-root.png",
       "high_res": "/images/items/high-res/big-root.png"
@@ -220,7 +220,7 @@
   "binding-band": {
     "id": "binding-band",
     "name": "Binding Band",
-    "effect": "An item to be held by a Pokemon. This band boosts the power of binding moves used by the holder.",
+    "effect": "An item to be held by a Pok�mon. This band boosts the power of binding moves used by the holder.",
     "sprites": {
       "low_res": "/images/items/sprites/binding-band.png",
       "high_res": "/images/items/high-res/binding-band.png"
@@ -244,7 +244,7 @@
   "black-belt": {
     "id": "black-belt",
     "name": "Black Belt",
-    "effect": "An item to be held by a Pokemon. This belt helps with focus and boosts the power of the holder's Fighting-type moves.",
+    "effect": "An item to be held by a Pok�mon. This belt helps with focus and boosts the power of the holder's Fighting-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/black-belt.png",
       "high_res": "/images/items/high-res/black-belt.png"
@@ -272,7 +272,7 @@
   "black-glasses": {
     "id": "black-glasses",
     "name": "Black Glasses",
-    "effect": "An item to be held by a Pokemon. It's a pair of shady- looking glasses that boost the power of the holder's Dark-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a pair of shady- looking glasses that boost the power of the holder's Dark-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/black-glasses.png",
       "high_res": "/images/items/high-res/black-glasses.png"
@@ -300,7 +300,7 @@
   "black-sludge": {
     "id": "black-sludge",
     "name": "Black Sludge",
-    "effect": "An item to be held by a Pokemon. If the holder is a Poison type, this sludge will gradually restore its HP. It damages any other type.",
+    "effect": "An item to be held by a Pok�mon. If the holder is a Poison type, this sludge will gradually restore its HP. It damages any other type.",
     "sprites": {
       "low_res": "/images/items/sprites/black-sludge.png",
       "high_res": "/images/items/high-res/black-sludge.png"
@@ -314,7 +314,7 @@
         "hp": 6.25,
         "boost": "stage",
         "affects": "self",
-        "condition_holder": "poison type (losses hp if not poison)",
+        "condition_holder": "poison type",
         "effect_type": "boost",
         "use": "permanent",
         "mode": ""
@@ -350,7 +350,7 @@
   "blunder-policy": {
     "id": "blunder-policy",
     "name": "Blunder Policy",
-    "effect": "An item to be held by a Pokemon. If the holder misses with a move due to low accuracy, this policy will sharply boost its Speed stat.",
+    "effect": "An item to be held by a Pok�mon. If the holder misses with a move due to low accuracy, this policy will sharply boost its Speed stat.",
     "sprites": {
       "low_res": "/images/items/sprites/blunder-policy.png",
       "high_res": "/images/items/high-res/blunder-policy.png"
@@ -376,7 +376,7 @@
   "booster-energy": {
     "id": "booster-energy",
     "name": "Booster Energy",
-    "effect": "An item to be held by Pokemon with certain Abilities. The energy that fills this capsule boosts the strength of the Pokemon.",
+    "effect": "An item to be held by Pok�mon with certain Abilities. The energy that fills this capsule boosts the strength of the Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/booster-energy.png",
       "high_res": "/images/items/high-res/booster-energy.png"
@@ -400,7 +400,7 @@
   "bright-powder": {
     "id": "bright-powder",
     "name": "Bright Powder",
-    "effect": "An item to be held by a Pokemon. This glittery powder casts a tricky glare that lowers the accuracy of opposing Pokemon's moves.",
+    "effect": "An item to be held by a Pok�mon. This glittery powder casts a tricky glare that lowers the accuracy of opposing Pok�mon's moves.",
     "sprites": {
       "low_res": "/images/items/sprites/bright-powder.png",
       "high_res": "/images/items/high-res/bright-powder.png"
@@ -425,7 +425,7 @@
   "bug-gem": {
     "id": "bug-gem",
     "name": "Bug Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of bugs and will boost the power of a Bug-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of bugs and will boost the power of a Bug-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/bug-gem.png",
       "high_res": "/images/items/high-res/bug-gem.png"
@@ -454,7 +454,7 @@
   "bug-memory": {
     "id": "bug-memory",
     "name": "Bug Memory",
-    "effect": "A memory disc that contains Bug-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Bug-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/bug-memory.png",
       "high_res": "/images/items/high-res/bug-memory.png"
@@ -538,7 +538,7 @@
   "cell-battery": {
     "id": "cell-battery",
     "name": "Cell Battery",
-    "effect": "An item to be held by a Pokemon. This single-use battery boosts the Attack stat if the holder is damaged by an Electric-type attack.",
+    "effect": "An item to be held by a Pok�mon. This single-use battery boosts the Attack stat if the holder is damaged by an Electric-type attack.",
     "sprites": {
       "low_res": "/images/items/sprites/cell-battery.png",
       "high_res": "/images/items/high-res/cell-battery.png"
@@ -564,7 +564,7 @@
   "charcoal": {
     "id": "charcoal",
     "name": "Charcoal",
-    "effect": "An item to be held by a Pokemon. It's a combustible fuel that boosts the power of the holder's Fire-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a combustible fuel that boosts the power of the holder's Fire-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/charcoal.png",
       "high_res": "/images/items/high-res/charcoal.png"
@@ -622,7 +622,7 @@
   "choice-band": {
     "id": "choice-band",
     "name": "Choice Band",
-    "effect": "An item to be held by a Pokemon. This curious headband boosts the holder's Attack stat but only allows the use of a single move.",
+    "effect": "An item to be held by a Pok�mon. This curious headband boosts the holder's Attack stat but only allows the use of a single move.",
     "sprites": {
       "low_res": "/images/items/sprites/choice-band.png",
       "high_res": "/images/items/high-res/choice-band.png"
@@ -648,7 +648,7 @@
   "choice-scarf": {
     "id": "choice-scarf",
     "name": "Choice Scarf",
-    "effect": "An item to be held by a Pokemon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move.",
+    "effect": "An item to be held by a Pok�mon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move.",
     "sprites": {
       "low_res": "/images/items/sprites/choice-scarf.png",
       "high_res": "/images/items/high-res/choice-scarf.png"
@@ -674,7 +674,7 @@
   "choice-specs": {
     "id": "choice-specs",
     "name": "Choice Specs",
-    "effect": "An item to be held by a Pokemon. These curious glasses boost the holder's Sp. Atk stat but only allow the use of a single move.",
+    "effect": "An item to be held by a Pok�mon. These curious glasses boost the holder's Sp. Atk stat but only allow the use of a single move.",
     "sprites": {
       "low_res": "/images/items/sprites/choice-specs.png",
       "high_res": "/images/items/high-res/choice-specs.png"
@@ -700,7 +700,7 @@
   "clear-amulet": {
     "id": "clear-amulet",
     "name": "Clear Amulet",
-    "effect": "An item to be held by a Pokemon. This clear, sparkling amulet protects the holder from having its stats lowered by moves used against it or by other Pokemon's Abilities.",
+    "effect": "An item to be held by a Pok�mon. This clear, sparkling amulet protects the holder from having its stats lowered by moves used against it or by other Pok�mon's Abilities.",
     "sprites": {
       "low_res": "/images/items/sprites/clear-amulet.png",
       "high_res": "/images/items/high-res/clear-amulet.png"
@@ -754,7 +754,7 @@
   "covert-cloak": {
     "id": "covert-cloak",
     "name": "Covert Cloak",
-    "effect": "An item to be held by a Pokemon. This hooded cloak conceals the holder, tricking the eyes of its enemies and protecting it from the additional effects of moves.",
+    "effect": "An item to be held by a Pok�mon. This hooded cloak conceals the holder, tricking the eyes of its enemies and protecting it from the additional effects of moves.",
     "sprites": {
       "low_res": "/images/items/sprites/covert-cloak.png",
       "high_res": "/images/items/high-res/covert-cloak.png"
@@ -778,7 +778,7 @@
   "damp-rock": {
     "id": "damp-rock",
     "name": "Damp Rock",
-    "effect": "An item to be held by a Pokemon. When the holder changes the weather to rain, the rain will persist for longer than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder changes the weather to rain, the rain will persist for longer than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/damp-rock.png",
       "high_res": "/images/items/high-res/damp-rock.png"
@@ -803,7 +803,7 @@
   "dark-gem": {
     "id": "dark-gem",
     "name": "Dark Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of darkness and will boost the power of a Dark-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of darkness and will boost the power of a Dark-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/dark-gem.png",
       "high_res": "/images/items/high-res/dark-gem.png"
@@ -832,7 +832,7 @@
   "dark-memory": {
     "id": "dark-memory",
     "name": "Dark Memory",
-    "effect": "A memory disc that contains Dark-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Dark-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/dark-memory.png",
       "high_res": "/images/items/high-res/dark-memory.png"
@@ -998,7 +998,7 @@
   "destiny-knot": {
     "id": "destiny-knot",
     "name": "Destiny Knot",
-    "effect": "An item to be held by a Pokemon. Should the holder of this bright-red thread become infatuated, the Pokemon it is infatuated with will be similarly afflicted.",
+    "effect": "An item to be held by a Pok�mon. Should the holder of this bright-red thread become infatuated, the Pok�mon it is infatuated with will be similarly afflicted.",
     "sprites": {
       "low_res": "/images/items/sprites/destiny-knot.png",
       "high_res": "/images/items/high-res/destiny-knot.png"
@@ -1055,7 +1055,7 @@
   "draco-plate": {
     "id": "draco-plate",
     "name": "Draco Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of dragons and boosts the power of the holder's Dragon-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of dragons and boosts the power of the holder's Dragon-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/draco-plate.png",
       "high_res": "/images/items/high-res/draco-plate.png"
@@ -1083,7 +1083,7 @@
   "dragon-fang": {
     "id": "dragon-fang",
     "name": "Dragon Fang",
-    "effect": "An item to be held by a Pokemon. This hard, sharp fang boosts the power of the holder's Dragon-type moves.",
+    "effect": "An item to be held by a Pok�mon. This hard, sharp fang boosts the power of the holder's Dragon-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/dragon-fang.png",
       "high_res": "/images/items/high-res/dragon-fang.png"
@@ -1111,7 +1111,7 @@
   "dragon-gem": {
     "id": "dragon-gem",
     "name": "Dragon Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of dragons and will boost the power of a Dragon-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of dragons and will boost the power of a Dragon-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/dragon-gem.png",
       "high_res": "/images/items/high-res/dragon-gem.png"
@@ -1140,7 +1140,7 @@
   "dragon-memory": {
     "id": "dragon-memory",
     "name": "Dragon Memory",
-    "effect": "A memory disc that contains Dragon-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Dragon-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/dragon-memory.png",
       "high_res": "/images/items/high-res/dragon-memory.png"
@@ -1194,7 +1194,7 @@
   "dread-plate": {
     "id": "dread-plate",
     "name": "Dread Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of darkness and boosts the power of the holder's Dark-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of darkness and boosts the power of the holder's Dark-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/dread-plate.png",
       "high_res": "/images/items/high-res/dread-plate.png"
@@ -1222,7 +1222,7 @@
   "earth-plate": {
     "id": "earth-plate",
     "name": "Earth Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of the earth and boosts the power of the holder's Ground-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of the earth and boosts the power of the holder's Ground-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/earth-plate.png",
       "high_res": "/images/items/high-res/earth-plate.png"
@@ -1274,7 +1274,7 @@
   "eject-button": {
     "id": "eject-button",
     "name": "Eject Button",
-    "effect": "An item to be held by a Pokemon. If the holder is damaged by an attack, it will be switched out of battle to be replaced by another Pokemon on your team.",
+    "effect": "An item to be held by a Pok�mon. If the holder is damaged by an attack, it will be switched out of battle to be replaced by another Pok�mon on your team.",
     "sprites": {
       "low_res": "/images/items/sprites/eject-button.png",
       "high_res": "/images/items/high-res/eject-button.png"
@@ -1299,7 +1299,7 @@
   "eject-pack": {
     "id": "eject-pack",
     "name": "Eject Pack",
-    "effect": "An item to be held by a Pokemon. If the holder's stats are lowered, it will be switched out of battle.",
+    "effect": "An item to be held by a Pok�mon. If the holder's stats are lowered, it will be switched out of battle.",
     "sprites": {
       "low_res": "/images/items/sprites/eject-pack.png",
       "high_res": "/images/items/high-res/eject-pack.png"
@@ -1324,7 +1324,7 @@
   "electric-gem": {
     "id": "electric-gem",
     "name": "Electric Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of electricity and will boost the power of an Electric-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of electricity and will boost the power of an Electric-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/electric-gem.png",
       "high_res": "/images/items/high-res/electric-gem.png"
@@ -1353,7 +1353,7 @@
   "electric-memory": {
     "id": "electric-memory",
     "name": "Electric Memory",
-    "effect": "A memory disc that contains Electric-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Electric-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/electric-memory.png",
       "high_res": "/images/items/high-res/electric-memory.png"
@@ -1383,7 +1383,7 @@
   "electric-seed": {
     "id": "electric-seed",
     "name": "Electric Seed",
-    "effect": "An item to be held by a Pokemon. If the terrain becomes Electric Terrain, the holder will use this seed to boost its own Defense stat.",
+    "effect": "An item to be held by a Pok�mon. If the terrain becomes Electric Terrain, the holder will use this seed to boost its own Defense stat.",
     "sprites": {
       "low_res": "/images/items/sprites/electric-seed.png",
       "high_res": "/images/items/high-res/electric-seed.png"
@@ -1433,7 +1433,7 @@
   "everstone": {
     "id": "everstone",
     "name": "Everstone",
-    "effect": "An item to be held by a Pokemon. A Pokemon holding this peculiar stone is prevented from evolving.",
+    "effect": "An item to be held by a Pok�mon. A Pok�mon holding this peculiar stone is prevented from evolving.",
     "sprites": {
       "low_res": "/images/items/sprites/everstone.png",
       "high_res": "/images/items/high-res/everstone.png"
@@ -1459,7 +1459,7 @@
   "eviolite": {
     "id": "eviolite",
     "name": "Eviolite",
-    "effect": "An item to be held by a Pokemon. This mysterious evolutionary lump boosts the Defense and Sp. Def stats when held by a Pokemon that can still evolve.",
+    "effect": "An item to be held by a Pok�mon. This mysterious evolutionary lump boosts the Defense and Sp. Def stats when held by a Pok�mon that can still evolve.",
     "sprites": {
       "low_res": "/images/items/sprites/eviolite.png",
       "high_res": "/images/items/high-res/eviolite.png"
@@ -1486,7 +1486,7 @@
   "expert-belt": {
     "id": "expert-belt",
     "name": "Expert Belt",
-    "effect": "An item to be held by a Pokemon. It's a well-worn belt that slightly boosts the power of the holder's supereffective moves.",
+    "effect": "An item to be held by a Pok�mon. It's a well-worn belt that slightly boosts the power of the holder's supereffective moves.",
     "sprites": {
       "low_res": "/images/items/sprites/expert-belt.png",
       "high_res": "/images/items/high-res/expert-belt.png"
@@ -1536,7 +1536,7 @@
   "fairy-feather": {
     "id": "fairy-feather",
     "name": "Fairy Feather",
-    "effect": "An item to be held by a Pokemon. This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves.",
+    "effect": "An item to be held by a Pok�mon. This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/fairy-feather.png",
       "high_res": "/images/items/high-res/fairy-feather.png"
@@ -1564,7 +1564,7 @@
   "fairy-gem": {
     "id": "fairy-gem",
     "name": "Fairy Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of fairies and will boost the power of a Fairy-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of fairies and will boost the power of a Fairy-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/fairy-gem.png",
       "high_res": "/images/items/high-res/fairy-gem.png"
@@ -1593,7 +1593,7 @@
   "fairy-memory": {
     "id": "fairy-memory",
     "name": "Fairy Memory",
-    "effect": "A memory disc that contains Fairy-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Fairy-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/fairy-memory.png",
       "high_res": "/images/items/high-res/fairy-memory.png"
@@ -1623,7 +1623,7 @@
   "fighting-gem": {
     "id": "fighting-gem",
     "name": "Fighting Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of the fighting spirit and will boost the power of a Fighting-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of the fighting spirit and will boost the power of a Fighting-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/fighting-gem.png",
       "high_res": "/images/items/high-res/fighting-gem.png"
@@ -1652,7 +1652,7 @@
   "fighting-memory": {
     "id": "fighting-memory",
     "name": "Fighting Memory",
-    "effect": "A memory disc that contains Fighting-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Fighting-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/fighting-memory.png",
       "high_res": "/images/items/high-res/fighting-memory.png"
@@ -1706,7 +1706,7 @@
   "fire-gem": {
     "id": "fire-gem",
     "name": "Fire Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of fire and will boost the power of a Fire-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of fire and will boost the power of a Fire-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/fire-gem.png",
       "high_res": "/images/items/high-res/fire-gem.png"
@@ -1735,7 +1735,7 @@
   "fire-memory": {
     "id": "fire-memory",
     "name": "Fire Memory",
-    "effect": "A memory disc that contains Fire-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Fire-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/fire-memory.png",
       "high_res": "/images/items/high-res/fire-memory.png"
@@ -1789,7 +1789,7 @@
   "fist-plate": {
     "id": "fist-plate",
     "name": "Fist Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of the fighting spirit and boosts the power of the holder's Fighting-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of the fighting spirit and boosts the power of the holder's Fighting-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/fist-plate.png",
       "high_res": "/images/items/high-res/fist-plate.png"
@@ -1817,7 +1817,7 @@
   "flame-orb": {
     "id": "flame-orb",
     "name": "Flame Orb",
-    "effect": "An item to be held by a Pokemon. It's a bizarre orb that gives off heat when touched and will afflict the holder with a burn during battle.",
+    "effect": "An item to be held by a Pok�mon. It's a bizarre orb that gives off heat when touched and will afflict the holder with a burn during battle.",
     "sprites": {
       "low_res": "/images/items/sprites/flame-orb.png",
       "high_res": "/images/items/high-res/flame-orb.png"
@@ -1842,7 +1842,7 @@
   "flame-plate": {
     "id": "flame-plate",
     "name": "Flame Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of fire and boosts the power of the holder's Fire-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of fire and boosts the power of the holder's Fire-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/flame-plate.png",
       "high_res": "/images/items/high-res/flame-plate.png"
@@ -1870,7 +1870,7 @@
   "float-stone": {
     "id": "float-stone",
     "name": "Float Stone",
-    "effect": "An item to be held by a Pokemon. This very light stone reduces the weight of the holder.",
+    "effect": "An item to be held by a Pok�mon. This very light stone reduces the weight of the holder.",
     "sprites": {
       "low_res": "/images/items/sprites/float-stone.png",
       "high_res": "/images/items/high-res/float-stone.png"
@@ -1894,7 +1894,7 @@
   "flying-gem": {
     "id": "flying-gem",
     "name": "Flying Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of flight and will boost the power of a Flying-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of flight and will boost the power of a Flying-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/flying-gem.png",
       "high_res": "/images/items/high-res/flying-gem.png"
@@ -1923,7 +1923,7 @@
   "flying-memory": {
     "id": "flying-memory",
     "name": "Flying Memory",
-    "effect": "A memory disc that contains Flying-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Flying-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/flying-memory.png",
       "high_res": "/images/items/high-res/flying-memory.png"
@@ -1977,7 +1977,7 @@
   "focus-band": {
     "id": "focus-band",
     "name": "Focus Band",
-    "effect": "An item to be held by a Pokemon. When the holder is hit with a move that should knock it out, it may be able to endure with 1 HP.",
+    "effect": "An item to be held by a Pok�mon. When the holder is hit with a move that should knock it out, it may be able to endure with 1 HP.",
     "sprites": {
       "low_res": "/images/items/sprites/focus-band.png",
       "high_res": "/images/items/high-res/focus-band.png"
@@ -2001,7 +2001,7 @@
   "focus-sash": {
     "id": "focus-sash",
     "name": "Focus Sash",
-    "effect": "An item to be held by a Pokemon. If the holder has full HP and it is hit with a move that should knock it out, it will endure with 1 HP�but only once.",
+    "effect": "An item to be held by a Pok�mon. If the holder has full HP and it is hit with a move that should knock it out, it will endure with 1 HP�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/focus-sash.png",
       "high_res": "/images/items/high-res/focus-sash.png"
@@ -2025,7 +2025,7 @@
   "full-incense": {
     "id": "full-incense",
     "name": "Full Incense",
-    "effect": "An item to be held by a Pokemon. This incense has a curious aroma that makes the holder move slower than usual.",
+    "effect": "An item to be held by a Pok�mon. This incense has a curious aroma that makes the holder move slower than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/full-incense.png",
       "high_res": "/images/items/high-res/full-incense.png"
@@ -2049,7 +2049,7 @@
   "ghost-gem": {
     "id": "ghost-gem",
     "name": "Ghost Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of ghosts and will boost the power of a Ghost-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of ghosts and will boost the power of a Ghost-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/ghost-gem.png",
       "high_res": "/images/items/high-res/ghost-gem.png"
@@ -2078,7 +2078,7 @@
   "ghost-memory": {
     "id": "ghost-memory",
     "name": "Ghost Memory",
-    "effect": "A memory disc that contains Ghost-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Ghost-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/ghost-memory.png",
       "high_res": "/images/items/high-res/ghost-memory.png"
@@ -2132,7 +2132,7 @@
   "grass-gem": {
     "id": "grass-gem",
     "name": "Grass Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of plants and will boost the power of a Grass-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of plants and will boost the power of a Grass-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/grass-gem.png",
       "high_res": "/images/items/high-res/grass-gem.png"
@@ -2161,7 +2161,7 @@
   "grass-memory": {
     "id": "grass-memory",
     "name": "Grass Memory",
-    "effect": "A memory disc that contains Grass-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Grass-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/grass-memory.png",
       "high_res": "/images/items/high-res/grass-memory.png"
@@ -2215,7 +2215,7 @@
   "grassy-seed": {
     "id": "grassy-seed",
     "name": "Grassy Seed",
-    "effect": "An item to be held by a Pokemon. If the terrain becomes Grassy Terrain, the holder will use this seed to boost its own Defense stat.",
+    "effect": "An item to be held by a Pok�mon. If the terrain becomes Grassy Terrain, the holder will use this seed to boost its own Defense stat.",
     "sprites": {
       "low_res": "/images/items/sprites/grassy-seed.png",
       "high_res": "/images/items/high-res/grassy-seed.png"
@@ -2240,7 +2240,7 @@
   "grip-claw": {
     "id": "grip-claw",
     "name": "Grip Claw",
-    "effect": "An item to be held by a Pokemon. When the holder uses moves that deal damage over several turns, such as Bind or Wrap, their effects will last longer than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder uses moves that deal damage over several turns, such as Bind or Wrap, their effects will last longer than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/grip-claw.png",
       "high_res": "/images/items/high-res/grip-claw.png"
@@ -2264,7 +2264,7 @@
   "griseous-core": {
     "id": "griseous-core",
     "name": "Griseous Core",
-    "effect": "An item to be held by Giratina. This large, glowing gem wells with power and allows the Pokemon to change form.",
+    "effect": "An item to be held by Giratina. This large, glowing gem wells with power and allows the Pok�mon to change form.",
     "sprites": {
       "low_res": "/images/items/sprites/griseous-core.png",
       "high_res": "/images/items/high-res/griseous-core.png"
@@ -2328,7 +2328,7 @@
   "ground-gem": {
     "id": "ground-gem",
     "name": "Ground Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of the earth and will boost the power of a Ground-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of the earth and will boost the power of a Ground-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/ground-gem.png",
       "high_res": "/images/items/high-res/ground-gem.png"
@@ -2357,7 +2357,7 @@
   "ground-memory": {
     "id": "ground-memory",
     "name": "Ground Memory",
-    "effect": "A memory disc that contains Ground-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Ground-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/ground-memory.png",
       "high_res": "/images/items/high-res/ground-memory.png"
@@ -2411,7 +2411,7 @@
   "hard-stone": {
     "id": "hard-stone",
     "name": "Hard Stone",
-    "effect": "An item to be held by a Pokemon. It's a durable stone that boosts the power of the holder's Rock-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a durable stone that boosts the power of the holder's Rock-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/hard-stone.png",
       "high_res": "/images/items/high-res/hard-stone.png"
@@ -2469,7 +2469,7 @@
   "heat-rock": {
     "id": "heat-rock",
     "name": "Heat Rock",
-    "effect": "An item to be held by a Pokemon. When the holder changes the weather to harsh sunlight, the sunlight will persist for longer than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder changes the weather to harsh sunlight, the sunlight will persist for longer than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/heat-rock.png",
       "high_res": "/images/items/high-res/heat-rock.png"
@@ -2494,7 +2494,7 @@
   "heavy-duty-boots": {
     "id": "heavy-duty-boots",
     "name": "Heavy-Duty Boots",
-    "effect": "An item to be held by a Pokemon. These boots protect the holder from the effects of traps and the like set on the battlefield.",
+    "effect": "An item to be held by a Pok�mon. These boots protect the holder from the effects of traps and the like set on the battlefield.",
     "sprites": {
       "low_res": "/images/items/sprites/heavy-duty-boots.png",
       "high_res": "/images/items/high-res/heavy-duty-boots.png"
@@ -2518,7 +2518,7 @@
   "ice-gem": {
     "id": "ice-gem",
     "name": "Ice Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of ice and will boost the power of an Ice-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of ice and will boost the power of an Ice-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/ice-gem.png",
       "high_res": "/images/items/high-res/ice-gem.png"
@@ -2547,7 +2547,7 @@
   "ice-memory": {
     "id": "ice-memory",
     "name": "Ice Memory",
-    "effect": "A memory disc that contains Ice-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Ice-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/ice-memory.png",
       "high_res": "/images/items/high-res/ice-memory.png"
@@ -2577,7 +2577,7 @@
   "icicle-plate": {
     "id": "icicle-plate",
     "name": "Icicle Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of ice and boosts the power of the holder's Ice-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of ice and boosts the power of the holder's Ice-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/icicle-plate.png",
       "high_res": "/images/items/high-res/icicle-plate.png"
@@ -2629,7 +2629,7 @@
   "icy-rock": {
     "id": "icy-rock",
     "name": "Icy Rock",
-    "effect": "An item to be held by a Pokemon. When the holder changes the weather to snow, the snow will persist for longer than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder changes the weather to snow, the snow will persist for longer than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/icy-rock.png",
       "high_res": "/images/items/high-res/icy-rock.png"
@@ -2678,7 +2678,7 @@
   "insect-plate": {
     "id": "insect-plate",
     "name": "Insect Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of bugs and boosts the power of the holder's Bug-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of bugs and boosts the power of the holder's Bug-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/insect-plate.png",
       "high_res": "/images/items/high-res/insect-plate.png"
@@ -2706,7 +2706,7 @@
   "iron-ball": {
     "id": "iron-ball",
     "name": "Iron Ball",
-    "effect": "An item to be held by a Pokemon. It lowers the holder's Speed stat and makes the holder vulnerable to Ground- type moves even if it is a Flying type or is levitating.",
+    "effect": "An item to be held by a Pok�mon. It lowers the holder's Speed stat and makes the holder vulnerable to Ground- type moves even if it is a Flying type or is levitating.",
     "sprites": {
       "low_res": "/images/items/sprites/iron-ball.png",
       "high_res": "/images/items/high-res/iron-ball.png"
@@ -2731,7 +2731,7 @@
   "iron-plate": {
     "id": "iron-plate",
     "name": "Iron Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of steel and boosts the power of the holder's Steel-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of steel and boosts the power of the holder's Steel-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/iron-plate.png",
       "high_res": "/images/items/high-res/iron-plate.png"
@@ -2759,7 +2759,7 @@
   "king's-rock": {
     "id": "king's-rock",
     "name": "King's Rock",
-    "effect": "An item to be held by a Pokemon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
+    "effect": "An item to be held by a Pok�mon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
     "sprites": {
       "low_res": "/images/items/sprites/king's-rock.png",
       "high_res": "/images/items/high-res/king's-rock.png"
@@ -2825,7 +2825,7 @@
   "lagging-tail": {
     "id": "lagging-tail",
     "name": "Lagging Tail",
-    "effect": "An item to be held by a Pokemon. A tail of something, this item is tremendously heavy and makes the holder move slower than usual.",
+    "effect": "An item to be held by a Pok�mon. A tail of something, this item is tremendously heavy and makes the holder move slower than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/lagging-tail.png",
       "high_res": "/images/items/high-res/lagging-tail.png"
@@ -2849,7 +2849,7 @@
   "lax-incense": {
     "id": "lax-incense",
     "name": "Lax Incense",
-    "effect": "An item to be held by a Pokemon. The curious aroma of this incense may cause moves to miss its holder.",
+    "effect": "An item to be held by a Pok�mon. The curious aroma of this incense may cause moves to miss its holder.",
     "sprites": {
       "low_res": "/images/items/sprites/lax-incense.png",
       "high_res": "/images/items/high-res/lax-incense.png"
@@ -2902,7 +2902,7 @@
   "leftovers": {
     "id": "leftovers",
     "name": "Leftovers",
-    "effect": "An item to be held by a Pokemon. It slowly but steadily restores the holder's HP.",
+    "effect": "An item to be held by a Pok�mon. It slowly but steadily restores the holder's HP.",
     "sprites": {
       "low_res": "/images/items/sprites/leftovers.png",
       "high_res": "/images/items/high-res/leftovers.png"
@@ -2927,7 +2927,7 @@
   "life-orb": {
     "id": "life-orb",
     "name": "Life Orb",
-    "effect": "An item to be held by a Pokemon. It boosts the power of the holder's moves, but the holder also loses a small amount of HP upon landing an attack.",
+    "effect": "An item to be held by a Pok�mon. It boosts the power of the holder's moves, but the holder also loses a small amount of HP upon landing an attack.",
     "sprites": {
       "low_res": "/images/items/sprites/life-orb.png",
       "high_res": "/images/items/high-res/life-orb.png"
@@ -2982,7 +2982,7 @@
   "light-clay": {
     "id": "light-clay",
     "name": "Light Clay",
-    "effect": "An item to be held by a Pokemon. When the holder uses protective moves like Light Screen or Reflect, their effects will last longer than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder uses protective moves like Light Screen or Reflect, their effects will last longer than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/light-clay.png",
       "high_res": "/images/items/high-res/light-clay.png"
@@ -3006,7 +3006,7 @@
   "loaded-dice": {
     "id": "loaded-dice",
     "name": "Loaded Dice",
-    "effect": "An item to be held by a Pokemon. This loaded dice always rolls a good number, and holding one can ensure that the holder's multistrike moves hit more times.",
+    "effect": "An item to be held by a Pok�mon. This loaded dice always rolls a good number, and holding one can ensure that the holder's multistrike moves hit more times.",
     "sprites": {
       "low_res": "/images/items/sprites/loaded-dice.png",
       "high_res": "/images/items/high-res/loaded-dice.png"
@@ -3058,7 +3058,7 @@
   "luminous-moss": {
     "id": "luminous-moss",
     "name": "Luminous Moss",
-    "effect": "An item to be held by a Pokemon. This single-use luminous moss boosts the Sp. Def stat if the holder is damaged by a Water-type move.",
+    "effect": "An item to be held by a Pok�mon. This single-use luminous moss boosts the Sp. Def stat if the holder is damaged by a Water-type move.",
     "sprites": {
       "low_res": "/images/items/sprites/luminous-moss.png",
       "high_res": "/images/items/high-res/luminous-moss.png"
@@ -3108,7 +3108,7 @@
   "lustrous-globe": {
     "id": "lustrous-globe",
     "name": "Lustrous Globe",
-    "effect": "An item to be held by Palkia. This large, glowing orb wells with power and allows the Pokemon to change form.",
+    "effect": "An item to be held by Palkia. This large, glowing orb wells with power and allows the Pok�mon to change form.",
     "sprites": {
       "low_res": "/images/items/sprites/lustrous-globe.png",
       "high_res": "/images/items/high-res/lustrous-globe.png"
@@ -3196,7 +3196,7 @@
   "macho-brace": {
     "id": "macho-brace",
     "name": "Macho Brace",
-    "effect": "An item to be held by a Pokemon. Holding this stiff, heavy brace reduces a Pokemon's Speed in battle but allows its stats to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. Holding this stiff, heavy brace reduces a Pok�mon's Speed in battle but allows its stats to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/macho-brace.png",
       "high_res": "/images/items/high-res/macho-brace.png"
@@ -3222,7 +3222,7 @@
   "magnet": {
     "id": "magnet",
     "name": "Magnet",
-    "effect": "An item to be held by a Pokemon. It's a powerful magnet that boosts the power of the holder's Electric-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a powerful magnet that boosts the power of the holder's Electric-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/magnet.png",
       "high_res": "/images/items/high-res/magnet.png"
@@ -3274,7 +3274,7 @@
   "meadow-plate": {
     "id": "meadow-plate",
     "name": "Meadow Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of plants and boosts the power of the holder's Grass-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of plants and boosts the power of the holder's Grass-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/meadow-plate.png",
       "high_res": "/images/items/high-res/meadow-plate.png"
@@ -3302,7 +3302,7 @@
   "mental-herb": {
     "id": "mental-herb",
     "name": "Mental Herb",
-    "effect": "An item to be held by a Pokemon. The holder will be able to shake off move-binding effects to move freely� but only once.",
+    "effect": "An item to be held by a Pok�mon. The holder will be able to shake off move-binding effects to move freely� but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/mental-herb.png",
       "high_res": "/images/items/high-res/mental-herb.png"
@@ -3326,7 +3326,7 @@
   "metal-coat": {
     "id": "metal-coat",
     "name": "Metal Coat",
-    "effect": "An item to be held by a Pokemon. It's a special metallic coating that boosts the power of the holder's Steel-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a special metallic coating that boosts the power of the holder's Steel-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/metal-coat.png",
       "high_res": "/images/items/high-res/metal-coat.png"
@@ -3401,7 +3401,7 @@
   "metronome": {
     "id": "metronome",
     "name": "Metronome",
-    "effect": "An item to be held by a Pokemon. It boosts the power of a move that's used repeatedly. Once the chain is broken, the move's power returns to normal.",
+    "effect": "An item to be held by a Pok�mon. It boosts the power of a move that's used repeatedly. Once the chain is broken, the move's power returns to normal.",
     "sprites": {
       "low_res": "/images/items/sprites/metronome.png",
       "high_res": "/images/items/high-res/metronome.png"
@@ -3473,7 +3473,7 @@
   "mind-plate": {
     "id": "mind-plate",
     "name": "Mind Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of psychic energy and boosts the power of the holder's Psychic-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of psychic energy and boosts the power of the holder's Psychic-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/mind-plate.png",
       "high_res": "/images/items/high-res/mind-plate.png"
@@ -3501,7 +3501,7 @@
   "miracle-seed": {
     "id": "miracle-seed",
     "name": "Miracle Seed",
-    "effect": "An item to be held by a Pokemon. It's a seed imbued with life force that boosts the power of the holder's Grass-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a seed imbued with life force that boosts the power of the holder's Grass-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/miracle-seed.png",
       "high_res": "/images/items/high-res/miracle-seed.png"
@@ -3529,7 +3529,7 @@
   "mirror-herb": {
     "id": "mirror-herb",
     "name": "Mirror Herb",
-    "effect": "An item to be held by a Pokemon. This herb will allow the holder to mirror an opponent's stat increases to boost its own stats�but only once.",
+    "effect": "An item to be held by a Pok�mon. This herb will allow the holder to mirror an opponent's stat increases to boost its own stats�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/mirror-herb.png",
       "high_res": "/images/items/high-res/mirror-herb.png"
@@ -3553,7 +3553,7 @@
   "misty-seed": {
     "id": "misty-seed",
     "name": "Misty Seed",
-    "effect": "An item to be held by a Pokemon. If the terrain becomes Misty Terrain, the holder will use this seed to boost its own Sp. Def stat.",
+    "effect": "An item to be held by a Pok�mon. If the terrain becomes Misty Terrain, the holder will use this seed to boost its own Sp. Def stat.",
     "sprites": {
       "low_res": "/images/items/sprites/misty-seed.png",
       "high_res": "/images/items/high-res/misty-seed.png"
@@ -3578,7 +3578,7 @@
   "muscle-band": {
     "id": "muscle-band",
     "name": "Muscle Band",
-    "effect": "An item to be held by a Pokemon. This headband exudes strength, slightly boosting the power of the holder's physical moves.",
+    "effect": "An item to be held by a Pok�mon. This headband exudes strength, slightly boosting the power of the holder's physical moves.",
     "sprites": {
       "low_res": "/images/items/sprites/muscle-band.png",
       "high_res": "/images/items/high-res/muscle-band.png"
@@ -3604,7 +3604,7 @@
   "mystic-water": {
     "id": "mystic-water",
     "name": "Mystic Water",
-    "effect": "An item to be held by a Pokemon. This teardrop-shaped gem boosts the power of the holder's Water-type moves.",
+    "effect": "An item to be held by a Pok�mon. This teardrop-shaped gem boosts the power of the holder's Water-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/mystic-water.png",
       "high_res": "/images/items/high-res/mystic-water.png"
@@ -3632,7 +3632,7 @@
   "never-melt-ice": {
     "id": "never-melt-ice",
     "name": "Never-Melt Ice",
-    "effect": "An item to be held by a Pokemon. It's a heat-repelling piece of ice that boosts the power of the holder's Ice- type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a heat-repelling piece of ice that boosts the power of the holder's Ice- type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/never-melt-ice.png",
       "high_res": "/images/items/high-res/never-melt-ice.png"
@@ -3660,7 +3660,7 @@
   "normal-gem": {
     "id": "normal-gem",
     "name": "Normal Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of normalcy and will boost the power of a Normal-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of normalcy and will boost the power of a Normal-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/normal-gem.png",
       "high_res": "/images/items/high-res/normal-gem.png"
@@ -3713,7 +3713,7 @@
   "odd-incense": {
     "id": "odd-incense",
     "name": "Odd Incense",
-    "effect": "An item to be held by a Pokemon. This incense has a curious aroma that boosts the power of the holder's Psychic-type moves.",
+    "effect": "An item to be held by a Pok�mon. This incense has a curious aroma that boosts the power of the holder's Psychic-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/odd-incense.png",
       "high_res": "/images/items/high-res/odd-incense.png"
@@ -3820,7 +3820,7 @@
   "pixie-plate": {
     "id": "pixie-plate",
     "name": "Pixie Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of fairies and boosts the power of the holder's Fairy-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of fairies and boosts the power of the holder's Fairy-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/pixie-plate.png",
       "high_res": "/images/items/high-res/pixie-plate.png"
@@ -3848,7 +3848,7 @@
   "poison-barb": {
     "id": "poison-barb",
     "name": "Poison Barb",
-    "effect": "An item to be held by a Pokemon. This small poisonous barb boosts the power of the holder's Poison-type moves.",
+    "effect": "An item to be held by a Pok�mon. This small poisonous barb boosts the power of the holder's Poison-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/poison-barb.png",
       "high_res": "/images/items/high-res/poison-barb.png"
@@ -3876,7 +3876,7 @@
   "poison-gem": {
     "id": "poison-gem",
     "name": "Poison Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of poison and will boost the power of a Poison-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of poison and will boost the power of a Poison-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/poison-gem.png",
       "high_res": "/images/items/high-res/poison-gem.png"
@@ -3905,7 +3905,7 @@
   "poison-memory": {
     "id": "poison-memory",
     "name": "Poison Memory",
-    "effect": "A memory disc that contains Poison-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Poison-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/poison-memory.png",
       "high_res": "/images/items/high-res/poison-memory.png"
@@ -3987,7 +3987,7 @@
   "power-anklet": {
     "id": "power-anklet",
     "name": "Power Anklet",
-    "effect": "An item to be held by a Pokemon. This anklet reduces a Pokemon's Speed in battle but allows its Speed stat to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. This anklet reduces a Pok�mon's Speed in battle but allows its Speed stat to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/power-anklet.png",
       "high_res": "/images/items/high-res/power-anklet.png"
@@ -4013,7 +4013,7 @@
   "power-band": {
     "id": "power-band",
     "name": "Power Band",
-    "effect": "An item to be held by a Pokemon. This band reduces a Pokemon's Speed in battle but allows its Sp. Def stat to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. This band reduces a Pok�mon's Speed in battle but allows its Sp. Def stat to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/power-band.png",
       "high_res": "/images/items/high-res/power-band.png"
@@ -4039,7 +4039,7 @@
   "power-belt": {
     "id": "power-belt",
     "name": "Power Belt",
-    "effect": "An item to be held by a Pokemon. This belt reduces a Pokemon's Speed in battle but allows its Defense stat to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. This belt reduces a Pok�mon's Speed in battle but allows its Defense stat to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/power-belt.png",
       "high_res": "/images/items/high-res/power-belt.png"
@@ -4065,7 +4065,7 @@
   "power-bracer": {
     "id": "power-bracer",
     "name": "Power Bracer",
-    "effect": "An item to be held by a Pokemon. This bracer reduces a Pokemon's Speed in battle but allows its Attack stat to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. This bracer reduces a Pok�mon's Speed in battle but allows its Attack stat to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/power-bracer.png",
       "high_res": "/images/items/high-res/power-bracer.png"
@@ -4091,7 +4091,7 @@
   "power-herb": {
     "id": "power-herb",
     "name": "Power Herb",
-    "effect": "An item to be held by a Pokemon. It allows the holder to immediately use a move that normally requires a turn to charge�but only once.",
+    "effect": "An item to be held by a Pok�mon. It allows the holder to immediately use a move that normally requires a turn to charge�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/power-herb.png",
       "high_res": "/images/items/high-res/power-herb.png"
@@ -4115,7 +4115,7 @@
   "power-lens": {
     "id": "power-lens",
     "name": "Power Lens",
-    "effect": "An item to be held by a Pokemon. This lens reduces a Pokemon's Speed in battle but allows its Sp. Atk stat to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. This lens reduces a Pok�mon's Speed in battle but allows its Sp. Atk stat to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/power-lens.png",
       "high_res": "/images/items/high-res/power-lens.png"
@@ -4141,7 +4141,7 @@
   "power-weight": {
     "id": "power-weight",
     "name": "Power Weight",
-    "effect": "An item to be held by a Pokemon. This weight reduces a Pokemon's Speed in battle but allows its HP stat to grow more quickly.",
+    "effect": "An item to be held by a Pok�mon. This weight reduces a Pok�mon's Speed in battle but allows its HP stat to grow more quickly.",
     "sprites": {
       "low_res": "/images/items/sprites/power-weight.png",
       "high_res": "/images/items/high-res/power-weight.png"
@@ -4191,7 +4191,7 @@
   "protective-pads": {
     "id": "protective-pads",
     "name": "Protective Pads",
-    "effect": "An item to be held by a Pokemon. These pads protect the holder from effects triggered by making direct contact with another Pokemon.",
+    "effect": "An item to be held by a Pok�mon. These pads protect the holder from effects triggered by making direct contact with another Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/protective-pads.png",
       "high_res": "/images/items/high-res/protective-pads.png"
@@ -4215,7 +4215,7 @@
   "psychic-gem": {
     "id": "psychic-gem",
     "name": "Psychic Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of psychic energy and will boost the power of a Psychic-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of psychic energy and will boost the power of a Psychic-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/psychic-gem.png",
       "high_res": "/images/items/high-res/psychic-gem.png"
@@ -4244,7 +4244,7 @@
   "psychic-memory": {
     "id": "psychic-memory",
     "name": "Psychic Memory",
-    "effect": "A memory disc that contains Psychic-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Psychic-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/psychic-memory.png",
       "high_res": "/images/items/high-res/psychic-memory.png"
@@ -4274,7 +4274,7 @@
   "psychic-seed": {
     "id": "psychic-seed",
     "name": "Psychic Seed",
-    "effect": "An item to be held by a Pokemon. If the terrain becomes Psychic Terrain, the holder will use this seed to boost its own Sp. Def stat.",
+    "effect": "An item to be held by a Pok�mon. If the terrain becomes Psychic Terrain, the holder will use this seed to boost its own Sp. Def stat.",
     "sprites": {
       "low_res": "/images/items/sprites/psychic-seed.png",
       "high_res": "/images/items/high-res/psychic-seed.png"
@@ -4324,7 +4324,7 @@
   "punching-glove": {
     "id": "punching-glove",
     "name": "Punching Glove",
-    "effect": "An item to be held by a Pokemon. This protective glove boosts the power of the holder's punching moves and prevents direct contact with targets.",
+    "effect": "An item to be held by a Pok�mon. This protective glove boosts the power of the holder's punching moves and prevents direct contact with targets.",
     "sprites": {
       "low_res": "/images/items/sprites/punching-glove.png",
       "high_res": "/images/items/high-res/punching-glove.png"
@@ -4350,7 +4350,7 @@
   "quick-claw": {
     "id": "quick-claw",
     "name": "Quick Claw",
-    "effect": "An item to be held by a Pokemon. This light, sharp claw lets the holder occasionally unleash a move faster than it usually would.",
+    "effect": "An item to be held by a Pok�mon. This light, sharp claw lets the holder occasionally unleash a move faster than it usually would.",
     "sprites": {
       "low_res": "/images/items/sprites/quick-claw.png",
       "high_res": "/images/items/high-res/quick-claw.png"
@@ -4404,7 +4404,7 @@
   "razor-claw": {
     "id": "razor-claw",
     "name": "Razor Claw",
-    "effect": "An item to be held by a Pokemon. This sharply hooked claw boosts the critical-hit ratio of the holder's moves.",
+    "effect": "An item to be held by a Pok�mon. This sharply hooked claw boosts the critical-hit ratio of the holder's moves.",
     "sprites": {
       "low_res": "/images/items/sprites/razor-claw.png",
       "high_res": "/images/items/high-res/razor-claw.png"
@@ -4447,7 +4447,7 @@
   "razor-fang": {
     "id": "razor-fang",
     "name": "Razor Fang",
-    "effect": "An item to be held by a Pokemon. This sharply hooked fang may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
+    "effect": "An item to be held by a Pok�mon. This sharply hooked fang may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
     "sprites": {
       "low_res": "/images/items/sprites/razor-fang.png",
       "high_res": "/images/items/high-res/razor-fang.png"
@@ -4487,7 +4487,7 @@
   "reaper-cloth": {
     "id": "reaper-cloth",
     "name": "Reaper Cloth",
-    "effect": "A cloth imbued with horrifyingly strong spiritual energy. It's loved by a certain Pokemon.",
+    "effect": "A cloth imbued with horrifyingly strong spiritual energy. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/reaper-cloth.png",
       "high_res": "/images/items/high-res/reaper-cloth.png"
@@ -4518,7 +4518,7 @@
   "red-card": {
     "id": "red-card",
     "name": "Red Card",
-    "effect": "An item to be held by a Pokemon. If the holder is damaged by an attack, the mysterious power of this card can remove the attacker from the battle.",
+    "effect": "An item to be held by a Pok�mon. If the holder is damaged by an attack, the mysterious power of this card can remove the attacker from the battle.",
     "sprites": {
       "low_res": "/images/items/sprites/red-card.png",
       "high_res": "/images/items/high-res/red-card.png"
@@ -4569,7 +4569,7 @@
   "ring-target": {
     "id": "ring-target",
     "name": "Ring Target",
-    "effect": "An item to be held by a Pokemon. Moves that would normally have no effect due to type matchups will still hit the holder.",
+    "effect": "An item to be held by a Pok�mon. Moves that would normally have no effect due to type matchups will still hit the holder.",
     "sprites": {
       "low_res": "/images/items/sprites/ring-target.png",
       "high_res": "/images/items/high-res/ring-target.png"
@@ -4593,7 +4593,7 @@
   "rock-gem": {
     "id": "rock-gem",
     "name": "Rock Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of rock and will boost the power of a Rock-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of rock and will boost the power of a Rock-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/rock-gem.png",
       "high_res": "/images/items/high-res/rock-gem.png"
@@ -4622,7 +4622,7 @@
   "rock-incense": {
     "id": "rock-incense",
     "name": "Rock Incense",
-    "effect": "An item to be held by a Pokemon. This incense has a curious aroma that boosts the power of the holder's Rock-type moves.",
+    "effect": "An item to be held by a Pok�mon. This incense has a curious aroma that boosts the power of the holder's Rock-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/rock-incense.png",
       "high_res": "/images/items/high-res/rock-incense.png"
@@ -4650,7 +4650,7 @@
   "rock-memory": {
     "id": "rock-memory",
     "name": "Rock Memory",
-    "effect": "A memory disc that contains Rock-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Rock-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/rock-memory.png",
       "high_res": "/images/items/high-res/rock-memory.png"
@@ -4704,7 +4704,7 @@
   "rocky-helmet": {
     "id": "rocky-helmet",
     "name": "Rocky Helmet",
-    "effect": "An item to be held by a Pokemon. This helmet damages any attacker that makes direct contact with the holder.",
+    "effect": "An item to be held by a Pok�mon. This helmet damages any attacker that makes direct contact with the holder.",
     "sprites": {
       "low_res": "/images/items/sprites/rocky-helmet.png",
       "high_res": "/images/items/high-res/rocky-helmet.png"
@@ -4715,7 +4715,7 @@
     "mechanics": [
       {
         "category": "competitive",
-        "hp": 16.66,
+        "hp": 16.6,
         "boost": "stage",
         "affects": "enemy",
         "condition_holder": "physical contact attack",
@@ -4730,7 +4730,7 @@
   "room-service": {
     "id": "room-service",
     "name": "Room Service",
-    "effect": "An item to be held by a Pokemon. If Trick Room takes effect, this item will lower the holder's Speed stat.",
+    "effect": "An item to be held by a Pok�mon. If Trick Room takes effect, this item will lower the holder's Speed stat.",
     "sprites": {
       "low_res": "/images/items/sprites/room-service.png",
       "high_res": "/images/items/high-res/room-service.png"
@@ -4754,7 +4754,7 @@
   "rose-incense": {
     "id": "rose-incense",
     "name": "Rose Incense",
-    "effect": "An item to be held by a Pokemon. This incense has a curious aroma that boosts the power of the holder's Grass-type moves.",
+    "effect": "An item to be held by a Pok�mon. This incense has a curious aroma that boosts the power of the holder's Grass-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/rose-incense.png",
       "high_res": "/images/items/high-res/rose-incense.png"
@@ -4836,7 +4836,7 @@
   "safety-goggles": {
     "id": "safety-goggles",
     "name": "Safety Goggles",
-    "effect": "An item to be held by a Pokemon. These goggles protect the holder from both sandstorm damage and the effects of powders and spores.",
+    "effect": "An item to be held by a Pok�mon. These goggles protect the holder from both sandstorm damage and the effects of powders and spores.",
     "sprites": {
       "low_res": "/images/items/sprites/safety-goggles.png",
       "high_res": "/images/items/high-res/safety-goggles.png"
@@ -4860,7 +4860,7 @@
   "scope-lens": {
     "id": "scope-lens",
     "name": "Scope Lens",
-    "effect": "An item to be held by a Pokemon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio.",
+    "effect": "An item to be held by a Pok�mon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio.",
     "sprites": {
       "low_res": "/images/items/sprites/scope-lens.png",
       "high_res": "/images/items/high-res/scope-lens.png"
@@ -4885,7 +4885,7 @@
   "sea-incense": {
     "id": "sea-incense",
     "name": "Sea Incense",
-    "effect": "An item to be held by a Pokemon. This incense has a curious aroma that boosts the power of the holder's Water-type moves.",
+    "effect": "An item to be held by a Pok�mon. This incense has a curious aroma that boosts the power of the holder's Water-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/sea-incense.png",
       "high_res": "/images/items/high-res/sea-incense.png"
@@ -4913,7 +4913,7 @@
   "sharp-beak": {
     "id": "sharp-beak",
     "name": "Sharp Beak",
-    "effect": "An item to be held by a Pokemon. It's a long, sharp beak that boosts the power of the holder's Flying-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a long, sharp beak that boosts the power of the holder's Flying-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/sharp-beak.png",
       "high_res": "/images/items/high-res/sharp-beak.png"
@@ -4941,7 +4941,7 @@
   "shed-shell": {
     "id": "shed-shell",
     "name": "Shed Shell",
-    "effect": "An item to be held by a Pokemon. Hard and sturdy, this discarded carapace enables the holder to switch out of battle without fail.",
+    "effect": "An item to be held by a Pok�mon. Hard and sturdy, this discarded carapace enables the holder to switch out of battle without fail.",
     "sprites": {
       "low_res": "/images/items/sprites/shed-shell.png",
       "high_res": "/images/items/high-res/shed-shell.png"
@@ -4965,7 +4965,7 @@
   "shell-bell": {
     "id": "shell-bell",
     "name": "Shell Bell",
-    "effect": "An item to be held by a Pokemon. The holder restores a little HP to itself every time it inflicts damage with an attack.",
+    "effect": "An item to be held by a Pok�mon. The holder restores a little HP to itself every time it inflicts damage with an attack.",
     "sprites": {
       "low_res": "/images/items/sprites/shell-bell.png",
       "high_res": "/images/items/high-res/shell-bell.png"
@@ -5019,7 +5019,7 @@
   "silk-scarf": {
     "id": "silk-scarf",
     "name": "Silk Scarf",
-    "effect": "An item to be held by a Pokemon. It's a sumptuous scarf that boosts the power of the holder's Normal-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a sumptuous scarf that boosts the power of the holder's Normal-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/silk-scarf.png",
       "high_res": "/images/items/high-res/silk-scarf.png"
@@ -5047,7 +5047,7 @@
   "silver-powder": {
     "id": "silver-powder",
     "name": "Silver Powder",
-    "effect": "An item to be held by a Pokemon. It's a shiny silver powder that boosts the power of the holder's Bug-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a shiny silver powder that boosts the power of the holder's Bug-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/silver-powder.png",
       "high_res": "/images/items/high-res/silver-powder.png"
@@ -5075,7 +5075,7 @@
   "sky-plate": {
     "id": "sky-plate",
     "name": "Sky Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of flight and boosts the power of the holder's Flying-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of flight and boosts the power of the holder's Flying-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/sky-plate.png",
       "high_res": "/images/items/high-res/sky-plate.png"
@@ -5103,7 +5103,7 @@
   "smooth-rock": {
     "id": "smooth-rock",
     "name": "Smooth Rock",
-    "effect": "An item to be held by a Pokemon. When the holder changes the weather to a sandstorm, the storm will persist for longer than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder changes the weather to a sandstorm, the storm will persist for longer than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/smooth-rock.png",
       "high_res": "/images/items/high-res/smooth-rock.png"
@@ -5152,7 +5152,7 @@
   "snowball": {
     "id": "snowball",
     "name": "Snowball",
-    "effect": "An item to be held by a Pokemon. This single-use ball of snow boosts the Attack stat if the holder is damaged by an Ice-type move.",
+    "effect": "An item to be held by a Pok�mon. This single-use ball of snow boosts the Attack stat if the holder is damaged by an Ice-type move.",
     "sprites": {
       "low_res": "/images/items/sprites/snowball.png",
       "high_res": "/images/items/high-res/snowball.png"
@@ -5178,7 +5178,7 @@
   "soft-sand": {
     "id": "soft-sand",
     "name": "Soft Sand",
-    "effect": "An item to be held by a Pokemon. This loose, silky sand boosts the power of the holder's Ground-type moves.",
+    "effect": "An item to be held by a Pok�mon. This loose, silky sand boosts the power of the holder's Ground-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/soft-sand.png",
       "high_res": "/images/items/high-res/soft-sand.png"
@@ -5230,7 +5230,7 @@
   "soothe-bell": {
     "id": "soothe-bell",
     "name": "Soothe Bell",
-    "effect": "An item to be held by a Pokemon. The comforting chime of this bell calms the holder, making it friendly.",
+    "effect": "An item to be held by a Pok�mon. The comforting chime of this bell calms the holder, making it friendly.",
     "sprites": {
       "low_res": "/images/items/sprites/soothe-bell.png",
       "high_res": "/images/items/high-res/soothe-bell.png"
@@ -5289,7 +5289,7 @@
   "spell-tag": {
     "id": "spell-tag",
     "name": "Spell Tag",
-    "effect": "An item to be held by a Pokemon. It's a sinister, eerie tag that boosts the power of the holder's Ghost-type moves.",
+    "effect": "An item to be held by a Pok�mon. It's a sinister, eerie tag that boosts the power of the holder's Ghost-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/spell-tag.png",
       "high_res": "/images/items/high-res/spell-tag.png"
@@ -5317,7 +5317,7 @@
   "splash-plate": {
     "id": "splash-plate",
     "name": "Splash Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of water and boosts the power of the holder's Water-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of water and boosts the power of the holder's Water-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/splash-plate.png",
       "high_res": "/images/items/high-res/splash-plate.png"
@@ -5345,7 +5345,7 @@
   "spooky-plate": {
     "id": "spooky-plate",
     "name": "Spooky Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of ghosts and boosts the power of the holder's Ghost-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of ghosts and boosts the power of the holder's Ghost-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/spooky-plate.png",
       "high_res": "/images/items/high-res/spooky-plate.png"
@@ -5373,7 +5373,7 @@
   "steel-gem": {
     "id": "steel-gem",
     "name": "Steel Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of steel and will boost the power of a Steel-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of steel and will boost the power of a Steel-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/steel-gem.png",
       "high_res": "/images/items/high-res/steel-gem.png"
@@ -5402,7 +5402,7 @@
   "steel-memory": {
     "id": "steel-memory",
     "name": "Steel Memory",
-    "effect": "A memory disc that contains Steel-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Steel-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/steel-memory.png",
       "high_res": "/images/items/high-res/steel-memory.png"
@@ -5456,7 +5456,7 @@
   "sticky-barb": {
     "id": "sticky-barb",
     "name": "Sticky Barb",
-    "effect": "An item to be held by a Pokemon. It damages the holder every turn and may latch on to Pokemon that make direct contact with the holder.",
+    "effect": "An item to be held by a Pok�mon. It damages the holder every turn and may latch on to Pok�mon that make direct contact with the holder.",
     "sprites": {
       "low_res": "/images/items/sprites/sticky-barb.png",
       "high_res": "/images/items/high-res/sticky-barb.png"
@@ -5467,7 +5467,7 @@
     "mechanics": [
       {
         "category": "competitive",
-        "atk": 12.5,
+        "hp": 12.5,
         "boost": "stage",
         "affects": "self",
         "effect_type": "reduces",
@@ -5481,7 +5481,7 @@
   "stone-plate": {
     "id": "stone-plate",
     "name": "Stone Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of rock and boosts the power of the holder's Rock-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of rock and boosts the power of the holder's Rock-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/stone-plate.png",
       "high_res": "/images/items/high-res/stone-plate.png"
@@ -5533,7 +5533,7 @@
   "terrain-extender": {
     "id": "terrain-extender",
     "name": "Terrain Extender",
-    "effect": "An item to be held by a Pokemon. It extends the duration of terrain caused by the holder's move or Ability.",
+    "effect": "An item to be held by a Pok�mon. It extends the duration of terrain caused by the holder's move or Ability.",
     "sprites": {
       "low_res": "/images/items/sprites/terrain-extender.png",
       "high_res": "/images/items/high-res/terrain-extender.png"
@@ -5587,7 +5587,7 @@
   "throat-spray": {
     "id": "throat-spray",
     "name": "Throat Spray",
-    "effect": "An item to be held by a Pokemon. If the holder uses a sound-based move, this throat spray will boost its Sp. Atk stat.",
+    "effect": "An item to be held by a Pok�mon. If the holder uses a sound-based move, this throat spray will boost its Sp. Atk stat.",
     "sprites": {
       "low_res": "/images/items/sprites/throat-spray.png",
       "high_res": "/images/items/high-res/throat-spray.png"
@@ -5613,7 +5613,7 @@
   "toxic-orb": {
     "id": "toxic-orb",
     "name": "Toxic Orb",
-    "effect": "An item to be held by a Pokemon. It's a bizarre orb that exudes toxins when touched and will badly poison the holder during battle.",
+    "effect": "An item to be held by a Pok�mon. It's a bizarre orb that exudes toxins when touched and will badly poison the holder during battle.",
     "sprites": {
       "low_res": "/images/items/sprites/toxic-orb.png",
       "high_res": "/images/items/high-res/toxic-orb.png"
@@ -5638,7 +5638,7 @@
   "toxic-plate": {
     "id": "toxic-plate",
     "name": "Toxic Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of poison and boosts the power of the holder's Poison-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of poison and boosts the power of the holder's Poison-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/toxic-plate.png",
       "high_res": "/images/items/high-res/toxic-plate.png"
@@ -5666,7 +5666,7 @@
   "twisted-spoon": {
     "id": "twisted-spoon",
     "name": "Twisted Spoon",
-    "effect": "An item to be held by a Pokemon. This spoon is imbued with telekinetic energy and boosts the power of the holder's Psychic-type moves.",
+    "effect": "An item to be held by a Pok�mon. This spoon is imbued with telekinetic energy and boosts the power of the holder's Psychic-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/twisted-spoon.png",
       "high_res": "/images/items/high-res/twisted-spoon.png"
@@ -5721,7 +5721,7 @@
   "utility-umbrella": {
     "id": "utility-umbrella",
     "name": "Utility Umbrella",
-    "effect": "An item to be held by a Pokemon. This sturdy umbrella protects the holder from the effects of rain and harsh sunlight.",
+    "effect": "An item to be held by a Pok�mon. This sturdy umbrella protects the holder from the effects of rain and harsh sunlight.",
     "sprites": {
       "low_res": "/images/items/sprites/utility-umbrella.png",
       "high_res": "/images/items/high-res/utility-umbrella.png"
@@ -5745,7 +5745,7 @@
   "water-gem": {
     "id": "water-gem",
     "name": "Water Gem",
-    "effect": "An item to be held by a Pokemon. This gem is imbued with the essence of water and will boost the power of a Water-type move�but only once.",
+    "effect": "An item to be held by a Pok�mon. This gem is imbued with the essence of water and will boost the power of a Water-type move�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/water-gem.png",
       "high_res": "/images/items/high-res/water-gem.png"
@@ -5774,7 +5774,7 @@
   "water-memory": {
     "id": "water-memory",
     "name": "Water Memory",
-    "effect": "A memory disc that contains Water-type data. It changes the type of the holder if held by a certain species of Pokemon.",
+    "effect": "A memory disc that contains Water-type data. It changes the type of the holder if held by a certain species of Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/water-memory.png",
       "high_res": "/images/items/high-res/water-memory.png"
@@ -5828,7 +5828,7 @@
   "wave-incense": {
     "id": "wave-incense",
     "name": "Wave Incense",
-    "effect": "An item to be held by a Pokemon. This incense has a curious aroma that boosts the power of the holder's Water-type moves.",
+    "effect": "An item to be held by a Pok�mon. This incense has a curious aroma that boosts the power of the holder's Water-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/wave-incense.png",
       "high_res": "/images/items/high-res/wave-incense.png"
@@ -5856,7 +5856,7 @@
   "weakness-policy": {
     "id": "weakness-policy",
     "name": "Weakness Policy",
-    "effect": "An item to be held by a Pokemon. This policy boosts the holder's Attack and Sp. Atk. stats for a while if the holder is hit with a move it's weak to.",
+    "effect": "An item to be held by a Pok�mon. This policy boosts the holder's Attack and Sp. Atk. stats for a while if the holder is hit with a move it's weak to.",
     "sprites": {
       "low_res": "/images/items/sprites/weakness-policy.png",
       "high_res": "/images/items/high-res/weakness-policy.png"
@@ -5910,7 +5910,7 @@
   "white-herb": {
     "id": "white-herb",
     "name": "White Herb",
-    "effect": "An item to be held by a Pokemon. It will restore any lowered stat in battle�but only once.",
+    "effect": "An item to be held by a Pok�mon. It will restore any lowered stat in battle�but only once.",
     "sprites": {
       "low_res": "/images/items/sprites/white-herb.png",
       "high_res": "/images/items/high-res/white-herb.png"
@@ -5934,7 +5934,7 @@
   "wide-lens": {
     "id": "wide-lens",
     "name": "Wide Lens",
-    "effect": "An item to be held by a Pokemon. It's a magnifying lens that slightly boosts the accuracy of the holder's moves.",
+    "effect": "An item to be held by a Pok�mon. It's a magnifying lens that slightly boosts the accuracy of the holder's moves.",
     "sprites": {
       "low_res": "/images/items/sprites/wide-lens.png",
       "high_res": "/images/items/high-res/wide-lens.png"
@@ -5959,7 +5959,7 @@
   "wise-glasses": {
     "id": "wise-glasses",
     "name": "Wise Glasses",
-    "effect": "An item to be held by a Pokemon. This thick pair of glasses slightly boosts the power of the holder's special moves.",
+    "effect": "An item to be held by a Pok�mon. This thick pair of glasses slightly boosts the power of the holder's special moves.",
     "sprites": {
       "low_res": "/images/items/sprites/wise-glasses.png",
       "high_res": "/images/items/high-res/wise-glasses.png"
@@ -5985,7 +5985,7 @@
   "zap-plate": {
     "id": "zap-plate",
     "name": "Zap Plate",
-    "effect": "An item to be held by a Pokemon. This stone tablet is imbued with the essence of electricity and boosts the power of the holder's Electric-type moves.",
+    "effect": "An item to be held by a Pok�mon. This stone tablet is imbued with the essence of electricity and boosts the power of the holder's Electric-type moves.",
     "sprites": {
       "low_res": "/images/items/sprites/zap-plate.png",
       "high_res": "/images/items/high-res/zap-plate.png"
@@ -6013,7 +6013,7 @@
   "zoom-lens": {
     "id": "zoom-lens",
     "name": "Zoom Lens",
-    "effect": "An item to be held by a Pokemon. When the holder acts after its target, its move will be more accurate than usual.",
+    "effect": "An item to be held by a Pok�mon. When the holder acts after its target, its move will be more accurate than usual.",
     "sprites": {
       "low_res": "/images/items/sprites/zoom-lens.png",
       "high_res": "/images/items/high-res/zoom-lens.png"
@@ -6101,7 +6101,7 @@
   "black-augurite": {
     "id": "black-augurite",
     "name": "Black Augurite",
-    "effect": "A glassy black stone that produces a sharp cutting edge when split. It's loved by a certain Pokemon.",
+    "effect": "A glassy black stone that produces a sharp cutting edge when split. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/black-augurite.png",
       "high_res": "/images/items/high-res/black-augurite.png"
@@ -6132,7 +6132,7 @@
   "chipped-pot": {
     "id": "chipped-pot",
     "name": "Chipped Pot",
-    "effect": "A peculiar teapot that can make a certain species of Pokemon evolve. It may be chipped, but tea poured from it is delicious.",
+    "effect": "A peculiar teapot that can make a certain species of Pok�mon evolve. It may be chipped, but tea poured from it is delicious.",
     "sprites": {
       "low_res": "/images/items/sprites/chipped-pot.png",
       "high_res": "/images/items/high-res/chipped-pot.png"
@@ -6194,7 +6194,7 @@
   "cracked-pot": {
     "id": "cracked-pot",
     "name": "Cracked Pot",
-    "effect": "A peculiar teapot that can make a certain species of Pokemon evolve. It may be cracked, but tea poured from it is delicious.",
+    "effect": "A peculiar teapot that can make a certain species of Pok�mon evolve. It may be cracked, but tea poured from it is delicious.",
     "sprites": {
       "low_res": "/images/items/sprites/cracked-pot.png",
       "high_res": "/images/items/high-res/cracked-pot.png"
@@ -6225,7 +6225,7 @@
   "dawn-stone": {
     "id": "dawn-stone",
     "name": "Dawn Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It sparkles like a glittering eye.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It sparkles like a glittering eye.",
     "sprites": {
       "low_res": "/images/items/sprites/dawn-stone.png",
       "high_res": "/images/items/high-res/dawn-stone.png"
@@ -6258,7 +6258,7 @@
   "dragon-scale": {
     "id": "dragon-scale",
     "name": "Dragon Scale",
-    "effect": "A very tough and inflexible scale. Dragon-type Pokemon may be holding this item when caught.",
+    "effect": "A very tough and inflexible scale. Dragon-type Pok�mon may be holding this item when caught.",
     "sprites": {
       "low_res": "/images/items/sprites/dragon-scale.png",
       "high_res": "/images/items/high-res/dragon-scale.png"
@@ -6289,7 +6289,7 @@
   "dubious-disc": {
     "id": "dubious-disc",
     "name": "Dubious Disc",
-    "effect": "A transparent device overflowing with dubious data. It's loved by a certain Pokemon.",
+    "effect": "A transparent device overflowing with dubious data. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/dubious-disc.png",
       "high_res": "/images/items/high-res/dubious-disc.png"
@@ -6320,7 +6320,7 @@
   "dusk-stone": {
     "id": "dusk-stone",
     "name": "Dusk Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It holds dark shadows within it.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It holds dark shadows within it.",
     "sprites": {
       "low_res": "/images/items/sprites/dusk-stone.png",
       "high_res": "/images/items/high-res/dusk-stone.png"
@@ -6357,7 +6357,7 @@
   "electirizer": {
     "id": "electirizer",
     "name": "Electirizer",
-    "effect": "A box packed with a tremendous amount of electric energy. It's loved by a certain Pokemon.",
+    "effect": "A box packed with a tremendous amount of electric energy. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/electirizer.png",
       "high_res": "/images/items/high-res/electirizer.png"
@@ -6388,7 +6388,7 @@
   "fire-stone": {
     "id": "fire-stone",
     "name": "Fire Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has a fiery orange heart.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It has a fiery orange heart.",
     "sprites": {
       "low_res": "/images/items/sprites/fire-stone.png",
       "high_res": "/images/items/high-res/fire-stone.png"
@@ -6460,7 +6460,7 @@
   "galarica-cuff": {
     "id": "galarica-cuff",
     "name": "Galarica Cuff",
-    "effect": "A cuff made from woven-together Galarica Twigs. Giving it to a Galarian Slowpoke makes the Pokemon very happy.",
+    "effect": "A cuff made from woven-together Galarica Twigs. Giving it to a Galarian Slowpoke makes the Pok�mon very happy.",
     "sprites": {
       "low_res": "/images/items/sprites/galarica-cuff.png",
       "high_res": "/images/items/high-res/galarica-cuff.png"
@@ -6491,7 +6491,7 @@
   "galarica-wreath": {
     "id": "galarica-wreath",
     "name": "Galarica Wreath",
-    "effect": "A wreath made from woven-together Galarica Twigs. Placing it on the head of a Galarian Slowpoke makes the Pokemon very happy.",
+    "effect": "A wreath made from woven-together Galarica Twigs. Placing it on the head of a Galarian Slowpoke makes the Pok�mon very happy.",
     "sprites": {
       "low_res": "/images/items/sprites/galarica-wreath.png",
       "high_res": "/images/items/high-res/galarica-wreath.png"
@@ -6522,7 +6522,7 @@
   "ice-stone": {
     "id": "ice-stone",
     "name": "Ice Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has a snowflake pattern in it.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It has a snowflake pattern in it.",
     "sprites": {
       "low_res": "/images/items/sprites/ice-stone.png",
       "high_res": "/images/items/high-res/ice-stone.png"
@@ -6594,7 +6594,7 @@
   "leaf-stone": {
     "id": "leaf-stone",
     "name": "Leaf Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has an unmistakable leaf pattern.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It has an unmistakable leaf pattern.",
     "sprites": {
       "low_res": "/images/items/sprites/leaf-stone.png",
       "high_res": "/images/items/high-res/leaf-stone.png"
@@ -6668,7 +6668,7 @@
   "magmarizer": {
     "id": "magmarizer",
     "name": "Magmarizer",
-    "effect": "A box packed with a tremendous amount of magma energy. It's loved by a certain Pokemon.",
+    "effect": "A box packed with a tremendous amount of magma energy. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/magmarizer.png",
       "high_res": "/images/items/high-res/magmarizer.png"
@@ -6699,7 +6699,7 @@
   "malicious-armor": {
     "id": "malicious-armor",
     "name": "Malicious Armor",
-    "effect": "A peculiar set of armor that can make a certain species of Pokemon evolve. Malicious will lurks within it.",
+    "effect": "A peculiar set of armor that can make a certain species of Pok�mon evolve. Malicious will lurks within it.",
     "sprites": {
       "low_res": "/images/items/sprites/malicious-armor.png",
       "high_res": "/images/items/high-res/malicious-armor.png"
@@ -6730,7 +6730,7 @@
   "masterpiece-teacup": {
     "id": "masterpiece-teacup",
     "name": "Masterpiece Teacup",
-    "effect": "A peculiar teacup that can make a certain species of Pokemon evolve. It may be chipped, but tea drunk from it is delicious.",
+    "effect": "A peculiar teacup that can make a certain species of Pok�mon evolve. It may be chipped, but tea drunk from it is delicious.",
     "sprites": {
       "low_res": "/images/items/sprites/masterpiece-teacup.png",
       "high_res": "/images/items/high-res/masterpiece-teacup.png"
@@ -6761,7 +6761,7 @@
   "metal-alloy": {
     "id": "metal-alloy",
     "name": "Metal Alloy",
-    "effect": "A peculiar metal that can make certain species of Pokemon evolve. It is composed of many layers.",
+    "effect": "A peculiar metal that can make certain species of Pok�mon evolve. It is composed of many layers.",
     "sprites": {
       "low_res": "/images/items/sprites/metal-alloy.png",
       "high_res": "/images/items/high-res/metal-alloy.png"
@@ -6792,7 +6792,7 @@
   "moon-stone": {
     "id": "moon-stone",
     "name": "Moon Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It is dark like the night sky.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It is dark like the night sky.",
     "sprites": {
       "low_res": "/images/items/sprites/moon-stone.png",
       "high_res": "/images/items/high-res/moon-stone.png"
@@ -6833,7 +6833,7 @@
   "oval-stone": {
     "id": "oval-stone",
     "name": "Oval Stone",
-    "effect": "A peculiar stone that can make a certain species of Pokemon evolve. It is round and smooth.",
+    "effect": "A peculiar stone that can make a certain species of Pok�mon evolve. It is round and smooth.",
     "sprites": {
       "low_res": "/images/items/sprites/oval-stone.png",
       "high_res": "/images/items/high-res/oval-stone.png"
@@ -6864,7 +6864,7 @@
   "peat-block": {
     "id": "peat-block",
     "name": "Peat Block",
-    "effect": "A block of muddy material that can be used as fuel for burning when it is dried. It's loved by a certain Pokemon.",
+    "effect": "A block of muddy material that can be used as fuel for burning when it is dried. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/peat-block.png",
       "high_res": "/images/items/high-res/peat-block.png"
@@ -6895,7 +6895,7 @@
   "prism-scale": {
     "id": "prism-scale",
     "name": "Prism Scale",
-    "effect": "A mysterious scale that causes a certain Pokemon to evolve. It shines with a beautiful iridescence.",
+    "effect": "A mysterious scale that causes a certain Pok�mon to evolve. It shines with a beautiful iridescence.",
     "sprites": {
       "low_res": "/images/items/sprites/prism-scale.png",
       "high_res": "/images/items/high-res/prism-scale.png"
@@ -6926,7 +6926,7 @@
   "protector": {
     "id": "protector",
     "name": "Protector",
-    "effect": "A protective item of some sort. It is extremely stiff and heavy. It's loved by a certain Pokemon.",
+    "effect": "A protective item of some sort. It is extremely stiff and heavy. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/protector.png",
       "high_res": "/images/items/high-res/protector.png"
@@ -6988,7 +6988,7 @@
   "sachet": {
     "id": "sachet",
     "name": "Sachet",
-    "effect": "A sachet filled with fragrant perfumes that are just slightly overwhelming. Yet it's loved by a certain Pokemon.",
+    "effect": "A sachet filled with fragrant perfumes that are just slightly overwhelming. Yet it's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/sachet.png",
       "high_res": "/images/items/high-res/sachet.png"
@@ -7019,7 +7019,7 @@
   "scroll-of-darkness": {
     "id": "scroll-of-darkness",
     "name": "Scroll of Darkness",
-    "effect": "A peculiar scroll that can make a certain species of Pokemon evolve. Written upon it are the true secrets of the path of darkness.",
+    "effect": "A peculiar scroll that can make a certain species of Pok�mon evolve. Written upon it are the true secrets of the path of darkness.",
     "sprites": {
       "low_res": "/images/items/sprites/scroll-of-darkness.png",
       "high_res": "/images/items/high-res/scroll-of-darkness.png"
@@ -7050,7 +7050,7 @@
   "scroll-of-waters": {
     "id": "scroll-of-waters",
     "name": "Scroll of Waters",
-    "effect": "A peculiar scroll that can make a certain species of Pokemon evolve. Written upon it are the true secrets of the path of water.",
+    "effect": "A peculiar scroll that can make a certain species of Pok�mon evolve. Written upon it are the true secrets of the path of water.",
     "sprites": {
       "low_res": "/images/items/sprites/scroll-of-waters.png",
       "high_res": "/images/items/high-res/scroll-of-waters.png"
@@ -7081,7 +7081,7 @@
   "shiny-stone": {
     "id": "shiny-stone",
     "name": "Shiny Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It shines with a dazzling light.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It shines with a dazzling light.",
     "sprites": {
       "low_res": "/images/items/sprites/shiny-stone.png",
       "high_res": "/images/items/high-res/shiny-stone.png"
@@ -7180,7 +7180,7 @@
   "sun-stone": {
     "id": "sun-stone",
     "name": "Sun Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It burns as red as the evening sun.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It burns as red as the evening sun.",
     "sprites": {
       "low_res": "/images/items/sprites/sun-stone.png",
       "high_res": "/images/items/high-res/sun-stone.png"
@@ -7219,7 +7219,7 @@
   "sweet-apple": {
     "id": "sweet-apple",
     "name": "Sweet Apple",
-    "effect": "A peculiar apple that can make a certain species of Pokemon evolve. It's exceptionally sweet.",
+    "effect": "A peculiar apple that can make a certain species of Pok�mon evolve. It's exceptionally sweet.",
     "sprites": {
       "low_res": "/images/items/sprites/sweet-apple.png",
       "high_res": "/images/items/high-res/sweet-apple.png"
@@ -7250,7 +7250,7 @@
   "syrupy-apple": {
     "id": "syrupy-apple",
     "name": "Syrupy Apple",
-    "effect": "A peculiar apple that can make a certain species of Pokemon evolve. It's exceptionally syrupy.",
+    "effect": "A peculiar apple that can make a certain species of Pok�mon evolve. It's exceptionally syrupy.",
     "sprites": {
       "low_res": "/images/items/sprites/syrupy-apple.png",
       "high_res": "/images/items/high-res/syrupy-apple.png"
@@ -7281,7 +7281,7 @@
   "tart-apple": {
     "id": "tart-apple",
     "name": "Tart Apple",
-    "effect": "A peculiar apple that can make a certain species of Pokemon evolve. It's exceptionally tart.",
+    "effect": "A peculiar apple that can make a certain species of Pok�mon evolve. It's exceptionally tart.",
     "sprites": {
       "low_res": "/images/items/sprites/tart-apple.png",
       "high_res": "/images/items/high-res/tart-apple.png"
@@ -7312,7 +7312,7 @@
   "thunder-stone": {
     "id": "thunder-stone",
     "name": "Thunder Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It has a distinct thunderbolt pattern.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It has a distinct thunderbolt pattern.",
     "sprites": {
       "low_res": "/images/items/sprites/thunder-stone.png",
       "high_res": "/images/items/high-res/thunder-stone.png"
@@ -7355,7 +7355,7 @@
   "unremarkable-teacup": {
     "id": "unremarkable-teacup",
     "name": "Unremarkable Teacup",
-    "effect": "A peculiar teacup that can make a certain species of Pokemon evolve. It may be cracked, but tea drunk from it is delicious.",
+    "effect": "A peculiar teacup that can make a certain species of Pok�mon evolve. It may be cracked, but tea drunk from it is delicious.",
     "sprites": {
       "low_res": "/images/items/sprites/unremarkable-teacup.png",
       "high_res": "/images/items/high-res/unremarkable-teacup.png"
@@ -7386,7 +7386,7 @@
   "upgrade": {
     "id": "upgrade",
     "name": "Upgrade",
-    "effect": "A transparent device somehow filled with all sorts of data. It's loved by a certain Pokemon.",
+    "effect": "A transparent device somehow filled with all sorts of data. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/upgrade.png",
       "high_res": "/images/items/high-res/upgrade.png"
@@ -7417,7 +7417,7 @@
   "water-stone": {
     "id": "water-stone",
     "name": "Water Stone",
-    "effect": "A peculiar stone that can make certain species of Pokemon evolve. It is the clear blue of a deep pool.",
+    "effect": "A peculiar stone that can make certain species of Pok�mon evolve. It is the clear blue of a deep pool.",
     "sprites": {
       "low_res": "/images/items/sprites/water-stone.png",
       "high_res": "/images/items/high-res/water-stone.png"
@@ -7458,7 +7458,7 @@
   "whipped-dream": {
     "id": "whipped-dream",
     "name": "Whipped Dream",
-    "effect": "A soft and sweet treat made of fluffy, puffy, whipped, and whirled cream. It's loved by a certain Pokemon.",
+    "effect": "A soft and sweet treat made of fluffy, puffy, whipped, and whirled cream. It's loved by a certain Pok�mon.",
     "sprites": {
       "low_res": "/images/items/sprites/whipped-dream.png",
       "high_res": "/images/items/high-res/whipped-dream.png"
@@ -7489,7 +7489,7 @@
   "aguav-berry": {
     "id": "aguav-berry",
     "name": "Aguav Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
     "sprites": {
       "low_res": "/images/items/sprites/aguav-berry.png",
       "high_res": "/images/items/high-res/aguav-berry.png"
@@ -7516,7 +7516,7 @@
   "apicot-berry": {
     "id": "apicot-berry",
     "name": "Apicot Berry",
-    "effect": "If a Pokemon holds one of these Berries, its Sp. Def stat will be boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, its Sp. Def stat will be boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/apicot-berry.png",
       "high_res": "/images/items/high-res/apicot-berry.png"
@@ -7542,7 +7542,7 @@
   "aspear-berry": {
     "id": "aspear-berry",
     "name": "Aspear Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to thaw itself after being frozen.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to thaw itself after being frozen.",
     "sprites": {
       "low_res": "/images/items/sprites/aspear-berry.png",
       "high_res": "/images/items/high-res/aspear-berry.png"
@@ -7568,7 +7568,7 @@
   "babiri-berry": {
     "id": "babiri-berry",
     "name": "Babiri Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Steel-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Steel-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/babiri-berry.png",
       "high_res": "/images/items/high-res/babiri-berry.png"
@@ -7597,7 +7597,7 @@
   "charti-berry": {
     "id": "charti-berry",
     "name": "Charti Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Rock-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Rock-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/charti-berry.png",
       "high_res": "/images/items/high-res/charti-berry.png"
@@ -7626,7 +7626,7 @@
   "cheri-berry": {
     "id": "cheri-berry",
     "name": "Cheri Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to free itself from paralysis.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to free itself from paralysis.",
     "sprites": {
       "low_res": "/images/items/sprites/cheri-berry.png",
       "high_res": "/images/items/high-res/cheri-berry.png"
@@ -7652,7 +7652,7 @@
   "chesto-berry": {
     "id": "chesto-berry",
     "name": "Chesto Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to shake off its drowsiness.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to shake off its drowsiness.",
     "sprites": {
       "low_res": "/images/items/sprites/chesto-berry.png",
       "high_res": "/images/items/high-res/chesto-berry.png"
@@ -7678,7 +7678,7 @@
   "chilan-berry": {
     "id": "chilan-berry",
     "name": "Chilan Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a Normal-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a Normal-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/chilan-berry.png",
       "high_res": "/images/items/high-res/chilan-berry.png"
@@ -7707,7 +7707,7 @@
   "chople-berry": {
     "id": "chople-berry",
     "name": "Chople Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Fighting-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Fighting-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/chople-berry.png",
       "high_res": "/images/items/high-res/chople-berry.png"
@@ -7736,7 +7736,7 @@
   "coba-berry": {
     "id": "coba-berry",
     "name": "Coba Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Flying-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Flying-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/coba-berry.png",
       "high_res": "/images/items/high-res/coba-berry.png"
@@ -7765,7 +7765,7 @@
   "colbur-berry": {
     "id": "colbur-berry",
     "name": "Colbur Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Dark-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Dark-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/colbur-berry.png",
       "high_res": "/images/items/high-res/colbur-berry.png"
@@ -7794,7 +7794,7 @@
   "custap-berry": {
     "id": "custap-berry",
     "name": "Custap Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to act faster should it find itself in a pinch�but only for the next move it uses.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to act faster should it find itself in a pinch�but only for the next move it uses.",
     "sprites": {
       "low_res": "/images/items/sprites/custap-berry.png",
       "high_res": "/images/items/high-res/custap-berry.png"
@@ -7820,7 +7820,7 @@
   "enigma-berry": {
     "id": "enigma-berry",
     "name": "Enigma Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to regain some HP if it is hit with a supereffective move.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to regain some HP if it is hit with a supereffective move.",
     "sprites": {
       "low_res": "/images/items/sprites/enigma-berry.png",
       "high_res": "/images/items/high-res/enigma-berry.png"
@@ -7846,7 +7846,7 @@
   "figy-berry": {
     "id": "figy-berry",
     "name": "Figy Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
     "sprites": {
       "low_res": "/images/items/sprites/figy-berry.png",
       "high_res": "/images/items/high-res/figy-berry.png"
@@ -7873,7 +7873,7 @@
   "ganlon-berry": {
     "id": "ganlon-berry",
     "name": "Ganlon Berry",
-    "effect": "If a Pokemon holds one of these Berries, its Defense stat will be boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, its Defense stat will be boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/ganlon-berry.png",
       "high_res": "/images/items/high-res/ganlon-berry.png"
@@ -7899,7 +7899,7 @@
   "grepa-berry": {
     "id": "grepa-berry",
     "name": "Grepa Berry",
-    "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Sp. Def stat.",
+    "effect": "If a Pok�mon is fed this Berry, it will grow more friendly, but it will lose base points for its Sp. Def stat.",
     "sprites": {
       "low_res": "/images/items/sprites/grepa-berry.png",
       "high_res": "/images/items/high-res/grepa-berry.png"
@@ -7925,7 +7925,7 @@
   "haban-berry": {
     "id": "haban-berry",
     "name": "Haban Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Dragon-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Dragon-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/haban-berry.png",
       "high_res": "/images/items/high-res/haban-berry.png"
@@ -7954,7 +7954,7 @@
   "hondew-berry": {
     "id": "hondew-berry",
     "name": "Hondew Berry",
-    "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Sp. Atk stat.",
+    "effect": "If a Pok�mon is fed this Berry, it will grow more friendly, but it will lose base points for its Sp. Atk stat.",
     "sprites": {
       "low_res": "/images/items/sprites/hondew-berry.png",
       "high_res": "/images/items/high-res/hondew-berry.png"
@@ -7980,7 +7980,7 @@
   "iapapa-berry": {
     "id": "iapapa-berry",
     "name": "Iapapa Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
     "sprites": {
       "low_res": "/images/items/sprites/iapapa-berry.png",
       "high_res": "/images/items/high-res/iapapa-berry.png"
@@ -8007,7 +8007,7 @@
   "jaboca-berry": {
     "id": "jaboca-berry",
     "name": "Jaboca Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a physical move, the attacker will also take damage.",
+    "effect": "If a Pok�mon holding this Berry is hit with a physical move, the attacker will also take damage.",
     "sprites": {
       "low_res": "/images/items/sprites/jaboca-berry.png",
       "high_res": "/images/items/high-res/jaboca-berry.png"
@@ -8033,7 +8033,7 @@
   "kasib-berry": {
     "id": "kasib-berry",
     "name": "Kasib Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Ghost-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Ghost-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/kasib-berry.png",
       "high_res": "/images/items/high-res/kasib-berry.png"
@@ -8062,7 +8062,7 @@
   "kebia-berry": {
     "id": "kebia-berry",
     "name": "Kebia Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Poison-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Poison-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/kebia-berry.png",
       "high_res": "/images/items/high-res/kebia-berry.png"
@@ -8091,7 +8091,7 @@
   "kee-berry": {
     "id": "kee-berry",
     "name": "Kee Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a physical move, the holder's Defense stat will be boosted.",
+    "effect": "If a Pok�mon holding this Berry is hit with a physical move, the holder's Defense stat will be boosted.",
     "sprites": {
       "low_res": "/images/items/sprites/kee-berry.png",
       "high_res": "/images/items/high-res/kee-berry.png"
@@ -8117,7 +8117,7 @@
   "kelpsy-berry": {
     "id": "kelpsy-berry",
     "name": "Kelpsy Berry",
-    "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Attack stat.",
+    "effect": "If a Pok�mon is fed this Berry, it will grow more friendly, but it will lose base points for its Attack stat.",
     "sprites": {
       "low_res": "/images/items/sprites/kelpsy-berry.png",
       "high_res": "/images/items/high-res/kelpsy-berry.png"
@@ -8143,7 +8143,7 @@
   "lansat-berry": {
     "id": "lansat-berry",
     "name": "Lansat Berry",
-    "effect": "If a Pokemon holds one of these Berries, its critical-hit ratio will be boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, its critical-hit ratio will be boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/lansat-berry.png",
       "high_res": "/images/items/high-res/lansat-berry.png"
@@ -8169,7 +8169,7 @@
   "leppa-berry": {
     "id": "leppa-berry",
     "name": "Leppa Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore 10 PP to a move.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore 10 PP to a move.",
     "sprites": {
       "low_res": "/images/items/sprites/leppa-berry.png",
       "high_res": "/images/items/high-res/leppa-berry.png"
@@ -8195,7 +8195,7 @@
   "liechi-berry": {
     "id": "liechi-berry",
     "name": "Liechi Berry",
-    "effect": "If a Pokemon holds one of these Berries, its Attack stat will be boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, its Attack stat will be boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/liechi-berry.png",
       "high_res": "/images/items/high-res/liechi-berry.png"
@@ -8221,7 +8221,7 @@
   "lum-berry": {
     "id": "lum-berry",
     "name": "Lum Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to cure itself of any status condition it may have.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to cure itself of any status condition it may have.",
     "sprites": {
       "low_res": "/images/items/sprites/lum-berry.png",
       "high_res": "/images/items/high-res/lum-berry.png"
@@ -8247,7 +8247,7 @@
   "mago-berry": {
     "id": "mago-berry",
     "name": "Mago Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
     "sprites": {
       "low_res": "/images/items/sprites/mago-berry.png",
       "high_res": "/images/items/high-res/mago-berry.png"
@@ -8274,7 +8274,7 @@
   "maranga-berry": {
     "id": "maranga-berry",
     "name": "Maranga Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a special move, the holder's Sp. Def stat will be boosted.",
+    "effect": "If a Pok�mon holding this Berry is hit with a special move, the holder's Sp. Def stat will be boosted.",
     "sprites": {
       "low_res": "/images/items/sprites/maranga-berry.png",
       "high_res": "/images/items/high-res/maranga-berry.png"
@@ -8300,7 +8300,7 @@
   "micle-berry": {
     "id": "micle-berry",
     "name": "Micle Berry",
-    "effect": "If a Pokemon holds one of these Berries, its accuracy will be boosted should it find itself in a pinch�but only for the next move it uses.",
+    "effect": "If a Pok�mon holds one of these Berries, its accuracy will be boosted should it find itself in a pinch�but only for the next move it uses.",
     "sprites": {
       "low_res": "/images/items/sprites/micle-berry.png",
       "high_res": "/images/items/high-res/micle-berry.png"
@@ -8326,7 +8326,7 @@
   "occa-berry": {
     "id": "occa-berry",
     "name": "Occa Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Fire-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Fire-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/occa-berry.png",
       "high_res": "/images/items/high-res/occa-berry.png"
@@ -8355,7 +8355,7 @@
   "oran-berry": {
     "id": "oran-berry",
     "name": "Oran Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore 10 HP to itself.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore 10 HP to itself.",
     "sprites": {
       "low_res": "/images/items/sprites/oran-berry.png",
       "high_res": "/images/items/high-res/oran-berry.png"
@@ -8381,7 +8381,7 @@
   "passho-berry": {
     "id": "passho-berry",
     "name": "Passho Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Water-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Water-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/passho-berry.png",
       "high_res": "/images/items/high-res/passho-berry.png"
@@ -8410,7 +8410,7 @@
   "payapa-berry": {
     "id": "payapa-berry",
     "name": "Payapa Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Psychic-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Psychic-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/payapa-berry.png",
       "high_res": "/images/items/high-res/payapa-berry.png"
@@ -8439,7 +8439,7 @@
   "pecha-berry": {
     "id": "pecha-berry",
     "name": "Pecha Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to lift the effects of being poisoned from itself.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to lift the effects of being poisoned from itself.",
     "sprites": {
       "low_res": "/images/items/sprites/pecha-berry.png",
       "high_res": "/images/items/high-res/pecha-berry.png"
@@ -8465,7 +8465,7 @@
   "persim-berry": {
     "id": "persim-berry",
     "name": "Persim Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to cure itself of confusion.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to cure itself of confusion.",
     "sprites": {
       "low_res": "/images/items/sprites/persim-berry.png",
       "high_res": "/images/items/high-res/persim-berry.png"
@@ -8491,7 +8491,7 @@
   "petaya-berry": {
     "id": "petaya-berry",
     "name": "Petaya Berry",
-    "effect": "If a Pokemon holds one of these Berries, its Sp. Atk stat will be boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, its Sp. Atk stat will be boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/petaya-berry.png",
       "high_res": "/images/items/high-res/petaya-berry.png"
@@ -8517,7 +8517,7 @@
   "pomeg-berry": {
     "id": "pomeg-berry",
     "name": "Pomeg Berry",
-    "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its HP stat.",
+    "effect": "If a Pok�mon is fed this Berry, it will grow more friendly, but it will lose base points for its HP stat.",
     "sprites": {
       "low_res": "/images/items/sprites/pomeg-berry.png",
       "high_res": "/images/items/high-res/pomeg-berry.png"
@@ -8543,7 +8543,7 @@
   "qualot-berry": {
     "id": "qualot-berry",
     "name": "Qualot Berry",
-    "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Defense stat.",
+    "effect": "If a Pok�mon is fed this Berry, it will grow more friendly, but it will lose base points for its Defense stat.",
     "sprites": {
       "low_res": "/images/items/sprites/qualot-berry.png",
       "high_res": "/images/items/high-res/qualot-berry.png"
@@ -8569,7 +8569,7 @@
   "rawst-berry": {
     "id": "rawst-berry",
     "name": "Rawst Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to cure itself of a burn.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to cure itself of a burn.",
     "sprites": {
       "low_res": "/images/items/sprites/rawst-berry.png",
       "high_res": "/images/items/high-res/rawst-berry.png"
@@ -8595,7 +8595,7 @@
   "rindo-berry": {
     "id": "rindo-berry",
     "name": "Rindo Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Grass-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Grass-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/rindo-berry.png",
       "high_res": "/images/items/high-res/rindo-berry.png"
@@ -8624,7 +8624,7 @@
   "roseli-berry": {
     "id": "roseli-berry",
     "name": "Roseli Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Fairy-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Fairy-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/roseli-berry.png",
       "high_res": "/images/items/high-res/roseli-berry.png"
@@ -8653,7 +8653,7 @@
   "rowap-berry": {
     "id": "rowap-berry",
     "name": "Rowap Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a special move, the attacker will also take damage.",
+    "effect": "If a Pok�mon holding this Berry is hit with a special move, the attacker will also take damage.",
     "sprites": {
       "low_res": "/images/items/sprites/rowap-berry.png",
       "high_res": "/images/items/high-res/rowap-berry.png"
@@ -8679,7 +8679,7 @@
   "salac-berry": {
     "id": "salac-berry",
     "name": "Salac Berry",
-    "effect": "If a Pokemon holds one of these Berries, its Speed stat will be boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, its Speed stat will be boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/salac-berry.png",
       "high_res": "/images/items/high-res/salac-berry.png"
@@ -8705,7 +8705,7 @@
   "shuca-berry": {
     "id": "shuca-berry",
     "name": "Shuca Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Ground-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Ground-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/shuca-berry.png",
       "high_res": "/images/items/high-res/shuca-berry.png"
@@ -8734,7 +8734,7 @@
   "sitrus-berry": {
     "id": "sitrus-berry",
     "name": "Sitrus Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore a small amount of HP to itself.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore a small amount of HP to itself.",
     "sprites": {
       "low_res": "/images/items/sprites/sitrus-berry.png",
       "high_res": "/images/items/high-res/sitrus-berry.png"
@@ -8760,7 +8760,7 @@
   "starf-berry": {
     "id": "starf-berry",
     "name": "Starf Berry",
-    "effect": "If a Pokemon holds one of these Berries, one of its stats will be sharply boosted should it find itself in a pinch.",
+    "effect": "If a Pok�mon holds one of these Berries, one of its stats will be sharply boosted should it find itself in a pinch.",
     "sprites": {
       "low_res": "/images/items/sprites/starf-berry.png",
       "high_res": "/images/items/high-res/starf-berry.png"
@@ -8790,7 +8790,7 @@
   "tamato-berry": {
     "id": "tamato-berry",
     "name": "Tamato Berry",
-    "effect": "If a Pokemon is fed this Berry, it will grow more friendly, but it will lose base points for its Speed stat.",
+    "effect": "If a Pok�mon is fed this Berry, it will grow more friendly, but it will lose base points for its Speed stat.",
     "sprites": {
       "low_res": "/images/items/sprites/tamato-berry.png",
       "high_res": "/images/items/high-res/tamato-berry.png"
@@ -8816,7 +8816,7 @@
   "tanga-berry": {
     "id": "tanga-berry",
     "name": "Tanga Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Bug-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Bug-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/tanga-berry.png",
       "high_res": "/images/items/high-res/tanga-berry.png"
@@ -8845,7 +8845,7 @@
   "wacan-berry": {
     "id": "wacan-berry",
     "name": "Wacan Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Electric-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Electric-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/wacan-berry.png",
       "high_res": "/images/items/high-res/wacan-berry.png"
@@ -8874,7 +8874,7 @@
   "wiki-berry": {
     "id": "wiki-berry",
     "name": "Wiki Berry",
-    "effect": "If a Pokemon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
+    "effect": "If a Pok�mon holds one of these Berries, it will be able to restore some HP should it find itself in a pinch. But it will become confused if it hates the Berry's taste.",
     "sprites": {
       "low_res": "/images/items/sprites/wiki-berry.png",
       "high_res": "/images/items/high-res/wiki-berry.png"
@@ -8901,7 +8901,7 @@
   "yache-berry": {
     "id": "yache-berry",
     "name": "Yache Berry",
-    "effect": "If a Pokemon holding this Berry is hit with a supereffective Ice-type move, the power of that move will be weakened.",
+    "effect": "If a Pok�mon holding this Berry is hit with a supereffective Ice-type move, the power of that move will be weakened.",
     "sprites": {
       "low_res": "/images/items/sprites/yache-berry.png",
       "high_res": "/images/items/high-res/yache-berry.png"
@@ -8930,7 +8930,7 @@
   "adrenaline-orb": {
     "id": "adrenaline-orb",
     "name": "Adrenaline Orb",
-    "effect": "An item to be held by a Pokemon. This orb boosts the Speed stat if the holder is intimidated.",
+    "effect": "An item to be held by a Pok�mon. This orb boosts the Speed stat if the holder is intimidated.",
     "sprites": {
       "low_res": "/images/items/sprites/adrenaline-orb.png",
       "high_res": "/images/items/high-res/adrenaline-orb.png"
@@ -8982,7 +8982,7 @@
   "bug-tera-shard": {
     "id": "bug-tera-shard",
     "name": "Bug Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/bug-tera-shard.png",
       "high_res": "/images/items/high-res/bug-tera-shard.png"
@@ -9008,7 +9008,7 @@
   "dark-tera-shard": {
     "id": "dark-tera-shard",
     "name": "Dark Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/dark-tera-shard.png",
       "high_res": "/images/items/high-res/dark-tera-shard.png"
@@ -9034,7 +9034,7 @@
   "dragon-tera-shard": {
     "id": "dragon-tera-shard",
     "name": "Dragon Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/dragon-tera-shard.png",
       "high_res": "/images/items/high-res/dragon-tera-shard.png"
@@ -9060,7 +9060,7 @@
   "electric-tera-shard": {
     "id": "electric-tera-shard",
     "name": "Electric Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/electric-tera-shard.png",
       "high_res": "/images/items/high-res/electric-tera-shard.png"
@@ -9086,7 +9086,7 @@
   "fairy-tera-shard": {
     "id": "fairy-tera-shard",
     "name": "Fairy Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/fairy-tera-shard.png",
       "high_res": "/images/items/high-res/fairy-tera-shard.png"
@@ -9112,7 +9112,7 @@
   "fighting-tera-shard": {
     "id": "fighting-tera-shard",
     "name": "Fighting Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/fighting-tera-shard.png",
       "high_res": "/images/items/high-res/fighting-tera-shard.png"
@@ -9138,7 +9138,7 @@
   "fire-tera-shard": {
     "id": "fire-tera-shard",
     "name": "Fire Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/fire-tera-shard.png",
       "high_res": "/images/items/high-res/fire-tera-shard.png"
@@ -9164,7 +9164,7 @@
   "flying-tera-shard": {
     "id": "flying-tera-shard",
     "name": "Flying Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/flying-tera-shard.png",
       "high_res": "/images/items/high-res/flying-tera-shard.png"
@@ -9190,7 +9190,7 @@
   "ghost-tera-shard": {
     "id": "ghost-tera-shard",
     "name": "Ghost Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/ghost-tera-shard.png",
       "high_res": "/images/items/high-res/ghost-tera-shard.png"
@@ -9242,7 +9242,7 @@
   "grass-tera-shard": {
     "id": "grass-tera-shard",
     "name": "Grass Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/grass-tera-shard.png",
       "high_res": "/images/items/high-res/grass-tera-shard.png"
@@ -9268,7 +9268,7 @@
   "ground-tera-shard": {
     "id": "ground-tera-shard",
     "name": "Ground Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/ground-tera-shard.png",
       "high_res": "/images/items/high-res/ground-tera-shard.png"
@@ -9294,7 +9294,7 @@
   "ice-tera-shard": {
     "id": "ice-tera-shard",
     "name": "Ice Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/ice-tera-shard.png",
       "high_res": "/images/items/high-res/ice-tera-shard.png"
@@ -9320,7 +9320,7 @@
   "normal-tera-shard": {
     "id": "normal-tera-shard",
     "name": "Normal Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/normal-tera-shard.png",
       "high_res": "/images/items/high-res/normal-tera-shard.png"
@@ -9346,7 +9346,7 @@
   "poison-tera-shard": {
     "id": "poison-tera-shard",
     "name": "Poison Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/poison-tera-shard.png",
       "high_res": "/images/items/high-res/poison-tera-shard.png"
@@ -9372,7 +9372,7 @@
   "psychic-tera-shard": {
     "id": "psychic-tera-shard",
     "name": "Psychic Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/psychic-tera-shard.png",
       "high_res": "/images/items/high-res/psychic-tera-shard.png"
@@ -9398,7 +9398,7 @@
   "rock-tera-shard": {
     "id": "rock-tera-shard",
     "name": "Rock Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/rock-tera-shard.png",
       "high_res": "/images/items/high-res/rock-tera-shard.png"
@@ -9424,7 +9424,7 @@
   "steel-tera-shard": {
     "id": "steel-tera-shard",
     "name": "Steel Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/steel-tera-shard.png",
       "high_res": "/images/items/high-res/steel-tera-shard.png"
@@ -9450,7 +9450,7 @@
   "water-tera-shard": {
     "id": "water-tera-shard",
     "name": "Water Tera Shard",
-    "effect": "On rare occasions, these shards form when a Tera Pokemon falls in battle and its Tera Jewel shatters.",
+    "effect": "On rare occasions, these shards form when a Tera Pok�mon falls in battle and its Tera Jewel shatters.",
     "sprites": {
       "low_res": "/images/items/sprites/water-tera-shard.png",
       "high_res": "/images/items/high-res/water-tera-shard.png"

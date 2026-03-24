@@ -1,0 +1,1386 @@
+{
+  "format_id": "showdown_gen8ou-1630",
+  "total_teams_analyzed": 39974,
+  "centralization_index": 28,
+  "type_ecosystem": {
+    "ground": {
+      "usage_rate": 85.77950667934158,
+      "raw_count": 68579,
+      "combinations": {
+        "flying-ground": 33183,
+        "dragon-ground": 20454,
+        "ground-steel": 4816,
+        "ground-poison": 3581,
+        "ground": 3450,
+        "ground-water": 3095
+      },
+      "teammates": {
+        "grass": 15262.235598160823,
+        "poison": 7870.871206562841,
+        "fire": 16658.351653819296,
+        "flying": 21763.34953535474,
+        "water": 22411.230683428956,
+        "bug": 4633.360565082931,
+        "electric": 11925.060007617927,
+        "ground": 2835.4643676997575,
+        "fairy": 18621.717292811627,
+        "normal": 1523.176588107316,
+        "fighting": 10904.321967369664,
+        "psychic": 15633.820200794444,
+        "ice": 9717.48106159087,
+        "ghost": 11059.417208971103,
+        "rock": 3440.017265996665,
+        "dragon": 10962.861163044947,
+        "dark": 14099.470518257178,
+        "steel": 33564.715778080135
+      },
+      "top_pkm": [
+        {
+          "id": "10021",
+          "name": "Landorus Therian",
+          "usage_rate": 41.50572872367039,
+          "raw_count": 33183
+        },
+        {
+          "id": "445",
+          "name": "Garchomp",
+          "usage_rate": 25.584129684294794,
+          "raw_count": 20454
+        },
+        {
+          "id": "530",
+          "name": "Excadrill",
+          "usage_rate": 6.023915545104318,
+          "raw_count": 4816
+        },
+        {
+          "id": "34",
+          "name": "Nidoking",
+          "usage_rate": 4.479161454945714,
+          "raw_count": 3581
+        },
+        {
+          "id": "450",
+          "name": "Hippowdon",
+          "usage_rate": 4.31530494821634,
+          "raw_count": 3450
+        }
+      ]
+    },
+    "flying": {
+      "usage_rate": 121.0799519687797,
+      "raw_count": 96801,
+      "combinations": {
+        "flying-ground": 33183,
+        "electric-flying": 15749,
+        "flying-steel": 18950,
+        "flying": 10811,
+        "dragon-flying": 7836,
+        "flying-water": 5081,
+        "fighting-flying": 2882,
+        "dark-flying": 2309
+      },
+      "teammates": {
+        "grass": 21448.74358843341,
+        "poison": 11366.764124866953,
+        "fire": 21484.08233178101,
+        "flying": 23462.66244434583,
+        "water": 39543.64419104434,
+        "bug": 4872.0083620708365,
+        "electric": 14663.62283042924,
+        "ground": 21929.199771357606,
+        "fairy": 25682.079776757826,
+        "normal": 2420.049234070029,
+        "fighting": 13409.577052962406,
+        "psychic": 20998.552391476762,
+        "ice": 12456.610007656269,
+        "ghost": 14857.368304831656,
+        "rock": 3751.7017104323763,
+        "dragon": 20873.975026207783,
+        "dark": 18413.807560932168,
+        "steel": 42345.021341838765
+      },
+      "top_pkm": [
+        {
+          "id": "10021",
+          "name": "Landorus Therian",
+          "usage_rate": 41.50572872367039,
+          "raw_count": 33183
+        },
+        {
+          "id": "145",
+          "name": "Zapdos",
+          "usage_rate": 19.69905438535048,
+          "raw_count": 15749
+        },
+        {
+          "id": "823",
+          "name": "Corviknight",
+          "usage_rate": 15.766498223845499,
+          "raw_count": 12605
+        },
+        {
+          "id": "10019",
+          "name": "Tornadus Therian",
+          "usage_rate": 13.522539650773002,
+          "raw_count": 10811
+        },
+        {
+          "id": "149",
+          "name": "Dragonite",
+          "usage_rate": 9.801370891079202,
+          "raw_count": 7836
+        }
+      ]
+    },
+    "dragon": {
+      "usage_rate": 64.26677340271176,
+      "raw_count": 51380,
+      "combinations": {
+        "dragon-ghost": 23090,
+        "dragon-ground": 20454,
+        "dragon-flying": 7836
+      },
+      "teammates": {
+        "grass": 11238.813132918389,
+        "poison": 3682.6330702528817,
+        "fire": 12926.98856441342,
+        "flying": 19118.11686989372,
+        "water": 11897.586200034748,
+        "bug": 3618.7987553366006,
+        "electric": 8205.71486340713,
+        "ground": 10497.172388040059,
+        "fairy": 11653.595602435189,
+        "psychic": 9650.25516836099,
+        "fighting": 6665.892778085021,
+        "ice": 8343.115747214888,
+        "ghost": 5533.515112529083,
+        "normal": 1201.722225938442,
+        "rock": 1352.5526269855702,
+        "dragon": 6352.244352918423,
+        "dark": 9791.109774333403,
+        "steel": 25694.391268016792
+      },
+      "top_pkm": [
+        {
+          "id": "887",
+          "name": "Dragapult",
+          "usage_rate": 28.881272827337767,
+          "raw_count": 23090
+        },
+        {
+          "id": "445",
+          "name": "Garchomp",
+          "usage_rate": 25.584129684294794,
+          "raw_count": 20454
+        },
+        {
+          "id": "149",
+          "name": "Dragonite",
+          "usage_rate": 9.801370891079202,
+          "raw_count": 7836
+        }
+      ]
+    },
+    "ghost": {
+      "usage_rate": 43.78846250062541,
+      "raw_count": 35008,
+      "combinations": {
+        "dragon-ghost": 23090,
+        "fire-ghost": 9944,
+        "ghost-steel": 1974
+      },
+      "teammates": {
+        "grass": 6752.600262415157,
+        "poison": 2164.714724737109,
+        "fire": 6599.908338152259,
+        "flying": 14965.886407936163,
+        "water": 8358.595669428772,
+        "bug": 1487.621670257214,
+        "electric": 5242.581941689437,
+        "ground": 11233.770224918735,
+        "fairy": 6935.245522726218,
+        "psychic": 5530.009146766208,
+        "fighting": 3488.398968670253,
+        "ice": 4687.439532386882,
+        "ghost": 1998.7323529231164,
+        "normal": 605.0840647747233,
+        "rock": 1258.520911383609,
+        "dragon": 5574.26090049735,
+        "dark": 6947.689687757865,
+        "steel": 15676.642094434264
+      },
+      "top_pkm": [
+        {
+          "id": "887",
+          "name": "Dragapult",
+          "usage_rate": 28.881272827337767,
+          "raw_count": 23090
+        },
+        {
+          "id": "806",
+          "name": "Blacephalon",
+          "usage_rate": 12.43808475509081,
+          "raw_count": 9944
+        },
+        {
+          "id": "681",
+          "name": "Aegislash Shield",
+          "usage_rate": 2.469104918196828,
+          "raw_count": 1974
+        }
+      ]
+    },
+    "dark": {
+      "usage_rate": 45.929854405363486,
+      "raw_count": 36720,
+      "combinations": {
+        "dark-ice": 19613,
+        "dark-rock": 6113,
+        "dark-water": 5086,
+        "dark-steel": 3599,
+        "dark-flying": 2309
+      },
+      "teammates": {
+        "grass": 8753.947921928628,
+        "poison": 3695.248709589498,
+        "fire": 10304.780757720018,
+        "flying": 17763.70022351103,
+        "bug": 2532.138272486976,
+        "electric": 6291.130446781908,
+        "ground": 13367.391534320634,
+        "fairy": 5829.231260229114,
+        "water": 12558.058386932398,
+        "fighting": 4536.538338672682,
+        "psychic": 9121.613573970775,
+        "ice": 2150.348067886746,
+        "ghost": 6779.267627869325,
+        "normal": 142.1986299957925,
+        "rock": 366.89134783723193,
+        "dragon": 10410.348303138326,
+        "steel": 18441.975634517217,
+        "dark": 2616.085249622914
+      },
+      "top_pkm": [
+        {
+          "id": "461",
+          "name": "Weavile",
+          "usage_rate": 24.532195927352777,
+          "raw_count": 19613
+        },
+        {
+          "id": "248",
+          "name": "Tyranitar",
+          "usage_rate": 7.646220043027968,
+          "raw_count": 6113
+        },
+        {
+          "id": "342",
+          "name": "Crawdaunt",
+          "usage_rate": 6.361635062790814,
+          "raw_count": 5086
+        },
+        {
+          "id": "625",
+          "name": "Bisharp",
+          "usage_rate": 4.501676089458148,
+          "raw_count": 3599
+        },
+        {
+          "id": "10171",
+          "name": "Moltres Galar",
+          "usage_rate": 2.888127282733777,
+          "raw_count": 2309
+        }
+      ]
+    },
+    "ice": {
+      "usage_rate": 29.49292039825887,
+      "raw_count": 23579,
+      "combinations": {
+        "dark-ice": 19613,
+        "fairy-ice": 3966
+      },
+      "teammates": {
+        "grass": 4639.019562427087,
+        "poison": 2416.038936143977,
+        "fire": 7659.048350204325,
+        "flying": 11352.745624129202,
+        "bug": 1951.063461307954,
+        "electric": 4457.303802380495,
+        "ground": 8784.871262913868,
+        "fairy": 3552.207235160419,
+        "water": 7016.3338841633395,
+        "fighting": 3251.0786122640866,
+        "psychic": 5392.497100352385,
+        "ice": 1567.634119129784,
+        "ghost": 3986.960294574923,
+        "normal": 46.4654772249245,
+        "rock": 231.7320713572742,
+        "dragon": 7458.0756281369695,
+        "steel": 11578.266172869102,
+        "dark": 1779.2807363491686
+      },
+      "top_pkm": [
+        {
+          "id": "461",
+          "name": "Weavile",
+          "usage_rate": 24.532195927352777,
+          "raw_count": 19613
+        },
+        {
+          "id": "10104",
+          "name": "Ninetales Alola",
+          "usage_rate": 4.960724470906089,
+          "raw_count": 3966
+        }
+      ]
+    },
+    "grass": {
+      "usage_rate": 56.54050132586181,
+      "raw_count": 45203,
+      "combinations": {
+        "grass-steel": 32513,
+        "grass": 12690
+      },
+      "teammates": {
+        "grass": 1540.4968672826692,
+        "poison": 2643.808204010762,
+        "fire": 11194.397968869736,
+        "flying": 21595.86486410478,
+        "water": 15031.131865316815,
+        "electric": 9266.424650387706,
+        "ground": 15051.99730179625,
+        "fairy": 10342.238428583032,
+        "psychic": 8472.479194939853,
+        "fighting": 6999.694570804894,
+        "ice": 4757.314175101959,
+        "ghost": 6809.142488456036,
+        "normal": 590.4432346260211,
+        "rock": 1966.0139535202275,
+        "dragon": 12268.46368555153,
+        "dark": 8802.865964853941,
+        "steel": 13079.279624748813,
+        "bug": 2353.56869733021
+      },
+      "top_pkm": [
+        {
+          "id": "598",
+          "name": "Ferrothorn",
+          "usage_rate": 24.242007304748086,
+          "raw_count": 19381
+        },
+        {
+          "id": "798",
+          "name": "Kartana",
+          "usage_rate": 16.4256766898484,
+          "raw_count": 13132
+        },
+        {
+          "id": "812",
+          "name": "Rillaboom",
+          "usage_rate": 15.872817331265324,
+          "raw_count": 12690
+        }
+      ]
+    },
+    "steel": {
+      "usage_rate": 126.92375043778456,
+      "raw_count": 101473,
+      "combinations": {
+        "grass-steel": 32513,
+        "fire-steel": 19020,
+        "steel": 14900,
+        "flying-steel": 18950,
+        "ground-steel": 4816,
+        "electric-steel": 3605,
+        "dark-steel": 3599,
+        "bug-steel": 2096,
+        "ghost-steel": 1974
+      },
+      "teammates": {
+        "grass": 13920.418939006822,
+        "poison": 10196.239352999517,
+        "fire": 16511.187520078063,
+        "flying": 43712.25729101639,
+        "water": 35480.150698881356,
+        "electric": 18280.47757525573,
+        "ground": 34666.830860459384,
+        "fairy": 25514.27244140477,
+        "psychic": 21462.98447542676,
+        "fighting": 14323.725291204635,
+        "ice": 13071.245847155878,
+        "ghost": 16109.958246057771,
+        "normal": 2617.893610672079,
+        "rock": 5109.221021475666,
+        "dragon": 27532.712605282086,
+        "dark": 19524.0327256062,
+        "steel": 22210.732366827688,
+        "bug": 4927.084774228432
+      },
+      "top_pkm": [
+        {
+          "id": "598",
+          "name": "Ferrothorn",
+          "usage_rate": 24.242007304748086,
+          "raw_count": 19381
+        },
+        {
+          "id": "485",
+          "name": "Heatran",
+          "usage_rate": 23.790463801470956,
+          "raw_count": 19020
+        },
+        {
+          "id": "809",
+          "name": "Melmetal",
+          "usage_rate": 18.637114124180716,
+          "raw_count": 14900
+        },
+        {
+          "id": "798",
+          "name": "Kartana",
+          "usage_rate": 16.4256766898484,
+          "raw_count": 13132
+        },
+        {
+          "id": "823",
+          "name": "Corviknight",
+          "usage_rate": 15.766498223845499,
+          "raw_count": 12605
+        }
+      ]
+    },
+    "fire": {
+      "usage_rate": 59.38485015259919,
+      "raw_count": 47477,
+      "combinations": {
+        "fire-steel": 19020,
+        "fire-ghost": 9944,
+        "bug-fire": 6330,
+        "fighting-fire": 6010,
+        "fire-water": 3975,
+        "fire-psychic": 2198
+      },
+      "teammates": {
+        "grass": 11773.371933479135,
+        "poison": 2760.039685553201,
+        "fire": 4436.628514874772,
+        "flying": 21586.494822663833,
+        "water": 11085.665170915989,
+        "bug": 2278.260154967671,
+        "electric": 8222.890778264904,
+        "ground": 16440.704350612694,
+        "fairy": 10984.22500258273,
+        "psychic": 8828.52313478026,
+        "fighting": 5293.694907244215,
+        "ice": 8577.89797850126,
+        "ghost": 6643.838886861282,
+        "normal": 465.3209242550607,
+        "rock": 1157.5389151011805,
+        "dragon": 13303.727475570864,
+        "dark": 10530.053389122719,
+        "steel": 16144.313035903542
+      },
+      "top_pkm": [
+        {
+          "id": "485",
+          "name": "Heatran",
+          "usage_rate": 23.790463801470956,
+          "raw_count": 19020
+        },
+        {
+          "id": "806",
+          "name": "Blacephalon",
+          "usage_rate": 12.43808475509081,
+          "raw_count": 9944
+        },
+        {
+          "id": "637",
+          "name": "Volcarona",
+          "usage_rate": 7.917646470205633,
+          "raw_count": 6330
+        },
+        {
+          "id": "257",
+          "name": "Blaziken",
+          "usage_rate": 7.517386301095712,
+          "raw_count": 6010
+        },
+        {
+          "id": "721",
+          "name": "Volcanion",
+          "usage_rate": 4.971981788162305,
+          "raw_count": 3975
+        }
+      ]
+    },
+    "electric": {
+      "usage_rate": 43.856006404162706,
+      "raw_count": 35062,
+      "combinations": {
+        "electric-flying": 15749,
+        "electric-fairy": 6350,
+        "electric-water": 4686,
+        "electric": 4672,
+        "electric-steel": 3605
+      },
+      "teammates": {
+        "grass": 9381.34628662468,
+        "poison": 2539.732221475988,
+        "fire": 7565.885340139092,
+        "flying": 13713.532915023537,
+        "water": 12124.450769036324,
+        "electric": 1739.9781513942035,
+        "ground": 11360.532161007714,
+        "fairy": 8517.26490078882,
+        "psychic": 6936.09679589836,
+        "fighting": 4035.8686297204113,
+        "ice": 3805.6241373851367,
+        "ghost": 4707.933288685281,
+        "normal": 527.5267898415117,
+        "rock": 1353.2584056126511,
+        "dragon": 8556.081370512926,
+        "dark": 6608.524592752826,
+        "steel": 16889.229531142224,
+        "bug": 1483.5574285250489
+      },
+      "top_pkm": [
+        {
+          "id": "145",
+          "name": "Zapdos",
+          "usage_rate": 19.69905438535048,
+          "raw_count": 15749
+        },
+        {
+          "id": "785",
+          "name": "Tapu Koko",
+          "usage_rate": 7.9426627307750035,
+          "raw_count": 6350
+        },
+        {
+          "id": "10009",
+          "name": "Rotom Wash",
+          "usage_rate": 5.861309851403412,
+          "raw_count": 4686
+        },
+        {
+          "id": "807",
+          "name": "Zeraora",
+          "usage_rate": 5.843798469004853,
+          "raw_count": 4672
+        },
+        {
+          "id": "462",
+          "name": "Magnezone",
+          "usage_rate": 4.509180967628959,
+          "raw_count": 3605
+        }
+      ]
+    },
+    "fighting": {
+      "usage_rate": 35.78200830539851,
+      "raw_count": 28607,
+      "combinations": {
+        "fighting-water": 15185,
+        "fighting-fire": 6010,
+        "bug-fighting": 4530,
+        "fighting-flying": 2882
+      },
+      "teammates": {
+        "grass": 6732.994130710351,
+        "poison": 2830.5543705443947,
+        "fire": 4977.757590330691,
+        "flying": 12794.601167288363,
+        "water": 5107.609726375585,
+        "bug": 794.6591964782616,
+        "electric": 3751.168817366677,
+        "ground": 10233.970637140454,
+        "fairy": 6953.73828901042,
+        "psychic": 8265.413660767776,
+        "fighting": 2656.2142782133965,
+        "steel": 13295.751972066304,
+        "ice": 3239.5302582227323,
+        "ghost": 3396.175825395025,
+        "normal": 441.3502320868144,
+        "rock": 1103.073018747429,
+        "dragon": 6369.411734768906,
+        "dark": 4661.211530205023
+      },
+      "top_pkm": [
+        {
+          "id": "10191",
+          "name": "Urshifu Rapid Strike",
+          "usage_rate": 18.99359583729424,
+          "raw_count": 15185
+        },
+        {
+          "id": "257",
+          "name": "Blaziken",
+          "usage_rate": 7.517386301095712,
+          "raw_count": 6010
+        },
+        {
+          "id": "794",
+          "name": "Buzzwole",
+          "usage_rate": 5.666183018962326,
+          "raw_count": 4530
+        },
+        {
+          "id": "701",
+          "name": "Hawlucha",
+          "usage_rate": 3.60484314804623,
+          "raw_count": 2882
+        }
+      ]
+    },
+    "water": {
+      "usage_rate": 85.60064041627058,
+      "raw_count": 68436,
+      "combinations": {
+        "fighting-water": 15185,
+        "poison-water": 10596,
+        "fairy-water": 7364,
+        "psychic-water": 9283,
+        "dark-water": 5086,
+        "flying-water": 5081,
+        "electric-water": 4686,
+        "water": 4085,
+        "fire-water": 3975,
+        "ground-water": 3095
+      },
+      "teammates": {
+        "grass": 13929.854432918017,
+        "poison": 5389.2025289156245,
+        "fire": 10392.515480464346,
+        "flying": 35714.5959618635,
+        "water": 16400.903228176907,
+        "bug": 2964.6100851704045,
+        "electric": 11498.950554921197,
+        "ground": 22153.831508355812,
+        "fairy": 13435.028018089115,
+        "psychic": 11669.706121380013,
+        "fighting": 5114.071694455991,
+        "steel": 32080.537742007928,
+        "ice": 6943.528636118553,
+        "ghost": 7915.396688737401,
+        "normal": 2251.329866868778,
+        "rock": 2860.070782691566,
+        "dragon": 13734.335863636596,
+        "dark": 11816.49439655121
+      },
+      "top_pkm": [
+        {
+          "id": "10191",
+          "name": "Urshifu Rapid Strike",
+          "usage_rate": 18.99359583729424,
+          "raw_count": 15185
+        },
+        {
+          "id": "748",
+          "name": "Toxapex",
+          "usage_rate": 13.253614849652273,
+          "raw_count": 10596
+        },
+        {
+          "id": "788",
+          "name": "Tapu Fini",
+          "usage_rate": 9.210987141642066,
+          "raw_count": 7364
+        },
+        {
+          "id": "80",
+          "name": "Slowbro",
+          "usage_rate": 8.569320058037725,
+          "raw_count": 6851
+        },
+        {
+          "id": "342",
+          "name": "Crawdaunt",
+          "usage_rate": 6.361635062790814,
+          "raw_count": 5086
+        }
+      ]
+    },
+    "psychic": {
+      "usage_rate": 53.18456997048081,
+      "raw_count": 42520,
+      "combinations": {
+        "fairy-psychic": 16940,
+        "poison-psychic": 8020,
+        "psychic-water": 9283,
+        "psychic": 6079,
+        "fire-psychic": 2198
+      },
+      "teammates": {
+        "grass": 8544.151142249035,
+        "poison": 2719.3089239143374,
+        "water": 12080.794288759182,
+        "bug": 2529.6921354640585,
+        "flying": 20322.03548863359,
+        "ground": 15169.442889594708,
+        "fairy": 5905.720437353287,
+        "fire": 8570.347002936149,
+        "normal": 1169.1010340110633,
+        "psychic": 1999.472802839267,
+        "fighting": 8422.126742502873,
+        "electric": 6751.2777504695605,
+        "steel": 20612.293337493942,
+        "ice": 5658.821535988668,
+        "ghost": 5648.738406132696,
+        "rock": 2162.547240046411,
+        "dragon": 9882.776965001247,
+        "dark": 9477.83183009091
+      },
+      "top_pkm": [
+        {
+          "id": "786",
+          "name": "Tapu Lele",
+          "usage_rate": 18.699654775604145,
+          "raw_count": 14950
+        },
+        {
+          "id": "10172",
+          "name": "Slowking Galar",
+          "usage_rate": 10.031520488317407,
+          "raw_count": 8020
+        },
+        {
+          "id": "80",
+          "name": "Slowbro",
+          "usage_rate": 8.569320058037725,
+          "raw_count": 6851
+        },
+        {
+          "id": "151",
+          "name": "Mew",
+          "usage_rate": 7.603692400060039,
+          "raw_count": 6079
+        },
+        {
+          "id": "199",
+          "name": "Slowking",
+          "usage_rate": 3.041977285235403,
+          "raw_count": 2432
+        }
+      ]
+    },
+    "fairy": {
+      "usage_rate": 61.07594936708861,
+      "raw_count": 48829,
+      "combinations": {
+        "fairy-psychic": 16940,
+        "fairy": 14209,
+        "fairy-water": 7364,
+        "electric-fairy": 6350,
+        "fairy-ice": 3966
+      },
+      "teammates": {
+        "grass": 10370.371430825642,
+        "poison": 5043.202879114973,
+        "water": 14441.524554107044,
+        "bug": 2684.220864047571,
+        "flying": 25470.186196975643,
+        "ground": 18395.510742091563,
+        "fairy": 4362.497994758999,
+        "fire": 10674.375292162125,
+        "normal": 1489.724834886387,
+        "psychic": 6265.934775034861,
+        "fighting": 7118.998233206143,
+        "electric": 9018.050232601378,
+        "steel": 24650.32775534208,
+        "ice": 4573.059928551561,
+        "ghost": 7016.627435031152,
+        "rock": 1992.8611567699966,
+        "dragon": 11940.92147814133,
+        "dark": 6396.004153988228
+      },
+      "top_pkm": [
+        {
+          "id": "786",
+          "name": "Tapu Lele",
+          "usage_rate": 18.699654775604145,
+          "raw_count": 14950
+        },
+        {
+          "id": "36",
+          "name": "Clefable",
+          "usage_rate": 17.772802321508983,
+          "raw_count": 14209
+        },
+        {
+          "id": "788",
+          "name": "Tapu Fini",
+          "usage_rate": 9.210987141642066,
+          "raw_count": 7364
+        },
+        {
+          "id": "785",
+          "name": "Tapu Koko",
+          "usage_rate": 7.9426627307750035,
+          "raw_count": 6350
+        },
+        {
+          "id": "10104",
+          "name": "Ninetales Alola",
+          "usage_rate": 4.960724470906089,
+          "raw_count": 3966
+        }
+      ]
+    },
+    "poison": {
+      "usage_rate": 27.764296792915395,
+      "raw_count": 22197,
+      "combinations": {
+        "poison-water": 10596,
+        "poison-psychic": 8020,
+        "ground-poison": 3581
+      },
+      "teammates": {
+        "grass": 2615.171362414523,
+        "poison": 1285.1927612636748,
+        "fire": 2177.115445594551,
+        "flying": 10898.854061292464,
+        "water": 5900.563815723432,
+        "electric": 2422.074771181386,
+        "ground": 7429.308304312426,
+        "fairy": 5045.687182800098,
+        "normal": 1259.471937441945,
+        "psychic": 2613.8767256325636,
+        "fighting": 2906.5473711050317,
+        "ice": 2225.6332799736174,
+        "ghost": 1876.339488705828,
+        "rock": 1210.465999073815,
+        "dragon": 3365.808144804444,
+        "dark": 4097.87205762999,
+        "steel": 9144.554904599723,
+        "bug": 1181.3842963006798
+      },
+      "top_pkm": [
+        {
+          "id": "748",
+          "name": "Toxapex",
+          "usage_rate": 13.253614849652273,
+          "raw_count": 10596
+        },
+        {
+          "id": "10172",
+          "name": "Slowking Galar",
+          "usage_rate": 10.031520488317407,
+          "raw_count": 8020
+        },
+        {
+          "id": "34",
+          "name": "Nidoking",
+          "usage_rate": 4.479161454945714,
+          "raw_count": 3581
+        }
+      ]
+    },
+    "bug": {
+      "usage_rate": 16.205533596837945,
+      "raw_count": 12956,
+      "combinations": {
+        "bug-fire": 6330,
+        "bug-fighting": 4530,
+        "bug-steel": 2096
+      },
+      "teammates": {
+        "grass": 2221.5294403817293,
+        "poison": 1186.5106379118847,
+        "fire": 2105.2038606447836,
+        "flying": 4644.356460473884,
+        "water": 3335.990290149203,
+        "bug": 678.3501905632362,
+        "electric": 1416.5170512126401,
+        "ground": 4529.689460047982,
+        "fairy": 2627.010897057355,
+        "fighting": 849.0899360385137,
+        "psychic": 2767.5927367836143,
+        "ice": 2118.0355811728987,
+        "ghost": 1416.974656178243,
+        "normal": 399.83502163147494,
+        "rock": 681.3163313922843,
+        "dragon": 3524.8694842288746,
+        "dark": 2574.5596912178153,
+        "steel": 4465.782051005712
+      },
+      "top_pkm": [
+        {
+          "id": "637",
+          "name": "Volcarona",
+          "usage_rate": 7.917646470205633,
+          "raw_count": 6330
+        },
+        {
+          "id": "794",
+          "name": "Buzzwole",
+          "usage_rate": 5.666183018962326,
+          "raw_count": 4530
+        },
+        {
+          "id": "212",
+          "name": "Scizor",
+          "usage_rate": 2.6217041076699856,
+          "raw_count": 2096
+        }
+      ]
+    },
+    "rock": {
+      "usage_rate": 7.646220043027968,
+      "raw_count": 6113,
+      "combinations": {
+        "dark-rock": 6113
+      },
+      "teammates": {
+        "grass": 1510.706804556657,
+        "poison": 1094.258996156879,
+        "fire": 820.1218727768138,
+        "flying": 2701.9298305864627,
+        "water": 2456.352096282452,
+        "electric": 1117.3888792958276,
+        "ground": 2733.2520882030453,
+        "fairy": 1518.4596450328718,
+        "psychic": 1924.878857310186,
+        "fighting": 815.4412665053344,
+        "ice": 101.35938081482928,
+        "ghost": 843.5877135769731,
+        "normal": 15.41831573961836,
+        "rock": 33.937795221807214,
+        "dragon": 621.3627662520283,
+        "steel": 3710.7848060234114,
+        "bug": 519.7533323779228,
+        "dark": 21.673377002290046
+      },
+      "top_pkm": [
+        {
+          "id": "248",
+          "name": "Tyranitar",
+          "usage_rate": 7.646220043027968,
+          "raw_count": 6113
+        }
+      ]
+    },
+    "normal": {
+      "usage_rate": 6.594286286085955,
+      "raw_count": 5272,
+      "combinations": {
+        "normal": 5272
+      },
+      "teammates": {
+        "grass": 466.1917288180922,
+        "poison": 980.712259272306,
+        "fire": 336.7075446803688,
+        "flying": 1629.6240836872148,
+        "electric": 300.3607714821031,
+        "ground": 1297.886210632083,
+        "fairy": 1012.0522011124897,
+        "normal": 60.85070672144315,
+        "psychic": 1003.9221080221243,
+        "fighting": 373.9733385904689,
+        "water": 1903.4083983314931,
+        "ice": 57.824946996888436,
+        "ghost": 469.0217152001828,
+        "dragon": 911.3148219643622,
+        "dark": 60.627586431971274,
+        "steel": 1804.2073783124301,
+        "bug": 345.8052987794359,
+        "rock": 16.30062708466897
+      },
+      "top_pkm": [
+        {
+          "id": "242",
+          "name": "Blissey",
+          "usage_rate": 6.594286286085955,
+          "raw_count": 5272
+        }
+      ]
+    }
+  },
+  "top_pokemon": [
+    {
+      "id": "10021",
+      "name": "Landorus Therian",
+      "usage_rate": 41.50572872367039,
+      "raw_count": 33183
+    },
+    {
+      "id": "887",
+      "name": "Dragapult",
+      "usage_rate": 28.881272827337767,
+      "raw_count": 23090
+    },
+    {
+      "id": "445",
+      "name": "Garchomp",
+      "usage_rate": 25.584129684294794,
+      "raw_count": 20454
+    },
+    {
+      "id": "461",
+      "name": "Weavile",
+      "usage_rate": 24.532195927352777,
+      "raw_count": 19613
+    },
+    {
+      "id": "598",
+      "name": "Ferrothorn",
+      "usage_rate": 24.242007304748086,
+      "raw_count": 19381
+    },
+    {
+      "id": "485",
+      "name": "Heatran",
+      "usage_rate": 23.790463801470956,
+      "raw_count": 19020
+    },
+    {
+      "id": "145",
+      "name": "Zapdos",
+      "usage_rate": 19.69905438535048,
+      "raw_count": 15749
+    },
+    {
+      "id": "10191",
+      "name": "Urshifu Rapid Strike",
+      "usage_rate": 18.99359583729424,
+      "raw_count": 15185
+    },
+    {
+      "id": "786",
+      "name": "Tapu Lele",
+      "usage_rate": 18.699654775604145,
+      "raw_count": 14950
+    },
+    {
+      "id": "809",
+      "name": "Melmetal",
+      "usage_rate": 18.637114124180716,
+      "raw_count": 14900
+    },
+    {
+      "id": "36",
+      "name": "Clefable",
+      "usage_rate": 17.772802321508983,
+      "raw_count": 14209
+    },
+    {
+      "id": "798",
+      "name": "Kartana",
+      "usage_rate": 16.4256766898484,
+      "raw_count": 13132
+    },
+    {
+      "id": "812",
+      "name": "Rillaboom",
+      "usage_rate": 15.872817331265324,
+      "raw_count": 12690
+    },
+    {
+      "id": "823",
+      "name": "Corviknight",
+      "usage_rate": 15.766498223845499,
+      "raw_count": 12605
+    },
+    {
+      "id": "10019",
+      "name": "Tornadus Therian",
+      "usage_rate": 13.522539650773002,
+      "raw_count": 10811
+    },
+    {
+      "id": "748",
+      "name": "Toxapex",
+      "usage_rate": 13.253614849652273,
+      "raw_count": 10596
+    },
+    {
+      "id": "806",
+      "name": "Blacephalon",
+      "usage_rate": 12.43808475509081,
+      "raw_count": 9944
+    },
+    {
+      "id": "10172",
+      "name": "Slowking Galar",
+      "usage_rate": 10.031520488317407,
+      "raw_count": 8020
+    },
+    {
+      "id": "149",
+      "name": "Dragonite",
+      "usage_rate": 9.801370891079202,
+      "raw_count": 7836
+    },
+    {
+      "id": "788",
+      "name": "Tapu Fini",
+      "usage_rate": 9.210987141642066,
+      "raw_count": 7364
+    },
+    {
+      "id": "80",
+      "name": "Slowbro",
+      "usage_rate": 8.569320058037725,
+      "raw_count": 6851
+    },
+    {
+      "id": "785",
+      "name": "Tapu Koko",
+      "usage_rate": 7.9426627307750035,
+      "raw_count": 6350
+    },
+    {
+      "id": "637",
+      "name": "Volcarona",
+      "usage_rate": 7.917646470205633,
+      "raw_count": 6330
+    },
+    {
+      "id": "248",
+      "name": "Tyranitar",
+      "usage_rate": 7.646220043027968,
+      "raw_count": 6113
+    },
+    {
+      "id": "151",
+      "name": "Mew",
+      "usage_rate": 7.603692400060039,
+      "raw_count": 6079
+    },
+    {
+      "id": "257",
+      "name": "Blaziken",
+      "usage_rate": 7.517386301095712,
+      "raw_count": 6010
+    },
+    {
+      "id": "242",
+      "name": "Blissey",
+      "usage_rate": 6.594286286085955,
+      "raw_count": 5272
+    },
+    {
+      "id": "342",
+      "name": "Crawdaunt",
+      "usage_rate": 6.361635062790814,
+      "raw_count": 5086
+    },
+    {
+      "id": "279",
+      "name": "Pelipper",
+      "usage_rate": 6.355380997648472,
+      "raw_count": 5081
+    },
+    {
+      "id": "530",
+      "name": "Excadrill",
+      "usage_rate": 6.023915545104318,
+      "raw_count": 4816
+    },
+    {
+      "id": "10009",
+      "name": "Rotom Wash",
+      "usage_rate": 5.861309851403412,
+      "raw_count": 4686
+    },
+    {
+      "id": "807",
+      "name": "Zeraora",
+      "usage_rate": 5.843798469004853,
+      "raw_count": 4672
+    },
+    {
+      "id": "794",
+      "name": "Buzzwole",
+      "usage_rate": 5.666183018962326,
+      "raw_count": 4530
+    },
+    {
+      "id": "847",
+      "name": "Barraskewda",
+      "usage_rate": 5.109571221293841,
+      "raw_count": 4085
+    },
+    {
+      "id": "721",
+      "name": "Volcanion",
+      "usage_rate": 4.971981788162305,
+      "raw_count": 3975
+    },
+    {
+      "id": "10104",
+      "name": "Ninetales Alola",
+      "usage_rate": 4.960724470906089,
+      "raw_count": 3966
+    },
+    {
+      "id": "797",
+      "name": "Celesteela",
+      "usage_rate": 4.871916745884826,
+      "raw_count": 3895
+    },
+    {
+      "id": "462",
+      "name": "Magnezone",
+      "usage_rate": 4.509180967628959,
+      "raw_count": 3605
+    },
+    {
+      "id": "625",
+      "name": "Bisharp",
+      "usage_rate": 4.501676089458148,
+      "raw_count": 3599
+    },
+    {
+      "id": "34",
+      "name": "Nidoking",
+      "usage_rate": 4.479161454945714,
+      "raw_count": 3581
+    },
+    {
+      "id": "450",
+      "name": "Hippowdon",
+      "usage_rate": 4.31530494821634,
+      "raw_count": 3450
+    },
+    {
+      "id": "423",
+      "name": "Gastrodon",
+      "usage_rate": 3.8712663231100217,
+      "raw_count": 3095
+    },
+    {
+      "id": "701",
+      "name": "Hawlucha",
+      "usage_rate": 3.60484314804623,
+      "raw_count": 2882
+    },
+    {
+      "id": "227",
+      "name": "Skarmory",
+      "usage_rate": 3.064491919747836,
+      "raw_count": 2450
+    },
+    {
+      "id": "199",
+      "name": "Slowking",
+      "usage_rate": 3.041977285235403,
+      "raw_count": 2432
+    },
+    {
+      "id": "10171",
+      "name": "Moltres Galar",
+      "usage_rate": 2.888127282733777,
+      "raw_count": 2309
+    },
+    {
+      "id": "494",
+      "name": "Victini",
+      "usage_rate": 2.749287036573773,
+      "raw_count": 2198
+    },
+    {
+      "id": "212",
+      "name": "Scizor",
+      "usage_rate": 2.6217041076699856,
+      "raw_count": 2096
+    },
+    {
+      "id": "858",
+      "name": "Hatterene",
+      "usage_rate": 2.489117926652324,
+      "raw_count": 1990
+    },
+    {
+      "id": "681",
+      "name": "Aegislash Shield",
+      "usage_rate": 2.469104918196828,
+      "raw_count": 1974
+    }
+  ],
+  "top_cores": [
+    {
+      "core": [
+        "10021",
+        "485",
+        "887"
+      ],
+      "usage_rate": 4.686433314822753
+    },
+    {
+      "core": [
+        "10021",
+        "809",
+        "887"
+      ],
+      "usage_rate": 4.405614715764582
+    },
+    {
+      "core": [
+        "10021",
+        "10191",
+        "786"
+      ],
+      "usage_rate": 4.300538582933512
+    },
+    {
+      "core": [
+        "10021",
+        "786",
+        "887"
+      ],
+      "usage_rate": 4.210335658661862
+    },
+    {
+      "core": [
+        "10021",
+        "10191",
+        "809"
+      ],
+      "usage_rate": 4.120204463666935
+    },
+    {
+      "core": [
+        "10021",
+        "598",
+        "887"
+      ],
+      "usage_rate": 4.111205841623497
+    },
+    {
+      "core": [
+        "10021",
+        "786",
+        "809"
+      ],
+      "usage_rate": 4.104057286085773
+    },
+    {
+      "core": [
+        "10021",
+        "10191",
+        "887"
+      ],
+      "usage_rate": 4.045402656340276
+    },
+    {
+      "core": [
+        "10021",
+        "461",
+        "485"
+      ],
+      "usage_rate": 4.037708320430916
+    },
+    {
+      "core": [
+        "10021",
+        "485",
+        "786"
+      ],
+      "usage_rate": 3.965862984527186
+    }
+  ],
+  "rogue_picks": [],
+  "top_cut": []
+}
