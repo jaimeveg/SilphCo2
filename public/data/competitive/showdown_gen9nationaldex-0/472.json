@@ -7,6 +7,18 @@
     "base_weight": 92690,
     "percent": 8.824593472714117
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "toxic-orb": 90567,
     "white-herb": 176,
@@ -161,7 +173,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "18.1",
       "evs": {
         "hp": 244,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.8",
       "evs": {
         "hp": 252,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 244,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.6",
       "evs": {
         "hp": 248,
@@ -245,7 +257,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -257,7 +269,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.3",
       "evs": {
         "hp": 244,
@@ -269,7 +281,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 244,

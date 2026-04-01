@@ -1,12 +1,24 @@
 {
   "id": "10022",
-  "name": "Kyurem Black",
+  "name": "Kyurem black",
   "format_id": "showdown_gen9ubers-1630",
   "usage_metrics": {
     "raw": 11606,
     "base_weight": 3926.886918734564,
     "percent": 4.287244652949651
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "loaded-dice": 3421.642883741574,
     "leftovers": 317.6667010587914,
@@ -142,7 +154,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "34.8",
       "evs": {
         "hp": 0,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.7",
       "evs": {
         "hp": 0,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "17.0",
       "evs": {
         "hp": 0,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.7",
       "evs": {
         "hp": 4,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.6",
       "evs": {
         "hp": 4,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 88,
@@ -226,7 +238,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.2",
       "evs": {
         "hp": 40,
@@ -238,7 +250,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.0",
       "evs": {
         "hp": 32,
@@ -250,7 +262,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.8",
       "evs": {
         "hp": 0,
@@ -476,6 +488,7 @@
     "884": 2.641989294005498e-8,
     "887": 13.147100619361574,
     "890": 331.65049981956963,
+    "892": 20.94519384278038,
     "893": 1.320831397601981,
     "894": 110.88806551642355,
     "895": 0.6767755672389739,
@@ -580,7 +593,7 @@
     "10186": 4.9746499283746495,
     "10188": 1015.4791431525128,
     "10189": 57.536702904299695,
-    "10191": 93.17545129639257,
+    "10191": 72.23025745361218,
     "10193": 347.5376651022941,
     "10230": 4.790245186726368,
     "10232": 0.000055395374062128244,

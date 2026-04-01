@@ -7,6 +7,23 @@
     "base_weight": 16507.84098898341,
     "percent": 34.73732878151751
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 15419.431217869236,
     "nothing": 965.7511576585667,
@@ -85,7 +102,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "28.5",
       "evs": {
         "hp": 252,
@@ -97,7 +114,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "11.7",
       "evs": {
         "hp": 248,
@@ -109,7 +126,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.7",
       "evs": {
         "hp": 252,
@@ -121,7 +138,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.9",
       "evs": {
         "hp": 248,
@@ -133,7 +150,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.7",
       "evs": {
         "hp": 248,
@@ -145,7 +162,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 4,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.5",
       "evs": {
         "hp": 252,

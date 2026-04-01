@@ -1,12 +1,24 @@
 {
   "id": "10059",
-  "name": "Lucario Mega",
+  "name": "Lucario mega",
   "format_id": "showdown_gen9nationaldexubers-1630",
   "usage_metrics": {
     "raw": 19088,
     "base_weight": 839.3922719559301,
     "percent": 6.4464707868963185
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "lucarionite": 839.3922719559301
   },
@@ -102,7 +114,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "49.3",
       "evs": {
         "hp": 0,
@@ -114,7 +126,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.2",
       "evs": {
         "hp": 4,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.8",
       "evs": {
         "hp": 0,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.6",
       "evs": {
         "hp": 0,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.3",
       "evs": {
         "hp": 0,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -186,7 +198,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -198,7 +210,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.0",
       "evs": {
         "hp": 0,
@@ -210,7 +222,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 4,
@@ -643,6 +655,7 @@
     "884": 0,
     "887": 57.25574081941272,
     "890": 133.69552824402192,
+    "892": 9.552879759609294,
     "893": 0.12100254687461498,
     "894": 0.34722786660922966,
     "895": 0.0001905037225050643,
@@ -808,7 +821,7 @@
     "10186": 0.28246135111843423,
     "10188": 105.49885213427667,
     "10189": 8.471605497854123,
-    "10191": 15.887368060660775,
+    "10191": 6.334488301051481,
     "10193": 11.428997190574886,
     "10230": 13.548923346431247,
     "10232": 0.009507976928452955,

@@ -7,6 +7,18 @@
     "base_weight": 7282,
     "percent": 3.494979746203613
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "darkinium-z": 241,
     "choice-scarf": 2470,
@@ -106,7 +118,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "45.3",
       "evs": {
         "hp": 0,
@@ -118,7 +130,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.7",
       "evs": {
         "hp": 0,
@@ -130,7 +142,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.7",
       "evs": {
         "hp": 4,
@@ -142,7 +154,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.4",
       "evs": {
         "hp": 4,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.8",
       "evs": {
         "hp": 60,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.8",
       "evs": {
         "hp": 200,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 0,

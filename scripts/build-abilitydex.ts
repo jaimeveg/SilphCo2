@@ -5,7 +5,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { IAbilityIndex, IAbilityLearner, IAbilityDetail } from '../src/types/abilitydex';
 
-const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
+const POKEAPI_GQL = 'https://graphql.pokeapi.co/v1beta2/v1/graphql';
 const DATA_DIR = path.join(process.cwd(), 'public', 'data');
 const SMOGON_DIR = path.join(DATA_DIR, 'smogon');
 const ABILITIES_DIR = path.join(DATA_DIR, 'abilities');
@@ -32,20 +32,20 @@ interface AbilityCompetitiveData {
 
 const ABILITIES_QUERY = `
 query GetAbilities($limit: Int, $offset: Int) {
-  pokemon_v2_ability(limit: $limit, offset: $offset, order_by: {id: asc}) {
+  ability(limit: $limit, offset: $offset, order_by: {id: asc}) {
     name
     generation_id
-    pokemon_v2_abilityeffecttexts(where: {language_id: {_eq: 9}}, limit: 1) {
+    abilityeffecttexts(where: {language_id: {_eq: 9}}, limit: 1) {
       effect
       short_effect
     }
-    pokemon_v2_abilityflavortexts(where: {language_id: {_eq: 9}}, order_by: {version_group_id: desc}, limit: 1) {
+    abilityflavortexts(where: {language_id: {_eq: 9}}, order_by: {version_group_id: desc}, limit: 1) {
       flavor_text
     }
-    pokemon_v2_pokemonabilities(where: {pokemon_v2_pokemon: {is_default: {_eq: true}}}) {
+    pokemonabilities(where: {pokemon: {is_default: {_eq: true}}}) {
       is_hidden
       slot
-      pokemon_v2_pokemon {
+      pokemon {
         name
       }
     }
@@ -87,7 +87,7 @@ async function fetchAllAbilities() {
     console.log(`[1/4] Descargando habilidades desde PokeAPI GraphQL...`);
     while (fetchMore) {
         const json = await fetchWithRetry(ABILITIES_QUERY, { limit: CHUNK_SIZE, offset });
-        const chunk = json.data?.pokemon_v2_ability || [];
+        const chunk = json.data?.ability || [];
         allAbilities = [...allAbilities, ...chunk];
         process.stdout.write(`   ↳ Progreso: ${allAbilities.length} habilidades...\r`);
         if (chunk.length < CHUNK_SIZE) fetchMore = false;
@@ -266,16 +266,16 @@ const runETL = async () => {
             const id = ability.name as string;
             const generation = ability.generation_id || 1;
 
-            const effectTexts = ability.pokemon_v2_abilityeffecttexts?.[0];
+            const effectTexts = ability.abilityeffecttexts?.[0];
             const effectText = (effectTexts?.effect || '').replace(/\n|\f|\r/g, ' ').trim();
             const shortEffect = (effectTexts?.short_effect || '').replace(/\n|\f|\r/g, ' ').trim();
 
-            let flavorText = ability.pokemon_v2_abilityflavortexts?.[0]?.flavor_text || '';
+            let flavorText = ability.abilityflavortexts?.[0]?.flavor_text || '';
             flavorText = flavorText.replace(/\n|\f|\r/g, ' ').trim();
 
             // ── FILTER: Skip abilities with no learners and no description ──
             // (These are typically Contest/cut abilities or internal placeholders)
-            const pokemonAbilities = ability.pokemon_v2_pokemonabilities || [];
+            const pokemonAbilities = ability.pokemonabilities || [];
             if (pokemonAbilities.length === 0 && !effectText && !shortEffect) {
                 skippedEmpty++;
                 continue;
@@ -287,7 +287,7 @@ const runETL = async () => {
             const hidden: IAbilityLearner[] = [];
 
             for (const pa of pokemonAbilities) {
-                const pokemonName = pa.pokemon_v2_pokemon?.name as string | undefined;
+                const pokemonName = pa.pokemon?.name as string | undefined;
                 if (!pokemonName) continue;
 
                 // Resolve numeric ID from alias_map

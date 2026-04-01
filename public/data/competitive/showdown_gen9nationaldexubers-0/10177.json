@@ -1,12 +1,19 @@
 {
   "id": "10177",
-  "name": "Darmanitan Galar Standard",
+  "name": "Darmanitan galar",
   "format_id": "showdown_gen9nationaldexubers-0",
   "usage_metrics": {
     "raw": 10200,
     "base_weight": 10200,
     "percent": 3.4447821681864235
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-band": 1479,
     "shell-bell": 89,
@@ -128,7 +135,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "55.5",
       "evs": {
         "hp": 0,
@@ -140,7 +147,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.9",
       "evs": {
         "hp": 4,
@@ -152,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.4",
       "evs": {
         "hp": 4,
@@ -164,7 +171,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -176,7 +183,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -188,7 +195,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -200,7 +207,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -212,7 +219,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -224,7 +231,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.9",
       "evs": {
         "hp": 6,
@@ -236,7 +243,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.6",
       "evs": {
         "hp": 0,
@@ -614,6 +621,7 @@
     "884": 3,
     "887": 559,
     "890": 265,
+    "892": 170,
     "893": 55,
     "894": 194,
     "895": 8,
@@ -774,7 +782,7 @@
     "10186": 6,
     "10188": 640,
     "10189": 188,
-    "10191": 298,
+    "10191": 128,
     "10193": 233,
     "10230": 70,
     "10232": 1,

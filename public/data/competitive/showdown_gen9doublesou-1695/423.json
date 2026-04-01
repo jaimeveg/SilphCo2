@@ -7,6 +7,18 @@
     "base_weight": 526.5682012475266,
     "percent": 3.5081650302691156
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "assault-vest": 64.94268366929926,
     "rindo-berry": 3.1220103748152916,
@@ -154,7 +166,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "23.7",
       "evs": {
         "hp": 4,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "18.8",
       "evs": {
         "hp": 252,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "10.9",
       "evs": {
         "hp": 0,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "8.9",
       "evs": {
         "hp": 252,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.4",
       "evs": {
         "hp": 252,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -226,7 +238,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -238,7 +250,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.8",
       "evs": {
         "hp": 151,
@@ -250,7 +262,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -262,7 +274,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 0,

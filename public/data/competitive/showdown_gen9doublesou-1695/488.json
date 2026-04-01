@@ -7,6 +7,23 @@
     "base_weight": 3905.4725330461274,
     "percent": 8.053789150599448
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 743.7138289913041,
     "mental-herb": 984.3860937376398,
@@ -156,7 +173,7 @@
   },
   "spreads": [
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "15.7",
       "evs": {
         "hp": 252,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "8.9",
       "evs": {
         "hp": 240,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -204,7 +221,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -216,7 +233,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -228,7 +245,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -240,7 +257,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -252,7 +269,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -264,7 +281,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.8",
       "evs": {
         "hp": 184,

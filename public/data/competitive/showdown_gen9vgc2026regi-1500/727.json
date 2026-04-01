@@ -7,6 +7,23 @@
     "base_weight": 115282.7360048062,
     "percent": 46.89751596669768
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 24112.51439851343,
     "sitrus-berry": 11864.632495440548,
@@ -183,7 +200,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.2",
       "evs": {
         "hp": 244,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 180,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 244,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -267,7 +284,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -279,7 +296,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.2",
       "evs": {
         "hp": 244,
@@ -291,7 +308,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.1",
       "evs": {
         "hp": 252,
@@ -640,6 +657,7 @@
     "884": 18.478536948523146,
     "887": 143.15310229323637,
     "890": 1403.244535948448,
+    "892": 4269.982864151885,
     "894": 714.4902049125042,
     "895": 77.42393801766751,
     "896": 46.08416250373967,
@@ -764,7 +782,7 @@
     "10186": 6633.625436068276,
     "10188": 3960.084188606288,
     "10189": 15079.17352557802,
-    "10191": 39263.677440332256,
+    "10191": 34993.69457618037,
     "10193": 30826.515280891723,
     "10194": 31511.016985939346,
     "10230": 46.31620281234433,

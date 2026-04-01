@@ -1,12 +1,19 @@
 {
   "id": "10001",
-  "name": "Deoxys Attack",
+  "name": "Deoxys attack",
   "format_id": "showdown_gen9nationaldexubers-0",
   "usage_metrics": {
     "raw": 8727,
     "base_weight": 8727,
     "percent": 2.947315096251266
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 3643,
     "choice-scarf": 286,
@@ -17,25 +24,25 @@
     "heavy-duty-boots": 56,
     "leftovers": 158,
     "power-herb": 288,
-    "psychiumz": 243,
-    "iciumz": 3,
+    "psychium-z": 243,
+    "icium-z": 3,
     "air-balloon": 9,
     "nothing": 10,
     "expert-belt": 28,
     "rocky-helmet": 7,
-    "firiumz": 2,
+    "firium-z": 2,
     "odd-incense": 2,
-    "ghostiumz": 3,
+    "ghostium-z": 3,
     "mind-plate": 7,
-    "normaliumz": 1,
-    "darkiniumz": 5,
+    "normalium-z": 1,
+    "darkinium-z": 5,
     "light-clay": 4,
     "tanga-berry": 1,
     "focus-band": 23,
     "razor-fang": 1,
     "assault-vest": 9,
     "icicle-plate": 2,
-    "fightiniumz": 1,
+    "fightinium-z": 1,
     "white-herb": 2
   },
   "abilities": {
@@ -84,7 +91,7 @@
     "ice-punch": 131,
     "stomping-tantrum": 45,
     "icy-wind": 151,
-    "hiddenpowerfire": 144,
+    "hidden-power-fire": 144,
     "poison-jab": 70,
     "rock-tomb": 23,
     "magic-coat": 165,
@@ -106,9 +113,9 @@
     "double-edge": 49,
     "focus-punch": 11,
     "toxic": 21,
-    "hiddenpowerrock": 1,
+    "hidden-power-rock": 1,
     "solar-beam": 1,
-    "hiddenpowerfighting": 5,
+    "hidden-power-fighting": 5,
     "detect": 11,
     "power-up-punch": 29,
     "skill-swap": 8,
@@ -148,7 +155,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "14.7",
       "evs": {
         "hp": 0,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.7",
       "evs": {
         "hp": 0,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "10.4",
       "evs": {
         "hp": 0,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "10.4",
       "evs": {
         "hp": 0,
@@ -196,7 +203,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.1",
       "evs": {
         "hp": 4,
@@ -208,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -220,7 +227,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -232,7 +239,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 4,
@@ -244,7 +251,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "2.3",
       "evs": {
         "hp": 28,
@@ -256,7 +263,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.3",
       "evs": {
         "hp": 0,

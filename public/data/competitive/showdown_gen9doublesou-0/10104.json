@@ -1,12 +1,29 @@
 {
   "id": "10104",
-  "name": "Ninetales Alola",
+  "name": "Ninetales alolan",
   "format_id": "showdown_gen9doublesou-0",
   "usage_metrics": {
     "raw": 48616,
     "base_weight": 48616,
     "percent": 8.244052161231792
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 29901,
     "sitrus-berry": 993,
@@ -155,7 +172,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "26.9",
       "evs": {
         "hp": 0,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.4",
       "evs": {
         "hp": 4,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.3",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.6",
       "evs": {
         "hp": 164,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.9",
       "evs": {
         "hp": 208,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.0",
       "evs": {
         "hp": 4,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.8",
       "evs": {
         "hp": 136,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.7",
       "evs": {
         "hp": 252,

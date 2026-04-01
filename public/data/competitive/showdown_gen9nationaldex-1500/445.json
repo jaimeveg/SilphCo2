@@ -7,6 +7,23 @@
     "base_weight": 54548.71701359514,
     "percent": 9.241593358467574
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "assault-vest": 569.8795134897895,
     "rocky-helmet": 13033.981602234893,
@@ -169,7 +186,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "50.6",
       "evs": {
         "hp": 0,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 4,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 0,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -241,7 +258,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -253,7 +270,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -265,7 +282,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.3",
       "evs": {
         "hp": 252,
@@ -277,7 +294,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.1",
       "evs": {
         "hp": 252,

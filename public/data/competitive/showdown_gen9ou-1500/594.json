@@ -7,6 +7,23 @@
     "base_weight": 128556.20504530774,
     "percent": 10.06179333123198
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 37136.45553188487,
     "rocky-helmet": 27813.60831905953,
@@ -154,7 +171,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "17.9",
       "evs": {
         "hp": 252,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "13.5",
       "evs": {
         "hp": 20,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "11.3",
       "evs": {
         "hp": 248,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "6.3",
       "evs": {
         "hp": 252,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.7",
       "evs": {
         "hp": 252,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -262,7 +279,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.7",
       "evs": {
         "hp": 252,

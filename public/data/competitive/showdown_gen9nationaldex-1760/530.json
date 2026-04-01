@@ -7,6 +7,23 @@
     "base_weight": 796.9231374400251,
     "percent": 3.2444114398872763
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "air-balloon": 192.5692176071847,
     "life-orb": 22.292578951925027,
@@ -130,7 +147,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "30.2",
       "evs": {
         "hp": 0,
@@ -142,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "23.0",
       "evs": {
         "hp": 104,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "20.1",
       "evs": {
         "hp": 0,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.6",
       "evs": {
         "hp": 0,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 4,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 4,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.8",
       "evs": {
         "hp": 0,

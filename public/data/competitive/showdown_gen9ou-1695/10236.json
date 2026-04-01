@@ -1,12 +1,24 @@
 {
   "id": "10236",
-  "name": "Samurott Hisui",
+  "name": "Samurott hisuian",
   "format_id": "showdown_gen9ou-1695",
   "usage_metrics": {
     "raw": 198652,
     "base_weight": 15804.535035849078,
     "percent": 9.603637017599159
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-scarf": 2230.9675306382355,
     "heavy-duty-boots": 1868.6512183079778,
@@ -171,7 +183,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "23.3",
       "evs": {
         "hp": 0,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "12.0",
       "evs": {
         "hp": 0,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.7",
       "evs": {
         "hp": 0,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.6",
       "evs": {
         "hp": 0,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.9",
       "evs": {
         "hp": 248,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.4",
       "evs": {
         "hp": 248,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.3",
       "evs": {
         "hp": 72,
@@ -255,7 +267,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 216,
@@ -267,7 +279,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 160,
@@ -279,7 +291,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 248,

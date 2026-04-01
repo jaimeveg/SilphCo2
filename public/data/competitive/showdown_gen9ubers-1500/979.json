@@ -7,6 +7,23 @@
     "base_weight": 10741.758939213221,
     "percent": 8.021499021092682
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 201.10838418788384,
     "leftovers": 5225.985279056357,
@@ -184,7 +201,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "12.6",
       "evs": {
         "hp": 240,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "12.4",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.5",
       "evs": {
         "hp": 248,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.9",
       "evs": {
         "hp": 252,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.5",
       "evs": {
         "hp": 0,
@@ -244,7 +261,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -256,7 +273,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -268,7 +285,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 4,
@@ -280,7 +297,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -292,7 +309,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -636,6 +653,7 @@
     "884": 12.367622516708824,
     "887": 296.39717835666215,
     "890": 662.6660604915745,
+    "892": 170.16432277047818,
     "893": 5.691007417112361,
     "894": 859.2360667730557,
     "895": 11.62592187402764,
@@ -767,7 +785,7 @@
     "10186": 37.57673909893805,
     "10188": 2024.5052528424824,
     "10189": 229.00055943967985,
-    "10191": 554.1167958365614,
+    "10191": 383.95247306608326,
     "10193": 429.3200070138401,
     "10230": 9.539693363571669,
     "10232": 1.379269888692155,

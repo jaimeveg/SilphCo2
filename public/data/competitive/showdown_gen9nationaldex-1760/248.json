@@ -7,6 +7,18 @@
     "base_weight": 1485.103015443474,
     "percent": 4.361361818804981
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "smooth-rock": 104.28193076133267,
     "choice-band": 903.1572256817877,
@@ -182,7 +194,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "26.3",
       "evs": {
         "hp": 88,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.3",
       "evs": {
         "hp": 80,
@@ -206,7 +218,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.3",
       "evs": {
         "hp": 0,
@@ -218,7 +230,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.8",
       "evs": {
         "hp": 252,
@@ -230,7 +242,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.5",
       "evs": {
         "hp": 132,
@@ -242,7 +254,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.3",
       "evs": {
         "hp": 236,
@@ -254,7 +266,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -266,7 +278,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 4,
@@ -278,7 +290,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 76,
@@ -290,7 +302,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.9",
       "evs": {
         "hp": 252,

@@ -7,6 +7,18 @@
     "base_weight": 13848.025439099902,
     "percent": 7.785176562043754
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "chesto-berry": 217.65212805993357,
     "choice-scarf": 1392.5845306535807,
@@ -172,7 +184,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "62.8",
       "evs": {
         "hp": 0,
@@ -184,7 +196,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.2",
       "evs": {
         "hp": 0,
@@ -196,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 4,
@@ -208,7 +220,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -220,7 +232,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -232,7 +244,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "3.5",
       "evs": {
         "hp": 0,
@@ -244,7 +256,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -256,7 +268,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.1",
       "evs": {
         "hp": 144,
@@ -268,7 +280,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.0",
       "evs": {
         "hp": 240,
@@ -280,7 +292,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.9",
       "evs": {
         "hp": 0,

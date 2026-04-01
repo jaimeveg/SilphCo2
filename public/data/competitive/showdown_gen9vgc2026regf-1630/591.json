@@ -7,6 +7,23 @@
     "base_weight": 28886.269262684804,
     "percent": 20.429856273135798
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 13268.916376784216,
     "focus-sash": 37.77185948233304,
@@ -153,7 +170,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.4",
       "evs": {
         "hp": 236,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.5",
       "evs": {
         "hp": 236,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.2",
       "evs": {
         "hp": 244,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.5",
       "evs": {
         "hp": 236,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.4",
       "evs": {
         "hp": 244,
@@ -225,7 +242,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -237,7 +254,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.8",
       "evs": {
         "hp": 236,
@@ -249,7 +266,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.7",
       "evs": {
         "hp": 244,
@@ -261,7 +278,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.0",
       "evs": {
         "hp": 244,
@@ -654,6 +671,7 @@
     "879": 0.33839224939549,
     "884": 0.252542810038903,
     "887": 121.35941166878824,
+    "892": 921.4119226848022,
     "894": 27.565576474816414,
     "895": 359.6464106606264,
     "896": 6.861978008697237,
@@ -777,7 +795,7 @@
     "10171": 317.8988391898634,
     "10172": 4.16138638953203,
     "10186": 424.4766991822548,
-    "10191": 18440.622331193008,
+    "10191": 17519.210408508206,
     "10230": 276.56769195676316,
     "10231": 0.000012724385805462646,
     "10232": 2.6396722296476915,

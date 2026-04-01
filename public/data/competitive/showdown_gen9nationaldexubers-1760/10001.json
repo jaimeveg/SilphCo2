@@ -1,12 +1,24 @@
 {
   "id": "10001",
-  "name": "Deoxys Attack",
+  "name": "Deoxys attack",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 8727,
     "base_weight": 900.6678864020647,
     "percent": 2.947315096251266
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 534.7847618641727,
     "choice-scarf": 6.379436833152591,
@@ -17,25 +29,25 @@
     "heavy-duty-boots": 0.050025067082957175,
     "leftovers": 0.022061963351747038,
     "power-herb": 31.68981820089607,
-    "psychiumz": 2.191835421308998,
-    "iciumz": 1.4916310041974556,
+    "psychium-z": 2.191835421308998,
+    "icium-z": 1.4916310041974556,
     "air-balloon": 3.0885849433559542e-12,
     "nothing": 0.0008105031217904846,
     "expert-belt": 0.0009917997425492597,
     "rocky-helmet": 1.0491085050690074e-7,
-    "firiumz": 0.00041407392648912245,
+    "firium-z": 0.00041407392648912245,
     "odd-incense": 0,
-    "ghostiumz": 0,
+    "ghostium-z": 0,
     "mind-plate": 3.9429318698935845e-9,
-    "normaliumz": 0.0020611274381536204,
-    "darkiniumz": 0.0014305908307840065,
+    "normalium-z": 0.0020611274381536204,
+    "darkinium-z": 0.0014305908307840065,
     "light-clay": 0,
     "tanga-berry": 0.004450584122631551,
     "focus-band": 0.005466160417566979,
     "razor-fang": 0,
     "assault-vest": 3.0320190802513025e-13,
     "icicle-plate": 0.0000015008167617569512,
-    "fightiniumz": 0.04102276625036466,
+    "fightinium-z": 0.04102276625036466,
     "white-herb": 0
   },
   "abilities": {
@@ -84,7 +96,7 @@
     "ice-punch": 0.3628354083978622,
     "stomping-tantrum": 0.008931492453665424,
     "icy-wind": 58.977550273511426,
-    "hiddenpowerfire": 71.142867619626,
+    "hidden-power-fire": 71.142867619626,
     "poison-jab": 0.005102134053978857,
     "rock-tomb": 0.08375560136933519,
     "magic-coat": 0.9898623354464051,
@@ -106,9 +118,9 @@
     "double-edge": 0.00045200091877090065,
     "focus-punch": 0.0008105031219477477,
     "toxic": 0.08375489377564799,
-    "hiddenpowerrock": 0.003000400702346584,
+    "hidden-power-rock": 0.003000400702346584,
     "solar-beam": 0,
-    "hiddenpowerfighting": 0.002077632186240408,
+    "hidden-power-fighting": 0.002077632186240408,
     "detect": 0.004076368131982477,
     "power-up-punch": 0.0019169711100753828,
     "skill-swap": 0,
@@ -148,7 +160,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "25.2",
       "evs": {
         "hp": 0,
@@ -160,7 +172,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "14.8",
       "evs": {
         "hp": 0,
@@ -172,7 +184,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "14.3",
       "evs": {
         "hp": 0,
@@ -184,7 +196,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "12.8",
       "evs": {
         "hp": 0,
@@ -196,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "9.8",
       "evs": {
         "hp": 0,
@@ -208,7 +220,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -220,7 +232,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.7",
       "evs": {
         "hp": 0,
@@ -232,7 +244,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -244,7 +256,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -256,7 +268,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.5",
       "evs": {
         "hp": 0,

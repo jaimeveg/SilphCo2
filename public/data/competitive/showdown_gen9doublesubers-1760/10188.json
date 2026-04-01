@@ -1,12 +1,24 @@
 {
   "id": "10188",
-  "name": "Zacian Crowned",
+  "name": "Zacian crowned",
   "format_id": "showdown_gen9doublesubers-1760",
   "usage_metrics": {
     "raw": 20191,
     "base_weight": 934.2067821113346,
     "percent": 9.782556032519695
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-sword": 934.2067821113346
   },
@@ -87,7 +99,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "57.4",
       "evs": {
         "hp": 0,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.0",
       "evs": {
         "hp": 4,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.1",
       "evs": {
         "hp": 4,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.3",
       "evs": {
         "hp": 252,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.5",
       "evs": {
         "hp": 100,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.6",
       "evs": {
         "hp": 148,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.8",
       "evs": {
         "hp": 0,
@@ -478,6 +490,7 @@
     "886": 0,
     "887": 0.7331646045203962,
     "890": 11.725064319665652,
+    "892": 112.86069699231578,
     "893": 0.19818392641274352,
     "894": 2.0947716054147816,
     "895": 1.2602300002110305,
@@ -592,7 +605,7 @@
     "10172": 0.026719354424840858,
     "10186": 70.92099773585706,
     "10189": 429.80394630426684,
-    "10191": 145.8043326337335,
+    "10191": 32.94363564141773,
     "10193": 23.380783930733713,
     "10194": 743.6734983623328,
     "10230": 0.00010949814571142857,

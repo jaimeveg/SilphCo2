@@ -7,6 +7,23 @@
     "base_weight": 116905.20223049234,
     "percent": 12.334300858396487
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "toxic-orb": 116053.71099327144,
     "leftovers": 222.6538970115791,
@@ -167,7 +184,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "17.0",
       "evs": {
         "hp": 244,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.3",
       "evs": {
         "hp": 244,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.1",
       "evs": {
         "hp": 244,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.4",
       "evs": {
         "hp": 244,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.9",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.1",
       "evs": {
         "hp": 244,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 252,

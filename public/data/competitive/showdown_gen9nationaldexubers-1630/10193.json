@@ -1,12 +1,29 @@
 {
   "id": "10193",
-  "name": "Calyrex Ice",
+  "name": "Calyrex ice",
   "format_id": "showdown_gen9nationaldexubers-1630",
   "usage_metrics": {
     "raw": 8734,
     "base_weight": 2027.551613550998,
     "percent": 2.94967916244512
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "loaded-dice": 80.13686907336592,
     "leftovers": 187.5914182503571,
@@ -147,7 +164,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "50.3",
       "evs": {
         "hp": 248,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.5",
       "evs": {
         "hp": 4,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "7.5",
       "evs": {
         "hp": 252,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.4",
       "evs": {
         "hp": 248,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.1",
       "evs": {
         "hp": 96,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.0",
       "evs": {
         "hp": 232,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -532,6 +549,7 @@
     "883": 0.005457011127055322,
     "887": 5.508530341135412,
     "890": 246.957474727837,
+    "892": 9.070412773252711,
     "894": 10.524737781724696,
     "895": 1.0999291439762295,
     "897": 5.594158534601986,
@@ -680,7 +698,7 @@
     "10186": 25.376532459702894,
     "10188": 381.67374373762146,
     "10189": 34.23418492663081,
-    "10191": 21.960764142947987,
+    "10191": 12.890351369695274,
     "10230": 2.039008312193502e-8,
     "10232": 0.0004911526007445044,
     "10233": 0,

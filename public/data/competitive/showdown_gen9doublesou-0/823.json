@@ -7,6 +7,23 @@
     "base_weight": 19235,
     "percent": 3.261772735751471
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 7539,
     "sitrus-berry": 1815,
@@ -154,7 +171,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.1",
       "evs": {
         "hp": 252,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.8",
       "evs": {
         "hp": 248,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.2",
       "evs": {
         "hp": 4,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.0",
       "evs": {
         "hp": 248,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.6",
       "evs": {
         "hp": 248,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -262,7 +279,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 248,

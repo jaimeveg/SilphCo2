@@ -7,6 +7,23 @@
     "base_weight": 147283,
     "percent": 28.21826946289051
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "assault-vest": 126076,
     "clear-amulet": 7753,
@@ -148,7 +165,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.1",
       "evs": {
         "hp": 188,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 244,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 204,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -244,7 +261,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 220,
@@ -256,7 +273,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -546,6 +563,7 @@
     "879": 10,
     "884": 24,
     "887": 551,
+    "892": 3211,
     "894": 305,
     "895": 10949,
     "896": 79,
@@ -657,7 +675,7 @@
     "10171": 2191,
     "10172": 32,
     "10186": 1119,
-    "10191": 97794,
+    "10191": 94583,
     "10230": 5406,
     "10232": 22,
     "10233": 155,

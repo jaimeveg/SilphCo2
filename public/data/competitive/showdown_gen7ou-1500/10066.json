@@ -1,12 +1,29 @@
 {
   "id": "10066",
-  "name": "Sableye Mega",
+  "name": "Sableye mega",
   "format_id": "showdown_gen7ou-1500",
   "usage_metrics": {
     "raw": 5616,
     "base_weight": 3514.3969529965784,
     "percent": 3.562005277044855
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sablenite": 3514.3969529965784
   },
@@ -72,7 +89,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "23.2",
       "evs": {
         "hp": 248,
@@ -84,7 +101,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "21.2",
       "evs": {
         "hp": 248,
@@ -96,7 +113,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.9",
       "evs": {
         "hp": 248,
@@ -108,7 +125,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 248,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.3",
       "evs": {
         "hp": 252,

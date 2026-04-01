@@ -7,6 +7,18 @@
     "base_weight": 5300,
     "percent": 4.5675480023441
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "black-sludge": 2895,
     "focus-sash": 1106,
@@ -91,7 +103,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "19.8",
       "evs": {
         "hp": 0,
@@ -103,7 +115,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "15.4",
       "evs": {
         "hp": 252,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "8.1",
       "evs": {
         "hp": 252,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.7",
       "evs": {
         "hp": 4,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.9",
       "evs": {
         "hp": 236,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.2",
       "evs": {
         "hp": 252,

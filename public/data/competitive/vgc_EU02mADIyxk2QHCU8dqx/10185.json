@@ -1,11 +1,28 @@
 {
   "id": "10185",
-  "name": "Eiscue Noice",
+  "name": "Eiscue noice",
   "format_id": "vgc_EU02mADIyxk2QHCU8dqx",
   "usage_metrics": {
     "raw": 193,
     "percent": 13.264604810996564
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "mental-herb": 14,
     "rocky-helmet": 143,

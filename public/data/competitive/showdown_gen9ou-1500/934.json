@@ -7,6 +7,23 @@
     "base_weight": 81899.08753788895,
     "percent": 7.908453822755339
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 74285.50717683467,
     "heavy-duty-boots": 3139.4169476237807,
@@ -173,7 +190,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "22.5",
       "evs": {
         "hp": 252,
@@ -185,7 +202,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "10.9",
       "evs": {
         "hp": 252,
@@ -197,7 +214,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.9",
       "evs": {
         "hp": 252,
@@ -209,7 +226,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "8.3",
       "evs": {
         "hp": 252,
@@ -221,7 +238,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.4",
       "evs": {
         "hp": 252,
@@ -233,7 +250,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.3",
       "evs": {
         "hp": 248,
@@ -245,7 +262,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -257,7 +274,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.9",
       "evs": {
         "hp": 248,
@@ -269,7 +286,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.5",
       "evs": {
         "hp": 248,
@@ -281,7 +298,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "0.8",
       "evs": {
         "hp": 252,

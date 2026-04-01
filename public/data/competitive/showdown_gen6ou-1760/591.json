@@ -7,6 +7,23 @@
     "base_weight": 183.19774036072286,
     "percent": 4.500614674222661
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "deep-sea-tooth": 0.000019548309470873715,
     "black-sludge": 118.42812995583012,
@@ -76,7 +93,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "38.4",
       "evs": {
         "hp": 248,
@@ -88,7 +105,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "11.8",
       "evs": {
         "hp": 252,
@@ -100,7 +117,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "11.6",
       "evs": {
         "hp": 252,
@@ -112,7 +129,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.8",
       "evs": {
         "hp": 248,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.2",
       "evs": {
         "hp": 248,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.5",
       "evs": {
         "hp": 248,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.0",
       "evs": {
         "hp": 216,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.7",
       "evs": {
         "hp": 248,

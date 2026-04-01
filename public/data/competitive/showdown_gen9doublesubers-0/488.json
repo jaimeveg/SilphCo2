@@ -7,6 +7,18 @@
     "base_weight": 8486,
     "percent": 4.111473948390973
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "covert-cloak": 762,
     "flame-orb": 6,
@@ -132,7 +144,7 @@
   },
   "spreads": [
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.6",
       "evs": {
         "hp": 4,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -216,7 +228,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -228,7 +240,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -240,7 +252,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -473,6 +485,7 @@
     "877": 1,
     "887": 16,
     "890": 25,
+    "892": 120,
     "894": 125,
     "895": 39,
     "897": 1,
@@ -578,7 +591,7 @@
     "10186": 792,
     "10188": 103,
     "10189": 347,
-    "10191": 689,
+    "10191": 569,
     "10193": 2765,
     "10194": 533,
     "10230": 6,

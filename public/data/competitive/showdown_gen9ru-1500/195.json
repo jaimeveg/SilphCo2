@@ -7,6 +7,23 @@
     "base_weight": 5195.425158221958,
     "percent": 10.521664613571849
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 1075.03337691091,
     "leftovers": 3252.213211541557,
@@ -112,7 +129,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "57.5",
       "evs": {
         "hp": 252,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.2",
       "evs": {
         "hp": 252,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.5",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.9",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.3",
       "evs": {
         "hp": 248,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.3",
       "evs": {
         "hp": 248,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.2",
       "evs": {
         "hp": 248,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "0.9",
       "evs": {
         "hp": 248,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.9",
       "evs": {
         "hp": 252,

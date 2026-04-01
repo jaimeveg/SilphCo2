@@ -1,12 +1,24 @@
 {
   "id": "10188",
-  "name": "Zacian Crowned",
+  "name": "Zacian crowned",
   "format_id": "showdown_gen9doublesubers-1500",
   "usage_metrics": {
     "raw": 20191,
     "base_weight": 12184.679220646218,
     "percent": 9.782556032519695
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-sword": 12184.679220646218
   },
@@ -87,7 +99,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "45.0",
       "evs": {
         "hp": 0,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "12.1",
       "evs": {
         "hp": 4,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.3",
       "evs": {
         "hp": 4,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.2",
       "evs": {
         "hp": 4,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -478,6 +490,7 @@
     "886": 2.0301733924841265,
     "887": 145.34486666006802,
     "890": 425.1035317169197,
+    "892": 725.3276215301204,
     "893": 24.21648550120522,
     "894": 169.8480486721966,
     "895": 88.74724524773204,
@@ -592,7 +605,7 @@
     "10172": 18.223442631077578,
     "10186": 1327.4612592072579,
     "10189": 1355.7368776755093,
-    "10191": 2426.981052613182,
+    "10191": 1701.6534310830614,
     "10193": 825.6630320404201,
     "10194": 4793.78301893322,
     "10230": 8.5022420581489,

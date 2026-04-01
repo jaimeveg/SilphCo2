@@ -7,6 +7,23 @@
     "base_weight": 9686,
     "percent": 3.2711921648091864
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-scarf": 2252,
     "air-balloon": 3253,
@@ -115,7 +132,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "34.3",
       "evs": {
         "hp": 0,
@@ -127,7 +144,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -139,7 +156,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.4",
       "evs": {
         "hp": 4,
@@ -151,7 +168,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.5",
       "evs": {
         "hp": 0,
@@ -163,7 +180,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.2",
       "evs": {
         "hp": 4,
@@ -175,7 +192,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -187,7 +204,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 0,
@@ -199,7 +216,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -211,7 +228,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -223,7 +240,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -569,6 +586,7 @@
     "884": 15,
     "887": 831,
     "890": 233,
+    "892": 89,
     "893": 2,
     "894": 99,
     "897": 21,
@@ -730,7 +748,7 @@
     "10186": 7,
     "10188": 283,
     "10189": 50,
-    "10191": 403,
+    "10191": 314,
     "10193": 288,
     "10230": 117,
     "10233": 37,

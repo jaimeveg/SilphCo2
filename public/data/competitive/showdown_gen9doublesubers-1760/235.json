@@ -7,6 +7,23 @@
     "base_weight": 926.1839240407318,
     "percent": 6.836306553358075
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 915.9998046762787,
     "eject-pack": 2.379260072440482,
@@ -349,7 +366,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "21.7",
       "evs": {
         "hp": 252,
@@ -361,7 +378,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "19.2",
       "evs": {
         "hp": 252,
@@ -373,7 +390,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.9",
       "evs": {
         "hp": 0,
@@ -385,7 +402,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "7.8",
       "evs": {
         "hp": 0,
@@ -397,7 +414,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.2",
       "evs": {
         "hp": 252,
@@ -409,7 +426,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "5.5",
       "evs": {
         "hp": 0,
@@ -421,7 +438,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "5.2",
       "evs": {
         "hp": 0,
@@ -433,7 +450,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -445,7 +462,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -457,7 +474,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -725,6 +742,7 @@
     "884": 0.000018569990529127,
     "887": 0.042876108501497145,
     "890": 0.48924694592566687,
+    "892": 89.45460100067137,
     "894": 0.002590707850822882,
     "895": 0.11563542289894546,
     "896": 1.1958191592498224e-7,
@@ -841,7 +859,7 @@
     "10186": 278.3387385917732,
     "10188": 8.877290660932703,
     "10189": 363.1213662801655,
-    "10191": 90.6304125552192,
+    "10191": 1.1758115545478205,
     "10193": 567.3281936723687,
     "10194": 225.66635700737083,
     "10230": 0.000508554791340543,

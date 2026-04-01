@@ -7,6 +7,23 @@
     "base_weight": 394.90413164422796,
     "percent": 5.786973025968476
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 190.43389069846452,
     "haban-berry": 3.561693828757484e-9,
@@ -184,7 +201,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "18.2",
       "evs": {
         "hp": 0,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "14.7",
       "evs": {
         "hp": 248,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.1",
       "evs": {
         "hp": 0,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "9.1",
       "evs": {
         "hp": 252,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "8.1",
       "evs": {
         "hp": 0,
@@ -244,7 +261,7 @@
       }
     },
     {
-      "nature": "Lax",
+      "nature": "lax",
       "usage": "6.5",
       "evs": {
         "hp": 200,
@@ -256,7 +273,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.2",
       "evs": {
         "hp": 52,
@@ -268,7 +285,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -280,7 +297,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 40,
@@ -292,7 +309,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 248,

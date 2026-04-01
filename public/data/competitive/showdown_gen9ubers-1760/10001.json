@@ -1,12 +1,29 @@
 {
   "id": "10001",
-  "name": "Deoxys Attack",
+  "name": "Deoxys attack",
   "format_id": "showdown_gen9ubers-1760",
   "usage_metrics": {
     "raw": 15287,
     "base_weight": 1580.3128885015767,
     "percent": 5.647002327213623
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "focus-sash": 1097.6338055293556,
     "life-orb": 414.8753303242545,
@@ -155,7 +172,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "25.7",
       "evs": {
         "hp": 0,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "22.1",
       "evs": {
         "hp": 0,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "18.6",
       "evs": {
         "hp": 0,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.5",
       "evs": {
         "hp": 0,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.9",
       "evs": {
         "hp": 64,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -493,6 +510,7 @@
     "884": 0.00003310976861226056,
     "887": 0.7895637334832183,
     "890": 398.50840713437697,
+    "892": 131.0183048880527,
     "893": 0.00007930264461264436,
     "894": 26.128002035181126,
     "895": 0.1557657490670541,
@@ -586,7 +604,7 @@
     "10186": 4.0884205836175,
     "10188": 1073.5993603230722,
     "10189": 17.51889633451348,
-    "10191": 138.86602710920906,
+    "10191": 7.847722221156333,
     "10193": 495.97867027165256,
     "10230": 0.08733718774554022,
     "10233": 0.0001453872472158002,

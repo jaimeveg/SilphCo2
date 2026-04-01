@@ -1,12 +1,29 @@
 {
   "id": "10066",
-  "name": "Sableye Mega",
+  "name": "Sableye mega",
   "format_id": "showdown_gen7ou-1630",
   "usage_metrics": {
     "raw": 5616,
     "base_weight": 1168.9176710235697,
     "percent": 3.562005277044855
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sablenite": 1168.9176710235697
   },
@@ -72,7 +89,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "26.5",
       "evs": {
         "hp": 248,
@@ -84,7 +101,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "13.8",
       "evs": {
         "hp": 248,
@@ -96,7 +113,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -108,7 +125,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.8",
       "evs": {
         "hp": 248,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.8",
       "evs": {
         "hp": 248,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.4",
       "evs": {
         "hp": 248,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.1",
       "evs": {
         "hp": 248,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.4",
       "evs": {
         "hp": 252,

@@ -7,6 +7,18 @@
     "base_weight": 14900,
     "percent": 18.637114124180716
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "assault-vest": 2799,
     "leftovers": 8024,
@@ -89,7 +101,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "15.3",
       "evs": {
         "hp": 20,
@@ -101,7 +113,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.9",
       "evs": {
         "hp": 20,
@@ -113,7 +125,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 0,
@@ -125,7 +137,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 0,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 20,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 176,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 32,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.6",
       "evs": {
         "hp": 252,

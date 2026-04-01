@@ -7,6 +7,18 @@
     "base_weight": 54805,
     "percent": 3.489390800309178
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 15567,
     "air-balloon": 1819,
@@ -139,7 +151,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.6",
       "evs": {
         "hp": 252,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.4",
       "evs": {
         "hp": 228,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.5",
       "evs": {
         "hp": 244,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -211,7 +223,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -223,7 +235,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 100,
@@ -235,7 +247,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -247,7 +259,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 244,
@@ -541,6 +553,7 @@
     "879": 14,
     "884": 25,
     "887": 1654,
+    "892": 5692,
     "894": 348,
     "895": 1317,
     "896": 634,
@@ -653,7 +666,7 @@
     "10171": 1458,
     "10172": 79,
     "10186": 1893,
-    "10191": 15134,
+    "10191": 9442,
     "10230": 489,
     "10232": 11,
     "10233": 117,

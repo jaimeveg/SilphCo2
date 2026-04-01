@@ -7,6 +7,23 @@
     "base_weight": 649.647826513395,
     "percent": 8.643524704763045
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "life-orb": 336.8427503371785,
     "assault-vest": 20.973403075778645,
@@ -178,7 +195,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "33.9",
       "evs": {
         "hp": 0,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "19.0",
       "evs": {
         "hp": 0,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "15.7",
       "evs": {
         "hp": 72,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.9",
       "evs": {
         "hp": 32,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.1",
       "evs": {
         "hp": 0,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 204,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 40,
@@ -262,7 +279,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -274,7 +291,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.3",
       "evs": {
         "hp": 80,
@@ -286,7 +303,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 4,

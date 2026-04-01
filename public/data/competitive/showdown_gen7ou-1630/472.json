@@ -7,6 +7,23 @@
     "base_weight": 3476.742266701223,
     "percent": 10.014968540694134
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "toxic-orb": 3476.1318161520917,
     "choice-band": 0.004315556130018494,
@@ -100,7 +117,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.8",
       "evs": {
         "hp": 248,
@@ -112,7 +129,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.8",
       "evs": {
         "hp": 252,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.1",
       "evs": {
         "hp": 248,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.8",
       "evs": {
         "hp": 248,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 244,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 244,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.7",
       "evs": {
         "hp": 248,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.6",
       "evs": {
         "hp": 248,

@@ -7,6 +7,18 @@
     "base_weight": 14546.640955497953,
     "percent": 14.825198108810014
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 6093.218453331569,
     "custap-berry": 951.3131913663062,
@@ -127,7 +139,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "14.8",
       "evs": {
         "hp": 248,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.0",
       "evs": {
         "hp": 248,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.0",
       "evs": {
         "hp": 252,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.9",
       "evs": {
         "hp": 248,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.5",
       "evs": {
         "hp": 248,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 252,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -211,7 +223,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -223,7 +235,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -235,7 +247,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.4",
       "evs": {
         "hp": 248,

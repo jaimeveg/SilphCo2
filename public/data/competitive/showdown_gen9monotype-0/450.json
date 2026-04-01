@@ -1,0 +1,261 @@
+{
+  "id": "450",
+  "name": "Hippowdon",
+  "format_id": "showdown_gen9monotype-0",
+  "usage_metrics": {
+    "raw": 8007,
+    "base_weight": 8007,
+    "percent": 3.4725776093122502
+  },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "leftovers": 2910,
+    "rocky-helmet": 1256,
+    "eject-button": 3466,
+    "heavy-duty-boots": 107,
+    "sitrus-berry": 56,
+    "figy-berry": 10,
+    "focus-sash": 23,
+    "eject-pack": 16,
+    "choice-band": 10,
+    "red-card": 12,
+    "chesto-berry": 7,
+    "nothing": 2,
+    "assault-vest": 56,
+    "soft-sand": 5,
+    "covert-cloak": 12,
+    "aguav-berry": 21,
+    "lum-berry": 2,
+    "expert-belt": 2,
+    "blunder-policy": 2,
+    "rindo-berry": 5,
+    "clear-amulet": 11,
+    "weakness-policy": 4,
+    "binding-band": 2,
+    "black-belt": 3,
+    "mental-herb": 7
+  },
+  "abilities": {
+    "sand-stream": 8003,
+    "sand-force": 4
+  },
+  "moves": {
+    "body-press": 1540,
+    "stealth-rock": 6652,
+    "whirlwind": 5028,
+    "slack-off": 7388,
+    "earthquake": 6320,
+    "rock-slide": 170,
+    "yawn": 1306,
+    "roar": 550,
+    "curse": 456,
+    "ice-fang": 352,
+    "protect": 297,
+    "body-slam": 106,
+    "thunder-fang": 67,
+    "high-horsepower": 113,
+    "earth-power": 26,
+    "stone-edge": 254,
+    "rest": 139,
+    "fire-fang": 120,
+    "iron-head": 78,
+    "sleep-talk": 58,
+    "crunch": 98,
+    "facade": 10,
+    "heavy-slam": 160,
+    "sand-tomb": 507,
+    "sandstorm": 30,
+    "scorching-sands": 30,
+    "amnesia": 62,
+    "stockpile": 34,
+    "dig": 4,
+    "bulldoze": 9,
+    "double-edge": 29,
+    "tera-blast": 4,
+    "mud-shot": 1,
+    "substitute": 11,
+    "muddy-water": 6,
+    "rock-tomb": 2,
+    "sand-attack": 11
+  },
+  "teras": {
+    "nothing": 8007
+  },
+  "spreads": [
+    {
+      "nature": "impish",
+      "usage": "25.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "23.8",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "15.8",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 128,
+        "spa": 0,
+        "spd": 128,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "6.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "3.0",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 232,
+        "spa": 0,
+        "spd": 24,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "2.5",
+      "evs": {
+        "hp": 240,
+        "atk": 16,
+        "def": 228,
+        "spa": 0,
+        "spd": 24,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "1.9",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "1.7",
+      "evs": {
+        "hp": 248,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 8,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "1.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "1.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 216,
+        "spa": 0,
+        "spd": 40,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "28": 8,
+    "51": 73,
+    "74": 1,
+    "76": 8,
+    "112": 29,
+    "132": 0,
+    "195": 221,
+    "221": 4,
+    "232": 109,
+    "260": 286,
+    "323": 103,
+    "328": 3,
+    "330": 177,
+    "340": 14,
+    "389": 247,
+    "423": 1036,
+    "445": 4138,
+    "449": 15,
+    "464": 107,
+    "472": 2367,
+    "473": 4166,
+    "530": 6457,
+    "553": 541,
+    "623": 60,
+    "645": 5182,
+    "750": 81,
+    "770": 122,
+    "844": 74,
+    "901": 700,
+    "949": 182,
+    "980": 5565,
+    "984": 1566,
+    "989": 1790,
+    "990": 407,
+    "1003": 441,
+    "10021": 572,
+    "10106": 42
+  }
+}

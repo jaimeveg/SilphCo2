@@ -7,6 +7,23 @@
     "base_weight": 6000,
     "percent": 10.660601968657831
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "toxic-orb": 5856,
     "white-herb": 9,
@@ -90,7 +107,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.3",
       "evs": {
         "hp": 228,
@@ -102,7 +119,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.8",
       "evs": {
         "hp": 228,
@@ -114,7 +131,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.5",
       "evs": {
         "hp": 228,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.4",
       "evs": {
         "hp": 228,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 228,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 204,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 228,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.1",
       "evs": {
         "hp": 228,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -332,6 +349,7 @@
     "876": 9,
     "887": 13,
     "890": 485,
+    "892": 4,
     "894": 2,
     "901": 55,
     "902": 16,
@@ -396,7 +414,7 @@
     "10186": 23,
     "10188": 424,
     "10189": 51,
-    "10191": 564,
+    "10191": 560,
     "10193": 172,
     "10194": 1826,
     "10230": 42,

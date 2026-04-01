@@ -7,6 +7,18 @@
     "base_weight": 2616.783548943148,
     "percent": 3.343543983485383
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-band": 409.2957563684229,
     "lum-berry": 515.8806753793883,
@@ -112,7 +124,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "36.6",
       "evs": {
         "hp": 0,
@@ -124,7 +136,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "19.0",
       "evs": {
         "hp": 0,
@@ -136,7 +148,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.9",
       "evs": {
         "hp": 4,
@@ -148,7 +160,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.9",
       "evs": {
         "hp": 0,
@@ -160,7 +172,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.9",
       "evs": {
         "hp": 4,
@@ -172,7 +184,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 40,
@@ -184,7 +196,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -196,7 +208,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -208,7 +220,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -220,7 +232,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 120,

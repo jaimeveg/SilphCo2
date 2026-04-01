@@ -1,12 +1,24 @@
 {
   "id": "10044",
-  "name": "Mewtwo Mega Y",
+  "name": "Mewtwo mega y",
   "format_id": "showdown_gen9nationaldexubers-0",
   "usage_metrics": {
     "raw": 11086,
     "base_weight": 11086,
     "percent": 3.7440054035798718
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "mewtwonite-y": 11086
   },
@@ -120,7 +132,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "42.7",
       "evs": {
         "hp": 0,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.6",
       "evs": {
         "hp": 4,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.2",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.3",
       "evs": {
         "hp": 0,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.5",
       "evs": {
         "hp": 4,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Serious",
+      "nature": "serious",
       "usage": "2.3",
       "evs": {
         "hp": 4,
@@ -216,7 +228,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -228,7 +240,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -529,6 +541,7 @@
     "883": 2,
     "887": 166,
     "890": 645,
+    "892": 183,
     "893": 7,
     "894": 85,
     "895": 10,
@@ -664,7 +677,7 @@
     "10186": 45,
     "10188": 3092,
     "10189": 181,
-    "10191": 322,
+    "10191": 139,
     "10193": 425,
     "10230": 71,
     "10232": 7,

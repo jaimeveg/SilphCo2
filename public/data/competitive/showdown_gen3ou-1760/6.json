@@ -7,6 +7,18 @@
     "base_weight": 194.4028238172707,
     "percent": 8.410429324653126
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 185.15718943669944,
     "petaya-berry": 6.442716145770065,
@@ -106,7 +118,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "17.8",
       "evs": {
         "hp": 0,
@@ -118,7 +130,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "17.0",
       "evs": {
         "hp": 0,
@@ -130,7 +142,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "17.0",
       "evs": {
         "hp": 0,
@@ -142,7 +154,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.8",
       "evs": {
         "hp": 4,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.1",
       "evs": {
         "hp": 0,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.4",
       "evs": {
         "hp": 4,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.7",
       "evs": {
         "hp": 0,

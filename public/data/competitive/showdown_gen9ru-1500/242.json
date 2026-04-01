@@ -7,6 +7,18 @@
     "base_weight": 3108.8854915327597,
     "percent": 6.700230303679502
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 2000.9857789912196,
     "leftovers": 755.6513629827217,
@@ -131,7 +143,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "31.3",
       "evs": {
         "hp": 252,
@@ -143,7 +155,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "8.7",
       "evs": {
         "hp": 8,
@@ -155,7 +167,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "8.2",
       "evs": {
         "hp": 252,
@@ -167,7 +179,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.8",
       "evs": {
         "hp": 4,
@@ -179,7 +191,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "6.3",
       "evs": {
         "hp": 4,
@@ -191,7 +203,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.6",
       "evs": {
         "hp": 0,
@@ -203,7 +215,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -215,7 +227,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -227,7 +239,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.7",
       "evs": {
         "hp": 248,
@@ -239,7 +251,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.7",
       "evs": {
         "hp": 236,

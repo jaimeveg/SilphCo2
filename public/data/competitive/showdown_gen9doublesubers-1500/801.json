@@ -7,6 +7,18 @@
     "base_weight": 11552.492171466509,
     "percent": 7.911898371108247
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "weakness-policy": 395.59306547571816,
     "leftovers": 3431.53193792811,
@@ -142,7 +154,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "21.1",
       "evs": {
         "hp": 252,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.1",
       "evs": {
         "hp": 32,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.7",
       "evs": {
         "hp": 156,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -226,7 +238,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -238,7 +250,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -250,7 +262,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.6",
       "evs": {
         "hp": 4,
@@ -520,6 +532,7 @@
     "886": 0.6040174629219508,
     "887": 28.110353500703088,
     "890": 112.28645023267043,
+    "892": 389.0542367172592,
     "893": 104.65048839730095,
     "894": 127.99313524999312,
     "895": 7.257322932450945,
@@ -636,7 +649,7 @@
     "10186": 2247.490461967709,
     "10188": 696.025603938655,
     "10189": 1416.171888817575,
-    "10191": 825.4800874034679,
+    "10191": 436.42585068620866,
     "10193": 5085.221034173657,
     "10194": 1586.4470584747567,
     "10230": 16.68099587227037,

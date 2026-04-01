@@ -7,6 +7,18 @@
     "base_weight": 499.7626057446865,
     "percent": 5.493343287296255
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "wide-lens": 4.60735412100352,
     "choice-scarf": 279.78047339024016,
@@ -101,7 +113,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "35.6",
       "evs": {
         "hp": 0,
@@ -113,7 +125,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "14.3",
       "evs": {
         "hp": 0,
@@ -125,7 +137,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "12.1",
       "evs": {
         "hp": 0,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "11.3",
       "evs": {
         "hp": 72,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.3",
       "evs": {
         "hp": 0,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "6.4",
       "evs": {
         "hp": 0,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Naughty",
+      "nature": "naughty",
       "usage": "0.8",
       "evs": {
         "hp": 0,

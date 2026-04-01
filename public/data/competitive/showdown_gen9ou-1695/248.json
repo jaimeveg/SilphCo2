@@ -7,6 +7,23 @@
     "base_weight": 7917.922064100613,
     "percent": 7.2224521249132225
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-band": 1796.443993957906,
     "smooth-rock": 2218.7440849469267,
@@ -203,7 +220,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.7",
       "evs": {
         "hp": 0,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "10.3",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.1",
       "evs": {
         "hp": 0,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.4",
       "evs": {
         "hp": 240,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.8",
       "evs": {
         "hp": 248,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.7",
       "evs": {
         "hp": 248,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -287,7 +304,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -299,7 +316,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "3.5",
       "evs": {
         "hp": 248,
@@ -311,7 +328,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.0",
       "evs": {
         "hp": 252,

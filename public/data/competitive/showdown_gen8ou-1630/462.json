@@ -7,6 +7,18 @@
     "base_weight": 1478.980082963331,
     "percent": 4.509180967628959
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-specs": 136.93101568524455,
     "air-balloon": 305.67967443682346,
@@ -80,7 +92,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "16.3",
       "evs": {
         "hp": 188,
@@ -92,7 +104,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "12.5",
       "evs": {
         "hp": 160,
@@ -104,7 +116,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.3",
       "evs": {
         "hp": 4,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.5",
       "evs": {
         "hp": 0,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.9",
       "evs": {
         "hp": 152,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.4",
       "evs": {
         "hp": 188,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.1",
       "evs": {
         "hp": 0,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.7",
       "evs": {
         "hp": 12,

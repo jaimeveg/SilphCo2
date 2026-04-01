@@ -7,6 +7,18 @@
     "base_weight": 124581.68135619634,
     "percent": 8.58077416185966
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 26978.899810303745,
     "loaded-dice": 30175.495805895876,
@@ -161,7 +173,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "31.5",
       "evs": {
         "hp": 0,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.5",
       "evs": {
         "hp": 0,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.1",
       "evs": {
         "hp": 52,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.4",
       "evs": {
         "hp": 56,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -245,7 +257,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -257,7 +269,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -269,7 +281,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 0,

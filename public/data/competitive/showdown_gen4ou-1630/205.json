@@ -7,6 +7,18 @@
     "base_weight": 592.486404206938,
     "percent": 6.129132338239857
   },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 379.8636431486226,
     "shed-shell": 1.767307425693142,
@@ -86,7 +98,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "36.0",
       "evs": {
         "hp": 252,
@@ -98,7 +110,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "11.7",
       "evs": {
         "hp": 252,
@@ -110,7 +122,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.2",
       "evs": {
         "hp": 252,
@@ -122,7 +134,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -134,7 +146,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -146,7 +158,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -158,7 +170,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -170,7 +182,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -182,7 +194,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.6",
       "evs": {
         "hp": 252,

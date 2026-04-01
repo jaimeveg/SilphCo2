@@ -7,6 +7,23 @@
     "base_weight": 5531.1690575201255,
     "percent": 4.936742882374397
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "terrain-extender": 8.31403020508459,
     "assault-vest": 42.92120860975417,
@@ -155,7 +172,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "25.9",
       "evs": {
         "hp": 252,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "16.1",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "7.5",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "7.3",
       "evs": {
         "hp": 108,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.7",
       "evs": {
         "hp": 203,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.5",
       "evs": {
         "hp": 252,

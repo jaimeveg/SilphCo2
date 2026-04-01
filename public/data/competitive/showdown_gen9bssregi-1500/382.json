@@ -7,6 +7,23 @@
     "base_weight": 4774.936475449567,
     "percent": 11.763974272413916
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "assault-vest": 1330.999408244111,
     "choice-specs": 1942.826754887849,
@@ -84,7 +101,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "14.4",
       "evs": {
         "hp": 252,
@@ -96,7 +113,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.8",
       "evs": {
         "hp": 4,
@@ -108,7 +125,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.6",
       "evs": {
         "hp": 12,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.5",
       "evs": {
         "hp": 0,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.9",
       "evs": {
         "hp": 236,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.9",
       "evs": {
         "hp": 204,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.9",
       "evs": {
         "hp": 236,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -359,6 +376,7 @@
     "876": 9.190662521804978,
     "887": 34.34649950719972,
     "890": 103.54313179354897,
+    "892": 23.06476416622129,
     "894": 0.6957981492870142,
     "895": 0.3516061227148584,
     "900": 15.884799152939523,
@@ -444,7 +462,7 @@
     "10186": 61.894837921176666,
     "10188": 1079.4527892463236,
     "10189": 3.064403154355148,
-    "10191": 1078.7566108640237,
+    "10191": 1055.6918466978025,
     "10193": 402.51182926381176,
     "10194": 759.5261069433031,
     "10230": 77.6992706784217,

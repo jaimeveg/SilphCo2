@@ -7,6 +7,18 @@
     "base_weight": 11348,
     "percent": 15.194686947672862
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 5044,
     "assault-vest": 5209,
@@ -114,7 +126,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "19.4",
       "evs": {
         "hp": 104,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.1",
       "evs": {
         "hp": 252,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.7",
       "evs": {
         "hp": 0,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.7",
       "evs": {
         "hp": 104,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "4.4",
       "evs": {
         "hp": 0,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -186,7 +198,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.4",
       "evs": {
         "hp": 4,
@@ -198,7 +210,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 128,
@@ -210,7 +222,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -222,7 +234,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.9",
       "evs": {
         "hp": 0,

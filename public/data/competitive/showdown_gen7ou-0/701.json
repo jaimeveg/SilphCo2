@@ -7,6 +7,23 @@
     "base_weight": 14120,
     "percent": 8.955754008524456
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "grassy-seed": 714,
     "electric-seed": 8928,
@@ -116,7 +133,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "23.1",
       "evs": {
         "hp": 0,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "18.8",
       "evs": {
         "hp": 96,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.6",
       "evs": {
         "hp": 88,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 4,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 132,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 96,
@@ -212,7 +229,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 176,
@@ -224,7 +241,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 96,

@@ -7,6 +7,18 @@
     "base_weight": 15065,
     "percent": 9.555129896488737
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "aguav-berry": 707,
     "leftovers": 3232,
@@ -120,7 +132,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "35.2",
       "evs": {
         "hp": 0,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "14.0",
       "evs": {
         "hp": 0,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.8",
       "evs": {
         "hp": 4,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.4",
       "evs": {
         "hp": 0,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 112,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.2",
       "evs": {
         "hp": 248,
@@ -216,7 +228,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -228,7 +240,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.2",
       "evs": {
         "hp": 248,

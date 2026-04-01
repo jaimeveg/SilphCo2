@@ -7,6 +7,23 @@
     "base_weight": 2644.574568187384,
     "percent": 14.96438326816989
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sitrus-berry": 0.3984250429497545,
     "rocky-helmet": 896.44778329949,
@@ -118,7 +135,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "29.2",
       "evs": {
         "hp": 252,
@@ -130,7 +147,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "14.2",
       "evs": {
         "hp": 252,
@@ -142,7 +159,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.7",
       "evs": {
         "hp": 248,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.4",
       "evs": {
         "hp": 252,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.2",
       "evs": {
         "hp": 248,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.9",
       "evs": {
         "hp": 252,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.9",
       "evs": {
         "hp": 252,

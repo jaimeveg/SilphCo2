@@ -7,6 +7,23 @@
     "base_weight": 6903,
     "percent": 5.9490158226757215
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 6225,
     "leppa-berry": 159,
@@ -102,7 +119,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "37.7",
       "evs": {
         "hp": 252,
@@ -114,7 +131,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.0",
       "evs": {
         "hp": 248,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "8.2",
       "evs": {
         "hp": 252,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.5",
       "evs": {
         "hp": 4,

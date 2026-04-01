@@ -1,12 +1,24 @@
 {
   "id": "10275",
-  "name": "Ogerpon Cornerstone Mask",
+  "name": "Ogerpon cornerstone",
   "format_id": "showdown_gen9vgc2026regi-1500",
   "usage_metrics": {
     "raw": 20128,
     "base_weight": 14950.889398060895,
     "percent": 4.902787047366652
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "cornerstone-mask": 14950.889398060895
   },
@@ -61,7 +73,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "27.1",
       "evs": {
         "hp": 4,
@@ -73,7 +85,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "16.0",
       "evs": {
         "hp": 0,
@@ -85,7 +97,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "14.7",
       "evs": {
         "hp": 0,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.9",
       "evs": {
         "hp": 4,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.9",
       "evs": {
         "hp": 0,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 28,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 184,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.7",
       "evs": {
         "hp": 100,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -349,6 +361,7 @@
     "876": 98.93981206491674,
     "887": 16.113015341142283,
     "890": 106.65644498185266,
+    "892": 919.5751044912548,
     "894": 148.4141368598236,
     "895": 4.313697001711068,
     "896": 10.10607807286452,
@@ -438,7 +451,7 @@
     "10186": 1740.8226160733032,
     "10188": 656.7358521611563,
     "10189": 4934.170548056461,
-    "10191": 2837.964818773814,
+    "10191": 1918.3897142825592,
     "10193": 3241.145865279365,
     "10194": 6777.012538949049,
     "10230": 27.260203453473494,

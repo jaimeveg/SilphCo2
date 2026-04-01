@@ -7,6 +7,18 @@
     "base_weight": 214.255302068075,
     "percent": 6.754169254694643
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "lum-berry": 0.030290720191485987,
     "liechi-berry": 19.355739104513745,
@@ -94,7 +106,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "21.0",
       "evs": {
         "hp": 252,
@@ -106,7 +118,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.5",
       "evs": {
         "hp": 4,
@@ -118,7 +130,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.8",
       "evs": {
         "hp": 12,
@@ -130,7 +142,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -142,7 +154,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.4",
       "evs": {
         "hp": 240,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.6",
       "evs": {
         "hp": 248,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 252,

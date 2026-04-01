@@ -7,6 +7,23 @@
     "base_weight": 45494.94227894875,
     "percent": 4.353282655904643
   },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 11316.7817850719,
     "leftovers": 28871.775942497214,
@@ -150,7 +167,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "25.3",
       "evs": {
         "hp": 252,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "12.7",
       "evs": {
         "hp": 248,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "10.4",
       "evs": {
         "hp": 252,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.7",
       "evs": {
         "hp": 248,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.9",
       "evs": {
         "hp": 248,
@@ -222,7 +239,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.5",
       "evs": {
         "hp": 248,
@@ -234,7 +251,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -246,7 +263,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 248,
@@ -258,7 +275,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.2",
       "evs": {
         "hp": 252,

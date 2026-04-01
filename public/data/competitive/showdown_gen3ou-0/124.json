@@ -7,6 +7,18 @@
     "base_weight": 6490,
     "percent": 1.5154557809150644
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "lum-berry": 797,
     "leftovers": 4847,
@@ -66,7 +78,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "42.7",
       "evs": {
         "hp": 0,
@@ -78,7 +90,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "18.3",
       "evs": {
         "hp": 36,
@@ -90,7 +102,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "9.9",
       "evs": {
         "hp": 4,
@@ -102,7 +114,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "8.3",
       "evs": {
         "hp": 0,
@@ -114,7 +126,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.9",
       "evs": {
         "hp": 24,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.2",
       "evs": {
         "hp": 152,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.0",
       "evs": {
         "hp": 252,

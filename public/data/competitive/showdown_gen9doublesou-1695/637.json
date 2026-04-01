@@ -7,6 +7,23 @@
     "base_weight": 1308.2315673076291,
     "percent": 4.256838106866087
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 439.36789879648677,
     "heavy-duty-boots": 368.1785994017894,
@@ -142,7 +159,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.7",
       "evs": {
         "hp": 216,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.0",
       "evs": {
         "hp": 252,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.0",
       "evs": {
         "hp": 40,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.7",
       "evs": {
         "hp": 208,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 112,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 252,

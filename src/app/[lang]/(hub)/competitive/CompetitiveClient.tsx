@@ -2,7 +2,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { fetchFormatsIndex, SmogonIndexResponse } from '@/services/smogonService';
-import { Target, ChevronDown, ChevronRight, Info, Trophy, BarChart3, Server } from 'lucide-react';
+import { Target, ChevronDown, ChevronRight, Info, Trophy, BarChart3, Server, ChartNoAxesColumnDecreasing } from 'lucide-react';
+import { Filter, Search, ChevronLeft } from 'lucide-react';
 import { IMacroDashboardData } from '@/types/competitive';
 import { cn } from '@/lib/utils';
 import UsageBar from '@/components/ui/UsageBar';
@@ -10,12 +11,15 @@ import TacticalDrawer from "@/components/competitive/TacticalDrawer";
 import TeamDetailModal from "@/components/competitive/TeamDetailModal";
 import TypeEcosystem from "@/components/competitive/TypeEcosystem";
 import BattleGimmickGallery from "@/components/competitive/BattleGimmickGallery";
+import RolesAnalysis from "@/components/competitive/RolesAnalysis";
+import TypeBadge from "@/components/ui/TypeBadge";
+import { SpeedTierBar } from "@/components/competitive/SpeedTierBar";
 
 interface Props {
   lang: string;
   dict: any;
-  showdownFormats: {id: string, name: string}[];
-  tournamentFormats: {id: string, name: string}[];
+  showdownFormats: { id: string, name: string }[];
+  tournamentFormats: { id: string, name: string }[];
   activeFormatId: string;
   activeSource: string;
   data: IMacroDashboardData | null;
@@ -27,6 +31,17 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
   const [topCutExpanded, setTopCutExpanded] = useState(false);
   const [source, setSource] = useState(activeSource);
   const router = useRouter();
+
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [roleCatFilter, setRoleCatFilter] = useState('all');
+  const [specificRoleFilter, setSpecificRoleFilter] = useState('all');
+  const [listSortBy, setListSortBy] = useState<'usage' | 'speed_desc'>('usage');
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 24;
+
+  const POKEMON_TYPES = ['normal', 'fire', 'water', 'electric', 'grass', 'ice', 'fighting', 'poison', 'ground', 'flying', 'psychic', 'bug', 'rock', 'ghost', 'dragon', 'dark', 'steel', 'fairy'];
+
+  useEffect(() => { setCurrentPage(1); }, [typeFilter, roleCatFilter, specificRoleFilter, activeFormatId, listSortBy]);
 
   const handleSourceChange = (newSource: string) => {
     setSource(newSource);
@@ -71,7 +86,8 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
     const modes = indexData.structure[gen];
     if (modes && (!mode || !modes[mode])) {
       const keys = Object.keys(modes);
-      setMode(keys.includes('doubles') ? 'doubles' : (keys.includes('singles') ? 'singles' : keys[0] || ''));
+      // Prefer singles as safe default; not all gens have doubles
+      setMode(keys.includes('singles') ? 'singles' : (keys.includes('doubles') ? 'doubles' : keys[0] || ''));
     }
   }, [gen, indexData, mode]);
 
@@ -98,8 +114,8 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
 
   useEffect(() => {
     if (!indexData || source !== 'showdown' || !activeFormatId) return;
-    const target = activeFormatId.replace('showdown_', '') + '.json'; 
-    if (fileId === target) return; 
+    const target = activeFormatId.replace('showdown_', '') + '.json';
+    if (fileId === target) return;
 
     const gens = Object.keys(indexData.structure);
     for (const g of gens) {
@@ -129,7 +145,7 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
         const highElo = eloOptions.find((opt: any) => parseInt(opt.elo) >= 1500);
         const fallback = highElo ? highElo.fileId : eloOptions[0].fileId;
         setFileId(fallback);
-        
+
         const newFormatId = `showdown_${fallback.replace('.json', '')}`;
         if (activeFormatId !== newFormatId) {
           router.push(`/${lang}/competitive?source=${source}&format=${newFormatId}`);
@@ -166,6 +182,37 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
 
   const currentFormats = source === 'showdown' ? showdownFormats : tournamentFormats;
 
+  // React Hook Fix: All useMemo hooks must be declared before any conditional early returns
+  const validRoles = useMemo(() => {
+    if (!data?.roles_analysis) return [];
+    return data.roles_analysis.roles.filter(r => roleCatFilter === 'all' || r.category === roleCatFilter);
+  }, [data, roleCatFilter]);
+
+  const filteredPokemon = useMemo(() => {
+    if (!data?.top_pokemon) return [];
+    const filtered = data.top_pokemon.filter(pkm => {
+      const typeMatch = typeFilter === 'all' || pkm.types?.includes(typeFilter);
+      
+      const catMatch = roleCatFilter === 'all' || (pkm.roles && pkm.roles.length > 0 ? pkm.roles.some(r => {
+        const analysisRole = data.roles_analysis?.roles.find(ar => ar.role === r);
+        return analysisRole ? analysisRole.category === roleCatFilter : true;
+      }) : false); 
+      
+      const specificMatch = specificRoleFilter === 'all' || pkm.roles?.includes(specificRoleFilter);
+
+      return typeMatch && catMatch && specificMatch;
+    });
+
+    if (listSortBy === 'speed_desc') {
+        return [...filtered].sort((a,b) => (b.speed || 0) - (a.speed || 0));
+    }
+    
+    return [...filtered].sort((a,b) => b.usage_rate - a.usage_rate);
+  }, [data?.top_pokemon, typeFilter, roleCatFilter, specificRoleFilter, data?.roles_analysis, listSortBy]);
+
+  const totalPages = Math.ceil(filteredPokemon.length / ITEMS_PER_PAGE) || 1;
+  const paginatedPokemon = filteredPokemon.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+
   if (!data) {
     return (
       <div className="w-full max-w-7xl mx-auto px-6 py-24 flex flex-col items-center justify-center">
@@ -200,10 +247,10 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
             {/* Source Toggle */}
             <div className="flex items-center bg-slate-950 border border-slate-700 rounded overflow-hidden">
               <button onClick={() => handleSourceChange('showdown')} className={cn("px-3 py-1.5 text-[10px] font-bold uppercase flex items-center gap-1.5 transition-colors", source === 'showdown' ? "bg-cyan-500/20 text-cyan-400" : "text-slate-500 hover:text-slate-300")}>
-                <Server size={10}/> Showdown
+                <Server size={10} /> Showdown
               </button>
               <button onClick={() => handleSourceChange('tournament')} className={cn("px-3 py-1.5 text-[10px] font-bold uppercase flex items-center gap-1.5 border-l border-slate-700 transition-colors", source === 'tournament' ? "bg-amber-500/20 text-amber-400" : "text-slate-500 hover:text-slate-300")}>
-                <Trophy size={10}/> Tournaments
+                <Trophy size={10} /> Tournaments
               </button>
             </div>
 
@@ -213,11 +260,11 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
                 <div className="relative group min-w-[70px]"><select value={gen} onChange={(e) => setGen(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">{validGens.map(g => <option key={g} value={g}>{g.toUpperCase()}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" /></div>
                 <div className="relative group min-w-[65px]"><select value={mode} onChange={(e) => setMode(e.target.value)} disabled={availableModes.length <= 1} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors disabled:opacity-50">{availableModes.map(m => <option key={m} value={m}>{m === 'doubles' ? 'DOU' : 'SING'}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" /></div>
                 <div className="relative group min-w-[100px] flex-1"><select value={format} onChange={(e) => setFormat(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-cyan-100 text-[10px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500 focus:border-cyan-500 transition-colors text-ellipsis">{availableFormats.map(f => <option key={f} value={f}>{f}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-cyan-500 pointer-events-none" /></div>
-                {reg !== '-' && ( <div className="relative group min-w-[70px]"><select value={reg} onChange={(e) => setReg(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-slate-400 text-[10px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">{availableRegs.map(r => <option key={r} value={r}>{r}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" /></div> )}
+                {reg !== '-' && (<div className="relative group min-w-[70px]"><select value={reg} onChange={(e) => setReg(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-slate-400 text-[10px] font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-cyan-500/50 focus:border-cyan-500 transition-colors">{availableRegs.map(r => <option key={r} value={r}>{r}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" /></div>)}
                 <div className="relative group min-w-[80px]"><select value={fileId} onChange={(e) => handleEloSelect(e.target.value)} className="w-full appearance-none bg-slate-950/50 border border-slate-700 text-yellow-500/80 text-[10px] font-mono font-bold uppercase py-1.5 pl-2 pr-4 rounded hover:border-yellow-500/50 focus:border-yellow-500 transition-colors">{availableElos.map((opt: any) => <option key={opt.fileId} value={opt.fileId}>{formatEloLabel(opt.elo)}</option>)}</select><ChevronDown size={10} className="absolute right-1 top-1/2 -translate-y-1/2 text-yellow-600 pointer-events-none" /></div>
               </div>
             )}
-            
+
             {source === 'tournament' && (
               <div className="relative min-w-[220px]">
                 <select
@@ -253,7 +300,7 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
         {/* TOP CUT STANDINGS — Collapsible Banner */}
         {top_cut && top_cut.length > 0 && (
           <div className="mb-6">
-            <button 
+            <button
               onClick={() => setTopCutExpanded(!topCutExpanded)}
               className="w-full flex items-center justify-between bg-slate-900/60 border border-slate-800 rounded-lg px-3 py-2 hover:bg-slate-900 transition-colors group"
             >
@@ -269,19 +316,19 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
                       <span className="text-[9px] text-slate-400 hidden sm:inline">{tc.player_name.split(' ').slice(0, 2).join(' ')}</span>
                       <div className="flex -space-x-1 ml-0.5">
                         {tc.team.slice(0, 3).map((m, mi) => (
-                          <img 
-                            key={mi} 
-                            src={`/images/pokemon/high-res/${m.pokemon_id}.png`} 
-                            alt={m.pokemon_name} 
-                            className="w-4 h-4 object-contain rounded-full bg-slate-800 border border-slate-700" 
-                          onError={(e) => { 
-                            const target = e.currentTarget as HTMLImageElement;
-                            if (target.src.includes('PokeAPI')) {
-                              target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NDc0OGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxsaW5lIHgxPSJtNCIgeTE9Im00IiB4Mj0ibTIwIiB5Mj0ibTIwIi8+PC9zdmc+'; // lucide circle-off
-                            } else {
-                              target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${m.pokemon_id}.png`; 
-                            }
-                          }}
+                          <img
+                            key={mi}
+                            src={`/images/pokemon/high-res/${m.pokemon_id}.png`}
+                            alt={m.pokemon_name}
+                            className="w-4 h-4 object-contain rounded-full bg-slate-800 border border-slate-700"
+                            onError={(e) => {
+                              const target = e.currentTarget as HTMLImageElement;
+                              if (target.src.includes('PokeAPI')) {
+                                target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NDc0OGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxsaW5lIHgxPSJtNCIgeTE9Im00IiB4Mj0ibTIwIiB5Mj0ibTIwIi8+PC9zdmc+'; // lucide circle-off
+                              } else {
+                                target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${m.pokemon_id}.png`;
+                              }
+                            }}
                           />
                         ))}
                       </div>
@@ -291,12 +338,12 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
               </div>
               <ChevronRight size={12} className={cn("text-slate-600 transition-transform", topCutExpanded && "rotate-90")} />
             </button>
-            
+
             {topCutExpanded && (
               <div className="mt-1.5 bg-slate-900/40 border border-slate-800 rounded-lg p-2 grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                 {top_cut.map((tc, idx) => (
-                  <button 
-                    key={idx} 
+                  <button
+                    key={idx}
                     onClick={() => setSelectedTeam(tc)}
                     className="group flex items-center justify-between px-2.5 py-1.5 rounded bg-slate-950/80 border border-slate-800/60 hover:border-cyan-500/40 hover:bg-cyan-950/10 transition-all text-left"
                   >
@@ -310,10 +357,10 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
                     </div>
                     <div className="flex items-center gap-0.5">
                       {tc.team.map((member, mIdx) => (
-                        <img 
-                          key={mIdx} 
-                          src={`/images/pokemon/high-res/${member.pokemon_id}.png`} 
-                          alt={member.pokemon_name} 
+                        <img
+                          key={mIdx}
+                          src={`/images/pokemon/high-res/${member.pokemon_id}.png`}
+                          alt={member.pokemon_name}
                           className="w-6 h-6 object-contain rounded-full bg-slate-900 border border-slate-700/50"
                           onError={(e) => { e.currentTarget.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${member.pokemon_id}.png`; }}
                         />
@@ -328,59 +375,143 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
 
         {/* TYPE ECOSYSTEM MATRIX */}
         {data.type_ecosystem && (
-          <TypeEcosystem ecosystem={data.type_ecosystem} lang={lang} />
+          <div className="mb-6">
+            <TypeEcosystem ecosystem={data.type_ecosystem} lang={lang} denominatorLabel={isShowdown ? 'BATTLE' : 'TEAM'} />
+          </div>
+        )}
+
+        {/* SPEED TIER BAR */}
+        {top_pokemon && top_pokemon.length > 0 && (
+          <SpeedTierBar top_pokemon={top_pokemon} />
         )}
 
         {/* METAGAME GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-8">
           {/* MAIN: TOP POKEMON GRID */}
-          <div className="lg:col-span-8 bg-slate-900/40 border border-slate-800 rounded-xl p-4 flex flex-col">
-            <h3 className="text-[10px] font-mono text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2 mb-3">
-              Metagame Centralization Core (Top {top_pokemon.length})
-            </h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {top_pokemon.map((p, idx) => (
+          <div className="lg:col-span-8 bg-slate-900/40 border border-slate-800 rounded-xl p-4 flex flex-col self-start">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-800 pb-2 mb-3 gap-3">
+              <h3 className="text-[10px] font-mono text-slate-500 uppercase tracking-widest flex items-center gap-1.5 shrink-0">
+                <Target size={10} className="text-cyan-500" /> Metagame Centralization Core (Top {top_pokemon.length})
+              </h3>
+              <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto no-scrollbar pb-1 sm:pb-0">
+                <div className="relative min-w-[70px]">
+                  <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase py-1 pl-2 pr-5 rounded focus:border-cyan-500 transition-colors">
+                    <option value="all">Any Type</option>
+                    {POKEMON_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
+                  </select>
+                  <ChevronDown size={10} className="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                </div>
+                <div className="relative min-w-[80px]">
+                  <select value={roleCatFilter} onChange={(e) => { setRoleCatFilter(e.target.value); setSpecificRoleFilter('all'); }} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase py-1 pl-2 pr-5 rounded focus:border-cyan-500 transition-colors">
+                    <option value="all">All Roles</option>
+                    <option value="OFF">Offensive</option>
+                    <option value="DEF">Defensive</option>
+                    <option value="SUP">Supportive</option>
+                  </select>
+                  <ChevronDown size={10} className="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                </div>
+                <div className="relative min-w-[110px]">
+                  <select value={specificRoleFilter} onChange={(e) => setSpecificRoleFilter(e.target.value)} className="w-full appearance-none bg-slate-950 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase py-1 pl-2 pr-5 rounded focus:border-cyan-500 transition-colors text-ellipsis">
+                    <option value="all">Any specific role</option>
+                    {validRoles.map(r => <option key={r.role} value={r.role}>{r.label}</option>)}
+                  </select>
+                  <ChevronDown size={10} className="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
+                </div>
+                
                 <button 
+                  onClick={() => setListSortBy(p => p === 'usage' ? 'speed_desc' : 'usage')} 
+                  className={cn(
+                    "flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-bold uppercase rounded border transition-colors ml-auto sm:ml-2 h-[26px]",
+                    listSortBy === 'speed_desc' ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-400" : "bg-slate-950 border-slate-700 text-slate-400 hover:text-slate-200"
+                  )}
+                  title="Toggle Sorting"
+                >
+                  <ChartNoAxesColumnDecreasing size={12} />
+                  <span>{listSortBy === 'usage' ? 'USAGE' : 'SPEED'}</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 flex-1 content-start">
+              {paginatedPokemon.length > 0 ? paginatedPokemon.map((p, idx) => (
+                <button
                   key={p.id}
                   onClick={() => handleDeepDive(p.id)}
-                  className="group flex items-center gap-2.5 p-2 rounded-lg bg-slate-950/80 border border-slate-800 hover:border-cyan-500/40 hover:bg-cyan-950/15 transition-all text-left"
+                  className="group flex flex-col p-2 rounded-lg bg-slate-950/80 border border-slate-800 hover:border-cyan-500/40 hover:bg-cyan-950/15 transition-all text-left relative overflow-hidden"
                   title={p.name}
                 >
-                  <div className="w-10 h-10 shrink-0 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center overflow-hidden">
-                    <img 
-                      src={`/images/pokemon/high-res/${p.id}.png`} 
-                      alt={p.name} 
-                      className="w-8 h-8 object-contain drop-shadow group-hover:scale-110 transition-transform" 
-                      onError={(e) => { 
-                        const target = e.currentTarget as HTMLImageElement;
-                        if (target.src.includes('PokeAPI')) {
-                          target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NDc0OGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxsaW5lIHgxPSJtNCIgeTE9Im00IiB4Mj0ibTIwIiB5Mj0ibTIwIi8+PC9zdmc+'; // lucide circle-off
-                        } else {
-                          target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png`; 
-                        }
-                      }}
-                    />
+                  <div className="absolute top-1 right-1 flex gap-0.5 opacity-80 scale-75 origin-top-right">
+                    {p.types?.map(t => <TypeBadge key={t} type={t} showLabel={false} lang={lang as any} />)}
                   </div>
-                  <div className="flex flex-col min-w-0 flex-1 justify-center gap-0.5">
-                    <span className="text-xs font-display font-bold text-slate-200 truncate">{p.name}</span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-cyan-500/70">#{idx+1}</span>
-                      <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                        <div className="h-full bg-cyan-500/40 rounded-full" style={{width: `${Math.min(p.usage_rate * 2, 100)}%`}} />
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-10 h-10 shrink-0 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center overflow-hidden">
+                      <img
+                        src={`/images/pokemon/high-res/${p.id}.png`}
+                        alt={p.name}
+                        className="w-8 h-8 object-contain drop-shadow group-hover:scale-110 transition-transform"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          if (target.src.includes('PokeAPI')) {
+                            target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NDc0OGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxsaW5lIHgxPSJtNCIgeTE9Im00IiB4Mj0ibTIwIiB5Mj0ibTIwIi8+PC9zdmc+';
+                          } else {
+                            target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png`;
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className="flex flex-col min-w-0 flex-1 justify-center gap-0.5">
+                      <span className="text-xs font-display font-bold text-slate-200 truncate pr-5">{p.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-mono text-cyan-500/70">#{(currentPage - 1) * ITEMS_PER_PAGE + idx + 1}</span>
+                        <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                          <div className="h-full bg-cyan-500/40 rounded-full" style={{ width: `${Math.min(p.usage_rate * 2, 100)}%` }} />
+                        </div>
+                        <span className="text-[10px] font-mono text-slate-400">{p.usage_rate.toFixed(1)}%</span>
                       </div>
-                      <span className="text-[10px] font-mono text-slate-400">{p.usage_rate.toFixed(1)}%</span>
                     </div>
                   </div>
                 </button>
-              ))}
+              )) : (
+                <div className="col-span-full py-12 flex flex-col items-center justify-center opacity-50">
+                  <Filter size={24} className="text-slate-600 mb-2" />
+                  <span className="text-[10px] font-mono uppercase tracking-widest">No Pokemon found for these filters</span>
+                </div>
+              )}
             </div>
+
+            {filteredPokemon.length > ITEMS_PER_PAGE && (
+              <div className="flex items-center justify-between mt-4 pt-3 border-t border-slate-800">
+                <span className="text-[10px] font-mono text-slate-500">
+                  Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} - {Math.min(currentPage * ITEMS_PER_PAGE, filteredPokemon.length)} of {filteredPokemon.length}
+                </span>
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                    disabled={currentPage === 1}
+                    className="p-1 rounded bg-slate-900 border border-slate-700 text-slate-400 disabled:opacity-50 hover:bg-slate-800 transition-colors"
+                  >
+                    <ChevronLeft size={14} />
+                  </button>
+                  <div className="text-[10px] font-mono px-2 text-cyan-500">
+                    Page {currentPage} / {totalPages}
+                  </div>
+                  <button
+                    onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                    disabled={currentPage === totalPages}
+                    className="p-1 rounded bg-slate-900 border border-slate-700 text-slate-400 disabled:opacity-50 hover:bg-slate-800 transition-colors"
+                  >
+                    <ChevronRight size={14} />
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* SIDE: SYNERGY CORES */}
           <div className="lg:col-span-4 flex flex-col gap-5">
             <BattleGimmickGallery gimmicks={data.gimmicks} lang={lang} />
-            
+            <RolesAnalysis rolesAnalysis={data.roles_analysis} source={source === 'showdown' ? 'showdown' : 'rk9'} />
+
             <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 flex-1">
               <h3 className="text-[10px] font-mono text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
                 <BarChart3 size={10} className="text-cyan-500" /> Synergy Cores
@@ -394,20 +525,20 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
                     </div>
                     <div className="flex items-center gap-0 relative z-10">
                       {c.core.map((pid, idx) => (
-                        <div key={pid} className={cn("relative", idx > 0 && "-ml-2.5")} style={{zIndex: 10 - idx}} title={pid}>
+                        <div key={pid} className={cn("relative", idx > 0 && "-ml-2.5")} style={{ zIndex: 10 - idx }} title={pid}>
                           <div className="w-7 h-7 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center overflow-hidden group-hover:border-cyan-500/50 transition-colors cursor-pointer"
                             onClick={() => handleDeepDive(pid)}
                           >
-                            <img 
-                              src={`/images/pokemon/high-res/${pid}.png`} 
-                              alt={pid} 
-                              className="w-8 h-8 object-contain drop-shadow group-hover:scale-110 transition-transform" 
-                              onError={(e) => { 
+                            <img
+                              src={`/images/pokemon/high-res/${pid}.png`}
+                              alt={pid}
+                              className="w-8 h-8 object-contain drop-shadow group-hover:scale-110 transition-transform"
+                              onError={(e) => {
                                 const target = e.currentTarget as HTMLImageElement;
                                 if (target.src.includes('PokeAPI')) {
                                   target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NDc0OGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxsaW5lIHgxPSJtNCIgeTE9Im00IiB4Mj0ibTIwIiB5Mj0ibTIwIi8+PC9zdmc+'; // lucide circle-off
                                 } else {
-                                  target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pid}.png`; 
+                                  target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pid}.png`;
                                 }
                               }}
                             />
@@ -417,7 +548,7 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
                     </div>
                     <div className="flex items-center gap-1.5 ml-2 relative z-10">
                       <div className="w-12 h-1 bg-slate-800 rounded-full overflow-hidden">
-                        <div className="h-full bg-cyan-500/50 rounded-full group-hover:bg-cyan-400/70 transition-colors" style={{width: `${Math.min(c.usage_rate * 10, 100)}%`}} />
+                        <div className="h-full bg-cyan-500/50 rounded-full group-hover:bg-cyan-400/70 transition-colors" style={{ width: `${Math.min(c.usage_rate * 10, 100)}%` }} />
                       </div>
                       <span className="text-cyan-400 font-mono text-[9px] font-bold min-w-[32px] text-right group-hover:text-cyan-300 transition-colors">
                         {c.usage_rate.toFixed(1)}%
@@ -432,7 +563,7 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
       </main>
 
       {/* DRAWER */}
-      <TacticalDrawer 
+      <TacticalDrawer
         isOpen={!!deepdiveParam}
         onClose={closeDrawer}
         pokemonId={deepdiveParam}
@@ -440,9 +571,9 @@ export default function CompetitiveClient({ lang, dict, showdownFormats, tournam
         formatName={currentFormats.find(f => f.id === activeFormatId)?.name}
         lang={lang}
       />
-      
+
       {/* TEAM MODAL */}
-      <TeamDetailModal 
+      <TeamDetailModal
         isOpen={!!selectedTeam}
         onClose={() => setSelectedTeam(null)}
         teamData={selectedTeam}

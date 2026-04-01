@@ -7,6 +7,23 @@
     "base_weight": 6128.481379188115,
     "percent": 5.46478587375685
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-band": 1839.0762885650554,
     "rockium-z": 46.48952376418676,
@@ -101,7 +118,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.4",
       "evs": {
         "hp": 84,
@@ -113,7 +130,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "9.5",
       "evs": {
         "hp": 248,
@@ -125,7 +142,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.5",
       "evs": {
         "hp": 0,
@@ -137,7 +154,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.9",
       "evs": {
         "hp": 96,
@@ -149,7 +166,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.6",
       "evs": {
         "hp": 236,
@@ -161,7 +178,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.5",
       "evs": {
         "hp": 248,
@@ -173,7 +190,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -185,7 +202,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -197,7 +214,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 112,
@@ -209,7 +226,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 0,

@@ -7,6 +7,23 @@
     "base_weight": 20992.38979422521,
     "percent": 8.268403214136105
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 1649.626849860212,
     "heavy-duty-boots": 808.0749628730554,
@@ -121,7 +138,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "17.2",
       "evs": {
         "hp": 252,
@@ -133,7 +150,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.6",
       "evs": {
         "hp": 0,
@@ -145,7 +162,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.1",
       "evs": {
         "hp": 0,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.8",
       "evs": {
         "hp": 112,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 124,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 120,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.0",
       "evs": {
         "hp": 124,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.0",
       "evs": {
         "hp": 4,

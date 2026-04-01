@@ -1,12 +1,19 @@
 {
   "id": "10022",
-  "name": "Kyurem Black",
+  "name": "Kyurem black",
   "format_id": "showdown_gen6ou-1760",
   "usage_metrics": {
     "raw": 2094,
     "base_weight": 125.22979674727046,
     "percent": 3.139336151839525
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "life-orb": 29.309938380913355,
     "choice-specs": 5.909297549498824,
@@ -82,7 +89,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "15.6",
       "evs": {
         "hp": 0,
@@ -94,7 +101,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "15.3",
       "evs": {
         "hp": 0,
@@ -106,7 +113,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "8.3",
       "evs": {
         "hp": 136,
@@ -118,7 +125,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.2",
       "evs": {
         "hp": 56,
@@ -130,7 +137,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "6.4",
       "evs": {
         "hp": 0,
@@ -142,7 +149,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "6.3",
       "evs": {
         "hp": 0,
@@ -154,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.7",
       "evs": {
         "hp": 0,
@@ -166,7 +173,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 56,
@@ -178,7 +185,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 168,
@@ -190,7 +197,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 0,

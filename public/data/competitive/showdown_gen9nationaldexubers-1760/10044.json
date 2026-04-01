@@ -1,12 +1,24 @@
 {
   "id": "10044",
-  "name": "Mewtwo Mega Y",
+  "name": "Mewtwo mega y",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 11086,
     "base_weight": 378.3691933703721,
     "percent": 3.7440054035798718
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "mewtwonite-y": 378.3691933703721
   },
@@ -120,7 +132,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "26.3",
       "evs": {
         "hp": 0,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.0",
       "evs": {
         "hp": 0,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.4",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.7",
       "evs": {
         "hp": 36,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "9.5",
       "evs": {
         "hp": 4,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 4,
@@ -216,7 +228,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 4,
@@ -228,7 +240,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -529,6 +541,7 @@
     "883": 0,
     "887": 2.4606160743721945,
     "890": 26.13030130351857,
+    "892": 0.5395240310505134,
     "893": 1.6802930768999857e-8,
     "894": 1.3172281192942643,
     "895": 2.173923152604118e-9,
@@ -664,7 +677,7 @@
     "10186": 0.1409172924081047,
     "10188": 139.256701653096,
     "10189": 0.6616175133779976,
-    "10191": 0.5494580792374107,
+    "10191": 0.00993404818689736,
     "10193": 9.703272855945755,
     "10230": 0.0010097924831136695,
     "10232": 0.031135607955823763,

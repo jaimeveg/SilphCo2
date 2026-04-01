@@ -7,6 +7,18 @@
     "base_weight": 7457,
     "percent": 4.965705533728442
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "expert-belt": 172,
     "scope-lens": 498,
@@ -129,7 +141,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "62.9",
       "evs": {
         "hp": 0,
@@ -141,7 +153,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.8",
       "evs": {
         "hp": 4,
@@ -153,7 +165,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.7",
       "evs": {
         "hp": 0,
@@ -165,7 +177,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.5",
       "evs": {
         "hp": 4,
@@ -177,7 +189,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -189,7 +201,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -201,7 +213,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -213,7 +225,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -225,7 +237,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.9",
       "evs": {
         "hp": 0,
@@ -237,7 +249,7 @@
       }
     },
     {
-      "nature": "Lax",
+      "nature": "lax",
       "usage": "0.6",
       "evs": {
         "hp": 0,

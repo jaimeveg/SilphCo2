@@ -7,6 +7,18 @@
     "base_weight": 24134.56169438737,
     "percent": 7.265605127944244
   },
+  "roles": [
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rocky-helmet": 326.69177645133135,
     "smooth-rock": 3368.0380290276194,
@@ -195,7 +207,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "21.2",
       "evs": {
         "hp": 252,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -255,7 +267,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 4,
@@ -267,7 +279,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 4,
@@ -279,7 +291,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -291,7 +303,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -303,7 +315,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 0,

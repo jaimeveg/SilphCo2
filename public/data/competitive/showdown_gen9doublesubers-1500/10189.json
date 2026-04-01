@@ -1,12 +1,29 @@
 {
   "id": "10189",
-  "name": "Zamazenta Crowned",
+  "name": "Zamazenta crowned",
   "format_id": "showdown_gen9doublesubers-1500",
   "usage_metrics": {
     "raw": 23665,
     "base_weight": 17192.860185394245,
     "percent": 11.465711877053073
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wide_guard",
+      "label": "Wide Guard",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rusted-shield": 17192.860185394245
   },
@@ -88,7 +105,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.2",
       "evs": {
         "hp": 252,
@@ -100,7 +117,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.5",
       "evs": {
         "hp": 108,
@@ -112,7 +129,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.4",
       "evs": {
         "hp": 196,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 4,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -467,6 +484,7 @@
     "884": 0.01911180205420754,
     "887": 39.39474547321751,
     "890": 274.3448805775399,
+    "892": 471.7915645126932,
     "893": 2.458707255771855,
     "894": 67.01610910298743,
     "895": 8.579870375809069,
@@ -581,7 +599,7 @@
     "10172": 27.551456059867824,
     "10186": 2194.2089147364645,
     "10188": 1355.7368776755093,
-    "10191": 1986.528286479549,
+    "10191": 1514.7367219668558,
     "10193": 2019.4015957589104,
     "10194": 7801.753461382389,
     "10230": 33.043609373327726,

@@ -7,6 +7,23 @@
     "base_weight": 747.7555727389043,
     "percent": 23.842159092501177
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "nothing": 0.0000011934687036418978,
     "leftovers": 747.5161445335917,
@@ -87,7 +104,7 @@
   },
   "spreads": [
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "7.5",
       "evs": {
         "hp": 248,
@@ -99,7 +116,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.9",
       "evs": {
         "hp": 0,
@@ -111,7 +128,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "5.7",
       "evs": {
         "hp": 252,
@@ -123,7 +140,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.3",
       "evs": {
         "hp": 76,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.2",
       "evs": {
         "hp": 252,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 192,

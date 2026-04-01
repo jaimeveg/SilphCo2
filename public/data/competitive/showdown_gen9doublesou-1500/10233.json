@@ -1,12 +1,19 @@
 {
   "id": "10233",
-  "name": "Typhlosion Hisui",
+  "name": "Typhlosion hisuian",
   "format_id": "showdown_gen9doublesou-1500",
   "usage_metrics": {
     "raw": 18690,
     "base_weight": 11201.195366979675,
     "percent": 3.1693544284478814
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 6924.945104431931,
     "choice-specs": 3064.40226343923,
@@ -148,7 +155,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "36.5",
       "evs": {
         "hp": 0,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.6",
       "evs": {
         "hp": 4,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.8",
       "evs": {
         "hp": 4,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.2",
       "evs": {
         "hp": 76,
@@ -196,7 +203,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "9.0",
       "evs": {
         "hp": 0,
@@ -208,7 +215,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -220,7 +227,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -232,7 +239,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -244,7 +251,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -256,7 +263,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.3",
       "evs": {
         "hp": 0,

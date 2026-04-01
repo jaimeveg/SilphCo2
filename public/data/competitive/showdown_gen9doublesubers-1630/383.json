@@ -7,6 +7,18 @@
     "base_weight": 2958.581278963656,
     "percent": 8.731673756528648
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sitrus-berry": 135.77340182906744,
     "clear-amulet": 551.0624726769361,
@@ -167,7 +179,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.2",
       "evs": {
         "hp": 248,
@@ -179,7 +191,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -191,7 +203,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.6",
       "evs": {
         "hp": 0,
@@ -203,7 +215,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.7",
       "evs": {
         "hp": 0,
@@ -215,7 +227,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.2",
       "evs": {
         "hp": 4,
@@ -227,7 +239,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -239,7 +251,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -251,7 +263,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -263,7 +275,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -275,7 +287,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -574,6 +586,7 @@
     "884": 0.13805711280335453,
     "887": 7.086705010700373,
     "890": 88.25116553245188,
+    "892": 62.58781844334004,
     "893": 13.918448289916796,
     "894": 2.843375254716186,
     "895": 0.06654253532144566,
@@ -691,7 +704,7 @@
     "10186": 239.43604593912033,
     "10188": 159.8170925138723,
     "10189": 822.9189515254069,
-    "10191": 108.54843475411876,
+    "10191": 45.96061631077872,
     "10193": 338.58232442097625,
     "10194": 875.2854134822064,
     "10230": 1.690162850399147,

@@ -7,6 +7,18 @@
     "base_weight": 27897,
     "percent": 10.305123563961436
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "dread-plate": 1626,
     "covert-cloak": 29,
@@ -150,7 +162,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "30.3",
       "evs": {
         "hp": 252,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "14.2",
       "evs": {
         "hp": 248,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 56,
@@ -186,7 +198,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.0",
       "evs": {
         "hp": 248,
@@ -198,7 +210,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -210,7 +222,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -222,7 +234,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -234,7 +246,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -246,7 +258,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -258,7 +270,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -580,6 +592,7 @@
     "884": 11,
     "887": 2511,
     "890": 1899,
+    "892": 268,
     "893": 5,
     "894": 883,
     "895": 67,
@@ -704,7 +717,7 @@
     "10186": 27,
     "10188": 6620,
     "10189": 475,
-    "10191": 1313,
+    "10191": 1045,
     "10193": 1925,
     "10230": 147,
     "10232": 2,

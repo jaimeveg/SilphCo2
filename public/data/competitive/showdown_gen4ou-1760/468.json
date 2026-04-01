@@ -7,6 +7,23 @@
     "base_weight": 33.80844389711766,
     "percent": 4.34951222034541
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 32.949810755674534,
     "choice-scarf": 0.7643746011510506,
@@ -102,7 +119,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "44.5",
       "evs": {
         "hp": 160,
@@ -114,7 +131,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.7",
       "evs": {
         "hp": 252,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.9",
       "evs": {
         "hp": 252,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "9.8",
       "evs": {
         "hp": 252,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.3",
       "evs": {
         "hp": 248,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 248,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 12,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.0",
       "evs": {
         "hp": 252,

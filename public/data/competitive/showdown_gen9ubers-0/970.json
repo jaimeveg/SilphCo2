@@ -7,6 +7,13 @@
     "base_weight": 22538,
     "percent": 8.325514388090577
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 14340,
     "black-sludge": 520,
@@ -137,7 +144,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.1",
       "evs": {
         "hp": 0,
@@ -149,7 +156,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "9.0",
       "evs": {
         "hp": 0,
@@ -161,7 +168,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "5.3",
       "evs": {
         "hp": 252,
@@ -173,7 +180,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.9",
       "evs": {
         "hp": 0,
@@ -185,7 +192,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -197,7 +204,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 4,
@@ -209,7 +216,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -221,7 +228,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -233,7 +240,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -245,7 +252,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -552,6 +559,7 @@
     "884": 25,
     "887": 1319,
     "890": 803,
+    "892": 159,
     "893": 6,
     "894": 1273,
     "895": 81,
@@ -673,7 +681,7 @@
     "10186": 29,
     "10188": 4395,
     "10189": 733,
-    "10191": 1235,
+    "10191": 1076,
     "10193": 1244,
     "10230": 139,
     "10232": 56,

@@ -7,6 +7,23 @@
     "base_weight": 124.94605151057766,
     "percent": 2.877964946036698
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 119.05848568194938,
     "salac-berry": 3.154178691848446,
@@ -68,7 +85,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "19.9",
       "evs": {
         "hp": 12,
@@ -80,7 +97,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.6",
       "evs": {
         "hp": 252,
@@ -92,7 +109,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.0",
       "evs": {
         "hp": 248,
@@ -104,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.8",
       "evs": {
         "hp": 12,
@@ -116,7 +133,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "6.7",
       "evs": {
         "hp": 192,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.6",
       "evs": {
         "hp": 28,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.4",
       "evs": {
         "hp": 32,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.5",
       "evs": {
         "hp": 0,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 116,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 12,

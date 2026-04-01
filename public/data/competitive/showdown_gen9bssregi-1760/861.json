@@ -7,6 +7,23 @@
     "base_weight": 44.885418338941236,
     "percent": 10.490032337159306
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 40.88073166278479,
     "leftovers": 0.7802722111952707,
@@ -92,7 +109,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "70.9",
       "evs": {
         "hp": 252,
@@ -104,7 +121,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.9",
       "evs": {
         "hp": 252,
@@ -116,7 +133,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.4",
       "evs": {
         "hp": 244,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 244,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.0",
       "evs": {
         "hp": 244,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.4",
       "evs": {
         "hp": 244,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "0.9",
       "evs": {
         "hp": 180,
@@ -344,6 +361,7 @@
     "876": 0.05802378194663155,
     "887": 0.000030351846779186342,
     "890": 18.845682146695342,
+    "892": 0,
     "894": 0,
     "895": 0,
     "897": 0,

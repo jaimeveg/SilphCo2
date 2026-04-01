@@ -7,6 +7,23 @@
     "base_weight": 310.13553740576566,
     "percent": 3.489390800309178
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 113.56918496512453,
     "air-balloon": 1.6482093451877717,
@@ -139,7 +156,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.0",
       "evs": {
         "hp": 244,
@@ -151,7 +168,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.3",
       "evs": {
         "hp": 252,
@@ -163,7 +180,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.6",
       "evs": {
         "hp": 204,
@@ -175,7 +192,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.4",
       "evs": {
         "hp": 252,
@@ -187,7 +204,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.0",
       "evs": {
         "hp": 204,
@@ -199,7 +216,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.1",
       "evs": {
         "hp": 252,
@@ -211,7 +228,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.5",
       "evs": {
         "hp": 228,
@@ -223,7 +240,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -235,7 +252,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -247,7 +264,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -541,6 +558,7 @@
     "879": 0.0010002956570089871,
     "884": 2.7700064464397656e-14,
     "887": 2.725461437395354,
+    "892": 70.82420653697777,
     "894": 0.06885881283487422,
     "895": 2.463488563107348,
     "896": 0.7510741276666921,
@@ -653,7 +671,7 @@
     "10171": 6.967451781972569,
     "10172": 0.007820581347526223,
     "10186": 12.677715230740624,
-    "10191": 97.1608005250913,
+    "10191": 26.336593988113542,
     "10230": 0.2540130366814786,
     "10232": 6.041553368696384e-10,
     "10233": 0.00004473396614940173,

@@ -7,6 +7,23 @@
     "base_weight": 1509.7111967388498,
     "percent": 8.07022278192558
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "eviolite": 1509.384286760454,
     "rocky-helmet": 6.310525486052931e-7,
@@ -70,7 +87,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "45.7",
       "evs": {
         "hp": 248,
@@ -82,7 +99,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "25.7",
       "evs": {
         "hp": 4,
@@ -94,7 +111,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.5",
       "evs": {
         "hp": 252,
@@ -106,7 +123,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -118,7 +135,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -130,7 +147,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -142,7 +159,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.6",
       "evs": {
         "hp": 56,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.9",
       "evs": {
         "hp": 32,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.7",
       "evs": {
         "hp": 8,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "0.6",
       "evs": {
         "hp": 252,

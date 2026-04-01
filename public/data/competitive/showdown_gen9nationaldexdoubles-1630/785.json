@@ -7,6 +7,23 @@
     "base_weight": 1862.9409194522527,
     "percent": 5.382134423774693
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "focus-sash": 123.27710605188207,
     "electrium-z": 292.97587438299956,
@@ -150,7 +167,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "42.4",
       "evs": {
         "hp": 0,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "15.0",
       "evs": {
         "hp": 4,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.9",
       "evs": {
         "hp": 0,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.8",
       "evs": {
         "hp": 0,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -222,7 +239,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.5",
       "evs": {
         "hp": 4,
@@ -234,7 +251,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 4,
@@ -246,7 +263,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -258,7 +275,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.0",
       "evs": {
         "hp": 248,

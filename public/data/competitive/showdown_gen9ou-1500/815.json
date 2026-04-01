@@ -7,6 +7,23 @@
     "base_weight": 125430.5093746102,
     "percent": 10.230030534085438
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 39.68075750623747,
     "heavy-duty-boots": 106640.51360949589,
@@ -183,7 +200,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "50.9",
       "evs": {
         "hp": 0,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.0",
       "evs": {
         "hp": 224,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.9",
       "evs": {
         "hp": 4,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.5",
       "evs": {
         "hp": 248,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 232,
@@ -267,7 +284,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -279,7 +296,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.0",
       "evs": {
         "hp": 0,
@@ -291,7 +308,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.9",
       "evs": {
         "hp": 248,

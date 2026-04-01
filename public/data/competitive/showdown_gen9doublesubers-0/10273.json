@@ -1,12 +1,24 @@
 {
   "id": "10273",
-  "name": "Ogerpon Wellspring Mask",
+  "name": "Ogerpon wellspring",
   "format_id": "showdown_gen9doublesubers-0",
   "usage_metrics": {
     "raw": 8575,
     "base_weight": 8575,
     "percent": 4.154594521264741
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "wellspring-mask": 8575
   },
@@ -71,7 +83,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "31.0",
       "evs": {
         "hp": 0,
@@ -83,7 +95,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.2",
       "evs": {
         "hp": 4,
@@ -95,7 +107,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -107,7 +119,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -119,7 +131,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -131,7 +143,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 4,
@@ -143,7 +155,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -155,7 +167,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.2",
       "evs": {
         "hp": 200,
@@ -167,7 +179,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 236,
@@ -179,7 +191,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -423,6 +435,7 @@
     "876": 61,
     "887": 73,
     "890": 43,
+    "892": 347,
     "894": 115,
     "895": 52,
     "896": 6,
@@ -528,7 +541,7 @@
     "10186": 504,
     "10188": 189,
     "10189": 456,
-    "10191": 1353,
+    "10191": 1006,
     "10193": 434,
     "10194": 1012,
     "10230": 365,

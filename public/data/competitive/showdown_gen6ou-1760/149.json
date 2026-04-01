@@ -7,6 +7,23 @@
     "base_weight": 266.1870957927677,
     "percent": 7.59647386884951
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-band": 94.6591118910538,
     "weakness-policy": 10.218558947986544,
@@ -104,7 +121,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "30.9",
       "evs": {
         "hp": 0,
@@ -116,7 +133,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "30.0",
       "evs": {
         "hp": 0,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "15.1",
       "evs": {
         "hp": 192,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.6",
       "evs": {
         "hp": 168,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.3",
       "evs": {
         "hp": 216,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.3",
       "evs": {
         "hp": 40,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.1",
       "evs": {
         "hp": 248,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.1",
       "evs": {
         "hp": 24,
@@ -212,7 +229,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.0",
       "evs": {
         "hp": 176,

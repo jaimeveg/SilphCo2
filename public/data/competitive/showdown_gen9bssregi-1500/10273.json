@@ -1,12 +1,19 @@
 {
   "id": "10273",
-  "name": "Ogerpon Wellspring Mask",
+  "name": "Ogerpon wellspring",
   "format_id": "showdown_gen9bssregi-1500",
   "usage_metrics": {
     "raw": 1554,
     "base_weight": 1070.195871880494,
     "percent": 2.761095909882378
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "wellspring-mask": 1070.195871880494
   },
@@ -50,7 +57,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "37.2",
       "evs": {
         "hp": 252,
@@ -62,7 +69,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "12.7",
       "evs": {
         "hp": 252,
@@ -74,7 +81,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.1",
       "evs": {
         "hp": 252,
@@ -86,7 +93,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -98,7 +105,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -110,7 +117,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 4,
@@ -122,7 +129,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -134,7 +141,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 236,
@@ -146,7 +153,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 156,
@@ -158,7 +165,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -240,6 +247,7 @@
     "861": 40.35641541063373,
     "887": 7.341542734071822,
     "890": 13.192258460956548,
+    "892": 6.270007697642245,
     "901": 8.67537281205091,
     "902": 5.468065817917291,
     "903": 4.362446757836085,
@@ -303,7 +311,7 @@
     "10172": 0.3718771984604321,
     "10188": 543.4397607924278,
     "10189": 8.518335758836576,
-    "10191": 34.317640985998466,
+    "10191": 28.047633288356224,
     "10193": 7.666236706672452,
     "10194": 622.2500074772828,
     "10230": 1.7873792797937917,

@@ -7,6 +7,18 @@
     "base_weight": 1365.7945044589171,
     "percent": 3.8007064831346344
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "flame-orb": 1319.0930030681855,
     "assault-vest": 0.634311137751518,
@@ -128,7 +140,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "22.8",
       "evs": {
         "hp": 252,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "20.3",
       "evs": {
         "hp": 248,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "9.4",
       "evs": {
         "hp": 252,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 248,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.6",
       "evs": {
         "hp": 248,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 92,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.5",
       "evs": {
         "hp": 168,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.7",
       "evs": {
         "hp": 170,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.8",
       "evs": {
         "hp": 0,

@@ -7,6 +7,23 @@
     "base_weight": 62500,
     "percent": 3.979325335632216
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "light-clay": 45269,
     "safety-goggles": 1051,
@@ -155,7 +172,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "11.6",
       "evs": {
         "hp": 252,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.4",
       "evs": {
         "hp": 236,
@@ -578,6 +595,7 @@
     "884": 68,
     "887": 1085,
     "891": 2,
+    "892": 1563,
     "894": 680,
     "895": 1404,
     "896": 557,
@@ -695,7 +713,7 @@
     "10171": 3884,
     "10172": 75,
     "10186": 1957,
-    "10191": 11391,
+    "10191": 9828,
     "10230": 2969,
     "10232": 102,
     "10233": 372,

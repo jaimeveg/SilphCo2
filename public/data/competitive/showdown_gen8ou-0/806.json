@@ -7,6 +7,18 @@
     "base_weight": 9944,
     "percent": 12.43808475509081
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "air-balloon": 12,
     "choice-specs": 3710,
@@ -73,7 +85,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "57.2",
       "evs": {
         "hp": 0,
@@ -85,7 +97,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "21.3",
       "evs": {
         "hp": 0,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.6",
       "evs": {
         "hp": 0,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 4,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.6",
       "evs": {
         "hp": 6,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 236,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.1",
       "evs": {
         "hp": 0,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.6",
       "evs": {
         "hp": 0,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "0.4",
       "evs": {
         "hp": 0,

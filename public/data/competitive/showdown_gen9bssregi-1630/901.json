@@ -7,6 +7,18 @@
     "base_weight": 257.1162720782564,
     "percent": 2.627838385274155
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "flame-orb": 218.72967783598216,
     "sitrus-berry": 0.5219427232274965,
@@ -77,7 +89,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "24.4",
       "evs": {
         "hp": 132,
@@ -89,7 +101,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "12.6",
       "evs": {
         "hp": 140,
@@ -101,7 +113,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.9",
       "evs": {
         "hp": 140,
@@ -113,7 +125,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.1",
       "evs": {
         "hp": 172,
@@ -125,7 +137,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "11.0",
       "evs": {
         "hp": 12,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.7",
       "evs": {
         "hp": 0,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.5",
       "evs": {
         "hp": 12,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 4,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 172,
@@ -285,6 +297,7 @@
     "876": 0.02062659819945023,
     "887": 0.00025465555042725185,
     "890": 32.92415658082271,
+    "892": 0,
     "894": 0,
     "897": 0.3354819149392285,
     "902": 0.033443697197685696,

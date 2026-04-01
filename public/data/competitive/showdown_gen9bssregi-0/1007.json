@@ -7,6 +7,23 @@
     "base_weight": 18389,
     "percent": 32.672968266941474
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "life-orb": 1130,
     "choice-scarf": 6352,
@@ -123,7 +140,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "23.1",
       "evs": {
         "hp": 0,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "14.3",
       "evs": {
         "hp": 0,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.8",
       "evs": {
         "hp": 4,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.6",
       "evs": {
         "hp": 124,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 220,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 220,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 172,
@@ -427,6 +444,7 @@
     "876": 5,
     "887": 47,
     "890": 184,
+    "892": 109,
     "894": 63,
     "895": 12,
     "900": 42,
@@ -516,7 +534,7 @@
     "10186": 11,
     "10188": 271,
     "10189": 66,
-    "10191": 2202,
+    "10191": 2093,
     "10193": 333,
     "10194": 7333,
     "10230": 51,

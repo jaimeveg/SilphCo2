@@ -7,6 +7,23 @@
     "base_weight": 195.72438157363445,
     "percent": 7.603674721638113
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 112.64923863034831,
     "yache-berry": 10.414032663768554,
@@ -100,7 +117,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.0",
       "evs": {
         "hp": 32,
@@ -112,7 +129,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.9",
       "evs": {
         "hp": 0,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.2",
       "evs": {
         "hp": 0,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.4",
       "evs": {
         "hp": 0,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 0,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.4",
       "evs": {
         "hp": 252,

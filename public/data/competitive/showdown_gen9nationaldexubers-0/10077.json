@@ -1,12 +1,24 @@
 {
   "id": "10077",
-  "name": "Kyogre Primal",
+  "name": "Kyogre primal",
   "format_id": "showdown_gen9nationaldexubers-0",
   "usage_metrics": {
     "raw": 33500,
     "base_weight": 33500,
     "percent": 11.313745356298547
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "blue-orb": 33500
   },
@@ -85,7 +97,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "17.4",
       "evs": {
         "hp": 0,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "11.2",
       "evs": {
         "hp": 252,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.1",
       "evs": {
         "hp": 0,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.4",
       "evs": {
         "hp": 0,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.2",
       "evs": {
         "hp": 4,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 4,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 240,
@@ -556,6 +568,7 @@
     "883": 1,
     "887": 510,
     "890": 2854,
+    "892": 255,
     "893": 32,
     "894": 583,
     "895": 22,
@@ -720,7 +733,7 @@
     "10186": 47,
     "10188": 11404,
     "10189": 663,
-    "10191": 607,
+    "10191": 352,
     "10193": 1329,
     "10230": 62,
     "10236": 172,

@@ -7,6 +7,23 @@
     "base_weight": 603.2700633326798,
     "percent": 3.8550260373758007
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "assault-vest": 207.12334959748523,
     "clear-amulet": 149.4908397543391,
@@ -113,7 +130,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "20.1",
       "evs": {
         "hp": 0,
@@ -125,7 +142,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "18.6",
       "evs": {
         "hp": 0,
@@ -137,7 +154,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "15.6",
       "evs": {
         "hp": 0,
@@ -149,7 +166,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "14.4",
       "evs": {
         "hp": 84,
@@ -161,7 +178,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.3",
       "evs": {
         "hp": 84,
@@ -173,7 +190,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.5",
       "evs": {
         "hp": 44,
@@ -185,7 +202,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.0",
       "evs": {
         "hp": 28,
@@ -197,7 +214,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.2",
       "evs": {
         "hp": 76,
@@ -209,7 +226,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "0.9",
       "evs": {
         "hp": 20,
@@ -221,7 +238,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 12,
@@ -451,6 +468,7 @@
     "879": 0.13406594685265188,
     "884": 0.0015723397728997779,
     "887": 0.014483511383114989,
+    "892": 343.28013827557214,
     "894": 0.007508497077310272,
     "895": 0.2532139742016017,
     "896": 0.0005036777553947269,
@@ -547,7 +565,7 @@
     "10171": 21.58311186127628,
     "10172": 0.03463485998518884,
     "10186": 326.7007267202825,
-    "10191": 351.16097137638,
+    "10191": 7.880833100807892,
     "10230": 2.2284812430443095,
     "10232": 0.0032961415955415907,
     "10233": 0.04298655483854863,

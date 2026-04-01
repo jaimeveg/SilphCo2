@@ -7,6 +7,18 @@
     "base_weight": 135316,
     "percent": 8.615462193862543
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "focus-sash": 24506,
     "covert-cloak": 3518,
@@ -140,7 +152,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "21.7",
       "evs": {
         "hp": 0,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "16.0",
       "evs": {
         "hp": 4,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "13.0",
       "evs": {
         "hp": 4,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.5",
       "evs": {
         "hp": 0,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.8",
       "evs": {
         "hp": 212,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 52,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 60,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -248,7 +260,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -570,6 +582,7 @@
     "879": 52,
     "884": 73,
     "887": 1263,
+    "892": 20662,
     "894": 1155,
     "895": 2789,
     "896": 305,
@@ -676,7 +689,7 @@
     "10171": 693,
     "10172": 40,
     "10186": 13771,
-    "10191": 41168,
+    "10191": 20506,
     "10230": 1665,
     "10232": 43,
     "10233": 793,

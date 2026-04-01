@@ -1,9 +1,10 @@
-import { 
-  Hash, Activity, Sword, 
-  GraduationCap, Zap, Skull, 
-  LucideIcon, Calculator, Timer, 
+import {
+  Hash, Activity, Sword,
+  GraduationCap, Zap, Skull,
+  LucideIcon, Calculator, Timer,
   Dna, Brain, RefreshCw, Egg,
-  LibraryBig, PawPrint, Disc, Apple, SendToBack
+  LibraryBig, PawPrint, Disc, Apple, SendToBack,
+  ChartArea
 } from 'lucide-react';
 
 export interface NavItem {
@@ -37,7 +38,7 @@ export interface CoreMenuItem {
 // --- FACTORY: SECCIONES MÓDULO 1 ---
 export const getModule1Sections = (dict: any): NavSection[] => {
   const t_items = dict.navigation.sections.items;
-  
+
   return [
     {
       id: 'types',
@@ -122,25 +123,31 @@ export const getAcademyModules = (dict: any): ModuleDefinition[] => [
 
 // --- FACTORY: MENÚ PRINCIPAL (CORE) ---
 export const getCoreMenu = (lang: string, dict: any): CoreMenuItem[] => [
-  { 
-    id: 'academy', 
-    label: dict.navigation.academy, 
-    icon: GraduationCap, 
+  {
+    id: 'academy',
+    label: dict.navigation.academy,
+    icon: GraduationCap,
     type: 'module_root',
-    children: getAcademyModules(dict) 
+    children: getAcademyModules(dict)
   },
-  { 
-    id: 'tools', 
-    label: dict.navigation.tools, 
-    icon: Zap, 
+  {
+    id: 'tools',
+    label: dict.navigation.tools,
+    icon: Zap,
     type: 'link_root',
     children: [
-      { 
-        label: dict.navigation.tools_items.type_calc, 
+      {
+        label: dict.navigation.tools_items?.competitive_dashboard || 'Competitive Dashboard',
+        href: `/${lang}/competitive`,
+        icon: ChartArea
+      },
+      {
+        label: dict.navigation.tools_items?.type_calc || 'Type Calculator',
         href: `/${lang}/tools/type-calculator`,
-        icon: Calculator 
+        icon: Calculator
       }
-    ] 
+
+    ]
   },
   {
     id: 'dex',
@@ -154,11 +161,11 @@ export const getCoreMenu = (lang: string, dict: any): CoreMenuItem[] => [
       { label: dict.navigation.dex_items.abilitydex, href: `/${lang}/abilities`, icon: SendToBack },
     ]
   },
-  { 
-    id: 'nuzlocke', 
-    label: dict.navigation.nuzlocke, 
-    icon: Skull, 
+  {
+    id: 'nuzlocke',
+    label: dict.navigation.nuzlocke,
+    icon: Skull,
     type: 'link_root',
-    children: [] 
+    children: []
   }
 ];

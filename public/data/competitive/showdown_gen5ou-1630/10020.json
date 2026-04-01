@@ -1,12 +1,24 @@
 {
   "id": "10020",
-  "name": "Thundurus Therian",
+  "name": "Thundurus therian",
   "format_id": "showdown_gen5ou-1630",
   "usage_metrics": {
     "raw": 8742,
     "base_weight": 1769.233572933076,
     "percent": 10.87719298245614
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 1173.7817238158723,
     "life-orb": 69.32533450146667,
@@ -79,7 +91,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.8",
       "evs": {
         "hp": 0,
@@ -91,7 +103,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "13.8",
       "evs": {
         "hp": 104,
@@ -103,7 +115,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.8",
       "evs": {
         "hp": 24,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.0",
       "evs": {
         "hp": 24,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.0",
       "evs": {
         "hp": 24,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.2",
       "evs": {
         "hp": 88,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.9",
       "evs": {
         "hp": 100,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 88,

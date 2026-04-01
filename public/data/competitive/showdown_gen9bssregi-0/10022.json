@@ -1,12 +1,24 @@
 {
   "id": "10022",
-  "name": "Kyurem Black",
+  "name": "Kyurem black",
   "format_id": "showdown_gen9bssregi-0",
   "usage_metrics": {
     "raw": 1222,
     "base_weight": 1222,
     "percent": 2.171209267616645
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 9,
     "loaded-dice": 1180,
@@ -62,7 +74,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "39.0",
       "evs": {
         "hp": 4,
@@ -74,7 +86,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "13.7",
       "evs": {
         "hp": 60,
@@ -86,7 +98,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.4",
       "evs": {
         "hp": 88,
@@ -98,7 +110,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.0",
       "evs": {
         "hp": 0,
@@ -110,7 +122,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 4,
@@ -122,7 +134,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.8",
       "evs": {
         "hp": 100,
@@ -134,7 +146,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -146,7 +158,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 4,
@@ -158,7 +170,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 84,
@@ -170,7 +182,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.7",
       "evs": {
         "hp": 52,
@@ -278,6 +290,7 @@
     "871": 12,
     "876": 8,
     "890": 46,
+    "892": 3,
     "894": 12,
     "897": 1,
     "900": 8,
@@ -341,7 +354,7 @@
     "10156": 25,
     "10167": 3,
     "10188": 20,
-    "10191": 119,
+    "10191": 116,
     "10193": 4,
     "10194": 365,
     "10230": 1,

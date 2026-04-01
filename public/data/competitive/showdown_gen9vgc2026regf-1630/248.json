@@ -7,6 +7,18 @@
     "base_weight": 2035.1705776349372,
     "percent": 3.283675597758334
   },
+  "roles": [
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "covert-cloak": 9.954373131194018,
     "choice-band": 252.80264584379637,
@@ -188,7 +200,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "16.2",
       "evs": {
         "hp": 252,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.7",
       "evs": {
         "hp": 252,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.7",
       "evs": {
         "hp": 252,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 76,
@@ -248,7 +260,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -260,7 +272,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 204,
@@ -272,7 +284,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -284,7 +296,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 84,
@@ -296,7 +308,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 4,
@@ -607,6 +619,7 @@
     "884": 0.009259656473271205,
     "886": 0.02968300114117922,
     "887": 10.229265373399496,
+    "892": 8.247739958989323,
     "894": 5.266682630827594,
     "895": 76.98988346322416,
     "896": 0.1572634051637204,
@@ -719,7 +732,7 @@
     "10171": 24.69286028159108,
     "10172": 0.08025808702673987,
     "10186": 310.8041501792929,
-    "10191": 117.47257252766018,
+    "10191": 109.22483256867085,
     "10230": 31.155242950555778,
     "10232": 0.6913848239541399,
     "10233": 2.8572159433803215,

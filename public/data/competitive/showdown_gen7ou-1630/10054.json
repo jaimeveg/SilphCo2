@@ -1,12 +1,24 @@
 {
   "id": "10054",
-  "name": "Medicham Mega",
+  "name": "Medicham mega",
   "format_id": "showdown_gen7ou-1630",
   "usage_metrics": {
     "raw": 9373,
     "base_weight": 3212.959579603259,
     "percent": 5.944920844327177
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "medichamite": 3212.959579603259
   },
@@ -52,7 +64,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "51.7",
       "evs": {
         "hp": 0,
@@ -64,7 +76,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "28.2",
       "evs": {
         "hp": 0,
@@ -76,7 +88,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.3",
       "evs": {
         "hp": 0,
@@ -88,7 +100,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.3",
       "evs": {
         "hp": 4,
@@ -100,7 +112,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -112,7 +124,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.9",
       "evs": {
         "hp": 0,
@@ -124,7 +136,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.4",
       "evs": {
         "hp": 4,
@@ -136,7 +148,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.3",
       "evs": {
         "hp": 48,
@@ -148,7 +160,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.3",
       "evs": {
         "hp": 80,
@@ -160,7 +172,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.2",
       "evs": {
         "hp": 0,

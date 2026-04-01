@@ -7,6 +7,18 @@
     "base_weight": 12836,
     "percent": 11.062084180771485
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 4986,
     "choice-specs": 1025,
@@ -96,7 +108,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "13.5",
       "evs": {
         "hp": 32,
@@ -108,7 +120,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.7",
       "evs": {
         "hp": 0,
@@ -120,7 +132,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "11.5",
       "evs": {
         "hp": 0,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "6.3",
       "evs": {
         "hp": 0,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.8",
       "evs": {
         "hp": 4,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.2",
       "evs": {
         "hp": 4,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.1",
       "evs": {
         "hp": 252,

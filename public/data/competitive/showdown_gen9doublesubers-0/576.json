@@ -7,6 +7,23 @@
     "base_weight": 7004,
     "percent": 3.393443734919912
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "focus-sash": 608,
     "covert-cloak": 338,
@@ -137,7 +154,7 @@
   },
   "spreads": [
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "6.5",
       "evs": {
         "hp": 252,
@@ -149,7 +166,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "6.5",
       "evs": {
         "hp": 248,
@@ -161,7 +178,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.3",
       "evs": {
         "hp": 252,
@@ -173,7 +190,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "3.9",
       "evs": {
         "hp": 252,
@@ -185,7 +202,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.8",
       "evs": {
         "hp": 248,
@@ -197,7 +214,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -209,7 +226,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -221,7 +238,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -233,7 +250,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.3",
       "evs": {
         "hp": 248,
@@ -245,7 +262,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -479,6 +496,7 @@
     "879": 2,
     "887": 97,
     "890": 19,
+    "892": 45,
     "894": 48,
     "895": 15,
     "897": 1,
@@ -580,7 +598,7 @@
     "10186": 267,
     "10188": 75,
     "10189": 73,
-    "10191": 357,
+    "10191": 312,
     "10193": 409,
     "10194": 438,
     "10230": 19,

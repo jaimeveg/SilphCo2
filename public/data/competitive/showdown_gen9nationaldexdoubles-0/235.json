@@ -7,6 +7,23 @@
     "base_weight": 7088,
     "percent": 3.4018698765574307
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 5553,
     "rocky-helmet": 22,
@@ -365,7 +382,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "22.4",
       "evs": {
         "hp": 252,
@@ -377,7 +394,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "16.5",
       "evs": {
         "hp": 252,
@@ -389,7 +406,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.9",
       "evs": {
         "hp": 252,
@@ -401,7 +418,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.0",
       "evs": {
         "hp": 252,
@@ -413,7 +430,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -425,7 +442,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -437,7 +454,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -449,7 +466,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -461,7 +478,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.6",
       "evs": {
         "hp": 4,
@@ -473,7 +490,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.6",
       "evs": {
         "hp": 248,

@@ -1,12 +1,29 @@
 {
   "id": "10088",
-  "name": "Lopunny Mega",
+  "name": "Lopunny mega",
   "format_id": "showdown_gen9nationaldex-0",
   "usage_metrics": {
     "raw": 64812,
     "base_weight": 64812,
     "percent": 6.170455843710728
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "lopunnite": 64812
   },
@@ -97,7 +114,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "68.1",
       "evs": {
         "hp": 0,
@@ -109,7 +126,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.8",
       "evs": {
         "hp": 4,
@@ -121,7 +138,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.9",
       "evs": {
         "hp": 0,
@@ -133,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -145,7 +162,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 4,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.5",
       "evs": {
         "hp": 0,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.3",
       "evs": {
         "hp": 6,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "0.2",
       "evs": {
         "hp": 0,

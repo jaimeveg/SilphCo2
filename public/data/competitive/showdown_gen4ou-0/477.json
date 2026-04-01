@@ -7,6 +7,23 @@
     "base_weight": 2825,
     "percent": 2.4345892654003927
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 1797,
     "colbur-berry": 179,
@@ -95,7 +112,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.6",
       "evs": {
         "hp": 252,
@@ -107,7 +124,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.4",
       "evs": {
         "hp": 252,
@@ -119,7 +136,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "11.0",
       "evs": {
         "hp": 252,
@@ -131,7 +148,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "9.3",
       "evs": {
         "hp": 252,
@@ -143,7 +160,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "5.1",
       "evs": {
         "hp": 252,
@@ -155,7 +172,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.2",
       "evs": {
         "hp": 0,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 208,

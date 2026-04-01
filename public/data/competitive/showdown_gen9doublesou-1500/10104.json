@@ -1,12 +1,29 @@
 {
   "id": "10104",
-  "name": "Ninetales Alola",
+  "name": "Ninetales alolan",
   "format_id": "showdown_gen9doublesou-1500",
   "usage_metrics": {
     "raw": 48616,
     "base_weight": 29242.739434765157,
     "percent": 8.244052161231792
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 20792.584993148168,
     "sitrus-berry": 299.12253802436084,
@@ -155,7 +172,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "24.7",
       "evs": {
         "hp": 0,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.6",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.5",
       "evs": {
         "hp": 164,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.3",
       "evs": {
         "hp": 4,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.3",
       "evs": {
         "hp": 208,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 136,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.1",
       "evs": {
         "hp": 4,

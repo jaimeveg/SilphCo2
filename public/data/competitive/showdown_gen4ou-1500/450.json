@@ -7,6 +7,23 @@
     "base_weight": 3623.664782206433,
     "percent": 5.465545175635148
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 3548.1659784250674,
     "choice-band": 15.580412134697758,
@@ -67,7 +84,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "27.8",
       "evs": {
         "hp": 252,
@@ -79,7 +96,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "18.0",
       "evs": {
         "hp": 252,
@@ -91,7 +108,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "14.2",
       "evs": {
         "hp": 248,
@@ -103,7 +120,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "8.5",
       "evs": {
         "hp": 248,
@@ -115,7 +132,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.5",
       "evs": {
         "hp": 240,
@@ -127,7 +144,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -139,7 +156,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -151,7 +168,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -163,7 +180,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -175,7 +192,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.4",
       "evs": {
         "hp": 252,

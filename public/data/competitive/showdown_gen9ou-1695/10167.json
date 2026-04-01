@@ -1,12 +1,29 @@
 {
   "id": "10167",
-  "name": "Weezing Galar",
+  "name": "Weezing galarian",
   "format_id": "showdown_gen9ou-1695",
   "usage_metrics": {
     "raw": 91012,
     "base_weight": 8243.951845543854,
     "percent": 4.399886294856002
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-specs": 348.956546898894,
     "heavy-duty-boots": 4634.054675756284,
@@ -167,7 +184,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "23.2",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.9",
       "evs": {
         "hp": 248,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.7",
       "evs": {
         "hp": 248,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.3",
       "evs": {
         "hp": 252,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.8",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.2",
       "evs": {
         "hp": 248,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.6",
       "evs": {
         "hp": 252,

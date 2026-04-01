@@ -7,6 +7,23 @@
     "base_weight": 1644.431677653906,
     "percent": 10.628105339912839
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "misty-seed": 0.06930907206005993,
     "weakness-policy": 49.70452182239042,
@@ -151,7 +168,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "13.0",
       "evs": {
         "hp": 248,
@@ -163,7 +180,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.6",
       "evs": {
         "hp": 248,
@@ -175,7 +192,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "6.5",
       "evs": {
         "hp": 252,
@@ -187,7 +204,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.3",
       "evs": {
         "hp": 252,
@@ -199,7 +216,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -211,7 +228,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -223,7 +240,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -235,7 +252,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.1",
       "evs": {
         "hp": 248,
@@ -247,7 +264,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -259,7 +276,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.3",
       "evs": {
         "hp": 252,

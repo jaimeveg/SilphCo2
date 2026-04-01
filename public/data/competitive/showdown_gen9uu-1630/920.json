@@ -7,6 +7,23 @@
     "base_weight": 5470.793476990658,
     "percent": 18.513018578943864
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 2324.1673241727467,
     "silver-powder": 229.21217577928522,
@@ -114,7 +131,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "48.8",
       "evs": {
         "hp": 0,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "34.8",
       "evs": {
         "hp": 0,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 4,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.1",
       "evs": {
         "hp": 4,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.0",
       "evs": {
         "hp": 0,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.4",
       "evs": {
         "hp": 6,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.3",
       "evs": {
         "hp": 252,
@@ -222,7 +239,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.3",
       "evs": {
         "hp": 0,

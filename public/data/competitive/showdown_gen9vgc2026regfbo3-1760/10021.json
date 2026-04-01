@@ -1,12 +1,19 @@
 {
   "id": "10021",
-  "name": "Landorus Therian",
+  "name": "Landorus therian",
   "format_id": "showdown_gen9vgc2026regfbo3-1760",
   "usage_metrics": {
     "raw": 30640,
     "base_weight": 617.3048491464625,
     "percent": 5.870384065662469
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "life-orb": 5.75833673597765,
     "choice-band": 481.73510911109474,
@@ -123,7 +130,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.5",
       "evs": {
         "hp": 68,
@@ -135,7 +142,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.0",
       "evs": {
         "hp": 92,
@@ -147,7 +154,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.2",
       "evs": {
         "hp": 4,
@@ -159,7 +166,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.5",
       "evs": {
         "hp": 84,
@@ -171,7 +178,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.9",
       "evs": {
         "hp": 36,
@@ -183,7 +190,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.5",
       "evs": {
         "hp": 92,
@@ -195,7 +202,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -207,7 +214,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -219,7 +226,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 20,
@@ -231,7 +238,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 116,
@@ -449,6 +456,7 @@
     "874": 2.886579864025407e-14,
     "876": 0.09090610594486798,
     "887": 0.006381944238041615,
+    "892": 233.97549031838335,
     "894": 1.0755839787979289,
     "895": 22.975360820504683,
     "896": 0.0000020275459856056166,
@@ -545,7 +553,7 @@
     "10171": 2.669150304551256,
     "10172": 0,
     "10186": 122.8105935918217,
-    "10191": 448.36007515053143,
+    "10191": 214.38458483214808,
     "10230": 0.01610654465148198,
     "10232": 1.2154721673596214e-12,
     "10233": 0.000452483958925165,

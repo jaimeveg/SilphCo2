@@ -1,11 +1,28 @@
 {
   "id": "10171",
-  "name": "Moltres Galar",
+  "name": "Moltres galarian",
   "format_id": "vgc_CU02wOcwtjVNH6QdhfNE",
   "usage_metrics": {
     "raw": 10,
     "percent": 5.58659217877095
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sitrus-berry": 5,
     "choice-specs": 5

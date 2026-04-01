@@ -1,12 +1,29 @@
 {
   "id": "10009",
-  "name": "Rotom Wash",
+  "name": "Rotom wash rotom",
   "format_id": "showdown_gen4ou-1760",
   "usage_metrics": {
     "raw": 14940,
     "base_weight": 359.13910250325705,
     "percent": 12.875314557551103
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-scarf": 112.25181850456944,
     "leftovers": 203.25245589608465,
@@ -69,7 +86,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "28.8",
       "evs": {
         "hp": 248,
@@ -81,7 +98,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "15.2",
       "evs": {
         "hp": 0,
@@ -93,7 +110,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.9",
       "evs": {
         "hp": 0,
@@ -105,7 +122,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.1",
       "evs": {
         "hp": 16,
@@ -117,7 +134,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.4",
       "evs": {
         "hp": 80,
@@ -129,7 +146,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.4",
       "evs": {
         "hp": 4,
@@ -141,7 +158,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.0",
       "evs": {
         "hp": 248,
@@ -153,7 +170,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.8",
       "evs": {
         "hp": 248,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.5",
       "evs": {
         "hp": 252,

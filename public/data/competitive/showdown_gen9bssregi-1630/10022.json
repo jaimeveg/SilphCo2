@@ -1,12 +1,24 @@
 {
   "id": "10022",
-  "name": "Kyurem Black",
+  "name": "Kyurem black",
   "format_id": "showdown_gen9bssregi-1630",
   "usage_metrics": {
     "raw": 1222,
     "base_weight": 167.8873730961398,
     "percent": 2.171209267616645
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 0.4393363887706911,
     "loaded-dice": 167.44039480070646,
@@ -62,7 +74,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "86.1",
       "evs": {
         "hp": 4,
@@ -74,7 +86,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.9",
       "evs": {
         "hp": 4,
@@ -86,7 +98,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.7",
       "evs": {
         "hp": 52,
@@ -98,7 +110,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.2",
       "evs": {
         "hp": 44,
@@ -110,7 +122,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.4",
       "evs": {
         "hp": 0,
@@ -122,7 +134,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.2",
       "evs": {
         "hp": 52,
@@ -134,7 +146,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.1",
       "evs": {
         "hp": 4,
@@ -146,7 +158,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.1",
       "evs": {
         "hp": 0,
@@ -158,7 +170,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.1",
       "evs": {
         "hp": 252,
@@ -170,7 +182,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.0",
       "evs": {
         "hp": 0,
@@ -278,6 +290,7 @@
     "871": 0.05745937336297352,
     "876": 0.0003077246514969212,
     "890": 9.980315411566309,
+    "892": 0.04998850032455365,
     "894": 2.2900504973878864,
     "897": 0.01181303622664387,
     "900": 1.5596919832168041,
@@ -341,7 +354,7 @@
     "10156": 0.023855872893875585,
     "10167": 0.0003068370615823546,
     "10188": 0.008488062517654882,
-    "10191": 7.19270659081622,
+    "10191": 7.142718090491667,
     "10193": 0.00046585244160807227,
     "10194": 12.627148283844997,
     "10230": 0.000011852991802729917,

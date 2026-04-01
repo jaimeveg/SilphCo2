@@ -7,6 +7,23 @@
     "base_weight": 781.6583278468237,
     "percent": 3.3920584305209363
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 679.0312037216152,
     "leftovers": 98.89008891798775,
@@ -190,7 +207,7 @@
   },
   "spreads": [
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "34.5",
       "evs": {
         "hp": 4,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "19.1",
       "evs": {
         "hp": 212,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.5",
       "evs": {
         "hp": 236,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "7.7",
       "evs": {
         "hp": 20,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.6",
       "evs": {
         "hp": 8,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.6",
       "evs": {
         "hp": 8,
@@ -262,7 +279,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -274,7 +291,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -286,7 +303,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -298,7 +315,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 0,

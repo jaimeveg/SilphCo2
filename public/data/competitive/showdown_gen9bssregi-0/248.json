@@ -7,6 +7,23 @@
     "base_weight": 2145,
     "percent": 3.811165203795174
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "expert-belt": 60,
     "lum-berry": 56,
@@ -112,7 +129,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.7",
       "evs": {
         "hp": 252,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "13.2",
       "evs": {
         "hp": 252,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "9.0",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.0",
       "evs": {
         "hp": 244,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 60,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 244,
@@ -331,6 +348,7 @@
     "876": 1,
     "887": 65,
     "890": 73,
+    "892": 35,
     "900": 7,
     "901": 19,
     "902": 1,
@@ -387,7 +405,7 @@
     "10172": 31,
     "10186": 1,
     "10188": 381,
-    "10191": 215,
+    "10191": 180,
     "10193": 150,
     "10194": 739,
     "10230": 7,

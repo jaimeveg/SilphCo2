@@ -7,6 +7,23 @@
     "base_weight": 894.4382273920481,
     "percent": 3.279911872357059
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "covert-cloak": 179.6305127740847,
     "choice-specs": 78.99908929769019,
@@ -84,7 +101,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "20.7",
       "evs": {
         "hp": 0,
@@ -96,7 +113,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -108,7 +125,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.8",
       "evs": {
         "hp": 0,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.5",
       "evs": {
         "hp": 244,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 76,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.4",
       "evs": {
         "hp": 4,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.5",
       "evs": {
         "hp": 244,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.4",
       "evs": {
         "hp": 228,
@@ -303,6 +320,7 @@
     "876": 0.5889591277543722,
     "887": 32.00503746966786,
     "890": 20.654537522649317,
+    "892": 0.3718771984604321,
     "894": 0.3718771984604321,
     "895": 0.005027726167446345,
     "897": 0.5267554293414302,
@@ -369,7 +387,7 @@
     "10172": 0.7693081509565101,
     "10188": 81.81785595933925,
     "10189": 3.1626941072653576,
-    "10191": 179.06639174282827,
+    "10191": 178.69451454436785,
     "10193": 30.977959976603568,
     "10194": 267.81505122339706,
     "10230": 2.118826480840141,

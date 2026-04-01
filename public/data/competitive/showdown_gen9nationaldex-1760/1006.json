@@ -7,6 +7,18 @@
     "base_weight": 2265.6956966432053,
     "percent": 7.892722495144522
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "booster-energy": 987.9083777415321,
     "fightinium-z": 20.589086951978782,
@@ -147,7 +159,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "18.6",
       "evs": {
         "hp": 0,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "18.1",
       "evs": {
         "hp": 0,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.1",
       "evs": {
         "hp": 0,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "9.3",
       "evs": {
         "hp": 0,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "8.0",
       "evs": {
         "hp": 0,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.7",
       "evs": {
         "hp": 0,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -255,7 +267,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.9",
       "evs": {
         "hp": 4,

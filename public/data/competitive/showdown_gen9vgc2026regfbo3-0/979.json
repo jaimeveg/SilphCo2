@@ -7,6 +7,18 @@
     "base_weight": 11923,
     "percent": 2.2843534339064493
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 2086,
     "safety-goggles": 3569,
@@ -157,7 +169,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.9",
       "evs": {
         "hp": 252,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.7",
       "evs": {
         "hp": 188,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.5",
       "evs": {
         "hp": 204,
@@ -205,7 +217,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -217,7 +229,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -229,7 +241,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -241,7 +253,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -253,7 +265,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 108,
@@ -265,7 +277,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "1.2",
       "evs": {
         "hp": 248,
@@ -494,6 +506,7 @@
     "877": 1,
     "884": 4,
     "887": 183,
+    "892": 171,
     "894": 85,
     "895": 190,
     "896": 62,
@@ -601,7 +614,7 @@
     "10171": 148,
     "10172": 6,
     "10186": 1341,
-    "10191": 997,
+    "10191": 826,
     "10230": 368,
     "10232": 37,
     "10233": 132,

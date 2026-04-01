@@ -7,6 +7,23 @@
     "base_weight": 6503.369929730728,
     "percent": 4.710575893022053
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "liechi-berry": 888.1081253224297,
     "air-balloon": 398.43419470431576,
@@ -165,7 +182,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "34.1",
       "evs": {
         "hp": 0,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.5",
       "evs": {
         "hp": 0,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.7",
       "evs": {
         "hp": 4,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.4",
       "evs": {
         "hp": 4,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -225,7 +242,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -237,7 +254,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -249,7 +266,7 @@
       }
     },
     {
-      "nature": "Naughty",
+      "nature": "naughty",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -261,7 +278,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -273,7 +290,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -564,6 +581,7 @@
     "884": 2.0573922730264105,
     "887": 370.73254102527085,
     "890": 495.11235596262327,
+    "892": 118.17024258335175,
     "893": 14.119133534609606,
     "894": 372.72279583346284,
     "895": 6.031009015725653,
@@ -684,7 +702,7 @@
     "10186": 36.78879733284425,
     "10188": 1494.9895939794235,
     "10189": 159.203029481887,
-    "10191": 401.1162495773693,
+    "10191": 282.9460069940175,
     "10193": 218.00803048140475,
     "10230": 32.893642286643654,
     "10232": 2.2651958787600432,

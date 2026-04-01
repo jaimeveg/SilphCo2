@@ -7,6 +7,18 @@
     "base_weight": 2732.123712173454,
     "percent": 7.500524721897395
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-specs": 179.91113517264773,
     "leftovers": 1307.9171943882843,
@@ -80,7 +92,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "29.0",
       "evs": {
         "hp": 0,
@@ -92,7 +104,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "27.8",
       "evs": {
         "hp": 252,
@@ -104,7 +116,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.2",
       "evs": {
         "hp": 4,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.1",
       "evs": {
         "hp": 224,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.0",
       "evs": {
         "hp": 248,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.3",
       "evs": {
         "hp": 248,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.1",
       "evs": {
         "hp": 252,

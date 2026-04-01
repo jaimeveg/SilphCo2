@@ -7,6 +7,23 @@
     "base_weight": 46.972592093646796,
     "percent": 2.4156296321831157
   },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "black-sludge": 41.94603607184092,
     "leftovers": 1.7682903889872197,
@@ -64,7 +81,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "20.6",
       "evs": {
         "hp": 252,
@@ -76,7 +93,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "13.6",
       "evs": {
         "hp": 252,
@@ -88,7 +105,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "12.1",
       "evs": {
         "hp": 252,
@@ -100,7 +117,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "8.7",
       "evs": {
         "hp": 252,
@@ -112,7 +129,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.7",
       "evs": {
         "hp": 248,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.0",
       "evs": {
         "hp": 48,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.5",
       "evs": {
         "hp": 252,

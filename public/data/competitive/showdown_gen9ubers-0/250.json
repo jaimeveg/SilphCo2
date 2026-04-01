@@ -7,6 +7,23 @@
     "base_weight": 36466,
     "percent": 13.470503490820434
   },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 2815,
     "heavy-duty-boots": 28299,
@@ -142,7 +159,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "14.2",
       "evs": {
         "hp": 248,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "8.7",
       "evs": {
         "hp": 248,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.2",
       "evs": {
         "hp": 0,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.2",
       "evs": {
         "hp": 248,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 104,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 248,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.7",
       "evs": {
         "hp": 248,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.3",
       "evs": {
         "hp": 4,
@@ -522,6 +539,7 @@
     "884": 7,
     "887": 184,
     "890": 7210,
+    "892": 374,
     "893": 21,
     "894": 1807,
     "895": 24,
@@ -634,7 +652,7 @@
     "10172": 161,
     "10188": 10085,
     "10189": 938,
-    "10191": 1177,
+    "10191": 803,
     "10193": 2408,
     "10230": 10,
     "10232": 2,

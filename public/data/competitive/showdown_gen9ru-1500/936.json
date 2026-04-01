@@ -7,6 +7,18 @@
     "base_weight": 7376.818411233245,
     "percent": 15.57093888918644
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-specs": 329.96255943146843,
     "weakness-policy": 3891.81433204697,
@@ -121,7 +133,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "41.6",
       "evs": {
         "hp": 0,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.9",
       "evs": {
         "hp": 0,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.9",
       "evs": {
         "hp": 80,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.9",
       "evs": {
         "hp": 252,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.5",
       "evs": {
         "hp": 4,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -205,7 +217,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -217,7 +229,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -229,7 +241,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.2",
       "evs": {
         "hp": 0,

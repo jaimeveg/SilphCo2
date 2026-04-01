@@ -7,6 +7,18 @@
     "base_weight": 4712.558788581268,
     "percent": 7.646220043027968
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-band": 2748.3883136351933,
     "smooth-rock": 149.92366749014977,
@@ -121,7 +133,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "43.0",
       "evs": {
         "hp": 0,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.6",
       "evs": {
         "hp": 0,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.6",
       "evs": {
         "hp": 248,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "3.9",
       "evs": {
         "hp": 248,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 6,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -205,7 +217,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -217,7 +229,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -229,7 +241,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 196,

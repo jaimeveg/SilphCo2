@@ -7,6 +7,23 @@
     "base_weight": 107089,
     "percent": 5.177113165624691
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "damp-rock": 88707,
     "nothing": 186,
@@ -146,7 +163,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "12.8",
       "evs": {
         "hp": 248,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "11.7",
       "evs": {
         "hp": 248,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.4",
       "evs": {
         "hp": 248,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.8",
       "evs": {
         "hp": 0,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.6",
       "evs": {
         "hp": 248,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.4",
       "evs": {
         "hp": 248,
@@ -218,7 +235,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -230,7 +247,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.9",
       "evs": {
         "hp": 248,
@@ -242,7 +259,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -254,7 +271,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.7",
       "evs": {
         "hp": 252,

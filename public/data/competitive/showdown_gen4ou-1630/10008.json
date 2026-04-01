@@ -1,12 +1,19 @@
 {
   "id": "10008",
-  "name": "Rotom Heat",
+  "name": "Rotom heat rotom",
   "format_id": "showdown_gen4ou-1630",
   "usage_metrics": {
     "raw": 11615,
     "base_weight": 2060.98388554518,
     "percent": 10.00982453721259
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 1329.3264027056864,
     "leftovers": 691.2858073036525,
@@ -72,7 +79,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "25.4",
       "evs": {
         "hp": 0,
@@ -84,7 +91,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "17.7",
       "evs": {
         "hp": 0,
@@ -96,7 +103,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.7",
       "evs": {
         "hp": 4,
@@ -108,7 +115,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.7",
       "evs": {
         "hp": 248,
@@ -120,7 +127,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.9",
       "evs": {
         "hp": 108,
@@ -132,7 +139,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -144,7 +151,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.1",
       "evs": {
         "hp": 16,
@@ -156,7 +163,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.9",
       "evs": {
         "hp": 248,
@@ -168,7 +175,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -180,7 +187,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 0,

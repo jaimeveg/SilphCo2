@@ -7,6 +7,18 @@
     "base_weight": 3599,
     "percent": 4.501676089458148
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "black-glasses": 798,
     "life-orb": 1609,
@@ -88,7 +100,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "55.2",
       "evs": {
         "hp": 0,
@@ -100,7 +112,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.5",
       "evs": {
         "hp": 0,
@@ -112,7 +124,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.6",
       "evs": {
         "hp": 0,
@@ -124,7 +136,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.7",
       "evs": {
         "hp": 4,
@@ -136,7 +148,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.4",
       "evs": {
         "hp": 232,
@@ -148,7 +160,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -160,7 +172,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -172,7 +184,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -184,7 +196,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.6",
       "evs": {
         "hp": 252,
@@ -196,7 +208,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.5",
       "evs": {
         "hp": 40,

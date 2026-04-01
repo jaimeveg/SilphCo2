@@ -7,6 +7,23 @@
     "base_weight": 145309.527918058,
     "percent": 13.181771595758876
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 92621.49823372262,
     "leftovers": 42419.81445676553,
@@ -179,7 +196,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "29.5",
       "evs": {
         "hp": 248,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "12.3",
       "evs": {
         "hp": 252,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.0",
       "evs": {
         "hp": 248,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.1",
       "evs": {
         "hp": 248,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 248,
@@ -287,7 +304,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.2",
       "evs": {
         "hp": 248,

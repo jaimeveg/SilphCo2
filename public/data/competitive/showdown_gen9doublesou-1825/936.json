@@ -7,6 +7,18 @@
     "base_weight": 60.82674947207171,
     "percent": 3.716911702362178
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "life-orb": 6.394721959246556,
     "rocky-helmet": 0.0030257819503842764,
@@ -154,7 +166,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "68.2",
       "evs": {
         "hp": 252,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.6",
       "evs": {
         "hp": 0,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.8",
       "evs": {
         "hp": 120,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.4",
       "evs": {
         "hp": 228,
@@ -226,7 +238,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -238,7 +250,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.2",
       "evs": {
         "hp": 124,
@@ -250,7 +262,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "0.9",
       "evs": {
         "hp": 4,
@@ -262,7 +274,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "0.7",
       "evs": {
         "hp": 244,

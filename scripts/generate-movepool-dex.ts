@@ -1,21 +1,17 @@
 import fs from 'fs';
 import path from 'path';
+import readline from 'readline';
 
-const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
-const CHUNK_SIZE = 1000; // Aumentado ligeramente para reducir peticiones totales
+const POKEAPI_GQL = 'https://graphql.pokeapi.co/v1beta2/v1/graphql';
+const CHUNK_SIZE = 1000;
 const MAX_RETRIES = 5;
 
-// IDs de métodos de aprendizaje en PokeAPI:
-// 1: Level up
-// 2: Egg
-// 3: Tutor
-// 4: Machine (TM/HM)
 const QUERY = `
-  query GetMovepools($limit: Int, $offset: Int) {
-    pokemon_v2_pokemonmove(
+  query GetMovepools($limit: Int, $offset: Int, $startGen: Int) {
+    pokemonmove(
       where: {
         move_learn_method_id: {_in: [1, 2, 3, 4]}, 
-        pokemon_v2_versiongroup: {generation_id: {_lte: 9}}
+        versiongroup: {generation_id: {_gte: $startGen, _lte: 9}}
       } 
       limit: $limit, 
       offset: $offset, 
@@ -23,19 +19,19 @@ const QUERY = `
     ) {
       pokemon_id
       level
-      pokemon_v2_versiongroup {
+      versiongroup {
         generation_id
       }
-      pokemon_v2_movelearnmethod {
+      movelearnmethod {
         name
       }
-      pokemon_v2_move {
+      move {
         name
         power
-        pokemon_v2_type {
+        type {
             name
         }
-        pokemon_v2_movedamageclass {
+        movedamageclass {
             name
         }
       }
@@ -44,6 +40,15 @@ const QUERY = `
 `;
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const askQuestion = (query: string): Promise<string> => {
+    return new Promise(resolve => rl.question(query, resolve));
+};
 
 async function fetchWithRetry(query: string, variables: any, retries = 0): Promise<any> {
     try {
@@ -79,18 +84,18 @@ async function fetchWithRetry(query: string, variables: any, retries = 0): Promi
     }
 }
 
-async function fetchAllMovepools() {
+async function fetchAllMovepools(startGen: number) {
     let allData: any[] = [];
     let offset = 0;
     let fetchMore = true;
 
-    console.log(`📚 Iniciando descarga masiva de Movepools (Nivel, MT, Huevo, Tutor)...`);
+    console.log(`📚 Iniciando descarga masiva de Movepools desde Gen ${startGen} (Nivel, MT, Huevo, Tutor)...`);
 
     while (fetchMore) {
         try {
-            const json = await fetchWithRetry(QUERY, { limit: CHUNK_SIZE, offset });
+            const json = await fetchWithRetry(QUERY, { limit: CHUNK_SIZE, offset, startGen });
             
-            const chunk = json.data.pokemon_v2_pokemonmove;
+            const chunk = json.data.pokemonmove;
             allData = [...allData, ...chunk];
             
             process.stdout.write(`   ↳ Progreso: ${allData.length} movimientos descargados (Offset: ${offset})...\r`);
@@ -106,31 +111,70 @@ async function fetchAllMovepools() {
             throw e;
         }
     }
-    console.log(`\n✅ Descarga completada: ${allData.length} registros totales.`);
+    console.log(`\n✅ Descarga completada: ${allData.length} registros obtenidos.`);
     return allData;
 }
 
 async function generateMovepoolDex() {
     try {
-        const rawData = await fetchAllMovepools();
+        let startGenStr = await askQuestion('¿Desde qué generación quieres descargar los movimientos? (ej: 9): ');
+        let startGen = parseInt(startGenStr.trim(), 10);
         
-        console.log('⚡ Procesando y comprimiendo datos...');
+        if (isNaN(startGen) || startGen < 1 || startGen > 9) {
+            console.log('Generación inválida. Por defecto se usará Gen 9.');
+            startGen = 9;
+        }
+
+        if (startGen < 9) {
+            const confirm = await askQuestion(`⚠️ Vas a descargar desde la Gen ${startGen}, esto es pesado para la PokeAPI y sobreescribirá datos. ¿Continuar? (y/n): `);
+            if (confirm.trim().toLowerCase() !== 'y') {
+                console.log('Operación cancelada por el usuario.');
+                rl.close();
+                return;
+            }
+        }
         
-        // Estructura: { [pokemonId]: { [genId]: [Moves] } }
-        const output: Record<number, Record<number, any[]>> = {};
+        rl.close();
+
+        const rawData = await fetchAllMovepools(startGen);
+        
+        console.log('⚡ Procesando e integrando datos...');
+        
+        const dir = path.join(process.cwd(), 'public', 'data');
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+        const outputPath = path.join(dir, 'movepool_dex.json');
+
+        // Cargar archivo existente para append/merge
+        let output: Record<number, Record<number, any[]>> = {};
+        if (fs.existsSync(outputPath)) {
+            console.log('📁 Cargando archivo movepool_dex.json existente para añadir datos...');
+            const existingData = fs.readFileSync(outputPath, 'utf-8');
+            try {
+                output = JSON.parse(existingData);
+            } catch(e) {
+                console.warn('⚠️ No se pudo parsear el archivo existente. Se creará uno nuevo.');
+                output = {};
+            }
+        } else {
+            console.log('📁 No existe movepool_dex.json previo, se creará uno nuevo.');
+        }
+
+        let updatedPokemonCount = 0;
 
         rawData.forEach((entry: any) => {
             const pId = entry.pokemon_id;
-            const genId = entry.pokemon_v2_versiongroup.generation_id;
-            const move = entry.pokemon_v2_move;
-            const method = entry.pokemon_v2_movelearnmethod.name; // 'level-up', 'machine', 'egg', 'tutor'
+            const genId = entry.versiongroup.generation_id;
+            const move = entry.move;
+            const method = entry.movelearnmethod.name;
 
             if (!output[pId]) output[pId] = {};
+            
+            // Si es la primera vez que procesamos este pokemon/gen en ESTA corrida (para evitar duplicados iniciales)
+            // No resetearemos el array directamente porque estamos añadiendo,
+            // pero si la idea es "reemplazar" la Gen 9, podríamos considerarlo.
+            // Para ser seguros, chequeamos si existe el movimiento.
             if (!output[pId][genId]) output[pId][genId] = [];
 
-            // Filtro de duplicados:
-            // Ahora permitimos el mismo movimiento si el método es diferente o el nivel es diferente.
-            // (Ej: Aprende Lanzallamas por nivel y por MT -> Guardamos ambos, el de MT tendrá nivel 0)
             const exists = output[pId][genId].find((m: any) => 
                 m.name === move.name && 
                 m.level === entry.level && 
@@ -142,22 +186,20 @@ async function generateMovepoolDex() {
                     name: move.name,
                     level: entry.level,
                     power: move.power,
-                    type: move.pokemon_v2_type?.name,
-                    cat: move.pokemon_v2_movedamageclass?.name,
-                    "learning-method": method // Nueva clave solicitada
+                    type: move.type?.name,
+                    cat: move.movedamageclass?.name,
+                    "learning-method": method
                 });
+                updatedPokemonCount++;
             }
         });
 
-        const dir = path.join(process.cwd(), 'public', 'data');
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-        const outputPath = path.join(dir, 'movepool_dex.json');
         fs.writeFileSync(outputPath, JSON.stringify(output));
-        console.log(`💾 Guardado exitoso: ${outputPath}`);
+        console.log(`💾 Guardado exitoso: ${outputPath} (${updatedPokemonCount} nuevos registros añadidos)`);
 
     } catch (error) {
         console.error('❌ Error en el script:', error);
+        rl.close();
     }
 }
 

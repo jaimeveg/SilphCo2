@@ -7,6 +7,23 @@
     "base_weight": 62675,
     "percent": 10.628105339912839
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "misty-seed": 31,
     "weakness-policy": 1644,
@@ -151,7 +168,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "13.1",
       "evs": {
         "hp": 252,
@@ -163,7 +180,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -175,7 +192,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -187,7 +204,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -199,7 +216,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.3",
       "evs": {
         "hp": 248,
@@ -211,7 +228,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -223,7 +240,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -235,7 +252,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -247,7 +264,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -259,7 +276,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.3",
       "evs": {
         "hp": 252,

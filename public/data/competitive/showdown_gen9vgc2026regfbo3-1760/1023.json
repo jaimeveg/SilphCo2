@@ -7,6 +7,18 @@
     "base_weight": 1679.8753669567454,
     "percent": 8.969770587536546
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "booster-energy": 1634.1119772229415,
     "life-orb": 9.528225883583728,
@@ -93,7 +105,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "17.2",
       "evs": {
         "hp": 76,
@@ -105,7 +117,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "13.5",
       "evs": {
         "hp": 252,
@@ -117,7 +129,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.1",
       "evs": {
         "hp": 0,
@@ -129,7 +141,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.2",
       "evs": {
         "hp": 220,
@@ -141,7 +153,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.6",
       "evs": {
         "hp": 204,
@@ -153,7 +165,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.3",
       "evs": {
         "hp": 236,
@@ -165,7 +177,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.9",
       "evs": {
         "hp": 4,
@@ -177,7 +189,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -189,7 +201,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.2",
       "evs": {
         "hp": 188,
@@ -201,7 +213,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 212,
@@ -370,6 +382,7 @@
     "876": 0.07977652833952553,
     "879": 0,
     "887": 0.6527228055432595,
+    "892": 82.46313689954161,
     "894": 0.07153452973334135,
     "895": 612.4778414061847,
     "896": 0.0005597907092815269,
@@ -447,7 +460,7 @@
     "10171": 3.212067470319422,
     "10172": 0,
     "10186": 1540.2408716920386,
-    "10191": 1487.5875216368113,
+    "10191": 1405.1243847372698,
     "10230": 7.211678906109039,
     "10233": 0.042989181088564254,
     "10236": 1.2859704967560504e-9,

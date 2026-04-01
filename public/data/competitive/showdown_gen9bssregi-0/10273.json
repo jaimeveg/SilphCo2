@@ -1,12 +1,19 @@
 {
   "id": "10273",
-  "name": "Ogerpon Wellspring Mask",
+  "name": "Ogerpon wellspring",
   "format_id": "showdown_gen9bssregi-0",
   "usage_metrics": {
     "raw": 1554,
     "base_weight": 1554,
     "percent": 2.761095909882378
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "wellspring-mask": 1554
   },
@@ -50,7 +57,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "25.7",
       "evs": {
         "hp": 252,
@@ -62,7 +69,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.9",
       "evs": {
         "hp": 252,
@@ -74,7 +81,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.8",
       "evs": {
         "hp": 252,
@@ -86,7 +93,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.0",
       "evs": {
         "hp": 0,
@@ -98,7 +105,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -110,7 +117,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 0,
@@ -122,7 +129,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.4",
       "evs": {
         "hp": 4,
@@ -134,7 +141,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 156,
@@ -146,7 +153,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -158,7 +165,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -240,6 +247,7 @@
     "861": 64,
     "887": 11,
     "890": 26,
+    "892": 26,
     "901": 18,
     "902": 26,
     "903": 35,
@@ -303,7 +311,7 @@
     "10172": 1,
     "10188": 628,
     "10189": 13,
-    "10191": 77,
+    "10191": 51,
     "10193": 15,
     "10194": 754,
     "10230": 24,

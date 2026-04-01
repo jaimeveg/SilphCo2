@@ -1,12 +1,19 @@
 {
   "id": "10021",
-  "name": "Landorus Therian",
+  "name": "Landorus therian",
   "format_id": "showdown_gen9nationaldexdoubles-0",
   "usage_metrics": {
     "raw": 12921,
     "base_weight": 12921,
     "percent": 6.201405287104763
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 3617,
     "clear-amulet": 190,
@@ -148,7 +155,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "32.1",
       "evs": {
         "hp": 0,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.7",
       "evs": {
         "hp": 4,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.8",
       "evs": {
         "hp": 0,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -196,7 +203,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -208,7 +215,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 140,
@@ -220,7 +227,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -232,7 +239,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 248,
@@ -244,7 +251,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -256,7 +263,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.2",
       "evs": {
         "hp": 240,

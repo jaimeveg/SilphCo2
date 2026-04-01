@@ -7,6 +7,18 @@
     "base_weight": 51372,
     "percent": 8.71140051889912
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "life-orb": 13153,
     "clear-amulet": 655,
@@ -170,7 +182,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "21.8",
       "evs": {
         "hp": 252,
@@ -182,7 +194,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "11.0",
       "evs": {
         "hp": 252,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "10.1",
       "evs": {
         "hp": 248,
@@ -206,7 +218,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.8",
       "evs": {
         "hp": 252,
@@ -218,7 +230,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -230,7 +242,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -242,7 +254,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -254,7 +266,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -266,7 +278,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.3",
       "evs": {
         "hp": 252,
@@ -278,7 +290,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.2",
       "evs": {
         "hp": 252,

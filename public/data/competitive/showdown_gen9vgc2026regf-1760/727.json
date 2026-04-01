@@ -7,6 +7,23 @@
     "base_weight": 2854.105468919248,
     "percent": 41.22320003972958
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "sitrus-berry": 637.6384321571543,
     "safety-goggles": 575.3744394650142,
@@ -201,7 +218,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -225,7 +242,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 228,
@@ -237,7 +254,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -249,7 +266,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -261,7 +278,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -273,7 +290,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -285,7 +302,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -297,7 +314,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.4",
       "evs": {
         "hp": 220,
@@ -309,7 +326,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.3",
       "evs": {
         "hp": 244,
@@ -705,6 +722,7 @@
     "886": 0.0002592347441990328,
     "887": 19.539033766658175,
     "891": 0,
+    "892": 163.17270708320183,
     "894": 7.5222758825759595,
     "895": 126.17778038173277,
     "896": 0.9133948344194628,
@@ -832,7 +850,7 @@
     "10171": 3.507293372725945,
     "10172": 0.40146045043898254,
     "10186": 75.60374792033326,
-    "10191": 1848.807078542953,
+    "10191": 1685.634371459751,
     "10230": 1.1108186827471311,
     "10232": 0.11555454866296855,
     "10233": 2.671305859519594,

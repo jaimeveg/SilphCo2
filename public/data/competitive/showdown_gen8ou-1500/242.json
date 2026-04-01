@@ -7,6 +7,23 @@
     "base_weight": 3715.114590987334,
     "percent": 6.594286286085955
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 2922.150683632583,
     "leftovers": 735.6212999604454,
@@ -93,7 +110,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "49.8",
       "evs": {
         "hp": 252,
@@ -105,7 +122,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "18.4",
       "evs": {
         "hp": 252,
@@ -117,7 +134,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "11.8",
       "evs": {
         "hp": 252,
@@ -129,7 +146,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -141,7 +158,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.7",
       "evs": {
         "hp": 248,
@@ -153,7 +170,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.1",
       "evs": {
         "hp": 196,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.0",
       "evs": {
         "hp": 200,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "0.8",
       "evs": {
         "hp": 4,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.8",
       "evs": {
         "hp": 0,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.7",
       "evs": {
         "hp": 224,

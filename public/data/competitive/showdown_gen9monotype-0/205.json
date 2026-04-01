@@ -1,0 +1,314 @@
+{
+  "id": "205",
+  "name": "Forretress",
+  "format_id": "showdown_gen9monotype-0",
+  "usage_metrics": {
+    "raw": 11125,
+    "base_weight": 11125,
+    "percent": 4.824831510378267
+  },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "heavy-duty-boots": 1074,
+    "rocky-helmet": 5649,
+    "custap-berry": 256,
+    "leftovers": 3161,
+    "assault-vest": 143,
+    "sitrus-berry": 66,
+    "light-clay": 85,
+    "red-card": 184,
+    "occa-berry": 110,
+    "nothing": 17,
+    "metal-coat": 6,
+    "power-band": 2,
+    "air-balloon": 32,
+    "normal-gem": 63,
+    "throat-spray": 4,
+    "choice-scarf": 1,
+    "mental-herb": 73,
+    "figy-berry": 4,
+    "focus-sash": 52,
+    "life-orb": 2,
+    "weakness-policy": 18,
+    "lansat-berry": 1,
+    "expert-belt": 4,
+    "silver-powder": 1,
+    "covert-cloak": 20,
+    "silk-scarf": 9,
+    "chesto-berry": 44,
+    "choice-band": 27,
+    "salac-berry": 1,
+    "loaded-dice": 2,
+    "power-herb": 9,
+    "blunder-policy": 1,
+    "shell-bell": 1,
+    "iron-ball": 3
+  },
+  "abilities": {
+    "sturdy": 10300,
+    "overcoat": 825
+  },
+  "moves": {
+    "stealth-rock": 4072,
+    "gyro-ball": 3252,
+    "rapid-spin": 10083,
+    "earthquake": 620,
+    "spikes": 5859,
+    "volt-switch": 5700,
+    "ice-spinner": 1695,
+    "body-press": 4225,
+    "explosion": 978,
+    "curse": 325,
+    "thunder-wave": 2342,
+    "toxic-spikes": 2333,
+    "iron-defense": 655,
+    "lunge": 446,
+    "iron-head": 479,
+    "light-screen": 149,
+    "reflect": 99,
+    "rock-slide": 13,
+    "protect": 134,
+    "counter": 186,
+    "rain-dance": 35,
+    "rock-tomb": 7,
+    "pounce": 10,
+    "struggle-bug": 7,
+    "bug-bite": 15,
+    "stone-edge": 25,
+    "pain-split": 210,
+    "body-slam": 30,
+    "flash-cannon": 11,
+    "heavy-slam": 53,
+    "substitute": 20,
+    "power-trick": 30,
+    "sandstorm": 7,
+    "sand-tomb": 26,
+    "bug-buzz": 16,
+    "zap-cannon": 5,
+    "drill-run": 19,
+    "seed-bomb": 34,
+    "self-destruct": 94,
+    "earth-power": 21,
+    "steel-beam": 27,
+    "rest": 69,
+    "sleep-talk": 5,
+    "poison-jab": 9,
+    "sunny-day": 21,
+    "rock-blast": 2,
+    "helping-hand": 2,
+    "giga-drain": 3,
+    "dig": 15,
+    "solar-beam": 9,
+    "smart-strike": 3,
+    "bulldoze": 5,
+    "reversal": 6,
+    "pin-missile": 2,
+    "metal-sound": 2
+  },
+  "teras": {
+    "nothing": 11125
+  },
+  "spreads": [
+    {
+      "nature": "relaxed",
+      "usage": "19.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "17.6",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "17.2",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "14.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "3.8",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "2.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "brave",
+      "usage": "1.8",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "1.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "1.4",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "0.8",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "48": 7,
+    "49": 254,
+    "123": 369,
+    "132": 0,
+    "167": 4,
+    "168": 117,
+    "193": 4,
+    "204": 3,
+    "212": 6951,
+    "214": 1568,
+    "227": 168,
+    "283": 15,
+    "284": 103,
+    "313": 118,
+    "314": 157,
+    "376": 409,
+    "379": 27,
+    "385": 36,
+    "395": 87,
+    "402": 1,
+    "410": 2,
+    "411": 3,
+    "415": 1,
+    "416": 112,
+    "437": 33,
+    "448": 21,
+    "462": 36,
+    "469": 2328,
+    "476": 3,
+    "485": 620,
+    "530": 244,
+    "540": 3,
+    "542": 204,
+    "596": 1694,
+    "625": 32,
+    "636": 36,
+    "637": 8627,
+    "638": 4,
+    "666": 651,
+    "707": 80,
+    "738": 703,
+    "743": 2273,
+    "752": 7131,
+    "823": 409,
+    "863": 3,
+    "873": 928,
+    "879": 8,
+    "884": 11,
+    "900": 6535,
+    "918": 72,
+    "920": 5145,
+    "954": 288,
+    "959": 110,
+    "966": 49,
+    "968": 196,
+    "988": 1472,
+    "990": 144,
+    "1000": 553,
+    "1018": 356,
+    "1023": 76,
+    "10102": 11,
+    "10106": 4,
+    "10242": 96
+  }
+}

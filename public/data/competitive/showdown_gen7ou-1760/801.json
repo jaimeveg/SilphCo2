@@ -7,6 +7,23 @@
     "base_weight": 3539.1714388605924,
     "percent": 20.206895676882482
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "assault-vest": 1741.8268023555095,
     "shuca-berry": 190.07384092008223,
@@ -107,7 +124,7 @@
   },
   "spreads": [
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "12.7",
       "evs": {
         "hp": 248,
@@ -119,7 +136,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.1",
       "evs": {
         "hp": 0,
@@ -131,7 +148,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "5.3",
       "evs": {
         "hp": 248,
@@ -143,7 +160,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "5.2",
       "evs": {
         "hp": 248,
@@ -155,7 +172,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.9",
       "evs": {
         "hp": 248,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.2",
       "evs": {
         "hp": 248,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.1",
       "evs": {
         "hp": 248,

@@ -7,6 +7,18 @@
     "base_weight": 53417,
     "percent": 25.8805802381806
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "assault-vest": 3646,
     "covert-cloak": 1826,
@@ -149,7 +161,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "38.0",
       "evs": {
         "hp": 0,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.9",
       "evs": {
         "hp": 4,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.8",
       "evs": {
         "hp": 4,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.2",
       "evs": {
         "hp": 0,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -245,7 +257,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.3",
       "evs": {
         "hp": 252,
@@ -257,7 +269,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -575,6 +587,7 @@
     "886": 6,
     "887": 268,
     "890": 753,
+    "892": 1784,
     "893": 55,
     "894": 584,
     "895": 235,
@@ -703,7 +716,7 @@
     "10186": 4514,
     "10188": 4581,
     "10189": 7990,
-    "10191": 8874,
+    "10191": 7090,
     "10193": 8062,
     "10194": 14946,
     "10230": 72,

@@ -7,6 +7,18 @@
     "base_weight": 5677.752398721429,
     "percent": 4.179385282881222
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "sitrus-berry": 1058.2059110681082,
     "throat-spray": 2258.8024441363737,
@@ -164,7 +176,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "9.0",
       "evs": {
         "hp": 252,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "6.2",
       "evs": {
         "hp": 252,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.3",
       "evs": {
         "hp": 252,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.5",
       "evs": {
         "hp": 220,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.2",
       "evs": {
         "hp": 88,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -248,7 +260,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -260,7 +272,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -272,7 +284,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.5",
       "evs": {
         "hp": 204,

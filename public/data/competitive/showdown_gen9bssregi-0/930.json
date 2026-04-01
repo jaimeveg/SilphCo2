@@ -1,0 +1,280 @@
+{
+  "id": "930",
+  "name": "Arboliva",
+  "format_id": "showdown_gen9bssregi-0",
+  "usage_metrics": {
+    "raw": 561,
+    "base_weight": 561,
+    "percent": 0.9967662840695071
+  },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
+  "items": {
+    "assault-vest": 301,
+    "covert-cloak": 4,
+    "sitrus-berry": 188,
+    "terrain-extender": 1,
+    "heavy-duty-boots": 1,
+    "choice-specs": 1,
+    "nothing": 1,
+    "utility-umbrella": 1,
+    "maranga-berry": 47,
+    "focus-sash": 10,
+    "leftovers": 5,
+    "rocky-helmet": 1
+  },
+  "abilities": {
+    "seed-sower": 334,
+    "harvest": 227
+  },
+  "moves": {
+    "giga-drain": 524,
+    "earth-power": 438,
+    "tera-blast": 14,
+    "mirror-coat": 413,
+    "leech-seed": 119,
+    "protect": 197,
+    "synthesis": 49,
+    "strength-sap": 9,
+    "substitute": 59,
+    "light-screen": 4,
+    "solar-beam": 8,
+    "dazzling-gleam": 101,
+    "encore": 18,
+    "alluring-voice": 253,
+    "facade": 3,
+    "memento": 1,
+    "leaf-storm": 1,
+    "hyper-beam": 1,
+    "grass-knot": 1,
+    "energy-ball": 17,
+    "hyper-voice": 14
+  },
+  "teras": {
+    "fire": 52,
+    "fairy": 234,
+    "grass": 19,
+    "dark": 30,
+    "poison": 178,
+    "water": 47,
+    "ground": 1
+  },
+  "spreads": [
+    {
+      "nature": "calm",
+      "usage": "29.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 4,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "21.0",
+      "evs": {
+        "hp": 188,
+        "atk": 0,
+        "def": 0,
+        "spa": 68,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "9.3",
+      "evs": {
+        "hp": 188,
+        "atk": 0,
+        "def": 68,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "serious",
+      "usage": "8.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 204,
+        "spa": 0,
+        "spd": 52,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "7.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 252,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "5.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 116,
+        "spd": 132,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "3.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 252,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "2.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "2.3",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "2.3",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 76,
+        "spd": 180,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "6": 1,
+    "28": 62,
+    "38": 20,
+    "51": 45,
+    "91": 8,
+    "94": 1,
+    "132": 7,
+    "143": 1,
+    "184": 34,
+    "195": 5,
+    "235": 7,
+    "249": 27,
+    "297": 1,
+    "324": 1,
+    "356": 4,
+    "376": 45,
+    "377": 45,
+    "382": 8,
+    "383": 2,
+    "384": 2,
+    "411": 8,
+    "426": 3,
+    "450": 47,
+    "472": 23,
+    "487": 1,
+    "547": 3,
+    "553": 2,
+    "573": 4,
+    "591": 1,
+    "594": 46,
+    "615": 45,
+    "635": 8,
+    "637": 37,
+    "644": 3,
+    "652": 1,
+    "655": 5,
+    "727": 94,
+    "730": 19,
+    "752": 39,
+    "778": 54,
+    "792": 11,
+    "823": 2,
+    "847": 8,
+    "855": 8,
+    "858": 5,
+    "887": 34,
+    "890": 28,
+    "925": 8,
+    "934": 92,
+    "936": 1,
+    "937": 1,
+    "943": 8,
+    "956": 8,
+    "970": 194,
+    "977": 31,
+    "979": 5,
+    "980": 20,
+    "983": 34,
+    "987": 27,
+    "990": 15,
+    "992": 8,
+    "1000": 35,
+    "1002": 47,
+    "1003": 1,
+    "1004": 1,
+    "1005": 19,
+    "1006": 3,
+    "1007": 89,
+    "1008": 261,
+    "1020": 77,
+    "10021": 46,
+    "10023": 8,
+    "10104": 4,
+    "10113": 143,
+    "10155": 14,
+    "10156": 3,
+    "10188": 9,
+    "10189": 75,
+    "10191": 223,
+    "10193": 211,
+    "10194": 21,
+    "10236": 6,
+    "10245": 1,
+    "10274": 2
+  }
+}

@@ -1,12 +1,19 @@
 {
   "id": "10191",
-  "name": "Urshifu Rapid Strike",
+  "name": "Urshifu rapid strike style",
   "format_id": "showdown_gen9ubers-0",
   "usage_metrics": {
-    "raw": 19942,
+    "raw": 15479,
     "base_weight": 15479,
-    "percent": 7.366554615640353
+    "percent": 5.717926932880204
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "life-orb": 1484,
     "expert-belt": 386,
@@ -142,7 +149,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "37.3",
       "evs": {
         "hp": 0,
@@ -154,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.3",
       "evs": {
         "hp": 4,
@@ -166,7 +173,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.4",
       "evs": {
         "hp": 0,
@@ -178,7 +185,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.3",
       "evs": {
         "hp": 0,
@@ -190,7 +197,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.1",
       "evs": {
         "hp": 4,
@@ -202,7 +209,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -214,7 +221,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -226,7 +233,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -238,7 +245,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.5",
       "evs": {
         "hp": 4,
@@ -250,7 +257,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.3",
       "evs": {
         "hp": 252,

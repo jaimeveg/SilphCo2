@@ -1,12 +1,29 @@
 {
   "id": "10021",
-  "name": "Landorus Therian",
+  "name": "Landorus therian",
   "format_id": "showdown_gen9ubers-1500",
   "usage_metrics": {
     "raw": 13229,
     "base_weight": 9663.163325416735,
     "percent": 4.886779210224964
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 681.414402449942,
     "life-orb": 227.1466112770332,
@@ -121,7 +138,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "17.8",
       "evs": {
         "hp": 248,
@@ -133,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "12.0",
       "evs": {
         "hp": 0,
@@ -145,7 +162,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "9.2",
       "evs": {
         "hp": 252,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.7",
       "evs": {
         "hp": 0,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.2",
       "evs": {
         "hp": 192,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.3",
       "evs": {
         "hp": 248,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -453,6 +470,7 @@
     "876": 19.44255419323221,
     "887": 622.0283460477974,
     "890": 1138.6079017010265,
+    "892": 45.3646798746632,
     "893": 23.321819760697156,
     "894": 659.9502591528335,
     "895": 3.8310131887658443,
@@ -553,7 +571,7 @@
     "10186": 7.166413563612628,
     "10188": 3514.3846729128627,
     "10189": 92.16997902759152,
-    "10191": 313.8932230258596,
+    "10191": 268.5285431511964,
     "10193": 298.00827600220873,
     "10230": 21.068322582379807,
     "10233": 17.67543941561744,

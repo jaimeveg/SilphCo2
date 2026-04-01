@@ -7,6 +7,18 @@
     "base_weight": 20474,
     "percent": 7.563074877174837
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "air-balloon": 2725,
     "focus-sash": 2449,
@@ -129,7 +141,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "20.3",
       "evs": {
         "hp": 0,
@@ -141,7 +153,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "6.4",
       "evs": {
         "hp": 0,
@@ -153,7 +165,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.7",
       "evs": {
         "hp": 4,
@@ -165,7 +177,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -177,7 +189,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -189,7 +201,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -201,7 +213,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -213,7 +225,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -225,7 +237,7 @@
       }
     },
     {
-      "nature": "Naughty",
+      "nature": "naughty",
       "usage": "1.8",
       "evs": {
         "hp": 176,
@@ -237,7 +249,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -541,6 +553,7 @@
     "884": 15,
     "887": 978,
     "890": 1293,
+    "892": 559,
     "893": 16,
     "895": 691,
     "897": 147,
@@ -664,7 +677,7 @@
     "10186": 47,
     "10188": 5707,
     "10189": 994,
-    "10191": 2594,
+    "10191": 2035,
     "10193": 1583,
     "10230": 42,
     "10231": 1,

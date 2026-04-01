@@ -7,6 +7,23 @@
     "base_weight": 511.481912793453,
     "percent": 3.115794547694285
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "focus-sash": 9.80093963977399,
     "choice-scarf": 115.04533729733015,
@@ -107,7 +124,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "51.3",
       "evs": {
         "hp": 0,
@@ -119,7 +136,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "25.4",
       "evs": {
         "hp": 252,
@@ -131,7 +148,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.6",
       "evs": {
         "hp": 0,
@@ -143,7 +160,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -155,7 +172,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 168,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.7",
       "evs": {
         "hp": 0,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.6",
       "evs": {
         "hp": 4,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.5",
       "evs": {
         "hp": 248,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.4",
       "evs": {
         "hp": 240,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.4",
       "evs": {
         "hp": 0,

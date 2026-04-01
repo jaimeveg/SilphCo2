@@ -1,12 +1,24 @@
 {
   "id": "10239",
-  "name": "Zoroark Hisui",
+  "name": "Zoroark hisuian",
   "format_id": "showdown_gen9uu-1500",
   "usage_metrics": {
     "raw": 6566,
     "base_weight": 3524.246789552059,
     "percent": 4.37237797163215
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 317.59298550257387,
     "choice-specs": 932.1443029695082,
@@ -127,7 +139,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "70.5",
       "evs": {
         "hp": 0,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.0",
       "evs": {
         "hp": 4,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 0,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.7",
       "evs": {
         "hp": 4,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -211,7 +223,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -223,7 +235,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "0.9",
       "evs": {
         "hp": 0,
@@ -235,7 +247,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.5",
       "evs": {
         "hp": 0,

@@ -7,6 +7,18 @@
     "base_weight": 354.5839669477305,
     "percent": 9.975593240155696
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "assault-vest": 313.885662784459,
     "clear-amulet": 8.767635768773257,
@@ -125,7 +137,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "10.6",
       "evs": {
         "hp": 100,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "7.7",
       "evs": {
         "hp": 84,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "5.5",
       "evs": {
         "hp": 76,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.0",
       "evs": {
         "hp": 100,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.2",
       "evs": {
         "hp": 76,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 36,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.4",
       "evs": {
         "hp": 84,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 76,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 156,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.0",
       "evs": {
         "hp": 148,
@@ -473,6 +485,7 @@
     "884": 0,
     "887": 0.002169329046253665,
     "890": 0.22055035387542132,
+    "892": 23.138293900624195,
     "894": 0.0075072592459822785,
     "895": 0.11323126189867094,
     "896": 3.0655552141212183e-7,
@@ -575,7 +588,7 @@
     "10186": 10.741063535786397,
     "10188": 5.302655480521297,
     "10189": 33.24465751277029,
-    "10191": 69.20789305556758,
+    "10191": 46.06959915494339,
     "10193": 150.915280057182,
     "10194": 34.19308328856437,
     "10230": 0.011954591933744707,

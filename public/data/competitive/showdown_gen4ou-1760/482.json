@@ -7,6 +7,23 @@
     "base_weight": 210.8256900335193,
     "percent": 15.526216001930434
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "focus-sash": 60.31320000344335,
     "lum-berry": 23.2677150456556,
@@ -98,7 +115,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "21.2",
       "evs": {
         "hp": 164,
@@ -110,7 +127,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.3",
       "evs": {
         "hp": 252,
@@ -122,7 +139,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "7.8",
       "evs": {
         "hp": 0,
@@ -134,7 +151,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.5",
       "evs": {
         "hp": 0,
@@ -146,7 +163,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.3",
       "evs": {
         "hp": 0,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.0",
       "evs": {
         "hp": 160,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.1",
       "evs": {
         "hp": 4,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 252,

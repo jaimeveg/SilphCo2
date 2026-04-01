@@ -7,6 +7,23 @@
     "base_weight": 27638,
     "percent": 9.334008780817292
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "groundium-z": 148,
     "leftovers": 20125,
@@ -153,7 +170,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "16.4",
       "evs": {
         "hp": 252,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.3",
       "evs": {
         "hp": 252,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.2",
       "evs": {
         "hp": 0,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.2",
       "evs": {
         "hp": 0,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.9",
       "evs": {
         "hp": 12,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -225,7 +242,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -237,7 +254,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -249,7 +266,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.0",
       "evs": {
         "hp": 4,
@@ -261,7 +278,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -627,6 +644,7 @@
     "884": 1,
     "887": 394,
     "890": 3721,
+    "892": 222,
     "893": 19,
     "894": 154,
     "895": 60,
@@ -780,7 +798,7 @@
     "10186": 11,
     "10188": 6607,
     "10189": 257,
-    "10191": 418,
+    "10191": 196,
     "10193": 390,
     "10230": 3,
     "10232": 5,

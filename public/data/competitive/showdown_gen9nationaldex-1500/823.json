@@ -7,6 +7,23 @@
     "base_weight": 52870.21648535828,
     "percent": 8.36389428386458
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 32975.757283651794,
     "life-orb": 26.640218839355605,
@@ -155,7 +172,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "12.4",
       "evs": {
         "hp": 248,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "12.0",
       "evs": {
         "hp": 248,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "10.2",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.7",
       "evs": {
         "hp": 248,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.0",
       "evs": {
         "hp": 248,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 216,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.9",
       "evs": {
         "hp": 252,

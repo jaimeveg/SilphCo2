@@ -7,6 +7,23 @@
     "base_weight": 749.821104049963,
     "percent": 3.892591273676892
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wide_guard",
+      "label": "Wide Guard",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 538.4600235396406,
     "misty-seed": 15.34132867262327,
@@ -146,7 +163,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "13.4",
       "evs": {
         "hp": 252,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "9.6",
       "evs": {
         "hp": 252,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "8.8",
       "evs": {
         "hp": 252,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.1",
       "evs": {
         "hp": 252,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -218,7 +235,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -230,7 +247,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -242,7 +259,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.4",
       "evs": {
         "hp": 204,
@@ -254,7 +271,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.8",
       "evs": {
         "hp": 252,

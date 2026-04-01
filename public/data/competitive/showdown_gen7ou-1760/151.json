@@ -7,6 +7,23 @@
     "base_weight": 252.54646397200145,
     "percent": 3.3438197686218794
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "mental-herb": 51.34569112929618,
     "leftovers": 102.13760861714361,
@@ -145,7 +162,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "16.6",
       "evs": {
         "hp": 252,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "16.1",
       "evs": {
         "hp": 0,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.4",
       "evs": {
         "hp": 224,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "9.9",
       "evs": {
         "hp": 72,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.5",
       "evs": {
         "hp": 240,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.4",
       "evs": {
         "hp": 248,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.3",
       "evs": {
         "hp": 252,
@@ -241,7 +258,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.2",
       "evs": {
         "hp": 240,
@@ -253,7 +270,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.0",
       "evs": {
         "hp": 80,

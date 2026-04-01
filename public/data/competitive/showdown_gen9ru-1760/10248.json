@@ -1,12 +1,19 @@
 {
   "id": "10248",
-  "name": "Basculegion Female",
+  "name": "Basculegion f",
   "format_id": "showdown_gen9ru-1760",
   "usage_metrics": {
     "raw": 8727,
     "base_weight": 366.7216711915799,
     "percent": 11.685233785014193
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "weakness-policy": 65.32003507219906,
     "metronome": 149.4620610635772,
@@ -116,7 +123,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "53.3",
       "evs": {
         "hp": 0,
@@ -128,7 +135,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.3",
       "evs": {
         "hp": 4,
@@ -140,7 +147,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "9.0",
       "evs": {
         "hp": 252,
@@ -152,7 +159,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -164,7 +171,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.8",
       "evs": {
         "hp": 0,
@@ -176,7 +183,7 @@
       }
     },
     {
-      "nature": "Serious",
+      "nature": "serious",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -188,7 +195,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -200,7 +207,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -212,7 +219,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.1",
       "evs": {
         "hp": 0,
@@ -224,7 +231,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.9",
       "evs": {
         "hp": 0,

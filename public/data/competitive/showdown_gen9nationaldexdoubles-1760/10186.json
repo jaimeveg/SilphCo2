@@ -1,12 +1,29 @@
 {
   "id": "10186",
-  "name": "Indeedee Female",
+  "name": "Indeedee f",
   "format_id": "showdown_gen9nationaldexdoubles-1760",
   "usage_metrics": {
     "raw": 25824,
     "base_weight": 768.0934773976999,
     "percent": 12.394171514139261
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "sitrus-berry": 30.487614409217592,
     "psychic-seed": 500.63509351132046,
@@ -145,7 +162,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "17.5",
       "evs": {
         "hp": 252,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "14.8",
       "evs": {
         "hp": 248,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "14.3",
       "evs": {
         "hp": 252,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.7",
       "evs": {
         "hp": 252,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "7.0",
       "evs": {
         "hp": 252,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.5",
       "evs": {
         "hp": 252,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -241,7 +258,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.3",
       "evs": {
         "hp": 248,
@@ -253,7 +270,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.3",
       "evs": {
         "hp": 252,

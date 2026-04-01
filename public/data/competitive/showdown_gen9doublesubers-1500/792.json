@@ -7,6 +7,23 @@
     "base_weight": 11149.827906615266,
     "percent": 8.120233723194993
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wide_guard",
+      "label": "Wide Guard",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "power-herb": 3978.0189997433263,
     "safety-goggles": 432.14222106269045,
@@ -136,7 +153,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "18.3",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.5",
       "evs": {
         "hp": 0,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.1",
       "evs": {
         "hp": 4,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 4,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.7",
       "evs": {
         "hp": 132,
@@ -244,7 +261,7 @@
       }
     },
     {
-      "nature": "Serious",
+      "nature": "serious",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -494,6 +511,7 @@
     "876": 107.81876574476279,
     "887": 98.85725951271783,
     "890": 66.8849360151803,
+    "892": 317.336637752191,
     "894": 29.034130848621444,
     "895": 11.921880393166774,
     "896": 0.3619381870066622,
@@ -605,7 +623,7 @@
     "10186": 2581.477375125062,
     "10188": 327.6880419098384,
     "10189": 1568.436524799221,
-    "10191": 1489.343544472234,
+    "10191": 1172.0069067200432,
     "10193": 4523.323850587955,
     "10194": 894.7460257126322,
     "10230": 8.917989606253519,

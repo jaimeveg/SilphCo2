@@ -7,6 +7,23 @@
     "base_weight": 236508,
     "percent": 15.058276423675265
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "throat-spray": 129860,
     "rocky-helmet": 6353,
@@ -187,7 +204,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.4",
       "evs": {
         "hp": 108,
@@ -199,7 +216,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "6.0",
       "evs": {
         "hp": 252,
@@ -211,7 +228,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -223,7 +240,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.1",
       "evs": {
         "hp": 108,
@@ -235,7 +252,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 244,
@@ -247,7 +264,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.7",
       "evs": {
         "hp": 228,
@@ -259,7 +276,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -271,7 +288,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -283,7 +300,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -295,7 +312,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.8",
       "evs": {
         "hp": 252,
@@ -643,6 +660,7 @@
     "879": 273,
     "884": 42,
     "887": 2887,
+    "892": 32585,
     "894": 1789,
     "895": 5903,
     "896": 2204,
@@ -760,7 +778,7 @@
     "10171": 2057,
     "10172": 118,
     "10186": 17688,
-    "10191": 86767,
+    "10191": 54182,
     "10230": 4480,
     "10232": 127,
     "10233": 6776,

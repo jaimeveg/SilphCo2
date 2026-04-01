@@ -1,12 +1,19 @@
 {
   "id": "10113",
-  "name": "Muk Alola",
+  "name": "Muk alolan",
   "format_id": "showdown_gen9ru-1630",
   "usage_metrics": {
     "raw": 7793,
     "base_weight": 1626.5765410518065,
     "percent": 10.434631246317819
   },
+  "roles": [
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 777.9754278141456,
     "black-sludge": 45.517288989488186,
@@ -127,7 +134,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "33.7",
       "evs": {
         "hp": 252,
@@ -139,7 +146,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "13.1",
       "evs": {
         "hp": 252,
@@ -151,7 +158,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.5",
       "evs": {
         "hp": 252,
@@ -163,7 +170,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.1",
       "evs": {
         "hp": 220,
@@ -175,7 +182,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 248,
@@ -187,7 +194,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -199,7 +206,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -211,7 +218,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -223,7 +230,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.9",
       "evs": {
         "hp": 220,
@@ -235,7 +242,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.9",
       "evs": {
         "hp": 252,

@@ -1,12 +1,24 @@
 {
   "id": "10155",
-  "name": "Necrozma Dusk",
+  "name": "Necrozma dusk mane",
   "format_id": "showdown_gen9nationaldexubers-0",
   "usage_metrics": {
     "raw": 35679,
     "base_weight": 35679,
     "percent": 12.049645390070921
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "steelium-z": 50,
     "weakness-policy": 2427,
@@ -142,7 +154,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.6",
       "evs": {
         "hp": 40,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Naughty",
+      "nature": "naughty",
       "usage": "8.1",
       "evs": {
         "hp": 0,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.3",
       "evs": {
         "hp": 252,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.8",
       "evs": {
         "hp": 4,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 4,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.5",
       "evs": {
         "hp": 0,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -226,7 +238,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -238,7 +250,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -250,7 +262,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -597,6 +609,7 @@
     "884": 3,
     "887": 513,
     "890": 5688,
+    "892": 251,
     "893": 60,
     "894": 500,
     "895": 36,
@@ -762,7 +775,7 @@
     "10186": 115,
     "10188": 9444,
     "10189": 198,
-    "10191": 544,
+    "10191": 293,
     "10193": 1663,
     "10230": 18,
     "10232": 1,

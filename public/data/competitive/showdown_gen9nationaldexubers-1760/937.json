@@ -7,6 +7,18 @@
     "base_weight": 7.2079225718888695,
     "percent": 3.7872340425531914
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "assault-vest": 0.00008821199337694097,
     "choice-band": 0.0097376337162986,
@@ -135,7 +147,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "69.1",
       "evs": {
         "hp": 0,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "16.4",
       "evs": {
         "hp": 0,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.9",
       "evs": {
         "hp": 4,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "0.9",
       "evs": {
         "hp": 0,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "0.6",
       "evs": {
         "hp": 252,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.4",
       "evs": {
         "hp": 4,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.3",
       "evs": {
         "hp": 0,
@@ -627,6 +639,7 @@
     "884": 0,
     "887": 0.5248270364537261,
     "890": 0.05766852504263176,
+    "892": 0.6159086017768465,
     "893": 2.9321506866963887e-7,
     "894": 0.0009622424591093082,
     "895": 0.00744531332896603,
@@ -792,7 +805,7 @@
     "10186": 0.0000023630722136847027,
     "10188": 0.29717884513248033,
     "10189": 0.3127366770279555,
-    "10191": 0.6173444445434173,
+    "10191": 0.0014358427665707718,
     "10193": 0.2801777226531803,
     "10230": 5.68810054613067e-10,
     "10232": 2.2140372868406644e-10,

@@ -1,12 +1,19 @@
 {
   "id": "10177",
-  "name": "Darmanitan Galar Standard",
+  "name": "Darmanitan galar",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 10200,
     "base_weight": 78.52494030922803,
     "percent": 3.4447821681864235
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-band": 12.041670021332164,
     "shell-bell": 0.001848326348744267,
@@ -128,7 +135,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "67.1",
       "evs": {
         "hp": 0,
@@ -140,7 +147,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.8",
       "evs": {
         "hp": 4,
@@ -152,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 0,
@@ -164,7 +171,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.0",
       "evs": {
         "hp": 152,
@@ -176,7 +183,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -188,7 +195,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -200,7 +207,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -212,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.8",
       "evs": {
         "hp": 0,
@@ -224,7 +231,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.6",
       "evs": {
         "hp": 0,
@@ -236,7 +243,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.4",
       "evs": {
         "hp": 64,
@@ -614,6 +621,7 @@
     "884": 3.1499913788479716e-11,
     "887": 0.4410840766569344,
     "890": 2.1422417248940544,
+    "892": 0.03840691477903252,
     "893": 0.14274965955154045,
     "894": 0.5563101560937234,
     "895": 7.975749394262266e-9,
@@ -774,7 +782,7 @@
     "10186": 4.86816921219102e-8,
     "10188": 4.1246101128114425,
     "10189": 0.11249640054932886,
-    "10191": 0.5448850992840246,
+    "10191": 0.5064781845049922,
     "10193": 4.548287767389469,
     "10230": 0.00007407089107563936,
     "10232": 1.0406675521323905e-12,

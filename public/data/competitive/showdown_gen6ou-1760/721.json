@@ -7,6 +7,18 @@
     "base_weight": 428.33355811165455,
     "percent": 7.983268867500224
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "life-orb": 1.1198305121708658,
     "assault-vest": 70.63982273551585,
@@ -72,7 +84,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "20.5",
       "evs": {
         "hp": 0,
@@ -84,7 +96,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.9",
       "evs": {
         "hp": 248,
@@ -96,7 +108,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.1",
       "evs": {
         "hp": 64,
@@ -108,7 +120,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.9",
       "evs": {
         "hp": 248,
@@ -120,7 +132,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.5",
       "evs": {
         "hp": 248,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 40,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.2",
       "evs": {
         "hp": 248,

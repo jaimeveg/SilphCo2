@@ -7,6 +7,23 @@
     "base_weight": 3370,
     "percent": 5.987704772396148
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-scarf": 1678,
     "quick-claw": 1437,
@@ -46,7 +63,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "40.8",
       "evs": {
         "hp": 252,
@@ -58,7 +75,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -70,7 +87,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "5.3",
       "evs": {
         "hp": 252,
@@ -82,7 +99,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -94,7 +111,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -106,7 +123,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -118,7 +135,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -130,7 +147,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -142,7 +159,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -238,6 +255,7 @@
     "861": 1381,
     "887": 12,
     "890": 974,
+    "892": 28,
     "894": 1,
     "901": 70,
     "902": 2,
@@ -292,7 +310,7 @@
     "10186": 1,
     "10188": 372,
     "10189": 1,
-    "10191": 337,
+    "10191": 309,
     "10193": 624,
     "10194": 928,
     "10233": 1,

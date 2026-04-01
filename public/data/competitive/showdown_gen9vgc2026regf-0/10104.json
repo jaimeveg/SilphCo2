@@ -1,12 +1,24 @@
 {
   "id": "10104",
-  "name": "Ninetales Alola",
+  "name": "Ninetales alolan",
   "format_id": "showdown_gen9vgc2026regf-0",
   "usage_metrics": {
     "raw": 81475,
     "base_weight": 81475,
     "percent": 5.187448507530156
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 53654,
     "nothing": 92,
@@ -144,7 +156,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "30.7",
       "evs": {
         "hp": 84,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "20.5",
       "evs": {
         "hp": 4,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 244,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -216,7 +228,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -228,7 +240,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.5",
       "evs": {
         "hp": 84,
@@ -240,7 +252,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.1",
       "evs": {
         "hp": 4,
@@ -252,7 +264,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.8",
       "evs": {
         "hp": 252,
@@ -586,6 +598,7 @@
     "879": 1,
     "884": 23,
     "887": 962,
+    "892": 2446,
     "894": 596,
     "895": 561,
     "896": 890,
@@ -703,7 +716,7 @@
     "10171": 1919,
     "10172": 573,
     "10186": 3079,
-    "10191": 12617,
+    "10191": 10171,
     "10230": 21519,
     "10232": 39,
     "10233": 383,

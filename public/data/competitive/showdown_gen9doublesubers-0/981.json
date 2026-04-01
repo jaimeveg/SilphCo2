@@ -7,6 +7,18 @@
     "base_weight": 17443,
     "percent": 8.451147782439753
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "throat-spray": 4067,
     "leftovers": 1548,
@@ -158,7 +170,7 @@
   },
   "spreads": [
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "11.1",
       "evs": {
         "hp": 252,
@@ -170,7 +182,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -182,7 +194,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -206,7 +218,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -218,7 +230,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -230,7 +242,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -242,7 +254,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -254,7 +266,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -266,7 +278,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -538,6 +550,7 @@
     "884": 1,
     "887": 41,
     "890": 116,
+    "892": 860,
     "893": 3,
     "894": 114,
     "895": 102,
@@ -655,7 +668,7 @@
     "10186": 1267,
     "10188": 365,
     "10189": 810,
-    "10191": 2950,
+    "10191": 2090,
     "10193": 4656,
     "10194": 1696,
     "10230": 81,

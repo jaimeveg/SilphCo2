@@ -1,12 +1,24 @@
 {
   "id": "10194",
-  "name": "Calyrex Shadow",
+  "name": "Calyrex shadow",
   "format_id": "showdown_gen9vgc2026regi-0",
   "usage_metrics": {
     "raw": 121632,
     "base_weight": 121632,
     "percent": 29.627175782258576
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "mental-herb": 211,
     "focus-sash": 50862,
@@ -170,7 +182,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "30.0",
       "evs": {
         "hp": 4,
@@ -182,7 +194,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "23.5",
       "evs": {
         "hp": 0,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.4",
       "evs": {
         "hp": 0,
@@ -206,7 +218,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 4,
@@ -218,7 +230,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -230,7 +242,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -242,7 +254,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.0",
       "evs": {
         "hp": 12,
@@ -254,7 +266,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 108,
@@ -266,7 +278,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.0",
       "evs": {
         "hp": 108,
@@ -278,7 +290,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.9",
       "evs": {
         "hp": 76,
@@ -597,6 +609,7 @@
     "886": 3,
     "887": 400,
     "890": 1401,
+    "892": 5052,
     "894": 1698,
     "895": 191,
     "896": 107,
@@ -719,7 +732,7 @@
     "10186": 16687,
     "10188": 3627,
     "10189": 33275,
-    "10191": 29503,
+    "10191": 24451,
     "10230": 535,
     "10232": 57,
     "10233": 390,

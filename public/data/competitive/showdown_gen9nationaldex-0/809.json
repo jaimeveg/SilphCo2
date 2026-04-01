@@ -7,6 +7,18 @@
     "base_weight": 43054,
     "percent": 4.098975589321756
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "punching-glove": 8136,
     "assault-vest": 11592,
@@ -122,7 +134,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "23.2",
       "evs": {
         "hp": 252,
@@ -134,7 +146,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.0",
       "evs": {
         "hp": 220,
@@ -146,7 +158,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.1",
       "evs": {
         "hp": 72,
@@ -158,7 +170,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "6.3",
       "evs": {
         "hp": 252,
@@ -170,7 +182,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 88,
@@ -182,7 +194,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 164,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -206,7 +218,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -218,7 +230,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -230,7 +242,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.7",
       "evs": {
         "hp": 252,

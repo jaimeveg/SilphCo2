@@ -1,12 +1,24 @@
 {
   "id": "10193",
-  "name": "Calyrex Ice",
+  "name": "Calyrex ice",
   "format_id": "showdown_gen9ubers-1500",
   "usage_metrics": {
     "raw": 22538,
     "base_weight": 16270.834211483447,
     "percent": 8.325514388090577
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "assault-vest": 426.71401139510465,
     "choice-band": 2183.2298922720324,
@@ -171,7 +183,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "35.7",
       "evs": {
         "hp": 248,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "11.7",
       "evs": {
         "hp": 252,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "9.0",
       "evs": {
         "hp": 252,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.2",
       "evs": {
         "hp": 248,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -255,7 +267,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -267,7 +279,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -279,7 +291,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.1",
       "evs": {
         "hp": 252,
@@ -545,6 +557,7 @@
     "884": 13.07614982106686,
     "887": 85.48171571407894,
     "890": 1920.2243882535922,
+    "892": 260.98553971393784,
     "893": 1.0800813811018557,
     "894": 929.1881710018258,
     "895": 20.33067905473872,
@@ -659,7 +672,7 @@
     "10186": 192.98358369286976,
     "10188": 5415.247759170814,
     "10189": 289.14399528153666,
-    "10191": 799.1508841986979,
+    "10191": 538.1653444847601,
     "10230": 7.3604135069568954,
     "10232": 1.191757946348567,
     "10233": 9.01041515959132,

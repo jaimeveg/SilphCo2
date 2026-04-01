@@ -1,12 +1,29 @@
 {
   "id": "10113",
-  "name": "Muk Alola",
+  "name": "Muk alolan",
   "format_id": "showdown_gen9ru-1760",
   "usage_metrics": {
     "raw": 7793,
     "base_weight": 377.9861431294056,
     "percent": 10.434631246317819
   },
+  "roles": [
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 127.86438620316713,
     "black-sludge": 1.592982382159994,
@@ -127,7 +144,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "29.3",
       "evs": {
         "hp": 220,
@@ -139,7 +156,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "27.1",
       "evs": {
         "hp": 252,
@@ -151,7 +168,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "8.6",
       "evs": {
         "hp": 252,
@@ -163,7 +180,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.0",
       "evs": {
         "hp": 220,
@@ -175,7 +192,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.5",
       "evs": {
         "hp": 248,
@@ -187,7 +204,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.2",
       "evs": {
         "hp": 248,
@@ -199,7 +216,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -211,7 +228,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -223,7 +240,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.3",
       "evs": {
         "hp": 248,
@@ -235,7 +252,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.2",
       "evs": {
         "hp": 252,

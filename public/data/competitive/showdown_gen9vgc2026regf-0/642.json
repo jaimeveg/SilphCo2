@@ -7,6 +7,18 @@
     "base_weight": 50533,
     "percent": 3.217395954968044
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "life-orb": 1223,
     "covert-cloak": 34032,
@@ -155,7 +167,7 @@
   },
   "spreads": [
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "6.6",
       "evs": {
         "hp": 252,
@@ -167,7 +179,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.5",
       "evs": {
         "hp": 228,
@@ -179,7 +191,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.3",
       "evs": {
         "hp": 0,
@@ -191,7 +203,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "5.1",
       "evs": {
         "hp": 244,
@@ -203,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 4,
@@ -215,7 +227,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -227,7 +239,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -239,7 +251,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -251,7 +263,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -263,7 +275,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -537,6 +549,7 @@
     "877": 1,
     "884": 6,
     "887": 555,
+    "892": 2819,
     "894": 223,
     "895": 530,
     "896": 51,
@@ -643,7 +656,7 @@
     "10171": 1819,
     "10172": 9,
     "10186": 1092,
-    "10191": 22139,
+    "10191": 19320,
     "10230": 2268,
     "10232": 55,
     "10233": 262,

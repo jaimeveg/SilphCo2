@@ -1,12 +1,24 @@
 {
   "id": "10019",
-  "name": "Tornadus Therian",
+  "name": "Tornadus therian",
   "format_id": "showdown_gen6ou-0",
   "usage_metrics": {
     "raw": 6261,
     "base_weight": 6261,
     "percent": 9.386525141674912
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "assault-vest": 5138,
     "rocky-helmet": 609,
@@ -70,7 +82,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "32.9",
       "evs": {
         "hp": 248,
@@ -82,7 +94,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.1",
       "evs": {
         "hp": 100,
@@ -94,7 +106,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.9",
       "evs": {
         "hp": 252,
@@ -106,7 +118,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.2",
       "evs": {
         "hp": 248,
@@ -118,7 +130,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -130,7 +142,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -142,7 +154,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 248,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.5",
       "evs": {
         "hp": 248,

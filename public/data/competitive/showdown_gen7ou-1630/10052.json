@@ -1,12 +1,24 @@
 {
   "id": "10052",
-  "name": "Mawile Mega",
+  "name": "Mawile mega",
   "format_id": "showdown_gen7ou-1630",
   "usage_metrics": {
     "raw": 9413,
     "base_weight": 2573.442898005384,
     "percent": 5.970291252283336
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "mawilite": 2573.442898005384
   },
@@ -68,7 +80,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "24.8",
       "evs": {
         "hp": 92,
@@ -80,7 +92,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.9",
       "evs": {
         "hp": 132,
@@ -92,7 +104,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.5",
       "evs": {
         "hp": 228,
@@ -104,7 +116,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.1",
       "evs": {
         "hp": 32,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 156,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 132,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 96,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 168,

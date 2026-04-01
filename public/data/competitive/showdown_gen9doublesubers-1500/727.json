@@ -7,6 +7,23 @@
     "base_weight": 40171.14668260285,
     "percent": 34.053140049806686
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "clear-amulet": 1301.3719241428596,
     "safety-goggles": 11707.39709816152,
@@ -184,7 +201,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "12.2",
       "evs": {
         "hp": 252,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 120,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -244,7 +261,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -256,7 +273,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -268,7 +285,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.3",
       "evs": {
         "hp": 252,
@@ -280,7 +297,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.1",
       "evs": {
         "hp": 252,
@@ -292,7 +309,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.1",
       "evs": {
         "hp": 248,
@@ -623,6 +640,7 @@
     "884": 1.711896270685641,
     "887": 282.52489068516593,
     "890": 514.6511410446693,
+    "892": 1183.6143264343357,
     "894": 271.1379924811207,
     "895": 73.06648313172988,
     "896": 3.1963274967759765,
@@ -751,7 +769,7 @@
     "10186": 3100.0555603193357,
     "10188": 2330.6407753711824,
     "10189": 5228.138237930557,
-    "10191": 8253.912526620827,
+    "10191": 7070.298200186491,
     "10193": 5517.636269811071,
     "10194": 10220.65840803169,
     "10230": 80.46067284674858,

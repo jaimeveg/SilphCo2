@@ -59,7 +59,7 @@ const getPokemonDbName = (pokeApiName: string): string => {
 // 2. Traductor PokeAPI -> WikiDex (Formato Capitalizado + Modificadores en Español)
 const getWikiDexName = (pokeApiName: string): string => {
   let name = pokeApiName.toLowerCase();
-  
+
   // Casos especiales fijos: Rotom
   const rotomMap: Record<string, string> = {
     'rotom-wash': 'Rotom_lavado',
@@ -78,6 +78,7 @@ const getWikiDexName = (pokeApiName: string): string => {
   if (name.includes('-mega')) {
     if (name.endsWith('-x')) return `Mega-${baseName}_X`;
     if (name.endsWith('-y')) return `Mega-${baseName}_Y`;
+    if (name.endsWith('-z')) return `Mega-${baseName}_Z`;
     return `Mega-${baseName}`;
   }
 
@@ -97,6 +98,17 @@ const getWikiDexName = (pokeApiName: string): string => {
 // --- PIPELINES DE DESCARGA ---
 
 const downloadVariantAssets = async (id: number, name: string) => {
+  const iconDest = path.join(DIRS.icon, `${id}.png`);
+  const resDest = path.join(DIRS.highRes, `${id}.png`);
+  const shinyResDest = path.join(DIRS.highResShiny, `${id}.png`);
+  const modelNormalDest = path.join(DIRS.models3D, `${id}.webm`);
+  const modelShinyDest = path.join(DIRS.models3D, `${id}_shiny.webm`);
+
+  if (fs.existsSync(iconDest) && fs.existsSync(resDest) && fs.existsSync(shinyResDest) && fs.existsSync(modelNormalDest) && fs.existsSync(modelShinyDest)) {
+    console.log(`[SKIP] Assets de la Variante ID ${id} ya están completos.`);
+    return;
+  }
+
   const dbName = getPokemonDbName(name);
   const wikiName = encodeURIComponent(getWikiDexName(name));
 
@@ -105,21 +117,17 @@ const downloadVariantAssets = async (id: number, name: string) => {
 
   // 1. Icono (PokemonDB)
   const iconUrl = `https://img.pokemondb.net/sprites/scarlet-violet/icon/${dbName}.png`;
-  const iconDest = path.join(DIRS.icon, `${id}.png`);
   if (!fs.existsSync(iconDest)) {
     await downloadFile(iconUrl, iconDest, 'PokemonDB Icon');
     await delay(300); // Throttle
   }
 
   // 2. High-Res Normal y Shiny (PokeAPI)
-  const resDest = path.join(DIRS.highRes, `${id}.png`);
-  const shinyResDest = path.join(DIRS.highResShiny, `${id}.png`);
-  
   if (!fs.existsSync(resDest) || !fs.existsSync(shinyResDest)) {
     try {
       const pokeApiRes = await apiClient.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
       const sprites = pokeApiRes.data.sprites?.other['official-artwork'];
-      
+
       if (sprites?.front_default) {
         await downloadFile(sprites.front_default, resDest, 'PokeAPI HighRes');
       }
@@ -142,9 +150,6 @@ const downloadVariantAssets = async (id: number, name: string) => {
       return null;
     }
   };
-
-  const modelNormalDest = path.join(DIRS.models3D, `${id}.webm`);
-  const modelShinyDest = path.join(DIRS.models3D, `${id}_shiny.webm`);
 
   if (!fs.existsSync(modelNormalDest)) {
     const rawUrl = await fetchWikiUrl(`https://www.wikidex.net/wiki/Archivo:${wikiName}_HOME.webm`);
@@ -170,7 +175,7 @@ const runVariantsETL = async () => {
     // Obtenemos la lista completa de Pokémon para aislar las variantes (IDs > 10000)
     console.log('[PokeAPI] Obteniendo registro maestro de formas...');
     const res = await apiClient.get('https://pokeapi.co/api/v2/pokemon?limit=10000');
-    
+
     const variants = res.data.results.map((p: any) => {
       const urlParts = p.url.split('/').filter(Boolean);
       return { id: parseInt(urlParts[urlParts.length - 1], 10), name: p.name };

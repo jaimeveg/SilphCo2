@@ -1,0 +1,264 @@
+{
+  "id": "450",
+  "name": "Hippowdon",
+  "format_id": "showdown_gen9bssregi-0",
+  "usage_metrics": {
+    "raw": 546,
+    "base_weight": 546,
+    "percent": 0.9701147791478626
+  },
+  "roles": [
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
+  "items": {
+    "assault-vest": 26,
+    "rocky-helmet": 363,
+    "sitrus-berry": 61,
+    "leftovers": 19,
+    "maranga-berry": 2,
+    "mental-herb": 18,
+    "figy-berry": 2,
+    "shell-bell": 1,
+    "eject-button": 51,
+    "absorb-bulb": 3
+  },
+  "abilities": {
+    "sand-stream": 546
+  },
+  "moves": {
+    "earthquake": 523,
+    "crunch": 26,
+    "tera-blast": 29,
+    "fissure": 70,
+    "yawn": 512,
+    "stealth-rock": 508,
+    "slack-off": 383,
+    "stone-edge": 24,
+    "body-press": 10,
+    "whirlwind": 97,
+    "roar": 2
+  },
+  "teras": {
+    "fairy": 121,
+    "fire": 190,
+    "dark": 9,
+    "normal": 13,
+    "grass": 50,
+    "ground": 26,
+    "steel": 133,
+    "water": 4
+  },
+  "spreads": [
+    {
+      "nature": "impish",
+      "usage": "34.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "26.0",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 244,
+        "spa": 0,
+        "spd": 4,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "brave",
+      "usage": "9.3",
+      "evs": {
+        "hp": 252,
+        "atk": 136,
+        "def": 0,
+        "spa": 0,
+        "spd": 120,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "7.0",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 124,
+        "spa": 0,
+        "spd": 132,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "5.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "4.8",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "2.6",
+      "evs": {
+        "hp": 252,
+        "atk": 116,
+        "def": 16,
+        "spa": 0,
+        "spd": 124,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "2.4",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 108,
+        "spa": 0,
+        "spd": 156,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "2.2",
+      "evs": {
+        "hp": 252,
+        "atk": 116,
+        "def": 12,
+        "spa": 0,
+        "spd": 124,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "1.8",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 92,
+        "spa": 0,
+        "spd": 164,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "28": 47,
+    "36": 5,
+    "113": 3,
+    "132": 3,
+    "149": 91,
+    "197": 3,
+    "233": 10,
+    "248": 4,
+    "249": 12,
+    "250": 25,
+    "376": 2,
+    "377": 5,
+    "382": 92,
+    "384": 22,
+    "436": 3,
+    "437": 5,
+    "445": 32,
+    "462": 11,
+    "472": 50,
+    "485": 16,
+    "486": 3,
+    "487": 8,
+    "488": 11,
+    "523": 17,
+    "530": 21,
+    "594": 1,
+    "596": 2,
+    "623": 21,
+    "727": 15,
+    "748": 11,
+    "750": 17,
+    "778": 15,
+    "792": 3,
+    "812": 5,
+    "861": 74,
+    "876": 5,
+    "887": 5,
+    "890": 28,
+    "896": 17,
+    "897": 17,
+    "903": 25,
+    "911": 2,
+    "930": 47,
+    "934": 4,
+    "970": 199,
+    "977": 4,
+    "980": 2,
+    "983": 123,
+    "987": 34,
+    "989": 21,
+    "990": 4,
+    "995": 2,
+    "998": 4,
+    "1001": 141,
+    "1002": 65,
+    "1003": 51,
+    "1004": 13,
+    "1007": 125,
+    "1008": 81,
+    "1018": 19,
+    "1020": 47,
+    "1024": 3,
+    "10008": 5,
+    "10009": 11,
+    "10021": 15,
+    "10023": 5,
+    "10113": 47,
+    "10155": 4,
+    "10188": 180,
+    "10189": 11,
+    "10191": 78,
+    "10194": 278,
+    "10272": 6,
+    "10273": 13,
+    "10274": 138
+  }
+}

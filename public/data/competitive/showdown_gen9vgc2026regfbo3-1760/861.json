@@ -7,6 +7,23 @@
     "base_weight": 71.41873707127802,
     "percent": 2.882504186288898
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 69.16759868077683,
     "sitrus-berry": 0.014289732159013968,
@@ -131,7 +148,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.9",
       "evs": {
         "hp": 244,
@@ -143,7 +160,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.7",
       "evs": {
         "hp": 252,
@@ -155,7 +172,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.7",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.4",
       "evs": {
         "hp": 252,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.6",
       "evs": {
         "hp": 180,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.3",
       "evs": {
         "hp": 228,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -461,6 +478,7 @@
     "876": 0.0016366703250828007,
     "879": 0,
     "887": 0.005710984916123818,
+    "892": 0.4529405657348441,
     "894": 0.009062622426774192,
     "895": 0.005265965760349489,
     "896": 0.039236574997856266,
@@ -558,7 +576,7 @@
     "10171": 7.351621513839545,
     "10172": 5.144006596791151e-7,
     "10186": 0.35385069744814385,
-    "10191": 17.01462714968774,
+    "10191": 16.561686583952895,
     "10230": 8.921295100785565,
     "10232": 8.850012667149798e-9,
     "10233": 0.038147539122444896,

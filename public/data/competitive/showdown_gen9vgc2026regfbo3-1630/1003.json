@@ -7,6 +7,18 @@
     "base_weight": 4362.676516457402,
     "percent": 4.862226071096022
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 1054.6493111156137,
     "clear-amulet": 2494.579925826013,
@@ -103,7 +115,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.4",
       "evs": {
         "hp": 204,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.5",
       "evs": {
         "hp": 212,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.6",
       "evs": {
         "hp": 236,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.2",
       "evs": {
         "hp": 212,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.2",
       "evs": {
         "hp": 244,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 100,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 244,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 140,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 92,
@@ -211,7 +223,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 100,
@@ -389,6 +401,7 @@
     "876": 4.7611521192258976e-7,
     "884": 0.05907622669880047,
     "887": 18.8812155129901,
+    "892": 24.1518108475193,
     "894": 2.3239759646408866,
     "895": 3.587964827284605,
     "896": 2.119865207756429,
@@ -481,7 +494,7 @@
     "10171": 1.0634162991948375,
     "10172": 0.0005470456570995652,
     "10186": 3.4502889811363353,
-    "10191": 1542.0155884807637,
+    "10191": 1517.8637776332444,
     "10230": 52.085025268888764,
     "10233": 1.8479092328442628,
     "10236": 0,

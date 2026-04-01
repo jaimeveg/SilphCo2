@@ -1,12 +1,24 @@
 {
   "id": "10193",
-  "name": "Calyrex Ice",
+  "name": "Calyrex ice",
   "format_id": "showdown_gen9vgc2026regi-0",
   "usage_metrics": {
     "raw": 115192,
     "base_weight": 115192,
     "percent": 28.058517764321312
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "icicle-plate": 916,
     "clear-amulet": 66539,
@@ -165,7 +177,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "13.3",
       "evs": {
         "hp": 252,
@@ -177,7 +189,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -189,7 +201,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -201,7 +213,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -213,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -225,7 +237,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -237,7 +249,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -249,7 +261,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -261,7 +273,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -273,7 +285,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -595,6 +607,7 @@
     "884": 63,
     "887": 206,
     "890": 296,
+    "892": 10532,
     "894": 514,
     "895": 116,
     "896": 123,
@@ -714,7 +727,7 @@
     "10186": 24804,
     "10188": 556,
     "10189": 2229,
-    "10191": 42867,
+    "10191": 32335,
     "10230": 232,
     "10232": 29,
     "10233": 286,

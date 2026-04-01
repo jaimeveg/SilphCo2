@@ -1,12 +1,29 @@
 {
   "id": "10021",
-  "name": "Landorus Therian",
+  "name": "Landorus therian",
   "format_id": "showdown_gen9bssregi-0",
   "usage_metrics": {
     "raw": 12477,
     "base_weight": 12477,
     "percent": 22.16872179382396
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 6457,
     "choice-band": 1027,
@@ -101,7 +118,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "16.8",
       "evs": {
         "hp": 252,
@@ -113,7 +130,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.7",
       "evs": {
         "hp": 252,
@@ -125,7 +142,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "5.8",
       "evs": {
         "hp": 252,
@@ -137,7 +154,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -149,7 +166,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 244,
@@ -161,7 +178,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -173,7 +190,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.2",
       "evs": {
         "hp": 244,
@@ -185,7 +202,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 244,
@@ -197,7 +214,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 244,
@@ -209,7 +226,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.7",
       "evs": {
         "hp": 196,
@@ -347,6 +364,7 @@
     "876": 4,
     "887": 46,
     "890": 408,
+    "892": 224,
     "894": 46,
     "895": 2,
     "900": 7,
@@ -424,7 +442,7 @@
     "10172": 40,
     "10188": 2629,
     "10189": 27,
-    "10191": 3876,
+    "10191": 3652,
     "10193": 601,
     "10194": 4411,
     "10230": 12,

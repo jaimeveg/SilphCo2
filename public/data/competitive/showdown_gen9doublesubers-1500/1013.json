@@ -7,6 +7,23 @@
     "base_weight": 4035.92511080003,
     "percent": 4.2190331301659905
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 993.3627077833202,
     "sitrus-berry": 974.1018991279808,
@@ -124,7 +141,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "12.5",
       "evs": {
         "hp": 252,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "9.6",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.9",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.9",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.2",
       "evs": {
         "hp": 4,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "2.0",
       "evs": {
         "hp": 212,
@@ -504,6 +521,7 @@
     "886": 0.6040174629219508,
     "887": 49.332673987403886,
     "890": 25.609511799207073,
+    "892": 59.826332004346646,
     "893": 0.0028375717878890705,
     "894": 23.38053874788839,
     "895": 55.87973179718996,
@@ -625,7 +643,7 @@
     "10186": 493.8250365266389,
     "10188": 109.57833534751191,
     "10189": 267.577899952498,
-    "10191": 357.6753438590404,
+    "10191": 297.8490118546938,
     "10193": 740.2506175001005,
     "10194": 297.7864917161746,
     "10230": 97.81006087141687,

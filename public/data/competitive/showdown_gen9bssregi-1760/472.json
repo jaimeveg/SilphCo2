@@ -7,6 +7,23 @@
     "base_weight": 40.903578564533206,
     "percent": 10.660601968657831
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "toxic-orb": 39.13363997863374,
     "white-herb": 0.000262776176702173,
@@ -90,7 +107,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "55.0",
       "evs": {
         "hp": 228,
@@ -102,7 +119,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.5",
       "evs": {
         "hp": 212,
@@ -114,7 +131,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.3",
       "evs": {
         "hp": 252,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.4",
       "evs": {
         "hp": 228,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.4",
       "evs": {
         "hp": 244,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.9",
       "evs": {
         "hp": 228,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.5",
       "evs": {
         "hp": 228,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.7",
       "evs": {
         "hp": 228,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.5",
       "evs": {
         "hp": 228,
@@ -332,6 +349,7 @@
     "876": 0.059323582584217716,
     "887": 0.0024620625448673605,
     "890": 2.1049133703477194,
+    "892": 1.278003661786542e-7,
     "894": 0,
     "901": 0.29268730784730873,
     "902": 0.06262568284482489,
@@ -396,7 +414,7 @@
     "10186": 0.05601868433861329,
     "10188": 3.8353682314235096,
     "10189": 0.023665294247449786,
-    "10191": 1.7262135235177332,
+    "10191": 1.726213395717367,
     "10193": 0.034948601645802324,
     "10194": 7.739055521729633,
     "10230": 2.150279121099188,

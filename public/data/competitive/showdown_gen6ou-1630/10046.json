@@ -1,12 +1,29 @@
 {
   "id": "10046",
-  "name": "Scizor Mega",
+  "name": "Scizor mega",
   "format_id": "showdown_gen6ou-1630",
   "usage_metrics": {
     "raw": 5840,
     "base_weight": 1649.6271585846496,
     "percent": 8.755359659380527
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "scizorite": 1649.6271585846496
   },
@@ -68,7 +85,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "14.2",
       "evs": {
         "hp": 248,
@@ -80,7 +97,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.3",
       "evs": {
         "hp": 248,
@@ -92,7 +109,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.6",
       "evs": {
         "hp": 248,
@@ -104,7 +121,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 248,
@@ -116,7 +133,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 248,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 248,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.7",
       "evs": {
         "hp": 248,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 32,

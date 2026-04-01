@@ -1,12 +1,19 @@
 {
   "id": "10233",
-  "name": "Typhlosion Hisui",
+  "name": "Typhlosion hisuian",
   "format_id": "showdown_gen9doublesou-1695",
   "usage_metrics": {
     "raw": 18690,
     "base_weight": 1440.7679915317428,
     "percent": 3.1693544284478814
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 1271.7363555627587,
     "choice-specs": 135.58296143082012,
@@ -148,7 +155,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "71.6",
       "evs": {
         "hp": 76,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.6",
       "evs": {
         "hp": 0,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.8",
       "evs": {
         "hp": 4,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.7",
       "evs": {
         "hp": 4,
@@ -196,7 +203,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -208,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.1",
       "evs": {
         "hp": 0,
@@ -220,7 +227,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.0",
       "evs": {
         "hp": 4,
@@ -232,7 +239,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.7",
       "evs": {
         "hp": 252,
@@ -244,7 +251,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.7",
       "evs": {
         "hp": 0,
@@ -256,7 +263,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.5",
       "evs": {
         "hp": 252,

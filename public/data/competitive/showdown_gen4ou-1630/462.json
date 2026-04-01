@@ -7,6 +7,18 @@
     "base_weight": 2453.250042469704,
     "percent": 10.104622703298977
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-specs": 122.19052621445088,
     "custap-berry": 58.46484339376642,
@@ -92,7 +104,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "30.8",
       "evs": {
         "hp": 0,
@@ -104,7 +116,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.8",
       "evs": {
         "hp": 0,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.3",
       "evs": {
         "hp": 100,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.2",
       "evs": {
         "hp": 12,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.1",
       "evs": {
         "hp": 4,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 160,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.4",
       "evs": {
         "hp": 0,

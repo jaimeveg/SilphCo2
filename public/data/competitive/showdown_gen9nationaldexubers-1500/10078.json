@@ -1,12 +1,29 @@
 {
   "id": "10078",
-  "name": "Groudon Primal",
+  "name": "Groudon primal",
   "format_id": "showdown_gen9nationaldexubers-1500",
   "usage_metrics": {
     "raw": 61797,
     "base_weight": 44613.59481257211,
     "percent": 20.87031408308004
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "red-orb": 44613.59481257211
   },
@@ -108,7 +125,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.9",
       "evs": {
         "hp": 248,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.8",
       "evs": {
         "hp": 0,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.7",
       "evs": {
         "hp": 0,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 140,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 140,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -204,7 +221,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.8",
       "evs": {
         "hp": 4,
@@ -216,7 +233,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 248,
@@ -640,6 +657,7 @@
     "884": 0.7667406094138534,
     "887": 270.6604507766312,
     "890": 6941.856489706966,
+    "892": 163.9557870575494,
     "893": 0.0007512399731803288,
     "894": 382.9019640537862,
     "895": 12.986092406862936,
@@ -806,7 +824,7 @@
     "10186": 4.409921980010904,
     "10188": 14722.318860602833,
     "10189": 549.0611597457822,
-    "10191": 446.7019567478698,
+    "10191": 282.7461696903204,
     "10193": 1854.1563422411623,
     "10230": 5.8579098628597865,
     "10232": 0.47070181267183997,

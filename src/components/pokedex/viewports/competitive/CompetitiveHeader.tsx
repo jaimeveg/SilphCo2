@@ -16,6 +16,7 @@ const COMPETITIVE_TRANSLATIONS = {
         roles: {
             [ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL]: { label: 'Phys. Sweeper', desc: 'Fast physical attacker designed to clean up late-game.' },
             [ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL]: { label: 'Spec. Sweeper', desc: 'Fast special attacker designed to clean up late-game.' },
+            [ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED]: { label: 'Mixed Sweeper', desc: 'Attacks effectively from both the physical and special sides.' },
             [ROLE_KEYS.OFFENSIVE.TR_ATTACKER]: { label: 'TR Attacker', desc: 'Slow but powerful attacker optimized for Trick Room.' },
             [ROLE_KEYS.OFFENSIVE.PRIORITY]: { label: 'Priority', desc: 'Uses moves like Extreme Speed or Sucker Punch to move first.' },
             [ROLE_KEYS.OFFENSIVE.SETUP]: { label: 'Setup Sweeper', desc: 'Boosts stats (Swords Dance, Nasty Plot) to sweep.' },
@@ -42,6 +43,7 @@ const COMPETITIVE_TRANSLATIONS = {
         roles: {
             [ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL]: { label: 'Sweeper Físico', desc: 'Atacante físico rápido diseñado para cerrar partidas.' },
             [ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL]: { label: 'Sweeper Esp.', desc: 'Atacante especial rápido diseñado para cerrar partidas.' },
+            [ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED]: { label: 'Sweeper Mixto', desc: 'Atacante rápido que golpea tanto por el lado físico como especial.' },
             [ROLE_KEYS.OFFENSIVE.TR_ATTACKER]: { label: 'Atacante ER', desc: 'Atacante lento pero poderoso optimizado para Espacio Raro.' },
             [ROLE_KEYS.OFFENSIVE.PRIORITY]: { label: 'Prioridad', desc: 'Usa movimientos con prioridad para atacar primero.' },
             [ROLE_KEYS.OFFENSIVE.SETUP]: { label: 'Setup Sweeper', desc: 'Se boostea (Danza Espada, Maquinación) para sweepear.' },
@@ -79,9 +81,11 @@ interface Props {
     spreads: { evs: Record<string, number>; nature: string }[];
     speedData?: SpeedData; 
     lang: Lang;
+    moveCategories?: Record<string, string>;
+    traitsMap?: Record<string, string>;
 }
 
-export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbilities, topItems, spreads, speedData, lang }: Props) {
+export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbilities, topItems, spreads, speedData, lang, moveCategories = {}, traitsMap = {} }: Props) {
     const t = COMPETITIVE_TRANSLATIONS[lang] || COMPETITIVE_TRANSLATIONS.en;
     const [tooltipData, setTooltipData] = useState<{ x: number, y: number, text: string } | null>(null);
 
@@ -110,7 +114,7 @@ export default function CompetitiveHeader({ pokemon, usageRate, topMoves, topAbi
     // =========================================================================
 
     // Roles Calculation (Local Logic preserved)
-    const roles = determineRoles(pokemon, topMoves, topAbilities, topItems, spreads);
+    const roles = determineRoles(pokemon, topMoves, topAbilities, topItems, spreads, moveCategories, traitsMap);
 
     // Speed Tier Display (Data-Driven from API)
     const tierDisplay = speedData?.tier || 'N/A';

@@ -1,12 +1,24 @@
 {
   "id": "10019",
-  "name": "Tornadus Therian",
+  "name": "Tornadus therian",
   "format_id": "showdown_gen9ou-0",
   "usage_metrics": {
     "raw": 100156,
     "base_weight": 100156,
     "percent": 4.841944048560605
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 27022,
     "choice-specs": 15359,
@@ -144,7 +156,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "26.0",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.5",
       "evs": {
         "hp": 252,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.8",
       "evs": {
         "hp": 184,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "8.2",
       "evs": {
         "hp": 176,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 4,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -216,7 +228,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -228,7 +240,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -240,7 +252,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -252,7 +264,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 252,

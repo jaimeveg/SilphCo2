@@ -7,6 +7,23 @@
     "base_weight": 287.7587502923737,
     "percent": 3.064491919747836
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 259.19043501378206,
     "leftovers": 5.35005053423155,
@@ -63,7 +80,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "28.7",
       "evs": {
         "hp": 252,
@@ -75,7 +92,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "20.5",
       "evs": {
         "hp": 248,
@@ -87,7 +104,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "13.9",
       "evs": {
         "hp": 248,
@@ -99,7 +116,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "11.0",
       "evs": {
         "hp": 252,
@@ -111,7 +128,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.6",
       "evs": {
         "hp": 252,
@@ -123,7 +140,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.5",
       "evs": {
         "hp": 200,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.9",
       "evs": {
         "hp": 248,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.9",
       "evs": {
         "hp": 248,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.7",
       "evs": {
         "hp": 248,

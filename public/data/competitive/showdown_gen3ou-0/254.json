@@ -7,6 +7,18 @@
     "base_weight": 8334,
     "percent": 1.946041367973212
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 4402,
     "petaya-berry": 2545,
@@ -91,7 +103,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "21.4",
       "evs": {
         "hp": 0,
@@ -103,7 +115,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.0",
       "evs": {
         "hp": 4,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.0",
       "evs": {
         "hp": 0,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.3",
       "evs": {
         "hp": 248,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.3",
       "evs": {
         "hp": 28,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.9",
       "evs": {
         "hp": 4,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 0,

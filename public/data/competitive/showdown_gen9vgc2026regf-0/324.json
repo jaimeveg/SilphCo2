@@ -7,6 +7,18 @@
     "base_weight": 171433,
     "percent": 10.915002884215003
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-specs": 33393,
     "charcoal": 69654,
@@ -164,7 +176,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "40.8",
       "evs": {
         "hp": 252,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.1",
       "evs": {
         "hp": 252,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "7.3",
       "evs": {
         "hp": 252,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.1",
       "evs": {
         "hp": 248,
@@ -248,7 +260,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.1",
       "evs": {
         "hp": 248,
@@ -260,7 +272,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -272,7 +284,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -626,6 +638,7 @@
     "879": 198,
     "884": 41,
     "887": 1076,
+    "892": 24307,
     "894": 870,
     "895": 1646,
     "896": 1267,
@@ -742,7 +755,7 @@
     "10171": 623,
     "10172": 318,
     "10186": 46442,
-    "10191": 30605,
+    "10191": 6298,
     "10230": 1823,
     "10232": 22,
     "10233": 8088,

@@ -7,6 +7,23 @@
     "base_weight": 805.586243934596,
     "percent": 8.731673756528648
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "sitrus-berry": 92.01434400484122,
     "clear-amulet": 145.85224824220458,
@@ -167,7 +184,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.7",
       "evs": {
         "hp": 248,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "10.5",
       "evs": {
         "hp": 252,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.5",
       "evs": {
         "hp": 0,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.4",
       "evs": {
         "hp": 252,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.4",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.0",
       "evs": {
         "hp": 252,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.8",
       "evs": {
         "hp": 4,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 236,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 236,
@@ -574,6 +591,7 @@
     "884": 3.246241284671214e-7,
     "887": 0.3224272748960521,
     "890": 41.61841501131129,
+    "892": 5.956004525433909,
     "893": 1.320902087709186e-7,
     "894": 0.015437892620460303,
     "895": 0.000047208234853990394,
@@ -691,7 +709,7 @@
     "10186": 41.13791189809442,
     "10188": 18.013007208185627,
     "10189": 443.769360028531,
-    "10191": 7.350345571091818,
+    "10191": 1.3943410456579097,
     "10193": 56.47371716803747,
     "10194": 329.76815034906247,
     "10230": 0.11679484455139505,

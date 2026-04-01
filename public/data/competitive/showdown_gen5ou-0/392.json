@@ -7,6 +7,18 @@
     "base_weight": 3402,
     "percent": 4.232922732362822
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "life-orb": 1322,
     "expert-belt": 478,
@@ -96,7 +108,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "23.5",
       "evs": {
         "hp": 0,
@@ -108,7 +120,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.7",
       "evs": {
         "hp": 4,
@@ -120,7 +132,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.2",
       "evs": {
         "hp": 4,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "5.0",
       "evs": {
         "hp": 0,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.2",
       "evs": {
         "hp": 0,

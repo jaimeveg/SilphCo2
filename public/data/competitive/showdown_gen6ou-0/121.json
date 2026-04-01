@@ -7,6 +7,18 @@
     "base_weight": 5003,
     "percent": 7.500524721897395
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "choice-specs": 350,
     "leftovers": 1958,
@@ -80,7 +92,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "36.5",
       "evs": {
         "hp": 0,
@@ -92,7 +104,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "21.5",
       "evs": {
         "hp": 252,
@@ -104,7 +116,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.8",
       "evs": {
         "hp": 4,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 248,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 0,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.2",
       "evs": {
         "hp": 248,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.2",
       "evs": {
         "hp": 224,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 0,

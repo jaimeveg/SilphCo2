@@ -38,17 +38,6 @@ const HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/json'
 };
 
-// Filtro de seguridad para no descargar 1GB de formatos irrelevantes
-const IGNORED_FORMATS = [
-    'custom', '1v1', '2v2', 'purehackmons', 'almostanyability', 
-    'pokebilities', 'mixandmega', 'godlygift', 'stabmons', 'nfe', 'zu',
-    'tiershift', 'camomons', 'sketchmons', '3v3', 'balancedhackmons', 'cap',
-    'chatbats', 'convergence', 'fortemons', 'legendszaou', 'metronomebattle', 
-    'bssregj', 'sharedpower', 'anythinggoes', 'partnersincrime', 'crossevolution',
-    'monotype', 'bh', 'hc', 'lc', 'ag', 'volt', 'biomech',
-    'losers', 'solgaleo', 'flipped', 'nc' // Quitamos los pasados sin gen
-];
-
 // --- UTILIDADES LÉXICAS ---
 const toSlug = (name: string) => name.toLowerCase().replace(/['’\.]/g, '').replace(/[\s:]+/g, '-').replace(/[^a-z0-9-]/g, '');
 
@@ -174,17 +163,17 @@ const fetchFileList = async (date: string): Promise<string[] | null> => {
     const regex = /<a href="([^"]+\.json)">/g;
     const matches = [...html.matchAll(regex)];
     
-    const validFiles = matches
-        .map(m => m[1])
-        .filter(f => !IGNORED_FORMATS.some(ignored => f.toLowerCase().includes(ignored)));
-
-    return validFiles;
+    return matches.map(m => m[1]);
 };
 
 const run = async () => {
     console.log('=== INICIANDO ETL DE SMOGON CHAOS (CON ESTANDARIZACIÓN UNIVERSAL) ===\n');
 
-    if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+    if (fs.existsSync(OUTPUT_DIR)) {
+        console.log('🧹 Limpiando directorio de datos anterior...');
+        fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
+    }
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
     // 1. Obtener lista de meses
     const candidates = await getRecentMonths();
@@ -239,6 +228,12 @@ const run = async () => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 
                 const rawJson = await res.json();
+                
+                // FILTRO POR NÚMERO DE BATALLAS: Sólo guardar si superan las 25,000
+                if (!rawJson.info || (rawJson.info['number of battles'] || 0) <= 25000) {
+                    return; // Saltamos este formato
+                }
+
                 const cleanJson = transformSmogonData(rawJson);
                 
                 fs.writeFileSync(destPath, JSON.stringify(cleanJson));

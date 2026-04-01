@@ -7,6 +7,23 @@
     "base_weight": 287.262567852473,
     "percent": 3.811165203795174
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "expert-belt": 0.5569709146551642,
     "lum-berry": 0.31189866058456656,
@@ -112,7 +129,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "21.2",
       "evs": {
         "hp": 252,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "15.2",
       "evs": {
         "hp": 252,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "14.4",
       "evs": {
         "hp": 60,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "12.9",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "11.3",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "9.4",
       "evs": {
         "hp": 252,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -331,6 +348,7 @@
     "876": 0.0014367086388254457,
     "887": 0.44929292287181455,
     "890": 14.063646381232543,
+    "892": 0.9794585968486735,
     "900": 0.0049467675272075184,
     "901": 6.138484326588948,
     "902": 0,
@@ -387,7 +405,7 @@
     "10172": 8.56778984983321,
     "10186": 0,
     "10188": 10.90301120211019,
-    "10191": 45.376460595566954,
+    "10191": 44.39700199871828,
     "10193": 69.50270676207379,
     "10194": 109.7626513325161,
     "10230": 0.0049467675272075184,

@@ -1,12 +1,29 @@
 {
   "id": "10194",
-  "name": "Calyrex Shadow",
+  "name": "Calyrex shadow",
   "format_id": "showdown_gen9doublesubers-1760",
   "usage_metrics": {
     "raw": 53588,
     "base_weight": 3066.077964157505,
     "percent": 25.963429878196493
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "safety-goggles": 3.542804349742106,
     "assault-vest": 4.094615056463602,
@@ -178,7 +195,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "46.0",
       "evs": {
         "hp": 0,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "22.0",
       "evs": {
         "hp": 4,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.1",
       "evs": {
         "hp": 0,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.4",
       "evs": {
         "hp": 0,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 144,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -262,7 +279,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -274,7 +291,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.6",
       "evs": {
         "hp": 0,
@@ -286,7 +303,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.4",
       "evs": {
         "hp": 4,
@@ -628,6 +645,7 @@
     "886": 0,
     "887": 0.17764837528824917,
     "890": 52.213720660556035,
+    "892": 148.43675103661732,
     "893": 0.30604329485092363,
     "894": 6.70285807322475,
     "895": 0.033900061203354814,
@@ -751,7 +769,7 @@
     "10186": 222.68330348165352,
     "10188": 743.6734983623328,
     "10189": 1719.53728955018,
-    "10191": 326.52617576139016,
+    "10191": 178.08942472477287,
     "10230": 0.05813481943178106,
     "10232": 0.00009764687302954433,
     "10233": 0.21586305817416818,

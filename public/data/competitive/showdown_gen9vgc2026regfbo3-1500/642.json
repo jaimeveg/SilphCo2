@@ -7,6 +7,23 @@
     "base_weight": 10099.796575547736,
     "percent": 3.1375133635538046
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "covert-cloak": 8995.747336262843,
     "rocky-helmet": 254.33492274220805,
@@ -126,7 +143,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "19.1",
       "evs": {
         "hp": 228,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "17.2",
       "evs": {
         "hp": 244,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.3",
       "evs": {
         "hp": 252,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.1",
       "evs": {
         "hp": 252,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -222,7 +239,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -234,7 +251,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -428,6 +445,7 @@
     "877": 11.448627270012913,
     "879": 0.3718771984604321,
     "887": 8.899015454766168,
+    "892": 218.1704917514634,
     "894": 8.4754480251505,
     "895": 105.58196861228616,
     "896": 26.369796797820506,
@@ -511,7 +529,7 @@
     "10171": 295.6237177869755,
     "10172": 4.3379345807468095,
     "10186": 69.23302002965531,
-    "10191": 6553.386301067829,
+    "10191": 6335.215809316365,
     "10230": 354.4586652888729,
     "10232": 0.4183637032895524,
     "10233": 5.713474781587987,

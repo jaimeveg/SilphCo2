@@ -7,6 +7,18 @@
     "base_weight": 1599.8321061338268,
     "percent": 10.553689187507777
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 415.0981719778705,
     "custap-berry": 470.7366040104526,
@@ -84,7 +96,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "21.2",
       "evs": {
         "hp": 0,
@@ -96,7 +108,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "15.0",
       "evs": {
         "hp": 252,
@@ -108,7 +120,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "11.6",
       "evs": {
         "hp": 252,
@@ -120,7 +132,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.0",
       "evs": {
         "hp": 248,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.2",
       "evs": {
         "hp": 252,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 4,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 252,

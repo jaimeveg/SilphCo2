@@ -1,12 +1,29 @@
 {
   "id": "10034",
-  "name": "Charizard Mega X",
+  "name": "Charizard mega x",
   "format_id": "showdown_gen6ou-1630",
   "usage_metrics": {
     "raw": 4366,
     "base_weight": 678.7016295835266,
     "percent": 6.545530868639621
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "charizardite-x": 678.7016295835266
   },
@@ -78,7 +95,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "28.9",
       "evs": {
         "hp": 0,
@@ -90,7 +107,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.9",
       "evs": {
         "hp": 0,
@@ -102,7 +119,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.0",
       "evs": {
         "hp": 248,
@@ -114,7 +131,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.8",
       "evs": {
         "hp": 176,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.6",
       "evs": {
         "hp": 4,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.5",
       "evs": {
         "hp": 248,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 248,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 40,

@@ -7,6 +7,23 @@
     "base_weight": 1673.5780630415352,
     "percent": 16.29089055872108
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "throat-spray": 817.9467637800935,
     "sitrus-berry": 346.916451357865,
@@ -159,7 +176,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "9.1",
       "evs": {
         "hp": 76,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "7.2",
       "evs": {
         "hp": 252,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "4.1",
       "evs": {
         "hp": 108,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.5",
       "evs": {
         "hp": 236,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 228,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.0",
       "evs": {
         "hp": 76,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 108,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 100,
@@ -267,7 +284,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.0",
       "evs": {
         "hp": 84,
@@ -527,6 +544,7 @@
     "879": 3.3396185261658218e-9,
     "884": 2.4227107398022696e-7,
     "887": 0.42739834354620926,
+    "892": 680.7349413341863,
     "894": 0.34364278860713166,
     "895": 4.817705361109558,
     "896": 0.5677861975692464,
@@ -638,7 +656,7 @@
     "10171": 3.154173064652094,
     "10172": 0.0014801613363051858,
     "10186": 456.3705650130281,
-    "10191": 836.05555437015,
+    "10191": 155.32061303596385,
     "10230": 3.362756088851576,
     "10232": 0.0001872833969064902,
     "10233": 0.5861932812818245,

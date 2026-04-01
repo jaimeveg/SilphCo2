@@ -7,6 +7,23 @@
     "base_weight": 3143.004805452112,
     "percent": 8.331260438506094
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "mental-herb": 500.95113752576594,
     "rocky-helmet": 1404.2913940342576,
@@ -98,7 +115,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "11.1",
       "evs": {
         "hp": 228,
@@ -110,7 +127,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.3",
       "evs": {
         "hp": 4,
@@ -122,7 +139,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.7",
       "evs": {
         "hp": 100,
@@ -134,7 +151,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.5",
       "evs": {
         "hp": 100,
@@ -146,7 +163,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.8",
       "evs": {
         "hp": 4,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.7",
       "evs": {
         "hp": 228,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 228,
@@ -327,6 +344,7 @@
     "876": 2.3383757156611744,
     "887": 18.02633137391843,
     "890": 202.10811444840763,
+    "892": 42.26914792412139,
     "894": 0.0017140631110495463,
     "895": 0.5723346187468032,
     "897": 8.030634031465564,
@@ -399,7 +417,7 @@
     "10186": 20.999997637385395,
     "10188": 358.1844964493374,
     "10189": 8.98330393424326,
-    "10191": 462.7382600166057,
+    "10191": 420.4691120924843,
     "10193": 1279.2705289728904,
     "10194": 474.51750675429435,
     "10230": 0.3718771984604321,

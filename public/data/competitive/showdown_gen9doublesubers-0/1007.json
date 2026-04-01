@@ -7,6 +7,23 @@
     "base_weight": 32697,
     "percent": 15.841723272512331
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "clear-amulet": 4382,
     "choice-scarf": 3132,
@@ -168,7 +185,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "37.3",
       "evs": {
         "hp": 0,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.4",
       "evs": {
         "hp": 4,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.2",
       "evs": {
         "hp": 4,
@@ -204,7 +221,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -216,7 +233,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -228,7 +245,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.3",
       "evs": {
         "hp": 0,
@@ -240,7 +257,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -252,7 +269,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -264,7 +281,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -276,7 +293,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -579,6 +596,7 @@
     "886": 6,
     "887": 241,
     "890": 700,
+    "892": 874,
     "893": 26,
     "894": 244,
     "895": 75,
@@ -702,7 +720,7 @@
     "10186": 2183,
     "10188": 2358,
     "10189": 3080,
-    "10191": 2481,
+    "10191": 1607,
     "10193": 2120,
     "10194": 6708,
     "10230": 170,

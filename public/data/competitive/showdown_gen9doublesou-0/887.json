@@ -7,6 +7,18 @@
     "base_weight": 24262,
     "percent": 4.114225636329722
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "draco-plate": 110,
     "choice-band": 5488,
@@ -170,7 +182,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "16.3",
       "evs": {
         "hp": 0,
@@ -182,7 +194,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.9",
       "evs": {
         "hp": 0,
@@ -194,7 +206,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.4",
       "evs": {
         "hp": 0,
@@ -206,7 +218,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.5",
       "evs": {
         "hp": 4,
@@ -218,7 +230,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.0",
       "evs": {
         "hp": 4,
@@ -230,7 +242,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "4.7",
       "evs": {
         "hp": 0,
@@ -242,7 +254,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -254,7 +266,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 4,
@@ -266,7 +278,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.5",
       "evs": {
         "hp": 4,
@@ -278,7 +290,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "1.5",
       "evs": {
         "hp": 0,

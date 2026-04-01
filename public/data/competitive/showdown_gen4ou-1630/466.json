@@ -7,6 +7,18 @@
     "base_weight": 93.24058387744928,
     "percent": 2.927539729049605
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "life-orb": 18.475778589207604,
     "focus-sash": 0.02733122400198601,
@@ -84,7 +96,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "50.2",
       "evs": {
         "hp": 0,
@@ -96,7 +108,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "36.0",
       "evs": {
         "hp": 0,
@@ -108,7 +120,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.5",
       "evs": {
         "hp": 0,
@@ -120,7 +132,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 4,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "0.5",
       "evs": {
         "hp": 0,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.4",
       "evs": {
         "hp": 168,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.4",
       "evs": {
         "hp": 100,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "0.3",
       "evs": {
         "hp": 0,

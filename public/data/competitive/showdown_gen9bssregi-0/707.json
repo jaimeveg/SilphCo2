@@ -1,0 +1,238 @@
+{
+  "id": "707",
+  "name": "Klefki",
+  "format_id": "showdown_gen9bssregi-0",
+  "usage_metrics": {
+    "raw": 425,
+    "base_weight": 425,
+    "percent": 0.7551259727799297
+  },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
+  "items": {
+    "light-clay": 396,
+    "focus-sash": 16,
+    "rocky-helmet": 6,
+    "toxic-orb": 7
+  },
+  "abilities": {
+    "prankster": 425
+  },
+  "moves": {
+    "light-screen": 412,
+    "reflect": 415,
+    "thunder-wave": 323,
+    "steel-beam": 250,
+    "trick-room": 1,
+    "dazzling-gleam": 1,
+    "foul-play": 140,
+    "flash-cannon": 11,
+    "spikes": 108,
+    "play-rough": 2,
+    "magic-room": 3,
+    "substitute": 12,
+    "switcheroo": 7,
+    "stored-power": 7,
+    "calm-mind": 7,
+    "draining-kiss": 1
+  },
+  "teras": {
+    "water": 77,
+    "ghost": 205,
+    "steel": 120,
+    "ground": 4,
+    "normal": 6,
+    "fire": 1,
+    "dragon": 12
+  },
+  "spreads": [
+    {
+      "nature": "calm",
+      "usage": "31.5",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 12,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "20.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 60,
+        "spa": 0,
+        "spd": 196,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "12.2",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 252,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "7.3",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 156,
+        "spa": 0,
+        "spd": 100,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "6.8",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 180,
+        "spa": 148,
+        "spd": 180,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "6.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 244,
+        "spa": 0,
+        "spd": 12,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "3.3",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 12,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "2.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "2.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "2.4",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 124,
+        "spa": 252,
+        "spd": 132,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "25": 27,
+    "36": 29,
+    "132": 12,
+    "136": 11,
+    "143": 7,
+    "149": 40,
+    "184": 1,
+    "205": 38,
+    "212": 27,
+    "235": 34,
+    "248": 122,
+    "249": 95,
+    "350": 1,
+    "380": 4,
+    "381": 132,
+    "382": 6,
+    "384": 7,
+    "472": 65,
+    "547": 4,
+    "591": 16,
+    "596": 1,
+    "748": 7,
+    "752": 3,
+    "792": 28,
+    "849": 1,
+    "861": 1,
+    "873": 4,
+    "894": 14,
+    "900": 3,
+    "908": 10,
+    "914": 13,
+    "934": 33,
+    "937": 21,
+    "970": 25,
+    "977": 48,
+    "984": 49,
+    "987": 42,
+    "990": 122,
+    "994": 6,
+    "1002": 54,
+    "1003": 39,
+    "1007": 9,
+    "1008": 168,
+    "1024": 26,
+    "10007": 4,
+    "10021": 32,
+    "10022": 79,
+    "10023": 10,
+    "10104": 1,
+    "10155": 12,
+    "10188": 24,
+    "10193": 127,
+    "10194": 112,
+    "10236": 48,
+    "10272": 64,
+    "10274": 12
+  }
+}

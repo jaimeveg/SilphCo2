@@ -7,6 +7,23 @@
     "base_weight": 39069,
     "percent": 9.516444115340208
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "focus-sash": 33782,
     "covert-cloak": 730,
@@ -303,7 +320,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "12.9",
       "evs": {
         "hp": 252,
@@ -315,7 +332,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.1",
       "evs": {
         "hp": 4,
@@ -327,7 +344,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -339,7 +356,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.6",
       "evs": {
         "hp": 12,
@@ -351,7 +368,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -363,7 +380,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -375,7 +392,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 60,
@@ -387,7 +404,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 4,
@@ -399,7 +416,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 100,
@@ -411,7 +428,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.6",
       "evs": {
         "hp": 236,
@@ -653,6 +670,7 @@
     "876": 134,
     "887": 24,
     "890": 597,
+    "892": 4839,
     "894": 196,
     "895": 12,
     "897": 2,
@@ -745,7 +763,7 @@
     "10186": 9348,
     "10188": 1007,
     "10189": 5245,
-    "10191": 9947,
+    "10191": 5108,
     "10193": 14892,
     "10194": 12738,
     "10230": 31,

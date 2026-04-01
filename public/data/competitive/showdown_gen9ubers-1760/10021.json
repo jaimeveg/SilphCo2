@@ -1,12 +1,29 @@
 {
   "id": "10021",
-  "name": "Landorus Therian",
+  "name": "Landorus therian",
   "format_id": "showdown_gen9ubers-1760",
   "usage_metrics": {
     "raw": 13229,
     "base_weight": 2162.8443157119527,
     "percent": 4.886779210224964
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 23.72174140399523,
     "life-orb": 0.23402013121225107,
@@ -121,7 +138,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "27.9",
       "evs": {
         "hp": 248,
@@ -133,7 +150,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "26.7",
       "evs": {
         "hp": 192,
@@ -145,7 +162,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.8",
       "evs": {
         "hp": 0,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "8.1",
       "evs": {
         "hp": 252,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.2",
       "evs": {
         "hp": 248,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 0,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.6",
       "evs": {
         "hp": 248,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 248,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -453,6 +470,7 @@
     "876": 2.638867374410486,
     "887": 1.0990862454218657,
     "890": 308.1069447875466,
+    "892": 0.37250489434910916,
     "893": 0.03755935531067822,
     "894": 12.902079214972275,
     "895": 0.004582870024442243,
@@ -553,7 +571,7 @@
     "10186": 0.3113323223949028,
     "10188": 1242.4663902726463,
     "10189": 2.839360761703912,
-    "10191": 4.4932526978565726,
+    "10191": 4.120747803507463,
     "10193": 93.98725375253431,
     "10230": 0.001975019618988383,
     "10233": 0.0000033147659796450846,

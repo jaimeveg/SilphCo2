@@ -1,12 +1,29 @@
 {
   "id": "10186",
-  "name": "Indeedee Female",
+  "name": "Indeedee f",
   "format_id": "showdown_gen9vgc2026regf-1630",
   "usage_metrics": {
     "raw": 205054,
     "base_weight": 23138.825259635592,
     "percent": 13.055625237963655
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 14210.324848669361,
     "psychic-seed": 2809.8638303158505,
@@ -146,7 +163,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "37.6",
       "evs": {
         "hp": 252,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "11.2",
       "evs": {
         "hp": 252,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.1",
       "evs": {
         "hp": 252,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.0",
       "evs": {
         "hp": 244,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -218,7 +235,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -230,7 +247,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -242,7 +259,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.4",
       "evs": {
         "hp": 244,
@@ -254,7 +271,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.3",
       "evs": {
         "hp": 252,
@@ -632,6 +649,7 @@
     "879": 0.25138148360917995,
     "884": 0.09613846523093456,
     "887": 309.5350356962296,
+    "892": 5006.189570126003,
     "894": 49.76563820926022,
     "895": 3809.862517916354,
     "896": 32.712845926419554,
@@ -752,7 +770,7 @@
     "10170": 228.83698661694447,
     "10171": 107.0498256806346,
     "10172": 13.682989282057166,
-    "10191": 15319.951583037524,
+    "10191": 10313.76201291152,
     "10230": 143.84336477467193,
     "10232": 1.036768440862966,
     "10233": 22.78540690108014,

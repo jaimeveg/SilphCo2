@@ -7,6 +7,13 @@
     "base_weight": 15365,
     "percent": 5.1891252955082745
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-specs": 1669,
     "life-orb": 3524,
@@ -168,7 +175,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "38.2",
       "evs": {
         "hp": 0,
@@ -180,7 +187,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.5",
       "evs": {
         "hp": 4,
@@ -192,7 +199,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.0",
       "evs": {
         "hp": 0,
@@ -204,7 +211,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.4",
       "evs": {
         "hp": 4,
@@ -216,7 +223,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.0",
       "evs": {
         "hp": 0,
@@ -228,7 +235,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -240,7 +247,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.6",
       "evs": {
         "hp": 0,
@@ -252,7 +259,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -264,7 +271,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -276,7 +283,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -678,6 +685,7 @@
     "884": 3,
     "887": 1157,
     "890": 201,
+    "892": 343,
     "893": 8,
     "894": 105,
     "897": 1,
@@ -836,7 +844,7 @@
     "10186": 80,
     "10188": 1330,
     "10189": 44,
-    "10191": 568,
+    "10191": 225,
     "10193": 25,
     "10230": 20,
     "10232": 6,

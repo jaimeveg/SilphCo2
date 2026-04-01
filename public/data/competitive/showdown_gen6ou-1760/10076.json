@@ -1,12 +1,19 @@
 {
   "id": "10076",
-  "name": "Metagross Mega",
+  "name": "Metagross mega",
   "format_id": "showdown_gen6ou-1760",
   "usage_metrics": {
     "raw": 7383,
     "base_weight": 470.0172452499648,
     "percent": 11.068633624179185
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "metagrossite": 470.0172452499648
   },
@@ -66,7 +73,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "56.6",
       "evs": {
         "hp": 0,
@@ -78,7 +85,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "20.7",
       "evs": {
         "hp": 0,
@@ -90,7 +97,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.4",
       "evs": {
         "hp": 4,
@@ -102,7 +109,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 8,
@@ -114,7 +121,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -126,7 +133,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 8,
@@ -138,7 +145,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.9",
       "evs": {
         "hp": 4,
@@ -150,7 +157,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 164,
@@ -162,7 +169,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.8",
       "evs": {
         "hp": 40,
@@ -174,7 +181,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.7",
       "evs": {
         "hp": 4,

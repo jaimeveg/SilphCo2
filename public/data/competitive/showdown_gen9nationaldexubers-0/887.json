@@ -7,6 +7,18 @@
     "base_weight": 17556,
     "percent": 5.929078014184396
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "dragon-fang": 568,
     "leftovers": 989,
@@ -153,7 +165,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "20.5",
       "evs": {
         "hp": 0,
@@ -165,7 +177,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "11.8",
       "evs": {
         "hp": 0,
@@ -177,7 +189,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.4",
       "evs": {
         "hp": 0,
@@ -189,7 +201,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.1",
       "evs": {
         "hp": 4,
@@ -201,7 +213,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.7",
       "evs": {
         "hp": 4,
@@ -213,7 +225,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -225,7 +237,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -237,7 +249,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "3.7",
       "evs": {
         "hp": 0,
@@ -249,7 +261,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -261,7 +273,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -653,6 +665,7 @@
     "883": 1,
     "884": 32,
     "890": 494,
+    "892": 281,
     "893": 22,
     "894": 483,
     "895": 13,
@@ -823,7 +836,7 @@
     "10186": 46,
     "10188": 893,
     "10189": 113,
-    "10191": 580,
+    "10191": 299,
     "10193": 69,
     "10230": 125,
     "10232": 31,

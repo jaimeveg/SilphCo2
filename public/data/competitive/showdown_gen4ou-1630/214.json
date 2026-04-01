@@ -7,6 +7,18 @@
     "base_weight": 218.14346783919984,
     "percent": 2.262228963425144
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-band": 34.81022886685282,
     "flame-orb": 3.8082507942191093,
@@ -75,7 +87,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "32.7",
       "evs": {
         "hp": 0,
@@ -87,7 +99,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "19.3",
       "evs": {
         "hp": 4,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.6",
       "evs": {
         "hp": 0,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.2",
       "evs": {
         "hp": 0,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.1",
       "evs": {
         "hp": 24,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.2",
       "evs": {
         "hp": 28,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.6",
       "evs": {
         "hp": 248,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.1",
       "evs": {
         "hp": 76,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.9",
       "evs": {
         "hp": 252,

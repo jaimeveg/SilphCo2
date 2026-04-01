@@ -7,6 +7,23 @@
     "base_weight": 849.3226567469937,
     "percent": 3.2468760553866938
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 423.0252811512669,
     "assault-vest": 87.63035742898168,
@@ -105,7 +122,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "29.8",
       "evs": {
         "hp": 200,
@@ -117,7 +134,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "25.0",
       "evs": {
         "hp": 252,
@@ -129,7 +146,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "15.5",
       "evs": {
         "hp": 4,
@@ -141,7 +158,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "4.0",
       "evs": {
         "hp": 20,
@@ -153,7 +170,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.4",
       "evs": {
         "hp": 194,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.7",
       "evs": {
         "hp": 248,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.7",
       "evs": {
         "hp": 16,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -520,6 +537,7 @@
     "883": 0,
     "887": 0.30059779621612803,
     "890": 202.03902188569185,
+    "892": 0.0018539630892260295,
     "893": 0.000014960503057437347,
     "894": 1.5747611916191424,
     "895": 0.00009030721731734248,
@@ -675,7 +693,7 @@
     "10181": 0.0005173395929246594,
     "10188": 315.5806126745058,
     "10189": 0.00003980789942020779,
-    "10191": 0.1511418112608759,
+    "10191": 0.14928784817164986,
     "10193": 2.5917681872226255,
     "10232": 1.058875209736243e-12,
     "10233": 0.0000016715245824139302,

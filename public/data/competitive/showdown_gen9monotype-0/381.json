@@ -1,0 +1,309 @@
+{
+  "id": "381",
+  "name": "Latios",
+  "format_id": "showdown_gen9monotype-0",
+  "usage_metrics": {
+    "raw": 9329,
+    "base_weight": 9329,
+    "percent": 4.0459193851972
+  },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
+  "items": {
+    "expert-belt": 3325,
+    "choice-specs": 2757,
+    "soul-dew": 1579,
+    "choice-scarf": 640,
+    "salac-berry": 10,
+    "leftovers": 160,
+    "life-orb": 144,
+    "wise-glasses": 2,
+    "weakness-policy": 37,
+    "rocky-helmet": 4,
+    "mirror-herb": 16,
+    "focus-sash": 20,
+    "assault-vest": 219,
+    "heat-rock": 35,
+    "custap-berry": 54,
+    "light-clay": 17,
+    "heavy-duty-boots": 6,
+    "chesto-berry": 3,
+    "lum-berry": 15,
+    "colbur-berry": 1,
+    "dragon-fang": 1,
+    "covert-cloak": 283,
+    "eject-pack": 1
+  },
+  "abilities": {
+    "levitate": 9329
+  },
+  "moves": {
+    "luster-purge": 7889,
+    "ice-beam": 6005,
+    "energy-ball": 843,
+    "thunderbolt": 5817,
+    "draco-meteor": 4033,
+    "psyshock": 516,
+    "surf": 821,
+    "trick": 620,
+    "aura-sphere": 2103,
+    "recover": 2679,
+    "calm-mind": 1388,
+    "thunder": 17,
+    "flip-turn": 503,
+    "dragon-claw": 40,
+    "air-slash": 29,
+    "future-sight": 96,
+    "dragon-pulse": 1077,
+    "agility": 734,
+    "dual-wingbeat": 2,
+    "psychic-noise": 451,
+    "shadow-ball": 513,
+    "dragon-dance": 75,
+    "earthquake": 127,
+    "psychic": 296,
+    "stored-power": 43,
+    "tailwind": 68,
+    "substitute": 25,
+    "grass-knot": 22,
+    "protect": 22,
+    "thunder-wave": 83,
+    "reflect": 27,
+    "chilling-water": 26,
+    "sunny-day": 37,
+    "rest": 116,
+    "water-pulse": 1,
+    "memento": 41,
+    "zen-headbutt": 30,
+    "light-screen": 22,
+    "outrage": 17,
+    "aerial-ace": 3,
+    "rain-dance": 14,
+    "weather-ball": 15,
+    "charge-beam": 2,
+    "roar": 5,
+    "simple-beam": 1,
+    "body-slam": 4,
+    "dragon-breath": 5,
+    "confusion": 5,
+    "heal-pulse": 8
+  },
+  "teras": {
+    "nothing": 9329
+  },
+  "spreads": [
+    {
+      "nature": "timid",
+      "usage": "72.6",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "4.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "3.9",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 4,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.9",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 8,
+        "spa": 248,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "1.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "1.7",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "1.6",
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "1.5",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "1.5",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 248,
+        "spd": 8,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "hasty",
+      "usage": "1.0",
+      "evs": {
+        "hp": 0,
+        "atk": 4,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    }
+  ],
+  "teammates": {
+    "80": 452,
+    "103": 6,
+    "132": 0,
+    "148": 1,
+    "149": 1158,
+    "151": 180,
+    "196": 37,
+    "199": 258,
+    "230": 62,
+    "282": 119,
+    "308": 50,
+    "330": 93,
+    "334": 31,
+    "373": 154,
+    "376": 560,
+    "380": 256,
+    "385": 520,
+    "437": 167,
+    "445": 2958,
+    "475": 630,
+    "480": 22,
+    "482": 32,
+    "488": 147,
+    "579": 84,
+    "612": 193,
+    "635": 235,
+    "646": 1144,
+    "648": 89,
+    "655": 337,
+    "678": 9,
+    "687": 320,
+    "691": 113,
+    "704": 1,
+    "706": 51,
+    "715": 193,
+    "720": 7,
+    "765": 20,
+    "779": 8,
+    "783": 2,
+    "784": 772,
+    "800": 74,
+    "842": 4,
+    "858": 1757,
+    "876": 557,
+    "884": 19,
+    "887": 5638,
+    "895": 217,
+    "936": 200,
+    "954": 9,
+    "967": 158,
+    "976": 35,
+    "978": 64,
+    "981": 7,
+    "985": 54,
+    "1005": 4244,
+    "1009": 608,
+    "1010": 74,
+    "1011": 21,
+    "1015": 5,
+    "1018": 5487,
+    "1019": 129,
+    "1021": 2328,
+    "1022": 1105,
+    "1023": 180,
+    "10002": 114,
+    "10003": 774,
+    "10086": 1384,
+    "10100": 28,
+    "10124": 2,
+    "10165": 43,
+    "10169": 15,
+    "10172": 732,
+    "10186": 91,
+    "10240": 40,
+    "10241": 1,
+    "10242": 5391
+  }
+}

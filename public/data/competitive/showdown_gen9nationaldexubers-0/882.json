@@ -7,6 +7,13 @@
     "base_weight": 18240,
     "percent": 6.160081053698075
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 351,
     "choice-scarf": 12793,
@@ -120,7 +127,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "35.7",
       "evs": {
         "hp": 0,
@@ -132,7 +139,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "12.1",
       "evs": {
         "hp": 4,
@@ -144,7 +151,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.1",
       "evs": {
         "hp": 0,
@@ -156,7 +163,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.0",
       "evs": {
         "hp": 0,
@@ -168,7 +175,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.1",
       "evs": {
         "hp": 0,
@@ -180,7 +187,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.1",
       "evs": {
         "hp": 4,
@@ -192,7 +199,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -204,7 +211,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -216,7 +223,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 248,
@@ -228,7 +235,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.5",
       "evs": {
         "hp": 4,
@@ -637,6 +644,7 @@
     "884": 24,
     "887": 1045,
     "890": 604,
+    "892": 104,
     "893": 11,
     "894": 313,
     "895": 65,
@@ -806,7 +814,7 @@
     "10186": 68,
     "10188": 1401,
     "10189": 359,
-    "10191": 480,
+    "10191": 376,
     "10193": 263,
     "10230": 51,
     "10232": 29,

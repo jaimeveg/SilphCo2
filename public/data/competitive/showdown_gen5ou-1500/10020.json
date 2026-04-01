@@ -1,12 +1,24 @@
 {
   "id": "10020",
-  "name": "Thundurus Therian",
+  "name": "Thundurus therian",
   "format_id": "showdown_gen5ou-1500",
   "usage_metrics": {
     "raw": 8742,
     "base_weight": 5884.484946168433,
     "percent": 10.87719298245614
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 4147.11001204336,
     "life-orb": 313.2868491801998,
@@ -79,7 +91,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "16.6",
       "evs": {
         "hp": 0,
@@ -91,7 +103,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "14.7",
       "evs": {
         "hp": 104,
@@ -103,7 +115,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.9",
       "evs": {
         "hp": 24,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.1",
       "evs": {
         "hp": 24,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.3",
       "evs": {
         "hp": 100,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.2",
       "evs": {
         "hp": 24,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 24,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.2",
       "evs": {
         "hp": 4,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 0,

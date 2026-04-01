@@ -7,6 +7,18 @@
     "base_weight": 536.2397480597604,
     "percent": 12.43808475509081
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "air-balloon": 0.000799112189838358,
     "choice-specs": 235.8664562698131,
@@ -73,7 +85,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "61.1",
       "evs": {
         "hp": 0,
@@ -85,7 +97,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "29.1",
       "evs": {
         "hp": 0,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.9",
       "evs": {
         "hp": 4,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.8",
       "evs": {
         "hp": 0,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "0.8",
       "evs": {
         "hp": 0,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.6",
       "evs": {
         "hp": 6,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.6",
       "evs": {
         "hp": 1,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.6",
       "evs": {
         "hp": 236,

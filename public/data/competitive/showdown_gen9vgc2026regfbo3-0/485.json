@@ -7,6 +7,18 @@
     "base_weight": 16928,
     "percent": 3.2432722409769665
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 6725,
     "assault-vest": 1298,
@@ -116,7 +128,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.0",
       "evs": {
         "hp": 252,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.2",
       "evs": {
         "hp": 244,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.7",
       "evs": {
         "hp": 204,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.8",
       "evs": {
         "hp": 100,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.6",
       "evs": {
         "hp": 204,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.6",
       "evs": {
         "hp": 228,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -432,6 +444,7 @@
     "879": 3,
     "884": 11,
     "887": 248,
+    "892": 2195,
     "894": 86,
     "895": 187,
     "896": 70,
@@ -526,7 +539,7 @@
     "10171": 438,
     "10172": 66,
     "10186": 350,
-    "10191": 5456,
+    "10191": 3261,
     "10230": 74,
     "10232": 1,
     "10233": 10,

@@ -7,6 +7,23 @@
     "base_weight": 5086.000021458599,
     "percent": 12.460466934366227
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 4785.625867046498,
     "covert-cloak": 129.76170179498686,
@@ -84,7 +101,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "12.4",
       "evs": {
         "hp": 252,
@@ -96,7 +113,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "8.6",
       "evs": {
         "hp": 252,
@@ -108,7 +125,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.3",
       "evs": {
         "hp": 252,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.1",
       "evs": {
         "hp": 252,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.9",
       "evs": {
         "hp": 124,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -307,6 +324,7 @@
     "876": 0.011806363940549292,
     "887": 35.42101511227904,
     "890": 261.9362680857574,
+    "892": 10.824257587582617,
     "894": 1.9504904596771442,
     "900": 0.3718771984604321,
     "901": 11.329919484891358,
@@ -373,7 +391,7 @@
     "10186": 3.2368571174574607,
     "10188": 548.6827923052604,
     "10189": 5.012454299010354,
-    "10191": 860.8413205561441,
+    "10191": 850.0170629685615,
     "10193": 198.24366194239377,
     "10194": 2503.8241165654085,
     "10230": 3.7002487484995563,

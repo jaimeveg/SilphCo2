@@ -1,11 +1,23 @@
 {
   "id": "10191",
-  "name": "Urshifu Rapid Strike",
+  "name": "Urshifu rapid strike style",
   "format_id": "vgc_SE027LIri9yqbewCPonE",
   "usage_metrics": {
     "raw": 376,
     "percent": 45.79780755176614
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 75,
     "life-orb": 33,

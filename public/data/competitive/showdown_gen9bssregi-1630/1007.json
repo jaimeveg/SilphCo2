@@ -7,6 +7,23 @@
     "base_weight": 3464.353007592523,
     "percent": 32.672968266941474
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "life-orb": 82.34651490425858,
     "choice-scarf": 1286.9993741623587,
@@ -123,7 +140,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "32.3",
       "evs": {
         "hp": 0,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.7",
       "evs": {
         "hp": 124,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.5",
       "evs": {
         "hp": 0,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.6",
       "evs": {
         "hp": 4,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 172,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 220,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 220,
@@ -427,6 +444,7 @@
     "876": 0.006190756718650603,
     "887": 0.24676596520358723,
     "890": 11.064814241984896,
+    "892": 19.97273778172011,
     "894": 13.822313809197487,
     "895": 8.826273045769994e-15,
     "900": 0.0004352141005765642,
@@ -516,7 +534,7 @@
     "10186": 8.800272429977301,
     "10188": 4.9798713422560965,
     "10189": 1.7006772348633576,
-    "10191": 272.3375054621814,
+    "10191": 252.36476768046128,
     "10193": 38.21279858351857,
     "10194": 1335.3029916563657,
     "10230": 0.5110086205080144,

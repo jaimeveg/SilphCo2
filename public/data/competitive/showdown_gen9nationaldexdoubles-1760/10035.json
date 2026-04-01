@@ -1,12 +1,29 @@
 {
   "id": "10035",
-  "name": "Charizard Mega Y",
+  "name": "Charizard mega y",
   "format_id": "showdown_gen9nationaldexdoubles-1760",
   "usage_metrics": {
     "raw": 20530,
     "base_weight": 988.0135366229681,
     "percent": 9.853327957918179
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "charizardite-y": 988.0135366229681
   },
@@ -108,7 +125,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "38.3",
       "evs": {
         "hp": 4,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "23.8",
       "evs": {
         "hp": 0,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.9",
       "evs": {
         "hp": 216,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.7",
       "evs": {
         "hp": 0,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.7",
       "evs": {
         "hp": 84,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.2",
       "evs": {
         "hp": 80,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.6",
       "evs": {
         "hp": 140,
@@ -204,7 +221,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 248,
@@ -216,7 +233,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 108,

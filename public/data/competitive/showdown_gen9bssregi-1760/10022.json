@@ -1,12 +1,24 @@
 {
   "id": "10022",
-  "name": "Kyurem Black",
+  "name": "Kyurem black",
   "format_id": "showdown_gen9bssregi-1760",
   "usage_metrics": {
     "raw": 1222,
     "base_weight": 1.073858818372447,
     "percent": 2.171209267616645
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 0.010653520270431094,
     "loaded-dice": 1.0631988708306699,
@@ -62,7 +74,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "88.4",
       "evs": {
         "hp": 4,
@@ -74,7 +86,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.9",
       "evs": {
         "hp": 4,
@@ -86,7 +98,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.1",
       "evs": {
         "hp": 52,
@@ -98,7 +110,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.1",
       "evs": {
         "hp": 0,
@@ -110,7 +122,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.6",
       "evs": {
         "hp": 4,
@@ -122,7 +134,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.3",
       "evs": {
         "hp": 52,
@@ -134,7 +146,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.2",
       "evs": {
         "hp": 0,
@@ -146,7 +158,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.1",
       "evs": {
         "hp": 100,
@@ -158,7 +170,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.1",
       "evs": {
         "hp": 252,
@@ -170,7 +182,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.1",
       "evs": {
         "hp": 0,
@@ -278,6 +290,7 @@
     "871": 0.00024312925450697964,
     "876": 1.850627112109926e-7,
     "890": 0.09474412299498775,
+    "892": 0.0010055473058905862,
     "894": 0.00013004518464165837,
     "897": 0.0000021801139953869786,
     "900": 0.0006705212144522132,
@@ -341,7 +354,7 @@
     "10156": 0.00019575167973634455,
     "10167": 1.850626732968763e-7,
     "10188": 0.00010295822069444904,
-    "10191": 0.9360403278887932,
+    "10191": 0.9350347805829026,
     "10193": 8.744141782868198e-7,
     "10194": 0.9263524328187902,
     "10230": 6.976641486744484e-13,

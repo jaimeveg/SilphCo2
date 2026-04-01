@@ -7,6 +7,23 @@
     "base_weight": 5904,
     "percent": 10.490032337159306
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "light-clay": 3448,
     "leftovers": 477,
@@ -92,7 +109,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "32.9",
       "evs": {
         "hp": 252,
@@ -104,7 +121,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "10.9",
       "evs": {
         "hp": 244,
@@ -116,7 +133,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.6",
       "evs": {
         "hp": 252,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.7",
       "evs": {
         "hp": 244,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.7",
       "evs": {
         "hp": 244,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -344,6 +361,7 @@
     "876": 2,
     "887": 32,
     "890": 1250,
+    "892": 24,
     "894": 3,
     "895": 2,
     "897": 1,
@@ -418,7 +436,7 @@
     "10186": 16,
     "10188": 779,
     "10189": 14,
-    "10191": 666,
+    "10191": 642,
     "10193": 972,
     "10194": 1778,
     "10230": 4,

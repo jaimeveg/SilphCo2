@@ -7,6 +7,23 @@
     "base_weight": 320875,
     "percent": 20.429856273135798
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 158484,
     "focus-sash": 633,
@@ -153,7 +170,7 @@
   },
   "spreads": [
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "7.1",
       "evs": {
         "hp": 252,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.6",
       "evs": {
         "hp": 236,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.3",
       "evs": {
         "hp": 244,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.1",
       "evs": {
         "hp": 244,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.8",
       "evs": {
         "hp": 236,
@@ -225,7 +242,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.7",
       "evs": {
         "hp": 236,
@@ -237,7 +254,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.6",
       "evs": {
         "hp": 244,
@@ -249,7 +266,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -261,7 +278,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.6",
       "evs": {
         "hp": 244,
@@ -654,6 +671,7 @@
     "879": 192,
     "884": 99,
     "887": 3389,
+    "892": 9624,
     "894": 1559,
     "895": 4210,
     "896": 1139,
@@ -777,7 +795,7 @@
     "10171": 3468,
     "10172": 413,
     "10186": 14138,
-    "10191": 152911,
+    "10191": 143287,
     "10230": 5505,
     "10231": 11,
     "10232": 246,

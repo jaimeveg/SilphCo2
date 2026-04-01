@@ -7,6 +7,13 @@
     "base_weight": 97589,
     "percent": 6.2134140828641975
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "clear-amulet": 6756,
     "sitrus-berry": 1552,
@@ -136,7 +143,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.4",
       "evs": {
         "hp": 4,
@@ -148,7 +155,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.2",
       "evs": {
         "hp": 252,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.3",
       "evs": {
         "hp": 244,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.5",
       "evs": {
         "hp": 4,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -196,7 +203,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 4,
@@ -208,7 +215,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.9",
       "evs": {
         "hp": 4,
@@ -220,7 +227,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 92,
@@ -232,7 +239,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 116,
@@ -244,7 +251,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -546,6 +553,7 @@
     "879": 26,
     "884": 76,
     "887": 1278,
+    "892": 3944,
     "894": 2120,
     "895": 596,
     "896": 51,
@@ -658,7 +666,7 @@
     "10171": 1643,
     "10172": 63,
     "10186": 5961,
-    "10191": 8523,
+    "10191": 4579,
     "10230": 1468,
     "10232": 24,
     "10233": 377,

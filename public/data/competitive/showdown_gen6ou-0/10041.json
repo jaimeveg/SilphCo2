@@ -1,12 +1,24 @@
 {
   "id": "10041",
-  "name": "Gyarados Mega",
+  "name": "Gyarados mega",
   "format_id": "showdown_gen6ou-0",
   "usage_metrics": {
     "raw": 2478,
     "base_weight": 2478,
     "percent": 3.715031033552217
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "gyaradosite": 2478
   },
@@ -54,7 +66,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "26.6",
       "evs": {
         "hp": 0,
@@ -66,7 +78,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "23.0",
       "evs": {
         "hp": 0,
@@ -78,7 +90,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "18.0",
       "evs": {
         "hp": 0,
@@ -90,7 +102,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.3",
       "evs": {
         "hp": 0,
@@ -102,7 +114,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -114,7 +126,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 88,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.9",
       "evs": {
         "hp": 8,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.8",
       "evs": {
         "hp": 40,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.8",
       "evs": {
         "hp": 40,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.7",
       "evs": {
         "hp": 128,

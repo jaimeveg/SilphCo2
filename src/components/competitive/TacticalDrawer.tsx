@@ -152,20 +152,41 @@ export default function TacticalDrawer({ isOpen, onClose, pokemonId, formatId, f
                   </div>
                ) : (
                   <div className="flex flex-col gap-6">
-                     {/* OVERVIEW - Compact */}
-                     <div className="flex items-center gap-4 bg-slate-900/60 border border-slate-800 rounded-lg p-3">
-                         <div className="flex items-center gap-2">
-                             <Percent size={14} className="text-cyan-500" />
-                             <span className="text-lg font-display font-medium text-slate-200">
-                                {data.usage_metrics?.percent?.toFixed(1) || 0}%
-                             </span>
+                     {/* OVERVIEW - Roles left, Usage right */}
+                     <div className="flex items-center gap-3 bg-slate-900/60 border border-slate-800 rounded-lg p-3">
+                         {/* ROLES (left) */}
+                         <div className="flex flex-wrap gap-1.5 flex-1">
+                             {data.roles && data.roles.length > 0 ? data.roles.map((r: any) => (
+                                 <span 
+                                     key={r.role}
+                                     className={cn(
+                                         "text-[8px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded border",
+                                         r.category === 'OFF' && "text-red-400 bg-red-500/10 border-red-500/20",
+                                         r.category === 'SUP' && "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+                                         r.category === 'DEF' && "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+                                     )}
+                                 >
+                                     {r.label}
+                                 </span>
+                             )) : (
+                                 <span className="text-[8px] font-mono text-slate-600 uppercase">No roles detected</span>
+                             )}
                          </div>
-                         <div className="w-px h-6 bg-slate-800" />
-                         <div className="flex flex-col">
-                             <span className="text-[8px] font-mono text-slate-500 uppercase">Raw</span>
-                             <span className="text-sm font-display text-slate-300">
-                                {data.usage_metrics?.raw?.toLocaleString() || 0}
-                             </span>
+                         {/* USAGE (right) */}
+                         <div className="flex items-center gap-2 ml-auto shrink-0">
+                             <div className="flex items-center gap-2">
+                                 <Percent size={14} className="text-cyan-500" />
+                                 <span className="text-lg font-display font-medium text-slate-200">
+                                    {data.usage_metrics?.percent?.toFixed(1) || 0}%
+                                 </span>
+                             </div>
+                             <div className="w-px h-6 bg-slate-800" />
+                             <div className="flex flex-col">
+                                 <span className="text-[8px] font-mono text-slate-500 uppercase">Raw</span>
+                                 <span className="text-sm font-display text-slate-300">
+                                    {data.usage_metrics?.raw?.toLocaleString() || 0}
+                                 </span>
+                             </div>
                          </div>
                      </div>
 

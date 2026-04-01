@@ -1,12 +1,24 @@
 {
   "id": "10188",
-  "name": "Zacian Crowned",
+  "name": "Zacian crowned",
   "format_id": "showdown_gen9bssregi-0",
   "usage_metrics": {
     "raw": 8127,
     "base_weight": 8127,
     "percent": 14.439785366547031
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-sword": 8127
   },
@@ -63,7 +75,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "11.8",
       "evs": {
         "hp": 0,
@@ -75,7 +87,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.1",
       "evs": {
         "hp": 0,
@@ -87,7 +99,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.0",
       "evs": {
         "hp": 4,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.3",
       "evs": {
         "hp": 252,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 60,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 156,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 204,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.2",
       "evs": {
         "hp": 172,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.1",
       "evs": {
         "hp": 60,
@@ -330,6 +342,7 @@
     "876": 3,
     "887": 241,
     "890": 52,
+    "892": 187,
     "894": 27,
     "895": 3,
     "897": 1,
@@ -408,7 +421,7 @@
     "10172": 1,
     "10186": 2,
     "10189": 14,
-    "10191": 2157,
+    "10191": 1970,
     "10193": 152,
     "10194": 2207,
     "10230": 13,

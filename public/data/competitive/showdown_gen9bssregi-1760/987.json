@@ -7,6 +7,23 @@
     "base_weight": 83.39977504523503,
     "percent": 29.378842258626204
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-scarf": 0.02579222365235717,
     "focus-sash": 22.901656206388974,
@@ -104,7 +121,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "34.4",
       "evs": {
         "hp": 252,
@@ -116,7 +133,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "24.2",
       "evs": {
         "hp": 4,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.5",
       "evs": {
         "hp": 0,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.5",
       "evs": {
         "hp": 0,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.2",
       "evs": {
         "hp": 100,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 4,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.6",
       "evs": {
         "hp": 84,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.0",
       "evs": {
         "hp": 164,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 0,
@@ -212,7 +229,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.7",
       "evs": {
         "hp": 196,
@@ -383,6 +400,7 @@
     "876": 0.05932358258425563,
     "887": 0.0021702902218462827,
     "890": 16.667213889243666,
+    "892": 0.3202949707830657,
     "894": 1.330070689142815e-7,
     "895": 0,
     "897": 0,
@@ -466,7 +484,7 @@
     "10186": 0,
     "10188": 5.102762282906591,
     "10189": 0.4361162628231313,
-    "10191": 6.179578037475305,
+    "10191": 5.859283066692239,
     "10193": 4.748614462642072,
     "10194": 32.680449491621374,
     "10230": 0.004620265325139372,

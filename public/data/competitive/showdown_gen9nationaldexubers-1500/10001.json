@@ -1,12 +1,19 @@
 {
   "id": "10001",
-  "name": "Deoxys Attack",
+  "name": "Deoxys attack",
   "format_id": "showdown_gen9nationaldexubers-1500",
   "usage_metrics": {
     "raw": 8727,
     "base_weight": 6078.017351912852,
     "percent": 2.947315096251266
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 2591.726344434607,
     "choice-scarf": 133.58187791943723,
@@ -17,25 +24,25 @@
     "heavy-duty-boots": 21.746058292333775,
     "leftovers": 119.46072759268631,
     "power-herb": 204.9288335765464,
-    "psychiumz": 141.5825135060839,
-    "iciumz": 2.9999994452074326,
+    "psychium-z": 141.5825135060839,
+    "icium-z": 2.9999994452074326,
     "air-balloon": 0.0006654674764127178,
     "nothing": 2.0582876081678037,
     "expert-belt": 1.8950233300649633,
     "rocky-helmet": 0.19389451214058367,
-    "firiumz": 1.2834197792488151,
+    "firium-z": 1.2834197792488151,
     "odd-incense": 0.8774909257905078,
-    "ghostiumz": 1.721529913218819,
+    "ghostium-z": 1.721529913218819,
     "mind-plate": 0.7458816332051628,
-    "normaliumz": 0.9999398649959093,
-    "darkiniumz": 1.2142863469225338,
+    "normalium-z": 0.9999398649959093,
+    "darkinium-z": 1.2142863469225338,
     "light-clay": 1.9361247259672076,
     "tanga-berry": 0.9967631742045289,
     "focus-band": 4.719306709050278,
     "razor-fang": 0.330262669827163,
     "assault-vest": 1.6795961314506114,
     "icicle-plate": 0.5704265043479864,
-    "fightiniumz": 0.9980053103495887,
+    "fightinium-z": 0.9980053103495887,
     "white-herb": 0.7797051855231847
   },
   "abilities": {
@@ -84,7 +91,7 @@
     "ice-punch": 81.68357864440685,
     "stomping-tantrum": 36.4398136963101,
     "icy-wind": 120.98938825901271,
-    "hiddenpowerfire": 111.60767380819507,
+    "hidden-power-fire": 111.60767380819507,
     "poison-jab": 39.68110130236901,
     "rock-tomb": 20.819260339182108,
     "magic-coat": 150.69694856621211,
@@ -106,9 +113,9 @@
     "double-edge": 17.52613992745047,
     "focus-punch": 4.160229162326335,
     "toxic": 17.92196136517386,
-    "hiddenpowerrock": 0.9013767729483266,
+    "hidden-power-rock": 0.9013767729483266,
     "solar-beam": 0.00011341225560135282,
-    "hiddenpowerfighting": 0.9731888677055913,
+    "hidden-power-fighting": 0.9731888677055913,
     "detect": 8.121172217247363,
     "power-up-punch": 6.6037477421286255,
     "skill-swap": 0.0002098437429302047,
@@ -148,7 +155,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "15.2",
       "evs": {
         "hp": 0,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.5",
       "evs": {
         "hp": 0,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "12.6",
       "evs": {
         "hp": 0,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "9.1",
       "evs": {
         "hp": 0,
@@ -196,7 +203,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.1",
       "evs": {
         "hp": 4,
@@ -208,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.6",
       "evs": {
         "hp": 0,
@@ -220,7 +227,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -232,7 +239,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -244,7 +251,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -256,7 +263,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 0,

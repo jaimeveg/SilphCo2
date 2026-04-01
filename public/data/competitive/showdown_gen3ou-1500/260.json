@@ -7,6 +7,18 @@
     "base_weight": 81620.24122386027,
     "percent": 34.88630579048882
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 67826.86554547682,
     "salac-berry": 13067.09349947864,
@@ -104,7 +116,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "13.6",
       "evs": {
         "hp": 248,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.9",
       "evs": {
         "hp": 0,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.9",
       "evs": {
         "hp": 248,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.5",
       "evs": {
         "hp": 240,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.8",
       "evs": {
         "hp": 248,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "1.3",
       "evs": {
         "hp": 252,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.3",
       "evs": {
         "hp": 240,

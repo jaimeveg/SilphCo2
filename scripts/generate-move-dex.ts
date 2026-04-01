@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 
-const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
+const POKEAPI_GQL = 'https://graphql.pokeapi.co/v1beta2/v1/graphql';
 const CHUNK_SIZE = 500; 
 
 const QUERY_MOVES = `
   query GetMoveDex($limit: Int, $offset: Int) {
-    pokemon_v2_move(limit: $limit, offset: $offset, order_by: {id: asc}) {
+    move(limit: $limit, offset: $offset, order_by: {id: asc}) {
       id
       name
       power
@@ -14,22 +14,22 @@ const QUERY_MOVES = `
       pp
       priority
       # effect_chance ELIMINADO: No existe en la raíz en GraphQL
-      pokemon_v2_type {
+      type {
         name
       }
-      pokemon_v2_movedamageclass {
+      movedamageclass {
         name
       }
-      pokemon_v2_movetarget {
+      movetarget {
         name
       }
-      pokemon_v2_moveeffect {
-        pokemon_v2_moveeffecteffecttexts(where: {language_id: {_eq: 9}}) {
+      moveeffect {
+        moveeffecteffecttexts(where: {language_id: {_eq: 9}}) {
           short_effect
         }
       }
       # META DATA
-      pokemon_v2_movemeta {
+      movemeta {
         ailment_chance
         flinch_chance
         stat_chance 
@@ -40,22 +40,22 @@ const QUERY_MOVES = `
         max_hits
         min_turns
         max_turns
-        pokemon_v2_movemetaailment {
+        movemetaailment {
           name
         }
-        pokemon_v2_movemetacategory {
+        movemetacategory {
           name
         }
       }
       # CAMBIOS DE STATS
-      pokemon_v2_movemetastatchanges {
+      movemetastatchanges {
         change
-        pokemon_v2_stat {
+        stat {
           name
         }
       }
       # APRENDICES
-      pokemon_v2_pokemonmoves(distinct_on: pokemon_id) {
+      pokemonmoves(distinct_on: pokemon_id) {
         pokemon_id
       }
     }
@@ -106,7 +106,7 @@ async function fetchAllMoves() {
             const json = await response.json();
             if (json.errors) throw new Error(JSON.stringify(json.errors));
 
-            const chunk = json.data.pokemon_v2_move;
+            const chunk = json.data.move;
             allMoves = [...allMoves, ...chunk];
             process.stdout.write(`   ↳ Recibidos ${allMoves.length} movimientos...\r`);
 
@@ -131,8 +131,8 @@ async function generateMoveDex() {
 
     rawMoves.forEach((m: any) => {
         const slug = m.name.toLowerCase().replace(/\s+/g, '-');
-        const meta = m.pokemon_v2_movemeta[0] || null; 
-        let effectText = m.pokemon_v2_moveeffect?.pokemon_v2_moveeffecteffecttexts[0]?.short_effect || "";
+        const meta = m.movemeta[0] || null; 
+        let effectText = m.moveeffect?.moveeffecteffecttexts[0]?.short_effect || "";
 
         // CALCULAR PROBABILIDAD DE EFECTO
         // Si hay meta, buscamos cual es el chance relevante (estado, retroceso o stats)
@@ -147,16 +147,16 @@ async function generateMoveDex() {
         }
 
         // 1. Stats
-        const statChanges = m.pokemon_v2_movemetastatchanges.map((sc: any) => ({
-            stat: sc.pokemon_v2_stat.name,
+        const statChanges = m.movemetastatchanges.map((sc: any) => ({
+            stat: sc.stat.name,
             stages: sc.change, 
         }));
 
         // 2. Ailments
         let status = null;
-        if (meta && meta.pokemon_v2_movemetaailment?.name !== 'none') {
+        if (meta && meta.movemetaailment?.name !== 'none') {
             status = {
-                condition: meta.pokemon_v2_movemetaailment.name,
+                condition: meta.movemetaailment.name,
                 chance: meta.ailment_chance || 100 
             };
         }
@@ -174,13 +174,13 @@ async function generateMoveDex() {
         output[slug] = {
             id: m.id,
             name: m.name,
-            type: m.pokemon_v2_type?.name || 'normal',
-            category: m.pokemon_v2_movedamageclass?.name || 'status',
+            type: m.type?.name || 'normal',
+            category: m.movedamageclass?.name || 'status',
             power: m.power,
             accuracy: m.accuracy,
             pp: m.pp,
             priority: m.priority,
-            target: m.pokemon_v2_movetarget?.name || 'selected-pokemon',
+            target: m.movetarget?.name || 'selected-pokemon',
             effectText: effectText,
             tactics: {
                 status,
@@ -192,7 +192,7 @@ async function generateMoveDex() {
                 maxHits: meta?.max_hits,
                 ...tags 
             },
-            learners: m.pokemon_v2_pokemonmoves.map((pm: any) => pm.pokemon_id)
+            learners: m.pokemonmoves.map((pm: any) => pm.pokemon_id)
         };
     });
 

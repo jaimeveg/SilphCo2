@@ -7,6 +7,18 @@
     "base_weight": 7123.840928503804,
     "percent": 4.737499568917619
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-scarf": 1647.5693498934656,
     "focus-sash": 1066.8544838348137,
@@ -112,7 +124,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.2",
       "evs": {
         "hp": 0,
@@ -124,7 +136,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.1",
       "evs": {
         "hp": 4,
@@ -136,7 +148,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.3",
       "evs": {
         "hp": 252,
@@ -148,7 +160,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.2",
       "evs": {
         "hp": 92,
@@ -160,7 +172,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -172,7 +184,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.5",
       "evs": {
         "hp": 236,
@@ -184,7 +196,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 20,
@@ -196,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.6",
       "evs": {
         "hp": 0,
@@ -208,7 +220,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.3",
       "evs": {
         "hp": 20,
@@ -220,7 +232,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -405,6 +417,7 @@
     "876": 4.673133280956397,
     "877": 0,
     "887": 19.087744704291026,
+    "892": 211.06074440729142,
     "894": 42.087187046235684,
     "895": 15.683789104247374,
     "896": 0.2329298707543957,
@@ -494,7 +507,7 @@
     "10170": 15.730737045796296,
     "10171": 20.489144102030817,
     "10186": 588.1557038951273,
-    "10191": 396.7916613343197,
+    "10191": 185.7309169270283,
     "10230": 138.707909945612,
     "10232": 9.0214650594762,
     "10233": 8.709874184484308,

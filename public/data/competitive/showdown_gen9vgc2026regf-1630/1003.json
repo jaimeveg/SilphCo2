@@ -7,6 +7,18 @@
     "base_weight": 8225.975569931761,
     "percent": 3.899802498124942
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "clear-amulet": 3914.378768719694,
     "leftovers": 116.35600040713088,
@@ -128,7 +140,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.7",
       "evs": {
         "hp": 244,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.0",
       "evs": {
         "hp": 236,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.1",
       "evs": {
         "hp": 252,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.8",
       "evs": {
         "hp": 204,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.6",
       "evs": {
         "hp": 212,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.9",
       "evs": {
         "hp": 212,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 196,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 164,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 100,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.2",
       "evs": {
         "hp": 220,
@@ -523,6 +535,7 @@
     "876": 2.548964293440975,
     "879": 0,
     "887": 129.42639792695002,
+    "892": 83.41587765602253,
     "894": 4.939774742916001,
     "895": 3.409156358608182,
     "896": 0.49952089313334513,
@@ -628,7 +641,7 @@
     "10171": 12.836838787204165,
     "10172": 0.023495143058076706,
     "10186": 58.95765952919002,
-    "10191": 2168.653611003876,
+    "10191": 2085.2377333478535,
     "10230": 290.55242579145977,
     "10232": 0.06904000904168539,
     "10233": 0.7710552997140172,

@@ -1,12 +1,29 @@
 {
   "id": "10003",
-  "name": "Deoxys Speed",
+  "name": "Deoxys speed",
   "format_id": "showdown_gen9ubers-1630",
   "usage_metrics": {
     "raw": 11328,
     "base_weight": 4384.436316232987,
     "percent": 4.184551734328248
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "focus-sash": 2355.2866792268665,
     "rocky-helmet": 1536.3928256748118,
@@ -154,7 +171,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "17.4",
       "evs": {
         "hp": 248,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "15.0",
       "evs": {
         "hp": 248,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.7",
       "evs": {
         "hp": 0,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.1",
       "evs": {
         "hp": 248,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.9",
       "evs": {
         "hp": 248,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.4",
       "evs": {
         "hp": 4,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "4.4",
       "evs": {
         "hp": 0,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 248,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -262,7 +279,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -486,6 +503,7 @@
     "884": 1.5006883583040653,
     "887": 2.155327055796441,
     "890": 1650.0820239073373,
+    "892": 16.199837994064385,
     "893": 0.03353879854543779,
     "894": 100.38727883296376,
     "895": 0.03065185136538834,
@@ -577,7 +595,7 @@
     "10186": 0,
     "10188": 3303.2308299860792,
     "10189": 31.785046791071316,
-    "10191": 38.03279856411193,
+    "10191": 21.83296057004754,
     "10193": 539.9968709823382,
     "10230": 0.7746276630418067,
     "10232": 0.00037066780404343413,

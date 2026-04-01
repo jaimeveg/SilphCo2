@@ -7,6 +7,18 @@
     "base_weight": 40334.92280688,
     "percent": 5.164463924391545
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "assault-vest": 23141.699703012546,
     "booster-energy": 3562.193075133426,
@@ -133,7 +145,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.5",
       "evs": {
         "hp": 252,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "7.4",
       "evs": {
         "hp": 252,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.4",
       "evs": {
         "hp": 92,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 76,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.2",
       "evs": {
         "hp": 4,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.8",
       "evs": {
         "hp": 220,
@@ -205,7 +217,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.6",
       "evs": {
         "hp": 84,
@@ -217,7 +229,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.5",
       "evs": {
         "hp": 4,
@@ -229,7 +241,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.3",
       "evs": {
         "hp": 164,
@@ -241,7 +253,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.3",
       "evs": {
         "hp": 4,
@@ -546,6 +558,7 @@
     "879": 5.636340631676298,
     "884": 6.800721524220147,
     "887": 410.0888722811712,
+    "892": 6118.157904591143,
     "894": 171.8664878164035,
     "895": 437.74004126793,
     "896": 134.80663741102515,
@@ -656,7 +669,7 @@
     "10171": 830.84351313535,
     "10172": 61.409493896203664,
     "10186": 4652.830816672632,
-    "10191": 10731.728824331836,
+    "10191": 4613.570919740692,
     "10230": 1349.6662826254453,
     "10232": 16.161427631623532,
     "10233": 253.79955498900173,

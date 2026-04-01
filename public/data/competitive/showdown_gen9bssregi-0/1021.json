@@ -7,6 +7,18 @@
     "base_weight": 1164,
     "percent": 2.068156781919619
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "booster-energy": 96,
     "choice-specs": 182,
@@ -71,7 +83,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "18.1",
       "evs": {
         "hp": 244,
@@ -83,7 +95,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "9.5",
       "evs": {
         "hp": 252,
@@ -95,7 +107,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.8",
       "evs": {
         "hp": 244,
@@ -107,7 +119,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.8",
       "evs": {
         "hp": 200,
@@ -119,7 +131,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.9",
       "evs": {
         "hp": 252,
@@ -131,7 +143,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.1",
       "evs": {
         "hp": 244,
@@ -143,7 +155,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -155,7 +167,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 52,
@@ -167,7 +179,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -179,7 +191,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 64,
@@ -254,6 +266,7 @@
     "861": 46,
     "887": 1,
     "890": 11,
+    "892": 101,
     "894": 13,
     "895": 1,
     "901": 61,
@@ -306,7 +319,7 @@
     "10186": 2,
     "10188": 79,
     "10189": 50,
-    "10191": 156,
+    "10191": 55,
     "10193": 67,
     "10194": 231,
     "10230": 8,

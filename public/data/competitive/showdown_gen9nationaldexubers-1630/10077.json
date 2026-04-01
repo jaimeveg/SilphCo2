@@ -1,12 +1,24 @@
 {
   "id": "10077",
-  "name": "Kyogre Primal",
+  "name": "Kyogre primal",
   "format_id": "showdown_gen9nationaldexubers-1630",
   "usage_metrics": {
     "raw": 33500,
     "base_weight": 9624.116078677856,
     "percent": 11.313745356298547
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "blue-orb": 9624.116078677856
   },
@@ -85,7 +97,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "13.0",
       "evs": {
         "hp": 252,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.5",
       "evs": {
         "hp": 0,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.8",
       "evs": {
         "hp": 240,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.0",
       "evs": {
         "hp": 0,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.5",
       "evs": {
         "hp": 248,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.6",
       "evs": {
         "hp": 4,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -556,6 +568,7 @@
     "883": 0,
     "887": 40.09276658137889,
     "890": 1230.7776695345647,
+    "892": 44.15118722011939,
     "893": 11.002003035532427,
     "894": 41.22225774114645,
     "895": 4.62637584957013,
@@ -720,7 +733,7 @@
     "10186": 1.4554905498030037,
     "10188": 3864.2592685959817,
     "10189": 131.16634563050465,
-    "10191": 59.04499805775256,
+    "10191": 14.893810837633167,
     "10193": 447.4687088220553,
     "10230": 0.12576231135761579,
     "10236": 1.9399215450519784,

@@ -7,6 +7,23 @@
     "base_weight": 1045.7309969154594,
     "percent": 2.8878934925967403
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 1006.5092371244311,
     "sitrus-berry": 0.1419793083055318,
@@ -75,7 +92,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "22.0",
       "evs": {
         "hp": 252,
@@ -87,7 +104,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "21.4",
       "evs": {
         "hp": 252,
@@ -99,7 +116,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "20.9",
       "evs": {
         "hp": 252,
@@ -111,7 +128,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "10.5",
       "evs": {
         "hp": 252,
@@ -123,7 +140,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.3",
       "evs": {
         "hp": 252,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.7",
       "evs": {
         "hp": 248,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.1",
       "evs": {
         "hp": 252,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.9",
       "evs": {
         "hp": 248,

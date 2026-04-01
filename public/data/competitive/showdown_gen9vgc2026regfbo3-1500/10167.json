@@ -1,12 +1,29 @@
 {
   "id": "10167",
-  "name": "Weezing Galar",
+  "name": "Weezing galarian",
   "format_id": "showdown_gen9vgc2026regfbo3-1500",
   "usage_metrics": {
     "raw": 12080,
     "base_weight": 7874.885951799161,
     "percent": 2.3144334044778923
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "sitrus-berry": 5694.6258583347735,
     "leftovers": 256.4243266158789,
@@ -132,7 +149,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "21.5",
       "evs": {
         "hp": 252,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -204,7 +221,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -216,7 +233,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -228,7 +245,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -240,7 +257,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.4",
       "evs": {
         "hp": 220,
@@ -438,6 +455,7 @@
     "879": 0.21896319529790415,
     "884": 1.0094793433656908,
     "887": 262.7641675388109,
+    "892": 107.71218696019436,
     "894": 25.367809920657397,
     "895": 2.825781234957727,
     "897": 5.600185807091264,
@@ -522,7 +540,7 @@
     "10171": 112.57390545419194,
     "10172": 0.17581906806818076,
     "10186": 432.772391982329,
-    "10191": 1130.3851755334538,
+    "10191": 1022.6729885732594,
     "10230": 109.82767005366681,
     "10233": 59.45307291282068,
     "10236": 1.0119457452814733,

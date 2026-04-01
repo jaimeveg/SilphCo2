@@ -1,12 +1,29 @@
 {
   "id": "10037",
-  "name": "Alakazam Mega",
+  "name": "Alakazam mega",
   "format_id": "showdown_gen6ou-0",
   "usage_metrics": {
     "raw": 2582,
     "base_weight": 2582,
     "percent": 3.8709483973494043
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "alakazite": 2582
   },
@@ -59,7 +76,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "37.8",
       "evs": {
         "hp": 0,
@@ -71,7 +88,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "19.2",
       "evs": {
         "hp": 0,
@@ -83,7 +100,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "13.2",
       "evs": {
         "hp": 0,
@@ -95,7 +112,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.2",
       "evs": {
         "hp": 4,
@@ -107,7 +124,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 112,
@@ -119,7 +136,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 56,
@@ -131,7 +148,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.7",
       "evs": {
         "hp": 100,
@@ -143,7 +160,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -155,7 +172,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.1",
       "evs": {
         "hp": 0,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.8",
       "evs": {
         "hp": 0,

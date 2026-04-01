@@ -1,0 +1,279 @@
+{
+  "id": "245",
+  "name": "Suicune",
+  "format_id": "showdown_gen8ou-0",
+  "usage_metrics": {
+    "raw": 1229,
+    "base_weight": 1229,
+    "percent": 1.537249211987792
+  },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "leftovers": 1033,
+    "weakness-policy": 61,
+    "wacan-berry": 112,
+    "sitrus-berry": 8,
+    "choice-specs": 3,
+    "chesto-berry": 8,
+    "rocky-helmet": 1,
+    "life-orb": 3
+  },
+  "abilities": {
+    "pressure": 1217,
+    "inner-focus": 12
+  },
+  "moves": {
+    "calm-mind": 1213,
+    "scald": 1155,
+    "rest": 573,
+    "sleep-talk": 141,
+    "substitute": 874,
+    "surf": 64,
+    "air-slash": 62,
+    "agility": 64,
+    "protect": 461,
+    "ice-beam": 146,
+    "mirror-coat": 112,
+    "whirlpool": 9,
+    "hydro-pump": 7,
+    "shadow-ball": 4,
+    "icy-wind": 2,
+    "extreme-speed": 5,
+    "snarl": 2,
+    "extrasensory": 1,
+    "liquidation": 3,
+    "tailwind": 3,
+    "rain-dance": 3,
+    "blizzard": 4,
+    "reflect": 4,
+    "toxic": 4
+  },
+  "teras": {
+    "nothing": 1229
+  },
+  "spreads": [
+    {
+      "nature": "timid",
+      "usage": "46.8",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "11.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "11.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "9.1",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 252,
+        "spa": 252,
+        "spd": 0,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "4.8",
+      "evs": {
+        "hp": 64,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 192
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 80,
+        "spa": 0,
+        "spd": 0,
+        "spe": 176
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.1",
+      "evs": {
+        "hp": 248,
+        "atk": 0,
+        "def": 8,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.0",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 40,
+        "spa": 0,
+        "spd": 0,
+        "spe": 216
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "1.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 24,
+        "spa": 0,
+        "spd": 0,
+        "spe": 232
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "1.3",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "34": 2,
+    "36": 687,
+    "42": 4,
+    "45": 23,
+    "80": 1,
+    "91": 19,
+    "94": 106,
+    "113": 17,
+    "143": 113,
+    "145": 17,
+    "146": 5,
+    "149": 118,
+    "151": 8,
+    "169": 3,
+    "186": 5,
+    "195": 1,
+    "197": 2,
+    "208": 1,
+    "212": 61,
+    "213": 3,
+    "226": 26,
+    "242": 25,
+    "243": 8,
+    "244": 106,
+    "248": 73,
+    "251": 4,
+    "257": 4,
+    "330": 1,
+    "373": 6,
+    "376": 6,
+    "379": 19,
+    "381": 4,
+    "385": 5,
+    "423": 4,
+    "445": 154,
+    "450": 721,
+    "461": 31,
+    "462": 128,
+    "464": 1,
+    "468": 14,
+    "473": 3,
+    "482": 59,
+    "485": 90,
+    "488": 91,
+    "494": 30,
+    "530": 124,
+    "534": 110,
+    "545": 3,
+    "598": 35,
+    "609": 3,
+    "623": 4,
+    "637": 35,
+    "663": 112,
+    "681": 299,
+    "721": 2,
+    "727": 22,
+    "748": 597,
+    "752": 14,
+    "758": 5,
+    "768": 5,
+    "771": 4,
+    "784": 11,
+    "785": 10,
+    "786": 9,
+    "787": 4,
+    "788": 67,
+    "793": 116,
+    "794": 7,
+    "797": 2,
+    "798": 5,
+    "806": 14,
+    "807": 88,
+    "809": 30,
+    "812": 102,
+    "818": 2,
+    "823": 428,
+    "887": 7,
+    "10019": 726,
+    "10021": 33,
+    "10104": 59,
+    "10165": 3,
+    "10167": 4,
+    "10171": 1,
+    "10172": 26,
+    "10191": 3
+  }
+}

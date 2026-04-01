@@ -1,12 +1,19 @@
 {
   "id": "10001",
-  "name": "Deoxys Attack",
+  "name": "Deoxys attack",
   "format_id": "showdown_gen9ubers-1500",
   "usage_metrics": {
     "raw": 15287,
     "base_weight": 11570.166958419653,
     "percent": 5.647002327213623
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 6385.301120085093,
     "life-orb": 3398.695027253367,
@@ -155,7 +162,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "19.7",
       "evs": {
         "hp": 0,
@@ -167,7 +174,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "17.4",
       "evs": {
         "hp": 0,
@@ -179,7 +186,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.0",
       "evs": {
         "hp": 0,
@@ -191,7 +198,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "6.9",
       "evs": {
         "hp": 0,
@@ -203,7 +210,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -215,7 +222,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.1",
       "evs": {
         "hp": 4,
@@ -227,7 +234,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -239,7 +246,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -251,7 +258,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.6",
       "evs": {
         "hp": 4,
@@ -263,7 +270,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -493,6 +500,7 @@
     "884": 0.8055900970301137,
     "887": 92.89399262628216,
     "890": 1369.482750165747,
+    "892": 450.95299635315564,
     "893": 2.1123679243815023,
     "894": 713.9468772254068,
     "895": 7.929568609282201,
@@ -586,7 +594,7 @@
     "10186": 169.3232473010993,
     "10188": 5465.697575694714,
     "10189": 341.2741959058935,
-    "10191": 783.9786046807076,
+    "10191": 333.02560832755194,
     "10193": 1384.9564175670664,
     "10230": 11.83893963096072,
     "10233": 0.9999999999787135,

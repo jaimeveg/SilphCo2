@@ -7,6 +7,23 @@
     "base_weight": 8588,
     "percent": 4.160893031909224
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "covert-cloak": 321,
     "wide-lens": 2733,
@@ -152,7 +169,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "30.3",
       "evs": {
         "hp": 0,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.1",
       "evs": {
         "hp": 4,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.9",
       "evs": {
         "hp": 248,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -212,7 +229,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -224,7 +241,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -236,7 +253,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -248,7 +265,7 @@
       }
     },
     {
-      "nature": "Hardy",
+      "nature": "hardy",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -260,7 +277,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.6",
       "evs": {
         "hp": 4,
@@ -532,6 +549,7 @@
     "884": 15,
     "887": 92,
     "890": 124,
+    "892": 174,
     "893": 13,
     "894": 69,
     "895": 66,
@@ -642,7 +660,7 @@
     "10186": 658,
     "10188": 813,
     "10189": 499,
-    "10191": 741,
+    "10191": 567,
     "10193": 568,
     "10194": 2027,
     "10230": 47,

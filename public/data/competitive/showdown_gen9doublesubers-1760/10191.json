@@ -1,12 +1,19 @@
 {
   "id": "10191",
-  "name": "Urshifu Rapid Strike",
+  "name": "Urshifu rapid strike style",
   "format_id": "showdown_gen9doublesubers-1760",
   "usage_metrics": {
-    "raw": 43494,
+    "raw": 34213,
     "base_weight": 496.9360363716763,
-    "percent": 21.072878613164857
+    "percent": 16.57622651382281
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-scarf": 233.73522474145597,
     "focus-sash": 58.921499147326365,
@@ -153,7 +160,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "21.4",
       "evs": {
         "hp": 4,
@@ -165,7 +172,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "20.7",
       "evs": {
         "hp": 4,
@@ -177,7 +184,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "19.8",
       "evs": {
         "hp": 0,
@@ -189,7 +196,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.7",
       "evs": {
         "hp": 0,
@@ -201,7 +208,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.2",
       "evs": {
         "hp": 4,
@@ -213,7 +220,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 108,
@@ -225,7 +232,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 0,
@@ -237,7 +244,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 0,
@@ -249,7 +256,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 0,
@@ -261,7 +268,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.0",
       "evs": {
         "hp": 156,

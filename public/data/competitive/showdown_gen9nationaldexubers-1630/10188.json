@@ -1,12 +1,24 @@
 {
   "id": "10188",
-  "name": "Zacian Crowned",
+  "name": "Zacian crowned",
   "format_id": "showdown_gen9nationaldexubers-1630",
   "usage_metrics": {
     "raw": 42617,
     "base_weight": 13158.062328970344,
     "percent": 14.392772711921648
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-sword": 13158.062328970344
   },
@@ -89,7 +101,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "35.0",
       "evs": {
         "hp": 0,
@@ -101,7 +113,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "23.5",
       "evs": {
         "hp": 0,
@@ -113,7 +125,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.3",
       "evs": {
         "hp": 4,
@@ -125,7 +137,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.8",
       "evs": {
         "hp": 0,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.4",
       "evs": {
         "hp": 0,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 0,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 4,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.0",
       "evs": {
         "hp": 6,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "0.6",
       "evs": {
         "hp": 0,
@@ -551,6 +563,7 @@
     "884": 7.741479679523877e-11,
     "887": 28.049994566028545,
     "890": 2198.3379257148586,
+    "892": 35.779158239091664,
     "893": 11.005942548449571,
     "894": 10.667444123279896,
     "895": 7.116876356878916,
@@ -710,7 +723,7 @@
     "10181": 5.867421624090257,
     "10186": 0.017949554715661564,
     "10189": 66.1688043443493,
-    "10191": 173.77265616025053,
+    "10191": 137.99349792115888,
     "10193": 381.67374373762146,
     "10230": 0.2890024847225707,
     "10232": 0.005066405712294442,

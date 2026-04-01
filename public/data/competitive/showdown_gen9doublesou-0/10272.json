@@ -1,12 +1,19 @@
 {
   "id": "10272",
-  "name": "Ursaluna Bloodmoon",
+  "name": "Ursaluna bloodmoon",
   "format_id": "showdown_gen9doublesou-0",
   "usage_metrics": {
     "raw": 47636,
     "base_weight": 47636,
     "percent": 8.077868782961115
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "silk-scarf": 1440,
     "assault-vest": 12835,
@@ -153,7 +160,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "25.0",
       "evs": {
         "hp": 252,
@@ -165,7 +172,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "18.2",
       "evs": {
         "hp": 252,
@@ -177,7 +184,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.8",
       "evs": {
         "hp": 104,
@@ -189,7 +196,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 108,
@@ -201,7 +208,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.8",
       "evs": {
         "hp": 4,
@@ -213,7 +220,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -225,7 +232,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -237,7 +244,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -249,7 +256,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.3",
       "evs": {
         "hp": 4,
@@ -261,7 +268,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.2",
       "evs": {
         "hp": 4,

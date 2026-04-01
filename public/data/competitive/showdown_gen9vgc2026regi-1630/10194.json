@@ -1,12 +1,29 @@
 {
   "id": "10194",
-  "name": "Calyrex Shadow",
+  "name": "Calyrex shadow",
   "format_id": "showdown_gen9vgc2026regi-1630",
   "usage_metrics": {
     "raw": 121632,
     "base_weight": 22202.58041164549,
     "percent": 29.627175782258576
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "mental-herb": 19.532303927124232,
     "focus-sash": 8989.439850062843,
@@ -170,7 +187,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "30.0",
       "evs": {
         "hp": 4,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "11.4",
       "evs": {
         "hp": 0,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "10.6",
       "evs": {
         "hp": 0,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.9",
       "evs": {
         "hp": 108,
@@ -218,7 +235,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 12,
@@ -230,7 +247,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 4,
@@ -242,7 +259,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.5",
       "evs": {
         "hp": 4,
@@ -254,7 +271,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 92,
@@ -266,7 +283,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.2",
       "evs": {
         "hp": 28,
@@ -278,7 +295,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -597,6 +614,7 @@
     "886": 9.222499143257679e-7,
     "887": 5.589923103333509,
     "890": 175.72648293338912,
+    "892": 571.4070672813392,
     "894": 96.25746745344728,
     "895": 17.8372190970546,
     "896": 16.34947400495477,
@@ -719,7 +737,7 @@
     "10186": 2254.1205358915595,
     "10188": 458.19737255880716,
     "10189": 9608.39019555936,
-    "10191": 5247.84271213194,
+    "10191": 4676.4356448506005,
     "10230": 51.48820950805671,
     "10232": 0.4055990030517821,
     "10233": 6.940491285987173,

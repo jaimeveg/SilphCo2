@@ -1,12 +1,24 @@
 {
   "id": "10272",
-  "name": "Ursaluna Bloodmoon",
+  "name": "Ursaluna bloodmoon",
   "format_id": "showdown_gen9bssregi-1500",
   "usage_metrics": {
     "raw": 6571,
     "base_weight": 4095.3239946965878,
     "percent": 11.6751359226751
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "life-orb": 147.19144461723232,
     "electric-seed": 15.615515702580078,
@@ -85,7 +97,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "17.4",
       "evs": {
         "hp": 84,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "7.5",
       "evs": {
         "hp": 252,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.3",
       "evs": {
         "hp": 148,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.6",
       "evs": {
         "hp": 244,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.6",
       "evs": {
         "hp": 180,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 36,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 228,
@@ -181,7 +193,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.6",
       "evs": {
         "hp": 4,
@@ -193,7 +205,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.5",
       "evs": {
         "hp": 84,
@@ -313,6 +325,7 @@
     "876": 0.5146899351458328,
     "887": 38.083735777503726,
     "890": 355.3720686321605,
+    "892": 76.40088843322454,
     "894": 3.495339568853126,
     "896": 0.5783560135585316,
     "900": 10.85387667130271,
@@ -387,7 +400,7 @@
     "10186": 6.384571959699733,
     "10188": 584.9096759155804,
     "10189": 4.33116119046519,
-    "10191": 752.2473908168466,
+    "10191": 675.8465023836221,
     "10193": 688.1714365553983,
     "10194": 978.5838296336665,
     "10230": 2.0721745636173985,

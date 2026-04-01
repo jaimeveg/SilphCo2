@@ -7,6 +7,23 @@
     "base_weight": 2902.756838671752,
     "percent": 3.4018698765574307
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 2303.6899842847165,
     "rocky-helmet": 8.685499514400698,
@@ -365,7 +382,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "23.1",
       "evs": {
         "hp": 252,
@@ -377,7 +394,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "20.9",
       "evs": {
         "hp": 252,
@@ -389,7 +406,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.8",
       "evs": {
         "hp": 252,
@@ -401,7 +418,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.8",
       "evs": {
         "hp": 252,
@@ -413,7 +430,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.9",
       "evs": {
         "hp": 248,
@@ -425,7 +442,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.7",
       "evs": {
         "hp": 0,
@@ -437,7 +454,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.5",
       "evs": {
         "hp": 4,
@@ -449,7 +466,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -461,7 +478,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -473,7 +490,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.9",
       "evs": {
         "hp": 252,

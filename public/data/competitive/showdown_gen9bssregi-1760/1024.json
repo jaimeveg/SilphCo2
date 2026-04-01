@@ -7,6 +7,23 @@
     "base_weight": 9.304204774305461,
     "percent": 6.016133044312569
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 0.0000017269427005084381,
     "choice-scarf": 0.005515386581722792,
@@ -72,7 +89,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "53.4",
       "evs": {
         "hp": 4,
@@ -84,7 +101,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "24.5",
       "evs": {
         "hp": 252,
@@ -96,7 +113,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.8",
       "evs": {
         "hp": 0,
@@ -108,7 +125,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -120,7 +137,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "0.8",
       "evs": {
         "hp": 228,
@@ -132,7 +149,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.8",
       "evs": {
         "hp": 44,
@@ -144,7 +161,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "0.7",
       "evs": {
         "hp": 228,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.6",
       "evs": {
         "hp": 252,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "0.5",
       "evs": {
         "hp": 172,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "0.3",
       "evs": {
         "hp": 248,
@@ -290,6 +307,7 @@
     "875": 0,
     "887": 0.0002486754146950876,
     "890": 0.011269930445566512,
+    "892": 0.04933752180599743,
     "897": 0,
     "901": 0.0034477987408149113,
     "902": 0,
@@ -350,7 +368,7 @@
     "10172": 0.03329270736738832,
     "10188": 0.49494039627012987,
     "10189": 2.061562759392288e-8,
-    "10191": 0.05609218186614223,
+    "10191": 0.0067546600601448015,
     "10193": 0.024956198704166488,
     "10194": 3.401381267126085,
     "10230": 2.150279121099188,

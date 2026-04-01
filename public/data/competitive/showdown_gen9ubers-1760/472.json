@@ -7,6 +7,23 @@
     "base_weight": 1114.939965017189,
     "percent": 7.692364522921208
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "toxic-orb": 1114.7885329508288,
     "leftovers": 0.05022775471319202,
@@ -145,7 +162,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "50.0",
       "evs": {
         "hp": 244,
@@ -157,7 +174,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -169,7 +186,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.7",
       "evs": {
         "hp": 248,
@@ -181,7 +198,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -193,7 +210,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -205,7 +222,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.7",
       "evs": {
         "hp": 252,
@@ -217,7 +234,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -229,7 +246,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -241,7 +258,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 240,
@@ -253,7 +270,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.2",
       "evs": {
         "hp": 244,
@@ -579,6 +596,7 @@
     "884": 7.03406055624356e-10,
     "887": 1.2577321641787123,
     "890": 226.79248159879947,
+    "892": 0.2740621229888622,
     "893": 0.000007439888378035775,
     "894": 5.032223374701337,
     "895": 0.0012307609132434227,
@@ -700,7 +718,7 @@
     "10186": 0.006022343566396915,
     "10188": 12.159106557147966,
     "10189": 0.9648584073890811,
-    "10191": 1.2612493668820877,
+    "10191": 0.9871872438932254,
     "10193": 21.686770990175773,
     "10230": 0.010538997002062678,
     "10232": 8.059664047266324e-13,

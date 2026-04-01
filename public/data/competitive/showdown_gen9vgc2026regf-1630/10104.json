@@ -1,12 +1,29 @@
 {
   "id": "10104",
-  "name": "Ninetales Alola",
+  "name": "Ninetales alolan",
   "format_id": "showdown_gen9vgc2026regf-1630",
   "usage_metrics": {
     "raw": 81475,
     "base_weight": 6697.514768915348,
     "percent": 5.187448507530156
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 4842.10844313147,
     "nothing": 8.240310895375186,
@@ -144,7 +161,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "28.9",
       "evs": {
         "hp": 84,
@@ -156,7 +173,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "12.0",
       "evs": {
         "hp": 4,
@@ -168,7 +185,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.3",
       "evs": {
         "hp": 252,
@@ -180,7 +197,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.8",
       "evs": {
         "hp": 164,
@@ -192,7 +209,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.7",
       "evs": {
         "hp": 84,
@@ -204,7 +221,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.7",
       "evs": {
         "hp": 36,
@@ -216,7 +233,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.4",
       "evs": {
         "hp": 164,
@@ -228,7 +245,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.3",
       "evs": {
         "hp": 220,
@@ -240,7 +257,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.6",
       "evs": {
         "hp": 244,
@@ -252,7 +269,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -586,6 +603,7 @@
     "879": 0.000025703102321361637,
     "884": 0.025022769094044828,
     "887": 17.187369627333116,
+    "892": 175.1253644174667,
     "894": 5.727772281780983,
     "895": 20.831724879380044,
     "896": 9.045877569540448,
@@ -703,7 +721,7 @@
     "10171": 102.90436994172651,
     "10172": 5.468484371640294,
     "10186": 159.83240461538438,
-    "10191": 1033.7011394034464,
+    "10191": 858.5757749859797,
     "10230": 1971.3958735239744,
     "10232": 0.04322270182336996,
     "10233": 8.670964939603131,

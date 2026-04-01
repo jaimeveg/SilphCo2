@@ -7,6 +7,23 @@
     "base_weight": 440.068158020948,
     "percent": 3.899802498124942
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "clear-amulet": 194.7296231102243,
     "leftovers": 2.2096665573635255,
@@ -128,7 +145,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "22.7",
       "evs": {
         "hp": 212,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.9",
       "evs": {
         "hp": 244,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.5",
       "evs": {
         "hp": 212,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.9",
       "evs": {
         "hp": 212,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.9",
       "evs": {
         "hp": 236,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.6",
       "evs": {
         "hp": 52,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 212,
@@ -212,7 +229,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 212,
@@ -224,7 +241,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.4",
       "evs": {
         "hp": 60,
@@ -236,7 +253,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 244,
@@ -523,6 +540,7 @@
     "876": 0.05916333669385271,
     "879": 0,
     "887": 5.484667316180678,
+    "892": 1.68542170629093,
     "894": 0.05295050437235771,
     "895": 0.059309910873482974,
     "896": 0.005137091901980362,
@@ -628,7 +646,7 @@
     "10171": 1.5942026181606983,
     "10172": 0.000004083500392493278,
     "10186": 0.4099097108643717,
-    "10191": 132.21197507996465,
+    "10191": 130.52655337367372,
     "10230": 5.351249052944148,
     "10232": 0.000016472511402354506,
     "10233": 0.010757492788410261,

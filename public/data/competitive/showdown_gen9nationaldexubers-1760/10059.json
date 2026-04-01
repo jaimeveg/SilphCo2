@@ -1,12 +1,24 @@
 {
   "id": "10059",
-  "name": "Lucario Mega",
+  "name": "Lucario mega",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 19088,
     "base_weight": 93.19748554911736,
     "percent": 6.4464707868963185
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "lucarionite": 93.19748554911736
   },
@@ -102,7 +114,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "68.2",
       "evs": {
         "hp": 0,
@@ -114,7 +126,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.7",
       "evs": {
         "hp": 4,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.8",
       "evs": {
         "hp": 0,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.1",
       "evs": {
         "hp": 0,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -186,7 +198,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.5",
       "evs": {
         "hp": 0,
@@ -198,7 +210,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "0.2",
       "evs": {
         "hp": 0,
@@ -210,7 +222,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "0.2",
       "evs": {
         "hp": 0,
@@ -643,6 +655,7 @@
     "884": 0,
     "887": 2.924755851721178,
     "890": 33.73035841134909,
+    "892": 0.11382167285789907,
     "893": 0.00001525369548321942,
     "894": 0.001522063752954661,
     "895": 3.455942787500277e-8,
@@ -808,7 +821,7 @@
     "10186": 0.008983655047521799,
     "10188": 14.928760009558196,
     "10189": 0.10065276805994278,
-    "10191": 0.28494283704894413,
+    "10191": 0.17112116419104506,
     "10193": 3.170041622185629,
     "10230": 6.743140782261694,
     "10232": 0.00000520213749999332,

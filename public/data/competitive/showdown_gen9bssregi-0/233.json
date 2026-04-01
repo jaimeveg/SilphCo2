@@ -7,6 +7,23 @@
     "base_weight": 1204,
     "percent": 2.139227461710671
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "eviolite": 1187,
     "choice-scarf": 17
@@ -63,7 +80,7 @@
   },
   "spreads": [
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "27.2",
       "evs": {
         "hp": 244,
@@ -75,7 +92,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "18.0",
       "evs": {
         "hp": 252,
@@ -87,7 +104,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.4",
       "evs": {
         "hp": 252,
@@ -99,7 +116,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "5.8",
       "evs": {
         "hp": 252,
@@ -111,7 +128,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.1",
       "evs": {
         "hp": 252,
@@ -123,7 +140,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.8",
       "evs": {
         "hp": 244,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.8",
       "evs": {
         "hp": 140,
@@ -265,6 +282,7 @@
     "876": 23,
     "887": 59,
     "890": 36,
+    "892": 24,
     "894": 199,
     "895": 63,
     "896": 3,
@@ -321,7 +339,7 @@
     "10186": 1,
     "10188": 28,
     "10189": 2,
-    "10191": 384,
+    "10191": 360,
     "10193": 64,
     "10194": 62,
     "10238": 14,

@@ -1,12 +1,24 @@
 {
   "id": "10193",
-  "name": "Calyrex Ice",
+  "name": "Calyrex ice",
   "format_id": "showdown_gen9ubers-0",
   "usage_metrics": {
     "raw": 22538,
     "base_weight": 22538,
     "percent": 8.325514388090577
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "assault-vest": 697,
     "choice-band": 2604,
@@ -171,7 +183,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "31.1",
       "evs": {
         "hp": 248,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "11.3",
       "evs": {
         "hp": 252,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "7.5",
       "evs": {
         "hp": 252,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.6",
       "evs": {
         "hp": 248,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.3",
       "evs": {
         "hp": 248,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.5",
       "evs": {
         "hp": 248,
@@ -255,7 +267,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -267,7 +279,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -279,7 +291,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -545,6 +557,7 @@
     "884": 16,
     "887": 171,
     "890": 2336,
+    "892": 357,
     "893": 5,
     "894": 1583,
     "895": 60,
@@ -659,7 +672,7 @@
     "10186": 297,
     "10188": 7018,
     "10189": 554,
-    "10191": 1379,
+    "10191": 1022,
     "10230": 18,
     "10232": 2,
     "10233": 10,

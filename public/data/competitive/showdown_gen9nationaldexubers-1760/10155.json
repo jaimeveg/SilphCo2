@@ -1,12 +1,29 @@
 {
   "id": "10155",
-  "name": "Necrozma Dusk",
+  "name": "Necrozma dusk mane",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 35679,
     "base_weight": 3676.822291140351,
     "percent": 12.049645390070921
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "steelium-z": 0.8117065706152133,
     "weakness-policy": 97.63863872840565,
@@ -142,7 +159,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.1",
       "evs": {
         "hp": 40,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.8",
       "evs": {
         "hp": 252,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.6",
       "evs": {
         "hp": 4,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.1",
       "evs": {
         "hp": 116,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.3",
       "evs": {
         "hp": 4,
@@ -226,7 +243,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 20,
@@ -238,7 +255,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 248,
@@ -250,7 +267,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.7",
       "evs": {
         "hp": 188,
@@ -597,6 +614,7 @@
     "884": 0,
     "887": 3.0092976004842864,
     "890": 861.4190449379261,
+    "892": 1.7123171584331085,
     "893": 0.11761774287274479,
     "894": 0.5344864580993747,
     "895": 2.1038726316646716e-13,
@@ -762,7 +780,7 @@
     "10186": 0.00034424202772037615,
     "10188": 1080.93724080316,
     "10189": 4.199752899303366,
-    "10191": 2.024940600239344,
+    "10191": 0.3126234418062356,
     "10193": 206.94342447676306,
     "10230": 2.5370803791169294e-9,
     "10232": 0,

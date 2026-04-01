@@ -1,12 +1,19 @@
 {
   "id": "10188",
-  "name": "Zacian Crowned",
+  "name": "Zacian crowned",
   "format_id": "showdown_gen9vgc2026regi-1760",
   "usage_metrics": {
     "raw": 24177,
     "base_weight": 252.66335864679556,
     "percent": 5.889044239079071
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-sword": 252.66335864679556
   },
@@ -83,7 +90,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "31.9",
       "evs": {
         "hp": 236,
@@ -95,7 +102,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -107,7 +114,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.3",
       "evs": {
         "hp": 204,
@@ -119,7 +126,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.5",
       "evs": {
         "hp": 92,
@@ -131,7 +138,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -143,7 +150,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 68,
@@ -155,7 +162,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 76,
@@ -167,7 +174,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.6",
       "evs": {
         "hp": 68,
@@ -179,7 +186,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.5",
       "evs": {
         "hp": 108,
@@ -191,7 +198,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 92,
@@ -441,6 +448,7 @@
     "884": 7.053784010224717e-7,
     "887": 1.160507265635964,
     "890": 5.75517589095923,
+    "892": 7.344808647409905,
     "894": 0.24166686435214424,
     "895": 3.382827117534916,
     "896": 0.002867883410358152,
@@ -547,7 +555,7 @@
     "10172": 0.07079549617210934,
     "10186": 6.753472234434032,
     "10189": 0.19252625533205542,
-    "10191": 76.62698827368018,
+    "10191": 69.28217962627028,
     "10193": 2.385461191389645,
     "10194": 19.81633274804292,
     "10230": 0.2255195100213674,

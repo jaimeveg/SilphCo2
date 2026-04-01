@@ -7,6 +7,18 @@
     "base_weight": 2488.023425481512,
     "percent": 4.521445457615671
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "life-orb": 777.8155007254738,
     "electrium-z": 1.257234208103748,
@@ -178,7 +190,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "21.0",
       "evs": {
         "hp": 0,
@@ -190,7 +202,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "16.6",
       "evs": {
         "hp": 0,
@@ -202,7 +214,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.8",
       "evs": {
         "hp": 4,
@@ -214,7 +226,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.3",
       "evs": {
         "hp": 0,
@@ -226,7 +238,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.2",
       "evs": {
         "hp": 32,
@@ -238,7 +250,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.9",
       "evs": {
         "hp": 0,
@@ -250,7 +262,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -262,7 +274,7 @@
       }
     },
     {
-      "nature": "Lonely",
+      "nature": "lonely",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -274,7 +286,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -286,7 +298,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -641,6 +653,7 @@
     "884": 0.04588184499891945,
     "887": 8.195326910680615,
     "890": 264.1778295088567,
+    "892": 4.462252878682825,
     "893": 0.259167487159288,
     "894": 16.547911168626428,
     "895": 6.75843123687514e-8,
@@ -795,7 +808,7 @@
     "10181": 1.1673824866134304,
     "10188": 489.6074586521983,
     "10189": 14.948799881198665,
-    "10191": 16.904722216653973,
+    "10191": 12.442469337971147,
     "10193": 72.25221689852552,
     "10230": 0.14785290532093237,
     "10232": 0,

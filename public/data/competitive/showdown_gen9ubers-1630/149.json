@@ -7,6 +7,18 @@
     "base_weight": 312.0952803795072,
     "percent": 4.236636991614643
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 45.09726508382679,
     "heavy-duty-boots": 129.28960298509563,
@@ -183,7 +195,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "29.1",
       "evs": {
         "hp": 0,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.2",
       "evs": {
         "hp": 0,
@@ -207,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.2",
       "evs": {
         "hp": 4,
@@ -219,7 +231,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.1",
       "evs": {
         "hp": 144,
@@ -231,7 +243,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.2",
       "evs": {
         "hp": 4,
@@ -243,7 +255,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.0",
       "evs": {
         "hp": 0,
@@ -255,7 +267,7 @@
       }
     },
     {
-      "nature": "Naughty",
+      "nature": "naughty",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -267,7 +279,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 244,
@@ -279,7 +291,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -291,7 +303,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 76,
@@ -594,6 +606,7 @@
     "884": 0,
     "887": 16.999713557184407,
     "890": 5.809259441031916,
+    "892": 9.168537077135262,
     "893": 0,
     "894": 7.301041025020549,
     "895": 1.204448407918525,
@@ -709,7 +722,7 @@
     "10186": 0.0017054010408125708,
     "10188": 35.96238848119064,
     "10189": 5.168204486898898,
-    "10191": 27.113124171747486,
+    "10191": 17.944587094612224,
     "10193": 8.138571704296897,
     "10230": 1.6689286796100054,
     "10232": 0.15256411125314867,

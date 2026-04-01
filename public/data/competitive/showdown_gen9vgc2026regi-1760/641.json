@@ -7,6 +7,23 @@
     "base_weight": 630.0530961775908,
     "percent": 17.25816116256071
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "covert-cloak": 264.9565006816036,
     "mental-herb": 83.46046643180746,
@@ -146,7 +163,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.8",
       "evs": {
         "hp": 244,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "6.4",
       "evs": {
         "hp": 4,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.3",
       "evs": {
         "hp": 228,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.7",
       "evs": {
         "hp": 212,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.2",
       "evs": {
         "hp": 244,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 244,
@@ -218,7 +235,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.8",
       "evs": {
         "hp": 180,
@@ -230,7 +247,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 244,
@@ -242,7 +259,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.3",
       "evs": {
         "hp": 228,
@@ -254,7 +271,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -527,6 +544,7 @@
     "884": 0,
     "887": 0.021859464925119088,
     "890": 6.692108976680289,
+    "892": 32.442049755638685,
     "894": 0.5068488189876242,
     "895": 1.2818997647534311,
     "896": 0.027768404264748747,
@@ -638,7 +656,7 @@
     "10186": 53.412276670288506,
     "10188": 70.1186571981517,
     "10189": 308.29293455141527,
-    "10191": 221.13199571201594,
+    "10191": 188.68994595637724,
     "10193": 72.48461982383887,
     "10194": 332.0599850685203,
     "10230": 0.46010647224146034,

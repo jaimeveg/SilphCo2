@@ -7,6 +7,13 @@
     "base_weight": 40369,
     "percent": 9.833098684178477
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 24321,
     "assault-vest": 5239,
@@ -117,7 +124,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "22.9",
       "evs": {
         "hp": 0,
@@ -129,7 +136,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "15.2",
       "evs": {
         "hp": 0,
@@ -141,7 +148,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "13.9",
       "evs": {
         "hp": 4,
@@ -153,7 +160,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.3",
       "evs": {
         "hp": 0,
@@ -165,7 +172,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.2",
       "evs": {
         "hp": 4,
@@ -177,7 +184,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.6",
       "evs": {
         "hp": 36,
@@ -189,7 +196,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -201,7 +208,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.8",
       "evs": {
         "hp": 0,
@@ -213,7 +220,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.3",
       "evs": {
         "hp": 0,
@@ -225,7 +232,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.0",
       "evs": {
         "hp": 0,
@@ -480,6 +487,7 @@
     "884": 1,
     "887": 226,
     "890": 216,
+    "892": 470,
     "894": 307,
     "895": 70,
     "897": 2,
@@ -584,7 +592,7 @@
     "10186": 1559,
     "10188": 4184,
     "10189": 17606,
-    "10191": 8669,
+    "10191": 8199,
     "10193": 1735,
     "10194": 14701,
     "10230": 147,

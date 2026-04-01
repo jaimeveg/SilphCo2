@@ -1,12 +1,19 @@
 {
   "id": "10113",
-  "name": "Muk Alola",
+  "name": "Muk alolan",
   "format_id": "showdown_gen9ru-0",
   "usage_metrics": {
     "raw": 7793,
     "base_weight": 7793,
     "percent": 10.434631246317819
   },
+  "roles": [
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 3238,
     "black-sludge": 893,
@@ -127,7 +134,7 @@
   },
   "spreads": [
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "25.3",
       "evs": {
         "hp": 252,
@@ -139,7 +146,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "21.9",
       "evs": {
         "hp": 252,
@@ -151,7 +158,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.6",
       "evs": {
         "hp": 252,
@@ -163,7 +170,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -175,7 +182,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 248,
@@ -187,7 +194,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 220,
@@ -199,7 +206,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.5",
       "evs": {
         "hp": 252,
@@ -211,7 +218,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.2",
       "evs": {
         "hp": 0,
@@ -223,7 +230,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.1",
       "evs": {
         "hp": 4,
@@ -235,7 +242,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.1",
       "evs": {
         "hp": 0,

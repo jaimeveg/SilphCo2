@@ -1,0 +1,299 @@
+{
+  "id": "197",
+  "name": "Umbreon",
+  "format_id": "showdown_gen91v1-0",
+  "usage_metrics": {
+    "raw": 654,
+    "base_weight": 654,
+    "percent": 0.7703906139565566
+  },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "rocky-helmet": 27,
+    "leftovers": 495,
+    "assault-vest": 5,
+    "chesto-berry": 1,
+    "flame-orb": 9,
+    "choice-scarf": 3,
+    "nothing": 4,
+    "kee-berry": 80,
+    "choice-specs": 2,
+    "leppa-berry": 10,
+    "choice-band": 4,
+    "black-glasses": 4,
+    "heavy-duty-boots": 1,
+    "air-balloon": 9
+  },
+  "abilities": {
+    "inner-focus": 253,
+    "synchronize": 401
+  },
+  "moves": {
+    "foul-play": 492,
+    "toxic": 535,
+    "wish": 424,
+    "protect": 466,
+    "taunt": 42,
+    "thunder-wave": 2,
+    "calm-mind": 21,
+    "moonlight": 207,
+    "confuse-ray": 56,
+    "snarl": 19,
+    "rest": 12,
+    "substitute": 27,
+    "quick-attack": 7,
+    "crunch": 13,
+    "dark-pulse": 49,
+    "light-screen": 9,
+    "reflect": 9,
+    "hyper-voice": 3,
+    "alluring-voice": 11,
+    "facade": 6,
+    "lash-out": 1,
+    "double-edge": 8,
+    "last-resort": 4,
+    "giga-impact": 3,
+    "body-slam": 20,
+    "shadow-ball": 10,
+    "baby-doll-eyes": 80,
+    "screech": 4,
+    "psychic": 14,
+    "spite": 51,
+    "take-down": 6,
+    "guard-swap": 2,
+    "hyper-beam": 3
+  },
+  "teras": {
+    "nothing": 654
+  },
+  "spreads": [
+    {
+      "nature": "calm",
+      "usage": "38.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "12.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 208,
+        "spa": 0,
+        "spd": 48,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "10.1",
+      "evs": {
+        "hp": 248,
+        "atk": 0,
+        "def": 8,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "8.7",
+      "evs": {
+        "hp": 212,
+        "atk": 0,
+        "def": 44,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "6.3",
+      "evs": {
+        "hp": 148,
+        "atk": 0,
+        "def": 160,
+        "spa": 0,
+        "spd": 200,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "3.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 4,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "hardy",
+      "usage": "1.8",
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 248,
+        "spa": 0,
+        "spd": 252,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "1.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "1.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 80,
+        "spa": 0,
+        "spd": 176,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "1.4",
+      "evs": {
+        "hp": 100,
+        "atk": 0,
+        "def": 100,
+        "spa": 100,
+        "spd": 100,
+        "spe": 110
+      }
+    }
+  ],
+  "teammates": {
+    "6": 1,
+    "49": 1,
+    "91": 2,
+    "94": 5,
+    "106": 2,
+    "107": 1,
+    "109": 1,
+    "130": 13,
+    "132": 0,
+    "133": 13,
+    "136": 5,
+    "157": 22,
+    "181": 4,
+    "196": 20,
+    "212": 22,
+    "232": 66,
+    "248": 4,
+    "254": 2,
+    "257": 16,
+    "286": 5,
+    "302": 2,
+    "308": 1,
+    "314": 62,
+    "373": 6,
+    "381": 21,
+    "392": 5,
+    "405": 1,
+    "445": 2,
+    "448": 2,
+    "470": 1,
+    "471": 58,
+    "472": 12,
+    "473": 2,
+    "477": 4,
+    "478": 1,
+    "490": 5,
+    "491": 1,
+    "497": 2,
+    "523": 37,
+    "547": 3,
+    "571": 9,
+    "575": 6,
+    "576": 6,
+    "591": 1,
+    "609": 18,
+    "612": 1,
+    "637": 6,
+    "645": 5,
+    "647": 21,
+    "658": 1,
+    "700": 66,
+    "709": 1,
+    "748": 1,
+    "750": 58,
+    "812": 41,
+    "818": 1,
+    "823": 28,
+    "849": 2,
+    "887": 5,
+    "897": 75,
+    "901": 16,
+    "903": 103,
+    "908": 13,
+    "911": 3,
+    "934": 1,
+    "937": 7,
+    "939": 8,
+    "956": 18,
+    "959": 7,
+    "966": 4,
+    "975": 1,
+    "977": 2,
+    "979": 4,
+    "994": 6,
+    "998": 2,
+    "1002": 5,
+    "1006": 9,
+    "1009": 5,
+    "1013": 9,
+    "1021": 103,
+    "1025": 9,
+    "10020": 66,
+    "10123": 8,
+    "10125": 8,
+    "10152": 2,
+    "10167": 31,
+    "10172": 18,
+    "10233": 17,
+    "10239": 2,
+    "10273": 16
+  }
+}

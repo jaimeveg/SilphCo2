@@ -7,6 +7,23 @@
     "base_weight": 1711.0693828225037,
     "percent": 2.1137910372142192
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sitrus-berry": 126.18571971592938,
     "assault-vest": 532.6941924399528,
@@ -112,7 +129,7 @@
   },
   "spreads": [
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "11.7",
       "evs": {
         "hp": 236,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "8.9",
       "evs": {
         "hp": 252,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "7.3",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.7",
       "evs": {
         "hp": 134,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.7",
       "evs": {
         "hp": 212,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.0",
       "evs": {
         "hp": 204,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 244,
@@ -406,6 +423,7 @@
     "884": 0.009433113157627515,
     "887": 6.83350320477051,
     "890": 47.92468066142441,
+    "892": 0.6684394460125163,
     "894": 0.2611365236901157,
     "895": 0.0002762093209777716,
     "896": 0.5915537102306654,
@@ -499,7 +517,7 @@
     "10186": 160.8341848047515,
     "10188": 20.449662914597106,
     "10189": 848.8362310748624,
-    "10191": 87.96682553439823,
+    "10191": 87.29838608838571,
     "10193": 430.71386499229845,
     "10194": 766.8239377442599,
     "10230": 0.22449069551875755,

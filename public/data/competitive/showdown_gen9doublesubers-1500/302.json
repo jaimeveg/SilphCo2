@@ -7,6 +7,23 @@
     "base_weight": 4055.915414846171,
     "percent": 3.1245457804823693
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "eject-button": 336.9889436236142,
     "focus-sash": 1464.2561991818889,
@@ -136,7 +153,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "21.7",
       "evs": {
         "hp": 0,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "12.4",
       "evs": {
         "hp": 248,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.2",
       "evs": {
         "hp": 248,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "3.5",
       "evs": {
         "hp": 248,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.2",
       "evs": {
         "hp": 188,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "3.1",
       "evs": {
         "hp": 248,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.9",
       "evs": {
         "hp": 4,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -232,7 +249,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.0",
       "evs": {
         "hp": 236,
@@ -244,7 +261,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -484,6 +501,7 @@
     "877": 0.030633904947756252,
     "887": 43.2823585890262,
     "890": 167.39812769978326,
+    "892": 66.73437042515633,
     "893": 4.210784508611955,
     "894": 6.836191178246735,
     "895": 5.779881100270983,
@@ -590,7 +608,7 @@
     "10186": 220.13629560403342,
     "10188": 249.59766776343693,
     "10189": 1035.8885671035584,
-    "10191": 149.80370592558182,
+    "10191": 83.06933550042551,
     "10193": 367.14138885246825,
     "10194": 1550.780967484355,
     "10230": 8.206100149715267,

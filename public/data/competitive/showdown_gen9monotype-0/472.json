@@ -1,0 +1,331 @@
+{
+  "id": "472",
+  "name": "Gliscor",
+  "format_id": "showdown_gen9monotype-0",
+  "usage_metrics": {
+    "raw": 14644,
+    "base_weight": 14644,
+    "percent": 6.350996192177918
+  },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
+  "items": {
+    "toxic-orb": 14226,
+    "nothing": 59,
+    "black-sludge": 14,
+    "focus-sash": 75,
+    "leftovers": 166,
+    "life-orb": 9,
+    "white-herb": 10,
+    "flame-orb": 2,
+    "choice-scarf": 22,
+    "soft-sand": 1,
+    "choice-band": 4,
+    "assault-vest": 9,
+    "eject-pack": 26,
+    "weakness-policy": 4,
+    "heavy-duty-boots": 1,
+    "lum-berry": 9,
+    "rocky-helmet": 1,
+    "iron-ball": 2,
+    "air-balloon": 3,
+    "blunder-policy": 1
+  },
+  "abilities": {
+    "poison-heal": 14452,
+    "hyper-cutter": 192
+  },
+  "moves": {
+    "earthquake": 11458,
+    "stealth-rock": 3694,
+    "toxic": 6587,
+    "protect": 11751,
+    "knock-off": 7206,
+    "swords-dance": 4197,
+    "facade": 2561,
+    "u-turn": 856,
+    "spikes": 1314,
+    "toxic-spikes": 837,
+    "crabhammer": 587,
+    "brick-break": 169,
+    "dual-wingbeat": 1407,
+    "acrobatics": 632,
+    "fling": 413,
+    "substitute": 2030,
+    "gunk-shot": 229,
+    "counter": 52,
+    "tera-blast": 20,
+    "taunt": 194,
+    "ice-fang": 147,
+    "aerial-ace": 176,
+    "stone-edge": 187,
+    "cross-poison": 39,
+    "fire-fang": 220,
+    "high-horsepower": 79,
+    "poison-jab": 177,
+    "agility": 180,
+    "rock-slide": 328,
+    "lunge": 82,
+    "psychic-fangs": 99,
+    "tailwind": 224,
+    "thunder-fang": 16,
+    "quick-attack": 14,
+    "crunch": 85,
+    "": 7,
+    "sandstorm": 15,
+    "sludge-bomb": 7,
+    "night-slash": 6,
+    "x-scissor": 134,
+    "sand-tomb": 39,
+    "rest": 19,
+    "sleep-talk": 7,
+    "scale-shot": 12,
+    "earth-power": 20,
+    "endure": 2,
+    "wing-attack": 23,
+    "thief": 5,
+    "scary-face": 3,
+    "screech": 1,
+    "breaking-swipe": 5,
+    "venoshock": 3,
+    "dark-pulse": 11,
+    "skitter-smack": 2,
+    "giga-impact": 1,
+    "rock-tomb": 1,
+    "sunny-day": 4,
+    "false-swipe": 2
+  },
+  "teras": {
+    "nothing": 14644
+  },
+  "spreads": [
+    {
+      "nature": "jolly",
+      "usage": "9.3",
+      "evs": {
+        "hp": 0,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "7.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 184,
+        "spa": 0,
+        "spd": 0,
+        "spe": 72
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "5.1",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 244,
+        "spe": 20
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "5.0",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 244,
+        "spa": 0,
+        "spd": 0,
+        "spe": 20
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "4.4",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 12,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "jolly",
+      "usage": "3.1",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 52,
+        "spa": 0,
+        "spd": 192,
+        "spe": 20
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "2.6",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 240,
+        "spe": 24
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "2.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "jolly",
+      "usage": "2.5",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 220,
+        "spe": 44
+      }
+    },
+    {
+      "nature": "jolly",
+      "usage": "2.3",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 32,
+        "spa": 0,
+        "spd": 224,
+        "spe": 8
+      }
+    }
+  ],
+  "teammates": {
+    "6": 165,
+    "28": 25,
+    "51": 63,
+    "76": 8,
+    "85": 38,
+    "112": 7,
+    "123": 187,
+    "130": 1364,
+    "132": 0,
+    "144": 2254,
+    "145": 1703,
+    "146": 2137,
+    "149": 4393,
+    "164": 17,
+    "188": 2,
+    "189": 78,
+    "193": 4,
+    "195": 322,
+    "198": 35,
+    "221": 1,
+    "225": 11,
+    "227": 2754,
+    "232": 174,
+    "260": 497,
+    "279": 887,
+    "284": 171,
+    "323": 161,
+    "328": 1,
+    "330": 286,
+    "334": 153,
+    "340": 16,
+    "357": 16,
+    "373": 253,
+    "389": 460,
+    "398": 406,
+    "415": 2,
+    "416": 2,
+    "423": 1314,
+    "426": 102,
+    "430": 137,
+    "445": 3450,
+    "450": 2367,
+    "464": 309,
+    "469": 289,
+    "473": 1774,
+    "530": 2747,
+    "551": 1,
+    "553": 714,
+    "623": 148,
+    "628": 32,
+    "630": 809,
+    "641": 24,
+    "642": 221,
+    "645": 4717,
+    "663": 467,
+    "666": 63,
+    "701": 561,
+    "715": 237,
+    "733": 4,
+    "741": 56,
+    "750": 123,
+    "770": 185,
+    "774": 78,
+    "823": 5936,
+    "844": 149,
+    "845": 61,
+    "901": 965,
+    "905": 2746,
+    "931": 27,
+    "941": 370,
+    "949": 223,
+    "962": 46,
+    "973": 254,
+    "980": 3282,
+    "984": 2521,
+    "989": 1227,
+    "990": 605,
+    "993": 306,
+    "1003": 996,
+    "10011": 45,
+    "10019": 3085,
+    "10020": 706,
+    "10021": 1981,
+    "10106": 21,
+    "10123": 127,
+    "10125": 61,
+    "10169": 64,
+    "10170": 930,
+    "10171": 1113,
+    "10240": 124,
+    "10249": 22
+  }
+}

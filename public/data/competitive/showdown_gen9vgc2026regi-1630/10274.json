@@ -1,12 +1,24 @@
 {
   "id": "10274",
-  "name": "Ogerpon Hearthflame Mask",
+  "name": "Ogerpon hearthflame",
   "format_id": "showdown_gen9vgc2026regi-1630",
   "usage_metrics": {
     "raw": 22785,
     "base_weight": 3258.249441627488,
     "percent": 5.549980269984557
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "hearthflame-mask": 3258.249441627488
   },
@@ -66,7 +78,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.4",
       "evs": {
         "hp": 188,
@@ -78,7 +90,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.1",
       "evs": {
         "hp": 4,
@@ -90,7 +102,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.7",
       "evs": {
         "hp": 188,
@@ -102,7 +114,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -114,7 +126,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.1",
       "evs": {
         "hp": 220,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 252,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.2",
       "evs": {
         "hp": 212,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.9",
       "evs": {
         "hp": 0,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 172,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.6",
       "evs": {
         "hp": 172,
@@ -369,6 +381,7 @@
     "876": 4.974001467733625,
     "887": 1.311142267204843,
     "890": 13.674120529195921,
+    "892": 84.60263334505129,
     "894": 9.109992520888017,
     "895": 8.054134012077121,
     "896": 0,
@@ -464,7 +477,7 @@
     "10186": 66.4590765572052,
     "10188": 170.77621053957472,
     "10189": 1292.9425826330444,
-    "10191": 650.1488506000005,
+    "10191": 565.5462172549493,
     "10193": 441.1304547161088,
     "10194": 1583.0407969986047,
     "10230": 8.086135760976276e-9,

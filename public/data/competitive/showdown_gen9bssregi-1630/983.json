@@ -7,6 +7,23 @@
     "base_weight": 461.79846657221924,
     "percent": 8.588891652748659
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_special",
+      "label": "Special Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "quick-claw": 0.000034246528171133495,
     "covert-cloak": 266.91134540822844,
@@ -90,7 +107,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "39.5",
       "evs": {
         "hp": 252,
@@ -102,7 +119,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "17.3",
       "evs": {
         "hp": 252,
@@ -114,7 +131,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "12.5",
       "evs": {
         "hp": 220,
@@ -126,7 +143,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.6",
       "evs": {
         "hp": 188,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.0",
       "evs": {
         "hp": 124,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.1",
       "evs": {
         "hp": 252,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 220,
@@ -307,6 +324,7 @@
     "875": 0.4196433178718223,
     "887": 0.27097458968708477,
     "890": 5.685770528396833,
+    "892": 0.02346474678600652,
     "894": 0.0000043461110947329296,
     "895": 0.10531500874097255,
     "900": 0.000001281133427011305,
@@ -378,7 +396,7 @@
     "10186": 0.9070884989405283,
     "10188": 16.196144068352506,
     "10189": 1.214246110325945e-7,
-    "10191": 56.33352241050745,
+    "10191": 56.310057663721444,
     "10193": 18.814940290466268,
     "10194": 131.32423265251688,
     "10230": 0.00003755480045031234,

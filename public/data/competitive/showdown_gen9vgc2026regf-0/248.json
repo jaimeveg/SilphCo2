@@ -7,6 +7,18 @@
     "base_weight": 51574,
     "percent": 3.283675597758334
   },
+  "roles": [
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "covert-cloak": 499,
     "choice-band": 3834,
@@ -188,7 +200,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "13.3",
       "evs": {
         "hp": 252,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.3",
       "evs": {
         "hp": 252,
@@ -212,7 +224,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 252,
@@ -224,7 +236,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 236,
@@ -236,7 +248,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 140,
@@ -248,7 +260,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -260,7 +272,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -272,7 +284,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 4,
@@ -284,7 +296,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -296,7 +308,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -607,6 +619,7 @@
     "884": 21,
     "886": 9,
     "887": 557,
+    "892": 341,
     "894": 236,
     "895": 382,
     "896": 153,
@@ -719,7 +732,7 @@
     "10171": 170,
     "10172": 78,
     "10186": 4731,
-    "10191": 4181,
+    "10191": 3840,
     "10230": 3084,
     "10232": 146,
     "10233": 440,

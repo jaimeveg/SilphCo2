@@ -1,12 +1,19 @@
 {
   "id": "10052",
-  "name": "Mawile Mega",
+  "name": "Mawile mega",
   "format_id": "showdown_gen9nationaldexdoubles-1760",
   "usage_metrics": {
     "raw": 9253,
     "base_weight": 399.8835241641486,
     "percent": 4.44095682389756
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "mawilite": 399.8835241641486
   },
@@ -76,7 +83,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "35.9",
       "evs": {
         "hp": 248,
@@ -88,7 +95,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "35.1",
       "evs": {
         "hp": 252,
@@ -100,7 +107,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.4",
       "evs": {
         "hp": 168,
@@ -112,7 +119,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.5",
       "evs": {
         "hp": 248,
@@ -124,7 +131,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -136,7 +143,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.0",
       "evs": {
         "hp": 136,
@@ -148,7 +155,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.8",
       "evs": {
         "hp": 248,
@@ -160,7 +167,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -172,7 +179,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.5",
       "evs": {
         "hp": 252,
@@ -184,7 +191,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "0.4",
       "evs": {
         "hp": 252,

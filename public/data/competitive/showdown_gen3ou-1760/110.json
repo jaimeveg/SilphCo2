@@ -7,6 +7,18 @@
     "base_weight": 29.64140296642772,
     "percent": 1.642483199222891
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "leftovers": 29.522614319421194,
     "choice-band": 0.002049634627572572,
@@ -67,7 +79,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "18.4",
       "evs": {
         "hp": 252,
@@ -79,7 +91,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "12.9",
       "evs": {
         "hp": 252,
@@ -91,7 +103,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "12.6",
       "evs": {
         "hp": 252,
@@ -103,7 +115,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "12.2",
       "evs": {
         "hp": 112,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "11.8",
       "evs": {
         "hp": 252,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 212,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "2.4",
       "evs": {
         "hp": 176,

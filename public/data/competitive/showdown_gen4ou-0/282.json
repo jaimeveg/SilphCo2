@@ -1,0 +1,320 @@
+{
+  "id": "282",
+  "name": "Gardevoir",
+  "format_id": "showdown_gen4ou-0",
+  "usage_metrics": {
+    "raw": 619,
+    "base_weight": 619,
+    "percent": 0.5334551346133958
+  },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "choice-specs": 23,
+    "lum-berry": 63,
+    "choice-scarf": 141,
+    "leftovers": 289,
+    "expert-belt": 11,
+    "salac-berry": 49,
+    "light-clay": 18,
+    "life-orb": 8,
+    "toxic-orb": 5,
+    "mind-plate": 5,
+    "kasib-berry": 1,
+    "colbur-berry": 2,
+    "nothing": 4
+  },
+  "abilities": {
+    "trace": 512,
+    "synchronize": 107
+  },
+  "moves": {
+    "calm-mind": 135,
+    "energy-ball": 22,
+    "psychic": 541,
+    "thunderbolt": 278,
+    "reflect": 83,
+    "light-screen": 77,
+    "healing-wish": 58,
+    "taunt": 79,
+    "focus-blast": 191,
+    "trick": 150,
+    "will-o-wisp": 237,
+    "wish": 199,
+    "protect": 118,
+    "shadow-sneak": 9,
+    "ice-punch": 9,
+    "fire-punch": 10,
+    "thunder-punch": 9,
+    "thunder-wave": 9,
+    "attract": 4,
+    "shadow-ball": 93,
+    "hidden-power-fire": 7,
+    "toxic": 1,
+    "icy-wind": 12,
+    "destiny-bond": 24,
+    "mean-look": 8,
+    "grass-knot": 12,
+    "giga-impact": 1,
+    "trick-room": 4,
+    "disable": 1,
+    "heal-bell": 67,
+    "hidden-power-ice": 5,
+    "signal-beam": 5,
+    "hidden-power-ground": 2,
+    "pain-split": 3,
+    "magic-coat": 3,
+    "hidden-power-psychic": 3,
+    "confusion": 3,
+    "hidden-power-poison": 1,
+    "confuse-ray": 2,
+    "encore": 1
+  },
+  "teras": {
+    "nothing": 619
+  },
+  "spreads": [
+    {
+      "nature": "timid",
+      "usage": "32.1",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "10.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "8.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "8.2",
+      "evs": {
+        "hp": 112,
+        "atk": 0,
+        "def": 204,
+        "spa": 0,
+        "spd": 28,
+        "spe": 148
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "7.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 252,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "4.8",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 4,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "4.7",
+      "evs": {
+        "hp": 120,
+        "atk": 0,
+        "def": 148,
+        "spa": 0,
+        "spd": 0,
+        "spe": 240
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.9",
+      "evs": {
+        "hp": 180,
+        "atk": 0,
+        "def": 152,
+        "spa": 0,
+        "spd": 0,
+        "spe": 176
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "2.7",
+      "evs": {
+        "hp": 188,
+        "atk": 0,
+        "def": 120,
+        "spa": 0,
+        "spd": 0,
+        "spe": 200
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.7",
+      "evs": {
+        "hp": 188,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 68
+      }
+    }
+  ],
+  "teammates": {
+    "6": 11,
+    "12": 3,
+    "26": 7,
+    "31": 10,
+    "36": 79,
+    "59": 49,
+    "65": 23,
+    "73": 2,
+    "76": 17,
+    "89": 3,
+    "91": 7,
+    "94": 127,
+    "101": 61,
+    "107": 4,
+    "121": 186,
+    "122": 16,
+    "130": 14,
+    "131": 1,
+    "134": 20,
+    "141": 12,
+    "145": 2,
+    "149": 133,
+    "154": 107,
+    "169": 22,
+    "178": 1,
+    "182": 1,
+    "196": 1,
+    "203": 41,
+    "205": 45,
+    "208": 46,
+    "212": 16,
+    "214": 11,
+    "215": 4,
+    "217": 2,
+    "227": 18,
+    "229": 2,
+    "230": 118,
+    "232": 112,
+    "242": 55,
+    "243": 5,
+    "248": 58,
+    "254": 4,
+    "257": 8,
+    "260": 21,
+    "267": 1,
+    "277": 4,
+    "286": 7,
+    "289": 11,
+    "291": 1,
+    "295": 1,
+    "303": 2,
+    "304": 1,
+    "306": 46,
+    "308": 78,
+    "310": 7,
+    "314": 3,
+    "330": 2,
+    "334": 1,
+    "337": 1,
+    "338": 1,
+    "340": 1,
+    "344": 12,
+    "350": 116,
+    "354": 4,
+    "356": 3,
+    "366": 1,
+    "376": 71,
+    "380": 66,
+    "385": 42,
+    "389": 4,
+    "392": 235,
+    "395": 4,
+    "398": 2,
+    "400": 1,
+    "407": 81,
+    "411": 2,
+    "419": 1,
+    "424": 1,
+    "426": 1,
+    "428": 58,
+    "429": 24,
+    "432": 12,
+    "437": 26,
+    "448": 19,
+    "450": 57,
+    "452": 7,
+    "461": 37,
+    "462": 3,
+    "463": 4,
+    "464": 3,
+    "466": 9,
+    "468": 157,
+    "469": 3,
+    "472": 11,
+    "473": 3,
+    "475": 21,
+    "477": 13,
+    "482": 5,
+    "485": 11,
+    "486": 1,
+    "488": 49,
+    "10008": 4,
+    "10010": 1,
+    "10011": 2,
+    "10012": 10
+  }
+}

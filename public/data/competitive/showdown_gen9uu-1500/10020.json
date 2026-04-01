@@ -1,12 +1,29 @@
 {
   "id": "10020",
-  "name": "Thundurus Therian",
+  "name": "Thundurus therian",
   "format_id": "showdown_gen9uu-1500",
   "usage_metrics": {
     "raw": 22244,
     "base_weight": 14975.299991998203,
     "percent": 14.812545781447692
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 5770.999496941963,
     "sitrus-berry": 5277.428442162119,
@@ -116,7 +133,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "43.6",
       "evs": {
         "hp": 0,
@@ -128,7 +145,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.6",
       "evs": {
         "hp": 248,
@@ -140,7 +157,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.0",
       "evs": {
         "hp": 244,
@@ -152,7 +169,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.1",
       "evs": {
         "hp": 232,
@@ -164,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -176,7 +193,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.4",
       "evs": {
         "hp": 132,
@@ -188,7 +205,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.3",
       "evs": {
         "hp": 4,
@@ -200,7 +217,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.1",
       "evs": {
         "hp": 0,
@@ -212,7 +229,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.9",
       "evs": {
         "hp": 0,
@@ -224,7 +241,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.2",
       "evs": {
         "hp": 4,

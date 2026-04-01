@@ -7,6 +7,18 @@
     "base_weight": 1173,
     "percent": 2.084147684872606
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 300,
     "heavy-duty-boots": 198,
@@ -75,7 +87,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "31.5",
       "evs": {
         "hp": 12,
@@ -87,7 +99,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "28.0",
       "evs": {
         "hp": 4,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "8.1",
       "evs": {
         "hp": 252,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "6.9",
       "evs": {
         "hp": 252,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 244,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.3",
       "evs": {
         "hp": 248,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.1",
       "evs": {
         "hp": 236,
@@ -268,6 +280,7 @@
     "873": 1,
     "887": 21,
     "890": 136,
+    "892": 1,
     "901": 23,
     "902": 7,
     "903": 30,
@@ -319,7 +332,7 @@
     "10167": 4,
     "10186": 37,
     "10188": 383,
-    "10191": 117,
+    "10191": 116,
     "10193": 40,
     "10194": 58,
     "10234": 17,

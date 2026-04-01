@@ -2,11 +2,11 @@ import fs from 'fs';
 import path from 'path';
 
 // Endpoint GraphQL Beta de PokeAPI
-const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
+const POKEAPI_GQL = 'https://graphql.pokeapi.co/v1beta2/v1/graphql';
 
 const QUERY = `
   query GetPokemonIds {
-    pokemon_v2_pokemon {
+    pokemon {
       id
       name
     }
@@ -31,7 +31,7 @@ async function generateIdsDex() {
     const json = await response.json();
     if (json.errors) throw new Error(`Errores GraphQL: ${JSON.stringify(json.errors)}`);
 
-    const pokemonList = json.data.pokemon_v2_pokemon;
+    const pokemonList = json.data.pokemon;
     const idsMap: Record<string, number> = {};
 
     console.log(`📦 Procesando ${pokemonList.length} Pokémon...`);
@@ -43,13 +43,13 @@ async function generateIdsDex() {
 
     // Guardar en public/data/pokedex_ids.json
     const outputDir = path.join(process.cwd(), 'public', 'data');
-    
+
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
     const outputPath = path.join(outputDir, 'pokedex_ids.json');
-    
+
     fs.writeFileSync(outputPath, JSON.stringify(idsMap), 'utf-8');
 
     console.log(`✅ Mapa de IDs guardado en: ${outputPath}`);

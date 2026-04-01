@@ -4,6 +4,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { IMacroDashboardData, ITopCutTeam, ITeamMember } from '../src/types/competitive';
 import { generatePokePaste } from './utils/pokepaste';
+import { determineRoles, ROLE_KEYS } from '../src/lib/utils/competitive-analysis';
 
 const DATA_DIR = path.join(process.cwd(), 'public', 'data');
 const TOURNAMENTS_DIR = path.join(DATA_DIR, 'tournaments');
@@ -19,6 +20,25 @@ const runDashboardBuilder = async () => {
 
     await fs.mkdir(COMPETITIVE_DIR, { recursive: true });
 
+    try {
+        const files = await fs.readdir(COMPETITIVE_DIR);
+        for (const file of files) {
+            const lowerFile = file.toLowerCase();
+            if (lowerFile.startsWith('vgc_') || lowerFile.startsWith('meta_vgc')) {
+                const filePath = path.join(COMPETITIVE_DIR, file);
+                const stat = await fs.lstat(filePath);
+                if (stat.isDirectory()) {
+                    await fs.rm(filePath, { recursive: true, force: true });
+                } else {
+                    await fs.unlink(filePath);
+                }
+            }
+        }
+        console.log('  [\u2713] Directorio public/data/competitive limpiado (ficheros vgc)');
+    } catch (e) {
+        console.log('  [!] No se pudo limpiar el directorio competitivo:', e);
+    }
+
     // 1. CARGA DE DEPENDENCIAS LOCALES
     let pokedexMap: Record<string, any> = {};
     const slugToNumericMap: Record<string, string> = {};
@@ -30,11 +50,34 @@ const runDashboardBuilder = async () => {
     }
     catch (e) { console.error('🔥 ERROR: No se encontró pokedex_base_stats.json'); process.exit(1); }
 
+    // 1b. Load Movedex for move category classification
+    const moveCategoryMap = new Map<string, string>();
+    try {
+        const movedexRaw = JSON.parse(await fs.readFile(path.join(DATA_DIR, 'movedex_index.json'), 'utf8'));
+        for (const m of movedexRaw) {
+            moveCategoryMap.set(m.id, m.category);
+        }
+        console.log(`  [\u2713] Movedex cargado: ${moveCategoryMap.size} movimientos`);
+    } catch (e) {
+        console.error('🔥 ERROR: No se encontró movedex_index.json');
+        process.exit(1);
+    }
+
     let rk9Index: any[] = [];
     try { rk9Index = JSON.parse(await fs.readFile(path.join(TOURNAMENTS_DIR, 'rk9_index.json'), 'utf8')); }
     catch (e) { console.log('⚠️ Aviso: rk9_index.json no encontrado o vacío.'); return; }
 
     const aliasMap = JSON.parse(await fs.readFile(path.join(DATA_DIR, 'alias_map.json'), 'utf8').catch(() => '{}'));
+
+    const reverseAliasMap: Record<string, string> = {};
+    for (const [slug, id] of Object.entries(aliasMap)) {
+        reverseAliasMap[String(id)] = slug;
+    }
+
+    let traitsMap: Record<string, string> = {};
+    try {
+        traitsMap = JSON.parse(await fs.readFile(path.join(DATA_DIR, 'traits_map.json'), 'utf8'));
+    } catch(e) { }
 
     const getPkmTypes = (id: string): string[] => {
         const pkm = pokedexMap[id];
@@ -44,6 +87,11 @@ const runDashboardBuilder = async () => {
     const getPkmName = (id: string): string => {
         const pkm = pokedexMap[id];
         if (pkm?.name) return pkm.name.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        
+        // Reverse lookup fallback
+        const slug = reverseAliasMap[id];
+        if (slug) return slug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
         return id;
     };
 
@@ -72,7 +120,7 @@ const runDashboardBuilder = async () => {
         // Sorting top pokemon
         pkmEntries.sort((a, b) => b[1].usage.raw - a[1].usage.raw);
         
-        const top50 = pkmEntries.slice(0, 50);
+        const top100 = pkmEntries.slice(0, 100);
 
         // -- Centralization Index (Top 6 absolute usage) --
         const top6UsageRaw = pkmEntries.slice(0, 6).reduce((acc, curr) => acc + curr[1].usage.raw, 0);
@@ -82,7 +130,7 @@ const runDashboardBuilder = async () => {
 
         // -- Type Ecosystem --
         const typeEcosystem: Record<string, any> = {};
-        for (const [id, stats] of top50) {
+        for (const [id, stats] of top100) {
             const types = getPkmTypes(id);
             const comboSlug = types.map(t => t.toLowerCase()).sort().join('-');
             
@@ -143,7 +191,7 @@ const runDashboardBuilder = async () => {
         const teraTypeMap: Record<string, number> = {};
         const teraPkmMap: Record<string, { id: string, name: string, tera_type: string, usages: number, pkm_total: number }> = {};
 
-        for (const [id, stats] of top50) {
+        for (const [id, stats] of top100) {
             const pkmName = getPkmName(id);
             
             // 1 & 2. Megas & Z-Crystals
@@ -259,21 +307,125 @@ const runDashboardBuilder = async () => {
             };
         }
         
+        // ---- ROLES ANALYSIS (RK9 — No Spreads Data) ----
+        // Uses the centralized determineRoles() from competitive-analysis.ts
+        const ROLE_LABELS: Record<string, { label: string; category: 'OFF' | 'SUP' | 'DEF' }> = {
+            [ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL]: { label: 'Physical Sweeper', category: 'OFF' },
+            [ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL]: { label: 'Special Sweeper', category: 'OFF' },
+            [ROLE_KEYS.OFFENSIVE.TR_ATTACKER]: { label: 'Trick Room Attacker', category: 'OFF' },
+            [ROLE_KEYS.OFFENSIVE.PRIORITY]: { label: 'Priority User', category: 'OFF' },
+            [ROLE_KEYS.OFFENSIVE.SETUP]: { label: 'Setup Sweeper', category: 'OFF' },
+            [ROLE_KEYS.OFFENSIVE.WALLBREAKER]: { label: 'Wallbreaker', category: 'OFF' },
+            [ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED]: { label: 'Mixed Sweeper', category: 'OFF' },
+            [ROLE_KEYS.SUPPORTIVE.REDIRECTION]: { label: 'Redirector', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.SPEED_CONTROL]: { label: 'Speed Control', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.TR_SETTER]: { label: 'Trick Room Setter', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.WEATHER]: { label: 'Weather Setter', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.TERRAIN]: { label: 'Terrain Setter', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.WIDE_GUARD]: { label: 'Wide Guard', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.CLERIC]: { label: 'Cleric / Heal', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.DISRUPTOR]: { label: 'Disruptor', category: 'SUP' },
+            [ROLE_KEYS.SUPPORTIVE.SCREENER]: { label: 'Screener', category: 'SUP' },
+            [ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL]: { label: 'Physical Wall', category: 'DEF' },
+            [ROLE_KEYS.DEFENSIVE.WALL_SPECIAL]: { label: 'Special Wall', category: 'DEF' },
+            [ROLE_KEYS.DEFENSIVE.STALLER]: { label: 'Staller', category: 'DEF' },
+            [ROLE_KEYS.DEFENSIVE.PIVOT]: { label: 'Pivot', category: 'DEF' },
+        };
+
+        const extractTraitUsageArrRK9 = (source: any, rawTotal: number) => {
+            if (!source || !rawTotal) return [];
+            return Object.entries(source).map(([k, v]) => ({
+                name: k,
+                value: ((v as number) / rawTotal) * 100
+            }));
+        };
+
+        const getPkmRolesRK9 = (pkmId: string, stats: any) => {
+            const pkm = pokedexMap[pkmId] || {
+                id: pkmId,
+                name: getPkmName(pkmId),
+                types: [],
+                stats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 } // Baseline neutral para roles
+            };
+            const rawTotal = stats.usage?.raw || 1;
+            
+            const movesUsage = extractTraitUsageArrRK9(stats.moves, rawTotal);
+            const abilitiesUsage = extractTraitUsageArrRK9(stats.abilities, rawTotal);
+            const itemsUsage = extractTraitUsageArrRK9(stats.items, rawTotal);
+            
+            // Execute the centralized roles engine! No spreads available for RK9.
+            const mappedPkm = {
+                ...pkm,
+                stats: Array.isArray(pkm.stats) ? pkm.stats : [
+                    { value: pkm.stats.hp },
+                    { value: pkm.stats.atk },
+                    { value: pkm.stats.def },
+                    { value: pkm.stats.spa },
+                    { value: pkm.stats.spd },
+                    { value: pkm.stats.spe }
+                ]
+            } as any;
+
+            return determineRoles(mappedPkm, movesUsage, abilitiesUsage, itemsUsage, [], Object.fromEntries(moveCategoryMap), traitsMap);
+        };
+
+        // Aggregate roles
+        const roleCountMap: Record<string, number> = {};
+        const rolesCache: Record<string, string[]> = {};
+        let physicalWeightRK9 = 0, specialWeightRK9 = 0, mixedWeightRK9 = 0;
+
+        for (const [id, stats] of top100) {
+            const usageRate = (stats.usage.raw / TOTAL_TEAMS) * 100;
+            const roles = getPkmRolesRK9(id, stats);
+            rolesCache[id] = roles;
+            for (const role of roles) {
+                roleCountMap[role] = (roleCountMap[role] || 0) + usageRate;
+            }
+            if (roles.includes(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED)) {
+                mixedWeightRK9 += usageRate;
+            } else {
+                if (roles.includes(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL) || (roles.includes(ROLE_KEYS.OFFENSIVE.TR_ATTACKER) && (pokedexMap[id]?.atk || 0) > (pokedexMap[id]?.spa || 0))) {
+                    physicalWeightRK9 += usageRate;
+                }
+                if (roles.includes(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL) || (roles.includes(ROLE_KEYS.OFFENSIVE.TR_ATTACKER) && (pokedexMap[id]?.spa || 0) >= (pokedexMap[id]?.atk || 0))) {
+                    specialWeightRK9 += usageRate;
+                }
+            }
+        }
+
+        const totalAttackWeightRK9 = physicalWeightRK9 + mixedWeightRK9 + specialWeightRK9;
+        const rolesArrayRK9 = Object.entries(roleCountMap)
+            .filter(([role]) => ROLE_LABELS[role])
+            .map(([role, count]) => ({ role, label: ROLE_LABELS[role].label, category: ROLE_LABELS[role].category, count, pct: 0 }))
+            .sort((a, b) => b.count - a.count);
+        const totalRoleWeightRK9 = rolesArrayRK9.reduce((sum, r) => sum + r.count, 0);
+        rolesArrayRK9.forEach(r => { r.pct = totalRoleWeightRK9 > 0 ? (r.count / totalRoleWeightRK9) * 100 : 0; });
+
+        const rolesAnalysisRK9 = rolesArrayRK9.length > 0 ? {
+            physical_pct: totalAttackWeightRK9 > 0 ? (physicalWeightRK9 / totalAttackWeightRK9) * 100 : 45,
+            mixed_pct: totalAttackWeightRK9 > 0 ? (mixedWeightRK9 / totalAttackWeightRK9) * 100 : 10,
+            special_pct: totalAttackWeightRK9 > 0 ? (specialWeightRK9 / totalAttackWeightRK9) * 100 : 45,
+            roles: rolesArrayRK9
+        } : undefined;
+        
         // -- Top Cores (Aproximación de 3-Pokemon a partir de pares) --
         const coreMap: Record<string, number> = {};
         const pairWeights: Record<string, number> = {};
 
-        for (const [id, stats] of top50) {
+        // Limita a Top 30 para evitar O(n^3) en expansiones grandes
+        const top30 = top100.slice(0, 30);
+
+        for (const [id, stats] of top30) {
             if (stats.teammates) {
                 for (const [mateId, count] of Object.entries(stats.teammates)) {
-                    if (!top50.find(p => p[0] === mateId)) continue;
+                    if (!top30.find(p => p[0] === mateId)) continue;
                     const pair = [id, mateId].sort();
                     pairWeights[`${pair[0]}|${pair[1]}`] = count as number;
                 }
             }
         }
 
-        const top30Ids = top50.slice(0, 30).map(p => p[0]);
+        const top30Ids = top30.map(p => p[0]);
         for (let i = 0; i < top30Ids.length; i++) {
             for (let j = i + 1; j < top30Ids.length; j++) {
                 for (let k = j + 1; k < top30Ids.length; k++) {
@@ -309,11 +461,15 @@ const runDashboardBuilder = async () => {
             centralization_index: centralizationIndex,
             type_ecosystem: typeEcosystem,
             gimmicks: Object.keys(gimmicksObj).length > 0 ? gimmicksObj : undefined,
-            top_pokemon: top50.map(([id, stats]) => ({
+            roles_analysis: rolesAnalysisRK9,
+            top_pokemon: top100.map(([id, stats]) => ({
                 id,
                 name: getPkmName(id),
+                types: getPkmTypes(id),
+                roles: rolesCache[id] || [],
                 usage_rate: (stats.usage.raw / TOTAL_TEAMS) * 100,
-                raw_count: stats.usage.raw
+                raw_count: stats.usage.raw,
+                speed: Array.isArray(pokedexMap[id]?.stats) ? pokedexMap[id]?.stats.find((s:any)=>s.name==='spe')?.value || pokedexMap[id]?.stats[5]?.value || 0 : pokedexMap[id]?.stats?.spe || 0
             })),
             top_cores: sortedCores,
             rogue_picks: [],
@@ -415,14 +571,16 @@ const runDashboardBuilder = async () => {
                             const moves = clone.find('.badge').map((_, badge) => $$(badge).text().trim()).get();
 
                             clone.children().remove();
-                            let nameText = clone.text().trim().split('\n')[0]?.replace(/\([MF]\)/i, '').replace(/\[|\]/g, '').replace(/\s+(Forme?|Mask|Style)$/i, '').replace(/\s+/g, ' ').trim() || '';
+                            let rawNameText = clone.text().trim().split('\n')[0]?.replace(/\([MF]\)/i, '').replace(/\[|\]/g, '').replace(/\s+(Forme?|Mask|Style)$/i, '').replace(/\s+/g, ' ').trim() || '';
+                            let nameText = rawNameText.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+                            
                             const rawSlug = toSlug(nameText);
                             const maybeAlias = aliasMap[rawSlug] || aliasMap[rawSlug.replace(/-/g, '')] || rawSlug;
                             const mappedId = slugToNumericMap[maybeAlias] || maybeAlias;
 
                             teamMembers.push({
                                 pokemon_id: mappedId.toString(),
-                                pokemon_name: nameText,
+                                pokemon_name: getPkmName(mappedId.toString()),
                                 item, ability, tera_type: tera, moves
                             });
                         });
@@ -473,13 +631,14 @@ const runDashboardBuilder = async () => {
         console.log(`  -> Generado dashboard macro VGC en: ${destPath}`);
         
         // ---- DEEP DIVE ISOLATED STATIC APIS ----
-        // Opcional: Escribir para el Tactical Drawer el deep_dive por cada pokemon del top 50
-        console.log(`  -> Construyendo Deep Dive pre-caché para los Top 50...`);
+        // Opcional: Escribir para el Tactical Drawer el deep_dive por cada pokemon del top 100
+        console.log(`  -> Construyendo Deep Dive pre-caché para los Top 100...`);
         const formatDir = path.join(COMPETITIVE_DIR, format_id);
         await fs.mkdir(formatDir, { recursive: true });
 
-        for (const [pkmId, stats] of top50) {
+        for (const [pkmId, stats] of top100) {
             const deepDivePath = path.join(formatDir, `${pkmId}.json`);
+            const pkmRoles = getPkmRolesRK9(pkmId, stats);
             // Only keeping the essential combat stats for the drawer 
             const deepDiveData = {
                 id: pkmId,
@@ -489,6 +648,7 @@ const runDashboardBuilder = async () => {
                    raw: stats.usage.raw,
                    percent: (stats.usage.raw / TOTAL_TEAMS) * 100
                 },
+                roles: pkmRoles.map(r => ({ role: r, label: ROLE_LABELS[r]?.label || r, category: ROLE_LABELS[r]?.category || 'OFF' })),
                 items: stats.items || {},
                 abilities: stats.abilities || {},
                 moves: stats.moves || {},

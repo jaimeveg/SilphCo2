@@ -5,7 +5,7 @@ import * as cheerio from 'cheerio';
 import { pipeline } from 'stream/promises';
 
 // --- CONFIGURACIÓN BASE ---
-const TARGET_DIR = path.join(process.cwd(), 'public', 'images');
+const TARGET_DIR = path.join(process.cwd(), 'public', 'images', 'pokemon');
 const DIRS = {
   icon: path.join(TARGET_DIR, 'icon'),
   highRes: path.join(TARGET_DIR, 'high-res'),
@@ -155,6 +155,16 @@ const runETL = async () => {
   const END_ID = 1025; // Pokedex Nacional actual (SV)
 
   for (let id = START_ID; id <= END_ID; id++) {
+    const iconDest = path.join(DIRS.icon, `${id}.png`);
+    const highResDest = path.join(DIRS.highRes, `${id}.png`);
+    const modelDest = path.join(DIRS.models3D, `${id}.webm`);
+    const modelShinyDest = path.join(DIRS.models3D, `${id}_shiny.webm`);
+
+    if (fs.existsSync(iconDest) && fs.existsSync(highResDest) && fs.existsSync(modelDest) && fs.existsSync(modelShinyDest)) {
+      console.log(`[SKIP] Assets del Pokémon ID ${id} ya descargados completamente.`);
+      continue;
+    }
+
     console.log(`\n>> Procesando Pokémon ID: ${id} ...`);
     
     try {

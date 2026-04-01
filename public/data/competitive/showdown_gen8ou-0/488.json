@@ -1,0 +1,300 @@
+{
+  "id": "488",
+  "name": "Cresselia",
+  "format_id": "showdown_gen8ou-0",
+  "usage_metrics": {
+    "raw": 693,
+    "base_weight": 693,
+    "percent": 0.8668134287286737
+  },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
+  "items": {
+    "mental-herb": 244,
+    "focus-sash": 26,
+    "eviolite": 11,
+    "choice-scarf": 99,
+    "leftovers": 131,
+    "colbur-berry": 60,
+    "eject-button": 4,
+    "rocky-helmet": 103,
+    "electric-seed": 10,
+    "choice-specs": 2,
+    "heavy-duty-boots": 1,
+    "light-clay": 1,
+    "air-balloon": 1
+  },
+  "abilities": {
+    "levitate": 693
+  },
+  "moves": {
+    "trick-room": 497,
+    "lunar-dance": 596,
+    "reflect": 6,
+    "light-screen": 9,
+    "toxic": 21,
+    "moonblast": 218,
+    "moonlight": 461,
+    "psychic": 90,
+    "ice-beam": 359,
+    "trick": 104,
+    "expanding-force": 8,
+    "shadow-ball": 32,
+    "protect": 10,
+    "psyshock": 8,
+    "magic-coat": 118,
+    "substitute": 37,
+    "calm-mind": 77,
+    "stored-power": 60,
+    "thunder-wave": 29,
+    "sleep-talk": 1,
+    "rest": 18,
+    "helping-hand": 1,
+    "energy-ball": 4,
+    "": 4,
+    "future-sight": 3,
+    "grass-knot": 1
+  },
+  "teras": {
+    "nothing": 693
+  },
+  "spreads": [
+    {
+      "nature": "relaxed",
+      "usage": "17.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "sassy",
+      "usage": "11.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 4,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "8.8",
+      "evs": {
+        "hp": 248,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 52,
+        "spe": 208
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "8.8",
+      "evs": {
+        "hp": 232,
+        "atk": 0,
+        "def": 184,
+        "spa": 92,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "4.6",
+      "evs": {
+        "hp": 248,
+        "atk": 0,
+        "def": 84,
+        "spa": 0,
+        "spd": 176,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "3.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 136,
+        "spa": 0,
+        "spd": 104,
+        "spe": 16
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "3.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "sassy",
+      "usage": "3.3",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "2.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "2.9",
+      "evs": {
+        "hp": 248,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 8,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "36": 10,
+    "73": 4,
+    "80": 4,
+    "91": 19,
+    "105": 2,
+    "113": 1,
+    "132": 0,
+    "143": 6,
+    "145": 6,
+    "149": 24,
+    "151": 27,
+    "184": 6,
+    "195": 8,
+    "199": 14,
+    "208": 3,
+    "212": 58,
+    "213": 3,
+    "224": 2,
+    "227": 36,
+    "233": 399,
+    "242": 32,
+    "245": 91,
+    "257": 4,
+    "275": 1,
+    "279": 7,
+    "295": 4,
+    "324": 25,
+    "342": 312,
+    "344": 14,
+    "356": 1,
+    "376": 1,
+    "379": 19,
+    "380": 11,
+    "381": 1,
+    "385": 2,
+    "423": 2,
+    "437": 5,
+    "445": 63,
+    "450": 26,
+    "461": 19,
+    "462": 5,
+    "467": 4,
+    "480": 10,
+    "482": 1,
+    "485": 20,
+    "494": 30,
+    "530": 2,
+    "534": 32,
+    "537": 3,
+    "547": 5,
+    "553": 4,
+    "567": 1,
+    "579": 1,
+    "589": 3,
+    "598": 9,
+    "623": 20,
+    "625": 4,
+    "637": 21,
+    "639": 6,
+    "640": 1,
+    "675": 4,
+    "681": 3,
+    "691": 12,
+    "693": 2,
+    "701": 2,
+    "703": 18,
+    "721": 1,
+    "727": 7,
+    "738": 24,
+    "748": 46,
+    "760": 1,
+    "776": 6,
+    "778": 4,
+    "781": 2,
+    "784": 8,
+    "785": 13,
+    "786": 10,
+    "788": 64,
+    "797": 31,
+    "798": 17,
+    "800": 20,
+    "805": 51,
+    "806": 3,
+    "809": 396,
+    "812": 3,
+    "823": 22,
+    "858": 423,
+    "864": 12,
+    "876": 3,
+    "879": 14,
+    "887": 14,
+    "896": 5,
+    "10019": 93,
+    "10021": 24,
+    "10104": 5,
+    "10114": 1,
+    "10115": 401,
+    "10171": 1,
+    "10172": 3,
+    "10191": 5
+  }
+}

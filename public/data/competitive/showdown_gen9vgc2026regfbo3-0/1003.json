@@ -7,6 +7,18 @@
     "base_weight": 25378,
     "percent": 4.862226071096022
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 5316,
     "clear-amulet": 13385,
@@ -103,7 +115,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.2",
       "evs": {
         "hp": 244,
@@ -115,7 +127,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.0",
       "evs": {
         "hp": 236,
@@ -127,7 +139,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.9",
       "evs": {
         "hp": 204,
@@ -139,7 +151,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.6",
       "evs": {
         "hp": 212,
@@ -151,7 +163,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.4",
       "evs": {
         "hp": 100,
@@ -163,7 +175,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.9",
       "evs": {
         "hp": 212,
@@ -175,7 +187,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 92,
@@ -187,7 +199,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -199,7 +211,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -211,7 +223,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.4",
       "evs": {
         "hp": 204,
@@ -389,6 +401,7 @@
     "876": 19,
     "884": 3,
     "887": 121,
+    "892": 197,
     "894": 48,
     "895": 66,
     "896": 26,
@@ -481,7 +494,7 @@
     "10171": 24,
     "10172": 13,
     "10186": 197,
-    "10191": 7898,
+    "10191": 7701,
     "10230": 329,
     "10233": 42,
     "10236": 7,

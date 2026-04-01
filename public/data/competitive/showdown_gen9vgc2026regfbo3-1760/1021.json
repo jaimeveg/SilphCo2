@@ -7,6 +7,23 @@
     "base_weight": 5099.656451649668,
     "percent": 31.99914933076855
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "booster-energy": 1784.0698344396092,
     "life-orb": 312.12080388234716,
@@ -125,7 +142,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.2",
       "evs": {
         "hp": 196,
@@ -137,7 +154,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.3",
       "evs": {
         "hp": 196,
@@ -149,7 +166,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.2",
       "evs": {
         "hp": 196,
@@ -161,7 +178,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 196,
@@ -173,7 +190,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -185,7 +202,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.1",
       "evs": {
         "hp": 188,
@@ -197,7 +214,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -209,7 +226,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 188,
@@ -221,7 +238,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 196,
@@ -233,7 +250,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.5",
       "evs": {
         "hp": 188,
@@ -488,6 +505,7 @@
     "877": 5.256422445643061e-7,
     "884": 0.007802259373152098,
     "887": 0.6689842478797425,
+    "892": 676.4265751261602,
     "894": 0.0919561284127931,
     "895": 0.4103975892316899,
     "896": 0.13517679765409274,
@@ -589,7 +607,7 @@
     "10171": 126.86698083102827,
     "10172": 3.918373958633481e-10,
     "10186": 13.51286323581648,
-    "10191": 3812.379124836006,
+    "10191": 3135.952549709846,
     "10230": 307.89838618815264,
     "10233": 0.9039364851786438,
     "10234": 5.551115123125783e-17,

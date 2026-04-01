@@ -1,12 +1,19 @@
 {
   "id": "10033",
-  "name": "Venusaur Mega",
+  "name": "Venusaur mega",
   "format_id": "showdown_gen6ou-1760",
   "usage_metrics": {
     "raw": 3150,
     "base_weight": 251.2907968765728,
     "percent": 4.722497076549429
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "venusaurite": 251.2907968765728
   },
@@ -61,7 +68,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "15.1",
       "evs": {
         "hp": 248,
@@ -73,7 +80,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "13.7",
       "evs": {
         "hp": 248,
@@ -85,7 +92,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "12.1",
       "evs": {
         "hp": 232,
@@ -97,7 +104,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.7",
       "evs": {
         "hp": 248,
@@ -109,7 +116,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.4",
       "evs": {
         "hp": 248,
@@ -121,7 +128,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.3",
       "evs": {
         "hp": 248,
@@ -133,7 +140,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.2",
       "evs": {
         "hp": 248,
@@ -145,7 +152,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "4.8",
       "evs": {
         "hp": 248,
@@ -157,7 +164,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 248,
@@ -169,7 +176,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.7",
       "evs": {
         "hp": 252,

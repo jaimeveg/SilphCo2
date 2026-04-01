@@ -7,6 +7,23 @@
     "base_weight": 14809,
     "percent": 2.837288434347111
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 14078,
     "eject-pack": 408,
@@ -215,7 +232,7 @@
   },
   "spreads": [
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "14.3",
       "evs": {
         "hp": 252,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "11.1",
       "evs": {
         "hp": 252,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.2",
       "evs": {
         "hp": 12,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.7",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.7",
       "evs": {
         "hp": 76,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -287,7 +304,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -299,7 +316,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.7",
       "evs": {
         "hp": 36,
@@ -311,7 +328,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -323,7 +340,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 20,
@@ -503,6 +520,7 @@
     "876": 27,
     "884": 1,
     "887": 53,
+    "892": 7518,
     "894": 15,
     "895": 166,
     "896": 16,
@@ -581,7 +599,7 @@
     "10170": 58,
     "10171": 89,
     "10186": 3797,
-    "10191": 9549,
+    "10191": 2031,
     "10230": 236,
     "10233": 90,
     "10237": 106,

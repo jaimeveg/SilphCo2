@@ -24,7 +24,7 @@ function parseChaosFilename(filename: string): SmogonFormatParser | null {
     const elo = parts.pop() || '0';
     const formatId = parts.join('-');
 
-    const genMatch = formatId.match(/^gen(\d+)/i);
+    const genMatch = formatId.match(/^gen([1-9]|1\d)/i);
     if (!genMatch) return null;
 
     const genNum = genMatch[1];
@@ -122,10 +122,15 @@ export async function GET() {
             formatGroup.regs[p.regulation].push({ elo: p.elo, fileId: p.id });
         });
 
-        // Ordenar ELOs de menor a mayor
+        // Ordenar ELOs de menor a mayor + limpiar modos vacíos
         Object.keys(structure).forEach(gen => {
             ['singles', 'doubles'].forEach(mode => {
                 const formats = structure[gen][mode];
+                if (!formats || Object.keys(formats).length === 0) {
+                    // No hay formatos reales para este modo en esta gen → eliminar del árbol
+                    delete structure[gen][mode];
+                    return;
+                }
                 Object.keys(formats).forEach(format => {
                     const regs = formats[format].regs;
                     Object.keys(regs).forEach(reg => {

@@ -217,7 +217,14 @@ const MANUAL_OVERRIDES: Record<string, number> = {
 
     "exeggutor-alolan": 10114,
     "samurott-hisuian": 10236,
-    "golem-alolan": 10111
+    "golem-alolan": 10111,
+    "frillish": 592,
+    "jellicent": 593,
+    "meowstic-f-mega": 10314,
+    "meowstic-m-mega": 10314,
+    "pyroar": 668,
+    "sliggoo-hisuian": 10241,
+    "sneasel-hisuian": 10235
 };
 
 const generateAliasMap = () => {

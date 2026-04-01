@@ -2,14 +2,14 @@ import fs from 'fs';
 import path from 'path';
 
 // Endpoint GraphQL Beta de PokeAPI (Muy rápido para descargas masivas)
-const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
+const POKEAPI_GQL = 'https://graphql.pokeapi.co/v1beta2/v1/graphql';
 
 const QUERY = `
   query GetPokemonSpeeds {
-    pokemon_v2_pokemon {
+    pokemon {
       id
       name
-      pokemon_v2_pokemonstats(where: {pokemon_v2_stat: {name: {_eq: "speed"}}}) {
+      pokemonstats(where: {stat: {name: {_eq: "speed"}}}) {
         base_stat
       }
     }
@@ -39,7 +39,7 @@ async function generateSpeedDex() {
       throw new Error(`Errores GraphQL: ${JSON.stringify(json.errors)}`);
     }
 
-    const pokemonList = json.data.pokemon_v2_pokemon;
+    const pokemonList = json.data.pokemon;
     const speedMap: Record<number, number> = {};
 
     console.log(`📦 Procesando ${pokemonList.length} Pokémon...`);
@@ -47,7 +47,7 @@ async function generateSpeedDex() {
     pokemonList.forEach((p: any) => {
       // El ID de PokeAPI es la clave universal
       const id = p.id;
-      const speedStats = p.pokemon_v2_pokemonstats;
+      const speedStats = p.pokemonstats;
       
       if (speedStats && speedStats.length > 0) {
         speedMap[id] = speedStats[0].base_stat;

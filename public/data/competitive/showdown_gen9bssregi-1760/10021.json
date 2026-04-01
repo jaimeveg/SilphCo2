@@ -1,12 +1,24 @@
 {
   "id": "10021",
-  "name": "Landorus Therian",
+  "name": "Landorus therian",
   "format_id": "showdown_gen9bssregi-1760",
   "usage_metrics": {
     "raw": 12477,
     "base_weight": 42.3190238390467,
     "percent": 22.16872179382396
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 17.922558134473846,
     "choice-band": 9.514941733138672,
@@ -101,7 +113,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "18.4",
       "evs": {
         "hp": 252,
@@ -113,7 +125,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.5",
       "evs": {
         "hp": 116,
@@ -125,7 +137,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "8.4",
       "evs": {
         "hp": 52,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "8.0",
       "evs": {
         "hp": 252,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.0",
       "evs": {
         "hp": 244,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.5",
       "evs": {
         "hp": 244,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 252,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.3",
       "evs": {
         "hp": 244,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 164,
@@ -347,6 +359,7 @@
     "876": 0.00000446471751924804,
     "887": 0.012617819336329328,
     "890": 1.0382711360533843,
+    "892": 0.1704061221555374,
     "894": 0.5076816538582485,
     "895": 0,
     "900": 0.000007918162728215439,
@@ -424,7 +437,7 @@
     "10172": 0.09493332731119408,
     "10188": 7.391740866156303,
     "10189": 0.017575634999997702,
-    "10191": 10.780546067572859,
+    "10191": 10.610139945417322,
     "10193": 4.561612179571664,
     "10194": 13.553062258193098,
     "10230": 0.000018240562310201103,

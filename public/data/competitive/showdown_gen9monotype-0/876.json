@@ -1,0 +1,322 @@
+{
+  "id": "876",
+  "name": "Indeedee Male",
+  "format_id": "showdown_gen9monotype-0",
+  "usage_metrics": {
+    "raw": 5687,
+    "base_weight": 5687,
+    "percent": 2.4664104988333664
+  },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "choice-scarf": 1986,
+    "choice-specs": 360,
+    "terrain-extender": 1422,
+    "psychic-seed": 158,
+    "focus-sash": 1237,
+    "room-service": 4,
+    "leftovers": 161,
+    "toxic-orb": 3,
+    "heavy-duty-boots": 44,
+    "expert-belt": 3,
+    "life-orb": 42,
+    "nothing": 2,
+    "mental-herb": 8,
+    "twisted-spoon": 8,
+    "assault-vest": 69,
+    "colbur-berry": 13,
+    "black-sludge": 1,
+    "sitrus-berry": 7,
+    "salac-berry": 28,
+    "weakness-policy": 1,
+    "rocky-helmet": 62,
+    "lagging-tail": 4,
+    "air-balloon": 2,
+    "ability-shield": 11,
+    "eject-button": 16,
+    "throat-spray": 13,
+    "flame-orb": 3,
+    "wise-glasses": 1,
+    "red-card": 1,
+    "iron-ball": 13,
+    "aguav-berry": 1,
+    "maranga-berry": 3
+  },
+  "abilities": {
+    "psychic-surge": 5583,
+    "inner-focus": 35,
+    "synchronize": 69
+  },
+  "moves": {
+    "expanding-force": 5430,
+    "hyper-voice": 1186,
+    "dazzling-gleam": 3979,
+    "shadow-ball": 1514,
+    "trick": 1552,
+    "healing-wish": 3863,
+    "psyshock": 211,
+    "encore": 1151,
+    "trick-room": 1753,
+    "calm-mind": 385,
+    "psychic": 177,
+    "energy-ball": 664,
+    "fake-out": 34,
+    "after-you": 1,
+    "draining-kiss": 302,
+    "facade": 2,
+    "psychic-noise": 99,
+    "drain-punch": 17,
+    "zen-headbutt": 13,
+    "tera-blast": 8,
+    "stored-power": 41,
+    "protect": 181,
+    "play-rough": 11,
+    "substitute": 19,
+    "extrasensory": 22,
+    "endure": 1,
+    "gravity": 48,
+    "swift": 11,
+    "metronome": 30,
+    "psybeam": 1,
+    "body-slam": 22,
+    "psychic-terrain": 7,
+    "skill-swap": 2,
+    "last-resort": 6,
+    "rest": 1,
+    "psych-up": 3,
+    "helping-hand": 1
+  },
+  "teras": {
+    "nothing": 5687
+  },
+  "spreads": [
+    {
+      "nature": "timid",
+      "usage": "54.0",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "quiet",
+      "usage": "13.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "4.6",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "4.5",
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "4.4",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "2.7",
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "timid",
+      "usage": "2.6",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 4,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "hasty",
+      "usage": "2.5",
+      "evs": {
+        "hp": 0,
+        "atk": 4,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "0.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 244,
+        "spa": 0,
+        "spd": 12,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "0.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "39": 1,
+    "40": 25,
+    "80": 480,
+    "85": 23,
+    "103": 46,
+    "113": 50,
+    "128": 14,
+    "132": 733,
+    "143": 138,
+    "151": 177,
+    "162": 11,
+    "164": 2,
+    "190": 21,
+    "196": 160,
+    "199": 51,
+    "206": 19,
+    "217": 37,
+    "233": 1407,
+    "235": 190,
+    "242": 1149,
+    "282": 229,
+    "287": 3,
+    "288": 1,
+    "289": 38,
+    "308": 31,
+    "335": 13,
+    "358": 15,
+    "376": 602,
+    "380": 101,
+    "381": 557,
+    "385": 241,
+    "398": 908,
+    "424": 315,
+    "437": 330,
+    "446": 3,
+    "474": 223,
+    "475": 1197,
+    "480": 29,
+    "481": 8,
+    "482": 26,
+    "486": 21,
+    "488": 31,
+    "573": 189,
+    "575": 4,
+    "576": 18,
+    "579": 95,
+    "586": 33,
+    "628": 191,
+    "648": 315,
+    "655": 58,
+    "668": 64,
+    "678": 36,
+    "687": 236,
+    "720": 9,
+    "733": 62,
+    "735": 13,
+    "765": 29,
+    "775": 17,
+    "779": 36,
+    "800": 131,
+    "820": 19,
+    "858": 1580,
+    "899": 61,
+    "901": 2127,
+    "925": 920,
+    "930": 133,
+    "931": 7,
+    "936": 933,
+    "945": 101,
+    "954": 17,
+    "967": 137,
+    "976": 75,
+    "981": 205,
+    "982": 74,
+    "985": 93,
+    "1010": 43,
+    "1015": 78,
+    "1022": 1181,
+    "1023": 767,
+    "1024": 1761,
+    "10002": 111,
+    "10003": 838,
+    "10086": 1192,
+    "10100": 12,
+    "10124": 4,
+    "10165": 30,
+    "10169": 86,
+    "10172": 793,
+    "10239": 2067,
+    "10240": 145
+  }
+}

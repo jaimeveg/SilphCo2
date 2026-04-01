@@ -7,6 +7,23 @@
     "base_weight": 16376,
     "percent": 3.1375133635538046
   },
+  "roles": [
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "covert-cloak": 13721,
     "rocky-helmet": 304,
@@ -126,7 +143,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "15.7",
       "evs": {
         "hp": 228,
@@ -138,7 +155,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "13.0",
       "evs": {
         "hp": 244,
@@ -150,7 +167,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -162,7 +179,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -174,7 +191,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -186,7 +203,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.8",
       "evs": {
         "hp": 4,
@@ -198,7 +215,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.7",
       "evs": {
         "hp": 0,
@@ -210,7 +227,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -222,7 +239,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -234,7 +251,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -428,6 +445,7 @@
     "877": 36,
     "879": 1,
     "887": 64,
+    "892": 473,
     "894": 26,
     "895": 158,
     "896": 34,
@@ -511,7 +529,7 @@
     "10171": 657,
     "10172": 19,
     "10186": 271,
-    "10191": 9437,
+    "10191": 8964,
     "10230": 549,
     "10232": 2,
     "10233": 11,

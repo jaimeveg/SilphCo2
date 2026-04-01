@@ -1,12 +1,19 @@
 {
   "id": "10001",
-  "name": "Deoxys Attack",
+  "name": "Deoxys attack",
   "format_id": "showdown_gen9ubers-0",
   "usage_metrics": {
     "raw": 15287,
     "base_weight": 15287,
     "percent": 5.647002327213623
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "focus-sash": 7835,
     "life-orb": 4392,
@@ -155,7 +162,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "17.3",
       "evs": {
         "hp": 0,
@@ -167,7 +174,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "15.6",
       "evs": {
         "hp": 0,
@@ -179,7 +186,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "13.4",
       "evs": {
         "hp": 0,
@@ -191,7 +198,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "7.2",
       "evs": {
         "hp": 0,
@@ -203,7 +210,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.5",
       "evs": {
         "hp": 0,
@@ -215,7 +222,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.4",
       "evs": {
         "hp": 4,
@@ -227,7 +234,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "3.2",
       "evs": {
         "hp": 0,
@@ -239,7 +246,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -251,7 +258,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "2.5",
       "evs": {
         "hp": 4,
@@ -263,7 +270,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "1.5",
       "evs": {
         "hp": 0,
@@ -493,6 +500,7 @@
     "884": 2,
     "887": 220,
     "890": 1641,
+    "892": 501,
     "893": 7,
     "894": 1160,
     "895": 15,
@@ -586,7 +594,7 @@
     "10186": 282,
     "10188": 6366,
     "10189": 489,
-    "10191": 1040,
+    "10191": 539,
     "10193": 1637,
     "10230": 29,
     "10233": 1,

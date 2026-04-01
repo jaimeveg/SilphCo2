@@ -1,12 +1,24 @@
 {
   "id": "10171",
-  "name": "Moltres Galar",
+  "name": "Moltres galarian",
   "format_id": "showdown_gen8ou-1630",
   "usage_metrics": {
     "raw": 2309,
     "base_weight": 956.3021850332018,
     "percent": 2.888127282733777
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 675.6292061071322,
     "weakness-policy": 50.66653228574326,
@@ -61,7 +73,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "24.3",
       "evs": {
         "hp": 0,
@@ -73,7 +85,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "14.5",
       "evs": {
         "hp": 68,
@@ -85,7 +97,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "11.0",
       "evs": {
         "hp": 160,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "9.3",
       "evs": {
         "hp": 92,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.0",
       "evs": {
         "hp": 64,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.4",
       "evs": {
         "hp": 184,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.5",
       "evs": {
         "hp": 72,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 192,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.0",
       "evs": {
         "hp": 216,

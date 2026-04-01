@@ -7,6 +7,23 @@
     "base_weight": 9135,
     "percent": 3.0851063829787235
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "heavy-duty-boots": 672,
     "damp-rock": 7117,
@@ -129,7 +146,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "13.8",
       "evs": {
         "hp": 248,
@@ -141,7 +158,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.4",
       "evs": {
         "hp": 248,
@@ -153,7 +170,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "10.2",
       "evs": {
         "hp": 248,
@@ -165,7 +182,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.8",
       "evs": {
         "hp": 248,
@@ -177,7 +194,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.6",
       "evs": {
         "hp": 164,
@@ -189,7 +206,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.5",
       "evs": {
         "hp": 252,
@@ -201,7 +218,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -213,7 +230,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.9",
       "evs": {
         "hp": 248,
@@ -225,7 +242,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.4",
       "evs": {
         "hp": 4,
@@ -237,7 +254,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.4",
       "evs": {
         "hp": 248,
@@ -596,6 +613,7 @@
     "884": 2,
     "887": 231,
     "890": 10,
+    "892": 24,
     "893": 5,
     "894": 470,
     "895": 58,
@@ -745,7 +763,7 @@
     "10186": 11,
     "10188": 333,
     "10189": 1,
-    "10191": 777,
+    "10191": 753,
     "10193": 13,
     "10230": 26,
     "10233": 8,

@@ -7,6 +7,18 @@
     "base_weight": 9.367815612404652,
     "percent": 3.0080665221562843
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 5.1096881930511575,
     "throat-spray": 0.000003255657206546747,
@@ -87,7 +99,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "47.0",
       "evs": {
         "hp": 204,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "29.6",
       "evs": {
         "hp": 252,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "6.5",
       "evs": {
         "hp": 252,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 172,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 156,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.1",
       "evs": {
         "hp": 252,
@@ -183,7 +195,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.0",
       "evs": {
         "hp": 252,
@@ -195,7 +207,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "0.9",
       "evs": {
         "hp": 252,
@@ -291,6 +303,7 @@
     "873": 0.0018238984873581443,
     "887": 0.00220769004269622,
     "890": 0.029202649243597723,
+    "892": 0,
     "901": 0.2885367834941904,
     "902": 0,
     "903": 4.4060442702971185,

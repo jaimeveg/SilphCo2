@@ -1,12 +1,19 @@
 {
   "id": "10272",
-  "name": "Ursaluna Bloodmoon",
+  "name": "Ursaluna bloodmoon",
   "format_id": "showdown_gen9vgc2026regf-1630",
   "usage_metrics": {
     "raw": 109565,
     "base_weight": 6553.816837599579,
     "percent": 6.9759164863767005
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "life-orb": 4277.06830962507,
     "assault-vest": 656.9899023849476,
@@ -154,7 +161,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "10.7",
       "evs": {
         "hp": 4,
@@ -166,7 +173,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -178,7 +185,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "6.0",
       "evs": {
         "hp": 188,
@@ -190,7 +197,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -202,7 +209,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.0",
       "evs": {
         "hp": 4,
@@ -214,7 +221,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "3.0",
       "evs": {
         "hp": 196,
@@ -226,7 +233,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 156,
@@ -238,7 +245,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.2",
       "evs": {
         "hp": 244,
@@ -250,7 +257,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.1",
       "evs": {
         "hp": 108,
@@ -262,7 +269,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.9",
       "evs": {
         "hp": 148,
@@ -594,6 +601,7 @@
     "879": 0.00364608231043112,
     "884": 0.09241954698059651,
     "887": 148.4506838796463,
+    "892": 1314.3985248783988,
     "894": 81.81898818265321,
     "895": 44.161786862931216,
     "896": 8.362631432590806,
@@ -706,7 +714,7 @@
     "10171": 129.3991182302284,
     "10172": 9.330621799691526,
     "10186": 325.2688891228799,
-    "10191": 2788.170176798134,
+    "10191": 1473.7716519197354,
     "10230": 159.87366606411211,
     "10232": 0.27324663319571457,
     "10233": 70.83475478993915,

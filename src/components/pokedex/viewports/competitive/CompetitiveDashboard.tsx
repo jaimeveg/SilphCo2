@@ -109,6 +109,27 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
         staleTime: 1000 * 60 * 60 * 12 
     });
 
+    const { data: traitsMap } = useQuery<Record<string, string>>({
+        queryKey: ['traitsMapData'],
+        queryFn: () => fetch('/data/traits_map.json').then(res => res.json()),
+        staleTime: Infinity
+    });
+
+    const { data: movedexIndex } = useQuery<any[]>({
+        queryKey: ['movedexIndexData'],
+        queryFn: () => fetch('/data/movedex_index.json').then(res => res.json()),
+        staleTime: Infinity
+    });
+
+    const moveCategories = useMemo(() => {
+        if (!movedexIndex) return {};
+        const map: Record<string, string> = {};
+        movedexIndex.forEach(m => {
+            map[m.name] = m.category;
+        });
+        return map;
+    }, [movedexIndex]);
+
     const { data: dexMap } = useNationalDexLookup(); 
     const searchParams = useSearchParams();
 
@@ -468,14 +489,15 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
     const availableRegs = indexData?.structure[gen]?.[mode]?.[format]?.regs ? Object.keys(indexData.structure[gen][mode][format].regs) : [];
     const availableElos = indexData?.structure[gen]?.[mode]?.[format]?.regs?.[reg] || [];
     const formatEloLabel = (elo: string) => elo === '0' ? 'All (0+)' : `${elo}+`;
-    const showTeras = (dataSource === 'tournament' || gen.includes('9')) && data?.stats.teras && data.stats.teras.length > 0;
+    const validTeras = data?.stats.teras?.filter(t => t.name.toLowerCase() !== 'nothing' && t.slug?.toLowerCase() !== 'nothing') || [];
+    const showTeras = (dataSource === 'tournament' || gen.includes('9')) && validTeras.length > 0;
 
     if (isLoadingTree || !indexData || !dexMap || !aliasMap) return <div className="h-64 flex flex-col items-center justify-center text-slate-500"><Activity className="animate-spin text-cyan-500 mb-2" /><span className="text-xs font-mono">LOADING DATA...</span></div>;
 
     return (
         <div className="h-full flex flex-col bg-slate-950/30 rounded-xl border border-slate-800 overflow-hidden shadow-2xl">
             {data && (
-                <CompetitiveHeader pokemon={pokemon} usageRate={data.general.usage} topMoves={data.stats.moves} topAbilities={data.stats.abilities} topItems={data.stats.items} spreads={data.stats.natureSpread} speedData={data.speed} lang={lang} />
+                <CompetitiveHeader pokemon={pokemon} usageRate={data.general.usage} topMoves={data.stats.moves} topAbilities={data.stats.abilities} topItems={data.stats.items} spreads={data.stats.natureSpread} speedData={data.speed} lang={lang} moveCategories={moveCategories} traitsMap={traitsMap} />
             )}
 
             <div className="flex flex-col gap-2 p-3 border-b border-slate-800 bg-slate-900/90 z-20">
@@ -593,7 +615,7 @@ export default function CompetitiveDashboard({ pokemon, lang }: Props) {
                                 <div className="space-y-1.5">
                                     <h4 className="text-[9px] font-bold text-slate-500 uppercase flex items-center gap-1.5 border-b border-slate-800/50 pb-1"><Diamond size={11} /> Tera Types</h4>
                                     <div className="grid grid-cols-2 gap-x-4 gap-y-1 pt-1">
-                                        {data.stats.teras?.slice(0, 6).map((t) => (
+                                        {validTeras.slice(0, 6).map((t) => (
                                             <UsageBar key={t.name} label={t.name} value={t.value} subLabel={formatDisplayValue(t.displayValue || t.value)} color="bg-pink-600" />
                                         ))}
                                     </div>

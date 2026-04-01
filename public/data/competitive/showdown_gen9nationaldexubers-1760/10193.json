@@ -1,12 +1,29 @@
 {
   "id": "10193",
-  "name": "Calyrex Ice",
+  "name": "Calyrex ice",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 8734,
     "base_weight": 605.298925099086,
     "percent": 2.94967916244512
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "loaded-dice": 25.609308835007205,
     "leftovers": 32.677539335217965,
@@ -147,7 +164,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "43.5",
       "evs": {
         "hp": 248,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "29.8",
       "evs": {
         "hp": 4,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "6.1",
       "evs": {
         "hp": 252,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "5.9",
       "evs": {
         "hp": 232,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 248,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "1.9",
       "evs": {
         "hp": 252,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.4",
       "evs": {
         "hp": 236,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "0.9",
       "evs": {
         "hp": 96,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.5",
       "evs": {
         "hp": 252,
@@ -532,6 +549,7 @@
     "883": 0.0000021009162001206505,
     "887": 1.5439976377306799,
     "890": 34.421351679154235,
+    "892": 0.827719728851334,
     "894": 0.4060602958168675,
     "895": 0.015234661157832285,
     "897": 0.32416873794048096,
@@ -680,7 +698,7 @@
     "10186": 0.8756745013857803,
     "10188": 180.94509297145808,
     "10189": 3.1471560847114963,
-    "10191": 1.0167917961770025,
+    "10191": 0.1890720673256686,
     "10230": 2.0522472610196019e-13,
     "10232": 0.000001843555095804028,
     "10233": 0,

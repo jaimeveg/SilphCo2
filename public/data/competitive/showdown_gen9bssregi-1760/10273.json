@@ -1,12 +1,29 @@
 {
   "id": "10273",
-  "name": "Ogerpon Wellspring Mask",
+  "name": "Ogerpon wellspring",
   "format_id": "showdown_gen9bssregi-1760",
   "usage_metrics": {
     "raw": 1554,
     "base_weight": 2.426211775752529,
     "percent": 2.761095909882378
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "wellspring-mask": 2.426211775752529
   },
@@ -50,7 +67,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "30.0",
       "evs": {
         "hp": 252,
@@ -62,7 +79,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "17.3",
       "evs": {
         "hp": 252,
@@ -74,7 +91,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "10.7",
       "evs": {
         "hp": 252,
@@ -86,7 +103,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.3",
       "evs": {
         "hp": 156,
@@ -98,7 +115,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.5",
       "evs": {
         "hp": 28,
@@ -110,7 +127,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -122,7 +139,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.2",
       "evs": {
         "hp": 4,
@@ -134,7 +151,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -146,7 +163,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 252,
@@ -240,6 +257,7 @@
     "861": 0.06866922502472922,
     "887": 0.13350459426624578,
     "890": 0.016689071605820782,
+    "892": 0.0041554460713996155,
     "901": 0.009739787535786637,
     "902": 0.00005992133057025617,
     "903": 6.03497099516126e-8,
@@ -303,7 +321,7 @@
     "10172": 0,
     "10188": 0.6118959957823094,
     "10189": 0.07845622069041336,
-    "10191": 0.014532404747648053,
+    "10191": 0.010376958676248438,
     "10193": 0.05172539491843431,
     "10194": 0.5425844792337751,
     "10230": 6.005901970196348e-8,

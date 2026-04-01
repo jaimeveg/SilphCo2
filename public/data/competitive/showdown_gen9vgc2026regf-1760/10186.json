@@ -1,12 +1,29 @@
 {
   "id": "10186",
-  "name": "Indeedee Female",
+  "name": "Indeedee f",
   "format_id": "showdown_gen9vgc2026regf-1760",
   "usage_metrics": {
     "raw": 205054,
     "base_weight": 1321.491208756517,
     "percent": 13.055625237963655
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 962.96087054471,
     "psychic-seed": 114.92104231432056,
@@ -146,7 +163,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "45.8",
       "evs": {
         "hp": 252,
@@ -158,7 +175,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.3",
       "evs": {
         "hp": 252,
@@ -170,7 +187,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "8.9",
       "evs": {
         "hp": 252,
@@ -182,7 +199,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "5.4",
       "evs": {
         "hp": 244,
@@ -194,7 +211,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.6",
       "evs": {
         "hp": 252,
@@ -206,7 +223,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.3",
       "evs": {
         "hp": 252,
@@ -218,7 +235,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -230,7 +247,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.3",
       "evs": {
         "hp": 244,
@@ -242,7 +259,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -254,7 +271,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.2",
       "evs": {
         "hp": 252,
@@ -632,6 +649,7 @@
     "879": 0.0008205370572701431,
     "884": 0.0001709132491182208,
     "887": 2.5885198410748687,
+    "892": 327.16767030672355,
     "894": 0.7225797496110031,
     "895": 295.110257875567,
     "896": 0.5049510234091553,
@@ -752,7 +770,7 @@
     "10170": 4.472859762290998,
     "10171": 4.189741239919407,
     "10172": 0.2661923120246297,
-    "10191": 983.2060253884526,
+    "10191": 656.038355081729,
     "10230": 7.357380371633227,
     "10232": 0.021595560948879766,
     "10233": 0.7238488788354386,

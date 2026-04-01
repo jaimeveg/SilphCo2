@@ -7,6 +7,23 @@
     "base_weight": 28225.08290292758,
     "percent": 46.89751596669768
   },
+  "roles": [
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "rocky-helmet": 6799.88187158382,
     "sitrus-berry": 1629.2517406493448,
@@ -183,7 +200,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.5",
       "evs": {
         "hp": 244,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.7",
       "evs": {
         "hp": 252,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.6",
       "evs": {
         "hp": 244,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.3",
       "evs": {
         "hp": 180,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.0",
       "evs": {
         "hp": 244,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -267,7 +284,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -279,7 +296,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 252,
@@ -291,7 +308,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -640,6 +657,7 @@
     "884": 0.11474825718718068,
     "887": 4.42142534755398,
     "890": 262.92838941750927,
+    "892": 1125.2204271527862,
     "894": 114.36643327239254,
     "895": 7.043439371831574,
     "896": 0.43041910542536227,
@@ -764,7 +782,7 @@
     "10186": 831.2681591137781,
     "10188": 767.2770195644476,
     "10189": 4120.2709615920785,
-    "10191": 11444.875625206518,
+    "10191": 10319.655198053732,
     "10193": 8829.139056879345,
     "10194": 8126.796002654096,
     "10230": 1.032546121664559,

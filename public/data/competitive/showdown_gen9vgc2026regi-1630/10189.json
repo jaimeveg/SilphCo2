@@ -1,12 +1,29 @@
 {
   "id": "10189",
-  "name": "Zamazenta Crowned",
+  "name": "Zamazenta crowned",
   "format_id": "showdown_gen9vgc2026regi-1630",
   "usage_metrics": {
     "raw": 65869,
     "base_weight": 15084.565077345133,
     "percent": 16.044399842159876
   },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wide_guard",
+      "label": "Wide Guard",
+      "category": "SUP"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-shield": 15084.565077345133
   },
@@ -87,7 +104,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "6.0",
       "evs": {
         "hp": 236,
@@ -99,7 +116,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.7",
       "evs": {
         "hp": 244,
@@ -111,7 +128,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.1",
       "evs": {
         "hp": 100,
@@ -123,7 +140,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.0",
       "evs": {
         "hp": 204,
@@ -135,7 +152,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.3",
       "evs": {
         "hp": 236,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.3",
       "evs": {
         "hp": 204,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.2",
       "evs": {
         "hp": 76,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "2.1",
       "evs": {
         "hp": 196,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.8",
       "evs": {
         "hp": 92,
@@ -474,6 +491,7 @@
     "886": 8.431166237388155e-7,
     "887": 1.994116668391987,
     "890": 27.71937241251957,
+    "892": 321.0453613252088,
     "894": 17.183047098567055,
     "895": 4.1271626515644835,
     "896": 0.022489192902676702,
@@ -591,7 +609,7 @@
     "10172": 1.4306271537118282,
     "10186": 823.090346674076,
     "10188": 20.29880818824238,
-    "10191": 3170.1746828644305,
+    "10191": 2849.1293215392216,
     "10193": 243.5515807651398,
     "10194": 9608.39019555936,
     "10230": 42.02496310704378,

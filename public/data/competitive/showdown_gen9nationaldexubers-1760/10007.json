@@ -1,12 +1,29 @@
 {
   "id": "10007",
-  "name": "Giratina Origin",
+  "name": "Giratina origin",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 10896,
     "base_weight": 1414.5512977972298,
     "percent": 3.6798378926038504
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "griseous-core": 1414.5512977972298
   },
@@ -106,7 +123,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "17.2",
       "evs": {
         "hp": 232,
@@ -118,7 +135,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.6",
       "evs": {
         "hp": 24,
@@ -130,7 +147,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.5",
       "evs": {
         "hp": 248,
@@ -142,7 +159,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.0",
       "evs": {
         "hp": 248,
@@ -154,7 +171,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.9",
       "evs": {
         "hp": 238,
@@ -166,7 +183,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.5",
       "evs": {
         "hp": 248,
@@ -178,7 +195,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.4",
       "evs": {
         "hp": 104,
@@ -190,7 +207,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.3",
       "evs": {
         "hp": 240,
@@ -202,7 +219,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.1",
       "evs": {
         "hp": 0,
@@ -214,7 +231,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.7",
       "evs": {
         "hp": 248,
@@ -480,6 +497,7 @@
     "882": 9.496387615492578,
     "887": 9.899338431821334,
     "890": 192.33347325129097,
+    "892": 0.11058471667452946,
     "893": 1.6802930768999857e-8,
     "894": 0.051482511691906374,
     "897": 0.003220642451900735,
@@ -621,7 +639,7 @@
     "10186": 3.4497600498450964e-8,
     "10188": 533.4577751012012,
     "10189": 24.346655578635445,
-    "10191": 1.721013811961696,
+    "10191": 1.6104290952871665,
     "10193": 9.327822701159786,
     "10230": 6.743214814450736,
     "10233": 0,

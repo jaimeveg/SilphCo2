@@ -7,6 +7,18 @@
     "base_weight": 51072,
     "percent": 3.251713656662537
   },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sitrus-berry": 1296,
     "covert-cloak": 10133,
@@ -149,7 +161,7 @@
   },
   "spreads": [
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "17.7",
       "evs": {
         "hp": 252,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "17.1",
       "evs": {
         "hp": 252,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "12.1",
       "evs": {
         "hp": 212,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "7.3",
       "evs": {
         "hp": 244,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "6.6",
       "evs": {
         "hp": 212,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.1",
       "evs": {
         "hp": 252,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -245,7 +257,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -257,7 +269,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "1.1",
       "evs": {
         "hp": 244,
@@ -555,6 +567,7 @@
     "879": 134,
     "884": 10,
     "887": 304,
+    "892": 15674,
     "894": 252,
     "895": 614,
     "896": 680,
@@ -662,7 +675,7 @@
     "10171": 157,
     "10172": 340,
     "10186": 36055,
-    "10191": 17818,
+    "10191": 2144,
     "10230": 460,
     "10232": 19,
     "10233": 386,

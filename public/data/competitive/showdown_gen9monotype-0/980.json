@@ -1,0 +1,329 @@
+{
+  "id": "980",
+  "name": "Clodsire",
+  "format_id": "showdown_gen9monotype-0",
+  "usage_metrics": {
+    "raw": 16266,
+    "base_weight": 16266,
+    "percent": 7.054445784073068
+  },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    },
+    {
+      "role": "role_speed_control",
+      "label": "Speed Control",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "leftovers": 1883,
+    "black-sludge": 12399,
+    "red-card": 141,
+    "heavy-duty-boots": 737,
+    "rocky-helmet": 371,
+    "lum-berry": 9,
+    "covert-cloak": 3,
+    "weakness-policy": 1,
+    "choice-band": 36,
+    "assault-vest": 48,
+    "protective-pads": 8,
+    "eject-button": 287,
+    "air-balloon": 147,
+    "sitrus-berry": 4,
+    "life-orb": 19,
+    "nothing": 36,
+    "poison-barb": 3,
+    "focus-sash": 9,
+    "soft-sand": 1,
+    "chesto-berry": 1,
+    "mental-herb": 10,
+    "black-glasses": 2,
+    "ability-shield": 7,
+    "passho-berry": 2,
+    "expert-belt": 16,
+    "choice-scarf": 1,
+    "payapa-berry": 1,
+    "blunder-policy": 3,
+    "mirror-herb": 8,
+    "clear-amulet": 56,
+    "yache-berry": 14,
+    "power-herb": 3
+  },
+  "abilities": {
+    "water-absorb": 10642,
+    "unaware": 5394,
+    "poison-point": 230
+  },
+  "moves": {
+    "body-press": 430,
+    "recover": 15095,
+    "stockpile": 533,
+    "toxic": 8565,
+    "earthquake": 13767,
+    "stealth-rock": 4677,
+    "spikes": 3426,
+    "toxic-spikes": 3288,
+    "amnesia": 689,
+    "poison-jab": 6111,
+    "curse": 1600,
+    "rock-tomb": 35,
+    "haze": 1760,
+    "protect": 821,
+    "gunk-shot": 707,
+    "counter": 410,
+    "sludge-bomb": 88,
+    "substitute": 72,
+    "yawn": 289,
+    "sludge-wave": 36,
+    "low-kick": 315,
+    "rest": 76,
+    "zen-headbutt": 30,
+    "heavy-slam": 88,
+    "liquidation": 286,
+    "rock-slide": 51,
+    "chilling-water": 262,
+    "iron-head": 143,
+    "stone-edge": 86,
+    "ancient-power": 136,
+    "earth-power": 147,
+    "megahorn": 118,
+    "body-slam": 210,
+    "waterfall": 159,
+    "high-horsepower": 23,
+    "acid-spray": 58,
+    "surf": 16,
+    "double-edge": 27,
+    "sandstorm": 24,
+    "facade": 57,
+    "trailblaze": 43,
+    "stomping-tantrum": 8,
+    "": 2,
+    "hydro-pump": 46,
+    "spit-up": 4,
+    "venoshock": 73,
+    "swallow": 1,
+    "muddy-water": 4,
+    "rain-dance": 10,
+    "bulldoze": 28,
+    "mud-slap": 18,
+    "water-pulse": 17,
+    "sleep-talk": 4,
+    "mist": 11,
+    "mud-shot": 82,
+    "helping-hand": 1,
+    "dig": 1
+  },
+  "teras": {
+    "nothing": 16266
+  },
+  "spreads": [
+    {
+      "nature": "careful",
+      "usage": "19.8",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 0,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "14.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 160,
+        "spa": 0,
+        "spd": 96,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "10.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "9.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 232,
+        "spa": 0,
+        "spd": 24,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "3.7",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 156,
+        "spa": 0,
+        "spd": 96,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "3.6",
+      "evs": {
+        "hp": 248,
+        "atk": 8,
+        "def": 0,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "sassy",
+      "usage": "3.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 4,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "hardy",
+      "usage": "2.3",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 0,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "2.0",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "1.8",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "3": 99,
+    "24": 5,
+    "28": 1,
+    "44": 3,
+    "45": 202,
+    "49": 75,
+    "50": 1,
+    "51": 85,
+    "71": 25,
+    "73": 288,
+    "74": 1,
+    "76": 7,
+    "89": 5,
+    "93": 30,
+    "94": 977,
+    "109": 2,
+    "110": 95,
+    "112": 4,
+    "132": 0,
+    "168": 19,
+    "195": 361,
+    "221": 13,
+    "232": 46,
+    "260": 238,
+    "317": 3,
+    "323": 97,
+    "328": 4,
+    "330": 173,
+    "336": 3,
+    "340": 21,
+    "389": 316,
+    "423": 653,
+    "435": 56,
+    "445": 4773,
+    "449": 1,
+    "450": 5565,
+    "454": 201,
+    "464": 55,
+    "472": 3282,
+    "473": 4924,
+    "530": 5885,
+    "553": 374,
+    "591": 1053,
+    "623": 87,
+    "645": 6119,
+    "691": 144,
+    "748": 3053,
+    "750": 91,
+    "758": 1024,
+    "770": 189,
+    "844": 136,
+    "849": 299,
+    "901": 667,
+    "903": 4764,
+    "904": 748,
+    "945": 352,
+    "948": 3,
+    "949": 237,
+    "966": 383,
+    "970": 2269,
+    "984": 2922,
+    "989": 2167,
+    "990": 886,
+    "994": 3210,
+    "1003": 957,
+    "1014": 411,
+    "1015": 123,
+    "1016": 63,
+    "1025": 1282,
+    "10021": 629,
+    "10106": 24,
+    "10113": 4285,
+    "10165": 41,
+    "10167": 4073,
+    "10172": 2618,
+    "10234": 97,
+    "10235": 27
+  }
+}

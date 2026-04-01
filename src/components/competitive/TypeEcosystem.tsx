@@ -10,9 +10,10 @@ import Link from 'next/link';
 interface TypeEcosystemProps {
   ecosystem: ITypeEcosystem;
   lang: string;
+  denominatorLabel?: string;
 }
 
-export default function TypeEcosystem({ ecosystem, lang }: TypeEcosystemProps) {
+export default function TypeEcosystem({ ecosystem, lang, denominatorLabel = 'TEAM' }: TypeEcosystemProps) {
   const [expanded, setExpanded] = useState(false);
   const [activeType, setActiveType] = useState<string | null>(null);
 
@@ -79,7 +80,7 @@ export default function TypeEcosystem({ ecosystem, lang }: TypeEcosystemProps) {
                 </div>
                 <div className="flex flex-col items-end gap-0.5 min-w-[40px]">
                   <span className={cn("text-[9px] font-bold font-mono tracking-tighter", activeType === typeSlug ? "text-cyan-400" : "text-slate-300")}>
-                    {(stats.usage_rate / 100).toFixed(2)} / TEAM
+                    {(stats.usage_rate / 100).toFixed(2)} / {denominatorLabel}
                   </span>
                   <div className="w-full h-1 bg-slate-950 rounded-full overflow-hidden">
                     <div className="h-full bg-cyan-500/50 rounded-full" style={{width: `${(stats.usage_rate / maxUsage) * 100}%`}} />
@@ -100,7 +101,7 @@ export default function TypeEcosystem({ ecosystem, lang }: TypeEcosystemProps) {
                  </div>
                  <div className="flex flex-col">
                     <span className="text-xl font-display font-black text-white">{(activeData.usage_rate / 100).toFixed(2)}</span>
-                    <span className="text-[9px] font-mono text-slate-500 uppercase tracking-wide">Pokémon / Team</span>
+                    <span className="text-[9px] font-mono text-slate-500 uppercase tracking-wide">Pokémon / {denominatorLabel}</span>
                  </div>
                </div>
             </div>
@@ -124,7 +125,7 @@ export default function TypeEcosystem({ ecosystem, lang }: TypeEcosystemProps) {
                             <div className="flex -space-x-1 scale-75 origin-left -ml-1">
                               {types.map(t => <TypeBadge key={t} type={t as any} lang={lang as any} />)}
                             </div>
-                            <span className="text-[10px] font-bold text-indigo-300 font-mono tracking-tighter">{comboPerTm.toFixed(2)} / TEAM</span>
+                            <span className="text-[10px] font-bold text-indigo-300 font-mono tracking-tighter">{comboPerTm.toFixed(2)} / {denominatorLabel}</span>
                           </div>
                         );
                    })}
@@ -148,7 +149,7 @@ export default function TypeEcosystem({ ecosystem, lang }: TypeEcosystemProps) {
                                <TypeBadge type={mateSlug as any} lang={lang as any} />
                             </div>
                             <div className="text-[10px] font-mono text-emerald-500/80 font-bold tracking-tighter">
-                              {synPerTm.toFixed(2)} / TEAM
+                              {synPerTm.toFixed(2)} / {denominatorLabel}
                             </div>
                           </div>
                         );

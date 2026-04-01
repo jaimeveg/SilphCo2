@@ -7,6 +7,23 @@
     "base_weight": 16972.3228480539,
     "percent": 20.03174603174603
   },
+  "roles": [
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "silk-scarf": 4886.262184805475,
     "life-orb": 4198.9250415429415,
@@ -231,7 +248,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "14.6",
       "evs": {
         "hp": 252,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.1",
       "evs": {
         "hp": 240,
@@ -255,7 +272,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.3",
       "evs": {
         "hp": 128,
@@ -267,7 +284,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.3",
       "evs": {
         "hp": 200,
@@ -279,7 +296,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.3",
       "evs": {
         "hp": 88,
@@ -291,7 +308,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -303,7 +320,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.2",
       "evs": {
         "hp": 0,
@@ -315,7 +332,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.2",
       "evs": {
         "hp": 4,
@@ -327,7 +344,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.9",
       "evs": {
         "hp": 252,
@@ -339,7 +356,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.6",
       "evs": {
         "hp": 0,
@@ -671,6 +688,7 @@
     "883": 0,
     "887": 186.83825600201487,
     "890": 2894.1516837729678,
+    "892": 63.85512112221762,
     "894": 125.86838808965797,
     "895": 13.637571445850098,
     "897": 8.865753805097423,
@@ -817,7 +835,7 @@
     "10186": 0.6341819511114065,
     "10188": 7010.85742872161,
     "10189": 169.31233387315527,
-    "10191": 229.16319839465135,
+    "10191": 165.30807727243374,
     "10193": 691.7533290836693,
     "10230": 1.7523402945230167,
     "10232": 3.5936376054485066,

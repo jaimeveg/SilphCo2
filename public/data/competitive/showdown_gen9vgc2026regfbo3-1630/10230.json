@@ -1,12 +1,19 @@
 {
   "id": "10230",
-  "name": "Arcanine Hisui",
+  "name": "Arcanine hisuian",
   "format_id": "showdown_gen9vgc2026regfbo3-1630",
   "usage_metrics": {
     "raw": 29856,
     "base_weight": 5564.346504955246,
     "percent": 5.720175804974499
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "choice-band": 4327.4578361746135,
     "clear-amulet": 882.7997879537221,
@@ -122,7 +129,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.4",
       "evs": {
         "hp": 4,
@@ -134,7 +141,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.0",
       "evs": {
         "hp": 4,
@@ -146,7 +153,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.8",
       "evs": {
         "hp": 180,
@@ -158,7 +165,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.3",
       "evs": {
         "hp": 52,
@@ -170,7 +177,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.8",
       "evs": {
         "hp": 140,
@@ -182,7 +189,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.1",
       "evs": {
         "hp": 20,
@@ -194,7 +201,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -206,7 +213,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.9",
       "evs": {
         "hp": 4,
@@ -218,7 +225,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.8",
       "evs": {
         "hp": 68,
@@ -230,7 +237,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -446,6 +453,7 @@
     "877": 0.07531025831468957,
     "884": 5.074970815810431e-8,
     "887": 3.1128607281173686,
+    "892": 939.9696120512032,
     "894": 35.07413018091563,
     "895": 33.17719209447875,
     "896": 3.883898781610161,
@@ -545,7 +553,7 @@
     "10171": 1883.5277850398543,
     "10172": 0.012539694871398555,
     "10186": 88.8660881452925,
-    "10191": 1505.1049518881637,
+    "10191": 565.1353398369606,
     "10232": 0.06269445652153616,
     "10233": 0.14754648933582587,
     "10236": 0.06105059811892288,

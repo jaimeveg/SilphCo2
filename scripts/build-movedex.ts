@@ -5,7 +5,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { IMoveIndexItem, IMoveDetail, ILearnerRecord, IMoveTactics } from '../src/types/movedex';
 
-const POKEAPI_GQL = 'https://beta.pokeapi.co/graphql/v1beta';
+const POKEAPI_GQL = 'https://graphql.pokeapi.co/v1beta2/v1/graphql';
 const DATA_DIR = path.join(process.cwd(), 'public', 'data');
 const MOVES_DIR = path.join(DATA_DIR, 'moves');
 const CHUNK_SIZE = 200;
@@ -13,7 +13,7 @@ const MAX_RETRIES = 3;
 
 const MOVES_QUERY = `
 query GetAllMoves($limit: Int, $offset: Int) {
-  pokemon_v2_move(where: {generation_id: {_lte: 9}}, limit: $limit, offset: $offset, order_by: {id: asc}) {
+  move(where: {generation_id: {_lte: 9}}, limit: $limit, offset: $offset, order_by: {id: asc}) {
     name
     power
     accuracy
@@ -21,27 +21,27 @@ query GetAllMoves($limit: Int, $offset: Int) {
     priority
     generation_id
     move_effect_chance
-    pokemon_v2_type { name }
-    pokemon_v2_movedamageclass { name }
-    pokemon_v2_movetarget { name }
-    pokemon_v2_moveflavortexts(where: {language_id: {_eq: 9}}, order_by: {version_group_id: desc}, limit: 1) {
+    type { name }
+    movedamageclass { name }
+    movetarget { name }
+    moveflavortexts(where: {language_id: {_eq: 9}}, order_by: {version_group_id: desc}, limit: 1) {
       flavor_text
     }
-    pokemon_v2_moveeffect {
-      pokemon_v2_moveeffecteffecttexts(where: {language_id: {_eq: 9}}) {
+    moveeffect {
+      moveeffecteffecttexts(where: {language_id: {_eq: 9}}) {
         effect
       }
     }
-    pokemon_v2_movemeta {
+    movemeta {
       ailment_chance
       flinch_chance
       stat_chance
-      pokemon_v2_movemetaailment { name }
-      pokemon_v2_movemetacategory { name }
+      movemetaailment { name }
+      movemetacategory { name }
     }
-    pokemon_v2_movemetastatchanges {
+    movemetastatchanges {
       change
-      pokemon_v2_stat { name }
+      stat { name }
     }
   }
 }
@@ -76,7 +76,7 @@ async function fetchAllMoves() {
     console.log(`[1/4] Descargando mecánicas, flavor texts y probabilidades...`);
     while (fetchMore) {
         const json = await fetchWithRetry(MOVES_QUERY, { limit: CHUNK_SIZE, offset });
-        const chunk = json.data?.pokemon_v2_move || [];
+        const chunk = json.data?.move || [];
         allMoves = [...allMoves, ...chunk];
         process.stdout.write(`   ↳ Progreso: ${allMoves.length} movimientos descargados...\r`);
         if (chunk.length < CHUNK_SIZE) fetchMore = false;
@@ -112,28 +112,28 @@ const runETL = async () => {
         const indexList: IMoveIndexItem[] = [];
 
         for (const m of rawMoves) {
-            const typeName = m.pokemon_v2_type?.name || 'normal';
+            const typeName = m.type?.name || 'normal';
             if (typeName === 'shadow') continue;
 
-            const meta = m.pokemon_v2_movemeta?.[0] || {};
-            let flavorText = m.pokemon_v2_moveflavortexts?.[0]?.flavor_text || 'No description available.';
+            const meta = m.movemeta?.[0] || {};
+            let flavorText = m.moveflavortexts?.[0]?.flavor_text || 'No description available.';
             flavorText = flavorText.replace(/\n|\f|\r/g, ' ');
 
-            let effectDesc = m.pokemon_v2_moveeffect?.pokemon_v2_moveeffecteffecttexts?.[0]?.effect || 'No mechanic details.';
+            let effectDesc = m.moveeffect?.moveeffecteffecttexts?.[0]?.effect || 'No mechanic details.';
             if (m.move_effect_chance) effectDesc = effectDesc.replace(/\$effect_chance/g, String(m.move_effect_chance));
 
-            const statChanges = (m.pokemon_v2_movemetastatchanges || []).map((sc: any) => ({
-                stat: sc.pokemon_v2_stat?.name,
+            const statChanges = (m.movemetastatchanges || []).map((sc: any) => ({
+                stat: sc.stat?.name,
                 change: sc.change
             }));
 
             const tactics: IMoveTactics = {
-                ailment: meta.pokemon_v2_movemetaailment?.name || 'none',
+                ailment: meta.movemetaailment?.name || 'none',
                 ailment_chance: meta.ailment_chance || 0,
                 flinch_chance: meta.flinch_chance || 0,
                 stat_chance: meta.stat_chance || 0,
                 effect_chance: m.move_effect_chance || null,
-                meta_category: meta.pokemon_v2_movemetacategory?.name || 'none',
+                meta_category: meta.movemetacategory?.name || 'none',
                 stat_changes: statChanges
             };
 
@@ -146,7 +146,7 @@ const runETL = async () => {
                 id: m.name,
                 name: m.name,
                 type: typeName,
-                category: m.pokemon_v2_movedamageclass?.name || 'status',
+                category: m.movedamageclass?.name || 'status',
                 power: m.power,
                 accuracy: m.accuracy,
                 pp: m.pp,
@@ -166,7 +166,7 @@ const runETL = async () => {
                 ...indexItem,
                 flavorText,
                 effectText: effectDesc,
-                target: m.pokemon_v2_movetarget?.name || 'selected-pokemon',
+                target: m.movetarget?.name || 'selected-pokemon',
                 tactics,
                 is_sheer_force_boosted: !!isSheerForce,
                 generation_introduced: m.generation_id || 1,

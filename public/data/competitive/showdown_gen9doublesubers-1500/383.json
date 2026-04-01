@@ -7,6 +7,23 @@
     "base_weight": 10636.142045945106,
     "percent": 8.731673756528648
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "sitrus-berry": 360.1449613674243,
     "clear-amulet": 2005.3505715062133,
@@ -167,7 +184,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.6",
       "evs": {
         "hp": 252,
@@ -179,7 +196,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "7.6",
       "evs": {
         "hp": 0,
@@ -191,7 +208,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.2",
       "evs": {
         "hp": 248,
@@ -203,7 +220,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "4.2",
       "evs": {
         "hp": 252,
@@ -215,7 +232,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -227,7 +244,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.7",
       "evs": {
         "hp": 0,
@@ -239,7 +256,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.2",
       "evs": {
         "hp": 124,
@@ -251,7 +268,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -263,7 +280,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.8",
       "evs": {
         "hp": 0,
@@ -275,7 +292,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.7",
       "evs": {
         "hp": 252,
@@ -574,6 +591,7 @@
     "884": 3.1487317869485127,
     "887": 50.96261466399761,
     "890": 241.97024426690598,
+    "892": 285.4848837670947,
     "893": 185.8747373659622,
     "894": 45.52674650029021,
     "895": 1.7843613256213828,
@@ -691,7 +709,7 @@
     "10186": 759.7693174444246,
     "10188": 625.7680349858414,
     "10189": 1302.9459147758655,
-    "10191": 746.2015580630696,
+    "10191": 460.7166742959748,
     "10193": 1101.058321584082,
     "10194": 1962.6906988418991,
     "10230": 38.317345523396945,

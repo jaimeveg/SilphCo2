@@ -7,6 +7,18 @@
     "base_weight": 4610.2617736690045,
     "percent": 14.195204322863898
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "choice-scarf": 514.2917640380789,
     "life-orb": 1874.0766557044708,
@@ -148,7 +160,7 @@
   },
   "spreads": [
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "16.2",
       "evs": {
         "hp": 0,
@@ -160,7 +172,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "8.9",
       "evs": {
         "hp": 0,
@@ -172,7 +184,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "6.2",
       "evs": {
         "hp": 4,
@@ -184,7 +196,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.5",
       "evs": {
         "hp": 0,
@@ -196,7 +208,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "5.2",
       "evs": {
         "hp": 0,
@@ -208,7 +220,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "4.9",
       "evs": {
         "hp": 4,
@@ -220,7 +232,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -232,7 +244,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.0",
       "evs": {
         "hp": 48,
@@ -244,7 +256,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 252,
@@ -256,7 +268,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "2.4",
       "evs": {
         "hp": 0,
@@ -625,6 +637,7 @@
     "884": 0,
     "887": 1.898388463217475,
     "890": 901.0044064009126,
+    "892": 1.034906389458995,
     "894": 1.1671684099588862,
     "895": 0,
     "896": 1.4941164971915555e-10,
@@ -791,7 +804,7 @@
     "10186": 0,
     "10188": 2008.2279099397877,
     "10189": 13.460144127741172,
-    "10191": 2.2596250423983744,
+    "10191": 1.2247186529393794,
     "10193": 210.24786363324063,
     "10230": 7.96126831126287e-10,
     "10233": 0.10196684283858815,

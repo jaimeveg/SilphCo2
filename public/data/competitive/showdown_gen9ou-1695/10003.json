@@ -1,12 +1,24 @@
 {
   "id": "10003",
-  "name": "Deoxys Speed",
+  "name": "Deoxys speed",
   "format_id": "showdown_gen9ou-1695",
   "usage_metrics": {
     "raw": 125883,
     "base_weight": 12967.311339267777,
     "percent": 6.085690749080981
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "light-clay": 3919.219695368929,
     "heavy-duty-boots": 596.5613982965523,
@@ -197,7 +209,7 @@
   },
   "spreads": [
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "19.4",
       "evs": {
         "hp": 248,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "10.3",
       "evs": {
         "hp": 0,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.5",
       "evs": {
         "hp": 0,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "3.8",
       "evs": {
         "hp": 0,
@@ -245,7 +257,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.7",
       "evs": {
         "hp": 248,
@@ -257,7 +269,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -269,7 +281,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.3",
       "evs": {
         "hp": 248,
@@ -281,7 +293,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.3",
       "evs": {
         "hp": 248,
@@ -293,7 +305,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.8",
       "evs": {
         "hp": 28,
@@ -305,7 +317,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "2.3",
       "evs": {
         "hp": 0,

@@ -7,6 +7,18 @@
     "base_weight": 5.7869185071769405,
     "percent": 2.9148589388540445
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 1.6918552938067428,
     "lum-berry": 0.09333159486425235,
@@ -92,7 +104,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "31.1",
       "evs": {
         "hp": 4,
@@ -104,7 +116,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "20.6",
       "evs": {
         "hp": 0,
@@ -116,7 +128,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "10.6",
       "evs": {
         "hp": 16,
@@ -128,7 +140,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "5.2",
       "evs": {
         "hp": 0,
@@ -140,7 +152,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "4.6",
       "evs": {
         "hp": 0,
@@ -152,7 +164,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "3.9",
       "evs": {
         "hp": 0,
@@ -164,7 +176,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 80,
@@ -176,7 +188,7 @@
       }
     },
     {
-      "nature": "Mild",
+      "nature": "mild",
       "usage": "2.5",
       "evs": {
         "hp": 0,
@@ -188,7 +200,7 @@
       }
     },
     {
-      "nature": "Naughty",
+      "nature": "naughty",
       "usage": "1.9",
       "evs": {
         "hp": 220,
@@ -200,7 +212,7 @@
       }
     },
     {
-      "nature": "Naive",
+      "nature": "naive",
       "usage": "1.9",
       "evs": {
         "hp": 0,

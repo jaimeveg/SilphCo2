@@ -7,6 +7,18 @@
     "base_weight": 2545,
     "percent": 2.193284842635044
   },
+  "roles": [
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 658,
     "expert-belt": 38,
@@ -70,7 +82,7 @@
   },
   "spreads": [
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "26.6",
       "evs": {
         "hp": 0,
@@ -82,7 +94,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "14.9",
       "evs": {
         "hp": 0,
@@ -94,7 +106,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "12.4",
       "evs": {
         "hp": 4,
@@ -106,7 +118,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "8.7",
       "evs": {
         "hp": 0,
@@ -118,7 +130,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "7.3",
       "evs": {
         "hp": 4,
@@ -130,7 +142,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "4.3",
       "evs": {
         "hp": 0,
@@ -142,7 +154,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "4.0",
       "evs": {
         "hp": 48,
@@ -154,7 +166,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "3.3",
       "evs": {
         "hp": 100,
@@ -166,7 +178,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "3.3",
       "evs": {
         "hp": 0,
@@ -178,7 +190,7 @@
       }
     },
     {
-      "nature": "Rash",
+      "nature": "rash",
       "usage": "3.1",
       "evs": {
         "hp": 0,

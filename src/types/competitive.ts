@@ -50,13 +50,27 @@ export interface ITypeEcosystem {
   };
 }
 
+export interface IRolesAnalysis {
+  physical_pct: number;   // % of attackers that are physical
+  mixed_pct: number;      // % of attackers that are mixed
+  special_pct: number;    // % of attackers that are special
+  roles: Array<{
+    role: string;         // role key from ROLE_KEYS
+    label: string;        // human-readable label
+    category: 'OFF' | 'SUP' | 'DEF';
+    count: number;        // weighted count (usage-weighted occurrences)
+    pct: number;          // percentage of total weighted roles
+  }>;
+}
+
 export interface IMacroDashboardData {
   format_id: string; // e.g., "gen9vgc_reg_h"
   total_teams_analyzed: number;
   centralization_index: number; // Range 0-100 (Sum of usage rate of top 6)
   type_ecosystem: ITypeEcosystem; 
   gimmicks?: IGimmickStats;
-  top_pokemon: Array<{ id: string; name: string; usage_rate: number; raw_count: number }>;
+  roles_analysis?: IRolesAnalysis;
+  top_pokemon: Array<{ id: string; name: string; types: string[]; roles: string[]; usage_rate: number; raw_count: number; speed: number }>;
   top_cores: Array<{ core: string[]; usage_rate: number }>; // e.g., ["incineroar", "rillaboom"]
   rogue_picks: Array<{ id: string; player: string; placement: number; usage_rate_global: number }>;
   top_cut: ITopCutTeam[];

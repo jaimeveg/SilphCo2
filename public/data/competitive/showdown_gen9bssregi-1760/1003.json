@@ -7,6 +7,18 @@
     "base_weight": 114.80545765184598,
     "percent": 37.47201591983227
   },
+  "roles": [
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    },
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 26.244130088883956,
     "assault-vest": 29.014952257122754,
@@ -96,7 +108,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.8",
       "evs": {
         "hp": 244,
@@ -108,7 +120,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.5",
       "evs": {
         "hp": 244,
@@ -120,7 +132,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "5.3",
       "evs": {
         "hp": 36,
@@ -132,7 +144,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.3",
       "evs": {
         "hp": 244,
@@ -144,7 +156,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "5.0",
       "evs": {
         "hp": 180,
@@ -156,7 +168,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.5",
       "evs": {
         "hp": 244,
@@ -168,7 +180,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.2",
       "evs": {
         "hp": 244,
@@ -180,7 +192,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.1",
       "evs": {
         "hp": 244,
@@ -192,7 +204,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.5",
       "evs": {
         "hp": 244,
@@ -204,7 +216,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 84,
@@ -366,6 +378,7 @@
     "879": 0.01610052509321691,
     "887": 0.13499778009482638,
     "890": 3.2301281469797325,
+    "892": 0.6641711599507796,
     "894": 0.007193003076783888,
     "900": 0.0006784393771804287,
     "901": 1.4899657689591823,
@@ -447,7 +460,7 @@
     "10186": 0.003355251678937188,
     "10188": 19.628165309736765,
     "10189": 0.040107080300036124,
-    "10191": 40.68236525820286,
+    "10191": 40.018194098252074,
     "10193": 1.0929369246909586,
     "10194": 65.98194087668679,
     "10230": 0.5862150549452874,

@@ -1,12 +1,29 @@
 {
   "id": "10186",
-  "name": "Indeedee Female",
+  "name": "Indeedee f",
   "format_id": "showdown_gen9doublesubers-1630",
   "usage_metrics": {
     "raw": 31953,
     "base_weight": 5541.703536212195,
     "percent": 15.481254663320382
   },
+  "roles": [
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_terrain",
+      "label": "Terrain Setter",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "leftovers": 128.97971005010865,
     "focus-sash": 1007.7035418149208,
@@ -135,7 +152,7 @@
   },
   "spreads": [
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "13.5",
       "evs": {
         "hp": 252,
@@ -147,7 +164,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "12.6",
       "evs": {
         "hp": 248,
@@ -159,7 +176,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "9.8",
       "evs": {
         "hp": 248,
@@ -171,7 +188,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "6.8",
       "evs": {
         "hp": 252,
@@ -183,7 +200,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.7",
       "evs": {
         "hp": 248,
@@ -195,7 +212,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.5",
       "evs": {
         "hp": 124,
@@ -207,7 +224,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -219,7 +236,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.0",
       "evs": {
         "hp": 252,
@@ -231,7 +248,7 @@
       }
     },
     {
-      "nature": "Timid",
+      "nature": "timid",
       "usage": "1.8",
       "evs": {
         "hp": 248,
@@ -243,7 +260,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "1.8",
       "evs": {
         "hp": 248,
@@ -569,6 +586,7 @@
     "887": 4.664378232332859,
     "890": 2.6613908920437224,
     "891": 0,
+    "892": 314.7272955343289,
     "894": 51.55711933531783,
     "895": 15.010743288008781,
     "896": 0.04245695264530608,
@@ -699,7 +717,7 @@
     "10172": 15.240428786045076,
     "10188": 466.08076133274767,
     "10189": 1080.3065628848015,
-    "10191": 764.834302890623,
+    "10191": 450.1070073562941,
     "10193": 2206.5490080787176,
     "10194": 1726.0788537705987,
     "10230": 1.5055341113532326,

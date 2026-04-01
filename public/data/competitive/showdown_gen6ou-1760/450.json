@@ -7,6 +7,23 @@
     "base_weight": 353.9239177042026,
     "percent": 3.792989715450811
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_weather",
+      "label": "Weather Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "smooth-rock": 6.355839949946854,
     "rocky-helmet": 181.35490819163007,
@@ -59,7 +76,7 @@
   },
   "spreads": [
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "28.2",
       "evs": {
         "hp": 252,
@@ -71,7 +88,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "14.2",
       "evs": {
         "hp": 248,
@@ -83,7 +100,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "12.1",
       "evs": {
         "hp": 248,
@@ -95,7 +112,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "9.2",
       "evs": {
         "hp": 248,
@@ -107,7 +124,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "7.0",
       "evs": {
         "hp": 252,
@@ -119,7 +136,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "6.3",
       "evs": {
         "hp": 248,
@@ -131,7 +148,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "4.5",
       "evs": {
         "hp": 248,
@@ -143,7 +160,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -155,7 +172,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "3.0",
       "evs": {
         "hp": 244,
@@ -167,7 +184,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.9",
       "evs": {
         "hp": 252,

@@ -1,12 +1,24 @@
 {
   "id": "10188",
-  "name": "Zacian Crowned",
+  "name": "Zacian crowned",
   "format_id": "showdown_gen9bssregi-1630",
   "usage_metrics": {
     "raw": 8127,
     "base_weight": 1690.7022688792695,
     "percent": 14.439785366547031
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "rusted-sword": 1690.7022688792695
   },
@@ -63,7 +75,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "22.6",
       "evs": {
         "hp": 60,
@@ -75,7 +87,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "11.3",
       "evs": {
         "hp": 156,
@@ -87,7 +99,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.8",
       "evs": {
         "hp": 172,
@@ -99,7 +111,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.2",
       "evs": {
         "hp": 140,
@@ -111,7 +123,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.5",
       "evs": {
         "hp": 172,
@@ -123,7 +135,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "4.2",
       "evs": {
         "hp": 0,
@@ -135,7 +147,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.7",
       "evs": {
         "hp": 188,
@@ -147,7 +159,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.3",
       "evs": {
         "hp": 204,
@@ -159,7 +171,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.4",
       "evs": {
         "hp": 220,
@@ -171,7 +183,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 220,
@@ -330,6 +342,7 @@
     "876": 0.0031271598234047238,
     "887": 2.6376474141036392,
     "890": 11.535175938156254,
+    "892": 87.23434934593452,
     "894": 1.495614189753843,
     "895": 0.000011876641539232402,
     "897": 0,
@@ -408,7 +421,7 @@
     "10172": 0,
     "10186": 2.427558154494136e-12,
     "10189": 1.2148142264356565e-7,
-    "10191": 656.3664241071056,
+    "10191": 569.132074761171,
     "10193": 5.581516999000703,
     "10194": 430.79499374315685,
     "10230": 2.200006853818855,

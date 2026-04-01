@@ -7,6 +7,18 @@
     "base_weight": 40954,
     "percent": 9.975593240155696
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "assault-vest": 33518,
     "clear-amulet": 1616,
@@ -125,7 +137,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "11.0",
       "evs": {
         "hp": 252,
@@ -137,7 +149,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "9.1",
       "evs": {
         "hp": 252,
@@ -149,7 +161,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "6.2",
       "evs": {
         "hp": 76,
@@ -161,7 +173,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.2",
       "evs": {
         "hp": 84,
@@ -173,7 +185,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.2",
       "evs": {
         "hp": 0,
@@ -185,7 +197,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.9",
       "evs": {
         "hp": 248,
@@ -197,7 +209,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 0,
@@ -209,7 +221,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 76,
@@ -221,7 +233,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.4",
       "evs": {
         "hp": 100,
@@ -233,7 +245,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "1.2",
       "evs": {
         "hp": 20,
@@ -473,6 +485,7 @@
     "884": 5,
     "887": 217,
     "890": 228,
+    "892": 2472,
     "894": 109,
     "895": 26,
     "896": 4,
@@ -575,7 +588,7 @@
     "10186": 2917,
     "10188": 1012,
     "10189": 2298,
-    "10191": 10009,
+    "10191": 7537,
     "10193": 13865,
     "10194": 5506,
     "10230": 66,

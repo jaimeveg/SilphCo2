@@ -1,12 +1,19 @@
 {
   "id": "10230",
-  "name": "Arcanine Hisui",
+  "name": "Arcanine hisuian",
   "format_id": "showdown_gen9vgc2026regf-1760",
   "usage_metrics": {
     "raw": 92807,
     "base_weight": 323.87375832360635,
     "percent": 5.908947942784305
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "clear-amulet": 50.13153981837838,
     "safety-goggles": 8.968314243886828,
@@ -154,7 +161,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "16.1",
       "evs": {
         "hp": 52,
@@ -166,7 +173,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "15.3",
       "evs": {
         "hp": 156,
@@ -178,7 +185,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "9.2",
       "evs": {
         "hp": 20,
@@ -190,7 +197,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "7.4",
       "evs": {
         "hp": 4,
@@ -202,7 +209,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "6.2",
       "evs": {
         "hp": 252,
@@ -214,7 +221,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "6.0",
       "evs": {
         "hp": 4,
@@ -226,7 +233,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.4",
       "evs": {
         "hp": 180,
@@ -238,7 +245,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.8",
       "evs": {
         "hp": 44,
@@ -250,7 +257,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.7",
       "evs": {
         "hp": 68,
@@ -262,7 +269,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "2.6",
       "evs": {
         "hp": 4,
@@ -578,6 +585,7 @@
     "879": 0.000003387321365788676,
     "884": 0.000018286302317704894,
     "887": 0.1543127639547539,
+    "892": 25.938395673784285,
     "894": 0.1065119892369415,
     "895": 1.9353917525789976,
     "896": 0.01045688096738262,
@@ -687,7 +695,7 @@
     "10171": 59.8904761332251,
     "10172": 0.1861547606548269,
     "10186": 7.357380371633227,
-    "10191": 120.03089399280472,
+    "10191": 94.09249831902044,
     "10232": 0.021268363350888053,
     "10233": 0.07738632567740078,
     "10236": 0.0006007932461482568,

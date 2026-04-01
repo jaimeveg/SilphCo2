@@ -1,0 +1,277 @@
+{
+  "id": "205",
+  "name": "Forretress",
+  "format_id": "showdown_gen9bssregi-0",
+  "usage_metrics": {
+    "raw": 357,
+    "base_weight": 357,
+    "percent": 0.6343058171351409
+  },
+  "roles": [
+    {
+      "role": "role_tr_attacker",
+      "label": "Trick Room Attacker",
+      "category": "OFF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    },
+    {
+      "role": "role_wall_physical",
+      "label": "Physical Wall",
+      "category": "DEF"
+    }
+  ],
+  "items": {
+    "red-card": 128,
+    "heavy-duty-boots": 2,
+    "custap-berry": 105,
+    "rocky-helmet": 74,
+    "covert-cloak": 5,
+    "leftovers": 4,
+    "choice-band": 1,
+    "nothing": 3,
+    "mental-herb": 32,
+    "soft-sand": 3
+  },
+  "abilities": {
+    "sturdy": 357
+  },
+  "moves": {
+    "body-press": 129,
+    "rapid-spin": 175,
+    "toxic-spikes": 189,
+    "stealth-rock": 259,
+    "drill-run": 2,
+    "double-edge": 5,
+    "gyro-ball": 117,
+    "spikes": 106,
+    "counter": 9,
+    "explosion": 118,
+    "thunder-wave": 54,
+    "pain-split": 52,
+    "volt-switch": 118,
+    "dig": 7,
+    "iron-head": 1,
+    "earth-power": 4,
+    "self-destruct": 3,
+    "bug-buzz": 42,
+    "curse": 22,
+    "payback": 2,
+    "heavy-slam": 11,
+    "protect": 3
+  },
+  "teras": {
+    "normal": 102,
+    "fighting": 2,
+    "water": 101,
+    "bug": 49,
+    "dragon": 10,
+    "ghost": 81,
+    "steel": 12
+  },
+  "spreads": [
+    {
+      "nature": "impish",
+      "usage": "14.0",
+      "evs": {
+        "hp": 228,
+        "atk": 0,
+        "def": 228,
+        "spa": 0,
+        "spd": 0,
+        "spe": 52
+      }
+    },
+    {
+      "nature": "brave",
+      "usage": "12.3",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "10.9",
+      "evs": {
+        "hp": 244,
+        "atk": 12,
+        "def": 0,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "10.4",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 236,
+        "spa": 0,
+        "spd": 20,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "8.4",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "8.4",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 244,
+        "spa": 0,
+        "spd": 22,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "7.6",
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "impish",
+      "usage": "7.3",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "relaxed",
+      "usage": "5.9",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "brave",
+      "usage": "5.6",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 6,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "6": 1,
+    "25": 2,
+    "38": 4,
+    "55": 7,
+    "59": 21,
+    "73": 1,
+    "94": 3,
+    "132": 28,
+    "149": 1,
+    "195": 50,
+    "212": 50,
+    "214": 2,
+    "221": 12,
+    "233": 16,
+    "248": 78,
+    "249": 101,
+    "250": 79,
+    "275": 4,
+    "286": 9,
+    "332": 2,
+    "350": 2,
+    "373": 3,
+    "382": 28,
+    "383": 26,
+    "384": 34,
+    "423": 1,
+    "448": 2,
+    "472": 35,
+    "486": 5,
+    "547": 20,
+    "596": 14,
+    "609": 1,
+    "644": 1,
+    "691": 27,
+    "707": 38,
+    "715": 3,
+    "730": 3,
+    "738": 2,
+    "741": 2,
+    "858": 61,
+    "861": 21,
+    "887": 39,
+    "890": 5,
+    "901": 42,
+    "903": 3,
+    "908": 3,
+    "934": 83,
+    "937": 8,
+    "945": 13,
+    "959": 4,
+    "970": 5,
+    "980": 39,
+    "984": 16,
+    "985": 21,
+    "987": 36,
+    "990": 26,
+    "1000": 2,
+    "1001": 13,
+    "1003": 57,
+    "1007": 21,
+    "1008": 32,
+    "1009": 8,
+    "1024": 21,
+    "10020": 24,
+    "10021": 3,
+    "10022": 38,
+    "10152": 1,
+    "10186": 2,
+    "10191": 30,
+    "10193": 47,
+    "10194": 112,
+    "10232": 1,
+    "10233": 4,
+    "10236": 43,
+    "10242": 1,
+    "10245": 42,
+    "10273": 9,
+    "10275": 37
+  }
+}

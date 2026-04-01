@@ -1,12 +1,24 @@
 {
   "id": "10274",
-  "name": "Ogerpon Hearthflame Mask",
+  "name": "Ogerpon hearthflame",
   "format_id": "showdown_gen9vgc2026regi-1500",
   "usage_metrics": {
     "raw": 22785,
     "base_weight": 13229.961513280237,
     "percent": 5.549980269984557
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "hearthflame-mask": 13229.961513280237
   },
@@ -66,7 +78,7 @@
   },
   "spreads": [
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.7",
       "evs": {
         "hp": 0,
@@ -78,7 +90,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "8.5",
       "evs": {
         "hp": 188,
@@ -90,7 +102,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 252,
@@ -102,7 +114,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -114,7 +126,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.2",
       "evs": {
         "hp": 4,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "2.3",
       "evs": {
         "hp": 188,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 252,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.6",
       "evs": {
         "hp": 188,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "1.6",
       "evs": {
         "hp": 220,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.4",
       "evs": {
         "hp": 252,
@@ -369,6 +381,7 @@
     "876": 43.823633288798995,
     "887": 45.802299021035324,
     "890": 100.02001631844266,
+    "892": 744.0791944232486,
     "894": 41.03123576395752,
     "895": 84.83534084998333,
     "896": 0.32365004991504853,
@@ -464,7 +477,7 @@
     "10186": 664.8933070071445,
     "10188": 571.1056013298801,
     "10189": 3413.879708970761,
-    "10191": 4191.027231838052,
+    "10191": 3446.948037414804,
     "10193": 2241.6541048798645,
     "10194": 5389.979735151959,
     "10230": 0.7444743153423794,

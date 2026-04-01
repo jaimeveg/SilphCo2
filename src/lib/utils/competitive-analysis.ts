@@ -15,6 +15,7 @@ export const ROLE_KEYS = {
     OFFENSIVE: {
         SWEEPER_PHYSICAL: 'role_sweeper_physical',
         SWEEPER_SPECIAL: 'role_sweeper_special',
+        SWEEPER_MIXED: 'role_sweeper_mixed',
         TR_ATTACKER: 'role_tr_attacker',
         PRIORITY: 'role_priority',
         SETUP: 'role_setup',
@@ -45,23 +46,24 @@ Object.values(ROLE_KEYS.SUPPORTIVE).forEach(k => ROLE_CATEGORY_MAP[k] = 'SUP');
 Object.values(ROLE_KEYS.DEFENSIVE).forEach(k => ROLE_CATEGORY_MAP[k] = 'DEF');
 
 const CORE_OFFENSIVE_ROLES = [
-    ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 
-    ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 
+    ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL,
+    ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL,
+    ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED,
     ROLE_KEYS.OFFENSIVE.TR_ATTACKER,
     ROLE_KEYS.OFFENSIVE.WALLBREAKER
 ];
 const CORE_DEFENSIVE_ROLES = [
-    ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL, 
+    ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL,
     ROLE_KEYS.DEFENSIVE.WALL_SPECIAL,
     ROLE_KEYS.DEFENSIVE.STALLER
 ];
 
 const NON_ATTACKING_MOVES = new Set([
     'protect', 'detect', 'substitute', 'endure', 'sleep talk', 'metronome', 'helping hand', 'follow me', 'rage powder',
-    'trick room', 'tailwind', 'icy wind', 'electro web', 'string shot', 'will-o-wisp', 'thunder wave', 'spore', 'taunt', 
-    'encore', 'disable', 'hypnosis', 'yawn', 'leech seed', 'toxic', 'light screen', 'reflect', 'aurora veil', 
-    'swords dance', 'nasty plot', 'calm mind', 'bulk up', 'dragon dance', 'shell smash', 'quiver dance', 'belly drum', 
-    'curse', 'iron defense', 'amnesia', 'cotton guard', 'roost', 'recover', 'soft boiled', 'milk drink', 'slack off', 
+    'trick room', 'tailwind', 'icy wind', 'electro web', 'string shot', 'will-o-wisp', 'thunder wave', 'spore', 'taunt',
+    'encore', 'disable', 'hypnosis', 'yawn', 'leech seed', 'toxic', 'light screen', 'reflect', 'aurora veil',
+    'swords dance', 'nasty plot', 'calm mind', 'bulk up', 'dragon dance', 'shell smash', 'quiver dance', 'belly drum',
+    'curse', 'iron defense', 'amnesia', 'cotton guard', 'roost', 'recover', 'soft boiled', 'milk drink', 'slack off',
     'moonlight', 'morning sun', 'synthesis', 'wish', 'healing wish', 'lunar dance', 'parting shot', 'baton pass',
     'haze', 'defog', 'rapid spin', 'stealth rock', 'spikes', 'toxic spikes', 'sticky web', 'wide guard', 'quick guard',
     'fake out', 'sunny day', 'rain dance', 'sandstorm', 'snowscape', 'trick', 'switcheroo', 'ally switch', 'transform',
@@ -81,23 +83,25 @@ export const calculateSilphRank = (usageRate: number) => {
 export const calculateSpeedTier = (baseSpeed: number) => {
     const isTrickRoom = baseSpeed < 60;
     let tier = 'F';
-    if (baseSpeed >= 135) tier = 'S+';      
-    else if (baseSpeed >= 120) tier = 'S';  
-    else if (baseSpeed >= 100) tier = 'A';  
-    else if (baseSpeed >= 80) tier = 'B';   
-    else if (baseSpeed >= 60) tier = 'C';   
-    else tier = 'D';                        
+    if (baseSpeed >= 135) tier = 'S+';
+    else if (baseSpeed >= 120) tier = 'S';
+    else if (baseSpeed >= 100) tier = 'A';
+    else if (baseSpeed >= 80) tier = 'B';
+    else if (baseSpeed >= 60) tier = 'C';
+    else tier = 'D';
     return { tier, isTrickRoom };
 };
 
 export const determineRoles = (
-    pokemon: IPokemon, 
-    movesUsage: UsageItem[], 
+    pokemon: IPokemon,
+    movesUsage: UsageItem[],
     abilitiesUsage: UsageItem[],
     itemsUsage: UsageItem[],
-    spreads: SpreadAnalysis[] = [] 
+    spreads: SpreadAnalysis[] = [],
+    moveCategories: Record<string, string> = {},
+    traitsMap: Record<string, string> = {}
 ): string[] => {
-    
+
     const scores: Record<string, number> = {};
     const addScore = (role: string, points: number) => { scores[role] = (scores[role] || 0) + points; };
 
@@ -137,13 +141,13 @@ export const determineRoles = (
 
     // --- 2. EV SPREAD ANALYSIS (ALTA PRIORIDAD) ---
     const spreadsToAnalyze = spreads.slice(0, 3);
-    
+
     // Flags de intención para filtrar ataques después
     let hasOffensiveInvestment = false;
     let hasBulkyInvestment = false;
 
     spreadsToAnalyze.forEach((spread, index) => {
-        const weight = index === 0 ? 1 : (index === 1 ? 0.7 : 0.5); 
+        const weight = index === 0 ? 1 : (index === 1 ? 0.7 : 0.5);
         const evs = spread.evs;
         const evSpe = evs.spe || 0;
         const evAtk = evs.atk || 0;
@@ -158,6 +162,7 @@ export const determineRoles = (
             hasOffensiveInvestment = true;
             if (evAtk > 150 || spNature == 'adamant' || spNature == 'jolly') addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 25 * weight);
             if (evSpa > 150 || spNature == 'modest' || spNature == 'timid') addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 25 * weight);
+
             addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, -50 * weight);
             addScore(ROLE_KEYS.SUPPORTIVE.TR_SETTER, -20 * weight);
         }
@@ -175,13 +180,14 @@ export const determineRoles = (
             hasBulkyInvestment = true;
             if (evDef > 100) addScore(ROLE_KEYS.DEFENSIVE.WALL_PHYSICAL, 15 * weight);
             if (evSpd > 100) addScore(ROLE_KEYS.DEFENSIVE.WALL_SPECIAL, 15 * weight);
-            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, -5*weight);
-            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, -5*weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, -5 * weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, -5 * weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, -5 * weight);
             if (evAtk > 150 && evSpa > 150) {
                 hasOffensiveInvestment = true;
                 addScore(ROLE_KEYS.OFFENSIVE.WALLBREAKER, 20 * weight);
             }
-            
+
             // Si tiene mucho bulk pero NADA de ataque, subimos potencial Support genérico
             if (evAtk < 50 && evSpa < 50) {
                 addScore(ROLE_KEYS.SUPPORTIVE.DISRUPTOR, 5 * weight);
@@ -194,61 +200,103 @@ export const determineRoles = (
         // Mucha vida, algo de defensa, poca velocidad, ataque medio. Una composición así no es sweeper
         if (evHp > 200 && (evDef > 50 || evSpd > 50) && evSpe < 100) {
             addScore(ROLE_KEYS.DEFENSIVE.PIVOT, 5 * weight);
-            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, -5*weight);
-            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, -5*weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, -5 * weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, -5 * weight);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, -5 * weight);
         }
 
     });
 
-    // CHOICE ITEMS = + SWEEPER
-    if (choiceItemUsage > 30){
-        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 20);
-        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 20);
+    // CHOICE ITEMS & LIFE ORB = + SWEEPER
+    const choiceBand = getItemUsage(['choiceband']);
+    const choiceSpecs = getItemUsage(['choicespecs']);
+    const choiceScarf = getItemUsage(['choicescarf']);
+
+
+    if (choiceBand > 15) addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 20);
+    if (choiceSpecs > 15) addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 20);
+    if (choiceBand > 7 && choiceSpecs > 7) addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, 45);
+    if (choiceScarf > 15) {
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 15);
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 15);
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, 15);
+    }
+    if (choiceItemUsage > 30) {
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, 10);
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, 10);
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, 5);
     }
 
     // --- 3. MOVES ANALYSIS ---
-    
+
+    let physicalMoveUsage = 0;
+    let specialMoveUsage = 0;
+
     // DAMAGE (Solo si hay inversión ofensiva o stats base monstruosos)
     movesUsage.forEach(m => {
-        const cleanName = m.name.toLowerCase(); 
-        if (m.value > 30 && !NON_ATTACKING_MOVES.has(cleanName)) {
-            // Solo sumamos si el spread acompaña O el stat base es muy alto (>115)
-            // Esto evita que Incineroar (Flare Blitz) salga como Sweeper si lleva 252 HP
-            if (hasOffensiveInvestment || atk > 115 || spa > 115) {
-                if (scores[ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL] > 0 || atk > spa) {
-                    addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, m.value * 0.15);
-                }
-                if (scores[ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL] > 0 || spa > atk) {
-                    addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, m.value * 0.15);
-                }
-                if (scores[ROLE_KEYS.OFFENSIVE.TR_ATTACKER] > 0) {
-                    addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, m.value * 0.15);
-                }if (scores[ROLE_KEYS.OFFENSIVE.WALLBREAKER] > 0) {
-                    addScore(ROLE_KEYS.OFFENSIVE.WALLBREAKER, m.value * 0.15);
-                }
-            }
-        }
+        const cleanName = m.name.toLowerCase().replace(/[\s-]/g, '');
+        const slug = traitsMap[cleanName] || cleanName;
+        let category = moveCategories[slug];
+        let excludedMoves = ["ruination", "fakeout", "nuzzle", "icywind", "voltswitch", "flipturn", "pollenpuff", "saltcure", "snarl", "finalgambit", "terablast", "foulplay"];
+
+        if (excludedMoves.includes(cleanName)) return;
+
+        if (category === 'physical' && m.value >= 18) physicalMoveUsage += m.value;
+        if (category === 'special' && m.value >= 18) specialMoveUsage += m.value;
     });
+
+    if (hasOffensiveInvestment || atk > 100 || spa > 100) {
+        if (scores[ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL] > 0 || atk > spa + 15 || (physicalMoveUsage > 0 && specialMoveUsage == 0)) {
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, physicalMoveUsage * 0.15);
+        }
+        if (scores[ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL] > 0 || spa > atk + 15 || (specialMoveUsage > 0 && physicalMoveUsage == 0)) {
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, specialMoveUsage * 0.15);
+        }
+        if (scores[ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED] > 0 || (physicalMoveUsage > 0 && specialMoveUsage > 0)) {
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, (physicalMoveUsage + specialMoveUsage) * 0.10);
+        }
+        if (scores[ROLE_KEYS.OFFENSIVE.TR_ATTACKER] > 0) {
+            addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, (physicalMoveUsage + specialMoveUsage) * 0.15);
+        } if (scores[ROLE_KEYS.OFFENSIVE.WALLBREAKER] > 0) {
+            addScore(ROLE_KEYS.OFFENSIVE.WALLBREAKER, (physicalMoveUsage + specialMoveUsage) * 0.15);
+        }
+    }
+
+    if (physicalMoveUsage >= 35 && specialMoveUsage >= 35) {
+        if (atk >= 90 && spa >= 90) {
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, 50);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_PHYSICAL, specialMoveUsage * -0.15);
+            addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_SPECIAL, physicalMoveUsage * -0.15);
+        }
+    }
+
+    if (physicalMoveUsage == 0 || specialMoveUsage == 0) {
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, -999);
+    }
+
+    if (atk < 80 || spa < 80) {
+        addScore(ROLE_KEYS.OFFENSIVE.SWEEPER_MIXED, -999);
+    }
 
     // SETUP
     const setupUsage = getGroupUsage(['dragondance', 'swordsdance', 'nastyplot', 'calmmind', 'bulkup', 'quiverdance', 'shellsmash', 'agility', 'bellydrum', 'filletaway', 'tailglow', 'geomancy']);
     if (setupUsage > 20) addScore(ROLE_KEYS.OFFENSIVE.SETUP, 35);
-    
+
     // SUPPORT
     const trUsage = getGroupUsage(['trickroom']);
     if (trUsage > 15) addScore(ROLE_KEYS.SUPPORTIVE.TR_SETTER, 40);
-    
+
     const redirectUsage = getGroupUsage(['followme', 'ragepowder']);
     if (redirectUsage > 20) addScore(ROLE_KEYS.SUPPORTIVE.REDIRECTION, 35);
-    
+
     const wideGuardUsage = getGroupUsage(['wideguard']);
     if (wideGuardUsage > 25) addScore(ROLE_KEYS.SUPPORTIVE.WIDE_GUARD, 25);
-    
+
     const speedControlUsage = getGroupUsage(['tailwind', 'icywind', 'electroweb', 'stringshot']);
     if (speedControlUsage > 30) addScore(ROLE_KEYS.SUPPORTIVE.SPEED_CONTROL, 20);
-    
+
     // DISRUPTOR (Incluye Fake Out y Will-o-wisp ahora)
-    const disruptUsage = getGroupUsage(['spore', 'thunderwave', 'taunt', 'encore', 'disable', 'hypnosis', 'fakeout', 'willowisp', 'glare', 'partingshot', 'snarl']);
+    const disruptUsage = getGroupUsage(['spore', 'thunderwave', 'taunt', 'encore', 'disable', 'hypnosis', 'fakeout', 'willowisp', 'glare', 'partingshot', 'snarl', 'nuzzle']);
     if (disruptUsage > 30) addScore(ROLE_KEYS.SUPPORTIVE.DISRUPTOR, 25); // Fake Out ayuda mucho aquí
 
     // CLERIC
@@ -265,11 +313,11 @@ export const determineRoles = (
     const pivotMoveUsage = getGroupUsage(['partingshot', 'uturn', 'voltswitch', 'flipturn']);
     const pivotAbility = getAbilityUsage(['intimidate', 'regenerator']);
     if (pivotMoveUsage > 25) {
-        let score = 20;
+        let score = 30;
         if (pivotAbility > 50) score += 10; // Intimidate + Parting Shot = Dios Pivot
         addScore(ROLE_KEYS.DEFENSIVE.PIVOT, score);
     }
-    if (choiceItemUsage > 30){
+    if (choiceItemUsage > 30) {
         addScore(ROLE_KEYS.DEFENSIVE.PIVOT, -999);
     }
 
@@ -280,10 +328,10 @@ export const determineRoles = (
 
     // 2. Recovery fiable (Obligatorio para ser Staller puro generalmente)
     const recoveryUsage = getGroupUsage(['recover', 'roost', 'slackoff', 'softboiled', 'milkdrink', 'shoreup', 'moonlight', 'synthesis', 'wish']);
-    
+
     // 3. Buffs Defensivos
     const defBuffUsage = getGroupUsage(['irondefense', 'amnesia', 'cottonguard', 'cosmicpower', 'stockpile']);
-    
+
     // Regla: Para ser Staller, necesitas (Recovery O Buffs Defensivos) Y (Daño Pasivo O Bulk Extremo)
     if (recoveryUsage > 20 || defBuffUsage > 15) {
         if (hardStallUsage > 0 || hasBulkyInvestment) {
@@ -297,7 +345,7 @@ export const determineRoles = (
     if (orderUpUsage > 25) addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, -999);
     //if (name == "dondozo") scores[ROLE_KEYS.OFFENSIVE.TR_ATTACKER] = -999;
     const scarf = getItemUsage(['choicescarf'])
-    if (scarf > 20){
+    if (scarf > 20) {
         addScore(ROLE_KEYS.OFFENSIVE.TR_ATTACKER, -999);
     }
 

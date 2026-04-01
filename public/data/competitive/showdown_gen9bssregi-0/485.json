@@ -1,0 +1,332 @@
+{
+  "id": "485",
+  "name": "Heatran",
+  "format_id": "showdown_gen9bssregi-0",
+  "usage_metrics": {
+    "raw": 603,
+    "base_weight": 603,
+    "percent": 1.071390497850112
+  },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_sweeper_special",
+      "label": "Special Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_disruptor",
+      "label": "Disruptor",
+      "category": "SUP"
+    }
+  ],
+  "items": {
+    "choice-specs": 60,
+    "air-balloon": 195,
+    "leftovers": 205,
+    "assault-vest": 116,
+    "rocky-helmet": 2,
+    "life-orb": 3,
+    "zoom-lens": 1,
+    "fire-stone": 1,
+    "choice-scarf": 12,
+    "charcoal": 1,
+    "sitrus-berry": 1,
+    "red-card": 4,
+    "eject-pack": 2
+  },
+  "abilities": {
+    "flash-fire": 589,
+    "flame-body": 14
+  },
+  "moves": {
+    "fire-blast": 76,
+    "flash-cannon": 335,
+    "power-gem": 157,
+    "tera-blast": 144,
+    "magma-storm": 488,
+    "earth-power": 270,
+    "flamethrower": 26,
+    "protect": 204,
+    "taunt": 153,
+    "substitute": 123,
+    "will-o-wisp": 105,
+    "iron-defense": 63,
+    "body-press": 61,
+    "lava-plume": 30,
+    "stealth-rock": 50,
+    "stone-edge": 3,
+    "scary-face": 4,
+    "overheat": 5,
+    "scorching-sands": 28,
+    "dragon-pulse": 6,
+    "dark-pulse": 45,
+    "heat-wave": 7,
+    "ancient-power": 1,
+    "crunch": 1,
+    "earthquake": 1,
+    "hyper-beam": 1,
+    "iron-head": 1,
+    "heat-crash": 1,
+    "flame-charge": 1,
+    "steel-beam": 22
+  },
+  "teras": {
+    "fairy": 262,
+    "fire": 99,
+    "bug": 25,
+    "grass": 117,
+    "ground": 9,
+    "steel": 4,
+    "normal": 23,
+    "flying": 61,
+    "psychic": 2,
+    "ice": 1
+  },
+  "spreads": [
+    {
+      "nature": "modest",
+      "usage": "27.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "16.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 4,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "7.5",
+      "evs": {
+        "hp": 100,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 156
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "5.1",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 108,
+        "spa": 0,
+        "spd": 148,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "4.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "3.2",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 188,
+        "spa": 4,
+        "spd": 68,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "bold",
+      "usage": "3.2",
+      "evs": {
+        "hp": 244,
+        "atk": 0,
+        "def": 108,
+        "spa": 0,
+        "spd": 0,
+        "spe": 156
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "3.2",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 4,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "calm",
+      "usage": "3.2",
+      "evs": {
+        "hp": 212,
+        "atk": 0,
+        "def": 44,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "modest",
+      "usage": "2.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 252,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ],
+  "teammates": {
+    "36": 16,
+    "51": 9,
+    "80": 17,
+    "94": 1,
+    "132": 8,
+    "145": 5,
+    "149": 20,
+    "150": 52,
+    "184": 29,
+    "195": 1,
+    "197": 4,
+    "212": 40,
+    "233": 42,
+    "242": 3,
+    "248": 1,
+    "249": 9,
+    "250": 31,
+    "260": 24,
+    "279": 28,
+    "286": 51,
+    "373": 4,
+    "376": 1,
+    "382": 75,
+    "383": 30,
+    "384": 28,
+    "398": 1,
+    "445": 19,
+    "450": 16,
+    "461": 2,
+    "462": 18,
+    "472": 16,
+    "478": 1,
+    "483": 60,
+    "487": 1,
+    "488": 18,
+    "497": 2,
+    "579": 3,
+    "591": 2,
+    "594": 4,
+    "609": 10,
+    "614": 6,
+    "615": 1,
+    "625": 4,
+    "630": 7,
+    "635": 39,
+    "642": 1,
+    "643": 26,
+    "652": 15,
+    "727": 2,
+    "730": 1,
+    "748": 22,
+    "752": 2,
+    "758": 1,
+    "778": 57,
+    "792": 13,
+    "812": 6,
+    "823": 59,
+    "849": 2,
+    "861": 22,
+    "887": 20,
+    "890": 39,
+    "892": 6,
+    "900": 1,
+    "901": 14,
+    "903": 7,
+    "904": 4,
+    "905": 1,
+    "911": 1,
+    "923": 20,
+    "934": 40,
+    "937": 10,
+    "968": 1,
+    "970": 30,
+    "977": 5,
+    "980": 8,
+    "983": 69,
+    "984": 18,
+    "986": 6,
+    "987": 18,
+    "990": 54,
+    "991": 1,
+    "992": 1,
+    "998": 4,
+    "1000": 2,
+    "1002": 90,
+    "1003": 107,
+    "1004": 5,
+    "1007": 70,
+    "1008": 130,
+    "1009": 26,
+    "1017": 5,
+    "1018": 84,
+    "1019": 1,
+    "1021": 4,
+    "1024": 8,
+    "10007": 56,
+    "10008": 3,
+    "10009": 24,
+    "10019": 1,
+    "10021": 120,
+    "10022": 14,
+    "10023": 7,
+    "10104": 9,
+    "10113": 1,
+    "10155": 8,
+    "10167": 20,
+    "10170": 26,
+    "10188": 116,
+    "10189": 10,
+    "10191": 81,
+    "10193": 19,
+    "10194": 140,
+    "10239": 52,
+    "10248": 1,
+    "10272": 83,
+    "10273": 31,
+    "10274": 2,
+    "10275": 53
+  }
+}

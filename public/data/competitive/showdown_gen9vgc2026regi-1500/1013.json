@@ -7,6 +7,23 @@
     "base_weight": 6894.738909728882,
     "percent": 2.6903459329374337
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_redirection",
+      "label": "Redirector",
+      "category": "SUP"
+    },
+    {
+      "role": "role_cleric",
+      "label": "Cleric / Heal",
+      "category": "SUP"
+    }
+  ],
   "items": {
     "rocky-helmet": 2107.0562377978017,
     "electric-seed": 16.425117336834163,
@@ -112,7 +129,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "11.2",
       "evs": {
         "hp": 0,
@@ -124,7 +141,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "7.4",
       "evs": {
         "hp": 252,
@@ -136,7 +153,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "4.4",
       "evs": {
         "hp": 252,
@@ -148,7 +165,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "4.0",
       "evs": {
         "hp": 252,
@@ -160,7 +177,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.5",
       "evs": {
         "hp": 252,
@@ -172,7 +189,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.4",
       "evs": {
         "hp": 252,
@@ -184,7 +201,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.3",
       "evs": {
         "hp": 116,
@@ -196,7 +213,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.6",
       "evs": {
         "hp": 236,
@@ -208,7 +225,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.5",
       "evs": {
         "hp": 252,
@@ -220,7 +237,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -439,6 +456,7 @@
     "884": 0.04257249381815359,
     "887": 9.302023324372668,
     "890": 228.970313758255,
+    "892": 59.78072882499025,
     "894": 13.741393011475887,
     "895": 4.844789128747815,
     "896": 0.0364131805488041,
@@ -540,7 +558,7 @@
     "10186": 780.7615482454917,
     "10188": 43.65760293185257,
     "10189": 1327.8737252526578,
-    "10191": 1196.8821778009024,
+    "10191": 1137.101448975912,
     "10193": 1936.704955436565,
     "10194": 283.1955959623283,
     "10230": 45.053274757897036,

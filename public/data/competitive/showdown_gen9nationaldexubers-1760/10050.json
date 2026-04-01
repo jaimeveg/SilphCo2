@@ -1,12 +1,24 @@
 {
   "id": "10050",
-  "name": "Blaziken Mega",
+  "name": "Blaziken mega",
   "format_id": "showdown_gen9nationaldexubers-1760",
   "usage_metrics": {
     "raw": 12511,
     "base_weight": 59.225525912094874,
     "percent": 4.225261735900034
   },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    },
+    {
+      "role": "role_setup",
+      "label": "Setup Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "blazikenite": 59.225525912094874
   },
@@ -95,7 +107,7 @@
   },
   "spreads": [
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "67.8",
       "evs": {
         "hp": 0,
@@ -107,7 +119,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "10.9",
       "evs": {
         "hp": 4,
@@ -119,7 +131,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.8",
       "evs": {
         "hp": 0,
@@ -131,7 +143,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.1",
       "evs": {
         "hp": 4,
@@ -143,7 +155,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "3.6",
       "evs": {
         "hp": 0,
@@ -155,7 +167,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "3.0",
       "evs": {
         "hp": 0,
@@ -167,7 +179,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "1.8",
       "evs": {
         "hp": 40,
@@ -179,7 +191,7 @@
       }
     },
     {
-      "nature": "Hasty",
+      "nature": "hasty",
       "usage": "1.7",
       "evs": {
         "hp": 4,
@@ -191,7 +203,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "0.5",
       "evs": {
         "hp": 28,
@@ -203,7 +215,7 @@
       }
     },
     {
-      "nature": "Jolly",
+      "nature": "jolly",
       "usage": "0.4",
       "evs": {
         "hp": 0,
@@ -603,6 +615,7 @@
     "882": 0.748935174315374,
     "887": 0.42742819442709334,
     "890": 6.8493306462941765,
+    "892": 0.17969158757220194,
     "893": 0.12027875276487054,
     "894": 0.0022737673644073753,
     "895": 0.23645762666589132,
@@ -760,7 +773,7 @@
     "10186": 0.00011173287217175476,
     "10188": 8.807477052929993,
     "10189": 0.13785934891483614,
-    "10191": 0.9822669179404184,
+    "10191": 0.8025753303682165,
     "10193": 3.984385215925046,
     "10230": 0.001886932773991823,
     "10232": 0.0000074305399508367564,

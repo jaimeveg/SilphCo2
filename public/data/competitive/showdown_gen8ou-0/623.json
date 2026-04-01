@@ -1,0 +1,289 @@
+{
+  "id": "623",
+  "name": "Golurk",
+  "format_id": "showdown_gen8ou-0",
+  "usage_metrics": {
+    "raw": 505,
+    "base_weight": 505,
+    "percent": 0.6316605793765948
+  },
+  "roles": [
+    {
+      "role": "role_sweeper_physical",
+      "label": "Physical Sweeper",
+      "category": "OFF"
+    }
+  ],
+  "items": {
+    "life-orb": 305,
+    "assault-vest": 71,
+    "focus-sash": 1,
+    "choice-band": 101,
+    "choice-scarf": 1,
+    "sitrus-berry": 10,
+    "expert-belt": 5,
+    "sticky-barb": 4,
+    "leftovers": 6,
+    "rocky-helmet": 1
+  },
+  "abilities": {
+    "no-guard": 420,
+    "klutz": 63,
+    "iron-fist": 22
+  },
+  "moves": {
+    "poltergeist": 422,
+    "earthquake": 445,
+    "dynamic-punch": 410,
+    "stealth-rock": 315,
+    "trick": 64,
+    "drain-punch": 55,
+    "curse": 43,
+    "substitute": 43,
+    "shadow-punch": 13,
+    "stone-edge": 77,
+    "close-combat": 4,
+    "hyper-beam": 1,
+    "earth-power": 1,
+    "flash-cannon": 1,
+    "hammer-arm": 3,
+    "thunder-punch": 10,
+    "ice-punch": 50,
+    "fire-punch": 19,
+    "darkest-lariat": 1,
+    "heat-crash": 2,
+    "power-up-punch": 9,
+    "heavy-slam": 4,
+    "rock-polish": 8,
+    "gravity": 8,
+    "magic-coat": 8,
+    "phantom-force": 2,
+    "zen-headbutt": 1,
+    "protect": 1
+  },
+  "teras": {
+    "nothing": 505
+  },
+  "spreads": [
+    {
+      "nature": "brave",
+      "usage": "59.8",
+      "evs": {
+        "hp": 116,
+        "atk": 252,
+        "def": 108,
+        "spa": 0,
+        "spd": 32,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "13.9",
+      "evs": {
+        "hp": 0,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "jolly",
+      "usage": "8.5",
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "nature": "brave",
+      "usage": "4.0",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "2.2",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "careful",
+      "usage": "2.0",
+      "evs": {
+        "hp": 0,
+        "atk": 28,
+        "def": 236,
+        "spa": 0,
+        "spd": 244,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "1.6",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 4
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "1.6",
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "1.2",
+      "evs": {
+        "hp": 160,
+        "atk": 212,
+        "def": 0,
+        "spa": 0,
+        "spd": 136,
+        "spe": 0
+      }
+    },
+    {
+      "nature": "adamant",
+      "usage": "0.8",
+      "evs": {
+        "hp": 176,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 80
+      }
+    }
+  ],
+  "teammates": {
+    "6": 2,
+    "36": 8,
+    "55": 293,
+    "65": 1,
+    "80": 3,
+    "91": 1,
+    "94": 293,
+    "107": 5,
+    "122": 5,
+    "130": 6,
+    "145": 1,
+    "146": 1,
+    "151": 4,
+    "164": 32,
+    "178": 293,
+    "197": 3,
+    "199": 296,
+    "211": 5,
+    "212": 2,
+    "214": 32,
+    "227": 2,
+    "230": 1,
+    "233": 24,
+    "242": 6,
+    "244": 3,
+    "245": 4,
+    "248": 1,
+    "260": 1,
+    "302": 6,
+    "324": 2,
+    "342": 2,
+    "359": 1,
+    "377": 7,
+    "378": 7,
+    "379": 7,
+    "381": 1,
+    "405": 1,
+    "445": 31,
+    "448": 1,
+    "454": 2,
+    "460": 1,
+    "461": 1,
+    "462": 33,
+    "465": 2,
+    "475": 293,
+    "477": 1,
+    "478": 32,
+    "479": 1,
+    "485": 9,
+    "488": 20,
+    "494": 2,
+    "508": 5,
+    "530": 1,
+    "534": 2,
+    "547": 1,
+    "553": 1,
+    "579": 34,
+    "598": 34,
+    "609": 1,
+    "612": 10,
+    "617": 2,
+    "625": 1,
+    "630": 34,
+    "635": 2,
+    "663": 2,
+    "675": 1,
+    "681": 34,
+    "697": 2,
+    "699": 1,
+    "748": 3,
+    "768": 2,
+    "771": 12,
+    "773": 32,
+    "785": 6,
+    "786": 1,
+    "788": 33,
+    "794": 7,
+    "796": 2,
+    "798": 2,
+    "799": 1,
+    "800": 7,
+    "806": 32,
+    "807": 7,
+    "809": 38,
+    "812": 7,
+    "823": 11,
+    "849": 3,
+    "855": 33,
+    "858": 27,
+    "861": 3,
+    "876": 6,
+    "887": 68,
+    "10019": 1,
+    "10021": 7,
+    "10115": 22,
+    "10171": 9,
+    "10172": 7,
+    "10191": 2
+  }
+}

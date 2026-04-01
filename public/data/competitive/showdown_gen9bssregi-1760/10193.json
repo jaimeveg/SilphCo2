@@ -1,12 +1,24 @@
 {
   "id": "10193",
-  "name": "Calyrex Ice",
+  "name": "Calyrex ice",
   "format_id": "showdown_gen9bssregi-1760",
   "usage_metrics": {
     "raw": 5400,
     "base_weight": 35.326591945126964,
     "percent": 9.594541771792048
   },
+  "roles": [
+    {
+      "role": "role_tr_setter",
+      "label": "Trick Room Setter",
+      "category": "SUP"
+    },
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "sitrus-berry": 0.0023311629359436536,
     "leftovers": 14.309297046670723,
@@ -114,7 +126,7 @@
   },
   "spreads": [
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "22.3",
       "evs": {
         "hp": 252,
@@ -126,7 +138,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "20.7",
       "evs": {
         "hp": 252,
@@ -138,7 +150,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "17.0",
       "evs": {
         "hp": 252,
@@ -150,7 +162,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "9.4",
       "evs": {
         "hp": 252,
@@ -162,7 +174,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "5.5",
       "evs": {
         "hp": 252,
@@ -174,7 +186,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "4.9",
       "evs": {
         "hp": 252,
@@ -186,7 +198,7 @@
       }
     },
     {
-      "nature": "Adamant",
+      "nature": "adamant",
       "usage": "4.6",
       "evs": {
         "hp": 252,
@@ -198,7 +210,7 @@
       }
     },
     {
-      "nature": "Impish",
+      "nature": "impish",
       "usage": "4.0",
       "evs": {
         "hp": 236,
@@ -210,7 +222,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "3.2",
       "evs": {
         "hp": 252,
@@ -222,7 +234,7 @@
       }
     },
     {
-      "nature": "Brave",
+      "nature": "brave",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -354,6 +366,7 @@
     "876": 0.058023781946709374,
     "887": 0.00729661424760597,
     "890": 5.04904433463721,
+    "892": 0.21140184217636843,
     "894": 0.000002203022976987601,
     "897": 0.00003152131696115834,
     "901": 3.4755498547728725,
@@ -424,7 +437,7 @@
     "10186": 2.450653555629066,
     "10188": 0.14839606139698963,
     "10189": 0.018492529084576992,
-    "10191": 12.882906335041577,
+    "10191": 12.671504492865209,
     "10233": 0,
     "10236": 0,
     "10239": 0.005610916773029384,

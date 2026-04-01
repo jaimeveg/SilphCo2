@@ -1,12 +1,24 @@
 {
   "id": "10033",
-  "name": "Venusaur Mega",
+  "name": "Venusaur mega",
   "format_id": "showdown_gen6ou-1500",
   "usage_metrics": {
     "raw": 3150,
     "base_weight": 1893.240436956419,
     "percent": 4.722497076549429
   },
+  "roles": [
+    {
+      "role": "role_staller",
+      "label": "Staller",
+      "category": "DEF"
+    },
+    {
+      "role": "role_pivot",
+      "label": "Pivot",
+      "category": "DEF"
+    }
+  ],
   "items": {
     "venusaurite": 1893.240436956419
   },
@@ -61,7 +73,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "16.5",
       "evs": {
         "hp": 248,
@@ -73,7 +85,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "11.9",
       "evs": {
         "hp": 252,
@@ -85,7 +97,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "9.8",
       "evs": {
         "hp": 248,
@@ -97,7 +109,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.5",
       "evs": {
         "hp": 232,
@@ -109,7 +121,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "5.4",
       "evs": {
         "hp": 252,
@@ -121,7 +133,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "4.7",
       "evs": {
         "hp": 252,
@@ -133,7 +145,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "3.1",
       "evs": {
         "hp": 248,
@@ -145,7 +157,7 @@
       }
     },
     {
-      "nature": "Relaxed",
+      "nature": "relaxed",
       "usage": "2.4",
       "evs": {
         "hp": 248,
@@ -157,7 +169,7 @@
       }
     },
     {
-      "nature": "Bold",
+      "nature": "bold",
       "usage": "2.2",
       "evs": {
         "hp": 248,
@@ -169,7 +181,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.0",
       "evs": {
         "hp": 248,

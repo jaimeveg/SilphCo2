@@ -1,12 +1,19 @@
 {
   "id": "10242",
-  "name": "Goodra Hisui",
+  "name": "Goodra hisuian",
   "format_id": "showdown_gen9ru-0",
   "usage_metrics": {
     "raw": 9472,
     "base_weight": 9472,
     "percent": 12.682770071233463
   },
+  "roles": [
+    {
+      "role": "role_sweeper_mixed",
+      "label": "Mixed Sweeper",
+      "category": "OFF"
+    }
+  ],
   "items": {
     "leftovers": 4034,
     "assault-vest": 3773,
@@ -132,7 +139,7 @@
   },
   "spreads": [
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "8.4",
       "evs": {
         "hp": 252,
@@ -144,7 +151,7 @@
       }
     },
     {
-      "nature": "Calm",
+      "nature": "calm",
       "usage": "7.7",
       "evs": {
         "hp": 248,
@@ -156,7 +163,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "7.4",
       "evs": {
         "hp": 252,
@@ -168,7 +175,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "7.3",
       "evs": {
         "hp": 252,
@@ -180,7 +187,7 @@
       }
     },
     {
-      "nature": "Quiet",
+      "nature": "quiet",
       "usage": "5.0",
       "evs": {
         "hp": 252,
@@ -192,7 +199,7 @@
       }
     },
     {
-      "nature": "Modest",
+      "nature": "modest",
       "usage": "2.9",
       "evs": {
         "hp": 40,
@@ -204,7 +211,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -216,7 +223,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.4",
       "evs": {
         "hp": 252,
@@ -228,7 +235,7 @@
       }
     },
     {
-      "nature": "Sassy",
+      "nature": "sassy",
       "usage": "2.2",
       "evs": {
         "hp": 252,
@@ -240,7 +247,7 @@
       }
     },
     {
-      "nature": "Careful",
+      "nature": "careful",
       "usage": "2.0",
       "evs": {
         "hp": 252,
