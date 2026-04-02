@@ -13,7 +13,6 @@ SilphCo2/
 ├── next-env.d.ts              # Next.js TypeScript env declarations
 ├── next.config.js             # Next.js configuration
 ├── node_modules/              # Dependencies
-├── nuzlocke.data-main/        # Raw Nuzlocke source data (leagues, routes, patches)
 ├── package.json               # Dependencies & scripts
 ├── package-lock.json
 ├── postcss.config.js          # PostCSS plugins (Tailwind + Autoprefixer)
@@ -55,7 +54,7 @@ src/
 │   │       ├── abilities/     # AbilityDex listing & detail
 │   │       │   ├── page.tsx   # Ability listing (12.6K)
 │   │       │   └── [id]/      # Ability detail page
-│   │       └── dex/           # Dex landing (overview)
+│   │       └── dex/           # Dex landing (overview of all dexes - pokedex, moved, itemdex, abilitydex)
 │   │           ├── page.tsx
 │   │           └── DexLanding.tsx
 │   ├── api/                   # API Route Handlers
@@ -215,7 +214,14 @@ public/
 │   ├── *.json                 # Various index files
 │   └── ...
 ├── images/                    # Static images
-│   └── items/                 # Item sprites
+│   ├── items/                 # Item sprites
+|   ├── misc/                  # Misc assets
+|   └── pokemon/               # Pokemon sprites
+|       ├── 3d-model/          # 3d battle models
+|       ├── high-res/          # High-res sprites
+|       ├── high-res-shiny/    # High-res shiny sprites
+|       └── icon/              # Icon sprites
+│
 └── *.svg                      # Misc SVG assets
 ```
 
@@ -240,7 +246,7 @@ scripts/
 ├── generate-movepool-dex.ts   # Movepool dex generator
 ├── generate-pokedex-index.ts  # Pokédex index generator
 ├── generate-speed-dex.ts      # Speed map generator
-├── generate-tier-data.ts      # Tier data generator
+├── generate-tier-data.ts      # Nuzlocke Tier data generator pro pokedex index
 ├── generate-traits-map.ts     # Traits map generator
 ├── legacy-parser.ts           # (35.6K) Legacy data parser
 ├── patch-variants-stats.ts    # Variant stat patcher
@@ -249,6 +255,7 @@ scripts/
 ├── test-rk9.ts                # RK9 scraper test
 ├── update-smogon-data.ts      # (10.6K) Smogon data updater
 └── utils/                     # Shared script utilities
+    └── pokepaste.ts           # Create pokepaste formats for tournaments teams
 ```
 
 ## Key Location Summaries

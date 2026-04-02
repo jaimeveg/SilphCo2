@@ -16,7 +16,7 @@ The existing feature set must work flawlessly on any device, in both languages, 
 
 - ✓ Pokédex with detail views (stats, evolution, moves, locations, competitive, nuzlocke) — existing
 - ✓ Competitive Smogon analysis dashboard with format browsing and meta breakdown — existing
-- ✓ Nuzlocke battle simulation engine with game-specific boss matchups — existing
+- ✓ Nuzlocke battle simulation engine with game-specific boss matchups for Tiering purposes — existing
 - ✓ Academy narrative module (Module 1) with visual signature scene system — existing
 - ✓ Item database with stat calculators and usage data — existing
 - ✓ Global fuzzy search across Pokémon, moves, items, and abilities — existing

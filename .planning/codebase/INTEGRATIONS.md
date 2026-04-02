@@ -65,8 +65,14 @@
 - **Output:** `public/data/tournaments/`
 
 ### Meta Dashboard Builder
-- **Script:** `scripts/build-meta-dashboard.ts` (32K lines)
-- **Purpose:** Aggregate competitive data into macro-level dashboard (type ecosystem, roles, cores, gimmicks, rogue picks, top cut teams)
+- **Script:** `scripts/build-meta-dashboard.ts` (670 lines / 32K char)
+- **Purpose:** Aggregate tournaments competitive data into macro-level dashboard (type ecosystem, roles, cores, gimmicks, rogue picks, top cut teams)
+- **Input:** Tournaments files + traits map + alias map
+- **Output:** `public/data/competitive/`
+
+### Smogon Dashboard Builder
+- **Script:** `scripts/build-smogon-dashboard.ts` (611 lines / 29K char)
+- **Purpose:** Aggregate smogon chaos competitive data into macro-level dashboard (type ecosystem, roles, cores, gimmicks, rogue picks, top cut teams)
 - **Input:** Smogon CHAOS files + traits map + alias map
 - **Output:** `public/data/competitive/`
 
@@ -88,15 +94,17 @@
 | `public/data/traits_map.json` | Pokémon competitive traits (roles, archetypes) |
 | `public/data/alias_map.json` | Name alias resolution (forms, regional variants) |
 | `public/data/pokedex_speed_map.json` | Base speed values for speed tier calculations |
+| `public/data/competitive/` | Processed information for main general competitive dashboard (CompetitiveClient) includes folders and summarys for both smogon and tournaments|
+| `public/data/tournaments/` | Processed information about torunaments for pokemon specific information. Used in Pokedex Tactic/Competitive section |
+| `public/data/smogon/` | Processed information from smogon CHAOS data for pokemon specific information. Used in Pokedex Tactic/Competitive section |
 
 ### Nuzlocke Data  
 | Directory | Purpose |
 |-----------|---------|
 | `public/data/games/` | Per-game manifest, boss teams, balance patches |
 | `public/data/nuzlocke_availability.json` | Pokémon availability per game route |
-| `nuzlocke.data-main/` | Raw Nuzlocke source data (leagues, routes, patches) |
 
 ## External Image Sources
 - **PokeAPI Sprites:** Official artwork via GitHub CDN
 - **Duiker101:** SVG type icons (referenced in `next.config.js` comments)
-- **Local sprites:** `public/images/items/` — Item sprites (low-res + high-res)
+- **Local sprites:** `public/images/items/` — Item sprites (low-res + high-res) - `public/images/pokemon/` — Pokemon sprites (high-res + icons + 3d-model + high-res-shiny) - `public/images/misc/` — Other local resources 

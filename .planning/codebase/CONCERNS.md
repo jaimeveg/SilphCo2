@@ -5,8 +5,8 @@
 ### 1. Massive Component Files
 Several components exceed reasonable size thresholds and would benefit from decomposition:
 
-| File | Size | Concern |
-|------|------|---------|
+| File | Size (characters) | Concern |
+|------|-------------------|---------|
 | `src/components/pokedex/viewports/EvolutionChart.tsx` | 52.6K | Largest component — likely combines rendering, data transformation, and layout logic |
 | `src/lib/utils/nuzlockeEngine.ts` | 34.7K | Battle simulation engine — complex but functional; would benefit from modularization |
 | `src/app/[lang]/(hub)/competitive/CompetitiveClient.tsx` | 34.9K | Entire competitive dashboard in one client component |
@@ -48,7 +48,7 @@ These suppress legitimate type safety issues that should be addressed with prope
 | File | Size | Impact |
 |------|------|--------|
 | `src/data/movepool_dex.json` | 33 MB | Imported statically in `useNuzlockeAnalysis.ts` — could blow up bundle size |
-| `public/data/movepool_dex.json` | 33 MB | Also exists in public — data duplication |
+| `public/data/movepool_dex.json` | 33 MB | Also exists in public — data duplication - other elements are duplicated, probably need to decide where to keep them and how to handle them |
 | `public/data/pokedex_index.json` | 4.7 MB | Large index loaded for dex listing |
 
 The `movepool_dex.json` (33MB) is imported via `import staticMovepoolDex from '@/data/movepool_dex.json'` in `useNuzlockeAnalysis.ts`, which could cause massive client-side bundle bloat if not properly tree-shaken or code-split.
@@ -61,7 +61,7 @@ The `fetchPokemon` function in `pokeapi.ts` makes sequential calls:
 4. Fetch evolution chain
 5. Fetch `/pokemon/{id}/encounters`
 
-This results in 5+ network round trips per Pokémon. While React Query caches subsequent requests, the first load is slow.
+This results in 5+ network round trips per Pokémon. While React Query caches subsequent requests, the first load is slow. We now have some elements in local, might worth check if we can optimize this.
 
 ### 3. No Image Optimization for Sprites
 Pokémon sprites are loaded from GitHub CDN raw URLs. No `next/image` optimization, no blur placeholders, no lazy loading strategy for sprite-heavy views (Pokédex grid).
@@ -83,6 +83,24 @@ API routes have no rate limiting — could be abused. The PokeAPI calls also hav
 
 ### 4. Cache-Buster Pattern
 The Smogon service uses `Date.now()` as a cache buster (`?v=${Date.now()}`), which bypasses any CDN/edge caching that might be configured.
+
+### 5. Dependency Security Vulnerabilities (NPM Audit)
+The dependency tree analysis reveals **6 vulnerabilities** (1 Critical, 3 High, 2 Moderate) that compromise the application's security posture, exposing it to Denial of Service (DoS) and Server-Side Request Forgery (SSRF). Crucially, the default automated remediation strategies proposed by npm represent a significant architectural risk.
+
+**Critical Vulnerability:**
+* **`next`**: The core framework flags severe attack vectors, including SSRF in Server Actions, Cache Poisoning, and multiple DoS flaws. 
+  * *Operational Risk:* NPM's suggested fix requires running `--force`, which triggers a destructive downgrade to Next.js `13.5.11`. This action will almost certainly break the application if modern App Router or Server Actions features are currently in use.
+
+**High Vulnerabilities:**
+* **`minimatch`**: Presents multiple *ReDoS* (Regular Expression Denial of Service) risks via combinatorial backtracking. It is currently locked as a nested sub-dependency of the `@typescript-eslint` tooling. While this primarily affects the development and build environments, malicious or overly complex inputs can cause process hangs and exhaust memory.
+
+**Moderate Vulnerabilities:**
+* **`postcss` & `zod`**: Present risks for line return parsing errors and minor DoS vulnerabilities. Similar to the `next` package, NPM's automated fix incorrectly suggests a forced downgrade of the entire Next.js ecosystem to resolve these specific dependencies.
+
+**Recommended Mitigation Plan (GSD Approach):**
+1. **Strictly Avoid `--force`**: Under no circumstances should `npm audit fix --force` be executed, as it will compromise the application's framework foundation.
+2. **Manual Upgrades**: Review the `package.json` to manually update `next`, `postcss`, and `zod` to their latest secure minor or patch versions within your current major release, bypassing npm's aggressive downgrade path.
+3. **Dependency Overrides**: For locked sub-dependencies like `minimatch`, implement an `overrides` (or `resolutions` if using Yarn) block in the `package.json` to force the installation of a secure version (e.g., `>9.0.6`) across the entire dependency tree.
 
 ## Architecture Gaps
 
